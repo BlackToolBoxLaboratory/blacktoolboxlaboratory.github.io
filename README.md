@@ -1,3 +1,1 @@
-# blacktoolboxLab.github.io
-
-Homepage of Black Tool Box Laboratory
+# Homepage of Black Tool Box Laboratory
