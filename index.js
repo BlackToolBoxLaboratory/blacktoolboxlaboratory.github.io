@@ -2559,11 +2559,11 @@ var Index = function (_Component) {
                 'Flux',
                 _react2.default.createElement(_reactFontawesome2.default, { name: 'external-link', fixedWidth: true })
               ),
-              '. The source code is ',
+              '. My source code of example is ',
               _react2.default.createElement(
                 'a',
-                { target: '_blank', href: 'https://scotch.io/tutorials/getting-to-know-flux-the-react-js-architecture' },
-                'opened',
+                { target: '_blank', href: 'https://github.com/BlackToolBoxLaboratory/blacktbox-demo/tree/master/src/route/articles/articleFluxNRedux/exampleBasic' },
+                'here',
                 _react2.default.createElement(_reactFontawesome2.default, { name: 'external-link', fixedWidth: true })
               ),
               '. If you need more clear example code. The other article ',
@@ -2607,7 +2607,7 @@ var Index = function (_Component) {
                 'To implement the User List. Basically we need three factors: render(View), data(Store), access handler(Action). It is quite easy to implement it by coding them all together. However in systemic angle, if we want to separate them to keep system construction defined and used clear(to unify or generalize), we may need to use some framework to let system keep clear like Flux. And next, we will show it in Flux way. Comparing my ',
                 _react2.default.createElement(
                   'a',
-                  { target: '_blank', href: '' },
+                  { target: '_blank', href: 'https://github.com/BlackToolBoxLaboratory/blacktbox-demo/tree/master/src/route/articles/articleFluxNRedux/exampleBasic' },
                   'Example',
                   _react2.default.createElement(_reactFontawesome2.default, { name: 'external-link', fixedWidth: true })
                 ),
@@ -2646,18 +2646,21 @@ var Index = function (_Component) {
               'div',
               { className: 'content' },
               _react2.default.createElement(
-                'div',
-                { className: 'content' },
+                'span',
+                null,
+                'The source code of example in Flux version is ',
                 _react2.default.createElement(
-                  'span',
-                  null,
-                  'To implement the example in Flux. We need to install some packages:'
+                  'a',
+                  { target: '_blank', href: 'https://github.com/BlackToolBoxLaboratory/blacktbox-demo/tree/master/src/route/articles/articleFluxNRedux/exampleFlux' },
+                  'here',
+                  _react2.default.createElement(_reactFontawesome2.default, { name: 'external-link', fixedWidth: true })
                 ),
-                _react2.default.createElement(
-                  'pre',
-                  { className: 'content-pre' },
-                  EXAMPLE_FLUX_INSTALL
-                )
+                '. And to implement the example in Flux. We need to install some packages:'
+              ),
+              _react2.default.createElement(
+                'pre',
+                { className: 'content-pre' },
+                EXAMPLE_FLUX_INSTALL
               )
             ),
             _react2.default.createElement(
