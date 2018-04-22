@@ -836,25 +836,20 @@ var SideContent = function (_Component) {
       var currentPathname = _history2.default.location.pathname;
       for (var routeIndex in _routeList2.default) {
         if (_routeList2.default[routeIndex] == currentPathname) {
-          this.env.menuActiveIndex = routeIndex;
+          if ('ROOT' == routeIndex) {
+            this.env.menuActiveIndex = 'ABOUT';
+          } else {
+            this.env.menuActiveIndex = routeIndex;
+          }
           this.forceUpdate();
           break;
         };
-        switch (routeIndex) {
-          case 'BTB_ABOUT':
-            if ('' == currentPathname) {
-              this.env.menuActiveIndex = routeIndex;
-              this.forceUpdate();
-              break;
-            };
+        if ('BTB_ATCS' == routeIndex) {
+          if (currentPathname.match(_routeList2.default[routeIndex])) {
+            this.env.menuActiveIndex = routeIndex;
+            this.forceUpdate();
             break;
-          case 'BTB_ATCS':
-            if (currentPathname.match(_routeList2.default[routeIndex])) {
-              this.env.menuActiveIndex = routeIndex;
-              this.forceUpdate();
-              break;
-            };
-            break;
+          };
         };
       };
     }
