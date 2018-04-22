@@ -840,12 +840,21 @@ var SideContent = function (_Component) {
           this.forceUpdate();
           break;
         };
-        if ('BTB_ATCS' == routeIndex) {
-          if (currentPathname.match(_routeList2.default[routeIndex])) {
-            this.env.menuActiveIndex = routeIndex;
-            this.forceUpdate();
+        switch (routeIndex) {
+          case 'BTB_ABOUT':
+            if ('' == currentPathname) {
+              this.env.menuActiveIndex = routeIndex;
+              this.forceUpdate();
+              break;
+            };
             break;
-          };
+          case 'BTB_ATCS':
+            if (currentPathname.match(_routeList2.default[routeIndex])) {
+              this.env.menuActiveIndex = routeIndex;
+              this.forceUpdate();
+              break;
+            };
+            break;
         };
       };
     }
