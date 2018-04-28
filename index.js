@@ -5,13 +5,156 @@ webpackJsonp([0],[
 /* 3 */,
 /* 4 */,
 /* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Btn = exports.BtnGroup = exports.Notice = exports.Item = exports.Pre = exports.Content = exports.SectionSubtitle = exports.SectionTitle = exports.Section = exports.MainDescription = exports.MainTitle = undefined;
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var MainTitle = exports.MainTitle = function MainTitle(props) {
+  var content = [];
+  props.className = 'btb-layout mainTitle ' + (props.className ? props.className : '');
+  content.push(_react2.default.createElement(
+    'div',
+    props,
+    props.children
+  ));
+  return content;
+};
+var MainDescription = exports.MainDescription = function MainDescription(props) {
+  var content = [];
+  props.className = 'btb-layout mainDescription ' + (props.className ? props.className : '');
+  content.push(_react2.default.createElement(
+    'div',
+    props,
+    props.children
+  ));
+  return content;
+};
+var Section = exports.Section = function Section(props) {
+  var content = [];
+  props.className = 'btb-layout section ' + (props.className ? props.className : '');
+  content.push(_react2.default.createElement(
+    'div',
+    props,
+    props.children
+  ));
+  return content;
+};
+var SectionTitle = exports.SectionTitle = function SectionTitle(props) {
+  var content = [];
+  props.className = 'btb-layout sectionTitle ' + (props.className ? props.className : '');
+  content.push(_react2.default.createElement(
+    'div',
+    props,
+    props.children
+  ));
+  return content;
+};
+var SectionSubtitle = exports.SectionSubtitle = function SectionSubtitle(props) {
+  var content = [];
+  props.className = 'btb-layout sectionSubtitle ' + (props.className ? props.className : '');
+  content.push(_react2.default.createElement(
+    'div',
+    props,
+    props.children
+  ));
+  return content;
+};
+var Content = exports.Content = function Content(props) {
+  var content = [];
+  props.className = 'btb-layout content ' + (props.className ? props.className : '');
+  content.push(_react2.default.createElement(
+    'div',
+    props,
+    props.children
+  ));
+  return content;
+};
+var Pre = exports.Pre = function Pre(props) {
+  var content = [];
+  props.className = 'btb-layout content-pre ' + (props.className ? props.className : '');
+  content.push(_react2.default.createElement(
+    'pre',
+    props,
+    props.children
+  ));
+  return content;
+};
+var Item = exports.Item = function Item(props) {
+  var content = [];
+  props.className = 'btb-layout content-item ' + (props.className ? props.className : '');
+  content.push(_react2.default.createElement(
+    'div',
+    props,
+    props.children
+  ));
+  return content;
+};
+var Notice = exports.Notice = function Notice(props) {
+  var content = [];
+  props.className = 'btb-layout notice ' + (props.className ? props.className : '');
+  content.push(_react2.default.createElement(
+    'div',
+    props,
+    props.children
+  ));
+  return content;
+};
+var BtnGroup = exports.BtnGroup = function BtnGroup(props) {
+  var content = [];
+  props.className = 'btb-layout buttonGroup ' + (props.className ? props.className : '');
+  content.push(_react2.default.createElement(
+    'div',
+    props,
+    props.children
+  ));
+  return content;
+};
+var Btn = exports.Btn = function Btn(props) {
+  var content = [];
+  props.className = 'btb-layout button ' + (props.className ? props.className : '');
+  content.push(_react2.default.createElement(
+    'div',
+    props,
+    props.children
+  ));
+  return content;
+};
+
+exports.default = {
+  MainTitle: MainTitle,
+  MainDescription: MainDescription,
+  Section: Section,
+  SectionTitle: SectionTitle,
+  SectionSubtitle: SectionSubtitle,
+  Content: Content,
+  Pre: Pre,
+  Item: Item,
+  Notice: Notice,
+  BtnGroup: BtnGroup,
+  Btn: Btn
+};
+
+/***/ }),
+/* 6 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_Provider__ = __webpack_require__(125);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_connectAdvanced__ = __webpack_require__(48);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__connect_connect__ = __webpack_require__(127);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_Provider__ = __webpack_require__(126);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_connectAdvanced__ = __webpack_require__(50);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__connect_connect__ = __webpack_require__(128);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Provider", function() { return __WEBPACK_IMPORTED_MODULE_0__components_Provider__["b"]; });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "createProvider", function() { return __WEBPACK_IMPORTED_MODULE_0__components_Provider__["a"]; });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "connectAdvanced", function() { return __WEBPACK_IMPORTED_MODULE_1__components_connectAdvanced__["a"]; });
@@ -23,25 +166,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 /***/ }),
-/* 6 */,
 /* 7 */,
 /* 8 */,
-/* 9 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _flux = __webpack_require__(91);
-
-var MyDispatcher = new _flux.Dispatcher();
-exports.default = MyDispatcher;
-
-/***/ }),
+/* 9 */,
 /* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -51,45 +178,14 @@ exports.default = MyDispatcher;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var routeList = {
-  'ROOT': '/',
-  'ABOUT': '/about',
 
-  'BTB_ATCS': '/articles',
-  'BTB_ATCS_FLUX': '/articles/flux',
-  'BTB_ATCS_REDUX': '/articles/redux',
-  'BTB_ATCS_COMPONENT_PNC': '/article/component_presentational_and_container',
+var _flux = __webpack_require__(93);
 
-  'BTB_DEMO': '/blacktbox-demo',
-
-  'BTB_LIST_BASIC': '/blacktbox-list/basic',
-
-  'BTB_TABLE_BASIC': '/blacktbox-table/basic',
-
-  'BTB_MENU_BASIC': '/blacktbox-menu/basic',
-  'BTB_MENU_ADV': '/blacktbox-menu/advanced'
-};
-
-exports.default = routeList;
+var MyDispatcher = new _flux.Dispatcher();
+exports.default = MyDispatcher;
 
 /***/ }),
 /* 11 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _history = __webpack_require__(40);
-
-var MyHashHistory = new _history.createHashHistory();
-exports.default = MyHashHistory;
-
-/***/ }),
-/* 12 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -100,7 +196,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "applyMiddleware", function() { return applyMiddleware; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "compose", function() { return compose; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__DO_NOT_USE__ActionTypes", function() { return ActionTypes; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_symbol_observable__ = __webpack_require__(122);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_symbol_observable__ = __webpack_require__(123);
 
 
 /**
@@ -692,9 +788,9 @@ if (false) {
 
 
 /***/ }),
+/* 12 */,
 /* 13 */,
-/* 14 */,
-/* 15 */
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -712,69 +808,69 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouterDom = __webpack_require__(22);
+var _reactRouterDom = __webpack_require__(21);
 
 var _reactFontawesome = __webpack_require__(1);
 
 var _reactFontawesome2 = _interopRequireDefault(_reactFontawesome);
 
-var _blacktboxMenu = __webpack_require__(99);
+var _blacktboxMenu = __webpack_require__(101);
 
 var _blacktboxMenu2 = _interopRequireDefault(_blacktboxMenu);
 
-var _menuList = __webpack_require__(100);
+var _menuList = __webpack_require__(102);
 
 var _menuList2 = _interopRequireDefault(_menuList);
 
-var _routeList = __webpack_require__(10);
+var _routeList = __webpack_require__(28);
 
 var _routeList2 = _interopRequireDefault(_routeList);
 
-var _history = __webpack_require__(11);
+var _history = __webpack_require__(29);
 
 var _history2 = _interopRequireDefault(_history);
 
-var _about = __webpack_require__(101);
+var _about = __webpack_require__(103);
 
 var _about2 = _interopRequireDefault(_about);
 
-var _index = __webpack_require__(102);
+var _index = __webpack_require__(104);
 
 var _index2 = _interopRequireDefault(_index);
 
-var _Flux = __webpack_require__(104);
+var _Flux = __webpack_require__(105);
 
 var _Flux2 = _interopRequireDefault(_Flux);
 
-var _Redux = __webpack_require__(118);
+var _Redux = __webpack_require__(119);
 
 var _Redux2 = _interopRequireDefault(_Redux);
 
-var _Component_PresentationalNContainer = __webpack_require__(166);
+var _Component_PresentationalNContainer = __webpack_require__(167);
 
 var _Component_PresentationalNContainer2 = _interopRequireDefault(_Component_PresentationalNContainer);
 
-var _index3 = __webpack_require__(176);
+var _index3 = __webpack_require__(177);
 
 var _index4 = _interopRequireDefault(_index3);
 
-var _basic = __webpack_require__(177);
+var _basic = __webpack_require__(178);
 
 var _basic2 = _interopRequireDefault(_basic);
 
-var _basic3 = __webpack_require__(178);
+var _basic3 = __webpack_require__(179);
 
 var _basic4 = _interopRequireDefault(_basic3);
 
-var _basic5 = __webpack_require__(179);
+var _basic5 = __webpack_require__(180);
 
 var _basic6 = _interopRequireDefault(_basic5);
 
-var _advanced = __webpack_require__(180);
+var _advanced = __webpack_require__(181);
 
 var _advanced2 = _interopRequireDefault(_advanced);
 
-var _ = __webpack_require__(181);
+var _ = __webpack_require__(182);
 
 var _2 = _interopRequireDefault(_);
 
@@ -945,7 +1041,7 @@ var MainContent = function MainContent(props) {
 exports.default = Home;
 
 /***/ }),
-/* 16 */
+/* 15 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1146,7 +1242,7 @@ Menu.defaultProps = {
 /* harmony default export */ __webpack_exports__["default"] = (Menu);
 
 /***/ }),
-/* 17 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1189,7 +1285,7 @@ var LeftListAction = function () {
 exports.default = LeftListAction;
 
 /***/ }),
-/* 18 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1232,7 +1328,7 @@ var RightListAction = function () {
 exports.default = RightListAction;
 
 /***/ }),
-/* 19 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1282,7 +1378,7 @@ var LeftListAction = function () {
 exports.default = LeftListAction;
 
 /***/ }),
-/* 20 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1332,7 +1428,7 @@ var RightListAction = function () {
 exports.default = RightListAction;
 
 /***/ }),
-/* 21 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1426,14 +1522,117 @@ var ServerAPI = function () {
 exports.default = ServerAPI;
 
 /***/ }),
+/* 21 */,
 /* 22 */,
 /* 23 */,
 /* 24 */,
 /* 25 */,
 /* 26 */,
 /* 27 */,
-/* 28 */,
+/* 28 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var routeList = {
+  'ROOT': '/',
+  'ABOUT': '/about',
+
+  'BTB_ATCS': '/articles',
+  'BTB_ATCS_FLUX': '/articles/flux',
+  'BTB_ATCS_REDUX': '/articles/redux',
+  'BTB_ATCS_COMPONENT_PNC': '/articles/component_presentational_and_container',
+
+  'BTB_DEMO': '/blacktbox-demo',
+
+  'BTB_LIST_BASIC': '/blacktbox-list/basic',
+
+  'BTB_TABLE_BASIC': '/blacktbox-table/basic',
+
+  'BTB_MENU_BASIC': '/blacktbox-menu/basic',
+  'BTB_MENU_ADV': '/blacktbox-menu/advanced'
+};
+
+exports.default = routeList;
+
+/***/ }),
 /* 29 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _history = __webpack_require__(42);
+
+var MyHashHistory = new _history.createHashHistory();
+exports.default = MyHashHistory;
+
+/***/ }),
+/* 30 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactFontawesome = __webpack_require__(1);
+
+var _reactFontawesome2 = _interopRequireDefault(_reactFontawesome);
+
+var _routeList = __webpack_require__(28);
+
+var _routeList2 = _interopRequireDefault(_routeList);
+
+var _history = __webpack_require__(29);
+
+var _history2 = _interopRequireDefault(_history);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var _redirectHandler = function _redirectHandler(index) {
+  _history2.default.push(_routeList2.default[index]);
+  window.scrollTo(0, 0);
+};
+
+var ArticleRedirecter = function ArticleRedirecter(props) {
+  var content = [];
+  props.className = 'btb-articleRedirectBtn ' + (props.className ? props.className : '');
+  content.push(_react2.default.createElement(
+    'div',
+    _extends({ onClick: function onClick() {
+        _redirectHandler(props.redirectTo);
+      } }, props),
+    _react2.default.createElement(_reactFontawesome2.default, { name: 'arrow-left', fixedWidth: true }),
+    _react2.default.createElement(
+      'span',
+      null,
+      'Back to Articles'
+    )
+  ));
+  return content;
+};
+
+exports.default = ArticleRedirecter;
+
+/***/ }),
+/* 31 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1461,7 +1660,7 @@ function warning(message) {
 }
 
 /***/ }),
-/* 30 */
+/* 32 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1819,8 +2018,6 @@ Menu.defaultProps = {
 /* harmony default export */ __webpack_exports__["default"] = (Menu);
 
 /***/ }),
-/* 31 */,
-/* 32 */,
 /* 33 */,
 /* 34 */,
 /* 35 */,
@@ -1831,7 +2028,9 @@ Menu.defaultProps = {
 /* 40 */,
 /* 41 */,
 /* 42 */,
-/* 43 */
+/* 43 */,
+/* 44 */,
+/* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(module) {/*!
@@ -2009,10 +2208,10 @@ Menu.defaultProps = {
 	}
 
 })(typeof module === 'object' && module && typeof module.exports === 'object' && module.exports);
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(111)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(112)(module)))
 
 /***/ }),
-/* 44 */
+/* 46 */
 /***/ (function(module, exports) {
 
 // Copyright Joyent, Inc. and other Node contributors.
@@ -2320,7 +2519,7 @@ function isUndefined(arg) {
 
 
 /***/ }),
-/* 45 */
+/* 47 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2414,7 +2613,7 @@ var ServerAPI = function () {
 exports.default = ServerAPI;
 
 /***/ }),
-/* 46 */
+/* 48 */
 /***/ (function(module, exports) {
 
 var g;
@@ -2441,7 +2640,7 @@ module.exports = g;
 
 
 /***/ }),
-/* 47 */
+/* 49 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2465,19 +2664,19 @@ var storeShape = __WEBPACK_IMPORTED_MODULE_0_prop_types___default.a.shape({
 });
 
 /***/ }),
-/* 48 */
+/* 50 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = connectAdvanced;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_hoist_non_react_statics__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_hoist_non_react_statics__ = __webpack_require__(44);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_hoist_non_react_statics___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_hoist_non_react_statics__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_invariant__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_invariant___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_invariant__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__utils_Subscription__ = __webpack_require__(126);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__utils_PropTypes__ = __webpack_require__(47);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__utils_Subscription__ = __webpack_require__(127);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__utils_PropTypes__ = __webpack_require__(49);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -2769,14 +2968,14 @@ selectorFactory) {
 }
 
 /***/ }),
-/* 49 */
+/* 51 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = wrapMapToPropsConstant;
 /* unused harmony export getDependsOnOwnProps */
 /* harmony export (immutable) */ __webpack_exports__["b"] = wrapMapToPropsFunc;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__utils_verifyPlainObject__ = __webpack_require__(50);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__utils_verifyPlainObject__ = __webpack_require__(52);
 
 
 function wrapMapToPropsConstant(getConstant) {
@@ -2846,13 +3045,13 @@ function wrapMapToPropsFunc(mapToProps, methodName) {
 }
 
 /***/ }),
-/* 50 */
+/* 52 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* unused harmony export default */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash_es_isPlainObject__ = __webpack_require__(130);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__warning__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash_es_isPlainObject__ = __webpack_require__(131);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__warning__ = __webpack_require__(31);
 
 
 
@@ -2863,11 +3062,11 @@ function verifyPlainObject(value, displayName, methodName) {
 }
 
 /***/ }),
-/* 51 */
+/* 53 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__root_js__ = __webpack_require__(132);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__root_js__ = __webpack_require__(133);
 
 
 /** Built-in value references. */
@@ -2877,7 +3076,7 @@ var Symbol = __WEBPACK_IMPORTED_MODULE_0__root_js__["a" /* default */].Symbol;
 
 
 /***/ }),
-/* 52 */
+/* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2996,7 +3195,7 @@ var ServerAPI = function () {
 exports.default = ServerAPI;
 
 /***/ }),
-/* 53 */
+/* 55 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3090,7 +3289,7 @@ var ServerAPI = function () {
 exports.default = ServerAPI;
 
 /***/ }),
-/* 54 */
+/* 56 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3102,17 +3301,17 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(6);
+var _reactDom = __webpack_require__(7);
 
-var _reactRouterDom = __webpack_require__(22);
+var _reactRouterDom = __webpack_require__(21);
 
-var _dispatcher = __webpack_require__(9);
+var _dispatcher = __webpack_require__(10);
 
 var _dispatcher2 = _interopRequireDefault(_dispatcher);
 
-__webpack_require__(93);
+__webpack_require__(95);
 
-var _home = __webpack_require__(15);
+var _home = __webpack_require__(14);
 
 var _home2 = _interopRequireDefault(_home);
 
@@ -3154,8 +3353,6 @@ var Index = function (_Component) {
 (0, _reactDom.render)(_react2.default.createElement(Index, null), document.getElementById('main'));
 
 /***/ }),
-/* 55 */,
-/* 56 */,
 /* 57 */,
 /* 58 */,
 /* 59 */,
@@ -3190,7 +3387,9 @@ var Index = function (_Component) {
 /* 88 */,
 /* 89 */,
 /* 90 */,
-/* 91 */
+/* 91 */,
+/* 92 */,
+/* 93 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -3202,11 +3401,11 @@ var Index = function (_Component) {
  * of patent rights can be found in the PATENTS file in the same directory.
  */
 
-module.exports.Dispatcher = __webpack_require__(92);
+module.exports.Dispatcher = __webpack_require__(94);
 
 
 /***/ }),
-/* 92 */
+/* 94 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3229,7 +3428,7 @@ exports.__esModule = true;
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 
-var invariant = __webpack_require__(33);
+var invariant = __webpack_require__(35);
 
 var _prefix = 'ID_';
 
@@ -3443,13 +3642,13 @@ var Dispatcher = (function () {
 module.exports = Dispatcher;
 
 /***/ }),
-/* 93 */
+/* 95 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(94);
+var content = __webpack_require__(96);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -3457,7 +3656,7 @@ var transform;
 var options = {"hmr":true}
 options.transform = transform
 // add the styles to the DOM
-var update = __webpack_require__(96)(content, options);
+var update = __webpack_require__(98)(content, options);
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -3474,21 +3673,21 @@ if(false) {
 }
 
 /***/ }),
-/* 94 */
+/* 96 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(95)(false);
+exports = module.exports = __webpack_require__(97)(false);
 // imports
 
 
 // module
-exports.push([module.i, "body {\n  margin: 0;\n  padding: 0;\n  font-size: 16px;\n  font-family: Arial, 'Times New Roman', Times, serif;\n  font-weight: 100;\n  overflow-x: hidden;\n}\nspan + span {\n  margin-left: 5px;\n}\n.wrapper {\n  width: 100%;\n  height: 100%;\n}\n.wrapper.wrapper-home {\n  background-color: #fff;\n}\n.wrapper.wrapper-basic,\n.wrapper.wrapper-advance {\n  width: calc(100% - (15px * 2));\n  margin: auto;\n  padding: 15px 15px;\n}\n.context {\n  width: 100%;\n  font-size: 14px;\n}\n.context + .context {\n  margin-top: 30px;\n}\n.context .title {\n  color: #aaa;\n  border-bottom: 1px solid #aaa;\n  margin: 0 15px;\n  font-weight: bold;\n}\n.context .content {\n  color: #000;\n  margin: 10px 30px;\n}\n.context .content .post,\n.context .content .update {\n  color: #aaa;\n}\n.context .content-pre {\n  color: #f3f3f3;\n  background-color: #373940;\n  font-family: Consolas, \"Liberation Mono\", Menlo, Monaco, Courier, monospace;\n  margin: 10px 0;\n  padding: 10px 15px;\n  white-space: pre-wrap;\n}\n.context .content-image,\n.context .content-example {\n  text-align: center;\n  margin: 10px 0;\n}\n.context .buttonGroup {\n  margin: 0 15px;\n}\n.context .buttonGroup .backButton {\n  border: 1px solid #aaa;\n  border-radius: 15px;\n  color: #aaa;\n  cursor: pointer;\n  display: inline-block;\n  font-size: 13px;\n  padding: 3px 5px;\n}\n.context .buttonGroup .backButton:hover {\n  border-color: #000;\n  color: #000;\n}\n.linkBtn {\n  cursor: pointer;\n  color: #aaa;\n}\n.linkBtn:hover {\n  color: #000;\n}\n.wrapper .sideContentBG {\n  background-color: #000;\n  bottom: 0;\n  left: 0;\n  position: fixed;\n  top: 0;\n  width: 200px;\n}\n.wrapper .sideContent {\n  width: 200px;\n  background-color: #000;\n  color: #fff;\n  float: left;\n  min-height: 100vh;\n}\n.wrapper .sideContent .header {\n  background-color: #61dafb;\n  margin-bottom: 15px;\n  position: relative;\n  height: 104px;\n}\n.wrapper .sideContent .groupname {\n  background-color: #000;\n  line-height: 20px;\n  text-align: right;\n  padding: 2px 15px;\n}\n.wrapper .sideContent .icon {\n  -webkit-border-radius: calc(50px / 2);\n  -moz-border-radius: calc(50px / 2);\n  border-radius: calc(50px / 2);\n  width: 50px;\n  height: 50px;\n  line-height: 50px;\n  background-color: #000;\n  text-align: center;\n  margin: 15px;\n  font-size: 36px;\n}\n.wrapper .sideContent .welcome {\n  left: calc(50px + (15px * 2));\n  line-height: 20px;\n  text-align: center;\n  padding: 30px 0;\n  position: absolute;\n  bottom: 0;\n  right: 0;\n  color: #000;\n}\n.wrapper .mainContent {\n  width: calc(100% - 200px);\n  margin-left: 200px;\n  background-color: transparent;\n  min-height: 100vh;\n}\n.example-wrapper {\n  display: inline-block;\n}\n.example-wrapper .example-headerTitle {\n  font-size: 16px;\n  color: #000;\n  font-weight: 700;\n  margin: 5px 0;\n}\n.example-wrapper .example-part {\n  margin: 5px;\n}\n.example-wrapper .example-block {\n  min-width: 150px;\n  display: inline-block;\n  vertical-align: top;\n}\n.example-wrapper .example-block + .example-block {\n  margin-left: 10px;\n}\n.example-wrapper .example-block .userList-info {\n  margin-right: 40px;\n}\n.example-wrapper .example-title {\n  color: #aaa;\n}\n.example-userList {\n  padding: 5px;\n  border: 1px solid #aaa;\n  border-radius: 5px;\n  box-shadow: 2px 2px 4px 2px #aaa;\n}\n.example-userList .userList-add {\n  margin-top: 10px;\n}\n.example-userList .userList-add .userList-input {\n  border: 2px solid #aaa;\n  border-radius: 5px;\n  font-size: 10px;\n  padding: 2px 10px;\n}\n.example-userList .userList-add .userList-input:focus,\n.example-userList .userList-add .userList-input:hover {\n  border-color: #777;\n}\n.example-userList .userList-add .userList-addButton {\n  color: #aaa;\n  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;\n  border: medium none;\n  font-size: 15px;\n  margin-left: 5px;\n  padding: 0;\n  vertical-align: top;\n  cursor: pointer;\n}\n.example-userList .userList-add .userList-addButton:hover {\n  color: #ff0000;\n}\n.example-userList .userList-list {\n  border: 2px solid #aaa;\n  border-radius: 7px;\n  padding: 0px;\n  margin: 5px 0;\n}\n.example-userList .userList-list .userList-entry {\n  border-radius: 5px;\n  cursor: default;\n  padding: 2px 5px;\n  position: relative;\n  text-align: left;\n  overflow: hidden;\n}\n.example-userList .userList-list .userList-entry .userList-info {\n  margin-right: 20px;\n}\n.example-userList .userList-list .userList-entry .userList-deleteButton {\n  -webkit-transition: opacity 0.5s ease 0s, right 0.5s ease 0s;\n  -moz-transition: opacity 0.5s ease 0s, right 0.5s ease 0s;\n  -o-transition: opacity 0.5s ease 0s, right 0.5s ease 0s;\n  transition: opacity 0.5s ease 0s, right 0.5s ease 0s;\n  color: #ff0000;\n  opacity: 0;\n  position: absolute;\n  right: -20px;\n  top: 3px;\n  cursor: pointer;\n}\n.example-userList .userList-list .userList-entry:hover {\n  background-color: #ccc;\n}\n.example-userList .userList-list .userList-entry:hover .userList-deleteButton {\n  right: 2px;\n  opacity: 1;\n}\n.example-userList .userList-list .userList-entry .userList-moveButton {\n  -webkit-transition: opacity 0.5s ease 0s, right 0.5s ease 0s;\n  -moz-transition: opacity 0.5s ease 0s, right 0.5s ease 0s;\n  -o-transition: opacity 0.5s ease 0s, right 0.5s ease 0s;\n  transition: opacity 0.5s ease 0s, right 0.5s ease 0s;\n  color: #ff0000;\n  opacity: 0;\n  position: absolute;\n  right: -20px;\n  top: 3px;\n  cursor: pointer;\n}\n.example-userList .userList-list .userList-entry:hover {\n  background-color: #ccc;\n}\n.example-userList .userList-list .userList-entry:hover .userList-moveButton {\n  right: 22px;\n  opacity: 1;\n}\n.example-userList .userList-list .userList-entry-empty {\n  list-style: outside none none;\n  text-align: center;\n}\n.btb-menu.menu {\n  color: #fff;\n}\n.btb-menu.menu .layer-item.activeTop {\n  background-color: #373940;\n  border-left: 5px solid #61dafb;\n}\n.btb-menu.menu .layer-item.activeParent > .item-content .content-name {\n  color: #61dafb;\n}\n.btb-menu.menu .layer-item.activeParent > .item-content .collapse-arrow {\n  border-color: #61dafb transparent transparent;\n}\n.btb-menu.menu .layer-item.active > .item-content {\n  background-color: #373940;\n}\n.btb-menu.menu .layer-item.active > .item-content .content-name {\n  color: #61dafb;\n}\n.btb-menu.menu .layer-item.active > .item-content .collapse-arrow {\n  border-color: #61dafb transparent transparent;\n}\n.btb-menu.menu .item-content:hover {\n  background-color: #373940;\n}\n.btb-menu.menu .item-content:hover .content-name {\n  color: #61dafb;\n}\n.btb-menu.menu .item-content:hover .collapse-arrow {\n  border-color: #61dafb transparent transparent;\n}\n.btb-menu.menu .collapse-arrow {\n  border-color: #fff transparent transparent;\n}\n.btb-list.content-nodetree {\n  background-color: #f6f8fa;\n  margin: auto;\n  width: calc(100% - (75px * 2));\n  padding: 15px;\n}\n.btb-table.content-paramlist {\n  margin: auto;\n  width: calc(100% - (60px * 2));\n}\n.btb-table.content-paramlist .table-list {\n  border-collapse: collapse;\n  border-spacing: 0;\n}\n.btb-table.content-paramlist .tr-th {\n  background-color: #e9ebed;\n  border: 2px solid #e9ebed;\n  padding: 2px 15px;\n}\n.btb-table.content-paramlist .tr-td {\n  border: 2px solid #e9ebed;\n  text-align: center;\n  padding: 2px 15px;\n}\n.btb-table.content-paramlist .td-name,\n.btb-table.content-paramlist .td-notice {\n  text-align: left;\n}\n.btb-table.content-paramlist .content-pre {\n  margin: 5px 0;\n  padding: 5px 15px;\n}\n", ""]);
+exports.push([module.i, "body {\n  margin: 0;\n  padding: 0;\n  font-size: 16px;\n  font-family: Arial, 'Times New Roman', Times, serif;\n  font-weight: 100;\n  overflow-x: hidden;\n}\nspan + span {\n  margin-left: 5px;\n}\n.wrapper {\n  width: 100%;\n  height: 100%;\n}\n.wrapper.wrapper-home {\n  background-color: #fff;\n}\n.wrapper.wrapper-basic,\n.wrapper.wrapper-advance {\n  width: calc(100% - (15px * 2));\n  margin: auto;\n  padding: 15px 15px;\n}\n.linkBtn {\n  cursor: pointer;\n  color: #aaa;\n}\n.linkBtn:hover {\n  color: #000;\n}\n.wrapper .sideContentBG {\n  background-color: #000;\n  bottom: 0;\n  left: 0;\n  position: fixed;\n  top: 0;\n  width: 200px;\n}\n.wrapper .sideContent {\n  width: 200px;\n  background-color: #000;\n  color: #fff;\n  float: left;\n  min-height: 100vh;\n}\n.wrapper .sideContent .header {\n  background-color: #61dafb;\n  margin-bottom: 15px;\n  position: relative;\n  height: 104px;\n}\n.wrapper .sideContent .groupname {\n  background-color: #000;\n  line-height: 20px;\n  text-align: right;\n  padding: 2px 15px;\n}\n.wrapper .sideContent .icon {\n  -webkit-border-radius: calc(50px / 2);\n  -moz-border-radius: calc(50px / 2);\n  border-radius: calc(50px / 2);\n  width: 50px;\n  height: 50px;\n  line-height: 50px;\n  background-color: #000;\n  text-align: center;\n  margin: 15px;\n  font-size: 36px;\n}\n.wrapper .sideContent .welcome {\n  left: calc(50px + (15px * 2));\n  line-height: 20px;\n  text-align: center;\n  padding: 30px 0;\n  position: absolute;\n  bottom: 0;\n  right: 0;\n  color: #000;\n}\n.wrapper .mainContent {\n  width: calc(100% - 200px);\n  margin-left: 200px;\n  background-color: transparent;\n  min-height: 100vh;\n}\n.btb-layout.mainTitle {\n  font-size: 30px;\n  font-weight: bold;\n  margin: 30px 15px 0;\n}\n.btb-layout.mainDescription {\n  margin: 0 15px 30px;\n}\n.btb-layout.section {\n  width: 100%;\n  font-size: 14px;\n}\n.btb-layout.section + .btb-layout.section {\n  margin-top: 30px;\n}\n.btb-layout.sectionTitle {\n  color: #aaa;\n  border-bottom: 1px solid #aaa;\n  margin: 0 15px;\n  font-weight: bold;\n}\n.btb-layout.sectionSubtitle {\n  font-weight: bold;\n  margin: 15px 0;\n}\n.btb-layout.content {\n  color: #000;\n  margin: 15px 30px;\n}\n.btb-layout.content-pre {\n  color: #f3f3f3;\n  background-color: #373940;\n  font-family: Consolas, \"Liberation Mono\", Menlo, Monaco, Courier, monospace;\n  margin: 15px 30px;\n  padding: 10px 15px;\n  white-space: pre-wrap;\n}\n.btb-layout.content-item {\n  text-align: center;\n  margin: 15px 30px;\n}\n.btb-layout.notice {\n  color: #aaa;\n  display: inline;\n}\n.btb-layout.buttonGroup {\n  margin: 0 15px;\n}\n.btb-articleRedirectBtn {\n  border: 1px solid #aaa;\n  border-radius: 15px;\n  color: #aaa;\n  cursor: pointer;\n  display: inline-block;\n  font-size: 13px;\n  padding: 3px 5px;\n}\n.btb-articleRedirectBtn:hover {\n  border-color: #000;\n  color: #000;\n}\n.example-wrapper {\n  display: inline-block;\n}\n.example-wrapper .example-headerTitle {\n  font-size: 16px;\n  color: #000;\n  font-weight: 700;\n  margin: 5px 0;\n}\n.example-wrapper .example-part {\n  margin: 5px;\n}\n.example-wrapper .example-block {\n  min-width: 150px;\n  display: inline-block;\n  vertical-align: top;\n}\n.example-wrapper .example-block + .example-block {\n  margin-left: 10px;\n}\n.example-wrapper .example-block .userList-info {\n  margin-right: 40px;\n}\n.example-wrapper .example-title {\n  color: #aaa;\n}\n.example-userList {\n  padding: 5px;\n  border: 1px solid #aaa;\n  border-radius: 5px;\n  box-shadow: 2px 2px 4px 2px #aaa;\n}\n.example-userList .userList-add {\n  margin-top: 10px;\n}\n.example-userList .userList-add .userList-input {\n  border: 2px solid #aaa;\n  border-radius: 5px;\n  font-size: 10px;\n  padding: 2px 10px;\n}\n.example-userList .userList-add .userList-input:focus,\n.example-userList .userList-add .userList-input:hover {\n  border-color: #777;\n}\n.example-userList .userList-add .userList-addButton {\n  color: #aaa;\n  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;\n  border: medium none;\n  font-size: 15px;\n  margin-left: 5px;\n  padding: 0;\n  vertical-align: top;\n  cursor: pointer;\n}\n.example-userList .userList-add .userList-addButton:hover {\n  color: #ff0000;\n}\n.example-userList .userList-list {\n  border: 2px solid #aaa;\n  border-radius: 7px;\n  padding: 0px;\n  margin: 5px 0;\n}\n.example-userList .userList-list .userList-entry {\n  border-radius: 5px;\n  cursor: default;\n  padding: 2px 5px;\n  position: relative;\n  text-align: left;\n  overflow: hidden;\n}\n.example-userList .userList-list .userList-entry .userList-info {\n  margin-right: 20px;\n}\n.example-userList .userList-list .userList-entry .userList-deleteButton {\n  -webkit-transition: opacity 0.5s ease 0s, right 0.5s ease 0s;\n  -moz-transition: opacity 0.5s ease 0s, right 0.5s ease 0s;\n  -o-transition: opacity 0.5s ease 0s, right 0.5s ease 0s;\n  transition: opacity 0.5s ease 0s, right 0.5s ease 0s;\n  color: #ff0000;\n  opacity: 0;\n  position: absolute;\n  right: -20px;\n  top: 3px;\n  cursor: pointer;\n}\n.example-userList .userList-list .userList-entry:hover {\n  background-color: #ccc;\n}\n.example-userList .userList-list .userList-entry:hover .userList-deleteButton {\n  right: 2px;\n  opacity: 1;\n}\n.example-userList .userList-list .userList-entry .userList-moveButton {\n  -webkit-transition: opacity 0.5s ease 0s, right 0.5s ease 0s;\n  -moz-transition: opacity 0.5s ease 0s, right 0.5s ease 0s;\n  -o-transition: opacity 0.5s ease 0s, right 0.5s ease 0s;\n  transition: opacity 0.5s ease 0s, right 0.5s ease 0s;\n  color: #ff0000;\n  opacity: 0;\n  position: absolute;\n  right: -20px;\n  top: 3px;\n  cursor: pointer;\n}\n.example-userList .userList-list .userList-entry:hover {\n  background-color: #ccc;\n}\n.example-userList .userList-list .userList-entry:hover .userList-moveButton {\n  right: 22px;\n  opacity: 1;\n}\n.example-userList .userList-list .userList-entry-empty {\n  list-style: outside none none;\n  text-align: center;\n}\n.btb-menu.menu {\n  color: #fff;\n}\n.btb-menu.menu .layer-item.activeTop {\n  background-color: #373940;\n  border-left: 5px solid #61dafb;\n}\n.btb-menu.menu .layer-item.activeParent > .item-content .content-name {\n  color: #61dafb;\n}\n.btb-menu.menu .layer-item.activeParent > .item-content .collapse-arrow {\n  border-color: #61dafb transparent transparent;\n}\n.btb-menu.menu .layer-item.active > .item-content {\n  background-color: #373940;\n}\n.btb-menu.menu .layer-item.active > .item-content .content-name {\n  color: #61dafb;\n}\n.btb-menu.menu .layer-item.active > .item-content .collapse-arrow {\n  border-color: #61dafb transparent transparent;\n}\n.btb-menu.menu .item-content:hover {\n  background-color: #373940;\n}\n.btb-menu.menu .item-content:hover .content-name {\n  color: #61dafb;\n}\n.btb-menu.menu .item-content:hover .collapse-arrow {\n  border-color: #61dafb transparent transparent;\n}\n.btb-menu.menu .collapse-arrow {\n  border-color: #fff transparent transparent;\n}\n.btb-list.content-nodetree {\n  background-color: #d6e4ff;\n  margin: auto;\n  width: calc(100% - (75px * 2));\n  padding: 15px;\n}\n.btb-table.content-paramlist {\n  margin: auto;\n  width: calc(100% - (60px * 2));\n}\n.btb-table.content-paramlist .table-list {\n  border-collapse: collapse;\n  border-spacing: 0;\n}\n.btb-table.content-paramlist .tr-th {\n  background-color: #e9ebed;\n  border: 2px solid #e9ebed;\n  padding: 2px 15px;\n}\n.btb-table.content-paramlist .tr-td {\n  border: 2px solid #e9ebed;\n  text-align: center;\n  padding: 2px 15px;\n}\n.btb-table.content-paramlist .td-name,\n.btb-table.content-paramlist .td-notice {\n  text-align: left;\n}\n.btb-table.content-paramlist .content-pre {\n  margin: 5px 0;\n  padding: 5px 15px;\n}\n", ""]);
 
 // exports
 
 
 /***/ }),
-/* 95 */
+/* 97 */
 /***/ (function(module, exports) {
 
 /*
@@ -3570,7 +3769,7 @@ function toComment(sourceMap) {
 
 
 /***/ }),
-/* 96 */
+/* 98 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -3626,7 +3825,7 @@ var singleton = null;
 var	singletonCounter = 0;
 var	stylesInsertedAtTop = [];
 
-var	fixUrls = __webpack_require__(97);
+var	fixUrls = __webpack_require__(99);
 
 module.exports = function(list, options) {
 	if (typeof DEBUG !== "undefined" && DEBUG) {
@@ -3942,7 +4141,7 @@ function updateLink (link, options, obj) {
 
 
 /***/ }),
-/* 97 */
+/* 99 */
 /***/ (function(module, exports) {
 
 
@@ -4037,8 +4236,8 @@ module.exports = function (css) {
 
 
 /***/ }),
-/* 98 */,
-/* 99 */
+/* 100 */,
+/* 101 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4447,7 +4646,7 @@ Menu.defaultProps = {
 /* harmony default export */ __webpack_exports__["default"] = (Menu);
 
 /***/ }),
-/* 100 */
+/* 102 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4498,7 +4697,7 @@ var menuList = new Array({
 exports.default = menuList;
 
 /***/ }),
-/* 101 */
+/* 103 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4518,7 +4717,11 @@ var _reactFontawesome = __webpack_require__(1);
 
 var _reactFontawesome2 = _interopRequireDefault(_reactFontawesome);
 
-var _home = __webpack_require__(15);
+var _layout = __webpack_require__(5);
+
+var _layout2 = _interopRequireDefault(_layout);
+
+var _home = __webpack_require__(14);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -4527,6 +4730,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var mainTitle = 'About';
+var mainDescriptionStr = 'Here to show our sitemap with brief introduction.';
+
+var articlesTitle = 'ARTICLES';
+var articlesContent = 'We would list to introduce you some others masterpiece in conceptual. Hope our articles will do help somehow in algorithmic angle. And if you have problem to use them, welcome to contact me. We can figure it out together.';
+var demonstrationTitle = 'DEMONSTRATION';
+var demonstrationContent = 'The demonstration is this webside actually. It is local-side version, and you can see the source code.';
+var libraryTitle = 'LIBRARY LIST';
+var libraryContent = 'We express some idea with our library. While to implement a webpage, we tend to more focus on \'definition\' and \'style\' than \'construct\'. It means our library developed on purpose to help you to construct your page on functional part. And you just need to give us your definition of some object, array, string ..., etc, for all you need to show. Then you can spend more time to focus on style page.';
 
 var LibraryList = new Array({ name: 'Blacktbox-list', link: 'BTB_LIST_BASIC' }, { name: 'Blacktbox-table', link: 'BTB_TABLE_BASIC' }, { name: 'Blacktbox-menu', link: 'BTB_MENU_BASIC' });
 var ContactList = new Array({ name: 'Email', linkName: 'vannoel0628@gmail.com', href: 'mailto://vannoel0628@gmail.com', FA: 'envelope' }, { name: 'Homepage', linkName: 'blacktoolboxlaboratory.github.io', href: 'https://blacktoolboxlaboratory.github.io', FA: 'home' });
@@ -4549,41 +4762,30 @@ var About = function (_Component) {
         'div',
         { className: 'wrapper wrapper-basic' },
         _react2.default.createElement(
-          'div',
-          { className: 'context' },
-          _react2.default.createElement(
-            'div',
-            { className: 'title' },
-            'ABOUT'
-          ),
-          _react2.default.createElement(
-            'div',
-            { className: 'content' },
-            _react2.default.createElement(
-              'span',
-              null,
-              'Hi! I am Noel. I established The Black Toolbox Laboratory(BTB Lab) since November 1, 2017. The mainly purpose to start the project is to develop some useful tools for helping coding Website easier. And there is a hard work and also a challenge to let tools applicated with highly free degree. Though, I am not full-time in this project. I still sincerely welcome to recieve your great idea or your needing by sending mails or booking issues on GitHub.'
-            ),
-            _react2.default.createElement(_reactFontawesome2.default, { className: 'linkBtn', onClick: function onClick() {
-                _this2._redirectHandler('ABOUT');
-              }, name: 'link', fixedWidth: true })
-          )
+          _layout2.default.MainTitle,
+          null,
+          mainTitle
         ),
         _react2.default.createElement(
-          'div',
-          { className: 'context' },
+          _layout2.default.MainDescription,
+          null,
+          mainDescriptionStr
+        ),
+        _react2.default.createElement(
+          _layout2.default.Section,
+          null,
           _react2.default.createElement(
-            'div',
-            { className: 'title' },
-            'ARTICLES'
+            _layout2.default.SectionTitle,
+            null,
+            articlesTitle
           ),
           _react2.default.createElement(
-            'div',
-            { className: 'content' },
+            _layout2.default.Content,
+            null,
             _react2.default.createElement(
               'span',
               null,
-              'Here, I want to introduce some others masterpiece in conceptual. I hope the articles will do help in algorithmic angle. But if you have problem to use them, welcome to mail to me. We can figure it out together.'
+              articlesContent
             ),
             _react2.default.createElement(_reactFontawesome2.default, { className: 'linkBtn', onClick: function onClick() {
                 _this2._redirectHandler('BTB_ATCS');
@@ -4591,20 +4793,20 @@ var About = function (_Component) {
           )
         ),
         _react2.default.createElement(
-          'div',
-          { className: 'context' },
+          _layout2.default.Section,
+          null,
           _react2.default.createElement(
-            'div',
-            { className: 'title' },
-            'DEMONSTRATION'
+            _layout2.default.SectionTitle,
+            null,
+            demonstrationTitle
           ),
           _react2.default.createElement(
-            'div',
-            { className: 'content' },
+            _layout2.default.Content,
+            null,
             _react2.default.createElement(
               'span',
               null,
-              'The demonstration is this webside actually. It is local-side version, and you can see the source code.'
+              demonstrationContent
             ),
             _react2.default.createElement(_reactFontawesome2.default, { className: 'linkBtn', onClick: function onClick() {
                 _this2._redirectHandler('BTB_DEMO');
@@ -4612,12 +4814,17 @@ var About = function (_Component) {
           )
         ),
         _react2.default.createElement(
-          'div',
-          { className: 'context' },
+          _layout2.default.Section,
+          null,
           _react2.default.createElement(
-            'div',
-            { className: 'title' },
-            'LIBRARY LIST'
+            _layout2.default.SectionTitle,
+            null,
+            libraryTitle
+          ),
+          _react2.default.createElement(
+            _layout2.default.Content,
+            null,
+            libraryContent
           ),
           _react2.default.createElement(
             'ul',
@@ -4641,11 +4848,11 @@ var About = function (_Component) {
           )
         ),
         _react2.default.createElement(
-          'div',
-          { className: 'context' },
+          _layout2.default.Section,
+          null,
           _react2.default.createElement(
-            'div',
-            { className: 'title' },
+            _layout2.default.SectionTitle,
+            null,
             'CONTACT ME'
           ),
           _react2.default.createElement(
@@ -4698,164 +4905,6 @@ var About = function (_Component) {
 exports.default = About;
 
 /***/ }),
-/* 102 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactFontawesome = __webpack_require__(1);
-
-var _reactFontawesome2 = _interopRequireDefault(_reactFontawesome);
-
-var _routeList = __webpack_require__(10);
-
-var _routeList2 = _interopRequireDefault(_routeList);
-
-var _articleList = __webpack_require__(103);
-
-var _articleList2 = _interopRequireDefault(_articleList);
-
-var _history = __webpack_require__(11);
-
-var _history2 = _interopRequireDefault(_history);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var Index = function (_Component) {
-  _inherits(Index, _Component);
-
-  function Index() {
-    _classCallCheck(this, Index);
-
-    return _possibleConstructorReturn(this, (Index.__proto__ || Object.getPrototypeOf(Index)).apply(this, arguments));
-  }
-
-  _createClass(Index, [{
-    key: 'render',
-    value: function render() {
-      var _this2 = this;
-
-      var content = [];
-      content.push(_react2.default.createElement(
-        'div',
-        { className: 'wrapper wrapper-basic' },
-        _react2.default.createElement(
-          'div',
-          { className: 'context' },
-          _react2.default.createElement(
-            'div',
-            { className: 'content' },
-            _react2.default.createElement(
-              'h1',
-              null,
-              'Articles'
-            ),
-            _react2.default.createElement(
-              'span',
-              null,
-              'There are my articles introducing some knowledge in conceptual.'
-            )
-          )
-        ),
-        _react2.default.createElement(
-          'div',
-          { className: 'context' },
-          _react2.default.createElement(
-            'div',
-            { className: 'title' },
-            'ARTICLE LIST'
-          ),
-          _react2.default.createElement(
-            'div',
-            { className: 'content' },
-            _react2.default.createElement(
-              'span',
-              null,
-              'Here, I want to introduce some others masterpiece in conceptual. I hope the articles will help in algorithmic. After all, we build system not only by toolbox but also our algorithm, right? But if you have problem to use but not bug issue, welcome to mail to me. We can figure it out together.'
-            )
-          ),
-          _react2.default.createElement(
-            'div',
-            { className: 'content' },
-            _react2.default.createElement(
-              'ul',
-              null,
-              _articleList2.default.map(function (entry) {
-                var content_li = [];
-                content_li.push(_react2.default.createElement(
-                  'li',
-                  null,
-                  _react2.default.createElement(
-                    'span',
-                    null,
-                    entry.name
-                  ),
-                  _react2.default.createElement(_reactFontawesome2.default, { className: 'linkBtn', onClick: function onClick() {
-                      _this2._redirectHandler(entry.link);
-                    }, name: 'link', fixedWidth: true }),
-                  _react2.default.createElement(
-                    'span',
-                    { className: 'update' },
-                    '[UPDATE: ',
-                    entry.update,
-                    ']'
-                  )
-                ));
-                return content_li;
-              })
-            )
-          )
-        )
-      ));
-      return content;
-    }
-  }, {
-    key: '_redirectHandler',
-    value: function _redirectHandler(index) {
-      _history2.default.push(_routeList2.default[index]);
-      window.scrollTo(0, 0);
-    }
-  }]);
-
-  return Index;
-}(_react.Component);
-
-;
-
-exports.default = Index;
-
-/***/ }),
-/* 103 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-var articleList = new Array({ 'name': 'Component: Presentational and Container', 'link': 'BTB_ATCS_COMPONENT_PNC', 'update': '2018-03-24' }, { 'name': 'Flux Introduction', 'link': 'BTB_ATCS_FLUX', 'update': '2018-03-11' }, { 'name': 'Redux Introduction', 'link': 'BTB_ATCS_REDUX', 'update': '2018-04-22' });
-
-exports.default = articleList;
-
-/***/ }),
 /* 104 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -4876,37 +4925,17 @@ var _reactFontawesome = __webpack_require__(1);
 
 var _reactFontawesome2 = _interopRequireDefault(_reactFontawesome);
 
-var _blacktboxList = __webpack_require__(16);
-
-var _blacktboxList2 = _interopRequireDefault(_blacktboxList);
-
-var _routeList = __webpack_require__(10);
+var _routeList = __webpack_require__(28);
 
 var _routeList2 = _interopRequireDefault(_routeList);
 
-var _history = __webpack_require__(11);
+var _history = __webpack_require__(29);
 
 var _history2 = _interopRequireDefault(_history);
 
-var _app = __webpack_require__(105);
+var _layout = __webpack_require__(5);
 
-var _app2 = _interopRequireDefault(_app);
-
-var _app3 = __webpack_require__(107);
-
-var _app4 = _interopRequireDefault(_app3);
-
-var _app5 = __webpack_require__(112);
-
-var _app6 = _interopRequireDefault(_app5);
-
-var _articleFlux = __webpack_require__(116);
-
-var _articleFlux2 = _interopRequireDefault(_articleFlux);
-
-var _articleFlux_server = __webpack_require__(117);
-
-var _articleFlux_server2 = _interopRequireDefault(_articleFlux_server);
+var _layout2 = _interopRequireDefault(_layout);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -4916,14 +4945,13 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var EXAMPLE_BASIC_ALGORITHM = '<!-- Require or Import what you need -->\n\n<!-- Start: Define the component of User list -->\nclass Example extends Component {\n  constructor (props) {\n    super(props);\n    this.dataList = new Array();\n  };\n  componentDidMount () {\n    /* [Store]: Fetch data */\n    this.fetchData();\n  };\n\n  /* [View]: Render component */\n  render () {...};\n  \n  /* [Action]: Actions to access Store */\n  _addHandler () {};\n  _removeHandler () {};\n};\n<!-- End: Define the component of User list -->\n\n<!-- Export component -->\n';
-var EXAMPLE_FLUX_INSTALL = '$ npm install --save flux\n$ npm install --save merge\n';
-var EXAMPLE_FLUX_VIEW = '<!-- Require or Import what you need -->\nimport ExampleDispatcher from \'../dispatchers/exampleDispatcher.js\';\nimport ExampleStore from \'../stores/exampleStore.js\';\nimport ExampleAction from \'../actions/exampleAction.js\';\n\n<!-- Start: Define the component of User list -->\nclass ExampleFlux extends Component {\n  constructor (props) {\n    super(props);\n    this.dataList = new Array();\n  };\n  /* [Store] add listen  */\n  componentDidMount () {\n    ExampleStore.addChangeListener(this.refresh);\n    this.fetchData();\n  };\n  /* [Store] remove listen  */\n  componentWillUnmount () {\n    ExampleStore.removeChangeListener(this.refresh);\n  };\n  render () {...};\n\n  /* [Action]: trigger action to access Store */\n  _addHandler () {};\n  _removeHandler () {};\n};\n<!-- End: Define the component of User list -->\n\n<!-- Export component -->\n';
-var EXAMPLE_FLUX_ACTION = '<!-- Require or Import what you need -->\nimport ExampleDispatcher from \'../dispatchers/exampleDispatcher.js\';\n\n/* [Dispatcher] dispatch data to store  */\nconst ExampleAction = {\n  fetch: (userList)=>{\n    ExampleDispatcher.dispatch({\n      actionType: \'fetch\',\n      userList: userList\n    });\n  },\n  add: (userName)=>{\n    ExampleDispatcher.dispatch({\n      actionType: \'add\',\n      userName: userName\n    });\n  },\n  remove: (userId)=>{\n    ExampleDispatcher.dispatch({\n      actionType: \'remove\',\n      userId: userId\n    });\n  }\n};\n<!-- Export component -->\n';
-var EXAMPLE_FLUX_DISPATCHER = 'import { Dispatcher } from \'flux\';\nlet ExampleDispatcher = new Dispatcher();\nexport default ExampleDispatcher;\n';
-var EXAMPLE_FLUX_STORE = '<!-- Require or Import what you need -->\nimport Merge from \'merge\';\nimport { EventEmitter } from \'events\';\n\nimport ExampleDispatcher from \'../dispatchers/exampleDispatcher.js\';\n\n/* [Store]] store data */\nlet dataList = new Array();\n\n/* [Store]] create event id and merge store event to emitter */\nconst EXAMPLE_EVENT_ID = \'example_change\';\nconst ExampleStore = Merge(EventEmitter.prototype,{\n  /* Here, the function must be unique. */\n  getData: function(){\n\t\treturn dataList;\n\t},\n  emitChange: function () {\n    this.emit(EXAMPLE_EVENT_ID);\n  },\n  addChangeListener: function (callback) {\n    this.on(EXAMPLE_EVENT_ID, callback);\n  },\n  removeChangeListener: function (callback) {\n    this.removeListener(EXAMPLE_EVENT_ID, callback);\n  }\n});\n\n/* [Dispatcher] regist event */\nExampleDispatcher.register((event)=>{\n  switch(event.actionType) \n  {\n    case \'fetch\':\n      ...\n      ExampleStore.emitChange();\n      break;\n    case \'add\':\n      ...\n      ExampleStore.emitChange();\n      break;\n    case \'remove\':\n      ...\n      ExampleStore.emitChange();\n      break;\n  }\n});\n<!-- Export component -->\n';
+var mainTitle = 'Articles';
+var mainDescriptionStr = 'There are my articles introducing some knowledge in conceptual.';
 
-var NOTICE = new Array({ 'name': 'Dispatcher is unique: In our webside, Dispatcher in at /assets, and it imported in first time at index.js.' }, { 'name': 'All Stores\' event functions must named uniquely: Cause all stores use the same EventEmitter, they need to named their event function differently.' });
+var articleListTitle = 'ARTICLE LIST';
+var articleListContent = 'We would list to introduce you some others masterpiece in conceptual. Hope our articles will do help somehow in algorithmic angle. And if you have problem to use them, welcome to contact me. We can figure it out together.';
+
+var articleList = new Array({ 'name': 'Component: Presentational and Container', 'link': 'BTB_ATCS_COMPONENT_PNC', 'update': '2018-03-24' }, { 'name': 'Flux Introduction', 'link': 'BTB_ATCS_FLUX', 'update': '2018-03-11' }, { 'name': 'Redux Introduction', 'link': 'BTB_ATCS_REDUX', 'update': '2018-04-22' });
 
 var Index = function (_Component) {
   _inherits(Index, _Component);
@@ -4944,336 +4972,57 @@ var Index = function (_Component) {
         'div',
         { className: 'wrapper wrapper-basic' },
         _react2.default.createElement(
-          'div',
-          { className: 'context' },
-          _react2.default.createElement(
-            'div',
-            { className: 'content' },
-            _react2.default.createElement(
-              'h1',
-              null,
-              'Flux Introduction'
-            ),
-            _react2.default.createElement(
-              'span',
-              null,
-              'Conceptual introduction and simple example'
-            )
-          )
+          _layout2.default.MainTitle,
+          null,
+          mainTitle
         ),
         _react2.default.createElement(
-          'div',
-          { className: 'context' },
+          _layout2.default.MainDescription,
+          null,
+          mainDescriptionStr
+        ),
+        _react2.default.createElement(
+          _layout2.default.Section,
+          null,
           _react2.default.createElement(
-            'div',
-            { className: 'title' },
-            'INTRODUCTION'
+            _layout2.default.SectionTitle,
+            null,
+            articleListTitle
           ),
           _react2.default.createElement(
-            'div',
-            { className: 'content' },
-            _react2.default.createElement(
-              'span',
-              null,
-              'In this article, we are going to talk about ',
-              _react2.default.createElement(
-                'a',
-                { target: '_blank', href: 'https://www.npmjs.com/package/flux' },
-                'Flux',
-                _react2.default.createElement(_reactFontawesome2.default, { name: 'external-link', fixedWidth: true })
-              ),
-              '. If you need more clear example about learning Flux. The other article ',
-              _react2.default.createElement(
-                'a',
-                { target: '_blank', href: 'https://scotch.io/tutorials/getting-to-know-flux-the-react-js-architecture' },
-                'Getting To Know Flux, the React.js Architecture',
-                _react2.default.createElement(_reactFontawesome2.default, { name: 'external-link', fixedWidth: true })
-              ),
-              ' may be more suitable.'
-            )
+            _layout2.default.Content,
+            null,
+            articleListContent
           ),
           _react2.default.createElement(
-            'div',
-            { className: 'content' },
+            _layout2.default.Content,
+            null,
             _react2.default.createElement(
-              'h3',
+              'ul',
               null,
-              'Example'
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'content' },
-              _react2.default.createElement(
-                'span',
-                null,
-                'The following shown is a user list. It is the example with our discussion to Flux. And here is source code of ',
-                _react2.default.createElement(
-                  'a',
-                  { target: '_blank', href: 'https://github.com/BlackToolBoxLaboratory/blacktbox-demo/tree/master/src/example/articleFlux/example' },
-                  'example',
-                  _react2.default.createElement(_reactFontawesome2.default, { name: 'external-link', fixedWidth: true })
-                ),
-                '.'
-              )
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'content-example' },
-              _react2.default.createElement(_app2.default, null)
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'content' },
-              _react2.default.createElement(
-                'span',
-                null,
-                'To implement the User List. Basically we need three factors: render(View), data(Store), access handler(Action). It is quite easy to implement it by coding them all together. However in systemic angle, if we want to separate them to keep system construction defined and used clear(to unify or generalize), we may need to use some framework to let system keep clear like Flux. And next, we will show it in Flux way. Comparing my ',
-                _react2.default.createElement(
-                  'a',
-                  { target: '_blank', href: 'https://github.com/BlackToolBoxLaboratory/blacktbox-demo/tree/master/src/example/articleFlux/exampleFlux' },
-                  'Flux\'s example',
-                  _react2.default.createElement(_reactFontawesome2.default, { name: 'external-link', fixedWidth: true })
-                ),
-                ', I simplify the source code for more focus on the construction and add some notation, like this:'
-              ),
-              _react2.default.createElement(
-                'pre',
-                { className: 'content-pre' },
-                EXAMPLE_BASIC_ALGORITHM
-              )
-            )
-          ),
-          _react2.default.createElement(
-            'div',
-            { className: 'content' },
-            _react2.default.createElement(
-              'h3',
-              null,
-              'Flux'
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'content' },
-              _react2.default.createElement(
-                'span',
-                null,
-                'In original, we can trigger rerender easy while coding all factors in one-file. But while they are separated to files, we will need the  "Dispatch and Listen". And here is the picture of Flux\'s relationship.'
-              )
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'content-image' },
-              _react2.default.createElement('img', { src: _articleFlux2.default })
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'content' },
-              _react2.default.createElement(
-                'span',
-                null,
-                'To implement the example in Flux. We need to install some packages:'
-              ),
-              _react2.default.createElement(
-                'pre',
-                { className: 'content-pre' },
-                EXAMPLE_FLUX_INSTALL
-              )
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'content' },
-              _react2.default.createElement(
-                'h3',
-                null,
-                'View'
-              ),
-              _react2.default.createElement(
-                'div',
-                { className: 'content' },
-                _react2.default.createElement(
-                  'span',
+              articleList.map(function (entry) {
+                var content_li = [];
+                content_li.push(_react2.default.createElement(
+                  'li',
                   null,
-                  'View have to get a new dispatcher, be listened by Store and add Action for used.'
-                ),
-                _react2.default.createElement(
-                  'pre',
-                  { className: 'content-pre' },
-                  EXAMPLE_FLUX_VIEW
-                )
-              ),
-              _react2.default.createElement(
-                'h3',
-                null,
-                'Action'
-              ),
-              _react2.default.createElement(
-                'div',
-                { className: 'content' },
-                _react2.default.createElement(
-                  'span',
-                  null,
-                  'In Action, we just define each Action type correspond to dispatch event.'
-                ),
-                _react2.default.createElement(
-                  'pre',
-                  { className: 'content-pre' },
-                  EXAMPLE_FLUX_ACTION
-                )
-              ),
-              _react2.default.createElement(
-                'h3',
-                null,
-                'Dispatcher'
-              ),
-              _react2.default.createElement(
-                'div',
-                { className: 'content' },
-                _react2.default.createElement(
-                  'span',
-                  null,
-                  'The only one thing Dispatcher need to do is create a new Dispatcher.'
-                ),
-                _react2.default.createElement(
-                  'pre',
-                  { className: 'content-pre' },
-                  EXAMPLE_FLUX_DISPATCHER
-                )
-              ),
-              _react2.default.createElement(
-                'h3',
-                null,
-                'Store'
-              ),
-              _react2.default.createElement(
-                'div',
-                { className: 'content' },
-                _react2.default.createElement(
-                  'span',
-                  null,
-                  'Store have two part. To create Store\'s emitter by merge events.EventEmitter, and let dispatch er regist event meanwhile define what each event needs to access to Store.'
-                ),
-                _react2.default.createElement(
-                  'pre',
-                  { className: 'content-pre' },
-                  EXAMPLE_FLUX_STORE
-                )
-              )
-            )
-          )
-        ),
-        _react2.default.createElement(
-          'div',
-          { className: 'context' },
-          _react2.default.createElement(
-            'div',
-            { className: 'title' },
-            'PRODUCTION'
-          ),
-          _react2.default.createElement(
-            'div',
-            { className: 'content' },
-            _react2.default.createElement(
-              'span',
-              null,
-              'Here we go! This is the example in Flux version.'
-            )
-          ),
-          _react2.default.createElement(
-            'div',
-            { className: 'content-example' },
-            _react2.default.createElement(_app4.default, null)
-          )
-        ),
-        _react2.default.createElement(
-          'div',
-          { className: 'context' },
-          _react2.default.createElement(
-            'div',
-            { className: 'title' },
-            'ADVANCED'
-          ),
-          _react2.default.createElement(
-            'div',
-            { className: 'content' },
-            _react2.default.createElement(
-              'span',
-              null,
-              'The more usual case. What if our data is coming from server and where should we add server API in the Flux flow? To keep the rule of Flux framework. We use APIs to access server\'s data before Action. However why it is not added duing Store? Think the definition of "What the data actually is for Flux?". Here in Flux, the data means View\'s data, not the server\'s data. So that, we allowed to access server\'s data directly, then Store will get data from server. The following picture is the flow of Flux with server API.'
-            )
-          ),
-          _react2.default.createElement(
-            'div',
-            { className: 'content-image' },
-            _react2.default.createElement('img', { src: _articleFlux_server2.default })
-          ),
-          _react2.default.createElement(
-            'div',
-            { className: 'content' },
-            _react2.default.createElement(
-              'span',
-              null,
-              'Then, here is the User List work with server API. And also here is the source code of ',
-              _react2.default.createElement(
-                'a',
-                { target: '_blank', href: 'https://github.com/BlackToolBoxLaboratory/blacktbox-demo/tree/master/src/example/articleFlux/exampleFlux_server' },
-                'Flux\'s example with server',
-                _react2.default.createElement(_reactFontawesome2.default, { name: 'external-link', fixedWidth: true })
-              )
-            )
-          ),
-          _react2.default.createElement(
-            'div',
-            { className: 'content-example' },
-            _react2.default.createElement(_app6.default, null)
-          )
-        ),
-        _react2.default.createElement(
-          'div',
-          { className: 'context' },
-          _react2.default.createElement(
-            'div',
-            { className: 'title' },
-            'NOTICE'
-          ),
-          _react2.default.createElement(
-            'div',
-            { className: 'content' },
-            _react2.default.createElement(
-              'span',
-              null,
-              'It has a notice here about many repositories in used. In this page, we have two repositories: exampleFlux and exampleFlux_server. There are two things need to be cautioned:'
-            )
-          ),
-          _react2.default.createElement(
-            'div',
-            { className: 'content' },
-            _react2.default.createElement(_blacktboxList2.default, {
-              STYLE: {
-                'margin': 'auto',
-                'padding': '15px',
-                'width': 'calc(100% - 75px * 2)'
-              },
-              listArr: NOTICE
-            })
-          )
-        ),
-        _react2.default.createElement(
-          'div',
-          { className: 'context' },
-          _react2.default.createElement(
-            'div',
-            { className: 'buttonGroup' },
-            _react2.default.createElement(
-              'div',
-              { className: 'backButton', onClick: function onClick() {
-                  _this2._redirectHandler('BTB_ATCS');
-                } },
-              _react2.default.createElement(_reactFontawesome2.default, { name: 'arrow-left', fixedWidth: true }),
-              _react2.default.createElement(
-                'span',
-                null,
-                'Back to Articles'
-              )
+                  _react2.default.createElement(
+                    'span',
+                    null,
+                    entry.name
+                  ),
+                  _react2.default.createElement(_reactFontawesome2.default, { className: 'linkBtn', onClick: function onClick() {
+                      _this2._redirectHandler(entry.link);
+                    }, name: 'link', fixedWidth: true }),
+                  _react2.default.createElement(
+                    _layout2.default.Notice,
+                    null,
+                    '[UPDATE: ',
+                    entry.update,
+                    ']'
+                  )
+                ));
+                return content_li;
+              })
             )
           )
         )
@@ -5306,13 +5055,414 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactFontawesome = __webpack_require__(1);
+
+var _reactFontawesome2 = _interopRequireDefault(_reactFontawesome);
+
+var _blacktboxList = __webpack_require__(15);
+
+var _blacktboxList2 = _interopRequireDefault(_blacktboxList);
+
+var _app = __webpack_require__(106);
+
+var _app2 = _interopRequireDefault(_app);
+
+var _app3 = __webpack_require__(108);
+
+var _app4 = _interopRequireDefault(_app3);
+
+var _app5 = __webpack_require__(113);
+
+var _app6 = _interopRequireDefault(_app5);
+
+var _articleFlux = __webpack_require__(117);
+
+var _articleFlux2 = _interopRequireDefault(_articleFlux);
+
+var _articleFlux_server = __webpack_require__(118);
+
+var _articleFlux_server2 = _interopRequireDefault(_articleFlux_server);
+
+var _layout = __webpack_require__(5);
+
+var _layout2 = _interopRequireDefault(_layout);
+
+var _articleRedirecter = __webpack_require__(30);
+
+var _articleRedirecter2 = _interopRequireDefault(_articleRedirecter);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var mainTitle = 'Flux Introduction';
+var mainDescriptionStr = 'Conceptual introduction and simple example';
+
+var introductionTitle = 'INTRODUCTION';
+var introductionContent = _react2.default.createElement(
+  'span',
+  null,
+  'In this article, we are going to talk about ',
+  _react2.default.createElement(
+    'a',
+    { target: '_blank', href: 'https://www.npmjs.com/package/flux' },
+    'Flux',
+    _react2.default.createElement(_reactFontawesome2.default, { name: 'external-link', fixedWidth: true })
+  ),
+  '. If you need more clear example about learning Flux. The other article ',
+  _react2.default.createElement(
+    'a',
+    { target: '_blank', href: 'https://scotch.io/tutorials/getting-to-know-flux-the-react-js-architecture' },
+    'Getting To Know Flux, the React.js Architecture',
+    _react2.default.createElement(_reactFontawesome2.default, { name: 'external-link', fixedWidth: true })
+  ),
+  ' may be more suitable.'
+);
+
+var introductionExampleTitle = 'Example';
+var introductionExampleContent = _react2.default.createElement(
+  'span',
+  null,
+  'The following shown is a user list. It is the example with our discussion to Flux. And here is source code of ',
+  _react2.default.createElement(
+    'a',
+    { target: '_blank', href: 'https://github.com/BlackToolBoxLaboratory/blacktbox-demo/tree/master/src/example/articleFlux/example' },
+    'example',
+    _react2.default.createElement(_reactFontawesome2.default, { name: 'external-link', fixedWidth: true })
+  ),
+  '.'
+);
+var introductionExampleAlgorithmDescription = _react2.default.createElement(
+  'span',
+  null,
+  'To implement the User List. Basically we need three factors: render(View), data(Store), access handler(Action). It is quite easy to implement it by coding them all together. However in systemic angle, if we want to separate them to keep system construction defined and used clear(to unify or generalize), we may need to use some framework to let system keep clear like Flux. And next, we will show it in Flux way. Comparing my ',
+  _react2.default.createElement(
+    'a',
+    { target: '_blank', href: 'https://github.com/BlackToolBoxLaboratory/blacktbox-demo/tree/master/src/example/articleFlux/exampleFlux' },
+    'Flux\'s example',
+    _react2.default.createElement(_reactFontawesome2.default, { name: 'external-link', fixedWidth: true })
+  ),
+  ', I simplify the source code for more focus on the construction and add some notation, like this:'
+);
+
+var introductionFluxTitle = 'Flux';
+var introductionFluxContent = 'In original, we can trigger rerender easy while coding all factors in one-file. But while they are separated to files, we will need the  "Dispatch and Listen". And here is the picture of Flux\'s relationship.';
+var introductionFluxAlgorithmDescription = 'To implement the example in Flux. We need to install some packages:';
+
+var introductionFluxViewTitle = 'View';
+var introductionFluxViewContent = 'View have to get a new dispatcher, be listened by Store and add Action for used.';
+var introductionFluxActionTitle = 'Action';
+var introductionFluxActionContent = 'In Action, we just define each Action type correspond to dispatch event.';
+var introductionFluxDispatcherTitle = 'Dispatcher';
+var introductionFluxDispatcherContent = 'The only one thing Dispatcher need to do is create a new Dispatcher.';
+var introductionFluxStoreTitle = 'Store';
+var introductionFluxStoreContent = 'Store have two part. To create Store\'s emitter by merge events.EventEmitter, and let dispatch er regist event meanwhile define what each event needs to access to Store.';
+
+var productionTitle = 'PRODUCTION';
+var productionContent = 'Here we go! This is the example in Flux version.';
+
+var advancedTitle = 'ADVANCED';
+var advancedContent = 'The more usual case. What if our data is coming from server and where should we add server API in the Flux flow? To keep the rule of Flux framework. We use APIs to access server\'s data before Action. However why it is not added duing Store? Think the definition of "What the data actually is for Flux?". Here in Flux, the data means View\'s data, not the server\'s data. So that, we allowed to access server\'s data directly, then Store will get data from server. The following picture is the flow of Flux with server API.';
+var advancedServerContent = _react2.default.createElement(
+  'span',
+  null,
+  'Then, here is the User List work with server API. And also here is the source code of ',
+  _react2.default.createElement(
+    'a',
+    { target: '_blank', href: 'https://github.com/BlackToolBoxLaboratory/blacktbox-demo/tree/master/src/example/articleFlux/exampleFlux_server' },
+    'Flux\'s example with server',
+    _react2.default.createElement(_reactFontawesome2.default, { name: 'external-link', fixedWidth: true })
+  )
+);
+
+var noticeTitle = 'NOTICE';
+var noticeContent = 'It has a notice here about many repositories in used. In this page, we have two repositories: exampleFlux and exampleFlux_server. There are two things need to be cautioned:';
+
+var EXAMPLE_BASIC_ALGORITHM = '<!-- Require or Import what you need -->\n\n<!-- Start: Define the component of User list -->\nclass Example extends Component {\n  constructor (props) {\n    super(props);\n    this.dataList = new Array();\n  };\n  componentDidMount () {\n    /* [Store]: Fetch data */\n    this.fetchData();\n  };\n\n  /* [View]: Render component */\n  render () {...};\n  \n  /* [Action]: Actions to access Store */\n  _addHandler () {};\n  _removeHandler () {};\n};\n<!-- End: Define the component of User list -->\n\n<!-- Export component -->\n';
+var EXAMPLE_FLUX_INSTALL = '$ npm install --save flux\n$ npm install --save merge\n';
+var EXAMPLE_FLUX_VIEW = '<!-- Require or Import what you need -->\nimport ExampleDispatcher from \'../dispatchers/exampleDispatcher.js\';\nimport ExampleStore from \'../stores/exampleStore.js\';\nimport ExampleAction from \'../actions/exampleAction.js\';\n\n<!-- Start: Define the component of User list -->\nclass ExampleFlux extends Component {\n  constructor (props) {\n    super(props);\n    this.dataList = new Array();\n  };\n  /* [Store] add listen  */\n  componentDidMount () {\n    ExampleStore.addChangeListener(this.refresh);\n    this.fetchData();\n  };\n  /* [Store] remove listen  */\n  componentWillUnmount () {\n    ExampleStore.removeChangeListener(this.refresh);\n  };\n  render () {...};\n\n  /* [Action]: trigger action to access Store */\n  _addHandler () {};\n  _removeHandler () {};\n};\n<!-- End: Define the component of User list -->\n\n<!-- Export component -->\n';
+var EXAMPLE_FLUX_ACTION = '<!-- Require or Import what you need -->\nimport ExampleDispatcher from \'../dispatchers/exampleDispatcher.js\';\n\n/* [Dispatcher] dispatch data to store  */\nconst ExampleAction = {\n  fetch: (userList)=>{\n    ExampleDispatcher.dispatch({\n      actionType: \'fetch\',\n      userList: userList\n    });\n  },\n  add: (userName)=>{\n    ExampleDispatcher.dispatch({\n      actionType: \'add\',\n      userName: userName\n    });\n  },\n  remove: (userId)=>{\n    ExampleDispatcher.dispatch({\n      actionType: \'remove\',\n      userId: userId\n    });\n  }\n};\n<!-- Export component -->\n';
+var EXAMPLE_FLUX_DISPATCHER = 'import { Dispatcher } from \'flux\';\nlet ExampleDispatcher = new Dispatcher();\nexport default ExampleDispatcher;\n';
+var EXAMPLE_FLUX_STORE = '<!-- Require or Import what you need -->\nimport Merge from \'merge\';\nimport { EventEmitter } from \'events\';\n\nimport ExampleDispatcher from \'../dispatchers/exampleDispatcher.js\';\n\n/* [Store]] store data */\nlet dataList = new Array();\n\n/* [Store]] create event id and merge store event to emitter */\nconst EXAMPLE_EVENT_ID = \'example_change\';\nconst ExampleStore = Merge(EventEmitter.prototype,{\n  /* Here, the function must be unique. */\n  getData: function(){\n\t\treturn dataList;\n\t},\n  emitChange: function () {\n    this.emit(EXAMPLE_EVENT_ID);\n  },\n  addChangeListener: function (callback) {\n    this.on(EXAMPLE_EVENT_ID, callback);\n  },\n  removeChangeListener: function (callback) {\n    this.removeListener(EXAMPLE_EVENT_ID, callback);\n  }\n});\n\n/* [Dispatcher] regist event */\nExampleDispatcher.register((event)=>{\n  switch(event.actionType) \n  {\n    case \'fetch\':\n      ...\n      ExampleStore.emitChange();\n      break;\n    case \'add\':\n      ...\n      ExampleStore.emitChange();\n      break;\n    case \'remove\':\n      ...\n      ExampleStore.emitChange();\n      break;\n  }\n});\n<!-- Export component -->\n';
+
+var NOTICE = new Array({ 'name': 'Dispatcher is unique: In our webside, Dispatcher in at /assets, and it imported in first time at index.js.' }, { 'name': 'All Stores\' event functions must named uniquely: Cause all stores use the same EventEmitter, they need to named their event function differently.' });
+
+var Index = function Index(props) {
+  var content = [];
+  content.push(_react2.default.createElement(
+    'div',
+    { className: 'wrapper wrapper-basic' },
+    _react2.default.createElement(
+      _layout2.default.MainTitle,
+      null,
+      mainTitle
+    ),
+    _react2.default.createElement(
+      _layout2.default.MainDescription,
+      null,
+      mainDescriptionStr
+    ),
+    _react2.default.createElement(
+      _layout2.default.Section,
+      null,
+      _react2.default.createElement(
+        _layout2.default.SectionTitle,
+        null,
+        introductionTitle
+      ),
+      _react2.default.createElement(
+        _layout2.default.Content,
+        null,
+        introductionContent
+      ),
+      _react2.default.createElement(
+        _layout2.default.Content,
+        null,
+        _react2.default.createElement(
+          _layout2.default.SectionSubtitle,
+          null,
+          introductionExampleTitle
+        ),
+        _react2.default.createElement(
+          _layout2.default.Content,
+          null,
+          introductionExampleContent
+        ),
+        _react2.default.createElement(
+          _layout2.default.Item,
+          null,
+          _react2.default.createElement(_app2.default, null)
+        ),
+        _react2.default.createElement(
+          _layout2.default.Content,
+          null,
+          introductionExampleAlgorithmDescription
+        ),
+        _react2.default.createElement(
+          _layout2.default.Pre,
+          null,
+          EXAMPLE_BASIC_ALGORITHM
+        )
+      ),
+      _react2.default.createElement(
+        _layout2.default.Content,
+        null,
+        _react2.default.createElement(
+          _layout2.default.SectionSubtitle,
+          null,
+          introductionFluxTitle
+        ),
+        _react2.default.createElement(
+          _layout2.default.Content,
+          null,
+          introductionFluxContent
+        ),
+        _react2.default.createElement(
+          _layout2.default.Item,
+          null,
+          _react2.default.createElement('img', { src: _articleFlux2.default })
+        ),
+        _react2.default.createElement(
+          _layout2.default.Content,
+          null,
+          introductionFluxAlgorithmDescription
+        ),
+        _react2.default.createElement(
+          _layout2.default.Pre,
+          null,
+          EXAMPLE_FLUX_INSTALL
+        ),
+        _react2.default.createElement(
+          _layout2.default.Content,
+          null,
+          _react2.default.createElement(
+            _layout2.default.SectionSubtitle,
+            null,
+            introductionFluxViewTitle
+          ),
+          _react2.default.createElement(
+            _layout2.default.Content,
+            null,
+            introductionFluxViewContent
+          ),
+          _react2.default.createElement(
+            _layout2.default.Pre,
+            null,
+            EXAMPLE_FLUX_VIEW
+          )
+        ),
+        _react2.default.createElement(
+          _layout2.default.Content,
+          null,
+          _react2.default.createElement(
+            _layout2.default.SectionSubtitle,
+            null,
+            introductionFluxActionTitle
+          ),
+          _react2.default.createElement(
+            _layout2.default.Content,
+            null,
+            introductionFluxActionContent
+          ),
+          _react2.default.createElement(
+            _layout2.default.Pre,
+            null,
+            EXAMPLE_FLUX_ACTION
+          )
+        ),
+        _react2.default.createElement(
+          _layout2.default.Content,
+          null,
+          _react2.default.createElement(
+            _layout2.default.SectionSubtitle,
+            null,
+            introductionFluxDispatcherTitle
+          ),
+          _react2.default.createElement(
+            _layout2.default.Content,
+            null,
+            introductionFluxDispatcherContent
+          ),
+          _react2.default.createElement(
+            _layout2.default.Pre,
+            null,
+            EXAMPLE_FLUX_DISPATCHER
+          )
+        ),
+        _react2.default.createElement(
+          _layout2.default.Content,
+          null,
+          _react2.default.createElement(
+            _layout2.default.SectionSubtitle,
+            null,
+            introductionFluxStoreTitle
+          ),
+          _react2.default.createElement(
+            _layout2.default.Content,
+            null,
+            introductionFluxStoreContent
+          ),
+          _react2.default.createElement(
+            _layout2.default.Pre,
+            null,
+            EXAMPLE_FLUX_STORE
+          )
+        )
+      )
+    ),
+    _react2.default.createElement(
+      _layout2.default.Section,
+      null,
+      _react2.default.createElement(
+        _layout2.default.SectionTitle,
+        null,
+        productionTitle
+      ),
+      _react2.default.createElement(
+        _layout2.default.Content,
+        null,
+        productionContent
+      ),
+      _react2.default.createElement(
+        _layout2.default.Item,
+        null,
+        _react2.default.createElement(_app4.default, null)
+      )
+    ),
+    _react2.default.createElement(
+      _layout2.default.Section,
+      null,
+      _react2.default.createElement(
+        _layout2.default.SectionTitle,
+        null,
+        advancedTitle
+      ),
+      _react2.default.createElement(
+        _layout2.default.Content,
+        null,
+        advancedContent
+      ),
+      _react2.default.createElement(
+        _layout2.default.Item,
+        null,
+        _react2.default.createElement('img', { src: _articleFlux_server2.default })
+      ),
+      _react2.default.createElement(
+        _layout2.default.Content,
+        null,
+        advancedServerContent
+      ),
+      _react2.default.createElement(
+        _layout2.default.Item,
+        null,
+        _react2.default.createElement(_app6.default, null)
+      )
+    ),
+    _react2.default.createElement(
+      _layout2.default.Section,
+      null,
+      _react2.default.createElement(
+        _layout2.default.SectionTitle,
+        null,
+        noticeTitle
+      ),
+      _react2.default.createElement(
+        _layout2.default.Content,
+        null,
+        noticeContent
+      ),
+      _react2.default.createElement(
+        _layout2.default.Content,
+        null,
+        _react2.default.createElement(_blacktboxList2.default, {
+          STYLE: {
+            'margin': 'auto',
+            'padding': '15px',
+            'width': 'calc(100% - 75px * 2)'
+          },
+          listArr: NOTICE
+        })
+      )
+    ),
+    _react2.default.createElement(
+      _layout2.default.Section,
+      null,
+      _react2.default.createElement(
+        _layout2.default.BtnGroup,
+        null,
+        _react2.default.createElement(
+          _layout2.default.Btn,
+          null,
+          _react2.default.createElement(_articleRedirecter2.default, { redirectTo: 'BTB_ATCS' })
+        )
+      )
+    )
+  ));
+  return content;
+};
+
+exports.default = Index;
+
+/***/ }),
+/* 106 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _exampleComponent = __webpack_require__(106);
+var _exampleComponent = __webpack_require__(107);
 
 var _exampleComponent2 = _interopRequireDefault(_exampleComponent);
 
@@ -5350,7 +5500,7 @@ var App = function (_Component) {
 exports.default = App;
 
 /***/ }),
-/* 106 */
+/* 107 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5366,7 +5516,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(6);
+var _reactDom = __webpack_require__(7);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
@@ -5558,7 +5708,7 @@ var Example = function (_Component) {
 exports.default = Example;
 
 /***/ }),
-/* 107 */
+/* 108 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5574,7 +5724,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _exampleComponent = __webpack_require__(108);
+var _exampleComponent = __webpack_require__(109);
 
 var _exampleComponent2 = _interopRequireDefault(_exampleComponent);
 
@@ -5612,7 +5762,7 @@ var App = function (_Component) {
 exports.default = App;
 
 /***/ }),
-/* 108 */
+/* 109 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5628,7 +5778,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(6);
+var _reactDom = __webpack_require__(7);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
@@ -5636,11 +5786,11 @@ var _reactFontawesome = __webpack_require__(1);
 
 var _reactFontawesome2 = _interopRequireDefault(_reactFontawesome);
 
-var _exampleAction = __webpack_require__(109);
+var _exampleAction = __webpack_require__(110);
 
 var _exampleAction2 = _interopRequireDefault(_exampleAction);
 
-var _exampleStore = __webpack_require__(110);
+var _exampleStore = __webpack_require__(111);
 
 var _exampleStore2 = _interopRequireDefault(_exampleStore);
 
@@ -5829,7 +5979,7 @@ var Example = function (_Component) {
 exports.default = Example;
 
 /***/ }),
-/* 109 */
+/* 110 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5839,7 +5989,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _dispatcher = __webpack_require__(9);
+var _dispatcher = __webpack_require__(10);
 
 var _dispatcher2 = _interopRequireDefault(_dispatcher);
 
@@ -5870,7 +6020,7 @@ var ExampleAction = {
 exports.default = ExampleAction;
 
 /***/ }),
-/* 110 */
+/* 111 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5880,13 +6030,13 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _merge = __webpack_require__(43);
+var _merge = __webpack_require__(45);
 
 var _merge2 = _interopRequireDefault(_merge);
 
-var _events = __webpack_require__(44);
+var _events = __webpack_require__(46);
 
-var _dispatcher = __webpack_require__(9);
+var _dispatcher = __webpack_require__(10);
 
 var _dispatcher2 = _interopRequireDefault(_dispatcher);
 
@@ -5977,7 +6127,7 @@ _dispatcher2.default.register(function (event) {
 exports.default = ExampleStore;
 
 /***/ }),
-/* 111 */
+/* 112 */
 /***/ (function(module, exports) {
 
 module.exports = function(module) {
@@ -6005,7 +6155,7 @@ module.exports = function(module) {
 
 
 /***/ }),
-/* 112 */
+/* 113 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6021,11 +6171,11 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _serverAPI = __webpack_require__(45);
+var _serverAPI = __webpack_require__(47);
 
 var _serverAPI2 = _interopRequireDefault(_serverAPI);
 
-var _exampleComponent = __webpack_require__(113);
+var _exampleComponent = __webpack_require__(114);
 
 var _exampleComponent2 = _interopRequireDefault(_exampleComponent);
 
@@ -6068,7 +6218,7 @@ var App = function (_Component) {
 exports.default = App;
 
 /***/ }),
-/* 113 */
+/* 114 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6084,7 +6234,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(6);
+var _reactDom = __webpack_require__(7);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
@@ -6092,15 +6242,15 @@ var _reactFontawesome = __webpack_require__(1);
 
 var _reactFontawesome2 = _interopRequireDefault(_reactFontawesome);
 
-var _serverAPI = __webpack_require__(45);
+var _serverAPI = __webpack_require__(47);
 
 var _serverAPI2 = _interopRequireDefault(_serverAPI);
 
-var _exampleAction = __webpack_require__(114);
+var _exampleAction = __webpack_require__(115);
 
 var _exampleAction2 = _interopRequireDefault(_exampleAction);
 
-var _exampleStore = __webpack_require__(115);
+var _exampleStore = __webpack_require__(116);
 
 var _exampleStore2 = _interopRequireDefault(_exampleStore);
 
@@ -6263,7 +6413,7 @@ var Example = function (_Component) {
 exports.default = Example;
 
 /***/ }),
-/* 114 */
+/* 115 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6273,7 +6423,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _dispatcher = __webpack_require__(9);
+var _dispatcher = __webpack_require__(10);
 
 var _dispatcher2 = _interopRequireDefault(_dispatcher);
 
@@ -6292,7 +6442,7 @@ var ExampleAction = {
 exports.default = ExampleAction;
 
 /***/ }),
-/* 115 */
+/* 116 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6302,13 +6452,13 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _merge = __webpack_require__(43);
+var _merge = __webpack_require__(45);
 
 var _merge2 = _interopRequireDefault(_merge);
 
-var _events = __webpack_require__(44);
+var _events = __webpack_require__(46);
 
-var _dispatcher = __webpack_require__(9);
+var _dispatcher = __webpack_require__(10);
 
 var _dispatcher2 = _interopRequireDefault(_dispatcher);
 
@@ -6349,461 +6499,16 @@ _dispatcher2.default.register(function (event) {
 exports.default = ExampleStore;
 
 /***/ }),
-/* 116 */
+/* 117 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "images/articleFlux.png";
 
 /***/ }),
-/* 117 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "images/articleFlux_server.png";
-
-/***/ }),
 /* 118 */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactFontawesome = __webpack_require__(1);
-
-var _reactFontawesome2 = _interopRequireDefault(_reactFontawesome);
-
-var _routeList = __webpack_require__(10);
-
-var _routeList2 = _interopRequireDefault(_routeList);
-
-var _history = __webpack_require__(11);
-
-var _history2 = _interopRequireDefault(_history);
-
-var _app = __webpack_require__(119);
-
-var _app2 = _interopRequireDefault(_app);
-
-var _index = __webpack_require__(121);
-
-var _index2 = _interopRequireDefault(_index);
-
-var _index3 = __webpack_require__(153);
-
-var _index4 = _interopRequireDefault(_index3);
-
-var _articleRedux = __webpack_require__(164);
-
-var _articleRedux2 = _interopRequireDefault(_articleRedux);
-
-var _articleRedux_server = __webpack_require__(165);
-
-var _articleRedux_server2 = _interopRequireDefault(_articleRedux_server);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var EXAMPLE_BASIC_ALGORITHM = '<!-- Require or Import what you need -->\n\n<!-- Start: Define the component of User list -->\nclass Example extends Component {\n  constructor (props) {\n    super(props);\n    this.dataList = new Array();\n  };\n  componentDidMount () {\n    /* [Store]: Fetch data */\n    this.fetchData();\n  };\n\n  /* [View]: Render component */\n  render () {...};\n  \n  /* [Action]: Actions to access Store */\n  _addHandler () {};\n  _moveHandler () {};\n  _removeHandler () {};\n};\n<!-- End: Define the component of User list -->\n\n<!-- Export component -->\n';
-var EXAMPLE_REDUX_INSTALL = '$ npm install --save redux\n$ npm install --save react-redux\n';
-var EXAMPLE_REDUX_VIEW_CONTAINER = 'import { connect } from \'react-redux\';\n<!-- Require or Import what action.js you need -->\n\nconst Container = ({ dispatch }) => {\n  return ...; /* render */\n};\n\nexport default connect()(Container);\n';
-var EXAMPLE_REDUX_VIEW_CONNECT_CONTAINER = '<!-- Require or Import Component -->\n<!-- Require or Import what action.js you need -->\n\nconst mapStateToProps = ( state, ownProps ) => { ... };\nconst mapDispatchToProps = ( dispatch, ownProps ) => { ... };\nconst mergeProps = ( stateProps, dispatchProps, ownProps ) => {...}; /* optional */\n\nexport default connect(\n  mapStateToProps,\n  mapDispatchToProps,\n  mergeProps\n)(Component);\n';
-var EXAMPLE_REDUX_VIEW_CONNECT_COMPONENT = 'import React from \'react\';\n<!-- Require or Import what you need -->\n\nconst Component = ({ ... }) => {\n  return ...; /* render */\n};\n\nexport default Component;\n';
-var EXAMPLE_REDUX_ACTION = 'const Action = (() => {\n  const actionType = () => {\n    return { ... };\n  };\n  ...\n  return {\n    actionType: actionType,\n    ...\n  }\n})();\n\nexport default Action;\n';
-var EXAMPLE_REDUX_REDUCER_INDEX = 'import { combineReducers } from \'redux\';\n<!-- Require or Import reducer branches -->\n\nconst reducers = combineReducers({\n  [reducer branch],\n  ...\n});\n\nexport default reducers;\n';
-var EXAMPLE_REDUX_REDUCER_BRANCH = 'const ReducerBranch = (state = [], action) => {\n  switch (action[\'type\']) {\n    let newState = state;\n    case actionType:\n      ...\n      return newState;\n      break;\n    ...\n    default:\n      return newState;\n      break;\n  }\n}\n\nexport default ReducerBranch;\n';
-
-var Index = function (_Component) {
-  _inherits(Index, _Component);
-
-  function Index() {
-    _classCallCheck(this, Index);
-
-    return _possibleConstructorReturn(this, (Index.__proto__ || Object.getPrototypeOf(Index)).apply(this, arguments));
-  }
-
-  _createClass(Index, [{
-    key: 'render',
-    value: function render() {
-      var _this2 = this;
-
-      var content = [];
-      content.push(_react2.default.createElement(
-        'div',
-        { className: 'wrapper wrapper-basic' },
-        _react2.default.createElement(
-          'div',
-          { className: 'context' },
-          _react2.default.createElement(
-            'div',
-            { className: 'content' },
-            _react2.default.createElement(
-              'h1',
-              null,
-              'Redux Intruduction'
-            ),
-            _react2.default.createElement(
-              'span',
-              null,
-              'Conceptual Introduction and simple example'
-            )
-          )
-        ),
-        _react2.default.createElement(
-          'div',
-          { className: 'context' },
-          _react2.default.createElement(
-            'div',
-            { className: 'title' },
-            'INTRODUCTION'
-          ),
-          _react2.default.createElement(
-            'div',
-            { className: 'content' },
-            _react2.default.createElement(
-              'span',
-              null,
-              'After knowing the concept of Flux. We are going to learn the concept of ',
-              _react2.default.createElement(
-                'a',
-                { target: '_blank', href: 'https://www.npmjs.com/package/redux' },
-                'Redux',
-                _react2.default.createElement(_reactFontawesome2.default, { name: 'external-link', fixedWidth: true })
-              ),
-              ' and use in our example for practice. My source code of example is ',
-              _react2.default.createElement(
-                'a',
-                { target: '_blank', href: 'https://github.com/BlackToolBoxLaboratory/blacktbox-demo/tree/master/src/example/articleRedux/example' },
-                'here',
-                _react2.default.createElement(_reactFontawesome2.default, { name: 'external-link', fixedWidth: true })
-              ),
-              '.'
-            )
-          ),
-          _react2.default.createElement(
-            'div',
-            { className: 'content' },
-            _react2.default.createElement(
-              'h3',
-              null,
-              'Example'
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'content' },
-              _react2.default.createElement(
-                'span',
-                null,
-                'For Redux\'s example, I made a little different from Flux\'s.'
-              )
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'content-example' },
-              _react2.default.createElement(_app2.default, null)
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'content' },
-              _react2.default.createElement(
-                'span',
-                null,
-                'Basically, the code structure is same as original version of Flux\'s. Just made user list into two part: left and right. Actually in this case, we can do mode of left and right by single function. But It is in the purpose to simulate the situation of multiple data. It can be implemented in traditional way as source code. It also can be implemented in Flux way. For what if we take them to two totally different function? That is our next step.'
-              ),
-              _react2.default.createElement(
-                'pre',
-                { className: 'content-pre' },
-                EXAMPLE_BASIC_ALGORITHM
-              )
-            )
-          ),
-          _react2.default.createElement(
-            'div',
-            { className: 'content' },
-            _react2.default.createElement(
-              'h3',
-              null,
-              'Redux'
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'content' },
-              _react2.default.createElement(
-                'span',
-                null,
-                'Here is the picture of Redux\'s relationship.'
-              )
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'content-image' },
-              _react2.default.createElement('img', { src: _articleRedux2.default })
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'content' },
-              _react2.default.createElement(
-                'span',
-                null,
-                'To simplify our code base, it also works with ',
-                _react2.default.createElement(
-                  'a',
-                  { target: '_blank', href: 'index.html#/article/component_presentational_and_container' },
-                  'Component: Presentational and Container',
-                  _react2.default.createElement(_reactFontawesome2.default, { name: 'external-link', fixedWidth: true })
-                ),
-                '. And to implement the example in Redux. We need to install some packages:'
-              ),
-              _react2.default.createElement(
-                'pre',
-                { className: 'content-pre' },
-                EXAMPLE_REDUX_INSTALL
-              )
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'content' },
-              _react2.default.createElement(
-                'h3',
-                null,
-                'View'
-              ),
-              _react2.default.createElement(
-                'div',
-                { className: 'content' },
-                _react2.default.createElement(
-                  'span',
-                  null,
-                  'Here, View seperate to Component and Container. We can just render Container to app.js, or render Component to app.js. If our component show with store, we can connect it with container.'
-                ),
-                _react2.default.createElement(
-                  'h3',
-                  null,
-                  'Render Container'
-                ),
-                _react2.default.createElement(
-                  'div',
-                  { className: 'content' },
-                  _react2.default.createElement(
-                    'pre',
-                    { className: 'content-pre' },
-                    EXAMPLE_REDUX_VIEW_CONTAINER
-                  )
-                ),
-                _react2.default.createElement(
-                  'h3',
-                  null,
-                  'Render Component connected with Container'
-                ),
-                _react2.default.createElement(
-                  'div',
-                  { className: 'content' },
-                  _react2.default.createElement(
-                    'span',
-                    null,
-                    'Container part'
-                  ),
-                  _react2.default.createElement(
-                    'pre',
-                    { className: 'content-pre' },
-                    EXAMPLE_REDUX_VIEW_CONNECT_CONTAINER
-                  )
-                ),
-                _react2.default.createElement(
-                  'div',
-                  { className: 'content' },
-                  _react2.default.createElement(
-                    'span',
-                    null,
-                    'Component part'
-                  ),
-                  _react2.default.createElement(
-                    'pre',
-                    { className: 'content-pre' },
-                    EXAMPLE_REDUX_VIEW_CONNECT_COMPONENT
-                  )
-                )
-              ),
-              _react2.default.createElement(
-                'h3',
-                null,
-                'Action'
-              ),
-              _react2.default.createElement(
-                'div',
-                { className: 'content' },
-                _react2.default.createElement(
-                  'span',
-                  null,
-                  'In Action, we just define each Action type correspond to dispatch event.'
-                ),
-                _react2.default.createElement(
-                  'pre',
-                  { className: 'content-pre' },
-                  EXAMPLE_REDUX_ACTION
-                )
-              ),
-              _react2.default.createElement(
-                'h3',
-                null,
-                'Reducer'
-              ),
-              _react2.default.createElement(
-                'div',
-                { className: 'content' },
-                _react2.default.createElement(
-                  'span',
-                  null,
-                  'Cause dispatch and store are accessed by Redux.js. We just need to define reducer. In general used, we need to define lots of reducer, and combine them to gether for redux.js.'
-                ),
-                _react2.default.createElement(
-                  'h3',
-                  null,
-                  'Combined'
-                ),
-                _react2.default.createElement(
-                  'div',
-                  { className: 'content' },
-                  _react2.default.createElement(
-                    'pre',
-                    { className: 'content-pre' },
-                    EXAMPLE_REDUX_REDUCER_INDEX
-                  )
-                ),
-                _react2.default.createElement(
-                  'h3',
-                  null,
-                  'Branch'
-                ),
-                _react2.default.createElement(
-                  'div',
-                  { className: 'content' },
-                  _react2.default.createElement(
-                    'pre',
-                    { className: 'content-pre' },
-                    EXAMPLE_REDUX_REDUCER_BRANCH
-                  )
-                )
-              )
-            )
-          )
-        ),
-        _react2.default.createElement(
-          'div',
-          { className: 'context' },
-          _react2.default.createElement(
-            'div',
-            { className: 'title' },
-            'PRODUCTION'
-          ),
-          _react2.default.createElement(
-            'div',
-            { className: 'content' },
-            _react2.default.createElement(
-              'span',
-              null,
-              'Here we go! This is the example in Redux version.'
-            )
-          ),
-          _react2.default.createElement(
-            'div',
-            { className: 'content-example' },
-            _react2.default.createElement(_index2.default, null)
-          )
-        ),
-        _react2.default.createElement(
-          'div',
-          { className: 'context' },
-          _react2.default.createElement(
-            'div',
-            { className: 'title' },
-            'ADVANCED'
-          ),
-          _react2.default.createElement(
-            'div',
-            { className: 'content' },
-            _react2.default.createElement(
-              'span',
-              null,
-              'In Flux\'s, We can update by ourself. However in Redux\'s, we centralize all state in Redux. So that with difference from Flux\'s, we need fetch API beneath reducer. And that is reason why we almost use stateless function both in Container and Component.'
-            )
-          ),
-          _react2.default.createElement(
-            'div',
-            { className: 'content-image' },
-            _react2.default.createElement('img', { src: _articleRedux_server2.default })
-          ),
-          _react2.default.createElement(
-            'div',
-            { className: 'content' },
-            _react2.default.createElement(
-              'span',
-              null,
-              'Then, here is the User List work with server API. And also here is the source code of ',
-              _react2.default.createElement(
-                'a',
-                { target: '_blank', href: 'https://github.com/BlackToolBoxLaboratory/blacktbox-demo/tree/master/src/example/articleRedux/exampleRedux_server' },
-                'Redux\'s example with server',
-                _react2.default.createElement(_reactFontawesome2.default, { name: 'external-link', fixedWidth: true })
-              )
-            )
-          ),
-          _react2.default.createElement(
-            'div',
-            { className: 'content-example' },
-            _react2.default.createElement(_index4.default, null)
-          )
-        ),
-        _react2.default.createElement(
-          'div',
-          { className: 'context' },
-          _react2.default.createElement(
-            'div',
-            { className: 'buttonGroup' },
-            _react2.default.createElement(
-              'div',
-              { className: 'backButton', onClick: function onClick() {
-                  _this2._redirectHandler('BTB_ATCS');
-                } },
-              _react2.default.createElement(_reactFontawesome2.default, { name: 'arrow-left', fixedWidth: true }),
-              _react2.default.createElement(
-                'span',
-                null,
-                'Back to Articles'
-              )
-            )
-          )
-        )
-      ));
-      return content;
-    }
-  }, {
-    key: '_redirectHandler',
-    value: function _redirectHandler(index) {
-      _history2.default.push(_routeList2.default[index]);
-      window.scrollTo(0, 0);
-    }
-  }]);
-
-  return Index;
-}(_react.Component);
-
-;
-
-exports.default = Index;
+module.exports = __webpack_require__.p + "images/articleFlux_server.png";
 
 /***/ }),
 /* 119 */
@@ -6820,7 +6525,416 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _exampleComponent = __webpack_require__(120);
+var _reactFontawesome = __webpack_require__(1);
+
+var _reactFontawesome2 = _interopRequireDefault(_reactFontawesome);
+
+var _app = __webpack_require__(120);
+
+var _app2 = _interopRequireDefault(_app);
+
+var _index = __webpack_require__(122);
+
+var _index2 = _interopRequireDefault(_index);
+
+var _index3 = __webpack_require__(154);
+
+var _index4 = _interopRequireDefault(_index3);
+
+var _articleRedux = __webpack_require__(165);
+
+var _articleRedux2 = _interopRequireDefault(_articleRedux);
+
+var _articleRedux_server = __webpack_require__(166);
+
+var _articleRedux_server2 = _interopRequireDefault(_articleRedux_server);
+
+var _layout = __webpack_require__(5);
+
+var _layout2 = _interopRequireDefault(_layout);
+
+var _articleRedirecter = __webpack_require__(30);
+
+var _articleRedirecter2 = _interopRequireDefault(_articleRedirecter);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var mainTitle = 'Redux Introduction';
+var mainDescriptionStr = 'Conceptual introduction and simple example';
+
+var introductionTitle = 'INTRODUCTION';
+var introductionContent = _react2.default.createElement(
+  'span',
+  null,
+  'After knowing the concept of Flux. We are going to learn the concept of ',
+  _react2.default.createElement(
+    'a',
+    { target: '_blank', href: 'https://www.npmjs.com/package/redux' },
+    'Redux',
+    _react2.default.createElement(_reactFontawesome2.default, { name: 'external-link', fixedWidth: true })
+  ),
+  ' and use in our example for practice. My source code of example is ',
+  _react2.default.createElement(
+    'a',
+    { target: '_blank', href: 'https://github.com/BlackToolBoxLaboratory/blacktbox-demo/tree/master/src/example/articleRedux/example' },
+    'here',
+    _react2.default.createElement(_reactFontawesome2.default, { name: 'external-link', fixedWidth: true })
+  ),
+  '.'
+);
+
+var introductionExampleTitle = 'Example';
+var introductionExampleContent = 'For Redux\'s example, I made a little different from Flux\'s.';
+var introductionExampleAlgorithmDescription = 'Basically, the code structure is same as original version of Flux\'s. Just made user list into two part: left and right. Actually in this case, we can do mode of left and right by single function. But It is in the purpose to simulate the situation of multiple data. It can be implemented in traditional way as source code. It also can be implemented in Flux way. For what if we take them to two totally different function? That is our next step.';
+
+var introductionReduxTitle = 'Redux';
+var introductionReduxContent = 'Here is the picture of Redux\'s relationship.';
+var introductionReduxAlgorithmDescription = _react2.default.createElement(
+  'span',
+  null,
+  'To simplify our code base, it also works with ',
+  _react2.default.createElement(
+    'a',
+    { target: '_blank', href: 'index.html#/article/component_presentational_and_container' },
+    'Component: Presentational and Container',
+    _react2.default.createElement(_reactFontawesome2.default, { name: 'external-link', fixedWidth: true })
+  ),
+  '. And to implement the example in Redux. We need to install some packages:'
+);
+
+var introductionReduxViewTitle = 'View';
+var introductionReduxViewContent = 'About view, it has three type of view contained pure-container, pure-component and mixed-container-and-component. The pure container is for which view will access data, but not rendered with data. And the pure component is for which view will not access data but rendered with data, or it rendered without data but state for necessary. The last type of view is mixed with container and component means the view can access data and rendered with data. Cause the pure component is used usually. We only show you the pure container view and mixed view here.';
+var introductionReduxViewContainerTitle = 'Pure-container';
+var introductionReduxViewConnectTitle = 'Mixed-container-and-component';
+var introductionReduxViewConnectContent = 'To mixed view, First we need to define status and dispatch. Then connect to component to allow component access data.';
+var introductionReduxViewConnectContainerTag = 'Container part';
+var introductionReduxViewConnectComponentTag = 'Component part';
+var introductionReduxActionTitle = 'Action';
+var introductionReduxActionContent = 'In Action, we just define each Action type correspond to dispatch event.';
+var introductionReduxReducerTitle = 'Reducer';
+var introductionReduxReducerContent = 'Cause dispatch and store are accessed by Redux.js. We just need to define reducer. In general used, we need to define lots of reducer, and combine them to gether for redux.js';
+var introductionReduxReducerCombinedTitle = 'Combined';
+var introductionReduxReducerBranchTitle = 'Branch';
+
+var productionTitle = 'PRODUCTION';
+var productionContent = 'Here we go! This is the example in Redux version.';
+
+var advancedTitle = 'ADVANCED';
+var advancedContent = 'In Flux\'s, We can update by ourself. However in Redux\'s, we centralize all state in Redux. So that with difference from Flux\'s, we need fetch API beneath reducer. And that is reason why we almost use stateless function both in Container and Component.';
+var advancedServerContent = _react2.default.createElement(
+  'span',
+  null,
+  'Then, here is the User List work with server API. And also here is the source code of ',
+  _react2.default.createElement(
+    'a',
+    { target: '_blank', href: 'https://github.com/BlackToolBoxLaboratory/blacktbox-demo/tree/master/src/example/articleRedux/exampleRedux_server' },
+    'Redux\'s example with server',
+    _react2.default.createElement(_reactFontawesome2.default, { name: 'external-link', fixedWidth: true })
+  )
+);
+
+var EXAMPLE_BASIC_ALGORITHM = '<!-- Require or Import what you need -->\n\n<!-- Start: Define the component of User list -->\nclass Example extends Component {\n  constructor (props) {\n    super(props);\n    this.dataList = new Array();\n  };\n  componentDidMount () {\n    /* [Store]: Fetch data */\n    this.fetchData();\n  };\n\n  /* [View]: Render component */\n  render () {...};\n  \n  /* [Action]: Actions to access Store */\n  _addHandler () {};\n  _moveHandler () {};\n  _removeHandler () {};\n};\n<!-- End: Define the component of User list -->\n\n<!-- Export component -->\n';
+var EXAMPLE_REDUX_INSTALL = '$ npm install --save redux\n$ npm install --save react-redux\n';
+var EXAMPLE_REDUX_VIEW_CONTAINER = 'import { connect } from \'react-redux\';\n<!-- Require or Import what action.js you need -->\n\nconst Container = ({ dispatch }) => {\n  return ...; /* render */\n};\n\nexport default connect()(Container);\n';
+var EXAMPLE_REDUX_VIEW_CONNECT_CONTAINER = '<!-- Require or Import Component -->\n<!-- Require or Import what action.js you need -->\n\nconst mapStateToProps = ( state, ownProps ) => { ... };\nconst mapDispatchToProps = ( dispatch, ownProps ) => { ... };\nconst mergeProps = ( stateProps, dispatchProps, ownProps ) => {...}; /* optional */\n\nexport default connect(\n  mapStateToProps,\n  mapDispatchToProps,\n  mergeProps\n)(Component);\n';
+var EXAMPLE_REDUX_VIEW_CONNECT_COMPONENT = 'import React from \'react\';\n<!-- Require or Import what you need -->\n\nconst Component = ({ ... }) => {\n  return ...; /* render */\n};\n\nexport default Component;\n';
+var EXAMPLE_REDUX_ACTION = 'const Action = (() => {\n  const actionType = () => {\n    return { ... };\n  };\n  ...\n  return {\n    actionType: actionType,\n    ...\n  }\n})();\n\nexport default Action;\n';
+var EXAMPLE_REDUX_REDUCER_INDEX = 'import { combineReducers } from \'redux\';\n<!-- Require or Import reducer branches -->\n\nconst reducers = combineReducers({\n  [reducer branch],\n  ...\n});\n\nexport default reducers;\n';
+var EXAMPLE_REDUX_REDUCER_BRANCH = 'const ReducerBranch = (state = [], action) => {\n  switch (action[\'type\']) {\n    let newState = state;\n    case actionType:\n      ...\n      return newState;\n      break;\n    ...\n    default:\n      return newState;\n      break;\n  }\n}\n\nexport default ReducerBranch;\n';
+
+var Index = function Index(props) {
+  var content = [];
+  content.push(_react2.default.createElement(
+    'div',
+    { className: 'wrapper wrapper-basic' },
+    _react2.default.createElement(
+      _layout2.default.MainTitle,
+      null,
+      mainTitle
+    ),
+    _react2.default.createElement(
+      _layout2.default.MainDescription,
+      null,
+      mainDescriptionStr
+    ),
+    _react2.default.createElement(
+      _layout2.default.Section,
+      null,
+      _react2.default.createElement(
+        _layout2.default.SectionTitle,
+        null,
+        introductionTitle
+      ),
+      _react2.default.createElement(
+        _layout2.default.Content,
+        null,
+        introductionContent
+      ),
+      _react2.default.createElement(
+        _layout2.default.Content,
+        null,
+        _react2.default.createElement(
+          _layout2.default.SectionSubtitle,
+          null,
+          introductionExampleTitle
+        ),
+        _react2.default.createElement(
+          _layout2.default.Content,
+          null,
+          introductionExampleContent
+        ),
+        _react2.default.createElement(
+          _layout2.default.Item,
+          null,
+          _react2.default.createElement(_app2.default, null)
+        ),
+        _react2.default.createElement(
+          _layout2.default.Content,
+          null,
+          introductionExampleAlgorithmDescription
+        ),
+        _react2.default.createElement(
+          _layout2.default.Pre,
+          null,
+          EXAMPLE_BASIC_ALGORITHM
+        )
+      ),
+      _react2.default.createElement(
+        _layout2.default.Content,
+        null,
+        _react2.default.createElement(
+          _layout2.default.SectionSubtitle,
+          null,
+          introductionReduxTitle
+        ),
+        _react2.default.createElement(
+          _layout2.default.Content,
+          null,
+          introductionReduxContent
+        ),
+        _react2.default.createElement(
+          _layout2.default.Item,
+          null,
+          _react2.default.createElement('img', { src: _articleRedux2.default })
+        ),
+        _react2.default.createElement(
+          _layout2.default.Content,
+          null,
+          introductionReduxAlgorithmDescription
+        ),
+        _react2.default.createElement(
+          _layout2.default.Pre,
+          null,
+          EXAMPLE_REDUX_INSTALL
+        ),
+        _react2.default.createElement(
+          _layout2.default.Content,
+          null,
+          _react2.default.createElement(
+            _layout2.default.SectionSubtitle,
+            null,
+            introductionReduxViewTitle
+          ),
+          _react2.default.createElement(
+            _layout2.default.Content,
+            null,
+            introductionReduxViewContent
+          ),
+          _react2.default.createElement(
+            _layout2.default.Content,
+            null,
+            _react2.default.createElement(
+              _layout2.default.SectionSubtitle,
+              null,
+              introductionReduxViewContainerTitle
+            ),
+            _react2.default.createElement(
+              _layout2.default.Pre,
+              null,
+              EXAMPLE_REDUX_VIEW_CONTAINER
+            )
+          ),
+          _react2.default.createElement(
+            _layout2.default.Content,
+            null,
+            _react2.default.createElement(
+              _layout2.default.SectionSubtitle,
+              null,
+              introductionReduxViewConnectTitle
+            ),
+            _react2.default.createElement(
+              _layout2.default.Content,
+              null,
+              introductionReduxViewConnectContent
+            ),
+            _react2.default.createElement(
+              _layout2.default.Content,
+              null,
+              _react2.default.createElement(
+                _layout2.default.SectionSubtitle,
+                null,
+                introductionReduxViewConnectContainerTag
+              ),
+              _react2.default.createElement(
+                _layout2.default.Pre,
+                null,
+                EXAMPLE_REDUX_VIEW_CONNECT_CONTAINER
+              ),
+              _react2.default.createElement(
+                _layout2.default.SectionSubtitle,
+                null,
+                introductionReduxViewConnectComponentTag
+              ),
+              _react2.default.createElement(
+                _layout2.default.Pre,
+                null,
+                EXAMPLE_REDUX_VIEW_CONNECT_COMPONENT
+              )
+            )
+          )
+        ),
+        _react2.default.createElement(
+          _layout2.default.Content,
+          null,
+          _react2.default.createElement(
+            _layout2.default.SectionSubtitle,
+            null,
+            introductionReduxActionTitle
+          ),
+          _react2.default.createElement(
+            _layout2.default.Content,
+            null,
+            introductionReduxActionContent
+          ),
+          _react2.default.createElement(
+            _layout2.default.Pre,
+            null,
+            EXAMPLE_REDUX_ACTION
+          )
+        ),
+        _react2.default.createElement(
+          _layout2.default.Content,
+          null,
+          _react2.default.createElement(
+            _layout2.default.SectionSubtitle,
+            null,
+            introductionReduxReducerTitle
+          ),
+          _react2.default.createElement(
+            _layout2.default.Content,
+            null,
+            introductionReduxReducerContent
+          ),
+          _react2.default.createElement(
+            _layout2.default.Content,
+            null,
+            _react2.default.createElement(
+              _layout2.default.SectionSubtitle,
+              null,
+              introductionReduxReducerCombinedTitle
+            ),
+            _react2.default.createElement(
+              _layout2.default.Pre,
+              null,
+              EXAMPLE_REDUX_REDUCER_INDEX
+            ),
+            _react2.default.createElement(
+              _layout2.default.SectionSubtitle,
+              null,
+              introductionReduxReducerBranchTitle
+            ),
+            _react2.default.createElement(
+              _layout2.default.Pre,
+              null,
+              EXAMPLE_REDUX_REDUCER_BRANCH
+            )
+          )
+        )
+      )
+    ),
+    _react2.default.createElement(
+      _layout2.default.Section,
+      null,
+      _react2.default.createElement(
+        _layout2.default.SectionTitle,
+        null,
+        productionTitle
+      ),
+      _react2.default.createElement(
+        _layout2.default.Content,
+        null,
+        productionContent
+      ),
+      _react2.default.createElement(
+        _layout2.default.Item,
+        null,
+        _react2.default.createElement(_index2.default, null)
+      )
+    ),
+    _react2.default.createElement(
+      _layout2.default.Section,
+      null,
+      _react2.default.createElement(
+        _layout2.default.SectionTitle,
+        null,
+        advancedTitle
+      ),
+      _react2.default.createElement(
+        _layout2.default.Content,
+        null,
+        advancedContent
+      ),
+      _react2.default.createElement(
+        _layout2.default.Item,
+        null,
+        _react2.default.createElement('img', { src: _articleRedux_server2.default })
+      ),
+      _react2.default.createElement(
+        _layout2.default.Content,
+        null,
+        advancedServerContent
+      ),
+      _react2.default.createElement(
+        _layout2.default.Item,
+        null,
+        _react2.default.createElement(_index4.default, null)
+      )
+    ),
+    _react2.default.createElement(
+      _layout2.default.Section,
+      null,
+      _react2.default.createElement(
+        _layout2.default.BtnGroup,
+        null,
+        _react2.default.createElement(
+          _layout2.default.Btn,
+          null,
+          _react2.default.createElement(_articleRedirecter2.default, { redirectTo: 'BTB_ATCS' })
+        )
+      )
+    )
+  ));
+  return content;
+};
+
+exports.default = Index;
+
+/***/ }),
+/* 120 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _exampleComponent = __webpack_require__(121);
 
 var _exampleComponent2 = _interopRequireDefault(_exampleComponent);
 
@@ -6835,7 +6949,7 @@ var App = function App(props) {
 exports.default = App;
 
 /***/ }),
-/* 120 */
+/* 121 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6851,7 +6965,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(6);
+var _reactDom = __webpack_require__(7);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
@@ -6956,7 +7070,7 @@ var Example = function (_Component) {
                   _react2.default.createElement(
                     'div',
                     { className: 'userList-info' },
-                    entry['name'].substring(0, 1).toUpperCase() + entry['name'].substring(1)
+                    entry['name']
                   ),
                   _react2.default.createElement(
                     'div',
@@ -6976,7 +7090,7 @@ var Example = function (_Component) {
                 return content_datalist_tr;
               }) : _react2.default.createElement(
                 'li',
-                { className: 'userList-entry' },
+                { className: 'userList-entry-empty' },
                 'No data available.'
               )
             )
@@ -7015,7 +7129,7 @@ var Example = function (_Component) {
                   _react2.default.createElement(
                     'div',
                     { className: 'userList-info' },
-                    entry['name'].substring(0, 1).toUpperCase() + entry['name'].substring(1)
+                    entry['name']
                   ),
                   _react2.default.createElement(
                     'div',
@@ -7035,7 +7149,7 @@ var Example = function (_Component) {
                 return content_datalist_tr;
               }) : _react2.default.createElement(
                 'li',
-                { className: 'userList-entry' },
+                { className: 'userList-entry-empty' },
                 'No data available.'
               )
             )
@@ -7161,7 +7275,7 @@ var Example = function (_Component) {
 exports.default = Example;
 
 /***/ }),
-/* 121 */
+/* 122 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7175,15 +7289,15 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _redux = __webpack_require__(12);
+var _redux = __webpack_require__(11);
 
-var _reactRedux = __webpack_require__(5);
+var _reactRedux = __webpack_require__(6);
 
-var _app = __webpack_require__(143);
+var _app = __webpack_require__(144);
 
 var _app2 = _interopRequireDefault(_app);
 
-var _index = __webpack_require__(150);
+var _index = __webpack_require__(151);
 
 var _index2 = _interopRequireDefault(_index);
 
@@ -7204,11 +7318,11 @@ var Index = function Index(props) {
 exports.default = Index;
 
 /***/ }),
-/* 122 */
+/* 123 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(global, module) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ponyfill_js__ = __webpack_require__(124);
+/* WEBPACK VAR INJECTION */(function(global, module) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ponyfill_js__ = __webpack_require__(125);
 /* global window */
 
 
@@ -7229,10 +7343,10 @@ if (typeof self !== 'undefined') {
 var result = Object(__WEBPACK_IMPORTED_MODULE_0__ponyfill_js__["a" /* default */])(root);
 /* harmony default export */ __webpack_exports__["a"] = (result);
 
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(46), __webpack_require__(123)(module)))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(48), __webpack_require__(124)(module)))
 
 /***/ }),
-/* 123 */
+/* 124 */
 /***/ (function(module, exports) {
 
 module.exports = function(originalModule) {
@@ -7262,7 +7376,7 @@ module.exports = function(originalModule) {
 
 
 /***/ }),
-/* 124 */
+/* 125 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7287,7 +7401,7 @@ function symbolObservablePonyfill(root) {
 
 
 /***/ }),
-/* 125 */
+/* 126 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7296,8 +7410,8 @@ function symbolObservablePonyfill(root) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__utils_PropTypes__ = __webpack_require__(47);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__utils_warning__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__utils_PropTypes__ = __webpack_require__(49);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__utils_warning__ = __webpack_require__(31);
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -7372,7 +7486,7 @@ function createProvider() {
 /* harmony default export */ __webpack_exports__["b"] = (createProvider());
 
 /***/ }),
-/* 126 */
+/* 127 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7471,17 +7585,17 @@ var Subscription = function () {
 
 
 /***/ }),
-/* 127 */
+/* 128 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* unused harmony export createConnect */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_connectAdvanced__ = __webpack_require__(48);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__utils_shallowEqual__ = __webpack_require__(128);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__mapDispatchToProps__ = __webpack_require__(129);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__mapStateToProps__ = __webpack_require__(139);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__mergeProps__ = __webpack_require__(140);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__selectorFactory__ = __webpack_require__(141);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_connectAdvanced__ = __webpack_require__(50);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__utils_shallowEqual__ = __webpack_require__(129);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__mapDispatchToProps__ = __webpack_require__(130);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__mapStateToProps__ = __webpack_require__(140);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__mergeProps__ = __webpack_require__(141);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__selectorFactory__ = __webpack_require__(142);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
@@ -7587,7 +7701,7 @@ function createConnect() {
 /* harmony default export */ __webpack_exports__["a"] = (createConnect());
 
 /***/ }),
-/* 128 */
+/* 129 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7624,15 +7738,15 @@ function shallowEqual(objA, objB) {
 }
 
 /***/ }),
-/* 129 */
+/* 130 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* unused harmony export whenMapDispatchToPropsIsFunction */
 /* unused harmony export whenMapDispatchToPropsIsMissing */
 /* unused harmony export whenMapDispatchToPropsIsObject */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_redux__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__wrapMapToProps__ = __webpack_require__(49);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_redux__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__wrapMapToProps__ = __webpack_require__(51);
 
 
 
@@ -7655,13 +7769,13 @@ function whenMapDispatchToPropsIsObject(mapDispatchToProps) {
 /* harmony default export */ __webpack_exports__["a"] = ([whenMapDispatchToPropsIsFunction, whenMapDispatchToPropsIsMissing, whenMapDispatchToPropsIsObject]);
 
 /***/ }),
-/* 130 */
+/* 131 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__baseGetTag_js__ = __webpack_require__(131);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__getPrototype_js__ = __webpack_require__(136);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__isObjectLike_js__ = __webpack_require__(138);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__baseGetTag_js__ = __webpack_require__(132);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__getPrototype_js__ = __webpack_require__(137);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__isObjectLike_js__ = __webpack_require__(139);
 
 
 
@@ -7727,13 +7841,13 @@ function isPlainObject(value) {
 
 
 /***/ }),
-/* 131 */
+/* 132 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Symbol_js__ = __webpack_require__(51);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__getRawTag_js__ = __webpack_require__(134);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__objectToString_js__ = __webpack_require__(135);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Symbol_js__ = __webpack_require__(53);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__getRawTag_js__ = __webpack_require__(135);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__objectToString_js__ = __webpack_require__(136);
 
 
 
@@ -7765,11 +7879,11 @@ function baseGetTag(value) {
 
 
 /***/ }),
-/* 132 */
+/* 133 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__freeGlobal_js__ = __webpack_require__(133);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__freeGlobal_js__ = __webpack_require__(134);
 
 
 /** Detect free variable `self`. */
@@ -7782,7 +7896,7 @@ var root = __WEBPACK_IMPORTED_MODULE_0__freeGlobal_js__["a" /* default */] || fr
 
 
 /***/ }),
-/* 133 */
+/* 134 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7791,14 +7905,14 @@ var freeGlobal = typeof global == 'object' && global && global.Object === Object
 
 /* harmony default export */ __webpack_exports__["a"] = (freeGlobal);
 
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(46)))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(48)))
 
 /***/ }),
-/* 134 */
+/* 135 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Symbol_js__ = __webpack_require__(51);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Symbol_js__ = __webpack_require__(53);
 
 
 /** Used for built-in method references. */
@@ -7848,7 +7962,7 @@ function getRawTag(value) {
 
 
 /***/ }),
-/* 135 */
+/* 136 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7877,11 +7991,11 @@ function objectToString(value) {
 
 
 /***/ }),
-/* 136 */
+/* 137 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__overArg_js__ = __webpack_require__(137);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__overArg_js__ = __webpack_require__(138);
 
 
 /** Built-in value references. */
@@ -7891,7 +8005,7 @@ var getPrototype = Object(__WEBPACK_IMPORTED_MODULE_0__overArg_js__["a" /* defau
 
 
 /***/ }),
-/* 137 */
+/* 138 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7913,7 +8027,7 @@ function overArg(func, transform) {
 
 
 /***/ }),
-/* 138 */
+/* 139 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7949,13 +8063,13 @@ function isObjectLike(value) {
 
 
 /***/ }),
-/* 139 */
+/* 140 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* unused harmony export whenMapStateToPropsIsFunction */
 /* unused harmony export whenMapStateToPropsIsMissing */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__wrapMapToProps__ = __webpack_require__(49);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__wrapMapToProps__ = __webpack_require__(51);
 
 
 function whenMapStateToPropsIsFunction(mapStateToProps) {
@@ -7971,7 +8085,7 @@ function whenMapStateToPropsIsMissing(mapStateToProps) {
 /* harmony default export */ __webpack_exports__["a"] = ([whenMapStateToPropsIsFunction, whenMapStateToPropsIsMissing]);
 
 /***/ }),
-/* 140 */
+/* 141 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7979,7 +8093,7 @@ function whenMapStateToPropsIsMissing(mapStateToProps) {
 /* unused harmony export wrapMergePropsFunc */
 /* unused harmony export whenMergePropsIsFunction */
 /* unused harmony export whenMergePropsIsOmitted */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__utils_verifyPlainObject__ = __webpack_require__(50);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__utils_verifyPlainObject__ = __webpack_require__(52);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 
@@ -8027,14 +8141,14 @@ function whenMergePropsIsOmitted(mergeProps) {
 /* harmony default export */ __webpack_exports__["a"] = ([whenMergePropsIsFunction, whenMergePropsIsOmitted]);
 
 /***/ }),
-/* 141 */
+/* 142 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* unused harmony export impureFinalPropsSelectorFactory */
 /* unused harmony export pureFinalPropsSelectorFactory */
 /* harmony export (immutable) */ __webpack_exports__["a"] = finalPropsSelectorFactory;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__verifySubselectors__ = __webpack_require__(142);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__verifySubselectors__ = __webpack_require__(143);
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
 
@@ -8139,12 +8253,12 @@ function finalPropsSelectorFactory(dispatch, _ref2) {
 }
 
 /***/ }),
-/* 142 */
+/* 143 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* unused harmony export default */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__utils_warning__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__utils_warning__ = __webpack_require__(31);
 
 
 function verify(selector, methodName, displayName) {
@@ -8164,7 +8278,7 @@ function verifySubselectors(mapStateToProps, mapDispatchToProps, mergeProps, dis
 }
 
 /***/ }),
-/* 143 */
+/* 144 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8178,25 +8292,25 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRedux = __webpack_require__(5);
+var _reactRedux = __webpack_require__(6);
 
-var _leftListAction = __webpack_require__(17);
+var _leftListAction = __webpack_require__(16);
 
 var _leftListAction2 = _interopRequireDefault(_leftListAction);
 
-var _rightListAction = __webpack_require__(18);
+var _rightListAction = __webpack_require__(17);
 
 var _rightListAction2 = _interopRequireDefault(_rightListAction);
 
-var _userAdder = __webpack_require__(144);
+var _userAdder = __webpack_require__(145);
 
 var _userAdder2 = _interopRequireDefault(_userAdder);
 
-var _userListLeft = __webpack_require__(146);
+var _userListLeft = __webpack_require__(147);
 
 var _userListLeft2 = _interopRequireDefault(_userListLeft);
 
-var _userListRight = __webpack_require__(148);
+var _userListRight = __webpack_require__(149);
 
 var _userListRight2 = _interopRequireDefault(_userListRight);
 
@@ -8246,7 +8360,7 @@ var App = function App(_ref) {
 exports.default = (0, _reactRedux.connect)()(App);
 
 /***/ }),
-/* 144 */
+/* 145 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8260,21 +8374,21 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRedux = __webpack_require__(5);
+var _reactRedux = __webpack_require__(6);
 
 var _reactFontawesome = __webpack_require__(1);
 
 var _reactFontawesome2 = _interopRequireDefault(_reactFontawesome);
 
-var _leftListAction = __webpack_require__(17);
+var _leftListAction = __webpack_require__(16);
 
 var _leftListAction2 = _interopRequireDefault(_leftListAction);
 
-var _rightListAction = __webpack_require__(18);
+var _rightListAction = __webpack_require__(17);
 
 var _rightListAction2 = _interopRequireDefault(_rightListAction);
 
-var _userAdder = __webpack_require__(145);
+var _userAdder = __webpack_require__(146);
 
 var _userAdder2 = _interopRequireDefault(_userAdder);
 
@@ -8305,7 +8419,7 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(_userAdder2.default);
 
 /***/ }),
-/* 145 */
+/* 146 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8431,7 +8545,7 @@ var UserAdder = function UserAdder(_ref) {
 exports.default = UserAdder;
 
 /***/ }),
-/* 146 */
+/* 147 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8441,17 +8555,17 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _reactRedux = __webpack_require__(5);
+var _reactRedux = __webpack_require__(6);
 
-var _leftListAction = __webpack_require__(17);
+var _leftListAction = __webpack_require__(16);
 
 var _leftListAction2 = _interopRequireDefault(_leftListAction);
 
-var _rightListAction = __webpack_require__(18);
+var _rightListAction = __webpack_require__(17);
 
 var _rightListAction2 = _interopRequireDefault(_rightListAction);
 
-var _leftList = __webpack_require__(147);
+var _leftList = __webpack_require__(148);
 
 var _leftList2 = _interopRequireDefault(_leftList);
 
@@ -8483,7 +8597,7 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(_leftList2.default);
 
 /***/ }),
-/* 147 */
+/* 148 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8563,7 +8677,7 @@ var LeftList = function LeftList(_ref) {
 exports.default = LeftList;
 
 /***/ }),
-/* 148 */
+/* 149 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8573,17 +8687,17 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _reactRedux = __webpack_require__(5);
+var _reactRedux = __webpack_require__(6);
 
-var _leftListAction = __webpack_require__(17);
+var _leftListAction = __webpack_require__(16);
 
 var _leftListAction2 = _interopRequireDefault(_leftListAction);
 
-var _rightListAction = __webpack_require__(18);
+var _rightListAction = __webpack_require__(17);
 
 var _rightListAction2 = _interopRequireDefault(_rightListAction);
 
-var _rightList = __webpack_require__(149);
+var _rightList = __webpack_require__(150);
 
 var _rightList2 = _interopRequireDefault(_rightList);
 
@@ -8615,7 +8729,7 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(_rightList2.default);
 
 /***/ }),
-/* 149 */
+/* 150 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8695,7 +8809,7 @@ var RightList = function RightList(_ref) {
 exports.default = RightList;
 
 /***/ }),
-/* 150 */
+/* 151 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8705,13 +8819,13 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _redux = __webpack_require__(12);
+var _redux = __webpack_require__(11);
 
-var _leftList = __webpack_require__(151);
+var _leftList = __webpack_require__(152);
 
 var _leftList2 = _interopRequireDefault(_leftList);
 
-var _rightList = __webpack_require__(152);
+var _rightList = __webpack_require__(153);
 
 var _rightList2 = _interopRequireDefault(_rightList);
 
@@ -8725,7 +8839,7 @@ var reducers = (0, _redux.combineReducers)({
 exports.default = reducers;
 
 /***/ }),
-/* 151 */
+/* 152 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8823,7 +8937,7 @@ var ReducerLeft = function ReducerLeft() {
 exports.default = ReducerLeft;
 
 /***/ }),
-/* 152 */
+/* 153 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8921,7 +9035,7 @@ var ReducerRight = function ReducerRight() {
 exports.default = ReducerRight;
 
 /***/ }),
-/* 153 */
+/* 154 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8935,15 +9049,15 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _redux = __webpack_require__(12);
+var _redux = __webpack_require__(11);
 
-var _reactRedux = __webpack_require__(5);
+var _reactRedux = __webpack_require__(6);
 
-var _app = __webpack_require__(154);
+var _app = __webpack_require__(155);
 
 var _app2 = _interopRequireDefault(_app);
 
-var _index = __webpack_require__(161);
+var _index = __webpack_require__(162);
 
 var _index2 = _interopRequireDefault(_index);
 
@@ -8964,7 +9078,7 @@ var Index = function Index(props) {
 exports.default = Index;
 
 /***/ }),
-/* 154 */
+/* 155 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8978,25 +9092,25 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRedux = __webpack_require__(5);
+var _reactRedux = __webpack_require__(6);
 
-var _leftListAction = __webpack_require__(19);
+var _leftListAction = __webpack_require__(18);
 
 var _leftListAction2 = _interopRequireDefault(_leftListAction);
 
-var _rightListAction = __webpack_require__(20);
+var _rightListAction = __webpack_require__(19);
 
 var _rightListAction2 = _interopRequireDefault(_rightListAction);
 
-var _userAdder = __webpack_require__(155);
+var _userAdder = __webpack_require__(156);
 
 var _userAdder2 = _interopRequireDefault(_userAdder);
 
-var _userListLeft = __webpack_require__(157);
+var _userListLeft = __webpack_require__(158);
 
 var _userListLeft2 = _interopRequireDefault(_userListLeft);
 
-var _userListRight = __webpack_require__(159);
+var _userListRight = __webpack_require__(160);
 
 var _userListRight2 = _interopRequireDefault(_userListRight);
 
@@ -9046,7 +9160,7 @@ var App = function App(_ref) {
 exports.default = (0, _reactRedux.connect)()(App);
 
 /***/ }),
-/* 155 */
+/* 156 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9060,21 +9174,21 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRedux = __webpack_require__(5);
+var _reactRedux = __webpack_require__(6);
 
 var _reactFontawesome = __webpack_require__(1);
 
 var _reactFontawesome2 = _interopRequireDefault(_reactFontawesome);
 
-var _leftListAction = __webpack_require__(19);
+var _leftListAction = __webpack_require__(18);
 
 var _leftListAction2 = _interopRequireDefault(_leftListAction);
 
-var _rightListAction = __webpack_require__(20);
+var _rightListAction = __webpack_require__(19);
 
 var _rightListAction2 = _interopRequireDefault(_rightListAction);
 
-var _userAdder = __webpack_require__(156);
+var _userAdder = __webpack_require__(157);
 
 var _userAdder2 = _interopRequireDefault(_userAdder);
 
@@ -9105,7 +9219,7 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(_userAdder2.default);
 
 /***/ }),
-/* 156 */
+/* 157 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9231,7 +9345,7 @@ var UserAdder = function UserAdder(_ref) {
 exports.default = UserAdder;
 
 /***/ }),
-/* 157 */
+/* 158 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9241,17 +9355,17 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _reactRedux = __webpack_require__(5);
+var _reactRedux = __webpack_require__(6);
 
-var _leftListAction = __webpack_require__(19);
+var _leftListAction = __webpack_require__(18);
 
 var _leftListAction2 = _interopRequireDefault(_leftListAction);
 
-var _rightListAction = __webpack_require__(20);
+var _rightListAction = __webpack_require__(19);
 
 var _rightListAction2 = _interopRequireDefault(_rightListAction);
 
-var _leftList = __webpack_require__(158);
+var _leftList = __webpack_require__(159);
 
 var _leftList2 = _interopRequireDefault(_leftList);
 
@@ -9283,7 +9397,7 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(_leftList2.default);
 
 /***/ }),
-/* 158 */
+/* 159 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9363,7 +9477,7 @@ var LeftList = function LeftList(_ref) {
 exports.default = LeftList;
 
 /***/ }),
-/* 159 */
+/* 160 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9373,17 +9487,17 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _reactRedux = __webpack_require__(5);
+var _reactRedux = __webpack_require__(6);
 
-var _leftListAction = __webpack_require__(19);
+var _leftListAction = __webpack_require__(18);
 
 var _leftListAction2 = _interopRequireDefault(_leftListAction);
 
-var _rightListAction = __webpack_require__(20);
+var _rightListAction = __webpack_require__(19);
 
 var _rightListAction2 = _interopRequireDefault(_rightListAction);
 
-var _rightList = __webpack_require__(160);
+var _rightList = __webpack_require__(161);
 
 var _rightList2 = _interopRequireDefault(_rightList);
 
@@ -9415,7 +9529,7 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(_rightList2.default);
 
 /***/ }),
-/* 160 */
+/* 161 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9495,7 +9609,7 @@ var RightList = function RightList(_ref) {
 exports.default = RightList;
 
 /***/ }),
-/* 161 */
+/* 162 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9505,13 +9619,13 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _redux = __webpack_require__(12);
+var _redux = __webpack_require__(11);
 
-var _leftList = __webpack_require__(162);
+var _leftList = __webpack_require__(163);
 
 var _leftList2 = _interopRequireDefault(_leftList);
 
-var _rightList = __webpack_require__(163);
+var _rightList = __webpack_require__(164);
 
 var _rightList2 = _interopRequireDefault(_rightList);
 
@@ -9525,7 +9639,7 @@ var reducers = (0, _redux.combineReducers)({
 exports.default = reducers;
 
 /***/ }),
-/* 162 */
+/* 163 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9535,7 +9649,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _serverAPI = __webpack_require__(52);
+var _serverAPI = __webpack_require__(54);
 
 var _serverAPI2 = _interopRequireDefault(_serverAPI);
 
@@ -9580,7 +9694,7 @@ var LeftList = function LeftList() {
 exports.default = LeftList;
 
 /***/ }),
-/* 163 */
+/* 164 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9590,7 +9704,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _serverAPI = __webpack_require__(52);
+var _serverAPI = __webpack_require__(54);
 
 var _serverAPI2 = _interopRequireDefault(_serverAPI);
 
@@ -9635,385 +9749,16 @@ var RightList = function RightList() {
 exports.default = RightList;
 
 /***/ }),
-/* 164 */
+/* 165 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "images/articleRedux.png";
 
 /***/ }),
-/* 165 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "images/articleRedux_server.png";
-
-/***/ }),
 /* 166 */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactFontawesome = __webpack_require__(1);
-
-var _reactFontawesome2 = _interopRequireDefault(_reactFontawesome);
-
-var _routeList = __webpack_require__(10);
-
-var _routeList2 = _interopRequireDefault(_routeList);
-
-var _history = __webpack_require__(11);
-
-var _history2 = _interopRequireDefault(_history);
-
-var _app = __webpack_require__(167);
-
-var _app2 = _interopRequireDefault(_app);
-
-var _app3 = __webpack_require__(169);
-
-var _app4 = _interopRequireDefault(_app3);
-
-var _articleComponent_PnC_example = __webpack_require__(174);
-
-var _articleComponent_PnC_example2 = _interopRequireDefault(_articleComponent_PnC_example);
-
-var _articleComponent_PnC = __webpack_require__(175);
-
-var _articleComponent_PnC2 = _interopRequireDefault(_articleComponent_PnC);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var EXAMPLE_BASIC_ALGORITHM = '<!-- Require or Import what you need -->\n\n<!-- Start: Define the component of User list -->\nclass Example extends Component {\n  /* [Presentational] [Container]: render presentational and container */\n  render () {...};\n\n  fetchData () {\n    /* [Container]: fetch data and used by container */\n  };\n};\n<!-- End: Define the component of User list -->\n\n<!-- Export component -->\n';
-var EXAMPLE_COMPONENT_PRESENTATIONAL_MAIN = '<!-- Require or Import what you need -->\nimport React from \'react\'; /* must be */\n\n/* container */\nimport UserList from \'../containers/exampleContainer.js\';\n\nconst App = () => {\n  let content = [];\n  /* [Presentational]: render, here include container */\n  content.push(...);\n  return content;\n};\n\n<!-- Export component -->\n';
-var EXAMPLE_COMPONENT_PRESENTATIONAL_ADDUSER = '<!-- Require or Import what you need -->\n\nimport ServerAPI from \'../serverAPIs/serverAPI.js\';\n\nclass AddUser extends Component {\n  constructor (props) {\n    super(props);\n    this.env = {\n      \'dataCounter\': 0,\n      \'dataLimit\': 0,\n      \'refreshHandler\': function(){}\n    };\n  };\n  componentWillUpdate (nextProps, nextState) {\n    this.updateData(nextProps);\n  };\n  render () {\n    let content = [];\n    /* [Presentational]: render */\n    content.push(...);\n    return content;\n  };\n\n  updateData (props) {...};\n\n  _addHandler () {...};\n};\n\n<!-- Export component -->\n';
-var EXAMPLE_COMPONENT_PRESENTATIONAL_DELETEUSER = '<!-- Require or Import what you need -->\n\nimport ServerAPI from \'../serverAPIs/serverAPI.js\';\n\nconst DeleteUser = (props) => {\n  const _deleteHandler = () => {...};\n  let content = [];\n  /* [Presentational]: render */\n  content.push(...);\n  return content;\n};\n\n<!-- Export component -->\n';
-var EXAMPLE_COMPONENT_CONTAINER = '<!-- Require or Import what you need -->\n\nimport ServerAPI from \'../serverAPIs/serverAPI.js\';\n\nimport AddUser from \'../components/exampleComponent_addUser.js\';\nimport DeleteUser from \'../components/exampleComponent_deleteUser.js\';\n\nclass App extends Component {\n  constructor (props) {\n    super(props);\n    this.dataList = new Array();\n  };\n  componentDidMount () {\n    this.fetchData();\n  };\n  render () {\n    let content = [];\n    /* [Container]: render, here include AddUser and DeleteUser */\n    content.push(...);\n    return content;\n  };\n\n  /* [serverAPI]: fetch data from server */\n  fetchData () {...};\n\n  _refreshHandler() {...};\n};\n\n<!-- Export component -->\n';
-
-var Index = function (_Component) {
-  _inherits(Index, _Component);
-
-  function Index() {
-    _classCallCheck(this, Index);
-
-    return _possibleConstructorReturn(this, (Index.__proto__ || Object.getPrototypeOf(Index)).apply(this, arguments));
-  }
-
-  _createClass(Index, [{
-    key: 'render',
-    value: function render() {
-      var _this2 = this;
-
-      var content = [];
-      content.push(_react2.default.createElement(
-        'div',
-        { className: 'wrapper wrapper-basic' },
-        _react2.default.createElement(
-          'div',
-          { className: 'context' },
-          _react2.default.createElement(
-            'div',
-            { className: 'content' },
-            _react2.default.createElement(
-              'h1',
-              null,
-              'Component: Presentational and Container'
-            ),
-            _react2.default.createElement(
-              'span',
-              null,
-              'Conceptual Introduction and simple example'
-            )
-          )
-        ),
-        _react2.default.createElement(
-          'div',
-          { className: 'context' },
-          _react2.default.createElement(
-            'div',
-            { className: 'title' },
-            'INTRODUCTION'
-          ),
-          _react2.default.createElement(
-            'div',
-            { className: 'content' },
-            _react2.default.createElement(
-              'span',
-              null,
-              'There is a optional thinking in design webside codebase structure(at least for me). The component could be distinguished into two concepts: ',
-              _react2.default.createElement(
-                'a',
-                { target: '_blank', href: 'https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0' },
-                'presentational and container',
-                _react2.default.createElement(_reactFontawesome2.default, { name: 'external-link', fixedWidth: true })
-              ),
-              '. There is some articles about them already. But some people may get confuse to know or to use. But here just use a simple angle to intruduce them as when I learn by myself. Hope it is useful for you.'
-            )
-          ),
-          _react2.default.createElement(
-            'div',
-            { className: 'content' },
-            _react2.default.createElement(
-              'h3',
-              null,
-              'Example'
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'content' },
-              _react2.default.createElement(
-                'span',
-                null,
-                'The following shown is a user list basically same as the example of Flux introduction, But I made a little change to draw the data out to imitate fetching data from server API.'
-              )
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'content-example' },
-              _react2.default.createElement(_app2.default, null)
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'content' },
-              _react2.default.createElement(
-                'span',
-                null,
-                'To show the User List. We just need to refer the component to where we want.'
-              ),
-              _react2.default.createElement(
-                'div',
-                { className: 'content-image' },
-                _react2.default.createElement('img', { src: _articleComponent_PnC_example2.default })
-              ),
-              _react2.default.createElement(
-                'span',
-                null,
-                'Comparing my ',
-                _react2.default.createElement(
-                  'a',
-                  { target: '_blank', href: 'https://github.com/BlackToolBoxLaboratory/blacktbox-demo/tree/master/src/example/articleComponent_PnC/example' },
-                  'Example',
-                  _react2.default.createElement(_reactFontawesome2.default, { name: 'external-link', fixedWidth: true })
-                ),
-                ', I simplify the source code for more focus on the construction and add some notation, like this:'
-              ),
-              _react2.default.createElement(
-                'pre',
-                { className: 'content-pre' },
-                EXAMPLE_BASIC_ALGORITHM
-              )
-            )
-          ),
-          _react2.default.createElement(
-            'div',
-            { className: 'content' },
-            _react2.default.createElement(
-              'h3',
-              null,
-              'Presentational and Container'
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'content' },
-              _react2.default.createElement(
-                'span',
-                null,
-                'In original, we only create a component to implement the User List. And now, we will separate the component into two part called presentational(presentational component in short) and container. Here is an easy rule to distinguish them by \'Where the data they used is fetched from?\' The data presentational used is came from other component(props inherit, imported ... etc). The other data container used is the \'Store\'. And mostly the store is fetched from server API. And if your components do not need state and life cycle. There may be more appropriate to use functional stateless component to create(Not neccessary move, depend on case). And with the following picture, you will see the source code of example about presentational and container individually. And in our case , the component map will be:'
-              )
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'content-image' },
-              _react2.default.createElement('img', { src: _articleComponent_PnC2.default })
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'content' },
-              _react2.default.createElement(
-                'h3',
-                null,
-                'Presentational: main'
-              ),
-              _react2.default.createElement(
-                'div',
-                { className: 'content' },
-                _react2.default.createElement(
-                  'span',
-                  null,
-                  'To render the outline the component. Cause it does not need render with data, we use stateless functino to create.'
-                ),
-                _react2.default.createElement(
-                  'pre',
-                  { className: 'content-pre' },
-                  EXAMPLE_COMPONENT_PRESENTATIONAL_MAIN
-                )
-              ),
-              _react2.default.createElement(
-                'h3',
-                null,
-                'Presentational: add user'
-              ),
-              _react2.default.createElement(
-                'div',
-                { className: 'content' },
-                _react2.default.createElement(
-                  'span',
-                  null,
-                  'To render component to add user to list. Cause I want to use \'ref\' work here, I choose stateful function here. You could use stateless function with HTML DOM as well.'
-                ),
-                _react2.default.createElement(
-                  'pre',
-                  { className: 'content-pre' },
-                  EXAMPLE_COMPONENT_PRESENTATIONAL_ADDUSER
-                )
-              ),
-              _react2.default.createElement(
-                'h3',
-                null,
-                'Presentational: delete user'
-              ),
-              _react2.default.createElement(
-                'div',
-                { className: 'content' },
-                _react2.default.createElement(
-                  'span',
-                  null,
-                  'To render component to add user to list. Here is a stateless function.'
-                ),
-                _react2.default.createElement(
-                  'pre',
-                  { className: 'content-pre' },
-                  EXAMPLE_COMPONENT_PRESENTATIONAL_DELETEUSER
-                )
-              ),
-              _react2.default.createElement(
-                'h3',
-                null,
-                'Container'
-              ),
-              _react2.default.createElement(
-                'div',
-                { className: 'content' },
-                _react2.default.createElement(
-                  'span',
-                  null,
-                  'To render the component with data.'
-                ),
-                _react2.default.createElement(
-                  'pre',
-                  { className: 'content-pre' },
-                  EXAMPLE_COMPONENT_CONTAINER
-                )
-              )
-            )
-          )
-        ),
-        _react2.default.createElement(
-          'div',
-          { className: 'context' },
-          _react2.default.createElement(
-            'div',
-            { className: 'title' },
-            'PRODUCTION'
-          ),
-          _react2.default.createElement(
-            'div',
-            { className: 'content' },
-            _react2.default.createElement(
-              'span',
-              null,
-              'Here we go! This is the example separate component into Presentational component and Container. And the source code is ',
-              _react2.default.createElement(
-                'a',
-                { target: '_blank', href: 'https://github.com/BlackToolBoxLaboratory/blacktbox-demo/tree/master/src/example/articleComponent_PnC/exampleComponent_PnC' },
-                'here',
-                _react2.default.createElement(_reactFontawesome2.default, { name: 'external-link', fixedWidth: true })
-              )
-            )
-          ),
-          _react2.default.createElement(
-            'div',
-            { className: 'content-example' },
-            _react2.default.createElement(_app4.default, null)
-          )
-        ),
-        _react2.default.createElement(
-          'div',
-          { className: 'context' },
-          _react2.default.createElement(
-            'div',
-            { className: 'title' },
-            'NOTICE'
-          ),
-          _react2.default.createElement(
-            'div',
-            { className: 'content' },
-            _react2.default.createElement(
-              'span',
-              null,
-              'I use the Presentational and Containter thinking first time when I write this introduction. In my experience, the design thinking is depend on how do you disintegrate your layout into components. There is unnecessary to strictly separate to Presentational and Containter. You cloud keep some Presentational in Container for some kind of convenience. Same as the ',
-              _react2.default.createElement(
-                'a',
-                { target: '_blank', href: 'https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0' },
-                'original article',
-                _react2.default.createElement(_reactFontawesome2.default, { name: 'external-link', fixedWidth: true })
-              ),
-              ' mentioned: "the presentational components and the containers is not a technical one. Rather, it is a distinction in their purpose." Clear Definition is the most important step in design.'
-            )
-          )
-        ),
-        _react2.default.createElement(
-          'div',
-          { className: 'context' },
-          _react2.default.createElement(
-            'div',
-            { className: 'buttonGroup' },
-            _react2.default.createElement(
-              'div',
-              { className: 'backButton', onClick: function onClick() {
-                  _this2._redirectHandler('BTB_ATCS');
-                } },
-              _react2.default.createElement(_reactFontawesome2.default, { name: 'arrow-left', fixedWidth: true }),
-              _react2.default.createElement(
-                'span',
-                null,
-                'Back to Articles'
-              )
-            )
-          )
-        )
-      ));
-      return content;
-    }
-  }, {
-    key: '_redirectHandler',
-    value: function _redirectHandler(index) {
-      _history2.default.push(_routeList2.default[index]);
-      window.scrollTo(0, 0);
-    }
-  }]);
-
-  return Index;
-}(_react.Component);
-
-;
-
-exports.default = Index;
+module.exports = __webpack_require__.p + "images/articleRedux_server.png";
 
 /***/ }),
 /* 167 */
@@ -10026,17 +9771,355 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactFontawesome = __webpack_require__(1);
+
+var _reactFontawesome2 = _interopRequireDefault(_reactFontawesome);
+
+var _app = __webpack_require__(168);
+
+var _app2 = _interopRequireDefault(_app);
+
+var _app3 = __webpack_require__(170);
+
+var _app4 = _interopRequireDefault(_app3);
+
+var _articleComponent_PnC_example = __webpack_require__(175);
+
+var _articleComponent_PnC_example2 = _interopRequireDefault(_articleComponent_PnC_example);
+
+var _articleComponent_PnC = __webpack_require__(176);
+
+var _articleComponent_PnC2 = _interopRequireDefault(_articleComponent_PnC);
+
+var _layout = __webpack_require__(5);
+
+var _layout2 = _interopRequireDefault(_layout);
+
+var _articleRedirecter = __webpack_require__(30);
+
+var _articleRedirecter2 = _interopRequireDefault(_articleRedirecter);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var mainTitle = 'Component: Presentational and Container';
+var mainDescriptionStr = 'Conceptual Introduction and simple example';
+
+var introductionTitle = 'INTRODUCTION';
+var introductionContent = _react2.default.createElement(
+  'span',
+  null,
+  'There is a optional thinking in design webside codebase structure(at least for me). The component could be distinguished into two concepts: ',
+  _react2.default.createElement(
+    'a',
+    { target: '_blank', href: 'https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0' },
+    'presentational and container',
+    _react2.default.createElement(_reactFontawesome2.default, { name: 'external-link', fixedWidth: true })
+  ),
+  '. There is some articles about them already. But some people may get confuse to know or to use. But here just use a simple angle to intruduce them as when I learn by myself. Hope it is useful for you.'
+);
+
+var introductionExampleTitle = 'Example';
+var introductionExampleContent = 'The following shown is a user list basically same as the example of Flux introduction, But I made a little change to draw the data out to imitate fetching data from server API.';
+var introductionExampleImageDescription = 'To show the User List. We just need to refer the component to where we want.';
+var introductionExampleAlgorithmDescription = _react2.default.createElement(
+  'span',
+  null,
+  'Comparing my ',
+  _react2.default.createElement(
+    'a',
+    { target: '_blank', href: 'https://github.com/BlackToolBoxLaboratory/blacktbox-demo/tree/master/src/example/articleComponent_PnC/example' },
+    'Example',
+    _react2.default.createElement(_reactFontawesome2.default, { name: 'external-link', fixedWidth: true })
+  ),
+  ', I simplify the source code for more focus on the construction and add some notation, like this:'
+);
+
+var introductionComponentTitle = 'Presentational and Container';
+var introductionComponentContent = 'In original, we only create a component to implement the User List. And now, we will separate the component into two part called presentational(presentational component in short) and container. Here is an easy rule to distinguish them by \'Where the data they used is fetched from?\' The data presentational used is came from other component(props inherit, imported ... etc). The other data container used is the \'Store\'. And mostly the store is fetched from server API. And if your components do not need state and life cycle. There may be more appropriate to use functional stateless component to create(Not neccessary move, depend on case). And with the following picture, you will see the source code of example about presentational and container individually. And in our case , the component map will be:';
+
+var introductionComponentMainTitle = 'Presentational: main';
+var introductionComponentMainContent = 'To render the outline the component. Cause it does not need render with data, we use stateless functino to create.';
+var introductionComponentAddUserTitle = 'Presentational: add user';
+var introductionComponentAddUserContent = 'To render component to add user to list. Cause I want to use \'ref\' work here, I choose stateful function here. You could use stateless function with HTML DOM as well.';
+var introductionComponentDeleteUserTitle = 'Presentational: delete user';
+var introductionComponentDeleteUserContent = 'To render component to add user to list. Here is a stateless function.';
+var introductionComponentContainerTitle = 'Container';
+var introductionComponentContainerContent = 'To render the component with data.';
+
+var productionTitle = 'PRODUCTION';
+var productionContent = _react2.default.createElement(
+  'span',
+  null,
+  'Here we go! This is the example separate component into Presentational component and Container. And the source code is ',
+  _react2.default.createElement(
+    'a',
+    { target: '_blank', href: 'https://github.com/BlackToolBoxLaboratory/blacktbox-demo/tree/master/src/example/articleComponent_PnC/exampleComponent_PnC' },
+    'here',
+    _react2.default.createElement(_reactFontawesome2.default, { name: 'external-link', fixedWidth: true })
+  )
+);
+
+var noticeTitle = 'NOTICE';
+var noticeContent = _react2.default.createElement(
+  'span',
+  null,
+  'I use the Presentational and Containter thinking first time when I write this introduction. In my experience, the design thinking is depend on how do you disintegrate your layout into components. There is unnecessary to strictly separate to Presentational and Containter. You cloud keep some Presentational in Container for some kind of convenience. Same as the ',
+  _react2.default.createElement(
+    'a',
+    { target: '_blank', href: 'https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0' },
+    'original article',
+    _react2.default.createElement(_reactFontawesome2.default, { name: 'external-link', fixedWidth: true })
+  ),
+  ' mentioned: "the presentational components and the containers is not a technical one. Rather, it is a distinction in their purpose." Clear Definition is the most important step in design.'
+);
+
+var EXAMPLE_BASIC_ALGORITHM = '<!-- Require or Import what you need -->\n\n<!-- Start: Define the component of User list -->\nclass Example extends Component {\n  /* [Presentational] [Container]: render presentational and container */\n  render () {...};\n\n  fetchData () {\n    /* [Container]: fetch data and used by container */\n  };\n};\n<!-- End: Define the component of User list -->\n\n<!-- Export component -->\n';
+var EXAMPLE_COMPONENT_PRESENTATIONAL_MAIN = '<!-- Require or Import what you need -->\nimport React from \'react\'; /* must be */\n\n/* container */\nimport UserList from \'../containers/exampleContainer.js\';\n\nconst App = () => {\n  let content = [];\n  /* [Presentational]: render, here include container */\n  content.push(...);\n  return content;\n};\n\n<!-- Export component -->\n';
+var EXAMPLE_COMPONENT_PRESENTATIONAL_ADDUSER = '<!-- Require or Import what you need -->\n\nimport ServerAPI from \'../serverAPIs/serverAPI.js\';\n\nclass AddUser extends Component {\n  constructor (props) {\n    super(props);\n    this.env = {\n      \'dataCounter\': 0,\n      \'dataLimit\': 0,\n      \'refreshHandler\': function(){}\n    };\n  };\n  componentWillUpdate (nextProps, nextState) {\n    this.updateData(nextProps);\n  };\n  render () {\n    let content = [];\n    /* [Presentational]: render */\n    content.push(...);\n    return content;\n  };\n\n  updateData (props) {...};\n\n  _addHandler () {...};\n};\n\n<!-- Export component -->\n';
+var EXAMPLE_COMPONENT_PRESENTATIONAL_DELETEUSER = '<!-- Require or Import what you need -->\n\nimport ServerAPI from \'../serverAPIs/serverAPI.js\';\n\nconst DeleteUser = (props) => {\n  const _deleteHandler = () => {...};\n  let content = [];\n  /* [Presentational]: render */\n  content.push(...);\n  return content;\n};\n\n<!-- Export component -->\n';
+var EXAMPLE_COMPONENT_CONTAINER = '<!-- Require or Import what you need -->\n\nimport ServerAPI from \'../serverAPIs/serverAPI.js\';\n\nimport AddUser from \'../components/exampleComponent_addUser.js\';\nimport DeleteUser from \'../components/exampleComponent_deleteUser.js\';\n\nclass App extends Component {\n  constructor (props) {\n    super(props);\n    this.dataList = new Array();\n  };\n  componentDidMount () {\n    this.fetchData();\n  };\n  render () {\n    let content = [];\n    /* [Container]: render, here include AddUser and DeleteUser */\n    content.push(...);\n    return content;\n  };\n\n  /* [serverAPI]: fetch data from server */\n  fetchData () {...};\n\n  _refreshHandler() {...};\n};\n\n<!-- Export component -->\n';
+
+var Index = function Index(props) {
+  var content = [];
+  content.push(_react2.default.createElement(
+    'div',
+    { className: 'wrapper wrapper-basic' },
+    _react2.default.createElement(
+      _layout2.default.MainTitle,
+      null,
+      mainTitle
+    ),
+    _react2.default.createElement(
+      _layout2.default.MainDescription,
+      null,
+      mainDescriptionStr
+    ),
+    _react2.default.createElement(
+      _layout2.default.Section,
+      null,
+      _react2.default.createElement(
+        _layout2.default.SectionTitle,
+        null,
+        introductionTitle
+      ),
+      _react2.default.createElement(
+        _layout2.default.Content,
+        null,
+        introductionContent
+      ),
+      _react2.default.createElement(
+        _layout2.default.Content,
+        null,
+        _react2.default.createElement(
+          _layout2.default.SectionSubtitle,
+          null,
+          introductionExampleTitle
+        ),
+        _react2.default.createElement(
+          _layout2.default.Content,
+          null,
+          introductionExampleContent
+        ),
+        _react2.default.createElement(
+          _layout2.default.Item,
+          null,
+          _react2.default.createElement(_app2.default, null)
+        ),
+        _react2.default.createElement(
+          _layout2.default.Content,
+          null,
+          introductionExampleImageDescription
+        ),
+        _react2.default.createElement(
+          _layout2.default.Item,
+          null,
+          _react2.default.createElement('img', { src: _articleComponent_PnC_example2.default })
+        ),
+        _react2.default.createElement(
+          _layout2.default.Content,
+          null,
+          introductionExampleAlgorithmDescription
+        ),
+        _react2.default.createElement(
+          _layout2.default.Pre,
+          null,
+          EXAMPLE_BASIC_ALGORITHM
+        )
+      ),
+      _react2.default.createElement(
+        _layout2.default.Content,
+        null,
+        _react2.default.createElement(
+          _layout2.default.SectionSubtitle,
+          null,
+          introductionComponentTitle
+        ),
+        _react2.default.createElement(
+          _layout2.default.Content,
+          null,
+          introductionComponentContent
+        ),
+        _react2.default.createElement(
+          _layout2.default.Item,
+          null,
+          _react2.default.createElement('img', { src: _articleComponent_PnC2.default })
+        ),
+        _react2.default.createElement(
+          _layout2.default.Content,
+          null,
+          _react2.default.createElement(
+            _layout2.default.SectionSubtitle,
+            null,
+            introductionComponentMainTitle
+          ),
+          _react2.default.createElement(
+            _layout2.default.Content,
+            null,
+            introductionComponentMainContent
+          ),
+          _react2.default.createElement(
+            _layout2.default.Pre,
+            null,
+            EXAMPLE_COMPONENT_PRESENTATIONAL_MAIN
+          )
+        ),
+        _react2.default.createElement(
+          _layout2.default.Content,
+          null,
+          _react2.default.createElement(
+            _layout2.default.SectionSubtitle,
+            null,
+            introductionComponentAddUserTitle
+          ),
+          _react2.default.createElement(
+            _layout2.default.Content,
+            null,
+            introductionComponentAddUserContent
+          ),
+          _react2.default.createElement(
+            _layout2.default.Pre,
+            null,
+            EXAMPLE_COMPONENT_PRESENTATIONAL_ADDUSER
+          )
+        ),
+        _react2.default.createElement(
+          _layout2.default.Content,
+          null,
+          _react2.default.createElement(
+            _layout2.default.SectionSubtitle,
+            null,
+            introductionComponentDeleteUserTitle
+          ),
+          _react2.default.createElement(
+            _layout2.default.Content,
+            null,
+            introductionComponentDeleteUserContent
+          ),
+          _react2.default.createElement(
+            _layout2.default.Pre,
+            null,
+            EXAMPLE_COMPONENT_PRESENTATIONAL_DELETEUSER
+          )
+        ),
+        _react2.default.createElement(
+          _layout2.default.Content,
+          null,
+          _react2.default.createElement(
+            _layout2.default.SectionSubtitle,
+            null,
+            introductionComponentContainerTitle
+          ),
+          _react2.default.createElement(
+            _layout2.default.Content,
+            null,
+            introductionComponentContainerContent
+          ),
+          _react2.default.createElement(
+            _layout2.default.Pre,
+            null,
+            EXAMPLE_COMPONENT_CONTAINER
+          )
+        )
+      )
+    ),
+    _react2.default.createElement(
+      _layout2.default.Section,
+      null,
+      _react2.default.createElement(
+        _layout2.default.SectionTitle,
+        null,
+        productionTitle
+      ),
+      _react2.default.createElement(
+        _layout2.default.Content,
+        null,
+        productionContent
+      ),
+      _react2.default.createElement(
+        _layout2.default.Item,
+        null,
+        _react2.default.createElement(_app4.default, null)
+      )
+    ),
+    _react2.default.createElement(
+      _layout2.default.Section,
+      null,
+      _react2.default.createElement(
+        _layout2.default.SectionTitle,
+        null,
+        noticeTitle
+      ),
+      _react2.default.createElement(
+        _layout2.default.Content,
+        null,
+        noticeContent
+      )
+    ),
+    _react2.default.createElement(
+      _layout2.default.Section,
+      null,
+      _react2.default.createElement(
+        _layout2.default.BtnGroup,
+        null,
+        _react2.default.createElement(
+          _layout2.default.Btn,
+          null,
+          _react2.default.createElement(_articleRedirecter2.default, { redirectTo: 'BTB_ATCS' })
+        )
+      )
+    )
+  ));
+  return content;
+};
+
+exports.default = Index;
+
+/***/ }),
+/* 168 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _serverAPI = __webpack_require__(53);
+var _serverAPI = __webpack_require__(55);
 
 var _serverAPI2 = _interopRequireDefault(_serverAPI);
 
-var _exampleComponent = __webpack_require__(168);
+var _exampleComponent = __webpack_require__(169);
 
 var _exampleComponent2 = _interopRequireDefault(_exampleComponent);
 
@@ -10079,7 +10162,7 @@ var App = function (_Component) {
 exports.default = App;
 
 /***/ }),
-/* 168 */
+/* 169 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10095,7 +10178,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(6);
+var _reactDom = __webpack_require__(7);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
@@ -10103,7 +10186,7 @@ var _reactFontawesome = __webpack_require__(1);
 
 var _reactFontawesome2 = _interopRequireDefault(_reactFontawesome);
 
-var _serverAPI = __webpack_require__(53);
+var _serverAPI = __webpack_require__(55);
 
 var _serverAPI2 = _interopRequireDefault(_serverAPI);
 
@@ -10247,7 +10330,7 @@ var App = function (_Component) {
 exports.default = App;
 
 /***/ }),
-/* 169 */
+/* 170 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10263,11 +10346,11 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _serverAPI = __webpack_require__(21);
+var _serverAPI = __webpack_require__(20);
 
 var _serverAPI2 = _interopRequireDefault(_serverAPI);
 
-var _exampleComponent = __webpack_require__(170);
+var _exampleComponent = __webpack_require__(171);
 
 var _exampleComponent2 = _interopRequireDefault(_exampleComponent);
 
@@ -10310,7 +10393,7 @@ var App = function (_Component) {
 exports.default = App;
 
 /***/ }),
-/* 170 */
+/* 171 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10324,7 +10407,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _exampleContainer = __webpack_require__(171);
+var _exampleContainer = __webpack_require__(172);
 
 var _exampleContainer2 = _interopRequireDefault(_exampleContainer);
 
@@ -10353,7 +10436,7 @@ var App = function App() {
 exports.default = App;
 
 /***/ }),
-/* 171 */
+/* 172 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10369,7 +10452,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(6);
+var _reactDom = __webpack_require__(7);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
@@ -10377,15 +10460,15 @@ var _reactFontawesome = __webpack_require__(1);
 
 var _reactFontawesome2 = _interopRequireDefault(_reactFontawesome);
 
-var _serverAPI = __webpack_require__(21);
+var _serverAPI = __webpack_require__(20);
 
 var _serverAPI2 = _interopRequireDefault(_serverAPI);
 
-var _exampleComponent_addUser = __webpack_require__(172);
+var _exampleComponent_addUser = __webpack_require__(173);
 
 var _exampleComponent_addUser2 = _interopRequireDefault(_exampleComponent_addUser);
 
-var _exampleComponent_deleteUser = __webpack_require__(173);
+var _exampleComponent_deleteUser = __webpack_require__(174);
 
 var _exampleComponent_deleteUser2 = _interopRequireDefault(_exampleComponent_deleteUser);
 
@@ -10488,7 +10571,7 @@ var App = function (_Component) {
 exports.default = App;
 
 /***/ }),
-/* 172 */
+/* 173 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10504,7 +10587,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(6);
+var _reactDom = __webpack_require__(7);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
@@ -10512,7 +10595,7 @@ var _reactFontawesome = __webpack_require__(1);
 
 var _reactFontawesome2 = _interopRequireDefault(_reactFontawesome);
 
-var _serverAPI = __webpack_require__(21);
+var _serverAPI = __webpack_require__(20);
 
 var _serverAPI2 = _interopRequireDefault(_serverAPI);
 
@@ -10600,7 +10683,7 @@ var AddUser = function (_Component) {
 exports.default = AddUser;
 
 /***/ }),
-/* 173 */
+/* 174 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10618,7 +10701,7 @@ var _reactFontawesome = __webpack_require__(1);
 
 var _reactFontawesome2 = _interopRequireDefault(_reactFontawesome);
 
-var _serverAPI = __webpack_require__(21);
+var _serverAPI = __webpack_require__(20);
 
 var _serverAPI2 = _interopRequireDefault(_serverAPI);
 
@@ -10644,19 +10727,19 @@ var DeleteUser = function DeleteUser(props) {
 exports.default = DeleteUser;
 
 /***/ }),
-/* 174 */
+/* 175 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "images/articleComponent_PnC_example.png";
 
 /***/ }),
-/* 175 */
+/* 176 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "images/articleComponent_PnC.png";
 
 /***/ }),
-/* 176 */
+/* 177 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10676,7 +10759,11 @@ var _reactFontawesome = __webpack_require__(1);
 
 var _reactFontawesome2 = _interopRequireDefault(_reactFontawesome);
 
-var _home = __webpack_require__(15);
+var _home = __webpack_require__(14);
+
+var _layout = __webpack_require__(5);
+
+var _layout2 = _interopRequireDefault(_layout);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -10685,6 +10772,54 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var mainTitle = _react2.default.createElement(
+  'span',
+  null,
+  'Blacktbox-demo ',
+  _react2.default.createElement(
+    'a',
+    { target: '_blank', className: 'linkBtn', href: 'https://github.com/BlackToolBoxLaboratory/blacktbox-demo' },
+    _react2.default.createElement(_reactFontawesome2.default, { name: 'github', fixedWidth: true })
+  )
+);
+var mainDescriptionStr = 'The Blacktbox-demo shows demonstrations for all the BTB Lab\'s tools.';
+
+var setupTitle = 'SETUP';
+var setupContent = _react2.default.createElement(
+  'span',
+  null,
+  'Firstly, you need ',
+  _react2.default.createElement(
+    'a',
+    { target: '_blank', href: 'https://nodejs.org/en/' },
+    'Node.js',
+    _react2.default.createElement(_reactFontawesome2.default, { name: 'external-link', fixedWidth: true })
+  ),
+  ' and ',
+  _react2.default.createElement(
+    'a',
+    { target: '_blank', href: 'https://www.npmjs.com' },
+    'NPM',
+    _react2.default.createElement(_reactFontawesome2.default, { name: 'external-link', fixedWidth: true })
+  ),
+  '. And then you can clone our code and run it by these commands:'
+);
+var setupFinishedContent = _react2.default.createElement(
+  'span',
+  null,
+  'Welcome to ',
+  _react2.default.createElement(
+    'a',
+    { target: '_blank', href: 'http://localhost:9000' },
+    'http://localhost:9000',
+    _react2.default.createElement(_reactFontawesome2.default, { name: 'external-link', fixedWidth: true })
+  ),
+  '.'
+);
+
+var libraryListTitle = 'BLB LIBRARY LIST';
+var libraryListContent = 'This is the list of BLB Lab\'s API demonstrated here.';
 
 var SETUP_PRE = 'git clone https://github.com/BlackToolBoxLaboratory/blacktbox-demo.git\ncd blacktbox-demo\nnpm install\nnpm start\n';
 var LibraryList = new Array({ name: 'Blacktbox-list', link: 'BTB_LIST_BASIC' }, { name: 'Blacktbox-table', link: 'BTB_TABLE_BASIC' }, { name: 'Blacktbox-menu', link: 'BTB_MENU_BASIC' });
@@ -10708,93 +10843,51 @@ var Index = function (_Component) {
         'div',
         { className: 'wrapper wrapper-basic' },
         _react2.default.createElement(
-          'div',
-          { className: 'context' },
+          _layout2.default.MainTitle,
+          null,
+          mainTitle
+        ),
+        _react2.default.createElement(
+          _layout2.default.MainDescription,
+          null,
+          mainDescriptionStr
+        ),
+        _react2.default.createElement(
+          _layout2.default.Section,
+          null,
           _react2.default.createElement(
-            'div',
-            { className: 'content' },
-            _react2.default.createElement(
-              'h1',
-              null,
-              'Blacktbox-demo',
-              _react2.default.createElement(
-                'a',
-                { target: '_blank', className: 'linkBtn', href: 'https://github.com/BlackToolBoxLaboratory/blacktbox-demo' },
-                _react2.default.createElement(_reactFontawesome2.default, { name: 'github', fixedWidth: true })
-              )
-            ),
-            _react2.default.createElement(
-              'span',
-              null,
-              'The Blacktbox-demo shows demonstrations for all the BTB Lab\'s tools.'
-            )
+            _layout2.default.SectionTitle,
+            null,
+            setupTitle
+          ),
+          _react2.default.createElement(
+            _layout2.default.Content,
+            null,
+            setupContent
+          ),
+          _react2.default.createElement(
+            _layout2.default.Pre,
+            null,
+            SETUP_PRE
+          ),
+          _react2.default.createElement(
+            _layout2.default.Content,
+            null,
+            setupFinishedContent
           )
         ),
         _react2.default.createElement(
-          'div',
-          { className: 'context' },
+          _layout2.default.Section,
+          null,
           _react2.default.createElement(
-            'div',
-            { className: 'title' },
-            'SETUP'
+            _layout2.default.SectionTitle,
+            null,
+            libraryListTitle
           ),
           _react2.default.createElement(
-            'div',
-            { className: 'content' },
-            _react2.default.createElement(
-              'span',
-              null,
-              'Firstly, you need ',
-              _react2.default.createElement(
-                'a',
-                { target: '_blank', href: 'https://nodejs.org/en/' },
-                'Node.js',
-                _react2.default.createElement(_reactFontawesome2.default, { name: 'external-link', fixedWidth: true })
-              ),
-              ' and ',
-              _react2.default.createElement(
-                'a',
-                { target: '_blank', href: 'https://www.npmjs.com' },
-                'NPM',
-                _react2.default.createElement(_reactFontawesome2.default, { name: 'external-link', fixedWidth: true })
-              ),
-              '. And then you can clone our code and run it by these commands:'
-            ),
-            _react2.default.createElement(
-              'pre',
-              { className: 'content-pre' },
-              SETUP_PRE
-            ),
-            _react2.default.createElement(
-              'span',
-              null,
-              'Welcome to ',
-              _react2.default.createElement(
-                'a',
-                { target: '_blank', href: 'http://localhost:9000' },
-                'http://localhost:9000',
-                _react2.default.createElement(_reactFontawesome2.default, { name: 'external-link', fixedWidth: true })
-              ),
-              '.'
-            )
-          )
-        ),
-        _react2.default.createElement(
-          'div',
-          { className: 'context' },
-          _react2.default.createElement(
-            'div',
-            { className: 'title' },
-            'BLB LIBRARY LIST'
-          ),
-          _react2.default.createElement(
-            'div',
-            { className: 'content' },
-            _react2.default.createElement(
-              'span',
-              null,
-              'This is the list of BLB Lab\'s API demonstrated here.'
-            )
+            _layout2.default.Content,
+            null,
+            libraryListContent
           ),
           _react2.default.createElement(
             'ul',
@@ -10834,7 +10927,7 @@ var Index = function (_Component) {
 exports.default = Index;
 
 /***/ }),
-/* 177 */
+/* 178 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10854,13 +10947,17 @@ var _reactFontawesome = __webpack_require__(1);
 
 var _reactFontawesome2 = _interopRequireDefault(_reactFontawesome);
 
-var _blacktboxTable = __webpack_require__(30);
+var _blacktboxTable = __webpack_require__(32);
 
 var _blacktboxTable2 = _interopRequireDefault(_blacktboxTable);
 
-var _blacktboxList = __webpack_require__(16);
+var _blacktboxList = __webpack_require__(15);
 
 var _blacktboxList2 = _interopRequireDefault(_blacktboxList);
+
+var _layout = __webpack_require__(5);
+
+var _layout2 = _interopRequireDefault(_layout);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -10869,6 +10966,50 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var mainTitle = _react2.default.createElement(
+  'span',
+  null,
+  'Blacktbox-list ',
+  _react2.default.createElement(
+    'a',
+    { target: '_blank', className: 'linkBtn', href: 'https://github.com/BlackToolBoxLaboratory/blacktbox-list' },
+    _react2.default.createElement(_reactFontawesome2.default, { name: 'github', fixedWidth: true })
+  )
+);
+var mainDescriptionStr = 'List-maker tool.';
+
+var installationTitle = 'INSTALLATION';
+var installationContent = _react2.default.createElement(
+  'span',
+  null,
+  'Using with ',
+  _react2.default.createElement(
+    'a',
+    { target: '_blank', href: 'https://www.npmjs.com' },
+    'NPM',
+    _react2.default.createElement(_reactFontawesome2.default, { name: 'external-link', fixedWidth: true })
+  ),
+  '.'
+);
+
+var usingTitle = 'USING';
+var usingContent = _react2.default.createElement(
+  'span',
+  null,
+  'Notice: DOM properties are still work with ',
+  _react2.default.createElement(
+    'a',
+    { target: '_blank', href: 'https://reactjs.org/docs/dom-elements.html' },
+    'ReactJS',
+    _react2.default.createElement(_reactFontawesome2.default, { name: 'external-link', fixedWidth: true })
+  ),
+  '.'
+);
+
+var nodeTreeTitle = 'NODE TREE';
+var nodeTreeContent = 'Here showing the node structure. Each node with className is for convenience to style. You have two way to use it. The first way is used with css selector, and the other way is used component\'s input: styleObj.';
+var nodeTreeNotice = 'Notice: The layer.index is count base on 0.';
 
 var INSTALLATION_PRE = '$ npm install --save blacktbox-list\n\n// using ES6 modules\nimport BTBList from \'blacktbox-list\';\n\n// using CommonJS modules\nvar BTBList = require(\'blacktbox-list\');';
 var USING_PRE = '<BTBList \n  listArr: [],\n  styleObj: {},\n  inputRefFn: ()=>{}\n/>';
@@ -10930,135 +11071,84 @@ var Basic = function (_Component) {
         'div',
         { className: 'wrapper wrapper-basic' },
         _react2.default.createElement(
-          'div',
-          { className: 'context' },
+          _layout2.default.MainTitle,
+          null,
+          mainTitle
+        ),
+        _react2.default.createElement(
+          _layout2.default.MainDescription,
+          null,
+          mainDescriptionStr
+        ),
+        _react2.default.createElement(
+          _layout2.default.Section,
+          null,
           _react2.default.createElement(
-            'div',
-            { className: 'content' },
-            _react2.default.createElement(
-              'h1',
-              null,
-              'Blacktbox-list',
-              _react2.default.createElement(
-                'a',
-                { target: '_blank', className: 'linkBtn', href: 'https://github.com/BlackToolBoxLaboratory/blacktbox-list' },
-                _react2.default.createElement(_reactFontawesome2.default, { name: 'github', fixedWidth: true })
-              )
-            ),
-            _react2.default.createElement(
-              'span',
-              null,
-              'List-maker tool.'
-            )
+            _layout2.default.SectionTitle,
+            null,
+            installationTitle
+          ),
+          _react2.default.createElement(
+            _layout2.default.Content,
+            null,
+            installationContent
+          ),
+          _react2.default.createElement(
+            _layout2.default.Pre,
+            null,
+            INSTALLATION_PRE
           )
         ),
         _react2.default.createElement(
-          'div',
-          { className: 'context' },
+          _layout2.default.Section,
+          null,
           _react2.default.createElement(
-            'div',
-            { className: 'title' },
-            'INSTALLATION'
+            _layout2.default.SectionTitle,
+            null,
+            usingTitle
           ),
           _react2.default.createElement(
-            'div',
-            { className: 'content' },
-            _react2.default.createElement(
-              'span',
-              null,
-              'Using with ',
-              _react2.default.createElement(
-                'a',
-                { target: '_blank', href: 'https://www.npmjs.com' },
-                'NPM',
-                _react2.default.createElement(_reactFontawesome2.default, { name: 'external-link', fixedWidth: true })
-              ),
-              '.'
-            )
+            _layout2.default.Pre,
+            null,
+            USING_PRE
           ),
+          _react2.default.createElement(_blacktboxTable2.default, {
+            tableHeadArr: PARAM_HEAD,
+            tableBobyArr: PARAM_BODY,
+            modeObj: PARAM_MODE,
+            className: 'content-paramlist'
+          }),
           _react2.default.createElement(
-            'div',
-            { className: 'content' },
-            _react2.default.createElement(
-              'pre',
-              { className: 'content-pre' },
-              INSTALLATION_PRE
-            )
+            _layout2.default.Content,
+            null,
+            usingContent
           )
         ),
         _react2.default.createElement(
-          'div',
-          { className: 'context' },
+          _layout2.default.Section,
+          null,
           _react2.default.createElement(
-            'div',
-            { className: 'title' },
-            'USING'
+            _layout2.default.SectionTitle,
+            null,
+            nodeTreeTitle
           ),
           _react2.default.createElement(
-            'div',
-            { className: 'content' },
-            _react2.default.createElement(
-              'pre',
-              { className: 'content-pre' },
-              USING_PRE
-            ),
-            _react2.default.createElement(_blacktboxTable2.default, {
-              tableHeadArr: PARAM_HEAD,
-              tableBobyArr: PARAM_BODY,
-              modeObj: PARAM_MODE,
-              className: 'content-paramlist'
-            })
+            _layout2.default.Content,
+            null,
+            nodeTreeContent
           ),
           _react2.default.createElement(
-            'div',
-            { className: 'content' },
-            _react2.default.createElement(
-              'span',
-              null,
-              'Notice: DOM properties are still work with ',
-              _react2.default.createElement(
-                'a',
-                { target: '_blank', href: 'https://reactjs.org/docs/dom-elements.html' },
-                'ReactJS',
-                _react2.default.createElement(_reactFontawesome2.default, { name: 'external-link', fixedWidth: true })
-              ),
-              '.'
-            )
-          )
-        ),
-        _react2.default.createElement(
-          'div',
-          { className: 'context' },
-          _react2.default.createElement(
-            'div',
-            { className: 'title' },
-            'NODE TREE'
-          ),
-          _react2.default.createElement(
-            'div',
-            { className: 'content' },
-            _react2.default.createElement(
-              'span',
-              null,
-              'Here showing the node structure. Each node with className is for convenience to style. You have two way to use it. The first way is used with css selector, and the other way is used component\'s input: styleObj.'
-            )
-          ),
-          _react2.default.createElement(
-            'div',
-            { className: 'content' },
+            _layout2.default.Content,
+            null,
             _react2.default.createElement(_blacktboxList2.default, {
               className: 'content-nodetree',
               listArr: NODE_TREE
             })
           ),
           _react2.default.createElement(
-            'div',
-            { className: 'content' },
-            _react2.default.createElement(
-              'span',
-              null,
-              'Notice: The layer.index is count base on 0.'
-            )
+            _layout2.default.Content,
+            null,
+            nodeTreeNotice
           )
         )
       ));
@@ -11074,7 +11164,7 @@ var Basic = function (_Component) {
 exports.default = Basic;
 
 /***/ }),
-/* 178 */
+/* 179 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11094,13 +11184,17 @@ var _reactFontawesome = __webpack_require__(1);
 
 var _reactFontawesome2 = _interopRequireDefault(_reactFontawesome);
 
-var _blacktboxTable = __webpack_require__(30);
+var _blacktboxTable = __webpack_require__(32);
 
 var _blacktboxTable2 = _interopRequireDefault(_blacktboxTable);
 
-var _blacktboxList = __webpack_require__(16);
+var _blacktboxList = __webpack_require__(15);
 
 var _blacktboxList2 = _interopRequireDefault(_blacktboxList);
+
+var _layout = __webpack_require__(5);
+
+var _layout2 = _interopRequireDefault(_layout);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -11109,6 +11203,52 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var mainTitle = _react2.default.createElement(
+  'span',
+  null,
+  'Blacktbox-table ',
+  _react2.default.createElement(
+    'a',
+    { target: '_blank', className: 'linkBtn', href: 'https://github.com/BlackToolBoxLaboratory/blacktbox-table' },
+    _react2.default.createElement(_reactFontawesome2.default, { name: 'github', fixedWidth: true })
+  )
+);
+var mainDescriptionStr = 'Table-maker tool.';
+
+var installationTitle = 'INSTALLATION';
+var installationContent = _react2.default.createElement(
+  'span',
+  null,
+  'Using with ',
+  _react2.default.createElement(
+    'a',
+    { target: '_blank', href: 'https://www.npmjs.com' },
+    'NPM',
+    _react2.default.createElement(_reactFontawesome2.default, { name: 'external-link', fixedWidth: true })
+  ),
+  '.'
+);
+
+var usingTitle = 'USING';
+var usingContent = _react2.default.createElement(
+  'span',
+  null,
+  'Notice: DOM properties are still work with ',
+  _react2.default.createElement(
+    'a',
+    { target: '_blank', href: 'https://reactjs.org/docs/dom-elements.html' },
+    'ReactJS',
+    _react2.default.createElement(_reactFontawesome2.default, { name: 'external-link', fixedWidth: true })
+  ),
+  '.'
+);
+
+var nodeTreeTitle = 'NODE TREE';
+var nodeTreeContent = 'Here showing the node structure. Each node with className is for convenience to style. You have two way to use it. The first way is used with css selector, and the other way is used component\'s input: styleObj. But for blacktbox-table, we have two structure for two mode used.';
+var nodeTreeInfoTitle = 'Mode Info:';
+var nodeTreeListTitle = 'Mode List:';
+var nodeTreeNotice = 'Notice: The th.index come from tableHeadArr.';
 
 var INSTALLATION_PRE = '$ npm install --save blacktbox-table\n\n// using ES6 modules\nimport BTBTable from \'blacktbox-table\';\n\n// using CommonJS modules\nvar BTBTable = require(\'blacktbox-table\');';
 var USING_PRE = '<BTBTable \n  tableHeadArr: [],\n  tableBobyArr: [],\n  modeObj: {\n    mode: \'list\'\n  },\n  styleObj: {},\n  inputRefFn: ()=>{}\n/>';
@@ -11213,126 +11353,79 @@ var Basic = function (_Component) {
         'div',
         { className: 'wrapper wrapper-basic' },
         _react2.default.createElement(
-          'div',
-          { className: 'context' },
+          _layout2.default.MainTitle,
+          null,
+          mainTitle
+        ),
+        _react2.default.createElement(
+          _layout2.default.MainDescription,
+          null,
+          mainDescriptionStr
+        ),
+        _react2.default.createElement(
+          _layout2.default.Section,
+          null,
           _react2.default.createElement(
-            'div',
-            { className: 'content' },
-            _react2.default.createElement(
-              'h1',
-              null,
-              'Blacktbox-table',
-              _react2.default.createElement(
-                'a',
-                { target: '_blank', className: 'linkBtn', href: 'https://github.com/BlackToolBoxLaboratory/blacktbox-table' },
-                _react2.default.createElement(_reactFontawesome2.default, { name: 'github', fixedWidth: true })
-              )
-            ),
-            _react2.default.createElement(
-              'span',
-              null,
-              'Table-maker tool.'
-            )
+            _layout2.default.SectionTitle,
+            null,
+            installationTitle
+          ),
+          _react2.default.createElement(
+            _layout2.default.Content,
+            null,
+            installationContent
+          ),
+          _react2.default.createElement(
+            _layout2.default.Pre,
+            null,
+            INSTALLATION_PRE
           )
         ),
         _react2.default.createElement(
-          'div',
-          { className: 'context' },
+          _layout2.default.Section,
+          null,
           _react2.default.createElement(
-            'div',
-            { className: 'title' },
-            'INSTALLATION'
+            _layout2.default.SectionTitle,
+            null,
+            usingTitle
           ),
           _react2.default.createElement(
-            'div',
-            { className: 'content' },
-            _react2.default.createElement(
-              'span',
-              null,
-              'Using with ',
-              _react2.default.createElement(
-                'a',
-                { target: '_blank', href: 'https://www.npmjs.com' },
-                'NPM',
-                _react2.default.createElement(_reactFontawesome2.default, { name: 'external-link', fixedWidth: true })
-              ),
-              '.'
-            )
+            _layout2.default.Pre,
+            null,
+            USING_PRE
           ),
+          _react2.default.createElement(_blacktboxTable2.default, {
+            tableHeadArr: PARAM_HEAD,
+            tableBobyArr: PARAM_BODY,
+            modeObj: PARAM_MODE,
+            className: 'content-paramlist'
+          }),
           _react2.default.createElement(
-            'div',
-            { className: 'content' },
-            _react2.default.createElement(
-              'pre',
-              { className: 'content-pre' },
-              INSTALLATION_PRE
-            )
+            _layout2.default.Content,
+            null,
+            usingContent
           )
         ),
         _react2.default.createElement(
-          'div',
-          { className: 'context' },
+          _layout2.default.Section,
+          null,
           _react2.default.createElement(
-            'div',
-            { className: 'title' },
-            'USING'
+            _layout2.default.SectionTitle,
+            null,
+            nodeTreeTitle
           ),
           _react2.default.createElement(
-            'div',
-            { className: 'content' },
-            _react2.default.createElement(
-              'pre',
-              { className: 'content-pre' },
-              USING_PRE
-            ),
-            _react2.default.createElement(_blacktboxTable2.default, {
-              tableHeadArr: PARAM_HEAD,
-              tableBobyArr: PARAM_BODY,
-              modeObj: PARAM_MODE,
-              className: 'content-paramlist'
-            })
+            _layout2.default.Content,
+            null,
+            nodeTreeContent
           ),
           _react2.default.createElement(
-            'div',
-            { className: 'content' },
+            _layout2.default.Content,
+            null,
             _react2.default.createElement(
-              'span',
+              _layout2.default.SectionSubtitle,
               null,
-              'Notice: DOM properties are still work with ',
-              _react2.default.createElement(
-                'a',
-                { target: '_blank', href: 'https://reactjs.org/docs/dom-elements.html' },
-                'ReactJS',
-                _react2.default.createElement(_reactFontawesome2.default, { name: 'external-link', fixedWidth: true })
-              ),
-              '.'
-            )
-          )
-        ),
-        _react2.default.createElement(
-          'div',
-          { className: 'context' },
-          _react2.default.createElement(
-            'div',
-            { className: 'title' },
-            'NODE TREE'
-          ),
-          _react2.default.createElement(
-            'div',
-            { className: 'content' },
-            _react2.default.createElement(
-              'span',
-              null,
-              'Here showing the node structure. Each node with className is for convenience to style. You have two way to use it. The first way is used with css selector, and the other way is used component\'s input: styleObj. But for blacktbox-table, we have two structure for two mode used.'
-            )
-          ),
-          _react2.default.createElement(
-            'div',
-            { className: 'content' },
-            _react2.default.createElement(
-              'span',
-              null,
-              'Mode Info:'
+              nodeTreeInfoTitle
             ),
             _react2.default.createElement(_blacktboxList2.default, {
               className: 'content-nodetree',
@@ -11340,25 +11433,21 @@ var Basic = function (_Component) {
             })
           ),
           _react2.default.createElement(
-            'div',
-            { className: 'content' },
+            _layout2.default.Content,
+            null,
             _react2.default.createElement(
-              'span',
+              _layout2.default.SectionSubtitle,
               null,
-              'Mode List:'
+              nodeTreeListTitle
             ),
             _react2.default.createElement(_blacktboxList2.default, {
               className: 'content-nodetree',
               listArr: NODE_TREE_LIST
-            })
-          ),
-          _react2.default.createElement(
-            'div',
-            { className: 'content' },
+            }),
             _react2.default.createElement(
-              'span',
+              _layout2.default.Content,
               null,
-              'Notice: The th.index come from tableHeadArr.'
+              nodeTreeNotice
             )
           )
         )
@@ -11375,7 +11464,7 @@ var Basic = function (_Component) {
 exports.default = Basic;
 
 /***/ }),
-/* 179 */
+/* 180 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11395,13 +11484,17 @@ var _reactFontawesome = __webpack_require__(1);
 
 var _reactFontawesome2 = _interopRequireDefault(_reactFontawesome);
 
-var _blacktboxTable = __webpack_require__(30);
+var _blacktboxTable = __webpack_require__(32);
 
 var _blacktboxTable2 = _interopRequireDefault(_blacktboxTable);
 
-var _blacktboxList = __webpack_require__(16);
+var _blacktboxList = __webpack_require__(15);
 
 var _blacktboxList2 = _interopRequireDefault(_blacktboxList);
+
+var _layout = __webpack_require__(5);
+
+var _layout2 = _interopRequireDefault(_layout);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -11410,6 +11503,36 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var mainTitle = _react2.default.createElement(
+  'span',
+  null,
+  'Blacktbox-menu ',
+  _react2.default.createElement(
+    'a',
+    { target: '_blank', className: 'linkBtn', href: 'https://github.com/BlackToolBoxLaboratory/blacktbox-menu' },
+    _react2.default.createElement(_reactFontawesome2.default, { name: 'github', fixedWidth: true })
+  )
+);
+var mainDescriptionStr = 'Menu-maker tool.';
+
+var usingTitle = 'USING';
+var usingContent = _react2.default.createElement(
+  'span',
+  null,
+  'Notice: DOM properties are still work with ',
+  _react2.default.createElement(
+    'a',
+    { target: '_blank', href: 'https://reactjs.org/docs/dom-elements.html' },
+    'ReactJS',
+    _react2.default.createElement(_reactFontawesome2.default, { name: 'external-link', fixedWidth: true })
+  ),
+  '.'
+);
+
+var nodeTreeTitle = 'NODE TREE';
+var nodeTreeContent = 'Here showing the node structure. Each node with className is for convenience to style. You have two way to use it. The first way is used with css selector, and the other way is used component\'s input: styleObj.';
+var nodeTreeNotice = 'Notice: The layer.index is count base on 0.';
 
 var INSTALLATION_PRE = '$ npm install --save blacktbox-menu\n\n// using ES6 modules\nimport BTBMenu from \'blacktbox-menu\';\n\n// using CommonJS modules\nvar BTBMenu = require(\'blacktbox-menu\');';
 var USING_PRE = '<BTBMenu \n  menuArr: [],\n  styleObj: {},\n  inputRefFn: ()=>{},\n  acticveIndex: \'\',\n  itemOnClickFn: ()=>{},\n  featureCollapsible: {\n    enable: false,\n    customCollapseButton: \'\',\n    itemOnCollapseFn: ()=>{}\n  }\n/>';
@@ -11482,39 +11605,26 @@ var Basic = function (_Component) {
         'div',
         { className: 'wrapper wrapper-basic' },
         _react2.default.createElement(
-          'div',
-          { className: 'context' },
-          _react2.default.createElement(
-            'div',
-            { className: 'content' },
-            _react2.default.createElement(
-              'h1',
-              null,
-              'Blacktbox-menu',
-              _react2.default.createElement(
-                'a',
-                { target: '_blank', className: 'linkBtn', href: 'https://github.com/BlackToolBoxLaboratory/blacktbox-menu' },
-                _react2.default.createElement(_reactFontawesome2.default, { name: 'github', fixedWidth: true })
-              )
-            ),
-            _react2.default.createElement(
-              'span',
-              null,
-              'Menu-maker tool.'
-            )
-          )
+          _layout2.default.MainTitle,
+          null,
+          mainTitle
         ),
         _react2.default.createElement(
-          'div',
-          { className: 'context' },
+          _layout2.default.MainDescription,
+          null,
+          mainDescriptionStr
+        ),
+        _react2.default.createElement(
+          _layout2.default.Section,
+          null,
           _react2.default.createElement(
-            'div',
-            { className: 'title' },
+            _layout2.default.SectionTitle,
+            null,
             'INSTALLATION'
           ),
           _react2.default.createElement(
-            'div',
-            { className: 'content' },
+            _layout2.default.Content,
+            null,
             _react2.default.createElement(
               'span',
               null,
@@ -11529,88 +11639,61 @@ var Basic = function (_Component) {
             )
           ),
           _react2.default.createElement(
-            'div',
-            { className: 'content' },
-            _react2.default.createElement(
-              'pre',
-              { className: 'content-pre' },
-              INSTALLATION_PRE
-            )
+            _layout2.default.Pre,
+            null,
+            INSTALLATION_PRE
           )
         ),
         _react2.default.createElement(
-          'div',
-          { className: 'context' },
+          _layout2.default.Section,
+          null,
           _react2.default.createElement(
-            'div',
-            { className: 'title' },
-            'USING'
+            _layout2.default.SectionTitle,
+            null,
+            usingTitle
           ),
           _react2.default.createElement(
-            'div',
-            { className: 'content' },
-            _react2.default.createElement(
-              'pre',
-              { className: 'content-pre' },
-              USING_PRE
-            ),
-            _react2.default.createElement(_blacktboxTable2.default, {
-              tableHeadArr: PARAM_HEAD,
-              tableBobyArr: PARAM_BODY,
-              modeObj: PARAM_MODE,
-              className: 'content-paramlist'
-            })
+            _layout2.default.Pre,
+            null,
+            USING_PRE
           ),
+          _react2.default.createElement(_blacktboxTable2.default, {
+            tableHeadArr: PARAM_HEAD,
+            tableBobyArr: PARAM_BODY,
+            modeObj: PARAM_MODE,
+            className: 'content-paramlist'
+          }),
           _react2.default.createElement(
-            'div',
-            { className: 'content' },
-            _react2.default.createElement(
-              'span',
-              null,
-              'Notice: DOM properties are still work with ',
-              _react2.default.createElement(
-                'a',
-                { target: '_blank', href: 'https://reactjs.org/docs/dom-elements.html' },
-                'ReactJS',
-                _react2.default.createElement(_reactFontawesome2.default, { name: 'external-link', fixedWidth: true })
-              ),
-              '.'
-            )
+            _layout2.default.Content,
+            null,
+            usingContent
           )
         ),
         _react2.default.createElement(
-          'div',
-          { className: 'context' },
+          _layout2.default.Section,
+          null,
           _react2.default.createElement(
-            'div',
-            { className: 'title' },
-            'NODE TREE'
+            _layout2.default.SectionTitle,
+            null,
+            nodeTreeTitle
           ),
           _react2.default.createElement(
-            'div',
-            { className: 'content' },
-            _react2.default.createElement(
-              'span',
-              null,
-              'Here showing the node structure. Each node with className is for convenience to style. You have two way to use it. The first way is used with css selector, and the other way is used component\'s input: styleObj.'
-            )
+            _layout2.default.Content,
+            null,
+            nodeTreeContent
           ),
           _react2.default.createElement(
-            'div',
-            { className: 'content' },
+            _layout2.default.Content,
+            null,
             _react2.default.createElement(_blacktboxList2.default, {
               className: 'content-nodetree',
               listArr: NODE_TREE
             })
           ),
           _react2.default.createElement(
-            'div',
-            { className: 'content' },
-            _react2.default.createElement(
-              'span',
-              null,
-              'Notice: The layer.index is count base on 0.'
-            )
+            _layout2.default.Content,
+            null,
+            nodeTreeNotice
           )
         )
       ));
@@ -11626,7 +11709,7 @@ var Basic = function (_Component) {
 exports.default = Basic;
 
 /***/ }),
-/* 180 */
+/* 181 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11646,6 +11729,10 @@ var _reactFontawesome = __webpack_require__(1);
 
 var _reactFontawesome2 = _interopRequireDefault(_reactFontawesome);
 
+var _layout = __webpack_require__(5);
+
+var _layout2 = _interopRequireDefault(_layout);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -11653,6 +11740,54 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var mainTitle = _react2.default.createElement(
+  'span',
+  null,
+  'Blacktbox-menu ',
+  _react2.default.createElement(
+    'a',
+    { target: '_blank', className: 'linkBtn', href: 'https://github.com/BlackToolBoxLaboratory/blacktbox-menu' },
+    _react2.default.createElement(_reactFontawesome2.default, { name: 'github', fixedWidth: true })
+  )
+);
+var mainDescriptionStr = 'Advanced application with Blacktbox-menu.';
+
+var redirectTitle = 'REDIRECT';
+var redirectContent = _react2.default.createElement(
+  'span',
+  null,
+  'Here, we talk about "How to redirect with Blacktbox-menu". And it will work with ',
+  _react2.default.createElement(
+    'a',
+    { target: '_blank', href: 'https://github.com/ReactTraining/react-router' },
+    'React-router',
+    _react2.default.createElement(_reactFontawesome2.default, { name: 'external-link', fixedWidth: true })
+  ),
+  '. It is quite enough, if we only need to redirect by clicking menu. However sometimes we need to redirect after function finished or depend on its result. So, we choose a general way to complete the menu system. As we know, there are big different bwteen 2.x/3.x and 4.x. We separate to two part for 2.x/3.x and 4.x. Besides, the way with 4.x is used in our Homepage(Demonstration).'
+);
+
+var reactRouterVersion23Title = '2.x/3.x';
+var reactRouterVersion23RouterListContent = 'For 2.x/3.x, we need to build a router list:';
+var reactRouterVersion23RedirectContent = 'And then, we can use <Link> or hashHistory.push to do redirect.';
+var reactRouterVersion4Title = '4.x';
+var reactRouterVersion4RouterListContent = 'Same as 4.x, we need to build a router list, too:';
+var reactRouterVersion4RedirectContent = _react2.default.createElement(
+  'span',
+  null,
+  'And then, we can use ',
+  '<Link>',
+  ' to do redirect. However if we need to use something like hashHistory.push to do redirect. You can use withRouter. But we prefer to build our history to use. In that way, we need to install ',
+  _react2.default.createElement(
+    'a',
+    { target: '_blank', href: 'https://www.npmjs.com/package/history' },
+    'History',
+    _react2.default.createElement(_reactFontawesome2.default, { name: 'external-link', fixedWidth: true })
+  ),
+  ' additionally.'
+);
+var reactRouterVersion4CreateHistoryContent = 'Then we need to have a component to create our history.';
+var reactRouterVersion4HistoryPushContent = 'Finally, we can use our history.push to do redirect. Also we can add the history.push to our Blacktbox-menu\'s parameter: itemOnClickFn with a router list to switch path.';
 
 var REACTROUTER_23_ROUTER = '<Router history={hashHistory}>\n  <Route path=\'/\' component={Index}>\n    ...\n  <Route>\n</Router>';
 var REACTROUTER_23_REDIRECT = '<Link to={...}>\n\nhashHistory.push(...)';
@@ -11678,147 +11813,104 @@ var Adavnce = function (_Component) {
         'div',
         { className: 'wrapper wrapper-advance' },
         _react2.default.createElement(
-          'div',
-          { className: 'context' },
-          _react2.default.createElement(
-            'div',
-            { className: 'content' },
-            _react2.default.createElement(
-              'h1',
-              null,
-              'Blacktbox-menu',
-              _react2.default.createElement(
-                'a',
-                { target: '_blank', className: 'linkBtn', href: 'https://github.com/BlackToolBoxLaboratory/blacktbox-menu' },
-                _react2.default.createElement(_reactFontawesome2.default, { name: 'github', fixedWidth: true })
-              )
-            ),
-            _react2.default.createElement(
-              'span',
-              null,
-              'Advanced application with Blacktbox-menu.'
-            )
-          )
+          _layout2.default.MainTitle,
+          null,
+          mainTitle
         ),
         _react2.default.createElement(
-          'div',
-          { className: 'context' },
+          _layout2.default.MainDescription,
+          null,
+          mainDescriptionStr
+        ),
+        _react2.default.createElement(
+          _layout2.default.Section,
+          null,
           _react2.default.createElement(
-            'div',
-            { className: 'title' },
-            'REDIRECT'
+            _layout2.default.SectionTitle,
+            null,
+            redirectTitle
           ),
           _react2.default.createElement(
-            'div',
-            { className: 'content' },
+            _layout2.default.Content,
+            null,
+            redirectContent
+          ),
+          _react2.default.createElement(
+            _layout2.default.Content,
+            null,
             _react2.default.createElement(
-              'span',
+              _layout2.default.SectionSubtitle,
               null,
-              'Here, we talk about "How to redirect with Blacktbox-menu". And it will work with ',
-              _react2.default.createElement(
-                'a',
-                { target: '_blank', href: 'https://github.com/ReactTraining/react-router' },
-                'React-router',
-                _react2.default.createElement(_reactFontawesome2.default, { name: 'external-link', fixedWidth: true })
-              ),
-              '. It is quite enough, if we only need to redirect by clicking menu. However sometimes we need to redirect after function finished or depend on its result. So, we choose a general way to complete the menu system. As we know, there are big different bwteen 2.x/3.x and 4.x. We separate to two part for 2.x/3.x and 4.x. Besides, the way with 4.x is used in our Homepage(Demonstration). '
+              reactRouterVersion23Title
+            ),
+            _react2.default.createElement(
+              _layout2.default.Content,
+              null,
+              reactRouterVersion23RouterListContent
+            ),
+            _react2.default.createElement(
+              _layout2.default.Pre,
+              null,
+              REACTROUTER_23_ROUTER
+            ),
+            _react2.default.createElement(
+              _layout2.default.Content,
+              null,
+              reactRouterVersion23RedirectContent
+            ),
+            _react2.default.createElement(
+              _layout2.default.Pre,
+              null,
+              REACTROUTER_23_REDIRECT
             )
           ),
           _react2.default.createElement(
-            'div',
-            { className: 'content' },
+            _layout2.default.Content,
+            null,
             _react2.default.createElement(
-              'h3',
+              _layout2.default.SectionSubtitle,
               null,
-              '2.x/3.x'
+              reactRouterVersion4Title
             ),
             _react2.default.createElement(
-              'div',
-              { className: 'content' },
-              _react2.default.createElement(
-                'span',
-                null,
-                'For 2.x/3.x, we need to build a router list:'
-              ),
-              _react2.default.createElement(
-                'pre',
-                { className: 'content-pre' },
-                REACTROUTER_23_ROUTER
-              ),
-              _react2.default.createElement(
-                'span',
-                null,
-                'And then, we can use ',
-                '<Link>',
-                ' or hashHistory.push to do redirect.'
-              ),
-              _react2.default.createElement(
-                'pre',
-                { className: 'content-pre' },
-                REACTROUTER_23_REDIRECT
-              )
-            )
-          ),
-          _react2.default.createElement(
-            'div',
-            { className: 'content' },
-            _react2.default.createElement(
-              'h3',
+              _layout2.default.Content,
               null,
-              '4.x'
+              reactRouterVersion4RouterListContent
             ),
             _react2.default.createElement(
-              'div',
-              { className: 'content' },
-              _react2.default.createElement(
-                'span',
-                null,
-                'Same as 4.x, we need to build a router list, too:'
-              ),
-              _react2.default.createElement(
-                'pre',
-                { className: 'content-pre' },
-                REACTROUTER_4_ROUTER
-              ),
-              _react2.default.createElement(
-                'span',
-                null,
-                'And then, we can use ',
-                '<Link>',
-                ' to do redirect. However if we need to use something like hashHistory.push to do redirect. You can use withRouter. But we prefer to build our history to use. In that way, we need to install ',
-                _react2.default.createElement(
-                  'a',
-                  { target: '_blank', href: 'https://www.npmjs.com/package/history' },
-                  'History',
-                  _react2.default.createElement(_reactFontawesome2.default, { name: 'external-link', fixedWidth: true })
-                ),
-                ' additionally.'
-              ),
-              _react2.default.createElement(
-                'pre',
-                { className: 'content-pre' },
-                HISTORY_INSTALL
-              ),
-              _react2.default.createElement(
-                'span',
-                null,
-                'Then we need to have a component to create our history.'
-              ),
-              _react2.default.createElement(
-                'pre',
-                { className: 'content-pre' },
-                HISTORY_CREATE
-              ),
-              _react2.default.createElement(
-                'span',
-                null,
-                'Finally, we can use our history.push to do redirect. Also we can add the history.push to our Blacktbox-menu\'s parameter: itemOnClickFn with a router list to switch path.'
-              ),
-              _react2.default.createElement(
-                'pre',
-                { className: 'content-pre' },
-                REACTROUTER_4_REDIRECT
-              )
+              _layout2.default.Pre,
+              null,
+              REACTROUTER_4_ROUTER
+            ),
+            _react2.default.createElement(
+              _layout2.default.Content,
+              null,
+              reactRouterVersion4RedirectContent
+            ),
+            _react2.default.createElement(
+              _layout2.default.Pre,
+              null,
+              HISTORY_INSTALL
+            ),
+            _react2.default.createElement(
+              _layout2.default.Content,
+              null,
+              reactRouterVersion4CreateHistoryContent
+            ),
+            _react2.default.createElement(
+              _layout2.default.Pre,
+              null,
+              HISTORY_CREATE
+            ),
+            _react2.default.createElement(
+              _layout2.default.Content,
+              null,
+              reactRouterVersion4HistoryPushContent
+            ),
+            _react2.default.createElement(
+              _layout2.default.Pre,
+              null,
+              REACTROUTER_4_REDIRECT
             )
           )
         )
@@ -11835,7 +11927,7 @@ var Adavnce = function (_Component) {
 exports.default = Adavnce;
 
 /***/ }),
-/* 181 */
+/* 182 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11855,7 +11947,7 @@ var _reactFontawesome = __webpack_require__(1);
 
 var _reactFontawesome2 = _interopRequireDefault(_reactFontawesome);
 
-var _home = __webpack_require__(15);
+var _home = __webpack_require__(14);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -11906,4 +11998,4 @@ var NotFound = function (_Component) {
 exports.default = NotFound;
 
 /***/ })
-],[54]);
+],[56]);
