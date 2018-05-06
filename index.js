@@ -5,6 +5,25 @@ webpackJsonp([0],[
 /* 3 */,
 /* 4 */,
 /* 5 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_Provider__ = __webpack_require__(125);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_connectAdvanced__ = __webpack_require__(50);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__connect_connect__ = __webpack_require__(127);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Provider", function() { return __WEBPACK_IMPORTED_MODULE_0__components_Provider__["b"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "createProvider", function() { return __WEBPACK_IMPORTED_MODULE_0__components_Provider__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "connectAdvanced", function() { return __WEBPACK_IMPORTED_MODULE_1__components_connectAdvanced__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "connect", function() { return __WEBPACK_IMPORTED_MODULE_2__connect_connect__["a"]; });
+
+
+
+
+
+
+/***/ }),
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23,7 +42,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var MainTitle = exports.MainTitle = function MainTitle(props) {
   var content = [];
-  props.className = 'btb-layout mainTitle ' + (props.className ? props.className : '');
+  props.className = 'btb-articleLayout mainTitle ' + (props.className ? props.className : '');
   content.push(_react2.default.createElement(
     'div',
     props,
@@ -33,7 +52,7 @@ var MainTitle = exports.MainTitle = function MainTitle(props) {
 };
 var MainDescription = exports.MainDescription = function MainDescription(props) {
   var content = [];
-  props.className = 'btb-layout mainDescription ' + (props.className ? props.className : '');
+  props.className = 'btb-articleLayout mainDescription ' + (props.className ? props.className : '');
   content.push(_react2.default.createElement(
     'div',
     props,
@@ -43,7 +62,7 @@ var MainDescription = exports.MainDescription = function MainDescription(props) 
 };
 var Section = exports.Section = function Section(props) {
   var content = [];
-  props.className = 'btb-layout section ' + (props.className ? props.className : '');
+  props.className = 'btb-articleLayout section ' + (props.className ? props.className : '');
   content.push(_react2.default.createElement(
     'div',
     props,
@@ -53,7 +72,7 @@ var Section = exports.Section = function Section(props) {
 };
 var SectionTitle = exports.SectionTitle = function SectionTitle(props) {
   var content = [];
-  props.className = 'btb-layout sectionTitle ' + (props.className ? props.className : '');
+  props.className = 'btb-articleLayout sectionTitle ' + (props.className ? props.className : '');
   content.push(_react2.default.createElement(
     'div',
     props,
@@ -63,7 +82,7 @@ var SectionTitle = exports.SectionTitle = function SectionTitle(props) {
 };
 var SectionSubtitle = exports.SectionSubtitle = function SectionSubtitle(props) {
   var content = [];
-  props.className = 'btb-layout sectionSubtitle ' + (props.className ? props.className : '');
+  props.className = 'btb-articleLayout sectionSubtitle ' + (props.className ? props.className : '');
   content.push(_react2.default.createElement(
     'div',
     props,
@@ -73,7 +92,7 @@ var SectionSubtitle = exports.SectionSubtitle = function SectionSubtitle(props) 
 };
 var Content = exports.Content = function Content(props) {
   var content = [];
-  props.className = 'btb-layout content ' + (props.className ? props.className : '');
+  props.className = 'btb-articleLayout content ' + (props.className ? props.className : '');
   content.push(_react2.default.createElement(
     'div',
     props,
@@ -83,7 +102,7 @@ var Content = exports.Content = function Content(props) {
 };
 var Pre = exports.Pre = function Pre(props) {
   var content = [];
-  props.className = 'btb-layout content-pre ' + (props.className ? props.className : '');
+  props.className = 'btb-articleLayout content-pre ' + (props.className ? props.className : '');
   content.push(_react2.default.createElement(
     'pre',
     props,
@@ -93,7 +112,7 @@ var Pre = exports.Pre = function Pre(props) {
 };
 var Item = exports.Item = function Item(props) {
   var content = [];
-  props.className = 'btb-layout content-item ' + (props.className ? props.className : '');
+  props.className = 'btb-articleLayout content-item ' + (props.className ? props.className : '');
   content.push(_react2.default.createElement(
     'div',
     props,
@@ -103,7 +122,7 @@ var Item = exports.Item = function Item(props) {
 };
 var Notice = exports.Notice = function Notice(props) {
   var content = [];
-  props.className = 'btb-layout notice ' + (props.className ? props.className : '');
+  props.className = 'btb-articleLayout notice ' + (props.className ? props.className : '');
   content.push(_react2.default.createElement(
     'div',
     props,
@@ -113,7 +132,7 @@ var Notice = exports.Notice = function Notice(props) {
 };
 var BtnGroup = exports.BtnGroup = function BtnGroup(props) {
   var content = [];
-  props.className = 'btb-layout buttonGroup ' + (props.className ? props.className : '');
+  props.className = 'btb-articleLayout buttonGroup ' + (props.className ? props.className : '');
   content.push(_react2.default.createElement(
     'div',
     props,
@@ -123,7 +142,7 @@ var BtnGroup = exports.BtnGroup = function BtnGroup(props) {
 };
 var Btn = exports.Btn = function Btn(props) {
   var content = [];
-  props.className = 'btb-layout button ' + (props.className ? props.className : '');
+  props.className = 'btb-articleLayout button ' + (props.className ? props.className : '');
   content.push(_react2.default.createElement(
     'div',
     props,
@@ -147,29 +166,87 @@ exports.default = {
 };
 
 /***/ }),
-/* 6 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/* 7 */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_Provider__ = __webpack_require__(126);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_connectAdvanced__ = __webpack_require__(50);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__connect_connect__ = __webpack_require__(128);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Provider", function() { return __WEBPACK_IMPORTED_MODULE_0__components_Provider__["b"]; });
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "createProvider", function() { return __WEBPACK_IMPORTED_MODULE_0__components_Provider__["a"]; });
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "connectAdvanced", function() { return __WEBPACK_IMPORTED_MODULE_1__components_connectAdvanced__["a"]; });
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "connect", function() { return __WEBPACK_IMPORTED_MODULE_2__connect_connect__["a"]; });
 
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Title = exports.InlineBlock = exports.Block = exports.Part = exports.Wrapper = undefined;
 
+var _react = __webpack_require__(0);
 
+var _react2 = _interopRequireDefault(_react);
 
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Wrapper = exports.Wrapper = function Wrapper(props) {
+  var content = [];
+  props.className = 'btb-exampleLayout wrapper ' + (props.className ? props.className : '');
+  content.push(_react2.default.createElement(
+    'div',
+    props,
+    props.children
+  ));
+  return content;
+};
+var Part = exports.Part = function Part(props) {
+  var content = [];
+  props.className = 'btb-exampleLayout part ' + (props.className ? props.className : '');
+  content.push(_react2.default.createElement(
+    'div',
+    props,
+    props.children
+  ));
+  return content;
+};
+var Block = exports.Block = function Block(props) {
+  var content = [];
+  props.className = 'btb-exampleLayout block ' + (props.className ? props.className : '');
+  content.push(_react2.default.createElement(
+    'div',
+    props,
+    props.children
+  ));
+  return content;
+};
+var InlineBlock = exports.InlineBlock = function InlineBlock(props) {
+  var content = [];
+  props.className = 'btb-exampleLayout inlineBlock ' + (props.className ? props.className : '');
+  content.push(_react2.default.createElement(
+    'div',
+    props,
+    props.children
+  ));
+  return content;
+};
+var Title = exports.Title = function Title(props) {
+  var content = [];
+  props.className = 'btb-exampleLayout title ' + (props.className ? props.className : '');
+  content.push(_react2.default.createElement(
+    'div',
+    props,
+    props.children
+  ));
+  return content;
+};
+
+exports.default = {
+  Wrapper: Wrapper,
+  Part: Part,
+  Block: Block,
+  InlineBlock: InlineBlock,
+  Title: Title
+};
 
 /***/ }),
-/* 7 */,
 /* 8 */,
 /* 9 */,
-/* 10 */
+/* 10 */,
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -179,13 +256,13 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _flux = __webpack_require__(93);
+var _flux = __webpack_require__(92);
 
 var MyDispatcher = new _flux.Dispatcher();
 exports.default = MyDispatcher;
 
 /***/ }),
-/* 11 */
+/* 12 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -196,7 +273,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "applyMiddleware", function() { return applyMiddleware; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "compose", function() { return compose; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__DO_NOT_USE__ActionTypes", function() { return ActionTypes; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_symbol_observable__ = __webpack_require__(123);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_symbol_observable__ = __webpack_require__(122);
 
 
 /**
@@ -788,9 +865,9 @@ if (false) {
 
 
 /***/ }),
-/* 12 */,
 /* 13 */,
-/* 14 */
+/* 14 */,
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -814,11 +891,11 @@ var _reactFontawesome = __webpack_require__(1);
 
 var _reactFontawesome2 = _interopRequireDefault(_reactFontawesome);
 
-var _blacktboxMenu = __webpack_require__(101);
+var _blacktboxMenu = __webpack_require__(100);
 
 var _blacktboxMenu2 = _interopRequireDefault(_blacktboxMenu);
 
-var _menuList = __webpack_require__(102);
+var _menuList = __webpack_require__(101);
 
 var _menuList2 = _interopRequireDefault(_menuList);
 
@@ -830,47 +907,43 @@ var _history = __webpack_require__(29);
 
 var _history2 = _interopRequireDefault(_history);
 
-var _about = __webpack_require__(103);
+var _about = __webpack_require__(102);
 
 var _about2 = _interopRequireDefault(_about);
 
-var _index = __webpack_require__(104);
+var _index = __webpack_require__(103);
 
 var _index2 = _interopRequireDefault(_index);
 
-var _Flux = __webpack_require__(105);
+var _Flux = __webpack_require__(104);
 
 var _Flux2 = _interopRequireDefault(_Flux);
 
-var _Redux = __webpack_require__(119);
+var _Redux = __webpack_require__(118);
 
 var _Redux2 = _interopRequireDefault(_Redux);
 
-var _Component_PresentationalNContainer = __webpack_require__(167);
-
-var _Component_PresentationalNContainer2 = _interopRequireDefault(_Component_PresentationalNContainer);
-
-var _index3 = __webpack_require__(177);
+var _index3 = __webpack_require__(166);
 
 var _index4 = _interopRequireDefault(_index3);
 
-var _basic = __webpack_require__(178);
+var _basic = __webpack_require__(167);
 
 var _basic2 = _interopRequireDefault(_basic);
 
-var _basic3 = __webpack_require__(179);
+var _basic3 = __webpack_require__(168);
 
 var _basic4 = _interopRequireDefault(_basic3);
 
-var _basic5 = __webpack_require__(180);
+var _basic5 = __webpack_require__(169);
 
 var _basic6 = _interopRequireDefault(_basic5);
 
-var _advanced = __webpack_require__(181);
+var _advanced = __webpack_require__(170);
 
 var _advanced2 = _interopRequireDefault(_advanced);
 
-var _ = __webpack_require__(182);
+var _ = __webpack_require__(171);
 
 var _2 = _interopRequireDefault(_);
 
@@ -1026,7 +1099,6 @@ var MainContent = function MainContent(props) {
       _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: _routeList2.default.BTB_ATCS, component: _index2.default }),
       _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: _routeList2.default.BTB_ATCS_FLUX, component: _Flux2.default }),
       _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: _routeList2.default.BTB_ATCS_REDUX, component: _Redux2.default }),
-      _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: _routeList2.default.BTB_ATCS_COMPONENT_PNC, component: _Component_PresentationalNContainer2.default }),
       _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: _routeList2.default.BTB_DEMO, component: _index4.default }),
       _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: _routeList2.default.BTB_LIST_BASIC, component: _basic2.default }),
       _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: _routeList2.default.BTB_TABLE_BASIC, component: _basic4.default }),
@@ -1041,7 +1113,7 @@ var MainContent = function MainContent(props) {
 exports.default = Home;
 
 /***/ }),
-/* 15 */
+/* 16 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1242,7 +1314,7 @@ Menu.defaultProps = {
 /* harmony default export */ __webpack_exports__["default"] = (Menu);
 
 /***/ }),
-/* 16 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1285,7 +1357,7 @@ var LeftListAction = function () {
 exports.default = LeftListAction;
 
 /***/ }),
-/* 17 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1328,7 +1400,7 @@ var RightListAction = function () {
 exports.default = RightListAction;
 
 /***/ }),
-/* 18 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1378,7 +1450,7 @@ var LeftListAction = function () {
 exports.default = LeftListAction;
 
 /***/ }),
-/* 19 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1428,100 +1500,6 @@ var RightListAction = function () {
 exports.default = RightListAction;
 
 /***/ }),
-/* 20 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-/* present data in server */
-var serverData = new Array();
-
-var DATAMEMBERS = 5;
-var random_uId = 'abcdefghijklmnopqrstuvwxyz0123456789';
-var random_name = 'abcdefghijklmnopqrstuvwxyz';
-
-function DataObj() {
-  this['uId'] = '';
-  this['name'] = '';
-};
-
-function randomData(type, base) {
-  var valueLength = 0;
-  var value = '';
-  var randomNumber = void 0;
-  switch (type) {
-    case 'id':
-      valueLength = 10;
-      for (var idIndex = 0; idIndex < valueLength; idIndex++) {
-        randomNumber = Math.round(Math.random() * 100);
-        value += random_uId.split('')[randomNumber % random_uId.length];
-      };
-      for (var baseIndex = 0; baseIndex < base.length; baseIndex++) {
-        if (base[baseIndex].uId == value) {
-          // if duplicate uId, random again
-          value = randomData('id', base);
-          break;
-        };
-      };
-      break;
-    case 'name':
-      valueLength = Math.ceil(Math.random() * 10);
-      for (var _idIndex = 0; _idIndex < valueLength; _idIndex++) {
-        randomNumber = Math.floor(Math.random() * random_name.length);
-        value += random_name.split('')[randomNumber];
-      };
-      break;
-  };
-  return value;
-};
-
-var ServerAPI = function () {
-  var initData = function initData() {
-    serverData = [];
-    // random data instead of 'fetch' data
-    var dataTemp = void 0;
-    for (var i = 0; i < DATAMEMBERS; i++) {
-      dataTemp = new DataObj();
-      dataTemp['uId'] = randomData('id', serverData);
-      dataTemp['name'] = randomData('name');
-      serverData.push(dataTemp);
-    };
-    return serverData;
-  };
-  var getData = function getData() {
-    return serverData;
-  };
-  var addData = function addData(obj) {
-    var dataTemp = new DataObj();
-    dataTemp['uId'] = randomData('id', serverData);
-    dataTemp['name'] = obj['name'];
-    serverData.push(dataTemp);
-    return serverData;
-  };
-  var deleteData = function deleteData(obj) {
-    for (var i = 0; i < serverData.length; i++) {
-      if (obj['uId'] == serverData[i].uId) {
-        serverData.splice(i, 1);
-        break;
-      };
-    };
-    return serverData;
-  };
-  return {
-    'initData': initData,
-    'getData': getData,
-    'addData': addData,
-    'deleteData': deleteData
-  };
-}();
-
-exports.default = ServerAPI;
-
-/***/ }),
 /* 21 */,
 /* 22 */,
 /* 23 */,
@@ -1545,7 +1523,6 @@ var routeList = {
   'BTB_ATCS': '/articles',
   'BTB_ATCS_FLUX': '/articles/flux',
   'BTB_ATCS_REDUX': '/articles/redux',
-  'BTB_ATCS_COMPONENT_PNC': '/articles/component_presentational_and_container',
 
   'BTB_DEMO': '/blacktbox-demo',
 
@@ -1570,69 +1547,13 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _history = __webpack_require__(42);
+var _history = __webpack_require__(41);
 
 var MyHashHistory = new _history.createHashHistory();
 exports.default = MyHashHistory;
 
 /***/ }),
 /* 30 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactFontawesome = __webpack_require__(1);
-
-var _reactFontawesome2 = _interopRequireDefault(_reactFontawesome);
-
-var _routeList = __webpack_require__(28);
-
-var _routeList2 = _interopRequireDefault(_routeList);
-
-var _history = __webpack_require__(29);
-
-var _history2 = _interopRequireDefault(_history);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var _redirectHandler = function _redirectHandler(index) {
-  _history2.default.push(_routeList2.default[index]);
-  window.scrollTo(0, 0);
-};
-
-var ArticleRedirecter = function ArticleRedirecter(props) {
-  var content = [];
-  props.className = 'btb-articleRedirectBtn ' + (props.className ? props.className : '');
-  content.push(_react2.default.createElement(
-    'div',
-    _extends({ onClick: function onClick() {
-        _redirectHandler(props.redirectTo);
-      } }, props),
-    _react2.default.createElement(_reactFontawesome2.default, { name: 'arrow-left', fixedWidth: true }),
-    _react2.default.createElement(
-      'span',
-      null,
-      'Back to Articles'
-    )
-  ));
-  return content;
-};
-
-exports.default = ArticleRedirecter;
-
-/***/ }),
-/* 31 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1660,7 +1581,7 @@ function warning(message) {
 }
 
 /***/ }),
-/* 32 */
+/* 31 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2018,6 +1939,7 @@ Menu.defaultProps = {
 /* harmony default export */ __webpack_exports__["default"] = (Menu);
 
 /***/ }),
+/* 32 */,
 /* 33 */,
 /* 34 */,
 /* 35 */,
@@ -2029,8 +1951,7 @@ Menu.defaultProps = {
 /* 41 */,
 /* 42 */,
 /* 43 */,
-/* 44 */,
-/* 45 */
+/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(module) {/*!
@@ -2208,10 +2129,10 @@ Menu.defaultProps = {
 	}
 
 })(typeof module === 'object' && module && typeof module.exports === 'object' && module.exports);
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(112)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(111)(module)))
 
 /***/ }),
-/* 46 */
+/* 45 */
 /***/ (function(module, exports) {
 
 // Copyright Joyent, Inc. and other Node contributors.
@@ -2519,7 +2440,7 @@ function isUndefined(arg) {
 
 
 /***/ }),
-/* 47 */
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2532,11 +2453,11 @@ Object.defineProperty(exports, "__esModule", {
 var serverData = new Array();
 
 var DATAMEMBERS = 5;
-var random_uId = 'abcdefghijklmnopqrstuvwxyz0123456789';
+var random_ID = 'abcdefghijklmnopqrstuvwxyz0123456789';
 var random_name = 'abcdefghijklmnopqrstuvwxyz';
 
 function DataObj() {
-  this['uId'] = '';
+  this['ID'] = '';
   this['name'] = '';
 };
 
@@ -2549,11 +2470,11 @@ function randomData(type, base) {
       valueLength = 10;
       for (var idIndex = 0; idIndex < valueLength; idIndex++) {
         randomNumber = Math.round(Math.random() * 100);
-        value += random_uId.split('')[randomNumber % random_uId.length];
+        value += random_ID.split('')[randomNumber % random_ID.length];
       };
       for (var baseIndex = 0; baseIndex < base.length; baseIndex++) {
-        if (base[baseIndex].uId == value) {
-          // if duplicate uId, random again
+        if (base[baseIndex].ID == value) {
+          // if duplicate ID, random again
           value = randomData('id', base);
           break;
         };
@@ -2577,7 +2498,7 @@ var ServerAPI = function () {
     var dataTemp = void 0;
     for (var i = 0; i < DATAMEMBERS; i++) {
       dataTemp = new DataObj();
-      dataTemp['uId'] = randomData('id', serverData);
+      dataTemp['ID'] = randomData('id', serverData);
       dataTemp['name'] = randomData('name');
       serverData.push(dataTemp);
     };
@@ -2588,14 +2509,14 @@ var ServerAPI = function () {
   };
   var addData = function addData(obj) {
     var dataTemp = new DataObj();
-    dataTemp['uId'] = randomData('id', serverData);
+    dataTemp['ID'] = randomData('id', serverData);
     dataTemp['name'] = obj['name'];
     serverData.push(dataTemp);
     return serverData;
   };
   var deleteData = function deleteData(obj) {
     for (var i = 0; i < serverData.length; i++) {
-      if (obj['uId'] == serverData[i].uId) {
+      if (obj['ID'] == serverData[i].ID) {
         serverData.splice(i, 1);
         break;
       };
@@ -2611,6 +2532,62 @@ var ServerAPI = function () {
 }();
 
 exports.default = ServerAPI;
+
+/***/ }),
+/* 47 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactFontawesome = __webpack_require__(1);
+
+var _reactFontawesome2 = _interopRequireDefault(_reactFontawesome);
+
+var _routeList = __webpack_require__(28);
+
+var _routeList2 = _interopRequireDefault(_routeList);
+
+var _history = __webpack_require__(29);
+
+var _history2 = _interopRequireDefault(_history);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var _redirectHandler = function _redirectHandler(index) {
+  _history2.default.push(_routeList2.default[index]);
+  window.scrollTo(0, 0);
+};
+
+var ArticleRedirecter = function ArticleRedirecter(props) {
+  var content = [];
+  props.className = 'btb-articleRedirectBtn ' + (props.className ? props.className : '');
+  content.push(_react2.default.createElement(
+    'div',
+    _extends({ onClick: function onClick() {
+        _redirectHandler(props.redirectTo);
+      } }, props),
+    _react2.default.createElement(_reactFontawesome2.default, { name: 'arrow-left', fixedWidth: true }),
+    _react2.default.createElement(
+      'span',
+      null,
+      'Back to Articles'
+    )
+  ));
+  return content;
+};
+
+exports.default = ArticleRedirecter;
 
 /***/ }),
 /* 48 */
@@ -2669,13 +2646,13 @@ var storeShape = __WEBPACK_IMPORTED_MODULE_0_prop_types___default.a.shape({
 
 "use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = connectAdvanced;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_hoist_non_react_statics__ = __webpack_require__(44);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_hoist_non_react_statics__ = __webpack_require__(43);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_hoist_non_react_statics___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_hoist_non_react_statics__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_invariant__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_invariant___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_invariant__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__utils_Subscription__ = __webpack_require__(127);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__utils_Subscription__ = __webpack_require__(126);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__utils_PropTypes__ = __webpack_require__(49);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
@@ -3050,8 +3027,8 @@ function wrapMapToPropsFunc(mapToProps, methodName) {
 
 "use strict";
 /* unused harmony export default */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash_es_isPlainObject__ = __webpack_require__(131);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__warning__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash_es_isPlainObject__ = __webpack_require__(130);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__warning__ = __webpack_require__(30);
 
 
 
@@ -3066,7 +3043,7 @@ function verifyPlainObject(value, displayName, methodName) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__root_js__ = __webpack_require__(133);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__root_js__ = __webpack_require__(132);
 
 
 /** Built-in value references. */
@@ -3201,117 +3178,23 @@ exports.default = ServerAPI;
 "use strict";
 
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-/* present data in server */
-var serverData = new Array();
-
-var DATAMEMBERS = 5;
-var random_uId = 'abcdefghijklmnopqrstuvwxyz0123456789';
-var random_name = 'abcdefghijklmnopqrstuvwxyz';
-
-function DataObj() {
-  this['uId'] = '';
-  this['name'] = '';
-};
-
-function randomData(type, base) {
-  var valueLength = 0;
-  var value = '';
-  var randomNumber = void 0;
-  switch (type) {
-    case 'id':
-      valueLength = 10;
-      for (var idIndex = 0; idIndex < valueLength; idIndex++) {
-        randomNumber = Math.round(Math.random() * 100);
-        value += random_uId.split('')[randomNumber % random_uId.length];
-      };
-      for (var baseIndex = 0; baseIndex < base.length; baseIndex++) {
-        if (base[baseIndex].uId == value) {
-          // if duplicate uId, random again
-          value = randomData('id', base);
-          break;
-        };
-      };
-      break;
-    case 'name':
-      valueLength = Math.ceil(Math.random() * 10);
-      for (var _idIndex = 0; _idIndex < valueLength; _idIndex++) {
-        randomNumber = Math.floor(Math.random() * random_name.length);
-        value += random_name.split('')[randomNumber];
-      };
-      break;
-  };
-  return value;
-};
-
-var ServerAPI = function () {
-  var initData = function initData() {
-    serverData = [];
-    // random data instead of 'fetch' data
-    var dataTemp = void 0;
-    for (var i = 0; i < DATAMEMBERS; i++) {
-      dataTemp = new DataObj();
-      dataTemp['uId'] = randomData('id', serverData);
-      dataTemp['name'] = randomData('name');
-      serverData.push(dataTemp);
-    };
-    return serverData;
-  };
-  var getData = function getData() {
-    return serverData;
-  };
-  var addData = function addData(obj) {
-    var dataTemp = new DataObj();
-    dataTemp['uId'] = randomData('id', serverData);
-    dataTemp['name'] = obj['name'];
-    serverData.push(dataTemp);
-    return serverData;
-  };
-  var deleteData = function deleteData(obj) {
-    for (var i = 0; i < serverData.length; i++) {
-      if (obj['uId'] == serverData[i].uId) {
-        serverData.splice(i, 1);
-        break;
-      };
-    };
-    return serverData;
-  };
-  return {
-    'initData': initData,
-    'getData': getData,
-    'addData': addData,
-    'deleteData': deleteData
-  };
-}();
-
-exports.default = ServerAPI;
-
-/***/ }),
-/* 56 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(7);
+var _reactDom = __webpack_require__(8);
 
 var _reactRouterDom = __webpack_require__(21);
 
-var _dispatcher = __webpack_require__(10);
+var _dispatcher = __webpack_require__(11);
 
 var _dispatcher2 = _interopRequireDefault(_dispatcher);
 
-__webpack_require__(95);
+__webpack_require__(94);
 
-var _home = __webpack_require__(14);
+var _home = __webpack_require__(15);
 
 var _home2 = _interopRequireDefault(_home);
 
@@ -3353,6 +3236,7 @@ var Index = function (_Component) {
 (0, _reactDom.render)(_react2.default.createElement(Index, null), document.getElementById('main'));
 
 /***/ }),
+/* 56 */,
 /* 57 */,
 /* 58 */,
 /* 59 */,
@@ -3388,8 +3272,7 @@ var Index = function (_Component) {
 /* 89 */,
 /* 90 */,
 /* 91 */,
-/* 92 */,
-/* 93 */
+/* 92 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -3401,11 +3284,11 @@ var Index = function (_Component) {
  * of patent rights can be found in the PATENTS file in the same directory.
  */
 
-module.exports.Dispatcher = __webpack_require__(94);
+module.exports.Dispatcher = __webpack_require__(93);
 
 
 /***/ }),
-/* 94 */
+/* 93 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3428,7 +3311,7 @@ exports.__esModule = true;
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 
-var invariant = __webpack_require__(35);
+var invariant = __webpack_require__(34);
 
 var _prefix = 'ID_';
 
@@ -3642,13 +3525,13 @@ var Dispatcher = (function () {
 module.exports = Dispatcher;
 
 /***/ }),
-/* 95 */
+/* 94 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(96);
+var content = __webpack_require__(95);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -3656,7 +3539,7 @@ var transform;
 var options = {"hmr":true}
 options.transform = transform
 // add the styles to the DOM
-var update = __webpack_require__(98)(content, options);
+var update = __webpack_require__(97)(content, options);
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -3673,21 +3556,21 @@ if(false) {
 }
 
 /***/ }),
-/* 96 */
+/* 95 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(97)(false);
+exports = module.exports = __webpack_require__(96)(false);
 // imports
 
 
 // module
-exports.push([module.i, "body {\n  margin: 0;\n  padding: 0;\n  font-size: 16px;\n  font-family: Arial, 'Times New Roman', Times, serif;\n  font-weight: 100;\n  overflow-x: hidden;\n}\nspan + span {\n  margin-left: 5px;\n}\n.wrapper {\n  width: 100%;\n  height: 100%;\n}\n.wrapper.wrapper-home {\n  background-color: #fff;\n}\n.wrapper.wrapper-basic,\n.wrapper.wrapper-advance {\n  width: calc(100% - (15px * 2));\n  margin: auto;\n  padding: 15px 15px;\n}\n.linkBtn {\n  cursor: pointer;\n  color: #aaa;\n}\n.linkBtn:hover {\n  color: #000;\n}\n.wrapper .sideContentBG {\n  background-color: #000;\n  bottom: 0;\n  left: 0;\n  position: fixed;\n  top: 0;\n  width: 200px;\n}\n.wrapper .sideContent {\n  width: 200px;\n  background-color: #000;\n  color: #fff;\n  float: left;\n  min-height: 100vh;\n}\n.wrapper .sideContent .header {\n  background-color: #61dafb;\n  margin-bottom: 15px;\n  position: relative;\n  height: 104px;\n}\n.wrapper .sideContent .groupname {\n  background-color: #000;\n  line-height: 20px;\n  text-align: right;\n  padding: 2px 15px;\n}\n.wrapper .sideContent .icon {\n  -webkit-border-radius: calc(50px / 2);\n  -moz-border-radius: calc(50px / 2);\n  border-radius: calc(50px / 2);\n  width: 50px;\n  height: 50px;\n  line-height: 50px;\n  background-color: #000;\n  text-align: center;\n  margin: 15px;\n  font-size: 36px;\n}\n.wrapper .sideContent .welcome {\n  left: calc(50px + (15px * 2));\n  line-height: 20px;\n  text-align: center;\n  padding: 30px 0;\n  position: absolute;\n  bottom: 0;\n  right: 0;\n  color: #000;\n}\n.wrapper .mainContent {\n  width: calc(100% - 200px);\n  margin-left: 200px;\n  background-color: transparent;\n  min-height: 100vh;\n}\n.btb-layout.mainTitle {\n  font-size: 30px;\n  font-weight: bold;\n  margin: 30px 15px 0;\n}\n.btb-layout.mainDescription {\n  margin: 0 15px 30px;\n}\n.btb-layout.section {\n  width: 100%;\n  font-size: 14px;\n}\n.btb-layout.section + .btb-layout.section {\n  margin-top: 30px;\n}\n.btb-layout.sectionTitle {\n  color: #aaa;\n  border-bottom: 1px solid #aaa;\n  margin: 0 15px;\n  font-weight: bold;\n}\n.btb-layout.sectionSubtitle {\n  font-weight: bold;\n  margin: 15px 0;\n}\n.btb-layout.content {\n  color: #000;\n  margin: 15px 30px;\n}\n.btb-layout.content-pre {\n  color: #f3f3f3;\n  background-color: #373940;\n  font-family: Consolas, \"Liberation Mono\", Menlo, Monaco, Courier, monospace;\n  margin: 15px 30px;\n  padding: 10px 15px;\n  white-space: pre-wrap;\n}\n.btb-layout.content-item {\n  text-align: center;\n  margin: 15px 30px;\n}\n.btb-layout.notice {\n  color: #aaa;\n  display: inline;\n}\n.btb-layout.buttonGroup {\n  margin: 0 15px;\n}\n.btb-articleRedirectBtn {\n  border: 1px solid #aaa;\n  border-radius: 15px;\n  color: #aaa;\n  cursor: pointer;\n  display: inline-block;\n  font-size: 13px;\n  padding: 3px 5px;\n}\n.btb-articleRedirectBtn:hover {\n  border-color: #000;\n  color: #000;\n}\n.example-wrapper {\n  display: inline-block;\n}\n.example-wrapper .example-headerTitle {\n  font-size: 16px;\n  color: #000;\n  font-weight: 700;\n  margin: 5px 0;\n}\n.example-wrapper .example-part {\n  margin: 5px;\n}\n.example-wrapper .example-block {\n  min-width: 150px;\n  display: inline-block;\n  vertical-align: top;\n}\n.example-wrapper .example-block + .example-block {\n  margin-left: 10px;\n}\n.example-wrapper .example-block .userList-info {\n  margin-right: 40px;\n}\n.example-wrapper .example-title {\n  color: #aaa;\n}\n.example-userList {\n  padding: 5px;\n  border: 1px solid #aaa;\n  border-radius: 5px;\n  box-shadow: 2px 2px 4px 2px #aaa;\n}\n.example-userList .userList-add {\n  margin-top: 10px;\n}\n.example-userList .userList-add .userList-input {\n  border: 2px solid #aaa;\n  border-radius: 5px;\n  font-size: 10px;\n  padding: 2px 10px;\n}\n.example-userList .userList-add .userList-input:focus,\n.example-userList .userList-add .userList-input:hover {\n  border-color: #777;\n}\n.example-userList .userList-add .userList-addButton {\n  color: #aaa;\n  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;\n  border: medium none;\n  font-size: 15px;\n  margin-left: 5px;\n  padding: 0;\n  vertical-align: top;\n  cursor: pointer;\n}\n.example-userList .userList-add .userList-addButton:hover {\n  color: #ff0000;\n}\n.example-userList .userList-list {\n  border: 2px solid #aaa;\n  border-radius: 7px;\n  padding: 0px;\n  margin: 5px 0;\n}\n.example-userList .userList-list .userList-entry {\n  border-radius: 5px;\n  cursor: default;\n  padding: 2px 5px;\n  position: relative;\n  text-align: left;\n  overflow: hidden;\n}\n.example-userList .userList-list .userList-entry .userList-info {\n  margin-right: 20px;\n}\n.example-userList .userList-list .userList-entry .userList-deleteButton {\n  -webkit-transition: opacity 0.5s ease 0s, right 0.5s ease 0s;\n  -moz-transition: opacity 0.5s ease 0s, right 0.5s ease 0s;\n  -o-transition: opacity 0.5s ease 0s, right 0.5s ease 0s;\n  transition: opacity 0.5s ease 0s, right 0.5s ease 0s;\n  color: #ff0000;\n  opacity: 0;\n  position: absolute;\n  right: -20px;\n  top: 3px;\n  cursor: pointer;\n}\n.example-userList .userList-list .userList-entry:hover {\n  background-color: #ccc;\n}\n.example-userList .userList-list .userList-entry:hover .userList-deleteButton {\n  right: 2px;\n  opacity: 1;\n}\n.example-userList .userList-list .userList-entry .userList-moveButton {\n  -webkit-transition: opacity 0.5s ease 0s, right 0.5s ease 0s;\n  -moz-transition: opacity 0.5s ease 0s, right 0.5s ease 0s;\n  -o-transition: opacity 0.5s ease 0s, right 0.5s ease 0s;\n  transition: opacity 0.5s ease 0s, right 0.5s ease 0s;\n  color: #ff0000;\n  opacity: 0;\n  position: absolute;\n  right: -20px;\n  top: 3px;\n  cursor: pointer;\n}\n.example-userList .userList-list .userList-entry:hover {\n  background-color: #ccc;\n}\n.example-userList .userList-list .userList-entry:hover .userList-moveButton {\n  right: 22px;\n  opacity: 1;\n}\n.example-userList .userList-list .userList-entry-empty {\n  list-style: outside none none;\n  text-align: center;\n}\n.btb-menu.menu {\n  color: #fff;\n}\n.btb-menu.menu .layer-item.activeTop {\n  background-color: #373940;\n  border-left: 5px solid #61dafb;\n}\n.btb-menu.menu .layer-item.activeParent > .item-content .content-name {\n  color: #61dafb;\n}\n.btb-menu.menu .layer-item.activeParent > .item-content .collapse-arrow {\n  border-color: #61dafb transparent transparent;\n}\n.btb-menu.menu .layer-item.active > .item-content {\n  background-color: #373940;\n}\n.btb-menu.menu .layer-item.active > .item-content .content-name {\n  color: #61dafb;\n}\n.btb-menu.menu .layer-item.active > .item-content .collapse-arrow {\n  border-color: #61dafb transparent transparent;\n}\n.btb-menu.menu .item-content:hover {\n  background-color: #373940;\n}\n.btb-menu.menu .item-content:hover .content-name {\n  color: #61dafb;\n}\n.btb-menu.menu .item-content:hover .collapse-arrow {\n  border-color: #61dafb transparent transparent;\n}\n.btb-menu.menu .collapse-arrow {\n  border-color: #fff transparent transparent;\n}\n.btb-list.content-nodetree {\n  background-color: #d6e4ff;\n  margin: auto;\n  width: calc(100% - (75px * 2));\n  padding: 15px;\n}\n.btb-table.content-paramlist {\n  margin: auto;\n  width: calc(100% - (60px * 2));\n}\n.btb-table.content-paramlist .table-list {\n  border-collapse: collapse;\n  border-spacing: 0;\n}\n.btb-table.content-paramlist .tr-th {\n  background-color: #e9ebed;\n  border: 2px solid #e9ebed;\n  padding: 2px 15px;\n}\n.btb-table.content-paramlist .tr-td {\n  border: 2px solid #e9ebed;\n  text-align: center;\n  padding: 2px 15px;\n}\n.btb-table.content-paramlist .td-name,\n.btb-table.content-paramlist .td-notice {\n  text-align: left;\n}\n.btb-table.content-paramlist .content-pre {\n  margin: 5px 0;\n  padding: 5px 15px;\n}\n", ""]);
+exports.push([module.i, "body {\n  margin: 0;\n  padding: 0;\n  font-size: 16px;\n  font-family: Arial, 'Times New Roman', Times, serif;\n  font-weight: 100;\n  overflow-x: hidden;\n}\nspan + span {\n  margin-left: 5px;\n}\n.wrapper {\n  width: 100%;\n  height: 100%;\n}\n.wrapper.wrapper-home {\n  background-color: #fff;\n}\n.wrapper.wrapper-basic,\n.wrapper.wrapper-advance {\n  width: calc(100% - (15px * 2));\n  margin: auto;\n  padding: 15px 15px;\n}\n.linkBtn {\n  cursor: pointer;\n  color: #aaa;\n}\n.linkBtn:hover {\n  color: #000;\n}\n.wrapper .sideContentBG {\n  background-color: #000;\n  bottom: 0;\n  left: 0;\n  position: fixed;\n  top: 0;\n  width: 200px;\n}\n.wrapper .sideContent {\n  width: 200px;\n  background-color: #000;\n  color: #fff;\n  float: left;\n  min-height: 100vh;\n}\n.wrapper .sideContent .header {\n  background-color: #61dafb;\n  margin-bottom: 15px;\n  position: relative;\n  height: 104px;\n}\n.wrapper .sideContent .groupname {\n  background-color: #000;\n  line-height: 20px;\n  text-align: right;\n  padding: 2px 15px;\n}\n.wrapper .sideContent .icon {\n  -webkit-border-radius: 10px;\n  -moz-border-radius: 10px;\n  border-radius: 10px;\n  width: 50px;\n  height: 50px;\n  line-height: 50px;\n  background-color: #000;\n  text-align: center;\n  margin: 15px;\n  font-size: 36px;\n}\n.wrapper .sideContent .welcome {\n  left: calc(50px + (15px * 2));\n  line-height: 20px;\n  text-align: center;\n  padding: 30px 0;\n  position: absolute;\n  bottom: 0;\n  right: 0;\n  color: #000;\n}\n.wrapper .mainContent {\n  width: calc(100% - 200px);\n  margin-left: 200px;\n  background-color: transparent;\n  min-height: 100vh;\n}\n.btb-exampleLayout.wrapper {\n  display: inline-block;\n  width: unset;\n}\n.btb-exampleLayout.title {\n  font-size: 16px;\n  color: #000;\n  font-weight: 700;\n  margin: 5px 0;\n}\n.btb-exampleLayout.part {\n  margin: 5px;\n}\n.btb-exampleLayout.block {\n  min-width: 150px;\n  vertical-align: top;\n}\n.btb-exampleLayout.inlineBlock {\n  min-width: 150px;\n  vertical-align: top;\n  display: inline-block;\n}\n.btb-exampleLayout.inlineBlock + .inlineBlock {\n  margin-left: 10px;\n}\n.btb-articleLayout.mainTitle {\n  font-size: 30px;\n  font-weight: bold;\n  margin: 30px 15px 0;\n}\n.btb-articleLayout.mainDescription {\n  margin: 0 15px 30px;\n}\n.btb-articleLayout.section {\n  width: 100%;\n  font-size: 14px;\n}\n.btb-articleLayout.section + .btb-articleLayout.section {\n  margin-top: 30px;\n}\n.btb-articleLayout.sectionTitle {\n  color: #aaa;\n  border-bottom: 1px solid #aaa;\n  margin: 0 15px;\n  font-weight: bold;\n}\n.btb-articleLayout.sectionSubtitle {\n  font-weight: bold;\n  margin: 15px 0;\n}\n.btb-articleLayout.content {\n  color: #000;\n  margin: 15px 30px;\n}\n.btb-articleLayout.content-pre {\n  color: #f3f3f3;\n  background-color: #373940;\n  font-family: Consolas, \"Liberation Mono\", Menlo, Monaco, Courier, monospace;\n  margin: 15px 30px;\n  padding: 10px 15px;\n  white-space: pre-wrap;\n}\n.btb-articleLayout.content-item {\n  text-align: center;\n  margin: 15px 30px;\n}\n.btb-articleLayout.notice {\n  color: #aaa;\n  display: inline;\n}\n.btb-articleLayout.buttonGroup {\n  margin: 0 15px;\n}\n.btb-articleRedirectBtn {\n  border: 1px solid #aaa;\n  border-radius: 15px;\n  color: #aaa;\n  cursor: pointer;\n  display: inline-block;\n  font-size: 13px;\n  padding: 3px 5px;\n}\n.btb-articleRedirectBtn:hover {\n  border-color: #000;\n  color: #000;\n}\n.example-userList {\n  padding: 5px;\n  border: 1px solid #aaa;\n  border-radius: 5px;\n  box-shadow: 2px 2px 4px 2px #aaa;\n}\n.example-userList .userList-add {\n  margin-top: 10px;\n}\n.example-userList .userList-add .userList-input {\n  border: 2px solid #aaa;\n  border-radius: 5px;\n  font-size: 10px;\n  padding: 2px 10px;\n}\n.example-userList .userList-add .userList-input:focus,\n.example-userList .userList-add .userList-input:hover {\n  border-color: #777;\n}\n.example-userList .userList-add .userList-addButton {\n  color: #aaa;\n  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;\n  border: medium none;\n  font-size: 15px;\n  margin-left: 5px;\n  padding: 0;\n  vertical-align: top;\n  cursor: pointer;\n}\n.example-userList .userList-add .userList-addButton:hover {\n  color: #ff0000;\n}\n.example-userList .example-block .userList-info {\n  margin-right: 40px;\n}\n.example-userList .userList-list {\n  border: 2px solid #aaa;\n  border-radius: 7px;\n  padding: 0px;\n  margin: 5px 0;\n}\n.example-userList .userList-list .userList-entry {\n  border-radius: 5px;\n  cursor: default;\n  padding: 2px 5px;\n  position: relative;\n  text-align: left;\n  overflow: hidden;\n}\n.example-userList .userList-list .userList-entry .userList-info {\n  margin-right: 40px;\n}\n.example-userList .userList-list .userList-entry .userList-deleteButton {\n  -webkit-transition: opacity 0.5s ease 0s, right 0.5s ease 0s;\n  -moz-transition: opacity 0.5s ease 0s, right 0.5s ease 0s;\n  -o-transition: opacity 0.5s ease 0s, right 0.5s ease 0s;\n  transition: opacity 0.5s ease 0s, right 0.5s ease 0s;\n  color: #ff0000;\n  opacity: 0;\n  position: absolute;\n  right: -20px;\n  top: 3px;\n  cursor: pointer;\n}\n.example-userList .userList-list .userList-entry:hover {\n  background-color: #ccc;\n}\n.example-userList .userList-list .userList-entry:hover .userList-deleteButton {\n  right: 2px;\n  opacity: 1;\n}\n.example-userList .userList-list .userList-entry .userList-moveButton {\n  -webkit-transition: opacity 0.5s ease 0s, right 0.5s ease 0s;\n  -moz-transition: opacity 0.5s ease 0s, right 0.5s ease 0s;\n  -o-transition: opacity 0.5s ease 0s, right 0.5s ease 0s;\n  transition: opacity 0.5s ease 0s, right 0.5s ease 0s;\n  color: #ff0000;\n  opacity: 0;\n  position: absolute;\n  right: -20px;\n  top: 3px;\n  cursor: pointer;\n}\n.example-userList .userList-list .userList-entry:hover {\n  background-color: #ccc;\n}\n.example-userList .userList-list .userList-entry:hover .userList-moveButton {\n  right: 22px;\n  opacity: 1;\n}\n.example-userList .userList-list .userList-entry-empty {\n  list-style: outside none none;\n  text-align: center;\n}\n.btb-menu.menu {\n  color: #fff;\n}\n.btb-menu.menu .layer-item.activeTop {\n  background-color: #373940;\n  border-left: 5px solid #61dafb;\n}\n.btb-menu.menu .layer-item.activeParent > .item-content .content-name {\n  color: #61dafb;\n}\n.btb-menu.menu .layer-item.activeParent > .item-content .collapse-arrow {\n  border-color: #61dafb transparent transparent;\n}\n.btb-menu.menu .layer-item.active > .item-content {\n  background-color: #373940;\n}\n.btb-menu.menu .layer-item.active > .item-content .content-name {\n  color: #61dafb;\n}\n.btb-menu.menu .layer-item.active > .item-content .collapse-arrow {\n  border-color: #61dafb transparent transparent;\n}\n.btb-menu.menu .item-content:hover {\n  background-color: #373940;\n}\n.btb-menu.menu .item-content:hover .content-name {\n  color: #61dafb;\n}\n.btb-menu.menu .item-content:hover .collapse-arrow {\n  border-color: #61dafb transparent transparent;\n}\n.btb-menu.menu .collapse-arrow {\n  border-color: #fff transparent transparent;\n}\n.btb-list.content-nodetree {\n  background-color: #d6e4ff;\n  margin: auto;\n  width: calc(100% - (75px * 2));\n  padding: 15px;\n}\n.btb-table.content-paramlist {\n  margin: auto;\n  width: calc(100% - (60px * 2));\n}\n.btb-table.content-paramlist .table-list {\n  border-collapse: collapse;\n  border-spacing: 0;\n}\n.btb-table.content-paramlist .tr-th {\n  background-color: #e9ebed;\n  border: 2px solid #e9ebed;\n  padding: 2px 15px;\n}\n.btb-table.content-paramlist .tr-td {\n  border: 2px solid #e9ebed;\n  text-align: center;\n  padding: 2px 15px;\n}\n.btb-table.content-paramlist .td-name,\n.btb-table.content-paramlist .td-notice {\n  text-align: left;\n}\n.btb-table.content-paramlist .content-pre {\n  margin: 5px 0;\n  padding: 5px 15px;\n}\n", ""]);
 
 // exports
 
 
 /***/ }),
-/* 97 */
+/* 96 */
 /***/ (function(module, exports) {
 
 /*
@@ -3769,7 +3652,7 @@ function toComment(sourceMap) {
 
 
 /***/ }),
-/* 98 */
+/* 97 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -3825,7 +3708,7 @@ var singleton = null;
 var	singletonCounter = 0;
 var	stylesInsertedAtTop = [];
 
-var	fixUrls = __webpack_require__(99);
+var	fixUrls = __webpack_require__(98);
 
 module.exports = function(list, options) {
 	if (typeof DEBUG !== "undefined" && DEBUG) {
@@ -4141,7 +4024,7 @@ function updateLink (link, options, obj) {
 
 
 /***/ }),
-/* 99 */
+/* 98 */
 /***/ (function(module, exports) {
 
 
@@ -4236,8 +4119,8 @@ module.exports = function (css) {
 
 
 /***/ }),
-/* 100 */,
-/* 101 */
+/* 99 */,
+/* 100 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4646,7 +4529,7 @@ Menu.defaultProps = {
 /* harmony default export */ __webpack_exports__["default"] = (Menu);
 
 /***/ }),
-/* 102 */
+/* 101 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4697,7 +4580,7 @@ var menuList = new Array({
 exports.default = menuList;
 
 /***/ }),
-/* 103 */
+/* 102 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4717,11 +4600,11 @@ var _reactFontawesome = __webpack_require__(1);
 
 var _reactFontawesome2 = _interopRequireDefault(_reactFontawesome);
 
-var _layout = __webpack_require__(5);
+var _articleLayout = __webpack_require__(6);
 
-var _layout2 = _interopRequireDefault(_layout);
+var _articleLayout2 = _interopRequireDefault(_articleLayout);
 
-var _home = __webpack_require__(14);
+var _home = __webpack_require__(15);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -4762,25 +4645,25 @@ var About = function (_Component) {
         'div',
         { className: 'wrapper wrapper-basic' },
         _react2.default.createElement(
-          _layout2.default.MainTitle,
+          _articleLayout2.default.MainTitle,
           null,
           mainTitle
         ),
         _react2.default.createElement(
-          _layout2.default.MainDescription,
+          _articleLayout2.default.MainDescription,
           null,
           mainDescriptionStr
         ),
         _react2.default.createElement(
-          _layout2.default.Section,
+          _articleLayout2.default.Section,
           null,
           _react2.default.createElement(
-            _layout2.default.SectionTitle,
+            _articleLayout2.default.SectionTitle,
             null,
             articlesTitle
           ),
           _react2.default.createElement(
-            _layout2.default.Content,
+            _articleLayout2.default.Content,
             null,
             _react2.default.createElement(
               'span',
@@ -4793,15 +4676,15 @@ var About = function (_Component) {
           )
         ),
         _react2.default.createElement(
-          _layout2.default.Section,
+          _articleLayout2.default.Section,
           null,
           _react2.default.createElement(
-            _layout2.default.SectionTitle,
+            _articleLayout2.default.SectionTitle,
             null,
             demonstrationTitle
           ),
           _react2.default.createElement(
-            _layout2.default.Content,
+            _articleLayout2.default.Content,
             null,
             _react2.default.createElement(
               'span',
@@ -4814,15 +4697,15 @@ var About = function (_Component) {
           )
         ),
         _react2.default.createElement(
-          _layout2.default.Section,
+          _articleLayout2.default.Section,
           null,
           _react2.default.createElement(
-            _layout2.default.SectionTitle,
+            _articleLayout2.default.SectionTitle,
             null,
             libraryTitle
           ),
           _react2.default.createElement(
-            _layout2.default.Content,
+            _articleLayout2.default.Content,
             null,
             libraryContent
           ),
@@ -4848,10 +4731,10 @@ var About = function (_Component) {
           )
         ),
         _react2.default.createElement(
-          _layout2.default.Section,
+          _articleLayout2.default.Section,
           null,
           _react2.default.createElement(
-            _layout2.default.SectionTitle,
+            _articleLayout2.default.SectionTitle,
             null,
             'CONTACT ME'
           ),
@@ -4905,7 +4788,7 @@ var About = function (_Component) {
 exports.default = About;
 
 /***/ }),
-/* 104 */
+/* 103 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4933,9 +4816,9 @@ var _history = __webpack_require__(29);
 
 var _history2 = _interopRequireDefault(_history);
 
-var _layout = __webpack_require__(5);
+var _articleLayout = __webpack_require__(6);
 
-var _layout2 = _interopRequireDefault(_layout);
+var _articleLayout2 = _interopRequireDefault(_articleLayout);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -4951,7 +4834,7 @@ var mainDescriptionStr = 'There are my articles introducing some knowledge in co
 var articleListTitle = 'ARTICLE LIST';
 var articleListContent = 'We would list to introduce you some others masterpiece in conceptual. Hope our articles will do help somehow in algorithmic angle. And if you have problem to use them, welcome to contact me. We can figure it out together.';
 
-var articleList = new Array({ 'name': 'Component: Presentational and Container', 'link': 'BTB_ATCS_COMPONENT_PNC', 'update': '2018-03-24' }, { 'name': 'Flux Introduction', 'link': 'BTB_ATCS_FLUX', 'update': '2018-03-11' }, { 'name': 'Redux Introduction', 'link': 'BTB_ATCS_REDUX', 'update': '2018-04-22' });
+var articleList = new Array({ 'name': 'Flux Introduction', 'link': 'BTB_ATCS_FLUX', 'updated': '2018-05-06' }, { 'name': 'Redux Introduction', 'link': 'BTB_ATCS_REDUX', 'updated': '2018-05-06' });
 
 var Index = function (_Component) {
   _inherits(Index, _Component);
@@ -4972,30 +4855,30 @@ var Index = function (_Component) {
         'div',
         { className: 'wrapper wrapper-basic' },
         _react2.default.createElement(
-          _layout2.default.MainTitle,
+          _articleLayout2.default.MainTitle,
           null,
           mainTitle
         ),
         _react2.default.createElement(
-          _layout2.default.MainDescription,
+          _articleLayout2.default.MainDescription,
           null,
           mainDescriptionStr
         ),
         _react2.default.createElement(
-          _layout2.default.Section,
+          _articleLayout2.default.Section,
           null,
           _react2.default.createElement(
-            _layout2.default.SectionTitle,
+            _articleLayout2.default.SectionTitle,
             null,
             articleListTitle
           ),
           _react2.default.createElement(
-            _layout2.default.Content,
+            _articleLayout2.default.Content,
             null,
             articleListContent
           ),
           _react2.default.createElement(
-            _layout2.default.Content,
+            _articleLayout2.default.Content,
             null,
             _react2.default.createElement(
               'ul',
@@ -5014,10 +4897,10 @@ var Index = function (_Component) {
                       _this2._redirectHandler(entry.link);
                     }, name: 'link', fixedWidth: true }),
                   _react2.default.createElement(
-                    _layout2.default.Notice,
+                    _articleLayout2.default.Notice,
                     null,
-                    '[UPDATE: ',
-                    entry.update,
+                    '[UPDATED: ',
+                    entry.updated,
                     ']'
                   )
                 ));
@@ -5045,7 +4928,7 @@ var Index = function (_Component) {
 exports.default = Index;
 
 /***/ }),
-/* 105 */
+/* 104 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5063,35 +4946,35 @@ var _reactFontawesome = __webpack_require__(1);
 
 var _reactFontawesome2 = _interopRequireDefault(_reactFontawesome);
 
-var _blacktboxList = __webpack_require__(15);
+var _blacktboxList = __webpack_require__(16);
 
 var _blacktboxList2 = _interopRequireDefault(_blacktboxList);
 
-var _app = __webpack_require__(106);
+var _index = __webpack_require__(105);
 
-var _app2 = _interopRequireDefault(_app);
+var _index2 = _interopRequireDefault(_index);
 
-var _app3 = __webpack_require__(108);
+var _index3 = __webpack_require__(107);
 
-var _app4 = _interopRequireDefault(_app3);
+var _index4 = _interopRequireDefault(_index3);
 
-var _app5 = __webpack_require__(113);
+var _index5 = __webpack_require__(112);
 
-var _app6 = _interopRequireDefault(_app5);
+var _index6 = _interopRequireDefault(_index5);
 
-var _articleFlux = __webpack_require__(117);
+var _articleFlux = __webpack_require__(116);
 
 var _articleFlux2 = _interopRequireDefault(_articleFlux);
 
-var _articleFlux_server = __webpack_require__(118);
+var _articleFlux_server = __webpack_require__(117);
 
 var _articleFlux_server2 = _interopRequireDefault(_articleFlux_server);
 
-var _layout = __webpack_require__(5);
+var _articleLayout = __webpack_require__(6);
 
-var _layout2 = _interopRequireDefault(_layout);
+var _articleLayout2 = _interopRequireDefault(_articleLayout);
 
-var _articleRedirecter = __webpack_require__(30);
+var _articleRedirecter = __webpack_require__(47);
 
 var _articleRedirecter2 = _interopRequireDefault(_articleRedirecter);
 
@@ -5195,157 +5078,157 @@ var Index = function Index(props) {
     'div',
     { className: 'wrapper wrapper-basic' },
     _react2.default.createElement(
-      _layout2.default.MainTitle,
+      _articleLayout2.default.MainTitle,
       null,
       mainTitle
     ),
     _react2.default.createElement(
-      _layout2.default.MainDescription,
+      _articleLayout2.default.MainDescription,
       null,
       mainDescriptionStr
     ),
     _react2.default.createElement(
-      _layout2.default.Section,
+      _articleLayout2.default.Section,
       null,
       _react2.default.createElement(
-        _layout2.default.SectionTitle,
+        _articleLayout2.default.SectionTitle,
         null,
         introductionTitle
       ),
       _react2.default.createElement(
-        _layout2.default.Content,
+        _articleLayout2.default.Content,
         null,
         introductionContent
       ),
       _react2.default.createElement(
-        _layout2.default.Content,
+        _articleLayout2.default.Content,
         null,
         _react2.default.createElement(
-          _layout2.default.SectionSubtitle,
+          _articleLayout2.default.SectionSubtitle,
           null,
           introductionExampleTitle
         ),
         _react2.default.createElement(
-          _layout2.default.Content,
+          _articleLayout2.default.Content,
           null,
           introductionExampleContent
         ),
         _react2.default.createElement(
-          _layout2.default.Item,
+          _articleLayout2.default.Item,
           null,
-          _react2.default.createElement(_app2.default, null)
+          _react2.default.createElement(_index2.default, null)
         ),
         _react2.default.createElement(
-          _layout2.default.Content,
+          _articleLayout2.default.Content,
           null,
           introductionExampleAlgorithmDescription
         ),
         _react2.default.createElement(
-          _layout2.default.Pre,
+          _articleLayout2.default.Pre,
           null,
           EXAMPLE_BASIC_ALGORITHM
         )
       ),
       _react2.default.createElement(
-        _layout2.default.Content,
+        _articleLayout2.default.Content,
         null,
         _react2.default.createElement(
-          _layout2.default.SectionSubtitle,
+          _articleLayout2.default.SectionSubtitle,
           null,
           introductionFluxTitle
         ),
         _react2.default.createElement(
-          _layout2.default.Content,
+          _articleLayout2.default.Content,
           null,
           introductionFluxContent
         ),
         _react2.default.createElement(
-          _layout2.default.Item,
+          _articleLayout2.default.Item,
           null,
           _react2.default.createElement('img', { src: _articleFlux2.default })
         ),
         _react2.default.createElement(
-          _layout2.default.Content,
+          _articleLayout2.default.Content,
           null,
           introductionFluxAlgorithmDescription
         ),
         _react2.default.createElement(
-          _layout2.default.Pre,
+          _articleLayout2.default.Pre,
           null,
           EXAMPLE_FLUX_INSTALL
         ),
         _react2.default.createElement(
-          _layout2.default.Content,
+          _articleLayout2.default.Content,
           null,
           _react2.default.createElement(
-            _layout2.default.SectionSubtitle,
+            _articleLayout2.default.SectionSubtitle,
             null,
             introductionFluxViewTitle
           ),
           _react2.default.createElement(
-            _layout2.default.Content,
+            _articleLayout2.default.Content,
             null,
             introductionFluxViewContent
           ),
           _react2.default.createElement(
-            _layout2.default.Pre,
+            _articleLayout2.default.Pre,
             null,
             EXAMPLE_FLUX_VIEW
           )
         ),
         _react2.default.createElement(
-          _layout2.default.Content,
+          _articleLayout2.default.Content,
           null,
           _react2.default.createElement(
-            _layout2.default.SectionSubtitle,
+            _articleLayout2.default.SectionSubtitle,
             null,
             introductionFluxActionTitle
           ),
           _react2.default.createElement(
-            _layout2.default.Content,
+            _articleLayout2.default.Content,
             null,
             introductionFluxActionContent
           ),
           _react2.default.createElement(
-            _layout2.default.Pre,
+            _articleLayout2.default.Pre,
             null,
             EXAMPLE_FLUX_ACTION
           )
         ),
         _react2.default.createElement(
-          _layout2.default.Content,
+          _articleLayout2.default.Content,
           null,
           _react2.default.createElement(
-            _layout2.default.SectionSubtitle,
+            _articleLayout2.default.SectionSubtitle,
             null,
             introductionFluxDispatcherTitle
           ),
           _react2.default.createElement(
-            _layout2.default.Content,
+            _articleLayout2.default.Content,
             null,
             introductionFluxDispatcherContent
           ),
           _react2.default.createElement(
-            _layout2.default.Pre,
+            _articleLayout2.default.Pre,
             null,
             EXAMPLE_FLUX_DISPATCHER
           )
         ),
         _react2.default.createElement(
-          _layout2.default.Content,
+          _articleLayout2.default.Content,
           null,
           _react2.default.createElement(
-            _layout2.default.SectionSubtitle,
+            _articleLayout2.default.SectionSubtitle,
             null,
             introductionFluxStoreTitle
           ),
           _react2.default.createElement(
-            _layout2.default.Content,
+            _articleLayout2.default.Content,
             null,
             introductionFluxStoreContent
           ),
           _react2.default.createElement(
-            _layout2.default.Pre,
+            _articleLayout2.default.Pre,
             null,
             EXAMPLE_FLUX_STORE
           )
@@ -5353,68 +5236,68 @@ var Index = function Index(props) {
       )
     ),
     _react2.default.createElement(
-      _layout2.default.Section,
+      _articleLayout2.default.Section,
       null,
       _react2.default.createElement(
-        _layout2.default.SectionTitle,
+        _articleLayout2.default.SectionTitle,
         null,
         productionTitle
       ),
       _react2.default.createElement(
-        _layout2.default.Content,
+        _articleLayout2.default.Content,
         null,
         productionContent
       ),
       _react2.default.createElement(
-        _layout2.default.Item,
+        _articleLayout2.default.Item,
         null,
-        _react2.default.createElement(_app4.default, null)
+        _react2.default.createElement(_index4.default, null)
       )
     ),
     _react2.default.createElement(
-      _layout2.default.Section,
+      _articleLayout2.default.Section,
       null,
       _react2.default.createElement(
-        _layout2.default.SectionTitle,
+        _articleLayout2.default.SectionTitle,
         null,
         advancedTitle
       ),
       _react2.default.createElement(
-        _layout2.default.Content,
+        _articleLayout2.default.Content,
         null,
         advancedContent
       ),
       _react2.default.createElement(
-        _layout2.default.Item,
+        _articleLayout2.default.Item,
         null,
         _react2.default.createElement('img', { src: _articleFlux_server2.default })
       ),
       _react2.default.createElement(
-        _layout2.default.Content,
+        _articleLayout2.default.Content,
         null,
         advancedServerContent
       ),
       _react2.default.createElement(
-        _layout2.default.Item,
+        _articleLayout2.default.Item,
         null,
-        _react2.default.createElement(_app6.default, null)
+        _react2.default.createElement(_index6.default, null)
       )
     ),
     _react2.default.createElement(
-      _layout2.default.Section,
+      _articleLayout2.default.Section,
       null,
       _react2.default.createElement(
-        _layout2.default.SectionTitle,
+        _articleLayout2.default.SectionTitle,
         null,
         noticeTitle
       ),
       _react2.default.createElement(
-        _layout2.default.Content,
+        _articleLayout2.default.Content,
         null,
         noticeContent
       ),
       _react2.default.createElement(
-        _layout2.default.Content,
+        _articleLayout2.default.Content,
         null,
         _react2.default.createElement(_blacktboxList2.default, {
           STYLE: {
@@ -5427,13 +5310,13 @@ var Index = function Index(props) {
       )
     ),
     _react2.default.createElement(
-      _layout2.default.Section,
+      _articleLayout2.default.Section,
       null,
       _react2.default.createElement(
-        _layout2.default.BtnGroup,
+        _articleLayout2.default.BtnGroup,
         null,
         _react2.default.createElement(
-          _layout2.default.Btn,
+          _articleLayout2.default.Btn,
           null,
           _react2.default.createElement(_articleRedirecter2.default, { redirectTo: 'BTB_ATCS' })
         )
@@ -5442,6 +5325,60 @@ var Index = function Index(props) {
   ));
   return content;
 };
+
+exports.default = Index;
+
+/***/ }),
+/* 105 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _app = __webpack_require__(106);
+
+var _app2 = _interopRequireDefault(_app);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Index = function (_Component) {
+  _inherits(Index, _Component);
+
+  function Index() {
+    _classCallCheck(this, Index);
+
+    return _possibleConstructorReturn(this, (Index.__proto__ || Object.getPrototypeOf(Index)).apply(this, arguments));
+  }
+
+  _createClass(Index, [{
+    key: 'render',
+    value: function render() {
+      var content = [];
+      content.push(_react2.default.createElement(_app2.default, null));
+      return content;
+    }
+  }]);
+
+  return Index;
+}(_react.Component);
+
+;
 
 exports.default = Index;
 
@@ -5462,67 +5399,17 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _exampleComponent = __webpack_require__(107);
-
-var _exampleComponent2 = _interopRequireDefault(_exampleComponent);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var App = function (_Component) {
-  _inherits(App, _Component);
-
-  function App() {
-    _classCallCheck(this, App);
-
-    return _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).apply(this, arguments));
-  }
-
-  _createClass(App, [{
-    key: 'render',
-    value: function render() {
-      var content = [];
-      content.push(_react2.default.createElement(_exampleComponent2.default, null));
-      return content;
-    }
-  }]);
-
-  return App;
-}(_react.Component);
-
-;
-
-exports.default = App;
-
-/***/ }),
-/* 107 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactDom = __webpack_require__(7);
+var _reactDom = __webpack_require__(8);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
 var _reactFontawesome = __webpack_require__(1);
 
 var _reactFontawesome2 = _interopRequireDefault(_reactFontawesome);
+
+var _exampleLayout = __webpack_require__(7);
+
+var _exampleLayout2 = _interopRequireDefault(_exampleLayout);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -5565,58 +5452,66 @@ var Example = function (_Component) {
 
       var content = [];
       content.push(_react2.default.createElement(
-        'div',
-        { className: 'example-wrapper example-userList' },
+        _exampleLayout2.default.Wrapper,
+        { className: 'example-userList' },
         _react2.default.createElement(
-          'div',
-          { className: 'example-part' },
+          _exampleLayout2.default.Part,
+          null,
           _react2.default.createElement(
-            'div',
-            { className: 'example-headerTitle' },
+            _exampleLayout2.default.Title,
+            null,
             'Example'
           )
         ),
         _react2.default.createElement(
-          'div',
-          { className: 'example-part' },
+          _exampleLayout2.default.Part,
+          null,
           _react2.default.createElement(
-            'div',
-            { className: 'userList-add' },
-            _react2.default.createElement('input', { className: 'userList-input', type: 'text', maxLength: '10', ref: 'userName', placeholder: 'Enter 1-10 character(s).' }),
+            _exampleLayout2.default.Block,
+            null,
             _react2.default.createElement(
-              'button',
-              { className: 'userList-addButton', onClick: function onClick() {
-                  _this2._addHandler();
-                } },
-              _react2.default.createElement(_reactFontawesome2.default, { name: 'plus-square', fixedWidth: true })
+              'div',
+              { className: 'userList-add' },
+              _react2.default.createElement('input', { className: 'userList-input', type: 'text', maxLength: '10', ref: 'userName', placeholder: 'Enter 1-10 character(s).' }),
+              _react2.default.createElement(
+                'button',
+                { className: 'userList-addButton', onClick: function onClick() {
+                    _this2._addHandler();
+                  } },
+                _react2.default.createElement(_reactFontawesome2.default, { name: 'plus-square', fixedWidth: true })
+              )
             )
           ),
           _react2.default.createElement(
-            'ul',
-            { className: 'userList-list' },
-            0 < this.dataList.length ? this.dataList.map(function (entry) {
-              var content_datalist_tr = [];
-              content_datalist_tr.push(_react2.default.createElement(
+            _exampleLayout2.default.Block,
+            null,
+            _react2.default.createElement(
+              'ul',
+              { className: 'userList-list' },
+              0 < this.dataList.length ? this.dataList.map(function (entry) {
+                var content_datalist_tr = [];
+                content_datalist_tr.push(_react2.default.createElement(
+                  'li',
+                  { className: 'userList-entry' },
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'userList-info' },
+                    entry['name'].substring(0, 1).toUpperCase() + entry['name'].substring(1)
+                  ),
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'userList-deleteButton', onClick: function onClick() {
+                        _this2._deleteHandler(entry['uId']);
+                      } },
+                    _react2.default.createElement(_reactFontawesome2.default, { name: 'trash', fixedWidth: true })
+                  )
+                ));
+                return content_datalist_tr;
+              }) : _react2.default.createElement(
                 'li',
                 { className: 'userList-entry' },
-                _react2.default.createElement(
-                  'div',
-                  { className: 'userList-info' },
-                  entry['name'].substring(0, 1).toUpperCase() + entry['name'].substring(1)
-                ),
-                _react2.default.createElement(
-                  'div',
-                  { className: 'userList-deleteButton', onClick: function onClick() {
-                      _this2._deleteHandler(entry['uId']);
-                    } },
-                  _react2.default.createElement(_reactFontawesome2.default, { name: 'trash', fixedWidth: true })
-                )
-              ));
-              return content_datalist_tr;
-            }) : _react2.default.createElement(
-              'li',
-              { className: 'userList-entry' },
-              'No data available.'
+                'No data available.'
+              )
             )
           )
         )
@@ -5708,6 +5603,35 @@ var Example = function (_Component) {
 exports.default = Example;
 
 /***/ }),
+/* 107 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _app = __webpack_require__(108);
+
+var _app2 = _interopRequireDefault(_app);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Index = function Index(props) {
+  var content = [];
+  content.push(_react2.default.createElement(_app2.default, null));
+  return content;
+};
+
+exports.default = Index;
+
+/***/ }),
 /* 108 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -5724,61 +5648,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _exampleComponent = __webpack_require__(109);
-
-var _exampleComponent2 = _interopRequireDefault(_exampleComponent);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var App = function (_Component) {
-  _inherits(App, _Component);
-
-  function App() {
-    _classCallCheck(this, App);
-
-    return _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).apply(this, arguments));
-  }
-
-  _createClass(App, [{
-    key: 'render',
-    value: function render() {
-      var content = [];
-      content.push(_react2.default.createElement(_exampleComponent2.default, null));
-      return content;
-    }
-  }]);
-
-  return App;
-}(_react.Component);
-
-;
-
-exports.default = App;
-
-/***/ }),
-/* 109 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactDom = __webpack_require__(7);
+var _reactDom = __webpack_require__(8);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
@@ -5786,13 +5656,17 @@ var _reactFontawesome = __webpack_require__(1);
 
 var _reactFontawesome2 = _interopRequireDefault(_reactFontawesome);
 
-var _exampleAction = __webpack_require__(110);
+var _exampleLayout = __webpack_require__(7);
 
-var _exampleAction2 = _interopRequireDefault(_exampleAction);
+var _exampleLayout2 = _interopRequireDefault(_exampleLayout);
 
-var _exampleStore = __webpack_require__(111);
+var _action = __webpack_require__(109);
 
-var _exampleStore2 = _interopRequireDefault(_exampleStore);
+var _action2 = _interopRequireDefault(_action);
+
+var _store = __webpack_require__(110);
+
+var _store2 = _interopRequireDefault(_store);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -5806,14 +5680,8 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 // import Dispatcher from '../../../../assets/dispatcher.js';
 
 
-// Definitions
-function DataObj() {
-  this['uId'] = '';
-  this['name'] = '';
-};
+/* Definitions */
 var DATAMEMBERS = 5;
-var random_uId = 'abcdefghijklmnopqrstuvwxyz0123456789';
-var random_name = 'abcdefghijklmnopqrstuvwxyz';
 
 var ExampleThis;
 
@@ -5833,13 +5701,13 @@ var Example = function (_Component) {
     key: 'componentDidMount',
     value: function componentDidMount() {
       ExampleThis = this;
-      _exampleStore2.default.exampleFlux_addChangeListener(this.refresh);
+      _store2.default.exampleFlux_addChangeListener(this.refresh);
       this.fetchData();
     }
   }, {
     key: 'componentWillUnmount',
     value: function componentWillUnmount() {
-      _exampleStore2.default.exampleFlux_removeChangeListener(this.refresh);
+      _store2.default.exampleFlux_removeChangeListener(this.refresh);
     }
   }, {
     key: 'render',
@@ -5848,58 +5716,66 @@ var Example = function (_Component) {
 
       var content = [];
       content.push(_react2.default.createElement(
-        'div',
-        { className: 'example-wrapper example-userList' },
+        _exampleLayout2.default.Wrapper,
+        { className: 'example-userList' },
         _react2.default.createElement(
-          'div',
-          { className: 'example-part' },
+          _exampleLayout2.default.Part,
+          null,
           _react2.default.createElement(
-            'div',
-            { className: 'example-headerTitle' },
+            _exampleLayout2.default.Title,
+            null,
             'Example - Flux'
           )
         ),
         _react2.default.createElement(
-          'div',
-          { className: 'example-part' },
+          _exampleLayout2.default.Part,
+          null,
           _react2.default.createElement(
-            'div',
-            { className: 'userList-add' },
-            _react2.default.createElement('input', { className: 'userList-input', type: 'text', maxLength: '10', ref: 'userName', placeholder: 'Enter 1-10 character(s).' }),
+            _exampleLayout2.default.Block,
+            null,
             _react2.default.createElement(
-              'button',
-              { className: 'userList-addButton', onClick: function onClick() {
-                  _this2._addHandler();
-                } },
-              _react2.default.createElement(_reactFontawesome2.default, { name: 'plus-square', fixedWidth: true })
+              'div',
+              { className: 'userList-add' },
+              _react2.default.createElement('input', { className: 'userList-input', type: 'text', maxLength: '10', ref: 'userName', placeholder: 'Enter 1-10 character(s).' }),
+              _react2.default.createElement(
+                'button',
+                { className: 'userList-addButton', onClick: function onClick() {
+                    _this2._addHandler();
+                  } },
+                _react2.default.createElement(_reactFontawesome2.default, { name: 'plus-square', fixedWidth: true })
+              )
             )
           ),
           _react2.default.createElement(
-            'ul',
-            { className: 'userList-list' },
-            0 < this.dataList.length ? this.dataList.map(function (entry) {
-              var content_datalist_tr = [];
-              content_datalist_tr.push(_react2.default.createElement(
+            _exampleLayout2.default.Block,
+            null,
+            _react2.default.createElement(
+              'ul',
+              { className: 'userList-list' },
+              0 < this.dataList.length ? this.dataList.map(function (entry) {
+                var content_datalist_tr = [];
+                content_datalist_tr.push(_react2.default.createElement(
+                  'li',
+                  { className: 'userList-entry' },
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'userList-info' },
+                    entry['name'].substring(0, 1).toUpperCase() + entry['name'].substring(1)
+                  ),
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'userList-deleteButton', onClick: function onClick() {
+                        _this2._deleteHandler(entry['ID']);
+                      } },
+                    _react2.default.createElement(_reactFontawesome2.default, { name: 'trash', fixedWidth: true })
+                  )
+                ));
+                return content_datalist_tr;
+              }) : _react2.default.createElement(
                 'li',
                 { className: 'userList-entry' },
-                _react2.default.createElement(
-                  'div',
-                  { className: 'userList-info' },
-                  entry['name'].substring(0, 1).toUpperCase() + entry['name'].substring(1)
-                ),
-                _react2.default.createElement(
-                  'div',
-                  { className: 'userList-deleteButton', onClick: function onClick() {
-                      _this2._deleteHandler(entry['uId']);
-                    } },
-                  _react2.default.createElement(_reactFontawesome2.default, { name: 'trash', fixedWidth: true })
-                )
-              ));
-              return content_datalist_tr;
-            }) : _react2.default.createElement(
-              'li',
-              { className: 'userList-entry' },
-              'No data available.'
+                'No data available.'
+              )
             )
           )
         )
@@ -5909,65 +5785,29 @@ var Example = function (_Component) {
   }, {
     key: 'refresh',
     value: function refresh() {
-      ExampleThis.dataList = _exampleStore2.default.exampleFlux_getData();
+      ExampleThis.dataList = _store2.default.exampleFlux_getData();
       ExampleThis.forceUpdate();
     }
   }, {
     key: 'fetchData',
     value: function fetchData() {
-      // random data instead of fetch server
-      var resData = [];
-      var dataTemp = void 0;
-      for (var i = 0; i < DATAMEMBERS; i++) {
-        dataTemp = new DataObj();
-        dataTemp['uId'] = this.randomData('id', this.dataList);
-        dataTemp['name'] = this.randomData('name');
-        resData.push(dataTemp);
-      };
-      _exampleAction2.default.fetch(resData);
-    }
-  }, {
-    key: 'randomData',
-    value: function randomData(type, base) {
-      var valueLength = 0;
-      var value = '';
-      var randomNumber = void 0;
-      switch (type) {
-        case 'id':
-          valueLength = 10;
-          for (var idIndex = 0; idIndex < valueLength; idIndex++) {
-            randomNumber = Math.floor(Math.random() * random_uId.length);
-            value += random_uId.split('')[randomNumber];
-          }
-          for (var baseIndex = 0; baseIndex < baseIndex.length; baseIndex++) {
-            if (baseIndex[baseIndex].uId == value) {
-              // duplicate uId, and random again
-              value = this.randomData('id', this.dataList);
-              break;
-            }
-          }
-          break;
-        case 'name':
-          valueLength = Math.ceil(Math.random() * 10);
-          for (var _idIndex = 0; _idIndex < valueLength; _idIndex++) {
-            randomNumber = Math.floor(Math.random() * random_name.length);
-            value += random_name.split('')[randomNumber];
-          }
-          break;
-      }
-      return value;
+      _action2.default.fetch();
     }
   }, {
     key: '_addHandler',
     value: function _addHandler() {
       var newUser = _reactDom2.default.findDOMNode(this.refs['userName']).value.trim();
+      if ('' == newUser) {
+        alert('Input is empty.');
+        return;
+      };
       _reactDom2.default.findDOMNode(this.refs['userName']).value = '';
-      _exampleAction2.default.add(newUser);
+      _action2.default.add(newUser);
     }
   }, {
     key: '_deleteHandler',
-    value: function _deleteHandler(uId) {
-      _exampleAction2.default.remove(uId);
+    value: function _deleteHandler(deleteID) {
+      _action2.default.remove(deleteID);
     }
   }]);
 
@@ -5977,6 +5817,46 @@ var Example = function (_Component) {
 ;
 
 exports.default = Example;
+
+/***/ }),
+/* 109 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _dispatcher = __webpack_require__(11);
+
+var _dispatcher2 = _interopRequireDefault(_dispatcher);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// dispatch data to store
+var Action = {
+  'fetch': function fetch() {
+    _dispatcher2.default.dispatch({
+      'actionType': 'flux_fetch'
+    });
+  },
+  'add': function add(userName) {
+    _dispatcher2.default.dispatch({
+      'actionType': 'flux_add',
+      'userName': userName
+    });
+  },
+  'remove': function remove(userID) {
+    _dispatcher2.default.dispatch({
+      'actionType': 'flux_remove',
+      'userID': userID
+    });
+  }
+};
+
+exports.default = Action;
 
 /***/ }),
 /* 110 */
@@ -5989,84 +5869,57 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _dispatcher = __webpack_require__(10);
-
-var _dispatcher2 = _interopRequireDefault(_dispatcher);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-// dispatch data to store
-var ExampleAction = {
-  'fetch': function fetch(userList) {
-    _dispatcher2.default.dispatch({
-      'actionType': 'fetch',
-      'userList': userList
-    });
-  },
-  'add': function add(userName) {
-    _dispatcher2.default.dispatch({
-      'actionType': 'add',
-      'userName': userName
-    });
-  },
-  'remove': function remove(userId) {
-    _dispatcher2.default.dispatch({
-      'actionType': 'remove',
-      'userId': userId
-    });
-  }
-};
-
-exports.default = ExampleAction;
-
-/***/ }),
-/* 111 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _merge = __webpack_require__(45);
+var _merge = __webpack_require__(44);
 
 var _merge2 = _interopRequireDefault(_merge);
 
-var _events = __webpack_require__(46);
+var _events = __webpack_require__(45);
 
-var _dispatcher = __webpack_require__(10);
+var _dispatcher = __webpack_require__(11);
 
 var _dispatcher2 = _interopRequireDefault(_dispatcher);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /* example data */
+var serverDataList = new Array();
 var dataList = new Array();
 
-// Definitions
+/* Definitions */
 var DATAMEMBERS = 5;
-var random_uId = 'abcdefghijklmnopqrstuvwxyz0123456789';
+var random_ID = 'abcdefghijklmnopqrstuvwxyz0123456789';
+var random_name = 'abcdefghijklmnopqrstuvwxyz';
 
 function DataObj() {
-  this['uId'] = '';
+  this['ID'] = '';
   this['name'] = '';
 };
-function randomUid(base) {
-  var valueLength = 10;
+function randomData(type, base) {
+  var valueLength = 0;
   var value = '';
   var randomNumber = void 0;
-  for (var idIndex = 0; idIndex < valueLength; idIndex++) {
-    randomNumber = Math.floor(Math.random() * random_uId.length);
-    value += random_uId.split('')[randomNumber];
-  }
-  for (var baseIndex = 0; baseIndex < base.length; baseIndex++) {
-    if (base[baseIndex].uId == value) {
-      //  if duplicate uId, random again
-      value = randomUid(base);
+  switch (type) {
+    case 'id':
+      valueLength = 10;
+      for (var idIndex = 0; idIndex < valueLength; idIndex++) {
+        randomNumber = Math.floor(Math.random() * random_ID.length);
+        value += random_ID.split('')[randomNumber];
+      }
+      for (var baseIndex = 0; baseIndex < baseIndex.length; baseIndex++) {
+        if (baseIndex[baseIndex].ID == value) {
+          // duplicate ID, and random again
+          value = this.randomData('id', base);
+          break;
+        }
+      }
       break;
-    }
+    case 'name':
+      valueLength = Math.ceil(Math.random() * 10);
+      for (var _idIndex = 0; _idIndex < valueLength; _idIndex++) {
+        randomNumber = Math.floor(Math.random() * random_name.length);
+        value += random_name.split('')[randomNumber];
+      }
+      break;
   }
   return value;
 };
@@ -6093,29 +5946,35 @@ var ExampleStore = (0, _merge2.default)(_events.EventEmitter.prototype, {
 /* regist event to dispatcher */
 _dispatcher2.default.register(function (event) {
   switch (event.actionType) {
-    case 'fetch':
-      dataList = event['userList'];
+    case 'flux_fetch':
+      // if data is empty, init data
+      if (0 == serverDataList.length) {
+        var _dataTemp = void 0;
+        for (var i = 0; i < DATAMEMBERS; i++) {
+          _dataTemp = new DataObj();
+          _dataTemp['ID'] = randomData('id', dataList);
+          _dataTemp['name'] = randomData('name');
+          serverDataList.push(_dataTemp);
+        };
+      };
+      dataList = serverDataList.slice(0);
       ExampleStore.exampleFlux_emitChange();
       break;
-    case 'add':
-      if ('' == event['userName']) {
-        alert('Input is empty.');
-        return;
-      };
+    case 'flux_add':
       if (DATAMEMBERS <= dataList.length) {
         alert('User is full.');
         return;
       };
       var dataTemp = new DataObj();
-      dataTemp['uId'] = randomUid(dataList);
+      dataTemp['ID'] = randomData('id', dataList);
       dataTemp['name'] = event['userName'];
       dataList.push(dataTemp);
       ExampleStore.exampleFlux_emitChange();
       break;
-    case 'remove':
-      for (var i = 0; i < dataList.length; i++) {
-        if (event['userId'] == dataList[i].uId) {
-          dataList.splice(i, 1);
+    case 'flux_remove':
+      for (var _i = 0; _i < dataList.length; _i++) {
+        if (event['userID'] == dataList[_i].ID) {
+          dataList.splice(_i, 1);
           break;
         };
       };
@@ -6127,7 +5986,7 @@ _dispatcher2.default.register(function (event) {
 exports.default = ExampleStore;
 
 /***/ }),
-/* 112 */
+/* 111 */
 /***/ (function(module, exports) {
 
 module.exports = function(module) {
@@ -6155,6 +6014,35 @@ module.exports = function(module) {
 
 
 /***/ }),
+/* 112 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _app = __webpack_require__(113);
+
+var _app2 = _interopRequireDefault(_app);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Index = function Index(props) {
+  var content = [];
+  content.push(_react2.default.createElement(_app2.default, null));
+  return content;
+};
+
+exports.default = Index;
+
+/***/ }),
 /* 113 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -6171,70 +6059,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _serverAPI = __webpack_require__(47);
-
-var _serverAPI2 = _interopRequireDefault(_serverAPI);
-
-var _exampleComponent = __webpack_require__(114);
-
-var _exampleComponent2 = _interopRequireDefault(_exampleComponent);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var App = function (_Component) {
-  _inherits(App, _Component);
-
-  function App(props) {
-    _classCallCheck(this, App);
-
-    return _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this, props));
-  }
-
-  _createClass(App, [{
-    key: 'componentWillMount',
-    value: function componentWillMount() {
-      _serverAPI2.default.initData();
-    }
-  }, {
-    key: 'render',
-    value: function render() {
-      var content = [];
-      content.push(_react2.default.createElement(_exampleComponent2.default, null));
-      return content;
-    }
-  }]);
-
-  return App;
-}(_react.Component);
-
-;
-
-exports.default = App;
-
-/***/ }),
-/* 114 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactDom = __webpack_require__(7);
+var _reactDom = __webpack_require__(8);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
@@ -6242,17 +6067,21 @@ var _reactFontawesome = __webpack_require__(1);
 
 var _reactFontawesome2 = _interopRequireDefault(_reactFontawesome);
 
-var _serverAPI = __webpack_require__(47);
+var _exampleLayout = __webpack_require__(7);
+
+var _exampleLayout2 = _interopRequireDefault(_exampleLayout);
+
+var _serverAPI = __webpack_require__(46);
 
 var _serverAPI2 = _interopRequireDefault(_serverAPI);
 
-var _exampleAction = __webpack_require__(115);
+var _action = __webpack_require__(114);
 
-var _exampleAction2 = _interopRequireDefault(_exampleAction);
+var _action2 = _interopRequireDefault(_action);
 
-var _exampleStore = __webpack_require__(116);
+var _store = __webpack_require__(115);
 
-var _exampleStore2 = _interopRequireDefault(_exampleStore);
+var _store2 = _interopRequireDefault(_store);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -6266,11 +6095,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 // import Dispatcher from '../../../../assets/dispatcher.js';
 
 
-// Definitions
-function DataObj() {
-  this['uId'] = '';
-  this['name'] = '';
-};
+/* Definitions */
 var DATAMEMBERS = 5;
 
 var ExampleThis;
@@ -6291,13 +6116,13 @@ var Example = function (_Component) {
     key: 'componentDidMount',
     value: function componentDidMount() {
       ExampleThis = this;
-      _exampleStore2.default.exampleFlux_server_addChangeListener(this.refresh);
+      _store2.default.exampleFlux_server_addChangeListener(this.refresh);
       this.fetchData();
     }
   }, {
     key: 'componentWillUnmount',
     value: function componentWillUnmount() {
-      _exampleStore2.default.exampleFlux_server_removeChangeListener(this.refresh);
+      _store2.default.exampleFlux_server_removeChangeListener(this.refresh);
     }
   }, {
     key: 'render',
@@ -6306,58 +6131,66 @@ var Example = function (_Component) {
 
       var content = [];
       content.push(_react2.default.createElement(
-        'div',
-        { className: 'example-wrapper example-userList' },
+        _exampleLayout2.default.Wrapper,
+        { className: 'example-userList' },
         _react2.default.createElement(
-          'div',
-          { className: 'example-part' },
+          _exampleLayout2.default.Part,
+          null,
           _react2.default.createElement(
-            'div',
-            { className: 'example-headerTitle' },
+            _exampleLayout2.default.Title,
+            null,
             'Example - Flux with server'
           )
         ),
         _react2.default.createElement(
-          'div',
-          { className: 'example-part' },
+          _exampleLayout2.default.Part,
+          null,
           _react2.default.createElement(
-            'div',
-            { className: 'userList-add' },
-            _react2.default.createElement('input', { className: 'userList-input', type: 'text', maxLength: '10', ref: 'userName', placeholder: 'Enter 1-10 character(s).' }),
+            _exampleLayout2.default.Block,
+            null,
             _react2.default.createElement(
-              'button',
-              { className: 'userList-addButton', onClick: function onClick() {
-                  _this2._addHandler();
-                } },
-              _react2.default.createElement(_reactFontawesome2.default, { name: 'plus-square', fixedWidth: true })
+              'div',
+              { className: 'userList-add' },
+              _react2.default.createElement('input', { className: 'userList-input', type: 'text', maxLength: '10', ref: 'userName', placeholder: 'Enter 1-10 character(s).' }),
+              _react2.default.createElement(
+                'button',
+                { className: 'userList-addButton', onClick: function onClick() {
+                    _this2._addHandler();
+                  } },
+                _react2.default.createElement(_reactFontawesome2.default, { name: 'plus-square', fixedWidth: true })
+              )
             )
           ),
           _react2.default.createElement(
-            'ul',
-            { className: 'userList-list' },
-            0 < this.dataList.length ? this.dataList.map(function (entry) {
-              var content_datalist_tr = [];
-              content_datalist_tr.push(_react2.default.createElement(
+            _exampleLayout2.default.Block,
+            null,
+            _react2.default.createElement(
+              'ul',
+              { className: 'userList-list' },
+              0 < this.dataList.length ? this.dataList.map(function (entry) {
+                var content_datalist_tr = [];
+                content_datalist_tr.push(_react2.default.createElement(
+                  'li',
+                  { className: 'userList-entry' },
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'userList-info' },
+                    entry['name'].substring(0, 1).toUpperCase() + entry['name'].substring(1)
+                  ),
+                  _react2.default.createElement(
+                    'div',
+                    { className: 'userList-deleteButton', onClick: function onClick() {
+                        _this2._deleteHandler(entry['ID']);
+                      } },
+                    _react2.default.createElement(_reactFontawesome2.default, { name: 'trash', fixedWidth: true })
+                  )
+                ));
+                return content_datalist_tr;
+              }) : _react2.default.createElement(
                 'li',
                 { className: 'userList-entry' },
-                _react2.default.createElement(
-                  'div',
-                  { className: 'userList-info' },
-                  entry['name'].substring(0, 1).toUpperCase() + entry['name'].substring(1)
-                ),
-                _react2.default.createElement(
-                  'div',
-                  { className: 'userList-deleteButton', onClick: function onClick() {
-                      _this2._deleteHandler(entry['uId']);
-                    } },
-                  _react2.default.createElement(_reactFontawesome2.default, { name: 'trash', fixedWidth: true })
-                )
-              ));
-              return content_datalist_tr;
-            }) : _react2.default.createElement(
-              'li',
-              { className: 'userList-entry' },
-              'No data available.'
+                'No data available.'
+              )
             )
           )
         )
@@ -6367,22 +6200,19 @@ var Example = function (_Component) {
   }, {
     key: 'refresh',
     value: function refresh() {
-      ExampleThis.dataList = _exampleStore2.default.exampleFlux_server_getData();
+      ExampleThis.dataList = _store2.default.exampleFlux_server_getData();
       ExampleThis.forceUpdate();
     }
   }, {
     key: 'fetchData',
     value: function fetchData() {
-      // fetch data and used by container
-      var res = _serverAPI2.default.getData();
-      _exampleAction2.default.update(res);
+      _action2.default.fetch();
     }
   }, {
     key: '_addHandler',
     value: function _addHandler() {
-      var obj = new DataObj();
-      obj['name'] = _reactDom2.default.findDOMNode(this.refs['userName']).value.trim();
-      if ('' == obj['name']) {
+      var newUser = _reactDom2.default.findDOMNode(this.refs['userName']).value.trim();
+      if ('' == newUser) {
         alert('Input is empty.');
         return;
       };
@@ -6390,18 +6220,13 @@ var Example = function (_Component) {
         alert('User is full.');
         return;
       };
-      var res = _serverAPI2.default.addData(obj);
       _reactDom2.default.findDOMNode(this.refs['userName']).value = '';
-      _exampleAction2.default.update(res);
+      _action2.default.add(newUser);
     }
   }, {
     key: '_deleteHandler',
-    value: function _deleteHandler(uId) {
-      var obj = new DataObj();
-      obj['uId'] = uId;
-
-      var res = _serverAPI2.default.deleteData(obj);
-      _exampleAction2.default.update(res);
+    value: function _deleteHandler(deleteID) {
+      _action2.default.remove(deleteID);
     }
   }]);
 
@@ -6411,6 +6236,46 @@ var Example = function (_Component) {
 ;
 
 exports.default = Example;
+
+/***/ }),
+/* 114 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _dispatcher = __webpack_require__(11);
+
+var _dispatcher2 = _interopRequireDefault(_dispatcher);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// dispatch data to store
+var Action = {
+  'fetch': function fetch() {
+    _dispatcher2.default.dispatch({
+      'actionType': 'fluxServer_fetch'
+    });
+  },
+  'add': function add(userName) {
+    _dispatcher2.default.dispatch({
+      'actionType': 'fluxServer_add',
+      'userName': userName
+    });
+  },
+  'remove': function remove(userID) {
+    _dispatcher2.default.dispatch({
+      'actionType': 'fluxServer_remove',
+      'userID': userID
+    });
+  }
+};
+
+exports.default = Action;
 
 /***/ }),
 /* 115 */
@@ -6423,49 +6288,64 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _dispatcher = __webpack_require__(10);
-
-var _dispatcher2 = _interopRequireDefault(_dispatcher);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-// dispatch data to store
-var ExampleAction = {
-  'update': function update(userList) {
-    _dispatcher2.default.dispatch({
-      'actionType': 'update',
-      'userList': userList
-    });
-  }
-};
-
-exports.default = ExampleAction;
-
-/***/ }),
-/* 116 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _merge = __webpack_require__(45);
+var _merge = __webpack_require__(44);
 
 var _merge2 = _interopRequireDefault(_merge);
 
-var _events = __webpack_require__(46);
+var _events = __webpack_require__(45);
 
-var _dispatcher = __webpack_require__(10);
+var _serverAPI = __webpack_require__(46);
+
+var _serverAPI2 = _interopRequireDefault(_serverAPI);
+
+var _dispatcher = __webpack_require__(11);
 
 var _dispatcher2 = _interopRequireDefault(_dispatcher);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /* example data */
+var serverDataList = new Array();
 var dataList = new Array();
+
+/* Definitions */
+var DATAMEMBERS = 5;
+var random_uId = 'abcdefghijklmnopqrstuvwxyz0123456789';
+var random_name = 'abcdefghijklmnopqrstuvwxyz';
+
+function DataObj() {
+  this['ID'] = '';
+  this['name'] = '';
+};
+function randomData(type, base) {
+  var valueLength = 0;
+  var value = '';
+  var randomNumber = void 0;
+  switch (type) {
+    case 'id':
+      valueLength = 10;
+      for (var idIndex = 0; idIndex < valueLength; idIndex++) {
+        randomNumber = Math.floor(Math.random() * random_uId.length);
+        value += random_uId.split('')[randomNumber];
+      }
+      for (var baseIndex = 0; baseIndex < baseIndex.length; baseIndex++) {
+        if (baseIndex[baseIndex].ID == value) {
+          // duplicate ID, and random again
+          value = this.randomData('id', base);
+          break;
+        }
+      }
+      break;
+    case 'name':
+      valueLength = Math.ceil(Math.random() * 10);
+      for (var _idIndex = 0; _idIndex < valueLength; _idIndex++) {
+        randomNumber = Math.floor(Math.random() * random_name.length);
+        value += random_name.split('')[randomNumber];
+      }
+      break;
+  }
+  return value;
+};
 
 /* example event listener id */
 var EXAMPLE_EVENT_ID = 'exampleFlux_server';
@@ -6488,9 +6368,32 @@ var ExampleStore = (0, _merge2.default)(_events.EventEmitter.prototype, {
 
 /* regist event to dispatcher */
 _dispatcher2.default.register(function (event) {
+  var obj = void 0;
   switch (event.actionType) {
-    case 'update':
-      dataList = event['userList'];
+    case 'fluxServer_fetch':
+      // if data is empty, init data
+      if (0 == serverDataList.length) {
+        serverDataList = _serverAPI2.default.initData();
+      } else {
+        serverDataList = _serverAPI2.default.getData();
+      };
+      dataList = serverDataList;
+      ExampleStore.exampleFlux_server_emitChange();
+      break;
+    case 'fluxServer_add':
+      obj = new DataObj();
+      obj['name'] = event['userName'];
+      if (DATAMEMBERS <= dataList.length) {
+        alert('User is full.');
+        break;
+      };
+      dataList = _serverAPI2.default.addData(obj);
+      ExampleStore.exampleFlux_server_emitChange();
+      break;
+    case 'fluxServer_remove':
+      obj = new DataObj();
+      obj['ID'] = event['userID'];
+      dataList = _serverAPI2.default.deleteData(obj);
       ExampleStore.exampleFlux_server_emitChange();
       break;
   }
@@ -6499,19 +6402,19 @@ _dispatcher2.default.register(function (event) {
 exports.default = ExampleStore;
 
 /***/ }),
-/* 117 */
+/* 116 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "images/articleFlux.png";
 
 /***/ }),
-/* 118 */
+/* 117 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "images/articleFlux_server.png";
 
 /***/ }),
-/* 119 */
+/* 118 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6529,31 +6432,31 @@ var _reactFontawesome = __webpack_require__(1);
 
 var _reactFontawesome2 = _interopRequireDefault(_reactFontawesome);
 
-var _app = __webpack_require__(120);
-
-var _app2 = _interopRequireDefault(_app);
-
-var _index = __webpack_require__(122);
+var _index = __webpack_require__(119);
 
 var _index2 = _interopRequireDefault(_index);
 
-var _index3 = __webpack_require__(154);
+var _index3 = __webpack_require__(121);
 
 var _index4 = _interopRequireDefault(_index3);
 
-var _articleRedux = __webpack_require__(165);
+var _index5 = __webpack_require__(153);
+
+var _index6 = _interopRequireDefault(_index5);
+
+var _articleRedux = __webpack_require__(164);
 
 var _articleRedux2 = _interopRequireDefault(_articleRedux);
 
-var _articleRedux_server = __webpack_require__(166);
+var _articleRedux_server = __webpack_require__(165);
 
 var _articleRedux_server2 = _interopRequireDefault(_articleRedux_server);
 
-var _layout = __webpack_require__(5);
+var _articleLayout = __webpack_require__(6);
 
-var _layout2 = _interopRequireDefault(_layout);
+var _articleLayout2 = _interopRequireDefault(_articleLayout);
 
-var _articleRedirecter = __webpack_require__(30);
+var _articleRedirecter = __webpack_require__(47);
 
 var _articleRedirecter2 = _interopRequireDefault(_articleRedirecter);
 
@@ -6648,145 +6551,145 @@ var Index = function Index(props) {
     'div',
     { className: 'wrapper wrapper-basic' },
     _react2.default.createElement(
-      _layout2.default.MainTitle,
+      _articleLayout2.default.MainTitle,
       null,
       mainTitle
     ),
     _react2.default.createElement(
-      _layout2.default.MainDescription,
+      _articleLayout2.default.MainDescription,
       null,
       mainDescriptionStr
     ),
     _react2.default.createElement(
-      _layout2.default.Section,
+      _articleLayout2.default.Section,
       null,
       _react2.default.createElement(
-        _layout2.default.SectionTitle,
+        _articleLayout2.default.SectionTitle,
         null,
         introductionTitle
       ),
       _react2.default.createElement(
-        _layout2.default.Content,
+        _articleLayout2.default.Content,
         null,
         introductionContent
       ),
       _react2.default.createElement(
-        _layout2.default.Content,
+        _articleLayout2.default.Content,
         null,
         _react2.default.createElement(
-          _layout2.default.SectionSubtitle,
+          _articleLayout2.default.SectionSubtitle,
           null,
           introductionExampleTitle
         ),
         _react2.default.createElement(
-          _layout2.default.Content,
+          _articleLayout2.default.Content,
           null,
           introductionExampleContent
         ),
         _react2.default.createElement(
-          _layout2.default.Item,
+          _articleLayout2.default.Item,
           null,
-          _react2.default.createElement(_app2.default, null)
+          _react2.default.createElement(_index2.default, null)
         ),
         _react2.default.createElement(
-          _layout2.default.Content,
+          _articleLayout2.default.Content,
           null,
           introductionExampleAlgorithmDescription
         ),
         _react2.default.createElement(
-          _layout2.default.Pre,
+          _articleLayout2.default.Pre,
           null,
           EXAMPLE_BASIC_ALGORITHM
         )
       ),
       _react2.default.createElement(
-        _layout2.default.Content,
+        _articleLayout2.default.Content,
         null,
         _react2.default.createElement(
-          _layout2.default.SectionSubtitle,
+          _articleLayout2.default.SectionSubtitle,
           null,
           introductionReduxTitle
         ),
         _react2.default.createElement(
-          _layout2.default.Content,
+          _articleLayout2.default.Content,
           null,
           introductionReduxContent
         ),
         _react2.default.createElement(
-          _layout2.default.Item,
+          _articleLayout2.default.Item,
           null,
           _react2.default.createElement('img', { src: _articleRedux2.default })
         ),
         _react2.default.createElement(
-          _layout2.default.Content,
+          _articleLayout2.default.Content,
           null,
           introductionReduxAlgorithmDescription
         ),
         _react2.default.createElement(
-          _layout2.default.Pre,
+          _articleLayout2.default.Pre,
           null,
           EXAMPLE_REDUX_INSTALL
         ),
         _react2.default.createElement(
-          _layout2.default.Content,
+          _articleLayout2.default.Content,
           null,
           _react2.default.createElement(
-            _layout2.default.SectionSubtitle,
+            _articleLayout2.default.SectionSubtitle,
             null,
             introductionReduxViewTitle
           ),
           _react2.default.createElement(
-            _layout2.default.Content,
+            _articleLayout2.default.Content,
             null,
             introductionReduxViewContent
           ),
           _react2.default.createElement(
-            _layout2.default.Content,
+            _articleLayout2.default.Content,
             null,
             _react2.default.createElement(
-              _layout2.default.SectionSubtitle,
+              _articleLayout2.default.SectionSubtitle,
               null,
               introductionReduxViewContainerTitle
             ),
             _react2.default.createElement(
-              _layout2.default.Pre,
+              _articleLayout2.default.Pre,
               null,
               EXAMPLE_REDUX_VIEW_CONTAINER
             )
           ),
           _react2.default.createElement(
-            _layout2.default.Content,
+            _articleLayout2.default.Content,
             null,
             _react2.default.createElement(
-              _layout2.default.SectionSubtitle,
+              _articleLayout2.default.SectionSubtitle,
               null,
               introductionReduxViewConnectTitle
             ),
             _react2.default.createElement(
-              _layout2.default.Content,
+              _articleLayout2.default.Content,
               null,
               introductionReduxViewConnectContent
             ),
             _react2.default.createElement(
-              _layout2.default.Content,
+              _articleLayout2.default.Content,
               null,
               _react2.default.createElement(
-                _layout2.default.SectionSubtitle,
+                _articleLayout2.default.SectionSubtitle,
                 null,
                 introductionReduxViewConnectContainerTag
               ),
               _react2.default.createElement(
-                _layout2.default.Pre,
+                _articleLayout2.default.Pre,
                 null,
                 EXAMPLE_REDUX_VIEW_CONNECT_CONTAINER
               ),
               _react2.default.createElement(
-                _layout2.default.SectionSubtitle,
+                _articleLayout2.default.SectionSubtitle,
                 null,
                 introductionReduxViewConnectComponentTag
               ),
               _react2.default.createElement(
-                _layout2.default.Pre,
+                _articleLayout2.default.Pre,
                 null,
                 EXAMPLE_REDUX_VIEW_CONNECT_COMPONENT
               )
@@ -6794,57 +6697,57 @@ var Index = function Index(props) {
           )
         ),
         _react2.default.createElement(
-          _layout2.default.Content,
+          _articleLayout2.default.Content,
           null,
           _react2.default.createElement(
-            _layout2.default.SectionSubtitle,
+            _articleLayout2.default.SectionSubtitle,
             null,
             introductionReduxActionTitle
           ),
           _react2.default.createElement(
-            _layout2.default.Content,
+            _articleLayout2.default.Content,
             null,
             introductionReduxActionContent
           ),
           _react2.default.createElement(
-            _layout2.default.Pre,
+            _articleLayout2.default.Pre,
             null,
             EXAMPLE_REDUX_ACTION
           )
         ),
         _react2.default.createElement(
-          _layout2.default.Content,
+          _articleLayout2.default.Content,
           null,
           _react2.default.createElement(
-            _layout2.default.SectionSubtitle,
+            _articleLayout2.default.SectionSubtitle,
             null,
             introductionReduxReducerTitle
           ),
           _react2.default.createElement(
-            _layout2.default.Content,
+            _articleLayout2.default.Content,
             null,
             introductionReduxReducerContent
           ),
           _react2.default.createElement(
-            _layout2.default.Content,
+            _articleLayout2.default.Content,
             null,
             _react2.default.createElement(
-              _layout2.default.SectionSubtitle,
+              _articleLayout2.default.SectionSubtitle,
               null,
               introductionReduxReducerCombinedTitle
             ),
             _react2.default.createElement(
-              _layout2.default.Pre,
+              _articleLayout2.default.Pre,
               null,
               EXAMPLE_REDUX_REDUCER_INDEX
             ),
             _react2.default.createElement(
-              _layout2.default.SectionSubtitle,
+              _articleLayout2.default.SectionSubtitle,
               null,
               introductionReduxReducerBranchTitle
             ),
             _react2.default.createElement(
-              _layout2.default.Pre,
+              _articleLayout2.default.Pre,
               null,
               EXAMPLE_REDUX_REDUCER_BRANCH
             )
@@ -6853,67 +6756,96 @@ var Index = function Index(props) {
       )
     ),
     _react2.default.createElement(
-      _layout2.default.Section,
+      _articleLayout2.default.Section,
       null,
       _react2.default.createElement(
-        _layout2.default.SectionTitle,
+        _articleLayout2.default.SectionTitle,
         null,
         productionTitle
       ),
       _react2.default.createElement(
-        _layout2.default.Content,
+        _articleLayout2.default.Content,
         null,
         productionContent
       ),
       _react2.default.createElement(
-        _layout2.default.Item,
-        null,
-        _react2.default.createElement(_index2.default, null)
-      )
-    ),
-    _react2.default.createElement(
-      _layout2.default.Section,
-      null,
-      _react2.default.createElement(
-        _layout2.default.SectionTitle,
-        null,
-        advancedTitle
-      ),
-      _react2.default.createElement(
-        _layout2.default.Content,
-        null,
-        advancedContent
-      ),
-      _react2.default.createElement(
-        _layout2.default.Item,
-        null,
-        _react2.default.createElement('img', { src: _articleRedux_server2.default })
-      ),
-      _react2.default.createElement(
-        _layout2.default.Content,
-        null,
-        advancedServerContent
-      ),
-      _react2.default.createElement(
-        _layout2.default.Item,
+        _articleLayout2.default.Item,
         null,
         _react2.default.createElement(_index4.default, null)
       )
     ),
     _react2.default.createElement(
-      _layout2.default.Section,
+      _articleLayout2.default.Section,
       null,
       _react2.default.createElement(
-        _layout2.default.BtnGroup,
+        _articleLayout2.default.SectionTitle,
+        null,
+        advancedTitle
+      ),
+      _react2.default.createElement(
+        _articleLayout2.default.Content,
+        null,
+        advancedContent
+      ),
+      _react2.default.createElement(
+        _articleLayout2.default.Item,
+        null,
+        _react2.default.createElement('img', { src: _articleRedux_server2.default })
+      ),
+      _react2.default.createElement(
+        _articleLayout2.default.Content,
+        null,
+        advancedServerContent
+      ),
+      _react2.default.createElement(
+        _articleLayout2.default.Item,
+        null,
+        _react2.default.createElement(_index6.default, null)
+      )
+    ),
+    _react2.default.createElement(
+      _articleLayout2.default.Section,
+      null,
+      _react2.default.createElement(
+        _articleLayout2.default.BtnGroup,
         null,
         _react2.default.createElement(
-          _layout2.default.Btn,
+          _articleLayout2.default.Btn,
           null,
           _react2.default.createElement(_articleRedirecter2.default, { redirectTo: 'BTB_ATCS' })
         )
       )
     )
   ));
+  return content;
+};
+
+exports.default = Index;
+
+/***/ }),
+/* 119 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _app = __webpack_require__(120);
+
+var _app2 = _interopRequireDefault(_app);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Index = function Index(props) {
+  var content = [];
+  content.push(_react2.default.createElement(_app2.default, null));
   return content;
 };
 
@@ -6930,48 +6862,23 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _exampleComponent = __webpack_require__(121);
-
-var _exampleComponent2 = _interopRequireDefault(_exampleComponent);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var App = function App(props) {
-  var content = [];
-  content.push(_react2.default.createElement(_exampleComponent2.default, null));
-  return content;
-};
-
-exports.default = App;
-
-/***/ }),
-/* 121 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(7);
+var _reactDom = __webpack_require__(8);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
 var _reactFontawesome = __webpack_require__(1);
 
 var _reactFontawesome2 = _interopRequireDefault(_reactFontawesome);
+
+var _exampleLayout = __webpack_require__(7);
+
+var _exampleLayout2 = _interopRequireDefault(_exampleLayout);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -6990,13 +6897,13 @@ var DATAMEMBERS = 5;
 var random_uId = 'abcdefghijklmnopqrstuvwxyz0123456789';
 var random_name = 'abcdefghijklmnopqrstuvwxyz';
 
-var Example = function (_Component) {
-  _inherits(Example, _Component);
+var App = function (_Component) {
+  _inherits(App, _Component);
 
-  function Example(props) {
-    _classCallCheck(this, Example);
+  function App(props) {
+    _classCallCheck(this, App);
 
-    var _this = _possibleConstructorReturn(this, (Example.__proto__ || Object.getPrototypeOf(Example)).call(this, props));
+    var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this, props));
 
     _this.dataList = {
       'left': new Array(),
@@ -7005,7 +6912,7 @@ var Example = function (_Component) {
     return _this;
   }
 
-  _createClass(Example, [{
+  _createClass(App, [{
     key: 'componentDidMount',
     value: function componentDidMount() {
       this.fetchData();
@@ -7017,48 +6924,76 @@ var Example = function (_Component) {
 
       var content = [];
       content.push(_react2.default.createElement(
-        'div',
-        { className: 'example-wrapper example-userList' },
+        _exampleLayout2.default.Wrapper,
+        { className: 'example-userList' },
         _react2.default.createElement(
-          'div',
-          { className: 'example-part' },
+          _exampleLayout2.default.Part,
+          null,
           _react2.default.createElement(
-            'div',
-            { className: 'example-headerTitle' },
+            _exampleLayout2.default.Title,
+            null,
             'Example'
           )
         ),
         _react2.default.createElement(
-          'div',
-          { className: 'example-part' },
+          _exampleLayout2.default.Part,
+          null,
           _react2.default.createElement(
-            'div',
-            { className: 'userList-add' },
-            _react2.default.createElement('input', { className: 'userList-input', type: 'text', maxLength: '10', ref: 'userName', placeholder: 'Enter 1-10 character(s).' })
-          ),
-          _react2.default.createElement(
-            'div',
-            { className: 'example-block' },
+            _exampleLayout2.default.Block,
+            null,
             _react2.default.createElement(
               'div',
-              { className: 'example-title' },
+              { className: 'userList-add' },
+              _react2.default.createElement('input', { className: 'userList-input', type: 'text', maxLength: '10', ref: 'userName', placeholder: 'Enter 1-10 character(s).' })
+            )
+          ),
+          _react2.default.createElement(
+            _exampleLayout2.default.InlineBlock,
+            null,
+            _react2.default.createElement(
+              'div',
+              { className: 'userList-add' },
               _react2.default.createElement(
-                'div',
-                { className: 'userList-add' },
+                'button',
+                { className: 'userList-addButton', onClick: function onClick() {
+                    _this2._addHandler('left');
+                  }, style: { 'vertical-align': 'bottom' } },
                 _react2.default.createElement(
-                  'button',
-                  { className: 'userList-addButton', onClick: function onClick() {
-                      _this2._addHandler('left');
-                    }, style: { 'vertical-align': 'bottom' } },
-                  _react2.default.createElement(
-                    'span',
-                    null,
-                    'Left'
-                  ),
-                  _react2.default.createElement(_reactFontawesome2.default, { name: 'plus-square', fixedWidth: true })
-                )
+                  'span',
+                  null,
+                  'Left'
+                ),
+                _react2.default.createElement(_reactFontawesome2.default, { name: 'plus-square', fixedWidth: true })
               )
-            ),
+            )
+          ),
+          _react2.default.createElement(
+            _exampleLayout2.default.InlineBlock,
+            null,
+            _react2.default.createElement(
+              'div',
+              { className: 'userList-add' },
+              _react2.default.createElement(
+                'button',
+                { className: 'userList-addButton', onClick: function onClick() {
+                    _this2._addHandler('right');
+                  }, style: { 'vertical-align': 'bottom' } },
+                _react2.default.createElement(
+                  'span',
+                  null,
+                  'Right'
+                ),
+                _react2.default.createElement(_reactFontawesome2.default, { name: 'plus-square', fixedWidth: true })
+              )
+            )
+          )
+        ),
+        _react2.default.createElement(
+          _exampleLayout2.default.Part,
+          null,
+          _react2.default.createElement(
+            _exampleLayout2.default.InlineBlock,
+            null,
             _react2.default.createElement(
               'ul',
               { className: 'userList-list' },
@@ -7096,28 +7031,8 @@ var Example = function (_Component) {
             )
           ),
           _react2.default.createElement(
-            'div',
-            { className: 'example-block' },
-            _react2.default.createElement(
-              'div',
-              { className: 'example-title' },
-              _react2.default.createElement(
-                'div',
-                { className: 'userList-add' },
-                _react2.default.createElement(
-                  'button',
-                  { className: 'userList-addButton', onClick: function onClick() {
-                      _this2._addHandler('right');
-                    }, style: { 'vertical-align': 'bottom' } },
-                  _react2.default.createElement(
-                    'span',
-                    null,
-                    'Right'
-                  ),
-                  _react2.default.createElement(_reactFontawesome2.default, { name: 'plus-square', fixedWidth: true })
-                )
-              )
-            ),
+            _exampleLayout2.default.InlineBlock,
+            null,
             _react2.default.createElement(
               'ul',
               { className: 'userList-list' },
@@ -7267,15 +7182,15 @@ var Example = function (_Component) {
     }
   }]);
 
-  return Example;
+  return App;
 }(_react.Component);
 
 ;
 
-exports.default = Example;
+exports.default = App;
 
 /***/ }),
-/* 122 */
+/* 121 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7289,15 +7204,15 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _redux = __webpack_require__(11);
+var _redux = __webpack_require__(12);
 
-var _reactRedux = __webpack_require__(6);
+var _reactRedux = __webpack_require__(5);
 
-var _app = __webpack_require__(144);
+var _app = __webpack_require__(143);
 
 var _app2 = _interopRequireDefault(_app);
 
-var _index = __webpack_require__(151);
+var _index = __webpack_require__(150);
 
 var _index2 = _interopRequireDefault(_index);
 
@@ -7318,11 +7233,11 @@ var Index = function Index(props) {
 exports.default = Index;
 
 /***/ }),
-/* 123 */
+/* 122 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(global, module) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ponyfill_js__ = __webpack_require__(125);
+/* WEBPACK VAR INJECTION */(function(global, module) {/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ponyfill_js__ = __webpack_require__(124);
 /* global window */
 
 
@@ -7343,10 +7258,10 @@ if (typeof self !== 'undefined') {
 var result = Object(__WEBPACK_IMPORTED_MODULE_0__ponyfill_js__["a" /* default */])(root);
 /* harmony default export */ __webpack_exports__["a"] = (result);
 
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(48), __webpack_require__(124)(module)))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(48), __webpack_require__(123)(module)))
 
 /***/ }),
-/* 124 */
+/* 123 */
 /***/ (function(module, exports) {
 
 module.exports = function(originalModule) {
@@ -7376,7 +7291,7 @@ module.exports = function(originalModule) {
 
 
 /***/ }),
-/* 125 */
+/* 124 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7401,7 +7316,7 @@ function symbolObservablePonyfill(root) {
 
 
 /***/ }),
-/* 126 */
+/* 125 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7411,7 +7326,7 @@ function symbolObservablePonyfill(root) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__utils_PropTypes__ = __webpack_require__(49);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__utils_warning__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__utils_warning__ = __webpack_require__(30);
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -7486,7 +7401,7 @@ function createProvider() {
 /* harmony default export */ __webpack_exports__["b"] = (createProvider());
 
 /***/ }),
-/* 127 */
+/* 126 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7585,17 +7500,17 @@ var Subscription = function () {
 
 
 /***/ }),
-/* 128 */
+/* 127 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* unused harmony export createConnect */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_connectAdvanced__ = __webpack_require__(50);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__utils_shallowEqual__ = __webpack_require__(129);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__mapDispatchToProps__ = __webpack_require__(130);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__mapStateToProps__ = __webpack_require__(140);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__mergeProps__ = __webpack_require__(141);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__selectorFactory__ = __webpack_require__(142);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__utils_shallowEqual__ = __webpack_require__(128);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__mapDispatchToProps__ = __webpack_require__(129);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__mapStateToProps__ = __webpack_require__(139);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__mergeProps__ = __webpack_require__(140);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__selectorFactory__ = __webpack_require__(141);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
@@ -7701,7 +7616,7 @@ function createConnect() {
 /* harmony default export */ __webpack_exports__["a"] = (createConnect());
 
 /***/ }),
-/* 129 */
+/* 128 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7738,14 +7653,14 @@ function shallowEqual(objA, objB) {
 }
 
 /***/ }),
-/* 130 */
+/* 129 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* unused harmony export whenMapDispatchToPropsIsFunction */
 /* unused harmony export whenMapDispatchToPropsIsMissing */
 /* unused harmony export whenMapDispatchToPropsIsObject */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_redux__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_redux__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__wrapMapToProps__ = __webpack_require__(51);
 
 
@@ -7769,13 +7684,13 @@ function whenMapDispatchToPropsIsObject(mapDispatchToProps) {
 /* harmony default export */ __webpack_exports__["a"] = ([whenMapDispatchToPropsIsFunction, whenMapDispatchToPropsIsMissing, whenMapDispatchToPropsIsObject]);
 
 /***/ }),
-/* 131 */
+/* 130 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__baseGetTag_js__ = __webpack_require__(132);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__getPrototype_js__ = __webpack_require__(137);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__isObjectLike_js__ = __webpack_require__(139);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__baseGetTag_js__ = __webpack_require__(131);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__getPrototype_js__ = __webpack_require__(136);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__isObjectLike_js__ = __webpack_require__(138);
 
 
 
@@ -7841,13 +7756,13 @@ function isPlainObject(value) {
 
 
 /***/ }),
-/* 132 */
+/* 131 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Symbol_js__ = __webpack_require__(53);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__getRawTag_js__ = __webpack_require__(135);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__objectToString_js__ = __webpack_require__(136);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__getRawTag_js__ = __webpack_require__(134);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__objectToString_js__ = __webpack_require__(135);
 
 
 
@@ -7879,11 +7794,11 @@ function baseGetTag(value) {
 
 
 /***/ }),
-/* 133 */
+/* 132 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__freeGlobal_js__ = __webpack_require__(134);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__freeGlobal_js__ = __webpack_require__(133);
 
 
 /** Detect free variable `self`. */
@@ -7896,7 +7811,7 @@ var root = __WEBPACK_IMPORTED_MODULE_0__freeGlobal_js__["a" /* default */] || fr
 
 
 /***/ }),
-/* 134 */
+/* 133 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7908,7 +7823,7 @@ var freeGlobal = typeof global == 'object' && global && global.Object === Object
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(48)))
 
 /***/ }),
-/* 135 */
+/* 134 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7962,7 +7877,7 @@ function getRawTag(value) {
 
 
 /***/ }),
-/* 136 */
+/* 135 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7991,11 +7906,11 @@ function objectToString(value) {
 
 
 /***/ }),
-/* 137 */
+/* 136 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__overArg_js__ = __webpack_require__(138);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__overArg_js__ = __webpack_require__(137);
 
 
 /** Built-in value references. */
@@ -8005,7 +7920,7 @@ var getPrototype = Object(__WEBPACK_IMPORTED_MODULE_0__overArg_js__["a" /* defau
 
 
 /***/ }),
-/* 138 */
+/* 137 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8027,7 +7942,7 @@ function overArg(func, transform) {
 
 
 /***/ }),
-/* 139 */
+/* 138 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8063,7 +7978,7 @@ function isObjectLike(value) {
 
 
 /***/ }),
-/* 140 */
+/* 139 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8085,7 +8000,7 @@ function whenMapStateToPropsIsMissing(mapStateToProps) {
 /* harmony default export */ __webpack_exports__["a"] = ([whenMapStateToPropsIsFunction, whenMapStateToPropsIsMissing]);
 
 /***/ }),
-/* 141 */
+/* 140 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8141,14 +8056,14 @@ function whenMergePropsIsOmitted(mergeProps) {
 /* harmony default export */ __webpack_exports__["a"] = ([whenMergePropsIsFunction, whenMergePropsIsOmitted]);
 
 /***/ }),
-/* 142 */
+/* 141 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* unused harmony export impureFinalPropsSelectorFactory */
 /* unused harmony export pureFinalPropsSelectorFactory */
 /* harmony export (immutable) */ __webpack_exports__["a"] = finalPropsSelectorFactory;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__verifySubselectors__ = __webpack_require__(143);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__verifySubselectors__ = __webpack_require__(142);
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
 
@@ -8253,12 +8168,12 @@ function finalPropsSelectorFactory(dispatch, _ref2) {
 }
 
 /***/ }),
-/* 143 */
+/* 142 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* unused harmony export default */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__utils_warning__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__utils_warning__ = __webpack_require__(30);
 
 
 function verify(selector, methodName, displayName) {
@@ -8278,6 +8193,92 @@ function verifySubselectors(mapStateToProps, mapDispatchToProps, mergeProps, dis
 }
 
 /***/ }),
+/* 143 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactRedux = __webpack_require__(5);
+
+var _exampleLayout = __webpack_require__(7);
+
+var _exampleLayout2 = _interopRequireDefault(_exampleLayout);
+
+var _leftListAction = __webpack_require__(17);
+
+var _leftListAction2 = _interopRequireDefault(_leftListAction);
+
+var _rightListAction = __webpack_require__(18);
+
+var _rightListAction2 = _interopRequireDefault(_rightListAction);
+
+var _userAdder = __webpack_require__(144);
+
+var _userAdder2 = _interopRequireDefault(_userAdder);
+
+var _userListLeft = __webpack_require__(146);
+
+var _userListLeft2 = _interopRequireDefault(_userListLeft);
+
+var _userListRight = __webpack_require__(148);
+
+var _userListRight2 = _interopRequireDefault(_userListRight);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var App = function App(_ref) {
+  var dispatch = _ref.dispatch;
+
+  var content = [];
+  dispatch(_leftListAction2.default.init());
+  dispatch(_rightListAction2.default.init());
+  content.push(_react2.default.createElement(
+    _exampleLayout2.default.Wrapper,
+    { className: 'example-userList' },
+    _react2.default.createElement(
+      _exampleLayout2.default.Part,
+      null,
+      _react2.default.createElement(
+        _exampleLayout2.default.Title,
+        null,
+        'Example - Redux'
+      )
+    ),
+    _react2.default.createElement(
+      _exampleLayout2.default.Part,
+      null,
+      _react2.default.createElement(_userAdder2.default, null)
+    ),
+    _react2.default.createElement(
+      _exampleLayout2.default.Part,
+      null,
+      _react2.default.createElement(
+        _exampleLayout2.default.InlineBlock,
+        null,
+        _react2.default.createElement(_userListLeft2.default, null)
+      ),
+      _react2.default.createElement(
+        _exampleLayout2.default.InlineBlock,
+        null,
+        _react2.default.createElement(_userListRight2.default, null)
+      )
+    )
+  ));
+  return content;
+};
+
+exports.default = (0, _reactRedux.connect)()(App);
+
+/***/ }),
 /* 144 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -8292,103 +8293,21 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRedux = __webpack_require__(6);
-
-var _leftListAction = __webpack_require__(16);
-
-var _leftListAction2 = _interopRequireDefault(_leftListAction);
-
-var _rightListAction = __webpack_require__(17);
-
-var _rightListAction2 = _interopRequireDefault(_rightListAction);
-
-var _userAdder = __webpack_require__(145);
-
-var _userAdder2 = _interopRequireDefault(_userAdder);
-
-var _userListLeft = __webpack_require__(147);
-
-var _userListLeft2 = _interopRequireDefault(_userListLeft);
-
-var _userListRight = __webpack_require__(149);
-
-var _userListRight2 = _interopRequireDefault(_userListRight);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var App = function App(_ref) {
-  var dispatch = _ref.dispatch;
-
-  var content = [];
-  dispatch(_leftListAction2.default.init());
-  dispatch(_rightListAction2.default.init());
-  content.push(_react2.default.createElement(
-    'div',
-    { className: 'example-wrapper example-userList' },
-    _react2.default.createElement(
-      'div',
-      { className: 'example-part' },
-      _react2.default.createElement(
-        'div',
-        { className: 'example-headerTitle' },
-        'Example - Redux'
-      )
-    ),
-    _react2.default.createElement(
-      'div',
-      { className: 'example-part' },
-      _react2.default.createElement(_userAdder2.default, null)
-    ),
-    _react2.default.createElement(
-      'div',
-      { className: 'example-part' },
-      _react2.default.createElement(
-        'div',
-        { className: 'example-block' },
-        _react2.default.createElement(_userListLeft2.default, null)
-      ),
-      _react2.default.createElement(
-        'div',
-        { className: 'example-block' },
-        _react2.default.createElement(_userListRight2.default, null)
-      )
-    )
-  ));
-  return content;
-};
-
-exports.default = (0, _reactRedux.connect)()(App);
-
-/***/ }),
-/* 145 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactRedux = __webpack_require__(6);
+var _reactRedux = __webpack_require__(5);
 
 var _reactFontawesome = __webpack_require__(1);
 
 var _reactFontawesome2 = _interopRequireDefault(_reactFontawesome);
 
-var _leftListAction = __webpack_require__(16);
+var _leftListAction = __webpack_require__(17);
 
 var _leftListAction2 = _interopRequireDefault(_leftListAction);
 
-var _rightListAction = __webpack_require__(17);
+var _rightListAction = __webpack_require__(18);
 
 var _rightListAction2 = _interopRequireDefault(_rightListAction);
 
-var _userAdder = __webpack_require__(146);
+var _userAdder = __webpack_require__(145);
 
 var _userAdder2 = _interopRequireDefault(_userAdder);
 
@@ -8419,7 +8338,7 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(_userAdder2.default);
 
 /***/ }),
-/* 146 */
+/* 145 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8437,6 +8356,10 @@ var _reactFontawesome = __webpack_require__(1);
 
 var _reactFontawesome2 = _interopRequireDefault(_reactFontawesome);
 
+var _exampleLayout = __webpack_require__(7);
+
+var _exampleLayout2 = _interopRequireDefault(_exampleLayout);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var DATAMEMBERS = 5;
@@ -8453,57 +8376,53 @@ var UserAdder = function UserAdder(_ref) {
   var content = [];
   var formList = {};
   content.push(_react2.default.createElement(
-    'div',
-    { className: 'userList-add' },
-    _react2.default.createElement('input', { className: 'userList-input', type: 'text', maxLength: '10', ref: function ref(node) {
-        formList['userName'] = node;
-      }, placeholder: 'Enter 1-10 character(s).' })
-  ));
-  content.push(_react2.default.createElement(
-    'div',
-    { className: 'example-block' },
+    _exampleLayout2.default.Block,
+    null,
     _react2.default.createElement(
       'div',
-      { className: 'example-title' },
+      { className: 'userList-add' },
+      _react2.default.createElement('input', { className: 'userList-input', type: 'text', maxLength: '10', ref: function ref(node) {
+          formList['userName'] = node;
+        }, placeholder: 'Enter 1-10 character(s).' })
+    )
+  ));
+  content.push(_react2.default.createElement(
+    _exampleLayout2.default.InlineBlock,
+    null,
+    _react2.default.createElement(
+      'div',
+      { className: 'userList-add' },
       _react2.default.createElement(
-        'div',
-        { className: 'userList-add' },
+        'button',
+        { className: 'userList-addButton', onClick: function onClick() {
+            addUserLeftHandler();
+          }, style: { 'vertical-align': 'bottom' } },
         _react2.default.createElement(
-          'button',
-          { className: 'userList-addButton', onClick: function onClick() {
-              addUserLeftHandler();
-            }, style: { 'vertical-align': 'bottom' } },
-          _react2.default.createElement(
-            'span',
-            null,
-            'Left'
-          ),
-          _react2.default.createElement(_reactFontawesome2.default, { name: 'plus-square', fixedWidth: true })
-        )
+          'span',
+          null,
+          'Left'
+        ),
+        _react2.default.createElement(_reactFontawesome2.default, { name: 'plus-square', fixedWidth: true })
       )
     )
   ));
   content.push(_react2.default.createElement(
-    'div',
-    { className: 'example-block' },
+    _exampleLayout2.default.InlineBlock,
+    null,
     _react2.default.createElement(
       'div',
-      { className: 'example-title' },
+      { className: 'userList-add' },
       _react2.default.createElement(
-        'div',
-        { className: 'userList-add' },
+        'button',
+        { className: 'userList-addButton', onClick: function onClick() {
+            addUserRightHandler();
+          }, style: { 'vertical-align': 'bottom' } },
         _react2.default.createElement(
-          'button',
-          { className: 'userList-addButton', onClick: function onClick() {
-              addUserRightHandler();
-            }, style: { 'vertical-align': 'bottom' } },
-          _react2.default.createElement(
-            'span',
-            null,
-            'Right'
-          ),
-          _react2.default.createElement(_reactFontawesome2.default, { name: 'plus-square', fixedWidth: true })
-        )
+          'span',
+          null,
+          'Right'
+        ),
+        _react2.default.createElement(_reactFontawesome2.default, { name: 'plus-square', fixedWidth: true })
       )
     )
   ));
@@ -8545,7 +8464,7 @@ var UserAdder = function UserAdder(_ref) {
 exports.default = UserAdder;
 
 /***/ }),
-/* 147 */
+/* 146 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8555,17 +8474,17 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _reactRedux = __webpack_require__(6);
+var _reactRedux = __webpack_require__(5);
 
-var _leftListAction = __webpack_require__(16);
+var _leftListAction = __webpack_require__(17);
 
 var _leftListAction2 = _interopRequireDefault(_leftListAction);
 
-var _rightListAction = __webpack_require__(17);
+var _rightListAction = __webpack_require__(18);
 
 var _rightListAction2 = _interopRequireDefault(_rightListAction);
 
-var _leftList = __webpack_require__(148);
+var _leftList = __webpack_require__(147);
 
 var _leftList2 = _interopRequireDefault(_leftList);
 
@@ -8597,7 +8516,7 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(_leftList2.default);
 
 /***/ }),
-/* 148 */
+/* 147 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8677,7 +8596,7 @@ var LeftList = function LeftList(_ref) {
 exports.default = LeftList;
 
 /***/ }),
-/* 149 */
+/* 148 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8687,17 +8606,17 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _reactRedux = __webpack_require__(6);
+var _reactRedux = __webpack_require__(5);
 
-var _leftListAction = __webpack_require__(16);
+var _leftListAction = __webpack_require__(17);
 
 var _leftListAction2 = _interopRequireDefault(_leftListAction);
 
-var _rightListAction = __webpack_require__(17);
+var _rightListAction = __webpack_require__(18);
 
 var _rightListAction2 = _interopRequireDefault(_rightListAction);
 
-var _rightList = __webpack_require__(150);
+var _rightList = __webpack_require__(149);
 
 var _rightList2 = _interopRequireDefault(_rightList);
 
@@ -8729,7 +8648,7 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(_rightList2.default);
 
 /***/ }),
-/* 150 */
+/* 149 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8809,7 +8728,7 @@ var RightList = function RightList(_ref) {
 exports.default = RightList;
 
 /***/ }),
-/* 151 */
+/* 150 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8819,13 +8738,13 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _redux = __webpack_require__(11);
+var _redux = __webpack_require__(12);
 
-var _leftList = __webpack_require__(152);
+var _leftList = __webpack_require__(151);
 
 var _leftList2 = _interopRequireDefault(_leftList);
 
-var _rightList = __webpack_require__(153);
+var _rightList = __webpack_require__(152);
 
 var _rightList2 = _interopRequireDefault(_rightList);
 
@@ -8839,7 +8758,7 @@ var reducers = (0, _redux.combineReducers)({
 exports.default = reducers;
 
 /***/ }),
-/* 152 */
+/* 151 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8937,7 +8856,7 @@ var ReducerLeft = function ReducerLeft() {
 exports.default = ReducerLeft;
 
 /***/ }),
-/* 153 */
+/* 152 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9035,7 +8954,7 @@ var ReducerRight = function ReducerRight() {
 exports.default = ReducerRight;
 
 /***/ }),
-/* 154 */
+/* 153 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9049,15 +8968,15 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _redux = __webpack_require__(11);
+var _redux = __webpack_require__(12);
 
-var _reactRedux = __webpack_require__(6);
+var _reactRedux = __webpack_require__(5);
 
-var _app = __webpack_require__(155);
+var _app = __webpack_require__(154);
 
 var _app2 = _interopRequireDefault(_app);
 
-var _index = __webpack_require__(162);
+var _index = __webpack_require__(161);
 
 var _index2 = _interopRequireDefault(_index);
 
@@ -9078,6 +8997,93 @@ var Index = function Index(props) {
 exports.default = Index;
 
 /***/ }),
+/* 154 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactRedux = __webpack_require__(5);
+
+var _exampleLayout = __webpack_require__(7);
+
+var _exampleLayout2 = _interopRequireDefault(_exampleLayout);
+
+var _leftListAction = __webpack_require__(19);
+
+var _leftListAction2 = _interopRequireDefault(_leftListAction);
+
+var _rightListAction = __webpack_require__(20);
+
+var _rightListAction2 = _interopRequireDefault(_rightListAction);
+
+var _userAdder = __webpack_require__(155);
+
+var _userAdder2 = _interopRequireDefault(_userAdder);
+
+var _userListLeft = __webpack_require__(157);
+
+var _userListLeft2 = _interopRequireDefault(_userListLeft);
+
+var _userListRight = __webpack_require__(159);
+
+var _userListRight2 = _interopRequireDefault(_userListRight);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var App = function App(_ref) {
+  var dispatch = _ref.dispatch;
+
+  var content = [];
+  dispatch(_leftListAction2.default.init());
+  dispatch(_rightListAction2.default.init());
+  content.push(_react2.default.createElement(
+    _exampleLayout2.default.Wrapper,
+    { className: 'example-userList' },
+    _react2.default.createElement(
+      _exampleLayout2.default.Part,
+      null,
+      _react2.default.createElement(
+        _exampleLayout2.default.Title,
+        null,
+        'Example - Redux with server'
+      )
+    ),
+    _react2.default.createElement(
+      _exampleLayout2.default.Part,
+      null,
+      _react2.default.createElement(_userAdder2.default, null)
+    ),
+    _react2.default.createElement(
+      _exampleLayout2.default.Part,
+      null,
+      _react2.default.createElement(
+        _exampleLayout2.default.InlineBlock,
+        null,
+        _react2.default.createElement(_userListLeft2.default, null)
+      ),
+      _react2.default.createElement(
+        _exampleLayout2.default.InlineBlock,
+        null,
+        ' ',
+        _react2.default.createElement(_userListRight2.default, null)
+      )
+    )
+  ));
+  return content;
+};
+
+exports.default = (0, _reactRedux.connect)()(App);
+
+/***/ }),
 /* 155 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -9092,103 +9098,21 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRedux = __webpack_require__(6);
-
-var _leftListAction = __webpack_require__(18);
-
-var _leftListAction2 = _interopRequireDefault(_leftListAction);
-
-var _rightListAction = __webpack_require__(19);
-
-var _rightListAction2 = _interopRequireDefault(_rightListAction);
-
-var _userAdder = __webpack_require__(156);
-
-var _userAdder2 = _interopRequireDefault(_userAdder);
-
-var _userListLeft = __webpack_require__(158);
-
-var _userListLeft2 = _interopRequireDefault(_userListLeft);
-
-var _userListRight = __webpack_require__(160);
-
-var _userListRight2 = _interopRequireDefault(_userListRight);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var App = function App(_ref) {
-  var dispatch = _ref.dispatch;
-
-  var content = [];
-  dispatch(_leftListAction2.default.init());
-  dispatch(_rightListAction2.default.init());
-  content.push(_react2.default.createElement(
-    'div',
-    { className: 'example-wrapper example-userList' },
-    _react2.default.createElement(
-      'div',
-      { className: 'example-part' },
-      _react2.default.createElement(
-        'div',
-        { className: 'example-headerTitle' },
-        'Example - Redux with server'
-      )
-    ),
-    _react2.default.createElement(
-      'div',
-      { className: 'example-part' },
-      _react2.default.createElement(_userAdder2.default, null)
-    ),
-    _react2.default.createElement(
-      'div',
-      { className: 'example-part' },
-      _react2.default.createElement(
-        'div',
-        { className: 'example-block' },
-        _react2.default.createElement(_userListLeft2.default, null)
-      ),
-      _react2.default.createElement(
-        'div',
-        { className: 'example-block' },
-        _react2.default.createElement(_userListRight2.default, null)
-      )
-    )
-  ));
-  return content;
-};
-
-exports.default = (0, _reactRedux.connect)()(App);
-
-/***/ }),
-/* 156 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactRedux = __webpack_require__(6);
+var _reactRedux = __webpack_require__(5);
 
 var _reactFontawesome = __webpack_require__(1);
 
 var _reactFontawesome2 = _interopRequireDefault(_reactFontawesome);
 
-var _leftListAction = __webpack_require__(18);
+var _leftListAction = __webpack_require__(19);
 
 var _leftListAction2 = _interopRequireDefault(_leftListAction);
 
-var _rightListAction = __webpack_require__(19);
+var _rightListAction = __webpack_require__(20);
 
 var _rightListAction2 = _interopRequireDefault(_rightListAction);
 
-var _userAdder = __webpack_require__(157);
+var _userAdder = __webpack_require__(156);
 
 var _userAdder2 = _interopRequireDefault(_userAdder);
 
@@ -9219,7 +9143,7 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(_userAdder2.default);
 
 /***/ }),
-/* 157 */
+/* 156 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9237,6 +9161,10 @@ var _reactFontawesome = __webpack_require__(1);
 
 var _reactFontawesome2 = _interopRequireDefault(_reactFontawesome);
 
+var _exampleLayout = __webpack_require__(7);
+
+var _exampleLayout2 = _interopRequireDefault(_exampleLayout);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var DATAMEMBERS = 5;
@@ -9253,57 +9181,53 @@ var UserAdder = function UserAdder(_ref) {
   var content = [];
   var formList = {};
   content.push(_react2.default.createElement(
-    'div',
-    { className: 'userList-add' },
-    _react2.default.createElement('input', { className: 'userList-input', type: 'text', maxLength: '10', ref: function ref(node) {
-        formList['userName'] = node;
-      }, placeholder: 'Enter 1-10 character(s).' })
-  ));
-  content.push(_react2.default.createElement(
-    'div',
-    { className: 'example-block' },
+    _exampleLayout2.default.Block,
+    null,
     _react2.default.createElement(
       'div',
-      { className: 'example-title' },
+      { className: 'userList-add' },
+      _react2.default.createElement('input', { className: 'userList-input', type: 'text', maxLength: '10', ref: function ref(node) {
+          formList['userName'] = node;
+        }, placeholder: 'Enter 1-10 character(s).' })
+    )
+  ));
+  content.push(_react2.default.createElement(
+    _exampleLayout2.default.InlineBlock,
+    null,
+    _react2.default.createElement(
+      'div',
+      { className: 'userList-add' },
       _react2.default.createElement(
-        'div',
-        { className: 'userList-add' },
+        'button',
+        { className: 'userList-addButton', onClick: function onClick() {
+            addUserLeftHandler();
+          }, style: { 'vertical-align': 'bottom' } },
         _react2.default.createElement(
-          'button',
-          { className: 'userList-addButton', onClick: function onClick() {
-              addUserLeftHandler();
-            }, style: { 'vertical-align': 'bottom' } },
-          _react2.default.createElement(
-            'span',
-            null,
-            'Left'
-          ),
-          _react2.default.createElement(_reactFontawesome2.default, { name: 'plus-square', fixedWidth: true })
-        )
+          'span',
+          null,
+          'Left'
+        ),
+        _react2.default.createElement(_reactFontawesome2.default, { name: 'plus-square', fixedWidth: true })
       )
     )
   ));
   content.push(_react2.default.createElement(
-    'div',
-    { className: 'example-block' },
+    _exampleLayout2.default.InlineBlock,
+    null,
     _react2.default.createElement(
       'div',
-      { className: 'example-title' },
+      { className: 'userList-add' },
       _react2.default.createElement(
-        'div',
-        { className: 'userList-add' },
+        'button',
+        { className: 'userList-addButton', onClick: function onClick() {
+            addUserRightHandler();
+          }, style: { 'vertical-align': 'bottom' } },
         _react2.default.createElement(
-          'button',
-          { className: 'userList-addButton', onClick: function onClick() {
-              addUserRightHandler();
-            }, style: { 'vertical-align': 'bottom' } },
-          _react2.default.createElement(
-            'span',
-            null,
-            'Right'
-          ),
-          _react2.default.createElement(_reactFontawesome2.default, { name: 'plus-square', fixedWidth: true })
-        )
+          'span',
+          null,
+          'Right'
+        ),
+        _react2.default.createElement(_reactFontawesome2.default, { name: 'plus-square', fixedWidth: true })
       )
     )
   ));
@@ -9345,7 +9269,7 @@ var UserAdder = function UserAdder(_ref) {
 exports.default = UserAdder;
 
 /***/ }),
-/* 158 */
+/* 157 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9355,17 +9279,17 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _reactRedux = __webpack_require__(6);
+var _reactRedux = __webpack_require__(5);
 
-var _leftListAction = __webpack_require__(18);
+var _leftListAction = __webpack_require__(19);
 
 var _leftListAction2 = _interopRequireDefault(_leftListAction);
 
-var _rightListAction = __webpack_require__(19);
+var _rightListAction = __webpack_require__(20);
 
 var _rightListAction2 = _interopRequireDefault(_rightListAction);
 
-var _leftList = __webpack_require__(159);
+var _leftList = __webpack_require__(158);
 
 var _leftList2 = _interopRequireDefault(_leftList);
 
@@ -9397,7 +9321,7 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(_leftList2.default);
 
 /***/ }),
-/* 159 */
+/* 158 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9477,7 +9401,7 @@ var LeftList = function LeftList(_ref) {
 exports.default = LeftList;
 
 /***/ }),
-/* 160 */
+/* 159 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9487,17 +9411,17 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _reactRedux = __webpack_require__(6);
+var _reactRedux = __webpack_require__(5);
 
-var _leftListAction = __webpack_require__(18);
+var _leftListAction = __webpack_require__(19);
 
 var _leftListAction2 = _interopRequireDefault(_leftListAction);
 
-var _rightListAction = __webpack_require__(19);
+var _rightListAction = __webpack_require__(20);
 
 var _rightListAction2 = _interopRequireDefault(_rightListAction);
 
-var _rightList = __webpack_require__(161);
+var _rightList = __webpack_require__(160);
 
 var _rightList2 = _interopRequireDefault(_rightList);
 
@@ -9529,7 +9453,7 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(_rightList2.default);
 
 /***/ }),
-/* 161 */
+/* 160 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9609,7 +9533,7 @@ var RightList = function RightList(_ref) {
 exports.default = RightList;
 
 /***/ }),
-/* 162 */
+/* 161 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9619,13 +9543,13 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _redux = __webpack_require__(11);
+var _redux = __webpack_require__(12);
 
-var _leftList = __webpack_require__(163);
+var _leftList = __webpack_require__(162);
 
 var _leftList2 = _interopRequireDefault(_leftList);
 
-var _rightList = __webpack_require__(164);
+var _rightList = __webpack_require__(163);
 
 var _rightList2 = _interopRequireDefault(_rightList);
 
@@ -9639,7 +9563,7 @@ var reducers = (0, _redux.combineReducers)({
 exports.default = reducers;
 
 /***/ }),
-/* 163 */
+/* 162 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9694,7 +9618,7 @@ var LeftList = function LeftList() {
 exports.default = LeftList;
 
 /***/ }),
-/* 164 */
+/* 163 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9749,997 +9673,19 @@ var RightList = function RightList() {
 exports.default = RightList;
 
 /***/ }),
-/* 165 */
+/* 164 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "images/articleRedux.png";
 
 /***/ }),
-/* 166 */
+/* 165 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "images/articleRedux_server.png";
 
 /***/ }),
-/* 167 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactFontawesome = __webpack_require__(1);
-
-var _reactFontawesome2 = _interopRequireDefault(_reactFontawesome);
-
-var _app = __webpack_require__(168);
-
-var _app2 = _interopRequireDefault(_app);
-
-var _app3 = __webpack_require__(170);
-
-var _app4 = _interopRequireDefault(_app3);
-
-var _articleComponent_PnC_example = __webpack_require__(175);
-
-var _articleComponent_PnC_example2 = _interopRequireDefault(_articleComponent_PnC_example);
-
-var _articleComponent_PnC = __webpack_require__(176);
-
-var _articleComponent_PnC2 = _interopRequireDefault(_articleComponent_PnC);
-
-var _layout = __webpack_require__(5);
-
-var _layout2 = _interopRequireDefault(_layout);
-
-var _articleRedirecter = __webpack_require__(30);
-
-var _articleRedirecter2 = _interopRequireDefault(_articleRedirecter);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var mainTitle = 'Component: Presentational and Container';
-var mainDescriptionStr = 'Conceptual Introduction and simple example';
-
-var introductionTitle = 'INTRODUCTION';
-var introductionContent = _react2.default.createElement(
-  'span',
-  null,
-  'There is a optional thinking in design webside codebase structure(at least for me). The component could be distinguished into two concepts: ',
-  _react2.default.createElement(
-    'a',
-    { target: '_blank', href: 'https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0' },
-    'presentational and container',
-    _react2.default.createElement(_reactFontawesome2.default, { name: 'external-link', fixedWidth: true })
-  ),
-  '. There is some articles about them already. But some people may get confuse to know or to use. But here just use a simple angle to intruduce them as when I learn by myself. Hope it is useful for you.'
-);
-
-var introductionExampleTitle = 'Example';
-var introductionExampleContent = 'The following shown is a user list basically same as the example of Flux introduction, But I made a little change to draw the data out to imitate fetching data from server API.';
-var introductionExampleImageDescription = 'To show the User List. We just need to refer the component to where we want.';
-var introductionExampleAlgorithmDescription = _react2.default.createElement(
-  'span',
-  null,
-  'Comparing my ',
-  _react2.default.createElement(
-    'a',
-    { target: '_blank', href: 'https://github.com/BlackToolBoxLaboratory/blacktbox-demo/tree/master/src/example/articleComponent_PnC/example' },
-    'Example',
-    _react2.default.createElement(_reactFontawesome2.default, { name: 'external-link', fixedWidth: true })
-  ),
-  ', I simplify the source code for more focus on the construction and add some notation, like this:'
-);
-
-var introductionComponentTitle = 'Presentational and Container';
-var introductionComponentContent = 'In original, we only create a component to implement the User List. And now, we will separate the component into two part called presentational(presentational component in short) and container. Here is an easy rule to distinguish them by \'Where the data they used is fetched from?\' The data presentational used is came from other component(props inherit, imported ... etc). The other data container used is the \'Store\'. And mostly the store is fetched from server API. And if your components do not need state and life cycle. There may be more appropriate to use functional stateless component to create(Not neccessary move, depend on case). And with the following picture, you will see the source code of example about presentational and container individually. And in our case , the component map will be:';
-
-var introductionComponentMainTitle = 'Presentational: main';
-var introductionComponentMainContent = 'To render the outline the component. Cause it does not need render with data, we use stateless functino to create.';
-var introductionComponentAddUserTitle = 'Presentational: add user';
-var introductionComponentAddUserContent = 'To render component to add user to list. Cause I want to use \'ref\' work here, I choose stateful function here. You could use stateless function with HTML DOM as well.';
-var introductionComponentDeleteUserTitle = 'Presentational: delete user';
-var introductionComponentDeleteUserContent = 'To render component to add user to list. Here is a stateless function.';
-var introductionComponentContainerTitle = 'Container';
-var introductionComponentContainerContent = 'To render the component with data.';
-
-var productionTitle = 'PRODUCTION';
-var productionContent = _react2.default.createElement(
-  'span',
-  null,
-  'Here we go! This is the example separate component into Presentational component and Container. And the source code is ',
-  _react2.default.createElement(
-    'a',
-    { target: '_blank', href: 'https://github.com/BlackToolBoxLaboratory/blacktbox-demo/tree/master/src/example/articleComponent_PnC/exampleComponent_PnC' },
-    'here',
-    _react2.default.createElement(_reactFontawesome2.default, { name: 'external-link', fixedWidth: true })
-  )
-);
-
-var noticeTitle = 'NOTICE';
-var noticeContent = _react2.default.createElement(
-  'span',
-  null,
-  'I use the Presentational and Containter thinking first time when I write this introduction. In my experience, the design thinking is depend on how do you disintegrate your layout into components. There is unnecessary to strictly separate to Presentational and Containter. You cloud keep some Presentational in Container for some kind of convenience. Same as the ',
-  _react2.default.createElement(
-    'a',
-    { target: '_blank', href: 'https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0' },
-    'original article',
-    _react2.default.createElement(_reactFontawesome2.default, { name: 'external-link', fixedWidth: true })
-  ),
-  ' mentioned: "the presentational components and the containers is not a technical one. Rather, it is a distinction in their purpose." Clear Definition is the most important step in design.'
-);
-
-var EXAMPLE_BASIC_ALGORITHM = '<!-- Require or Import what you need -->\n\n<!-- Start: Define the component of User list -->\nclass Example extends Component {\n  /* [Presentational] [Container]: render presentational and container */\n  render () {...};\n\n  fetchData () {\n    /* [Container]: fetch data and used by container */\n  };\n};\n<!-- End: Define the component of User list -->\n\n<!-- Export component -->\n';
-var EXAMPLE_COMPONENT_PRESENTATIONAL_MAIN = '<!-- Require or Import what you need -->\nimport React from \'react\'; /* must be */\n\n/* container */\nimport UserList from \'../containers/exampleContainer.js\';\n\nconst App = () => {\n  let content = [];\n  /* [Presentational]: render, here include container */\n  content.push(...);\n  return content;\n};\n\n<!-- Export component -->\n';
-var EXAMPLE_COMPONENT_PRESENTATIONAL_ADDUSER = '<!-- Require or Import what you need -->\n\nimport ServerAPI from \'../serverAPIs/serverAPI.js\';\n\nclass AddUser extends Component {\n  constructor (props) {\n    super(props);\n    this.env = {\n      \'dataCounter\': 0,\n      \'dataLimit\': 0,\n      \'refreshHandler\': function(){}\n    };\n  };\n  componentWillUpdate (nextProps, nextState) {\n    this.updateData(nextProps);\n  };\n  render () {\n    let content = [];\n    /* [Presentational]: render */\n    content.push(...);\n    return content;\n  };\n\n  updateData (props) {...};\n\n  _addHandler () {...};\n};\n\n<!-- Export component -->\n';
-var EXAMPLE_COMPONENT_PRESENTATIONAL_DELETEUSER = '<!-- Require or Import what you need -->\n\nimport ServerAPI from \'../serverAPIs/serverAPI.js\';\n\nconst DeleteUser = (props) => {\n  const _deleteHandler = () => {...};\n  let content = [];\n  /* [Presentational]: render */\n  content.push(...);\n  return content;\n};\n\n<!-- Export component -->\n';
-var EXAMPLE_COMPONENT_CONTAINER = '<!-- Require or Import what you need -->\n\nimport ServerAPI from \'../serverAPIs/serverAPI.js\';\n\nimport AddUser from \'../components/exampleComponent_addUser.js\';\nimport DeleteUser from \'../components/exampleComponent_deleteUser.js\';\n\nclass App extends Component {\n  constructor (props) {\n    super(props);\n    this.dataList = new Array();\n  };\n  componentDidMount () {\n    this.fetchData();\n  };\n  render () {\n    let content = [];\n    /* [Container]: render, here include AddUser and DeleteUser */\n    content.push(...);\n    return content;\n  };\n\n  /* [serverAPI]: fetch data from server */\n  fetchData () {...};\n\n  _refreshHandler() {...};\n};\n\n<!-- Export component -->\n';
-
-var Index = function Index(props) {
-  var content = [];
-  content.push(_react2.default.createElement(
-    'div',
-    { className: 'wrapper wrapper-basic' },
-    _react2.default.createElement(
-      _layout2.default.MainTitle,
-      null,
-      mainTitle
-    ),
-    _react2.default.createElement(
-      _layout2.default.MainDescription,
-      null,
-      mainDescriptionStr
-    ),
-    _react2.default.createElement(
-      _layout2.default.Section,
-      null,
-      _react2.default.createElement(
-        _layout2.default.SectionTitle,
-        null,
-        introductionTitle
-      ),
-      _react2.default.createElement(
-        _layout2.default.Content,
-        null,
-        introductionContent
-      ),
-      _react2.default.createElement(
-        _layout2.default.Content,
-        null,
-        _react2.default.createElement(
-          _layout2.default.SectionSubtitle,
-          null,
-          introductionExampleTitle
-        ),
-        _react2.default.createElement(
-          _layout2.default.Content,
-          null,
-          introductionExampleContent
-        ),
-        _react2.default.createElement(
-          _layout2.default.Item,
-          null,
-          _react2.default.createElement(_app2.default, null)
-        ),
-        _react2.default.createElement(
-          _layout2.default.Content,
-          null,
-          introductionExampleImageDescription
-        ),
-        _react2.default.createElement(
-          _layout2.default.Item,
-          null,
-          _react2.default.createElement('img', { src: _articleComponent_PnC_example2.default })
-        ),
-        _react2.default.createElement(
-          _layout2.default.Content,
-          null,
-          introductionExampleAlgorithmDescription
-        ),
-        _react2.default.createElement(
-          _layout2.default.Pre,
-          null,
-          EXAMPLE_BASIC_ALGORITHM
-        )
-      ),
-      _react2.default.createElement(
-        _layout2.default.Content,
-        null,
-        _react2.default.createElement(
-          _layout2.default.SectionSubtitle,
-          null,
-          introductionComponentTitle
-        ),
-        _react2.default.createElement(
-          _layout2.default.Content,
-          null,
-          introductionComponentContent
-        ),
-        _react2.default.createElement(
-          _layout2.default.Item,
-          null,
-          _react2.default.createElement('img', { src: _articleComponent_PnC2.default })
-        ),
-        _react2.default.createElement(
-          _layout2.default.Content,
-          null,
-          _react2.default.createElement(
-            _layout2.default.SectionSubtitle,
-            null,
-            introductionComponentMainTitle
-          ),
-          _react2.default.createElement(
-            _layout2.default.Content,
-            null,
-            introductionComponentMainContent
-          ),
-          _react2.default.createElement(
-            _layout2.default.Pre,
-            null,
-            EXAMPLE_COMPONENT_PRESENTATIONAL_MAIN
-          )
-        ),
-        _react2.default.createElement(
-          _layout2.default.Content,
-          null,
-          _react2.default.createElement(
-            _layout2.default.SectionSubtitle,
-            null,
-            introductionComponentAddUserTitle
-          ),
-          _react2.default.createElement(
-            _layout2.default.Content,
-            null,
-            introductionComponentAddUserContent
-          ),
-          _react2.default.createElement(
-            _layout2.default.Pre,
-            null,
-            EXAMPLE_COMPONENT_PRESENTATIONAL_ADDUSER
-          )
-        ),
-        _react2.default.createElement(
-          _layout2.default.Content,
-          null,
-          _react2.default.createElement(
-            _layout2.default.SectionSubtitle,
-            null,
-            introductionComponentDeleteUserTitle
-          ),
-          _react2.default.createElement(
-            _layout2.default.Content,
-            null,
-            introductionComponentDeleteUserContent
-          ),
-          _react2.default.createElement(
-            _layout2.default.Pre,
-            null,
-            EXAMPLE_COMPONENT_PRESENTATIONAL_DELETEUSER
-          )
-        ),
-        _react2.default.createElement(
-          _layout2.default.Content,
-          null,
-          _react2.default.createElement(
-            _layout2.default.SectionSubtitle,
-            null,
-            introductionComponentContainerTitle
-          ),
-          _react2.default.createElement(
-            _layout2.default.Content,
-            null,
-            introductionComponentContainerContent
-          ),
-          _react2.default.createElement(
-            _layout2.default.Pre,
-            null,
-            EXAMPLE_COMPONENT_CONTAINER
-          )
-        )
-      )
-    ),
-    _react2.default.createElement(
-      _layout2.default.Section,
-      null,
-      _react2.default.createElement(
-        _layout2.default.SectionTitle,
-        null,
-        productionTitle
-      ),
-      _react2.default.createElement(
-        _layout2.default.Content,
-        null,
-        productionContent
-      ),
-      _react2.default.createElement(
-        _layout2.default.Item,
-        null,
-        _react2.default.createElement(_app4.default, null)
-      )
-    ),
-    _react2.default.createElement(
-      _layout2.default.Section,
-      null,
-      _react2.default.createElement(
-        _layout2.default.SectionTitle,
-        null,
-        noticeTitle
-      ),
-      _react2.default.createElement(
-        _layout2.default.Content,
-        null,
-        noticeContent
-      )
-    ),
-    _react2.default.createElement(
-      _layout2.default.Section,
-      null,
-      _react2.default.createElement(
-        _layout2.default.BtnGroup,
-        null,
-        _react2.default.createElement(
-          _layout2.default.Btn,
-          null,
-          _react2.default.createElement(_articleRedirecter2.default, { redirectTo: 'BTB_ATCS' })
-        )
-      )
-    )
-  ));
-  return content;
-};
-
-exports.default = Index;
-
-/***/ }),
-/* 168 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _serverAPI = __webpack_require__(55);
-
-var _serverAPI2 = _interopRequireDefault(_serverAPI);
-
-var _exampleComponent = __webpack_require__(169);
-
-var _exampleComponent2 = _interopRequireDefault(_exampleComponent);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var App = function (_Component) {
-  _inherits(App, _Component);
-
-  function App(props) {
-    _classCallCheck(this, App);
-
-    return _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this, props));
-  }
-
-  _createClass(App, [{
-    key: 'componentWillMount',
-    value: function componentWillMount() {
-      _serverAPI2.default.initData();
-    }
-  }, {
-    key: 'render',
-    value: function render() {
-      var content = [];
-      content.push(_react2.default.createElement(_exampleComponent2.default, null));
-      return content;
-    }
-  }]);
-
-  return App;
-}(_react.Component);
-
-;
-
-exports.default = App;
-
-/***/ }),
-/* 169 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactDom = __webpack_require__(7);
-
-var _reactDom2 = _interopRequireDefault(_reactDom);
-
-var _reactFontawesome = __webpack_require__(1);
-
-var _reactFontawesome2 = _interopRequireDefault(_reactFontawesome);
-
-var _serverAPI = __webpack_require__(55);
-
-var _serverAPI2 = _interopRequireDefault(_serverAPI);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-function DataObj() {
-  this['uId'] = '';
-  this['name'] = '';
-};
-var DATAMEMBERS = 5;
-
-var App = function (_Component) {
-  _inherits(App, _Component);
-
-  function App(props) {
-    _classCallCheck(this, App);
-
-    var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this, props));
-
-    _this.dataList = new Array();
-    return _this;
-  }
-
-  _createClass(App, [{
-    key: 'componentDidMount',
-    value: function componentDidMount() {
-      this.fetchData();
-    }
-  }, {
-    key: 'render',
-    value: function render() {
-      var _this2 = this;
-
-      var content = [];
-      // presentational
-      content.push(_react2.default.createElement(
-        'div',
-        { className: 'example-wrapper example-userList' },
-        _react2.default.createElement(
-          'div',
-          { className: 'example-part' },
-          _react2.default.createElement(
-            'div',
-            { className: 'example-headerTitle' },
-            'Example'
-          )
-        ),
-        _react2.default.createElement(
-          'div',
-          { className: 'example-part' },
-          _react2.default.createElement(
-            'div',
-            { className: 'userList-add' },
-            _react2.default.createElement('input', { className: 'userList-input', type: 'text', maxLength: '10', ref: 'userName', placeholder: 'Enter 1-10 character(s).' }),
-            _react2.default.createElement(
-              'button',
-              { className: 'userList-addButton', onClick: function onClick() {
-                  _this2._addHandler();
-                } },
-              _react2.default.createElement(_reactFontawesome2.default, { name: 'plus-square', fixedWidth: true })
-            )
-          ),
-          _react2.default.createElement(
-            'ul',
-            { className: 'userList-list' },
-            0 < this.dataList.length ? this.dataList.map(function (entry) {
-              // container
-              var content_datalist_tr = [];
-              content_datalist_tr.push(_react2.default.createElement(
-                'li',
-                { className: 'userList-entry' },
-                _react2.default.createElement(
-                  'div',
-                  { className: 'userList-info' },
-                  entry['name'].substring(0, 1).toUpperCase() + entry['name'].substring(1)
-                ),
-                _react2.default.createElement(
-                  'div',
-                  { className: 'userList-deleteButton', onClick: function onClick() {
-                      _this2._deleteHandler(entry['uId']);
-                    } },
-                  _react2.default.createElement(_reactFontawesome2.default, { name: 'trash', fixedWidth: true })
-                )
-              ));
-              return content_datalist_tr;
-            }) : _react2.default.createElement(
-              'li',
-              { className: 'userList-entry' },
-              'No data available.'
-            )
-          )
-        )
-      ));
-      return content;
-    }
-  }, {
-    key: 'fetchData',
-    value: function fetchData() {
-      // fetch data and used by container
-      this.dataList = _serverAPI2.default.getData();
-      this.forceUpdate();
-    }
-  }, {
-    key: '_addHandler',
-    value: function _addHandler() {
-      var obj = new DataObj();
-      obj['name'] = _reactDom2.default.findDOMNode(this.refs['userName']).value.trim();
-      if ('' == obj['name']) {
-        alert('Input is empty.');
-        return;
-      };
-      if (DATAMEMBERS <= this.dataList.length) {
-        alert('User is full.');
-        return;
-      };
-      this.dataList = _serverAPI2.default.addData(obj);
-      _reactDom2.default.findDOMNode(this.refs['userName']).value = '';
-      this.forceUpdate();
-    }
-  }, {
-    key: '_deleteHandler',
-    value: function _deleteHandler(uId) {
-      var obj = new DataObj();
-      obj['uId'] = uId;
-      this.dataList = _serverAPI2.default.deleteData(obj);
-      this.forceUpdate();
-    }
-  }]);
-
-  return App;
-}(_react.Component);
-
-;
-
-exports.default = App;
-
-/***/ }),
-/* 170 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _serverAPI = __webpack_require__(20);
-
-var _serverAPI2 = _interopRequireDefault(_serverAPI);
-
-var _exampleComponent = __webpack_require__(171);
-
-var _exampleComponent2 = _interopRequireDefault(_exampleComponent);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var App = function (_Component) {
-  _inherits(App, _Component);
-
-  function App(props) {
-    _classCallCheck(this, App);
-
-    return _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this, props));
-  }
-
-  _createClass(App, [{
-    key: 'componentWillMount',
-    value: function componentWillMount() {
-      _serverAPI2.default.initData();
-    }
-  }, {
-    key: 'render',
-    value: function render() {
-      var content = [];
-      content.push(_react2.default.createElement(_exampleComponent2.default, null));
-      return content;
-    }
-  }]);
-
-  return App;
-}(_react.Component);
-
-;
-
-exports.default = App;
-
-/***/ }),
-/* 171 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _exampleContainer = __webpack_require__(172);
-
-var _exampleContainer2 = _interopRequireDefault(_exampleContainer);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var App = function App() {
-  var content = [];
-  content.push(_react2.default.createElement(
-    'div',
-    { className: 'example-wrapper example-userList' },
-    _react2.default.createElement(
-      'div',
-      { className: 'example-part' },
-      _react2.default.createElement(
-        'div',
-        { className: 'example-headerTitle' },
-        'Example - PnC'
-      )
-    ),
-    _react2.default.createElement(_exampleContainer2.default, null)
-  ));
-  return content;
-};
-
-/* container */
-exports.default = App;
-
-/***/ }),
-/* 172 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactDom = __webpack_require__(7);
-
-var _reactDom2 = _interopRequireDefault(_reactDom);
-
-var _reactFontawesome = __webpack_require__(1);
-
-var _reactFontawesome2 = _interopRequireDefault(_reactFontawesome);
-
-var _serverAPI = __webpack_require__(20);
-
-var _serverAPI2 = _interopRequireDefault(_serverAPI);
-
-var _exampleComponent_addUser = __webpack_require__(173);
-
-var _exampleComponent_addUser2 = _interopRequireDefault(_exampleComponent_addUser);
-
-var _exampleComponent_deleteUser = __webpack_require__(174);
-
-var _exampleComponent_deleteUser2 = _interopRequireDefault(_exampleComponent_deleteUser);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-function DataObj() {
-  this['uId'] = '';
-  this['name'] = '';
-};
-var DATAMEMBERS = 5;
-
-var App = function (_Component) {
-  _inherits(App, _Component);
-
-  function App(props) {
-    _classCallCheck(this, App);
-
-    var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this, props));
-
-    _this.dataList = new Array();
-    return _this;
-  }
-
-  _createClass(App, [{
-    key: 'componentDidMount',
-    value: function componentDidMount() {
-      this.fetchData();
-    }
-  }, {
-    key: 'render',
-    value: function render() {
-      var _this2 = this;
-
-      var content = [];
-      content.push(_react2.default.createElement(
-        'div',
-        { className: 'example-part' },
-        _react2.default.createElement(_exampleComponent_addUser2.default, {
-          dataCounter: this.dataList.length,
-          dataLimit: DATAMEMBERS,
-          refreshHandler: function refreshHandler() {
-            _this2._refreshHandler();
-          }
-        }),
-        _react2.default.createElement(
-          'ul',
-          { className: 'userList-list' },
-          0 < this.dataList.length ? this.dataList.map(function (entry) {
-            var content_datalist_tr = [];
-            content_datalist_tr.push(_react2.default.createElement(
-              'li',
-              { className: 'userList-entry' },
-              _react2.default.createElement(
-                'div',
-                { className: 'userList-info' },
-                entry['name'].substring(0, 1).toUpperCase() + entry['name'].substring(1)
-              ),
-              _react2.default.createElement(_exampleComponent_deleteUser2.default, {
-                userId: entry['uId'],
-                refreshHandler: function refreshHandler() {
-                  _this2._refreshHandler();
-                }
-              })
-            ));
-            return content_datalist_tr;
-          }) : _react2.default.createElement(
-            'li',
-            { className: 'userList-entry' },
-            'No data available.'
-          )
-        )
-      ));
-      return content;
-    }
-  }, {
-    key: 'fetchData',
-    value: function fetchData() {
-      // fetch data and used by container
-      this.dataList = _serverAPI2.default.getData();
-      this.forceUpdate();
-    }
-  }, {
-    key: '_refreshHandler',
-    value: function _refreshHandler() {
-      this.fetchData();
-    }
-  }]);
-
-  return App;
-}(_react.Component);
-
-;
-
-exports.default = App;
-
-/***/ }),
-/* 173 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactDom = __webpack_require__(7);
-
-var _reactDom2 = _interopRequireDefault(_reactDom);
-
-var _reactFontawesome = __webpack_require__(1);
-
-var _reactFontawesome2 = _interopRequireDefault(_reactFontawesome);
-
-var _serverAPI = __webpack_require__(20);
-
-var _serverAPI2 = _interopRequireDefault(_serverAPI);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var AddUser = function (_Component) {
-  _inherits(AddUser, _Component);
-
-  function AddUser(props) {
-    _classCallCheck(this, AddUser);
-
-    var _this = _possibleConstructorReturn(this, (AddUser.__proto__ || Object.getPrototypeOf(AddUser)).call(this, props));
-
-    _this.env = {
-      'dataCounter': 0,
-      'dataLimit': 0,
-      'refreshHandler': function refreshHandler() {}
-    };
-    return _this;
-  }
-
-  _createClass(AddUser, [{
-    key: 'componentWillUpdate',
-    value: function componentWillUpdate(nextProps, nextState) {
-      this.updateData(nextProps);
-    }
-  }, {
-    key: 'render',
-    value: function render() {
-      var _this2 = this;
-
-      var content = [];
-      content.push(_react2.default.createElement(
-        'div',
-        { className: 'userList-add' },
-        _react2.default.createElement('input', { className: 'userList-input', type: 'text', maxLength: '10', ref: 'userName', placeholder: 'Enter 1-10 character(s).' }),
-        _react2.default.createElement(
-          'button',
-          { className: 'userList-addButton', onClick: function onClick() {
-              _this2._addHandler();
-            } },
-          _react2.default.createElement(_reactFontawesome2.default, { name: 'plus-square', fixedWidth: true })
-        )
-      ));
-      return content;
-    }
-  }, {
-    key: 'updateData',
-    value: function updateData(props) {
-      this.env['dataCounter'] = props.dataCounter ? props.dataCounter : 0;
-      this.env['dataLimit'] = props.dataLimit ? props.dataLimit : 0;
-      this.env['refreshHandler'] = props.refreshHandler ? props.refreshHandler : function () {};
-    }
-  }, {
-    key: '_addHandler',
-    value: function _addHandler() {
-      var obj = {
-        'name': _reactDom2.default.findDOMNode(this.refs['userName']).value.trim()
-      };
-      if ('' == obj['name']) {
-        alert('Input is empty.');
-        return;
-      };
-      if (this.env['dataLimit'] <= this.env['dataCounter']) {
-        alert('User is full.');
-        return;
-      };
-      this.dataList = _serverAPI2.default.addData(obj);
-      _reactDom2.default.findDOMNode(this.refs['userName']).value = '';
-      this.env.refreshHandler();
-    }
-  }]);
-
-  return AddUser;
-}(_react.Component);
-
-;
-
-exports.default = AddUser;
-
-/***/ }),
-/* 174 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactFontawesome = __webpack_require__(1);
-
-var _reactFontawesome2 = _interopRequireDefault(_reactFontawesome);
-
-var _serverAPI = __webpack_require__(20);
-
-var _serverAPI2 = _interopRequireDefault(_serverAPI);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var DeleteUser = function DeleteUser(props) {
-  var _deleteHandler = function _deleteHandler() {
-    var obj = {
-      'uId': props.userId
-    };
-    _serverAPI2.default.deleteData(obj);
-    props.refreshHandler();
-  };
-  var content = [];
-  content.push(_react2.default.createElement(
-    'div',
-    { className: 'userList-deleteButton', onClick: _deleteHandler },
-    _react2.default.createElement(_reactFontawesome2.default, { name: 'trash', fixedWidth: true })
-  ));
-  return content;
-};
-
-exports.default = DeleteUser;
-
-/***/ }),
-/* 175 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "images/articleComponent_PnC_example.png";
-
-/***/ }),
-/* 176 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "images/articleComponent_PnC.png";
-
-/***/ }),
-/* 177 */
+/* 166 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10759,11 +9705,11 @@ var _reactFontawesome = __webpack_require__(1);
 
 var _reactFontawesome2 = _interopRequireDefault(_reactFontawesome);
 
-var _home = __webpack_require__(14);
+var _home = __webpack_require__(15);
 
-var _layout = __webpack_require__(5);
+var _articleLayout = __webpack_require__(6);
 
-var _layout2 = _interopRequireDefault(_layout);
+var _articleLayout2 = _interopRequireDefault(_articleLayout);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -10843,49 +9789,49 @@ var Index = function (_Component) {
         'div',
         { className: 'wrapper wrapper-basic' },
         _react2.default.createElement(
-          _layout2.default.MainTitle,
+          _articleLayout2.default.MainTitle,
           null,
           mainTitle
         ),
         _react2.default.createElement(
-          _layout2.default.MainDescription,
+          _articleLayout2.default.MainDescription,
           null,
           mainDescriptionStr
         ),
         _react2.default.createElement(
-          _layout2.default.Section,
+          _articleLayout2.default.Section,
           null,
           _react2.default.createElement(
-            _layout2.default.SectionTitle,
+            _articleLayout2.default.SectionTitle,
             null,
             setupTitle
           ),
           _react2.default.createElement(
-            _layout2.default.Content,
+            _articleLayout2.default.Content,
             null,
             setupContent
           ),
           _react2.default.createElement(
-            _layout2.default.Pre,
+            _articleLayout2.default.Pre,
             null,
             SETUP_PRE
           ),
           _react2.default.createElement(
-            _layout2.default.Content,
+            _articleLayout2.default.Content,
             null,
             setupFinishedContent
           )
         ),
         _react2.default.createElement(
-          _layout2.default.Section,
+          _articleLayout2.default.Section,
           null,
           _react2.default.createElement(
-            _layout2.default.SectionTitle,
+            _articleLayout2.default.SectionTitle,
             null,
             libraryListTitle
           ),
           _react2.default.createElement(
-            _layout2.default.Content,
+            _articleLayout2.default.Content,
             null,
             libraryListContent
           ),
@@ -10927,7 +9873,7 @@ var Index = function (_Component) {
 exports.default = Index;
 
 /***/ }),
-/* 178 */
+/* 167 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10947,17 +9893,17 @@ var _reactFontawesome = __webpack_require__(1);
 
 var _reactFontawesome2 = _interopRequireDefault(_reactFontawesome);
 
-var _blacktboxTable = __webpack_require__(32);
+var _blacktboxTable = __webpack_require__(31);
 
 var _blacktboxTable2 = _interopRequireDefault(_blacktboxTable);
 
-var _blacktboxList = __webpack_require__(15);
+var _blacktboxList = __webpack_require__(16);
 
 var _blacktboxList2 = _interopRequireDefault(_blacktboxList);
 
-var _layout = __webpack_require__(5);
+var _articleLayout = __webpack_require__(6);
 
-var _layout2 = _interopRequireDefault(_layout);
+var _articleLayout2 = _interopRequireDefault(_articleLayout);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -11071,44 +10017,44 @@ var Basic = function (_Component) {
         'div',
         { className: 'wrapper wrapper-basic' },
         _react2.default.createElement(
-          _layout2.default.MainTitle,
+          _articleLayout2.default.MainTitle,
           null,
           mainTitle
         ),
         _react2.default.createElement(
-          _layout2.default.MainDescription,
+          _articleLayout2.default.MainDescription,
           null,
           mainDescriptionStr
         ),
         _react2.default.createElement(
-          _layout2.default.Section,
+          _articleLayout2.default.Section,
           null,
           _react2.default.createElement(
-            _layout2.default.SectionTitle,
+            _articleLayout2.default.SectionTitle,
             null,
             installationTitle
           ),
           _react2.default.createElement(
-            _layout2.default.Content,
+            _articleLayout2.default.Content,
             null,
             installationContent
           ),
           _react2.default.createElement(
-            _layout2.default.Pre,
+            _articleLayout2.default.Pre,
             null,
             INSTALLATION_PRE
           )
         ),
         _react2.default.createElement(
-          _layout2.default.Section,
+          _articleLayout2.default.Section,
           null,
           _react2.default.createElement(
-            _layout2.default.SectionTitle,
+            _articleLayout2.default.SectionTitle,
             null,
             usingTitle
           ),
           _react2.default.createElement(
-            _layout2.default.Pre,
+            _articleLayout2.default.Pre,
             null,
             USING_PRE
           ),
@@ -11119,26 +10065,26 @@ var Basic = function (_Component) {
             className: 'content-paramlist'
           }),
           _react2.default.createElement(
-            _layout2.default.Content,
+            _articleLayout2.default.Content,
             null,
             usingContent
           )
         ),
         _react2.default.createElement(
-          _layout2.default.Section,
+          _articleLayout2.default.Section,
           null,
           _react2.default.createElement(
-            _layout2.default.SectionTitle,
+            _articleLayout2.default.SectionTitle,
             null,
             nodeTreeTitle
           ),
           _react2.default.createElement(
-            _layout2.default.Content,
+            _articleLayout2.default.Content,
             null,
             nodeTreeContent
           ),
           _react2.default.createElement(
-            _layout2.default.Content,
+            _articleLayout2.default.Content,
             null,
             _react2.default.createElement(_blacktboxList2.default, {
               className: 'content-nodetree',
@@ -11146,7 +10092,7 @@ var Basic = function (_Component) {
             })
           ),
           _react2.default.createElement(
-            _layout2.default.Content,
+            _articleLayout2.default.Content,
             null,
             nodeTreeNotice
           )
@@ -11164,7 +10110,7 @@ var Basic = function (_Component) {
 exports.default = Basic;
 
 /***/ }),
-/* 179 */
+/* 168 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11184,17 +10130,17 @@ var _reactFontawesome = __webpack_require__(1);
 
 var _reactFontawesome2 = _interopRequireDefault(_reactFontawesome);
 
-var _blacktboxTable = __webpack_require__(32);
+var _blacktboxTable = __webpack_require__(31);
 
 var _blacktboxTable2 = _interopRequireDefault(_blacktboxTable);
 
-var _blacktboxList = __webpack_require__(15);
+var _blacktboxList = __webpack_require__(16);
 
 var _blacktboxList2 = _interopRequireDefault(_blacktboxList);
 
-var _layout = __webpack_require__(5);
+var _articleLayout = __webpack_require__(6);
 
-var _layout2 = _interopRequireDefault(_layout);
+var _articleLayout2 = _interopRequireDefault(_articleLayout);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -11353,44 +10299,44 @@ var Basic = function (_Component) {
         'div',
         { className: 'wrapper wrapper-basic' },
         _react2.default.createElement(
-          _layout2.default.MainTitle,
+          _articleLayout2.default.MainTitle,
           null,
           mainTitle
         ),
         _react2.default.createElement(
-          _layout2.default.MainDescription,
+          _articleLayout2.default.MainDescription,
           null,
           mainDescriptionStr
         ),
         _react2.default.createElement(
-          _layout2.default.Section,
+          _articleLayout2.default.Section,
           null,
           _react2.default.createElement(
-            _layout2.default.SectionTitle,
+            _articleLayout2.default.SectionTitle,
             null,
             installationTitle
           ),
           _react2.default.createElement(
-            _layout2.default.Content,
+            _articleLayout2.default.Content,
             null,
             installationContent
           ),
           _react2.default.createElement(
-            _layout2.default.Pre,
+            _articleLayout2.default.Pre,
             null,
             INSTALLATION_PRE
           )
         ),
         _react2.default.createElement(
-          _layout2.default.Section,
+          _articleLayout2.default.Section,
           null,
           _react2.default.createElement(
-            _layout2.default.SectionTitle,
+            _articleLayout2.default.SectionTitle,
             null,
             usingTitle
           ),
           _react2.default.createElement(
-            _layout2.default.Pre,
+            _articleLayout2.default.Pre,
             null,
             USING_PRE
           ),
@@ -11401,29 +10347,29 @@ var Basic = function (_Component) {
             className: 'content-paramlist'
           }),
           _react2.default.createElement(
-            _layout2.default.Content,
+            _articleLayout2.default.Content,
             null,
             usingContent
           )
         ),
         _react2.default.createElement(
-          _layout2.default.Section,
+          _articleLayout2.default.Section,
           null,
           _react2.default.createElement(
-            _layout2.default.SectionTitle,
+            _articleLayout2.default.SectionTitle,
             null,
             nodeTreeTitle
           ),
           _react2.default.createElement(
-            _layout2.default.Content,
+            _articleLayout2.default.Content,
             null,
             nodeTreeContent
           ),
           _react2.default.createElement(
-            _layout2.default.Content,
+            _articleLayout2.default.Content,
             null,
             _react2.default.createElement(
-              _layout2.default.SectionSubtitle,
+              _articleLayout2.default.SectionSubtitle,
               null,
               nodeTreeInfoTitle
             ),
@@ -11433,10 +10379,10 @@ var Basic = function (_Component) {
             })
           ),
           _react2.default.createElement(
-            _layout2.default.Content,
+            _articleLayout2.default.Content,
             null,
             _react2.default.createElement(
-              _layout2.default.SectionSubtitle,
+              _articleLayout2.default.SectionSubtitle,
               null,
               nodeTreeListTitle
             ),
@@ -11445,7 +10391,7 @@ var Basic = function (_Component) {
               listArr: NODE_TREE_LIST
             }),
             _react2.default.createElement(
-              _layout2.default.Content,
+              _articleLayout2.default.Content,
               null,
               nodeTreeNotice
             )
@@ -11464,7 +10410,7 @@ var Basic = function (_Component) {
 exports.default = Basic;
 
 /***/ }),
-/* 180 */
+/* 169 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11484,17 +10430,17 @@ var _reactFontawesome = __webpack_require__(1);
 
 var _reactFontawesome2 = _interopRequireDefault(_reactFontawesome);
 
-var _blacktboxTable = __webpack_require__(32);
+var _blacktboxTable = __webpack_require__(31);
 
 var _blacktboxTable2 = _interopRequireDefault(_blacktboxTable);
 
-var _blacktboxList = __webpack_require__(15);
+var _blacktboxList = __webpack_require__(16);
 
 var _blacktboxList2 = _interopRequireDefault(_blacktboxList);
 
-var _layout = __webpack_require__(5);
+var _articleLayout = __webpack_require__(6);
 
-var _layout2 = _interopRequireDefault(_layout);
+var _articleLayout2 = _interopRequireDefault(_articleLayout);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -11605,25 +10551,25 @@ var Basic = function (_Component) {
         'div',
         { className: 'wrapper wrapper-basic' },
         _react2.default.createElement(
-          _layout2.default.MainTitle,
+          _articleLayout2.default.MainTitle,
           null,
           mainTitle
         ),
         _react2.default.createElement(
-          _layout2.default.MainDescription,
+          _articleLayout2.default.MainDescription,
           null,
           mainDescriptionStr
         ),
         _react2.default.createElement(
-          _layout2.default.Section,
+          _articleLayout2.default.Section,
           null,
           _react2.default.createElement(
-            _layout2.default.SectionTitle,
+            _articleLayout2.default.SectionTitle,
             null,
             'INSTALLATION'
           ),
           _react2.default.createElement(
-            _layout2.default.Content,
+            _articleLayout2.default.Content,
             null,
             _react2.default.createElement(
               'span',
@@ -11639,21 +10585,21 @@ var Basic = function (_Component) {
             )
           ),
           _react2.default.createElement(
-            _layout2.default.Pre,
+            _articleLayout2.default.Pre,
             null,
             INSTALLATION_PRE
           )
         ),
         _react2.default.createElement(
-          _layout2.default.Section,
+          _articleLayout2.default.Section,
           null,
           _react2.default.createElement(
-            _layout2.default.SectionTitle,
+            _articleLayout2.default.SectionTitle,
             null,
             usingTitle
           ),
           _react2.default.createElement(
-            _layout2.default.Pre,
+            _articleLayout2.default.Pre,
             null,
             USING_PRE
           ),
@@ -11664,26 +10610,26 @@ var Basic = function (_Component) {
             className: 'content-paramlist'
           }),
           _react2.default.createElement(
-            _layout2.default.Content,
+            _articleLayout2.default.Content,
             null,
             usingContent
           )
         ),
         _react2.default.createElement(
-          _layout2.default.Section,
+          _articleLayout2.default.Section,
           null,
           _react2.default.createElement(
-            _layout2.default.SectionTitle,
+            _articleLayout2.default.SectionTitle,
             null,
             nodeTreeTitle
           ),
           _react2.default.createElement(
-            _layout2.default.Content,
+            _articleLayout2.default.Content,
             null,
             nodeTreeContent
           ),
           _react2.default.createElement(
-            _layout2.default.Content,
+            _articleLayout2.default.Content,
             null,
             _react2.default.createElement(_blacktboxList2.default, {
               className: 'content-nodetree',
@@ -11691,7 +10637,7 @@ var Basic = function (_Component) {
             })
           ),
           _react2.default.createElement(
-            _layout2.default.Content,
+            _articleLayout2.default.Content,
             null,
             nodeTreeNotice
           )
@@ -11709,7 +10655,7 @@ var Basic = function (_Component) {
 exports.default = Basic;
 
 /***/ }),
-/* 181 */
+/* 170 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11729,9 +10675,9 @@ var _reactFontawesome = __webpack_require__(1);
 
 var _reactFontawesome2 = _interopRequireDefault(_reactFontawesome);
 
-var _layout = __webpack_require__(5);
+var _articleLayout = __webpack_require__(6);
 
-var _layout2 = _interopRequireDefault(_layout);
+var _articleLayout2 = _interopRequireDefault(_articleLayout);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -11813,102 +10759,102 @@ var Adavnce = function (_Component) {
         'div',
         { className: 'wrapper wrapper-advance' },
         _react2.default.createElement(
-          _layout2.default.MainTitle,
+          _articleLayout2.default.MainTitle,
           null,
           mainTitle
         ),
         _react2.default.createElement(
-          _layout2.default.MainDescription,
+          _articleLayout2.default.MainDescription,
           null,
           mainDescriptionStr
         ),
         _react2.default.createElement(
-          _layout2.default.Section,
+          _articleLayout2.default.Section,
           null,
           _react2.default.createElement(
-            _layout2.default.SectionTitle,
+            _articleLayout2.default.SectionTitle,
             null,
             redirectTitle
           ),
           _react2.default.createElement(
-            _layout2.default.Content,
+            _articleLayout2.default.Content,
             null,
             redirectContent
           ),
           _react2.default.createElement(
-            _layout2.default.Content,
+            _articleLayout2.default.Content,
             null,
             _react2.default.createElement(
-              _layout2.default.SectionSubtitle,
+              _articleLayout2.default.SectionSubtitle,
               null,
               reactRouterVersion23Title
             ),
             _react2.default.createElement(
-              _layout2.default.Content,
+              _articleLayout2.default.Content,
               null,
               reactRouterVersion23RouterListContent
             ),
             _react2.default.createElement(
-              _layout2.default.Pre,
+              _articleLayout2.default.Pre,
               null,
               REACTROUTER_23_ROUTER
             ),
             _react2.default.createElement(
-              _layout2.default.Content,
+              _articleLayout2.default.Content,
               null,
               reactRouterVersion23RedirectContent
             ),
             _react2.default.createElement(
-              _layout2.default.Pre,
+              _articleLayout2.default.Pre,
               null,
               REACTROUTER_23_REDIRECT
             )
           ),
           _react2.default.createElement(
-            _layout2.default.Content,
+            _articleLayout2.default.Content,
             null,
             _react2.default.createElement(
-              _layout2.default.SectionSubtitle,
+              _articleLayout2.default.SectionSubtitle,
               null,
               reactRouterVersion4Title
             ),
             _react2.default.createElement(
-              _layout2.default.Content,
+              _articleLayout2.default.Content,
               null,
               reactRouterVersion4RouterListContent
             ),
             _react2.default.createElement(
-              _layout2.default.Pre,
+              _articleLayout2.default.Pre,
               null,
               REACTROUTER_4_ROUTER
             ),
             _react2.default.createElement(
-              _layout2.default.Content,
+              _articleLayout2.default.Content,
               null,
               reactRouterVersion4RedirectContent
             ),
             _react2.default.createElement(
-              _layout2.default.Pre,
+              _articleLayout2.default.Pre,
               null,
               HISTORY_INSTALL
             ),
             _react2.default.createElement(
-              _layout2.default.Content,
+              _articleLayout2.default.Content,
               null,
               reactRouterVersion4CreateHistoryContent
             ),
             _react2.default.createElement(
-              _layout2.default.Pre,
+              _articleLayout2.default.Pre,
               null,
               HISTORY_CREATE
             ),
             _react2.default.createElement(
-              _layout2.default.Content,
+              _articleLayout2.default.Content,
               null,
               reactRouterVersion4HistoryPushContent
             ),
             _react2.default.createElement(
-              _layout2.default.Pre,
+              _articleLayout2.default.Pre,
               null,
               REACTROUTER_4_REDIRECT
             )
@@ -11927,7 +10873,7 @@ var Adavnce = function (_Component) {
 exports.default = Adavnce;
 
 /***/ }),
-/* 182 */
+/* 171 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11947,7 +10893,7 @@ var _reactFontawesome = __webpack_require__(1);
 
 var _reactFontawesome2 = _interopRequireDefault(_reactFontawesome);
 
-var _home = __webpack_require__(14);
+var _home = __webpack_require__(15);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -11998,4 +10944,4 @@ var NotFound = function (_Component) {
 exports.default = NotFound;
 
 /***/ })
-],[56]);
+],[55]);
