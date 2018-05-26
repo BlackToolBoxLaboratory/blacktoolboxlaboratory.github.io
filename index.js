@@ -1227,10 +1227,11 @@ var SideContent = function (_Component) {
           };
         };
       };
+      SideContentThis = this;
     }
   }, {
-    key: 'componentWillReceiveProps',
-    value: function componentWillReceiveProps(nextProps) {
+    key: 'componentDidUpdate',
+    value: function componentDidUpdate() {
       SideContentThis = this;
     }
   }, {
@@ -3185,8 +3186,6 @@ exports.default = ServerAPI;
 "use strict";
 
 
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
 var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
@@ -3207,38 +3206,15 @@ var _home2 = _interopRequireDefault(_home);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var Index = function (_Component) {
-  _inherits(Index, _Component);
-
-  function Index() {
-    _classCallCheck(this, Index);
-
-    return _possibleConstructorReturn(this, (Index.__proto__ || Object.getPrototypeOf(Index)).apply(this, arguments));
-  }
-
-  _createClass(Index, [{
-    key: 'render',
-    value: function render() {
-      var content = [];
-      content.push(_react2.default.createElement(
-        _reactRouterDom.HashRouter,
-        null,
-        _react2.default.createElement(_reactRouterDom.Route, { path: '/', component: _home2.default })
-      ));
-      return content;
-    }
-  }]);
-
-  return Index;
-}(_react.Component);
-
-;
+var Index = function Index(props) {
+  var content = [];
+  content.push(_react2.default.createElement(
+    _reactRouterDom.HashRouter,
+    null,
+    _react2.default.createElement(_reactRouterDom.Route, { path: '/', component: _home2.default })
+  ));
+  return content;
+};
 
 (0, _reactDom.render)(_react2.default.createElement(Index, null), document.getElementById('main'));
 
@@ -4600,8 +4576,6 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
 var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
@@ -4618,12 +4592,6 @@ var _home = __webpack_require__(16);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
 var mainTitle = 'About';
 var mainDescriptionStr = 'Here to show our sitemap with brief introduction.';
 
@@ -4637,163 +4605,145 @@ var libraryContent = 'We express some idea with our library. While to implement 
 var LibraryList = new Array({ name: 'Blacktbox-list', link: 'BTB_LIST_BASIC' }, { name: 'Blacktbox-table', link: 'BTB_TABLE_BASIC' }, { name: 'Blacktbox-menu', link: 'BTB_MENU_BASIC' });
 var ContactList = new Array({ name: 'Email', linkName: 'vannoel0628@gmail.com', href: 'mailto://vannoel0628@gmail.com', FA: 'envelope' }, { name: 'Homepage', linkName: 'blacktoolboxlaboratory.github.io', href: 'https://blacktoolboxlaboratory.github.io', FA: 'home' });
 
-var About = function (_Component) {
-  _inherits(About, _Component);
-
-  function About() {
-    _classCallCheck(this, About);
-
-    return _possibleConstructorReturn(this, (About.__proto__ || Object.getPrototypeOf(About)).apply(this, arguments));
-  }
-
-  _createClass(About, [{
-    key: 'render',
-    value: function render() {
-      var _this2 = this;
-
-      return _react2.default.createElement(
-        'div',
-        { className: 'wrapper wrapper-basic' },
+var About = function About(props) {
+  var content = [];
+  content.push(_react2.default.createElement(
+    'div',
+    { className: 'wrapper wrapper-basic' },
+    _react2.default.createElement(
+      _articleLayout2.default.MainTitle,
+      null,
+      mainTitle
+    ),
+    _react2.default.createElement(
+      _articleLayout2.default.MainDescription,
+      null,
+      mainDescriptionStr
+    ),
+    _react2.default.createElement(
+      _articleLayout2.default.Section,
+      null,
+      _react2.default.createElement(
+        _articleLayout2.default.SectionTitle,
+        null,
+        articlesTitle
+      ),
+      _react2.default.createElement(
+        _articleLayout2.default.Content,
+        null,
         _react2.default.createElement(
-          _articleLayout2.default.MainTitle,
+          'span',
           null,
-          mainTitle
+          articlesContent
         ),
+        _react2.default.createElement(_reactFontawesome2.default, { className: 'linkBtn', onClick: function onClick() {
+            _redirectHandler('BTB_ATCS');
+          }, name: 'link', fixedWidth: true })
+      )
+    ),
+    _react2.default.createElement(
+      _articleLayout2.default.Section,
+      null,
+      _react2.default.createElement(
+        _articleLayout2.default.SectionTitle,
+        null,
+        demonstrationTitle
+      ),
+      _react2.default.createElement(
+        _articleLayout2.default.Content,
+        null,
         _react2.default.createElement(
-          _articleLayout2.default.MainDescription,
+          'span',
           null,
-          mainDescriptionStr
+          demonstrationContent
         ),
-        _react2.default.createElement(
-          _articleLayout2.default.Section,
-          null,
-          _react2.default.createElement(
-            _articleLayout2.default.SectionTitle,
-            null,
-            articlesTitle
-          ),
-          _react2.default.createElement(
-            _articleLayout2.default.Content,
+        _react2.default.createElement(_reactFontawesome2.default, { className: 'linkBtn', onClick: function onClick() {
+            _redirectHandler('BTB_DEMO');
+          }, name: 'link', fixedWidth: true })
+      )
+    ),
+    _react2.default.createElement(
+      _articleLayout2.default.Section,
+      null,
+      _react2.default.createElement(
+        _articleLayout2.default.SectionTitle,
+        null,
+        libraryTitle
+      ),
+      _react2.default.createElement(
+        _articleLayout2.default.Content,
+        null,
+        libraryContent
+      ),
+      _react2.default.createElement(
+        'ul',
+        null,
+        LibraryList.map(function (entry) {
+          var content_li = [];
+          content_li.push(_react2.default.createElement(
+            'li',
             null,
             _react2.default.createElement(
               'span',
               null,
-              articlesContent
+              entry.name
             ),
             _react2.default.createElement(_reactFontawesome2.default, { className: 'linkBtn', onClick: function onClick() {
-                _this2._redirectHandler('BTB_ATCS');
+                _redirectHandler(entry.link);
               }, name: 'link', fixedWidth: true })
-          )
-        ),
-        _react2.default.createElement(
-          _articleLayout2.default.Section,
-          null,
-          _react2.default.createElement(
-            _articleLayout2.default.SectionTitle,
+          ));
+          return content_li;
+        })
+      )
+    ),
+    _react2.default.createElement(
+      _articleLayout2.default.Section,
+      null,
+      _react2.default.createElement(
+        _articleLayout2.default.SectionTitle,
+        null,
+        'CONTACT ME'
+      ),
+      _react2.default.createElement(
+        'ul',
+        null,
+        ContactList.map(function (entry) {
+          var content_li = [];
+          content_li.push(_react2.default.createElement(
+            'li',
             null,
-            demonstrationTitle
-          ),
-          _react2.default.createElement(
-            _articleLayout2.default.Content,
-            null,
+            _react2.default.createElement(_reactFontawesome2.default, { name: entry.FA, fixedWidth: true }),
             _react2.default.createElement(
               'span',
-              null,
-              demonstrationContent
+              { style: { 'margin-left': '5px' } },
+              entry.name + ':'
             ),
-            _react2.default.createElement(_reactFontawesome2.default, { className: 'linkBtn', onClick: function onClick() {
-                _this2._redirectHandler('BTB_DEMO');
-              }, name: 'link', fixedWidth: true })
-          )
-        ),
-        _react2.default.createElement(
-          _articleLayout2.default.Section,
-          null,
-          _react2.default.createElement(
-            _articleLayout2.default.SectionTitle,
-            null,
-            libraryTitle
-          ),
-          _react2.default.createElement(
-            _articleLayout2.default.Content,
-            null,
-            libraryContent
-          ),
-          _react2.default.createElement(
-            'ul',
-            null,
-            LibraryList.map(function (entry) {
-              var content_li = [];
-              content_li.push(_react2.default.createElement(
-                'li',
-                null,
-                _react2.default.createElement(
-                  'span',
-                  null,
-                  entry.name
-                ),
-                _react2.default.createElement(_reactFontawesome2.default, { className: 'linkBtn', onClick: function onClick() {
-                    _this2._redirectHandler(entry.link);
-                  }, name: 'link', fixedWidth: true })
-              ));
-              return content_li;
-            })
-          )
-        ),
-        _react2.default.createElement(
-          _articleLayout2.default.Section,
-          null,
-          _react2.default.createElement(
-            _articleLayout2.default.SectionTitle,
-            null,
-            'CONTACT ME'
-          ),
-          _react2.default.createElement(
-            'ul',
-            null,
-            ContactList.map(function (entry) {
-              var content_li = [];
-              content_li.push(_react2.default.createElement(
-                'li',
-                null,
-                _react2.default.createElement(_reactFontawesome2.default, { name: entry.FA, fixedWidth: true }),
-                _react2.default.createElement(
-                  'span',
-                  { style: { 'margin-left': '5px' } },
-                  entry.name + ':'
-                ),
-                _react2.default.createElement(
-                  'span',
-                  { style: { 'margin-left': '5px' } },
-                  _react2.default.createElement(
-                    'a',
-                    { target: '_blank', href: entry.href },
-                    entry.linkName,
-                    ' ',
-                    _react2.default.createElement(_reactFontawesome2.default, { name: 'external-link', fixedWidth: true })
-                  )
-                )
-              ));
-              return content_li;
-            })
-          )
-        )
-      );
-    }
-  }, {
-    key: '_redirectHandler',
-    value: function _redirectHandler(index) {
-      var obj = {
-        acticveIndex: index
-      };
-      (0, _home.SideContent_backdoor)('menuRedirect', obj);
-    }
-  }]);
+            _react2.default.createElement(
+              'span',
+              { style: { 'margin-left': '5px' } },
+              _react2.default.createElement(
+                'a',
+                { target: '_blank', href: entry.href },
+                entry.linkName,
+                ' ',
+                _react2.default.createElement(_reactFontawesome2.default, { name: 'external-link', fixedWidth: true })
+              )
+            )
+          ));
+          return content_li;
+        })
+      )
+    )
+  ));
+  return content;
 
-  return About;
-}(_react.Component);
-
-;
+  function _redirectHandler(index) {
+    var obj = {
+      acticveIndex: index
+    };
+    (0, _home.SideContent_backdoor)('menuRedirect', obj);
+  };
+};
 
 exports.default = About;
 
@@ -4807,8 +4757,6 @@ exports.default = About;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _react = __webpack_require__(0);
 
@@ -4832,12 +4780,6 @@ var _articleLayout2 = _interopRequireDefault(_articleLayout);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
 var mainTitle = 'Articles';
 var mainDescriptionStr = 'There are my articles introducing some knowledge in conceptual.';
 
@@ -4846,94 +4788,74 @@ var articleListContent = 'We would list to introduce you some others masterpiece
 
 var articleList = new Array({ 'name': 'Flux Introduction', 'link': 'BTB_ATCS_FLUX', 'updated': '2018-05-06' }, { 'name': 'Redux Introduction', 'link': 'BTB_ATCS_REDUX', 'updated': '2018-05-06' });
 
-var Index = function (_Component) {
-  _inherits(Index, _Component);
-
-  function Index() {
-    _classCallCheck(this, Index);
-
-    return _possibleConstructorReturn(this, (Index.__proto__ || Object.getPrototypeOf(Index)).apply(this, arguments));
-  }
-
-  _createClass(Index, [{
-    key: 'render',
-    value: function render() {
-      var _this2 = this;
-
-      var content = [];
-      content.push(_react2.default.createElement(
-        'div',
-        { className: 'wrapper wrapper-basic' },
+var Index = function Index(props) {
+  var content = [];
+  content.push(_react2.default.createElement(
+    'div',
+    { className: 'wrapper wrapper-basic' },
+    _react2.default.createElement(
+      _articleLayout2.default.MainTitle,
+      null,
+      mainTitle
+    ),
+    _react2.default.createElement(
+      _articleLayout2.default.MainDescription,
+      null,
+      mainDescriptionStr
+    ),
+    _react2.default.createElement(
+      _articleLayout2.default.Section,
+      null,
+      _react2.default.createElement(
+        _articleLayout2.default.SectionTitle,
+        null,
+        articleListTitle
+      ),
+      _react2.default.createElement(
+        _articleLayout2.default.Content,
+        null,
+        articleListContent
+      ),
+      _react2.default.createElement(
+        _articleLayout2.default.Content,
+        null,
         _react2.default.createElement(
-          _articleLayout2.default.MainTitle,
+          'ul',
           null,
-          mainTitle
-        ),
-        _react2.default.createElement(
-          _articleLayout2.default.MainDescription,
-          null,
-          mainDescriptionStr
-        ),
-        _react2.default.createElement(
-          _articleLayout2.default.Section,
-          null,
-          _react2.default.createElement(
-            _articleLayout2.default.SectionTitle,
-            null,
-            articleListTitle
-          ),
-          _react2.default.createElement(
-            _articleLayout2.default.Content,
-            null,
-            articleListContent
-          ),
-          _react2.default.createElement(
-            _articleLayout2.default.Content,
-            null,
-            _react2.default.createElement(
-              'ul',
+          articleList.map(function (entry) {
+            var content_li = [];
+            content_li.push(_react2.default.createElement(
+              'li',
               null,
-              articleList.map(function (entry) {
-                var content_li = [];
-                content_li.push(_react2.default.createElement(
-                  'li',
-                  null,
-                  _react2.default.createElement(
-                    'span',
-                    null,
-                    entry.name
-                  ),
-                  _react2.default.createElement(_reactFontawesome2.default, { className: 'linkBtn', onClick: function onClick() {
-                      _this2._redirectHandler(entry.link);
-                    }, name: 'link', fixedWidth: true }),
-                  _react2.default.createElement(
-                    _articleLayout2.default.Notice,
-                    null,
-                    '[UPDATED: ',
-                    entry.updated,
-                    ']'
-                  )
-                ));
-                return content_li;
-              })
-            )
-          )
+              _react2.default.createElement(
+                'span',
+                null,
+                entry.name
+              ),
+              _react2.default.createElement(_reactFontawesome2.default, { className: 'linkBtn', onClick: function onClick() {
+                  _redirectHandler(entry.link);
+                }, name: 'link', fixedWidth: true }),
+              _react2.default.createElement(
+                _articleLayout2.default.Notice,
+                null,
+                '[UPDATED: ',
+                entry.updated,
+                ']'
+              )
+            ));
+            return content_li;
+          })
         )
-      ));
-      return content;
-    }
-  }, {
-    key: '_redirectHandler',
-    value: function _redirectHandler(index) {
-      _history2.default.push(_routeList2.default[index]);
-      window.scrollTo(0, 0);
-    }
-  }]);
+      )
+    )
+  ));
+  return content;
 
-  return Index;
-}(_react.Component);
-
-;
+  function _redirectHandler(index) {
+    _history2.default.push(_routeList2.default[index]);
+    window.scrollTo(0, 0);
+  };
+};
 
 exports.default = Index;
 
@@ -6508,7 +6430,7 @@ var introductionReduxAlgorithmDescription = _react2.default.createElement(
   'To simplify our code base, it also works with ',
   _react2.default.createElement(
     'a',
-    { target: '_blank', href: 'index.html#/article/component_presentational_and_container' },
+    { target: '_blank', href: 'https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0' },
     'Component: Presentational and Container',
     _react2.default.createElement(_reactFontawesome2.default, { name: 'external-link', fixedWidth: true })
   ),
@@ -9705,8 +9627,6 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
 var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
@@ -9722,12 +9642,6 @@ var _articleLayout = __webpack_require__(5);
 var _articleLayout2 = _interopRequireDefault(_articleLayout);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 var mainTitle = _react2.default.createElement(
   'span',
@@ -9780,105 +9694,85 @@ var libraryListContent = 'This is the list of BLB Lab\'s API demonstrated here.'
 var SETUP_PRE = 'git clone https://github.com/BlackToolBoxLaboratory/blacktbox-demo.git\ncd blacktbox-demo\nnpm install\nnpm start\n';
 var LibraryList = new Array({ name: 'Blacktbox-list', link: 'BTB_LIST_BASIC' }, { name: 'Blacktbox-table', link: 'BTB_TABLE_BASIC' }, { name: 'Blacktbox-menu', link: 'BTB_MENU_BASIC' });
 
-var Index = function (_Component) {
-  _inherits(Index, _Component);
+var Index = function Index(props) {
+  var content = [];
+  content.push(_react2.default.createElement(
+    'div',
+    { className: 'wrapper wrapper-basic' },
+    _react2.default.createElement(
+      _articleLayout2.default.MainTitle,
+      null,
+      mainTitle
+    ),
+    _react2.default.createElement(
+      _articleLayout2.default.MainDescription,
+      null,
+      mainDescriptionStr
+    ),
+    _react2.default.createElement(
+      _articleLayout2.default.Section,
+      null,
+      _react2.default.createElement(
+        _articleLayout2.default.SectionTitle,
+        null,
+        setupTitle
+      ),
+      _react2.default.createElement(
+        _articleLayout2.default.Content,
+        null,
+        setupContent
+      ),
+      _react2.default.createElement(
+        _articleLayout2.default.Pre,
+        null,
+        SETUP_PRE
+      ),
+      _react2.default.createElement(
+        _articleLayout2.default.Content,
+        null,
+        setupFinishedContent
+      )
+    ),
+    _react2.default.createElement(
+      _articleLayout2.default.Section,
+      null,
+      _react2.default.createElement(
+        _articleLayout2.default.SectionTitle,
+        null,
+        libraryListTitle
+      ),
+      _react2.default.createElement(
+        _articleLayout2.default.Content,
+        null,
+        libraryListContent
+      ),
+      _react2.default.createElement(
+        'ul',
+        null,
+        LibraryList.map(function (entry) {
+          var content_li = [];
+          content_li.push(_react2.default.createElement(
+            'li',
+            null,
+            entry.name,
+            _react2.default.createElement(_reactFontawesome2.default, { className: 'linkBtn', onClick: function onClick() {
+                _redirectHandler(entry.link);
+              }, name: 'link', fixedWidth: true })
+          ));
+          return content_li;
+        })
+      )
+    )
+  ));
+  return content;
 
-  function Index() {
-    _classCallCheck(this, Index);
-
-    return _possibleConstructorReturn(this, (Index.__proto__ || Object.getPrototypeOf(Index)).apply(this, arguments));
-  }
-
-  _createClass(Index, [{
-    key: 'render',
-    value: function render() {
-      var _this2 = this;
-
-      var content = [];
-      content.push(_react2.default.createElement(
-        'div',
-        { className: 'wrapper wrapper-basic' },
-        _react2.default.createElement(
-          _articleLayout2.default.MainTitle,
-          null,
-          mainTitle
-        ),
-        _react2.default.createElement(
-          _articleLayout2.default.MainDescription,
-          null,
-          mainDescriptionStr
-        ),
-        _react2.default.createElement(
-          _articleLayout2.default.Section,
-          null,
-          _react2.default.createElement(
-            _articleLayout2.default.SectionTitle,
-            null,
-            setupTitle
-          ),
-          _react2.default.createElement(
-            _articleLayout2.default.Content,
-            null,
-            setupContent
-          ),
-          _react2.default.createElement(
-            _articleLayout2.default.Pre,
-            null,
-            SETUP_PRE
-          ),
-          _react2.default.createElement(
-            _articleLayout2.default.Content,
-            null,
-            setupFinishedContent
-          )
-        ),
-        _react2.default.createElement(
-          _articleLayout2.default.Section,
-          null,
-          _react2.default.createElement(
-            _articleLayout2.default.SectionTitle,
-            null,
-            libraryListTitle
-          ),
-          _react2.default.createElement(
-            _articleLayout2.default.Content,
-            null,
-            libraryListContent
-          ),
-          _react2.default.createElement(
-            'ul',
-            null,
-            LibraryList.map(function (entry) {
-              var content_li = [];
-              content_li.push(_react2.default.createElement(
-                'li',
-                null,
-                entry.name,
-                _react2.default.createElement(_reactFontawesome2.default, { className: 'linkBtn', onClick: function onClick() {
-                    _this2._redirectHandler(entry.link);
-                  }, name: 'link', fixedWidth: true })
-              ));
-              return content_li;
-            })
-          )
-        )
-      ));
-      return content;
-    }
-  }, {
-    key: '_redirectHandler',
-    value: function _redirectHandler(index) {
-      var obj = {
-        acticveIndex: index
-      };
-      (0, _home.SideContent_backdoor)('menuRedirect', obj);
-    }
-  }]);
-
-  return Index;
-}(_react.Component);
-
-;
+  function _redirectHandler(index) {
+    var obj = {
+      acticveIndex: index
+    };
+    (0, _home.SideContent_backdoor)('menuRedirect', obj);
+  };
+};
 
 exports.default = Index;
 
@@ -9892,8 +9786,6 @@ exports.default = Index;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _react = __webpack_require__(0);
 
@@ -9916,12 +9808,6 @@ var _articleLayout = __webpack_require__(5);
 var _articleLayout2 = _interopRequireDefault(_articleLayout);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 var mainTitle = _react2.default.createElement(
   'span',
@@ -9977,7 +9863,7 @@ var PARAM_BODY = new Array({ name: 'listArr', type: 'Array', default: '[]', noti
     'pre',
     { className: 'content-pre' },
     LISTARR_PRE
-  ) }, { name: '- name', type: 'String or Node', default: '\'\'', notice: 'String or Node to show layer name.' }, { name: '- children', type: 'Array', default: '[]', notice: _react2.default.createElement(
+  ) }, { name: '- name', type: 'String or Node', default: '\'\', ()', notice: 'String or Node to show layer name.' }, { name: '- children', type: 'Array', default: '[]', notice: _react2.default.createElement(
     'pre',
     { className: 'content-pre' },
     SUBLISTARR_PRE
@@ -10010,112 +9896,95 @@ var PARAM_MODE = {
   mode: 'list'
 };
 
-var Basic = function (_Component) {
-  _inherits(Basic, _Component);
-
-  function Basic() {
-    _classCallCheck(this, Basic);
-
-    return _possibleConstructorReturn(this, (Basic.__proto__ || Object.getPrototypeOf(Basic)).apply(this, arguments));
-  }
-
-  _createClass(Basic, [{
-    key: 'render',
-    value: function render() {
-      var content = [];
-      content.push(_react2.default.createElement(
-        'div',
-        { className: 'wrapper wrapper-basic' },
-        _react2.default.createElement(
-          _articleLayout2.default.MainTitle,
-          null,
-          mainTitle
-        ),
-        _react2.default.createElement(
-          _articleLayout2.default.MainDescription,
-          null,
-          mainDescriptionStr
-        ),
-        _react2.default.createElement(
-          _articleLayout2.default.Section,
-          null,
-          _react2.default.createElement(
-            _articleLayout2.default.SectionTitle,
-            null,
-            installationTitle
-          ),
-          _react2.default.createElement(
-            _articleLayout2.default.Content,
-            null,
-            installationContent
-          ),
-          _react2.default.createElement(
-            _articleLayout2.default.Pre,
-            null,
-            INSTALLATION_PRE
-          )
-        ),
-        _react2.default.createElement(
-          _articleLayout2.default.Section,
-          null,
-          _react2.default.createElement(
-            _articleLayout2.default.SectionTitle,
-            null,
-            renderTitle
-          ),
-          _react2.default.createElement(
-            _articleLayout2.default.Pre,
-            null,
-            RENDER_PRE
-          ),
-          _react2.default.createElement(_blacktboxTable2.default, {
-            tableHeadArr: PARAM_HEAD,
-            tableBobyArr: PARAM_BODY,
-            modeObj: PARAM_MODE,
-            className: 'content-paramlist'
-          }),
-          _react2.default.createElement(
-            _articleLayout2.default.Content,
-            null,
-            renderContent
-          )
-        ),
-        _react2.default.createElement(
-          _articleLayout2.default.Section,
-          null,
-          _react2.default.createElement(
-            _articleLayout2.default.SectionTitle,
-            null,
-            nodeTreeTitle
-          ),
-          _react2.default.createElement(
-            _articleLayout2.default.Content,
-            null,
-            nodeTreeContent
-          ),
-          _react2.default.createElement(
-            _articleLayout2.default.Content,
-            null,
-            _react2.default.createElement(_blacktboxList2.default, {
-              className: 'content-nodetree',
-              listArr: NODE_TREE
-            })
-          ),
-          _react2.default.createElement(
-            _articleLayout2.default.Content,
-            null,
-            nodeTreeNotice
-          )
-        )
-      ));
-      return content;
-    }
-  }]);
-
-  return Basic;
-}(_react.Component);
-
-;
+var Basic = function Basic(props) {
+  var content = [];
+  content.push(_react2.default.createElement(
+    'div',
+    { className: 'wrapper wrapper-basic' },
+    _react2.default.createElement(
+      _articleLayout2.default.MainTitle,
+      null,
+      mainTitle
+    ),
+    _react2.default.createElement(
+      _articleLayout2.default.MainDescription,
+      null,
+      mainDescriptionStr
+    ),
+    _react2.default.createElement(
+      _articleLayout2.default.Section,
+      null,
+      _react2.default.createElement(
+        _articleLayout2.default.SectionTitle,
+        null,
+        installationTitle
+      ),
+      _react2.default.createElement(
+        _articleLayout2.default.Content,
+        null,
+        installationContent
+      ),
+      _react2.default.createElement(
+        _articleLayout2.default.Pre,
+        null,
+        INSTALLATION_PRE
+      )
+    ),
+    _react2.default.createElement(
+      _articleLayout2.default.Section,
+      null,
+      _react2.default.createElement(
+        _articleLayout2.default.SectionTitle,
+        null,
+        renderTitle
+      ),
+      _react2.default.createElement(
+        _articleLayout2.default.Pre,
+        null,
+        RENDER_PRE
+      ),
+      _react2.default.createElement(_blacktboxTable2.default, {
+        tableHeadArr: PARAM_HEAD,
+        tableBobyArr: PARAM_BODY,
+        modeObj: PARAM_MODE,
+        className: 'content-paramlist'
+      }),
+      _react2.default.createElement(
+        _articleLayout2.default.Content,
+        null,
+        renderContent
+      )
+    ),
+    _react2.default.createElement(
+      _articleLayout2.default.Section,
+      null,
+      _react2.default.createElement(
+        _articleLayout2.default.SectionTitle,
+        null,
+        nodeTreeTitle
+      ),
+      _react2.default.createElement(
+        _articleLayout2.default.Content,
+        null,
+        nodeTreeContent
+      ),
+      _react2.default.createElement(
+        _articleLayout2.default.Content,
+        null,
+        _react2.default.createElement(_blacktboxList2.default, {
+          className: 'content-nodetree',
+          listArr: NODE_TREE
+        })
+      ),
+      _react2.default.createElement(
+        _articleLayout2.default.Content,
+        null,
+        nodeTreeNotice
+      )
+    )
+  ));
+  return content;
+};
 
 exports.default = Basic;
 
@@ -10129,8 +9998,6 @@ exports.default = Basic;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _react = __webpack_require__(0);
 
@@ -10153,12 +10020,6 @@ var _articleLayout = __webpack_require__(5);
 var _articleLayout2 = _interopRequireDefault(_articleLayout);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 var mainTitle = _react2.default.createElement(
   'span',
@@ -10239,132 +10100,112 @@ var styleObj = {
   }
 };;
 
-var Example = function (_Component) {
-  _inherits(Example, _Component);
-
-  function Example(props) {
-    _classCallCheck(this, Example);
-
-    var _this = _possibleConstructorReturn(this, (Example.__proto__ || Object.getPrototypeOf(Example)).call(this, props));
-
-    _this.listRef = [];
-    return _this;
-  }
-
-  _createClass(Example, [{
-    key: 'render',
-    value: function render() {
-      var _this2 = this;
-
-      var content = [];
-      content.push(_react2.default.createElement(
-        'div',
-        { className: 'wrapper wrapper-basic' },
+var Example = function Example(props) {
+  var content = [];
+  var listRef = void 0;
+  content.push(_react2.default.createElement(
+    'div',
+    { className: 'wrapper wrapper-basic' },
+    _react2.default.createElement(
+      _articleLayout2.default.MainTitle,
+      null,
+      mainTitle
+    ),
+    _react2.default.createElement(
+      _articleLayout2.default.MainDescription,
+      null,
+      mainDescriptionStr
+    ),
+    _react2.default.createElement(
+      _articleLayout2.default.Section,
+      null,
+      _react2.default.createElement(
+        _articleLayout2.default.SectionTitle,
+        null,
+        exampleTitle
+      ),
+      _react2.default.createElement(
+        _articleLayout2.default.Content,
+        null,
+        _react2.default.createElement(_blacktboxList2.default, {
+          listArr: listArr,
+          styleObj: styleObj,
+          inputRefFn: function inputRefFn(ref) {
+            listRef = ref;
+          }
+        })
+      ),
+      _react2.default.createElement(
+        _articleLayout2.default.Item,
+        null,
         _react2.default.createElement(
-          _articleLayout2.default.MainTitle,
-          null,
-          mainTitle
-        ),
-        _react2.default.createElement(
-          _articleLayout2.default.MainDescription,
-          null,
-          mainDescriptionStr
-        ),
-        _react2.default.createElement(
-          _articleLayout2.default.Section,
-          null,
-          _react2.default.createElement(
-            _articleLayout2.default.SectionTitle,
-            null,
-            exampleTitle
-          ),
-          _react2.default.createElement(
-            _articleLayout2.default.Content,
-            null,
-            _react2.default.createElement(_blacktboxList2.default, {
-              listArr: listArr,
-              styleObj: styleObj,
-              inputRefFn: function inputRefFn(ref) {
-                _this2.listRef = ref;
-              }
-            })
-          ),
-          _react2.default.createElement(
-            _articleLayout2.default.Item,
-            null,
-            _react2.default.createElement(
-              'button',
-              { onClick: function onClick() {
-                  _this2._consoleLogRef();
-                } },
-              exampleButtonText
-            )
-          )
-        ),
-        _react2.default.createElement(
-          _articleLayout2.default.Section,
-          null,
-          _react2.default.createElement(
-            _articleLayout2.default.SectionTitle,
-            null,
-            rourceCodeTitle
-          ),
-          _react2.default.createElement(
-            _articleLayout2.default.Content,
-            null,
-            _react2.default.createElement(
-              _articleLayout2.default.SectionSubtitle,
-              null,
-              rourceCodeSubTitle_Render
-            ),
-            _react2.default.createElement(
-              _articleLayout2.default.Pre,
-              null,
-              ROURCECODE_RENDER_PRE
-            )
-          ),
-          _react2.default.createElement(
-            _articleLayout2.default.Content,
-            null,
-            _react2.default.createElement(
-              _articleLayout2.default.SectionSubtitle,
-              null,
-              rourceCodeSubTitle_Style
-            ),
-            _react2.default.createElement(
-              _articleLayout2.default.Pre,
-              null,
-              ROURCECODE_STYLE_PRE
-            )
-          ),
-          _react2.default.createElement(
-            _articleLayout2.default.Content,
-            null,
-            _react2.default.createElement(
-              _articleLayout2.default.SectionSubtitle,
-              null,
-              rourceCodeSubTitle_List
-            ),
-            _react2.default.createElement(
-              _articleLayout2.default.Pre,
-              null,
-              ROURCECODE_LIST_PRE
-            )
-          )
+          'button',
+          { onClick: function onClick() {
+              _consoleLogRef();
+            } },
+          exampleButtonText
         )
-      ));
-      return content;
-    }
-  }, {
-    key: '_consoleLogRef',
-    value: function _consoleLogRef() {
-      var listRef = _reactDom2.default.findDOMNode(this.listRef);
-      console.log('listRef', listRef);
-    }
-  }]);
+      )
+    ),
+    _react2.default.createElement(
+      _articleLayout2.default.Section,
+      null,
+      _react2.default.createElement(
+        _articleLayout2.default.SectionTitle,
+        null,
+        rourceCodeTitle
+      ),
+      _react2.default.createElement(
+        _articleLayout2.default.Content,
+        null,
+        _react2.default.createElement(
+          _articleLayout2.default.SectionSubtitle,
+          null,
+          rourceCodeSubTitle_Render
+        ),
+        _react2.default.createElement(
+          _articleLayout2.default.Pre,
+          null,
+          ROURCECODE_RENDER_PRE
+        )
+      ),
+      _react2.default.createElement(
+        _articleLayout2.default.Content,
+        null,
+        _react2.default.createElement(
+          _articleLayout2.default.SectionSubtitle,
+          null,
+          rourceCodeSubTitle_Style
+        ),
+        _react2.default.createElement(
+          _articleLayout2.default.Pre,
+          null,
+          ROURCECODE_STYLE_PRE
+        )
+      ),
+      _react2.default.createElement(
+        _articleLayout2.default.Content,
+        null,
+        _react2.default.createElement(
+          _articleLayout2.default.SectionSubtitle,
+          null,
+          rourceCodeSubTitle_List
+        ),
+        _react2.default.createElement(
+          _articleLayout2.default.Pre,
+          null,
+          ROURCECODE_LIST_PRE
+        )
+      )
+    )
+  ));
+  return content;
 
-  return Example;
-}(_react.Component);
+  function _consoleLogRef() {
+    var listRef = _reactDom2.default.findDOMNode(listRef);
+    console.log('listRef', listRef);
+  };
+};
 
 exports.default = Example;
 
@@ -10378,8 +10219,6 @@ exports.default = Example;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _react = __webpack_require__(0);
 
@@ -10402,12 +10241,6 @@ var _articleLayout = __webpack_require__(5);
 var _articleLayout2 = _interopRequireDefault(_articleLayout);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 var mainTitle = _react2.default.createElement(
   'span',
@@ -10473,7 +10306,7 @@ var PARAM_BODY = new Array({ name: 'tableHeadArr', type: 'Array', default: '[]',
     'pre',
     { className: 'content-pre' },
     TABLEHEADARR_PRE
-  ) }, { name: '- name', type: 'String or Node', default: '\'\'', notice: 'String or Node to show table head name.' }, { name: '- index', type: 'String', default: '\'\'', notice: 'index of tableBobyArr.index.' },
+  ) }, { name: '- name', type: 'String or Node', default: '\'\', ()', notice: 'String or Node to show table head name.' }, { name: '- index', type: 'String', default: '\'\'', notice: 'index of tableBobyArr.index.' },
 //   {name: '- sortType',          type: 'String',         default: '\'\'',    notice: '[Unsupported Yet] index\'s sort type. {value: custom, string, number, ip, mac}'},
 //   {name: '- sortFn',            type: 'Function',       default: '()=>{}',  notice: '[Unsupported Yet] define sort function while sortType is custom.'},
 //   {name: '- defaultSortStatus', type: 'String',         default: '\'\'',    notice: '[Unsupported Yet] String to index tableBobyArr[\'index\'].'},
@@ -10541,130 +10374,113 @@ var PARAM_MODE = {
   mode: 'list'
 };
 
-var Basic = function (_Component) {
-  _inherits(Basic, _Component);
-
-  function Basic() {
-    _classCallCheck(this, Basic);
-
-    return _possibleConstructorReturn(this, (Basic.__proto__ || Object.getPrototypeOf(Basic)).apply(this, arguments));
-  }
-
-  _createClass(Basic, [{
-    key: 'render',
-    value: function render() {
-      var content = [];
-      content.push(_react2.default.createElement(
-        'div',
-        { className: 'wrapper wrapper-basic' },
+var Basic = function Basic(props) {
+  var content = [];
+  content.push(_react2.default.createElement(
+    'div',
+    { className: 'wrapper wrapper-basic' },
+    _react2.default.createElement(
+      _articleLayout2.default.MainTitle,
+      null,
+      mainTitle
+    ),
+    _react2.default.createElement(
+      _articleLayout2.default.MainDescription,
+      null,
+      mainDescriptionStr
+    ),
+    _react2.default.createElement(
+      _articleLayout2.default.Section,
+      null,
+      _react2.default.createElement(
+        _articleLayout2.default.SectionTitle,
+        null,
+        installationTitle
+      ),
+      _react2.default.createElement(
+        _articleLayout2.default.Content,
+        null,
+        installationContent
+      ),
+      _react2.default.createElement(
+        _articleLayout2.default.Pre,
+        null,
+        INSTALLATION_PRE
+      )
+    ),
+    _react2.default.createElement(
+      _articleLayout2.default.Section,
+      null,
+      _react2.default.createElement(
+        _articleLayout2.default.SectionTitle,
+        null,
+        renderTitle
+      ),
+      _react2.default.createElement(
+        _articleLayout2.default.Pre,
+        null,
+        RENDER_PRE
+      ),
+      _react2.default.createElement(_blacktboxTable2.default, {
+        tableHeadArr: PARAM_HEAD,
+        tableBobyArr: PARAM_BODY,
+        modeObj: PARAM_MODE,
+        className: 'content-paramlist'
+      }),
+      _react2.default.createElement(
+        _articleLayout2.default.Content,
+        null,
+        renderContent
+      )
+    ),
+    _react2.default.createElement(
+      _articleLayout2.default.Section,
+      null,
+      _react2.default.createElement(
+        _articleLayout2.default.SectionTitle,
+        null,
+        nodeTreeTitle
+      ),
+      _react2.default.createElement(
+        _articleLayout2.default.Content,
+        null,
+        nodeTreeContent
+      ),
+      _react2.default.createElement(
+        _articleLayout2.default.Content,
+        null,
         _react2.default.createElement(
-          _articleLayout2.default.MainTitle,
+          _articleLayout2.default.SectionSubtitle,
           null,
-          mainTitle
+          nodeTreeInfoTitle
         ),
+        _react2.default.createElement(_blacktboxList2.default, {
+          className: 'content-nodetree',
+          listArr: NODE_TREE_INFO
+        })
+      ),
+      _react2.default.createElement(
+        _articleLayout2.default.Content,
+        null,
         _react2.default.createElement(
-          _articleLayout2.default.MainDescription,
+          _articleLayout2.default.SectionSubtitle,
           null,
-          mainDescriptionStr
+          nodeTreeListTitle
         ),
+        _react2.default.createElement(_blacktboxList2.default, {
+          className: 'content-nodetree',
+          listArr: NODE_TREE_LIST
+        }),
         _react2.default.createElement(
-          _articleLayout2.default.Section,
+          _articleLayout2.default.Content,
           null,
-          _react2.default.createElement(
-            _articleLayout2.default.SectionTitle,
-            null,
-            installationTitle
-          ),
-          _react2.default.createElement(
-            _articleLayout2.default.Content,
-            null,
-            installationContent
-          ),
-          _react2.default.createElement(
-            _articleLayout2.default.Pre,
-            null,
-            INSTALLATION_PRE
-          )
-        ),
-        _react2.default.createElement(
-          _articleLayout2.default.Section,
-          null,
-          _react2.default.createElement(
-            _articleLayout2.default.SectionTitle,
-            null,
-            renderTitle
-          ),
-          _react2.default.createElement(
-            _articleLayout2.default.Pre,
-            null,
-            RENDER_PRE
-          ),
-          _react2.default.createElement(_blacktboxTable2.default, {
-            tableHeadArr: PARAM_HEAD,
-            tableBobyArr: PARAM_BODY,
-            modeObj: PARAM_MODE,
-            className: 'content-paramlist'
-          }),
-          _react2.default.createElement(
-            _articleLayout2.default.Content,
-            null,
-            renderContent
-          )
-        ),
-        _react2.default.createElement(
-          _articleLayout2.default.Section,
-          null,
-          _react2.default.createElement(
-            _articleLayout2.default.SectionTitle,
-            null,
-            nodeTreeTitle
-          ),
-          _react2.default.createElement(
-            _articleLayout2.default.Content,
-            null,
-            nodeTreeContent
-          ),
-          _react2.default.createElement(
-            _articleLayout2.default.Content,
-            null,
-            _react2.default.createElement(
-              _articleLayout2.default.SectionSubtitle,
-              null,
-              nodeTreeInfoTitle
-            ),
-            _react2.default.createElement(_blacktboxList2.default, {
-              className: 'content-nodetree',
-              listArr: NODE_TREE_INFO
-            })
-          ),
-          _react2.default.createElement(
-            _articleLayout2.default.Content,
-            null,
-            _react2.default.createElement(
-              _articleLayout2.default.SectionSubtitle,
-              null,
-              nodeTreeListTitle
-            ),
-            _react2.default.createElement(_blacktboxList2.default, {
-              className: 'content-nodetree',
-              listArr: NODE_TREE_LIST
-            }),
-            _react2.default.createElement(
-              _articleLayout2.default.Content,
-              null,
-              nodeTreeNotice
-            )
-          )
+          nodeTreeNotice
         )
-      ));
-      return content;
-    }
-  }]);
-
-  return Basic;
-}(_react.Component);
-
-;
+      )
+    )
+  ));
+  return content;
+};
 
 exports.default = Basic;
 
@@ -10678,8 +10494,6 @@ exports.default = Basic;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _react = __webpack_require__(0);
 
@@ -10702,12 +10516,6 @@ var _articleLayout = __webpack_require__(5);
 var _articleLayout2 = _interopRequireDefault(_articleLayout);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 var mainTitle = _react2.default.createElement(
   'span',
@@ -10763,11 +10571,11 @@ var PARAM_BODY = new Array({ name: 'menuArr', type: 'Array', default: '[]', noti
     'pre',
     { className: 'content-pre' },
     MENUARR_PRE
-  ) }, { name: '- name', type: 'String or Node', default: '\'\'', notice: 'String or Node to show layer name.' }, { name: '- index', type: 'String', default: '\'\'', notice: 'Menu entry\'s ID.' }, { name: '- defaultCollapse', type: 'Boolean', default: 'false', notice: 'Menu entry\'s default collapse status. While featureCollapsible enabled, the default is true' }, { name: '- children', type: 'Array', default: '[]', notice: _react2.default.createElement(
+  ) }, { name: '- name', type: 'String or Node', default: '\'\', ()', notice: 'String or Node to show layer name.' }, { name: '- index', type: 'String', default: '\'\'', notice: 'Menu entry\'s ID.' }, { name: '- defaultCollapse', type: 'Boolean', default: 'false', notice: 'Menu entry\'s default collapse status. While featureCollapsible enabled, the default is true' }, { name: '- children', type: 'Array', default: '[]', notice: _react2.default.createElement(
     'pre',
     { className: 'content-pre' },
     SUBMENUARR_PRE
-  ) }, { name: 'acticveIndex', type: 'String', default: '\'\'', notice: 'Default active menu entry\'s ID.' }, { name: 'itemOnClickFn', type: 'Function', default: '()=>{}', notice: 'Menu entry\'s onClick function.' }, { name: 'featureCollapsible', type: 'Object', default: '{}', notice: '' }, { name: '- enable', type: 'Boolean', default: 'false', notice: 'Enable collapse function of menu.' }, { name: '- customCollapseButton', type: 'String or Node', default: '\'\'', notice: 'We have default collapse button, but you can customize our collapse button by using this.' }, { name: '- itemOnCollapseFn', type: 'Function', default: '()=>{}', notice: 'Menu entry\'s arrow onClick function.' }, { name: 'styleObj', type: 'Object', default: '{}', notice: _react2.default.createElement(
+  ) }, { name: 'acticveIndex', type: 'String', default: '\'\'', notice: 'Default active menu entry\'s ID.' }, { name: 'itemOnClickFn', type: 'Function', default: '()=>{}', notice: 'Menu entry\'s onClick function.' }, { name: 'featureCollapsible', type: 'Object', default: '{}', notice: '' }, { name: '- enable', type: 'Boolean', default: 'false', notice: 'Enable collapse function of menu.' }, { name: '- customCollapseButton', type: 'String or Node', default: '\'\', ()', notice: 'We have default collapse button, but you can customize our collapse button by using this.' }, { name: '- itemOnCollapseFn', type: 'Function', default: '()=>{}', notice: 'Menu entry\'s arrow onClick function.' }, { name: 'styleObj', type: 'Object', default: '{}', notice: _react2.default.createElement(
     'pre',
     { className: 'content-pre' },
     STYLEOBJ_PRE
@@ -10807,112 +10615,95 @@ var PARAM_MODE = {
   mode: 'list'
 };
 
-var Basic = function (_Component) {
-  _inherits(Basic, _Component);
-
-  function Basic() {
-    _classCallCheck(this, Basic);
-
-    return _possibleConstructorReturn(this, (Basic.__proto__ || Object.getPrototypeOf(Basic)).apply(this, arguments));
-  }
-
-  _createClass(Basic, [{
-    key: 'render',
-    value: function render() {
-      var content = [];
-      content.push(_react2.default.createElement(
-        'div',
-        { className: 'wrapper wrapper-basic' },
-        _react2.default.createElement(
-          _articleLayout2.default.MainTitle,
-          null,
-          mainTitle
-        ),
-        _react2.default.createElement(
-          _articleLayout2.default.MainDescription,
-          null,
-          mainDescriptionStr
-        ),
-        _react2.default.createElement(
-          _articleLayout2.default.Section,
-          null,
-          _react2.default.createElement(
-            _articleLayout2.default.SectionTitle,
-            null,
-            installationTitle
-          ),
-          _react2.default.createElement(
-            _articleLayout2.default.Content,
-            null,
-            installationContent
-          ),
-          _react2.default.createElement(
-            _articleLayout2.default.Pre,
-            null,
-            INSTALLATION_PRE
-          )
-        ),
-        _react2.default.createElement(
-          _articleLayout2.default.Section,
-          null,
-          _react2.default.createElement(
-            _articleLayout2.default.SectionTitle,
-            null,
-            renderTitle
-          ),
-          _react2.default.createElement(
-            _articleLayout2.default.Pre,
-            null,
-            RENDER_PRE
-          ),
-          _react2.default.createElement(_blacktboxTable2.default, {
-            tableHeadArr: PARAM_HEAD,
-            tableBobyArr: PARAM_BODY,
-            modeObj: PARAM_MODE,
-            className: 'content-paramlist'
-          }),
-          _react2.default.createElement(
-            _articleLayout2.default.Content,
-            null,
-            renderContent
-          )
-        ),
-        _react2.default.createElement(
-          _articleLayout2.default.Section,
-          null,
-          _react2.default.createElement(
-            _articleLayout2.default.SectionTitle,
-            null,
-            nodeTreeTitle
-          ),
-          _react2.default.createElement(
-            _articleLayout2.default.Content,
-            null,
-            nodeTreeContent
-          ),
-          _react2.default.createElement(
-            _articleLayout2.default.Content,
-            null,
-            _react2.default.createElement(_blacktboxList2.default, {
-              className: 'content-nodetree',
-              listArr: NODE_TREE
-            })
-          ),
-          _react2.default.createElement(
-            _articleLayout2.default.Content,
-            null,
-            nodeTreeNotice
-          )
-        )
-      ));
-      return content;
-    }
-  }]);
-
-  return Basic;
-}(_react.Component);
-
-;
+var Basic = function Basic(props) {
+  var content = [];
+  content.push(_react2.default.createElement(
+    'div',
+    { className: 'wrapper wrapper-basic' },
+    _react2.default.createElement(
+      _articleLayout2.default.MainTitle,
+      null,
+      mainTitle
+    ),
+    _react2.default.createElement(
+      _articleLayout2.default.MainDescription,
+      null,
+      mainDescriptionStr
+    ),
+    _react2.default.createElement(
+      _articleLayout2.default.Section,
+      null,
+      _react2.default.createElement(
+        _articleLayout2.default.SectionTitle,
+        null,
+        installationTitle
+      ),
+      _react2.default.createElement(
+        _articleLayout2.default.Content,
+        null,
+        installationContent
+      ),
+      _react2.default.createElement(
+        _articleLayout2.default.Pre,
+        null,
+        INSTALLATION_PRE
+      )
+    ),
+    _react2.default.createElement(
+      _articleLayout2.default.Section,
+      null,
+      _react2.default.createElement(
+        _articleLayout2.default.SectionTitle,
+        null,
+        renderTitle
+      ),
+      _react2.default.createElement(
+        _articleLayout2.default.Pre,
+        null,
+        RENDER_PRE
+      ),
+      _react2.default.createElement(_blacktboxTable2.default, {
+        tableHeadArr: PARAM_HEAD,
+        tableBobyArr: PARAM_BODY,
+        modeObj: PARAM_MODE,
+        className: 'content-paramlist'
+      }),
+      _react2.default.createElement(
+        _articleLayout2.default.Content,
+        null,
+        renderContent
+      )
+    ),
+    _react2.default.createElement(
+      _articleLayout2.default.Section,
+      null,
+      _react2.default.createElement(
+        _articleLayout2.default.SectionTitle,
+        null,
+        nodeTreeTitle
+      ),
+      _react2.default.createElement(
+        _articleLayout2.default.Content,
+        null,
+        nodeTreeContent
+      ),
+      _react2.default.createElement(
+        _articleLayout2.default.Content,
+        null,
+        _react2.default.createElement(_blacktboxList2.default, {
+          className: 'content-nodetree',
+          listArr: NODE_TREE
+        })
+      ),
+      _react2.default.createElement(
+        _articleLayout2.default.Content,
+        null,
+        nodeTreeNotice
+      )
+    )
+  ));
+  return content;
+};
 
 exports.default = Basic;
 
@@ -10927,8 +10718,6 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
 var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
@@ -10942,12 +10731,6 @@ var _articleLayout = __webpack_require__(5);
 var _articleLayout2 = _interopRequireDefault(_articleLayout);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 var mainTitle = _react2.default.createElement(
   'span',
@@ -11004,133 +10787,116 @@ var HISTORY_INSTALL = 'npm install --save history';
 var HISTORY_CREATE = 'import { createHashHistory } from \'history\';\nexport default createHashHistory();';
 var REACTROUTER_4_REDIRECT = '// import our history.\nimport history from \'./history.js\';\n\n// work with Blacktbox-menu.\n<BTBMenu \n  menuArr={menuList}\n  itemOnClickFn={(infoObj)=>{this._itemOnClickFn(infoObj);}}\n/>\n\n// _itemOnClickFn.\n_itemOnClickFn (infoObj) {\n  // infoObj is whole information catched from menuArr about which item clicked. The routeList is our router list.\n  let path = routeList[infoObj.index];\n  if(path)\n  {\n    // redirect with history.\n    history.push(path);\n  }\n};\n';
 
-var Adavnce = function (_Component) {
-  _inherits(Adavnce, _Component);
-
-  function Adavnce() {
-    _classCallCheck(this, Adavnce);
-
-    return _possibleConstructorReturn(this, (Adavnce.__proto__ || Object.getPrototypeOf(Adavnce)).apply(this, arguments));
-  }
-
-  _createClass(Adavnce, [{
-    key: 'render',
-    value: function render() {
-      var content = [];
-      content.push(_react2.default.createElement(
-        'div',
-        { className: 'wrapper wrapper-advance' },
+var Adavnce = function Adavnce(props) {
+  var content = [];
+  content.push(_react2.default.createElement(
+    'div',
+    { className: 'wrapper wrapper-advance' },
+    _react2.default.createElement(
+      _articleLayout2.default.MainTitle,
+      null,
+      mainTitle
+    ),
+    _react2.default.createElement(
+      _articleLayout2.default.MainDescription,
+      null,
+      mainDescriptionStr
+    ),
+    _react2.default.createElement(
+      _articleLayout2.default.Section,
+      null,
+      _react2.default.createElement(
+        _articleLayout2.default.SectionTitle,
+        null,
+        redirectTitle
+      ),
+      _react2.default.createElement(
+        _articleLayout2.default.Content,
+        null,
+        redirectContent
+      ),
+      _react2.default.createElement(
+        _articleLayout2.default.Content,
+        null,
         _react2.default.createElement(
-          _articleLayout2.default.MainTitle,
+          _articleLayout2.default.SectionSubtitle,
           null,
-          mainTitle
+          reactRouterVersion23Title
         ),
         _react2.default.createElement(
-          _articleLayout2.default.MainDescription,
+          _articleLayout2.default.Content,
           null,
-          mainDescriptionStr
+          reactRouterVersion23RouterListContent
         ),
         _react2.default.createElement(
-          _articleLayout2.default.Section,
+          _articleLayout2.default.Pre,
           null,
-          _react2.default.createElement(
-            _articleLayout2.default.SectionTitle,
-            null,
-            redirectTitle
-          ),
-          _react2.default.createElement(
-            _articleLayout2.default.Content,
-            null,
-            redirectContent
-          ),
-          _react2.default.createElement(
-            _articleLayout2.default.Content,
-            null,
-            _react2.default.createElement(
-              _articleLayout2.default.SectionSubtitle,
-              null,
-              reactRouterVersion23Title
-            ),
-            _react2.default.createElement(
-              _articleLayout2.default.Content,
-              null,
-              reactRouterVersion23RouterListContent
-            ),
-            _react2.default.createElement(
-              _articleLayout2.default.Pre,
-              null,
-              REACTROUTER_23_ROUTER
-            ),
-            _react2.default.createElement(
-              _articleLayout2.default.Content,
-              null,
-              reactRouterVersion23RedirectContent
-            ),
-            _react2.default.createElement(
-              _articleLayout2.default.Pre,
-              null,
-              REACTROUTER_23_REDIRECT
-            )
-          ),
-          _react2.default.createElement(
-            _articleLayout2.default.Content,
-            null,
-            _react2.default.createElement(
-              _articleLayout2.default.SectionSubtitle,
-              null,
-              reactRouterVersion4Title
-            ),
-            _react2.default.createElement(
-              _articleLayout2.default.Content,
-              null,
-              reactRouterVersion4RouterListContent
-            ),
-            _react2.default.createElement(
-              _articleLayout2.default.Pre,
-              null,
-              REACTROUTER_4_ROUTER
-            ),
-            _react2.default.createElement(
-              _articleLayout2.default.Content,
-              null,
-              reactRouterVersion4RedirectContent
-            ),
-            _react2.default.createElement(
-              _articleLayout2.default.Pre,
-              null,
-              HISTORY_INSTALL
-            ),
-            _react2.default.createElement(
-              _articleLayout2.default.Content,
-              null,
-              reactRouterVersion4CreateHistoryContent
-            ),
-            _react2.default.createElement(
-              _articleLayout2.default.Pre,
-              null,
-              HISTORY_CREATE
-            ),
-            _react2.default.createElement(
-              _articleLayout2.default.Content,
-              null,
-              reactRouterVersion4HistoryPushContent
-            ),
-            _react2.default.createElement(
-              _articleLayout2.default.Pre,
-              null,
-              REACTROUTER_4_REDIRECT
-            )
-          )
+          REACTROUTER_23_ROUTER
+        ),
+        _react2.default.createElement(
+          _articleLayout2.default.Content,
+          null,
+          reactRouterVersion23RedirectContent
+        ),
+        _react2.default.createElement(
+          _articleLayout2.default.Pre,
+          null,
+          REACTROUTER_23_REDIRECT
         )
-      ));
-      return content;
-    }
-  }]);
-
-  return Adavnce;
-}(_react.Component);
-
-;
+      ),
+      _react2.default.createElement(
+        _articleLayout2.default.Content,
+        null,
+        _react2.default.createElement(
+          _articleLayout2.default.SectionSubtitle,
+          null,
+          reactRouterVersion4Title
+        ),
+        _react2.default.createElement(
+          _articleLayout2.default.Content,
+          null,
+          reactRouterVersion4RouterListContent
+        ),
+        _react2.default.createElement(
+          _articleLayout2.default.Pre,
+          null,
+          REACTROUTER_4_ROUTER
+        ),
+        _react2.default.createElement(
+          _articleLayout2.default.Content,
+          null,
+          reactRouterVersion4RedirectContent
+        ),
+        _react2.default.createElement(
+          _articleLayout2.default.Pre,
+          null,
+          HISTORY_INSTALL
+        ),
+        _react2.default.createElement(
+          _articleLayout2.default.Content,
+          null,
+          reactRouterVersion4CreateHistoryContent
+        ),
+        _react2.default.createElement(
+          _articleLayout2.default.Pre,
+          null,
+          HISTORY_CREATE
+        ),
+        _react2.default.createElement(
+          _articleLayout2.default.Content,
+          null,
+          reactRouterVersion4HistoryPushContent
+        ),
+        _react2.default.createElement(
+          _articleLayout2.default.Pre,
+          null,
+          REACTROUTER_4_REDIRECT
+        )
+      )
+    )
+  ));
+  return content;
+};
 
 exports.default = Adavnce;
 
@@ -11145,8 +10911,6 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
 var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
@@ -11155,53 +10919,35 @@ var _reactFontawesome = __webpack_require__(1);
 
 var _reactFontawesome2 = _interopRequireDefault(_reactFontawesome);
 
+var _articleLayout = __webpack_require__(5);
+
+var _articleLayout2 = _interopRequireDefault(_articleLayout);
+
 var _home = __webpack_require__(16);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+var notFoundTitle = '404 Page Not Found';
+var notFoundContent = 'Oops, the page of URL is not exist, or we are working on it.';
 
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var NotFound = function (_Component) {
-  _inherits(NotFound, _Component);
-
-  function NotFound() {
-    _classCallCheck(this, NotFound);
-
-    return _possibleConstructorReturn(this, (NotFound.__proto__ || Object.getPrototypeOf(NotFound)).apply(this, arguments));
-  }
-
-  _createClass(NotFound, [{
-    key: 'render',
-    value: function render() {
-      return _react2.default.createElement(
-        'div',
-        { className: 'wrapper wrapper-basic' },
-        _react2.default.createElement(
-          'div',
-          { className: 'context' },
-          _react2.default.createElement(
-            'div',
-            { className: 'title' },
-            '404 Page Not Found'
-          ),
-          _react2.default.createElement(
-            'div',
-            { className: 'content' },
-            'Oops, the page of URL is not exist, or we are working on it.'
-          )
-        )
-      );
-    }
-  }]);
-
-  return NotFound;
-}(_react.Component);
-
-;
+var NotFound = function NotFound(props) {
+  var content = [];
+  content.push(_react2.default.createElement(
+    'div',
+    { className: 'wrapper wrapper-basic' },
+    _react2.default.createElement(
+      _articleLayout2.default.MainTitle,
+      null,
+      notFoundTitle
+    ),
+    _react2.default.createElement(
+      _articleLayout2.default.MainDescription,
+      null,
+      notFoundContent
+    )
+  ));
+  return content;
+};
 
 exports.default = NotFound;
 
