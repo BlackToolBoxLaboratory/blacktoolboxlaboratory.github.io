@@ -153,7 +153,7 @@ exports.default = {
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_Provider__ = __webpack_require__(125);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_connectAdvanced__ = __webpack_require__(50);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_connectAdvanced__ = __webpack_require__(51);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__connect_connect__ = __webpack_require__(127);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Provider", function() { return __WEBPACK_IMPORTED_MODULE_0__components_Provider__["b"]; });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "createProvider", function() { return __WEBPACK_IMPORTED_MODULE_0__components_Provider__["a"]; });
@@ -166,7 +166,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 /***/ }),
-/* 7 */
+/* 7 */,
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -243,7 +244,6 @@ exports.default = {
 };
 
 /***/ }),
-/* 8 */,
 /* 9 */,
 /* 10 */,
 /* 11 */
@@ -256,7 +256,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _flux = __webpack_require__(92);
+var _flux = __webpack_require__(93);
 
 var MyDispatcher = new _flux.Dispatcher();
 exports.default = MyDispatcher;
@@ -1092,7 +1092,7 @@ var _reactFontawesome = __webpack_require__(1);
 
 var _reactFontawesome2 = _interopRequireDefault(_reactFontawesome);
 
-var _blacktboxMenu = __webpack_require__(100);
+var _blacktboxMenu = __webpack_require__(44);
 
 var _blacktboxMenu2 = _interopRequireDefault(_blacktboxMenu);
 
@@ -1144,11 +1144,15 @@ var _basic5 = __webpack_require__(170);
 
 var _basic6 = _interopRequireDefault(_basic5);
 
-var _advanced = __webpack_require__(171);
+var _example3 = __webpack_require__(171);
+
+var _example4 = _interopRequireDefault(_example3);
+
+var _advanced = __webpack_require__(172);
 
 var _advanced2 = _interopRequireDefault(_advanced);
 
-var _ = __webpack_require__(172);
+var _ = __webpack_require__(173);
 
 var _2 = _interopRequireDefault(_);
 
@@ -1270,7 +1274,8 @@ var SideContent = function (_Component) {
             _this2._itemOnClickFn(infoObj);
           },
           featureCollapsible: {
-            enable: true
+            'enable': true,
+            'itemClickWithCollapseEnable': true
           }
         })
       ));
@@ -1311,6 +1316,7 @@ var MainContent = function MainContent(props) {
       _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: _routeList2.default.BTB_LIST_EXAMPLE, component: _example2.default }),
       _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: _routeList2.default.BTB_TABLE_BASIC, component: _basic4.default }),
       _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: _routeList2.default.BTB_MENU_BASIC, component: _basic6.default }),
+      _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: _routeList2.default.BTB_MENU_EXAMPLE, component: _example4.default }),
       _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: _routeList2.default.BTB_MENU_ADV, component: _advanced2.default }),
       _react2.default.createElement(_reactRouterDom.Route, { component: _2.default })
     )
@@ -1539,6 +1545,7 @@ var routeList = {
   'BTB_TABLE_BASIC': '/blacktbox-table/basic',
 
   'BTB_MENU_BASIC': '/blacktbox-menu/basic',
+  'BTB_MENU_EXAMPLE': '/blacktbox-menu/example',
   'BTB_MENU_ADV': '/blacktbox-menu/advanced'
 };
 
@@ -1962,6 +1969,423 @@ Menu.defaultProps = {
 /* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(2);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var _extends = Object.assign || function (target) {
+  for (var i = 1; i < arguments.length; i++) {
+    var source = arguments[i];for (var key in source) {
+      if (Object.prototype.hasOwnProperty.call(source, key)) {
+        target[key] = source[key];
+      }
+    }
+  }return target;
+};
+
+var _createClass = function () {
+  function defineProperties(target, props) {
+    for (var i = 0; i < props.length; i++) {
+      var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);
+    }
+  }return function (Constructor, protoProps, staticProps) {
+    if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;
+  };
+}();
+
+function _classCallCheck(instance, Constructor) {
+  if (!(instance instanceof Constructor)) {
+    throw new TypeError("Cannot call a class as a function");
+  }
+}
+
+function _possibleConstructorReturn(self, call) {
+  if (!self) {
+    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+  }return call && ((typeof call === "undefined" ? "undefined" : _typeof(call)) === "object" || typeof call === "function") ? call : self;
+}
+
+function _inherits(subClass, superClass) {
+  if (typeof superClass !== "function" && superClass !== null) {
+    throw new TypeError("Super expression must either be null or a function, not " + (typeof superClass === "undefined" ? "undefined" : _typeof(superClass)));
+  }subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
+}
+
+var CONTENT_HEIGHT = 30;
+var menuThis = void 0;
+
+function MenuInfoObj(obj, defaultCollapse) {
+  var _this = this;
+
+  this['index'] = '';
+  this['name'] = '';
+  this['children'] = [];
+  this['defaultCollapse'] = defaultCollapse;
+  Object.keys(obj).map(function (key) {
+    _this[key] = obj[key];
+  });
+
+  if ('' == this['name']) {
+    this['name'] = this['index'];
+  };
+};
+
+var Menu = function (_React$Component) {
+  _inherits(Menu, _React$Component);
+
+  function Menu(props) {
+    _classCallCheck(this, Menu);
+
+    var _this2 = _possibleConstructorReturn(this, (Menu.__proto__ || Object.getPrototypeOf(Menu)).call(this, props));
+
+    _this2.env = {
+      menuArr: [],
+      styleObj: {},
+      inputRefFn: function inputRefFn() {},
+      acticveIndex: '',
+      itemOnClickFn: function itemOnClickFn() {},
+      featureCollapsible: {
+        enable: false,
+        itemClickWithCollapseEnable: false,
+        defaultCollapse: true,
+        customCollapseButton: '',
+        customExtendButton: '',
+        itemOnCollapseFn: function itemOnCollapseFn() {}
+      }
+    };
+    _this2.val = {
+      hasFoundActive: false,
+      hasFoundActiveTop: false
+    };
+    _this2.collapseStatusList = {};
+    return _this2;
+  }
+
+  _createClass(Menu, [{
+    key: 'componentWillMount',
+    value: function componentWillMount() {
+      this.updateENVFn(this.props);
+    }
+  }, {
+    key: 'componentWillReceiveProps',
+    value: function componentWillReceiveProps(nextProps) {
+      this.updateENVFn(nextProps);
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var _this3 = this;
+
+      this.val.hasFoundActive = false;
+      this.val.hasFoundActiveTop = false;
+      var content = [];
+      var menuArr = this.env.menuArr;
+      var nextLayer = 0;
+      var itemCount = menuArr.length;
+      menuArr.map(function (item) {
+        itemCount += _this3.countRecursionFn(item);
+      });
+      var props_menu = this.createBasicProps('btb-menu');
+      if (this.props.className) {
+        props_menu.className += ' ' + this.props.className;
+      };
+      var props_content = this.createBasicProps('menu-content');
+      var content_height = parseInt(!this.env.styleObj['item-content'] ? CONTENT_HEIGHT : this.env.styleObj['item-content']['height'] ? this.env.styleObj['item-content']['height'] : this.env.styleObj['item-content']['line-height'] ? this.env.styleObj['item-content']['line-height'] : CONTENT_HEIGHT);
+      props_content.style['height'] = itemCount * content_height;
+      var props_layer = this.createBasicProps('menu-layer');
+      var layerNextName = 'layer-' + nextLayer;
+      props_layer.className += ' ' + layerNextName;
+      if (this.env.styleObj[layerNextName]) {
+        Object.keys(this.env.styleObj[layerNextName]).map(function (config) {
+          props_layer.style[config] = _this3.env.styleObj[layerNextName][config];
+        });
+      };
+      content.push(_react2.default.createElement('div', _extends({}, props_menu, { ref: function ref(_ref) {
+          _this3._refHandler(_ref);
+        } }), _react2.default.createElement('div', props_content, _react2.default.createElement('ul', props_layer, menuArr.map(function (item) {
+        var content_menu = [];
+        content_menu.push(_this3.menuRenderFn(item, nextLayer));
+        return content_menu;
+      })))));
+      return content;
+    }
+  }, {
+    key: 'updateENVFn',
+    value: function updateENVFn(source) {
+      var _this4 = this;
+
+      this.env = {
+        menuArr: [],
+        acticveIndex: '',
+        styleObj: {},
+        itemOnClickFn: function itemOnClickFn() {},
+        inputRefFn: function inputRefFn() {},
+        featureCollapsible: {
+          enable: false,
+          itemClickWithCollapseEnable: false,
+          defaultCollapse: true,
+          customCollapseButton: '',
+          customExtendButton: '',
+          itemOnCollapseFn: function itemOnCollapseFn() {}
+        }
+      };
+      var isChanged = source['acticveIndex'] && source['acticveIndex'] != this.env['acticveIndex'] ? true : false;
+      Object.keys(source).map(function (entry) {
+        switch (entry) {
+          case 'featureCollapsible':
+            Object.keys(source.featureCollapsible).map(function (collapse_entry) {
+              _this4.env.featureCollapsible[collapse_entry] = source.featureCollapsible[collapse_entry];
+            });
+            break;
+          default:
+            _this4.env[entry] = source[entry];
+            break;
+        };
+      });
+      menuThis = this;
+
+      var menuArr = this.env.menuArr;
+      menuArr.map(function (item) {
+        var infoObj = new MenuInfoObj(item, _this4.env.featureCollapsible['defaultCollapse']);
+        _this4.initCollapseStautsFn(infoObj);
+        if (isChanged) {
+          _this4.expandRecursionFn(infoObj);
+        }
+      });
+    }
+  }, {
+    key: 'initCollapseStautsFn',
+    value: function initCollapseStautsFn(source) {
+      var infoObj = new MenuInfoObj(source, this.env.featureCollapsible['defaultCollapse']);
+      if (0 < infoObj.children.length && 'undefined' == typeof this.collapseStatusList[infoObj.index]) {
+        this.collapseStatusList[infoObj.index] = menuThis.env.featureCollapsible.enable ? infoObj.defaultCollapse : false;
+      };
+
+      for (var i = 0; i < infoObj.children.length; i++) {
+        this.initCollapseStautsFn(infoObj.children[i]);
+      };
+    }
+  }, {
+    key: 'createBasicProps',
+    value: function createBasicProps(name) {
+      var obj = {
+        className: name,
+        style: this.env.styleObj[name] ? this.env.styleObj[name] : {}
+      };
+      return obj;
+    }
+  }, {
+    key: 'menuRenderFn',
+    value: function menuRenderFn(source, layerCounter) {
+      var _this5 = this;
+
+      var infoObj = new MenuInfoObj(source, this.env.featureCollapsible['defaultCollapse']);
+      var content = [];
+      var isMatch = false;
+      var hasChildren = 0 < infoObj.children.length ? true : false;
+      var layerPaddingLeft = layerCounter * 15;
+      var nextLayer = layerCounter + 1;
+      var props_item = this.createBasicProps('layer-item');
+      if (!this.val.hasFoundActive) {
+        if (this.env.acticveIndex == infoObj.index) {
+          props_item.className += ' active';
+          this.val.hasFoundActive = true;
+          isMatch = true;
+        } else {
+          if (hasChildren && this.searchRecursionFn(infoObj)) {
+            props_item.className += ' activeParent';
+            isMatch = true;
+          };
+        };
+        if (isMatch && !this.val.hasFoundActiveTop) {
+          props_item.className += ' activeTop';
+          this.val.hasFoundActiveTop = true;
+        };
+      };
+      var props_content = this.createBasicProps('item-content');
+      props_content.style['padding-left'] = layerPaddingLeft;
+      props_content.onClick = function (event) {
+        _this5._itemOnClickHandler(event, infoObj);
+      };
+      var props_name = this.createBasicProps('content-name');
+      content.push(_react2.default.createElement('li', props_item, _react2.default.createElement('div', props_content, _react2.default.createElement('div', props_name, infoObj.name), function () {
+        var content_collapse = [];
+        if (hasChildren && _this5.env.featureCollapsible.enable) {
+          if ('' == _this5.env.featureCollapsible.customCollapseButton) {
+            var props_collapse = _this5.createBasicProps('content-collapse');
+            if (_this5.collapseStatusList[infoObj.index]) {
+              props_collapse.className += ' collapsed';
+            };
+            props_collapse.onClick = function (event) {
+              _this5._itemOnCollapseHandler(event, infoObj);
+            };
+            var props_arrow = _this5.createBasicProps('collapse-arrow');
+            content_collapse.push(_react2.default.createElement('div', props_collapse, _react2.default.createElement('div', props_arrow)));
+          } else {
+            var props_custom_collapse = _this5.createBasicProps('content-custom-collapse');
+            if (_this5.collapseStatusList[infoObj.index]) {
+              props_custom_collapse.className += ' collapsed';
+            };
+            props_custom_collapse.onClick = function (event) {
+              _this5._itemOnCollapseHandler(event, infoObj);
+            };
+            content_collapse.push(_react2.default.createElement('div', props_custom_collapse, _this5.collapseStatusList[infoObj.index] || '' == _this5.env.featureCollapsible.customExtendButton ? _this5.env.featureCollapsible.customCollapseButton : _this5.env.featureCollapsible.customExtendButton));
+          }
+        };
+        return content_collapse;
+      }()), function () {
+        var content_submenu = [];
+        if (hasChildren) {
+          var props_submenu = _this5.createBasicProps('item-submenu');
+          if (_this5.env.featureCollapsible.enable && _this5.collapseStatusList[infoObj.index]) {
+            props_submenu.className += ' collapsed';
+          };
+          var content_height = parseInt(!_this5.env.styleObj['item-content'] ? CONTENT_HEIGHT : _this5.env.styleObj['item-content']['height'] ? _this5.env.styleObj['item-content']['height'] : _this5.env.styleObj['item-content']['line-height'] ? _this5.env.styleObj['item-content']['line-height'] : CONTENT_HEIGHT);
+          props_submenu.style['height'] = _this5.countRecursionFn(infoObj) * content_height;
+          var props_layer = _this5.createBasicProps('menu-layer');
+          var layerNextName = 'layer-' + nextLayer;
+          props_layer.className += ' ' + layerNextName;
+          if (_this5.env.styleObj[layerNextName]) {
+            Object.keys(_this5.env.styleObj[layerNextName]).map(function (config) {
+              props_layer.style[config] = _this5.env.styleObj[layerNextName][config];
+            });
+          };
+          content_submenu.push(_react2.default.createElement('div', props_submenu, _react2.default.createElement('ul', props_layer, infoObj.children.map(function (item) {
+            var content_menu = [];
+            content_menu.push(_this5.menuRenderFn(item, nextLayer));
+            return content_menu;
+          }))));
+        };
+        return content_submenu;
+      }()));
+      return content;
+    }
+  }, {
+    key: 'searchRecursionFn',
+    value: function searchRecursionFn(source) {
+      var infoObj = new MenuInfoObj(source, this.env.featureCollapsible['defaultCollapse']);
+      for (var i = 0; i < infoObj.children.length; i++) {
+        if (this.env.acticveIndex == infoObj.children[i].index || this.searchRecursionFn(infoObj.children[i])) {
+          return true;
+        };
+      };
+      return false;
+    }
+  }, {
+    key: 'countRecursionFn',
+    value: function countRecursionFn(source) {
+      var infoObj = new MenuInfoObj(source, this.env.featureCollapsible['defaultCollapse']);
+      var count = 0;
+      if (!this.collapseStatusList[infoObj.index]) {
+        count = infoObj.children.length;
+        for (var i = 0; i < infoObj.children.length; i++) {
+          count += this.countRecursionFn(infoObj.children[i]);
+        };
+      };
+      return count;
+    }
+  }, {
+    key: 'expandRecursionFn',
+    value: function expandRecursionFn(source) {
+      var infoObj = new MenuInfoObj(source, this.env.featureCollapsible['defaultCollapse']);
+      for (var i = 0; i < infoObj.children.length; i++) {
+        if (this.env.acticveIndex == infoObj.children[i].index) {
+          this.collapseStatusList[infoObj.index] = false;
+          break;
+        };
+        if (this.searchRecursionFn(infoObj.children[i])) {
+          this.collapseStatusList[infoObj.index] = false;
+          this.expandRecursionFn(infoObj.children[i]);
+        };
+      };
+    }
+  }, {
+    key: '_refHandler',
+    value: function _refHandler(ref) {
+      this.env.inputRefFn(ref);
+    }
+  }, {
+    key: '_itemOnClickHandler',
+    value: function _itemOnClickHandler(event, infoObj) {
+      if (event.stopPropagation) {
+        // standard
+        event.stopPropagation();
+      } else {
+        // IE6-8
+        event.cancelBubble = true;
+      };
+      if (0 < infoObj.children.length && this.env.featureCollapsible.itemClickWithCollapseEnable) {
+        this.collapseStatusList[infoObj.index] = !this.collapseStatusList[infoObj.index];
+        infoObj.collapseValue = this.collapseStatusList[infoObj.index];
+        this.env.featureCollapsible.itemOnCollapseFn(infoObj);
+      } else {
+        this.env.acticveIndex = infoObj.index;
+      };
+      infoObj.collapseValue = this.collapseStatusList[infoObj.index];
+      this.env.itemOnClickFn(infoObj);
+      this.forceUpdate();
+    }
+  }, {
+    key: '_itemOnCollapseHandler',
+    value: function _itemOnCollapseHandler(event, infoObj) {
+      if (event.stopPropagation) {
+        // standard
+        event.stopPropagation();
+      } else {
+        // IE6-8
+        event.cancelBubble = true;
+      };
+      this.collapseStatusList[infoObj.index] = !this.collapseStatusList[infoObj.index];
+      infoObj.collapseValue = this.collapseStatusList[infoObj.index];
+      this.env.featureCollapsible.itemOnCollapseFn(infoObj);
+      this.forceUpdate();
+    }
+  }]);
+
+  return Menu;
+}(_react2.default.Component);
+
+;
+
+Menu.propTypes = {
+  menuArr: _propTypes2.default.array.isRequired,
+  styleObj: _propTypes2.default.object,
+  inputRefFn: _propTypes2.default.func,
+  acticveIndex: _propTypes2.default.string,
+  itemOnClickFn: _propTypes2.default.func,
+  featureCollapsible: _propTypes2.default.object
+};
+
+Menu.defaultProps = {
+  menuArr: [],
+  styleObj: {},
+  inputRefFn: function inputRefFn() {},
+  acticveIndex: '',
+  itemOnClickFn: function itemOnClickFn() {},
+  featureCollapsible: {}
+};
+
+exports.default = Menu;
+
+/***/ }),
+/* 45 */
+/***/ (function(module, exports, __webpack_require__) {
+
 /* WEBPACK VAR INJECTION */(function(module) {/*!
  * @name JavaScript/NodeJS Merge v1.2.0
  * @author yeikos
@@ -2140,7 +2564,7 @@ Menu.defaultProps = {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(111)(module)))
 
 /***/ }),
-/* 45 */
+/* 46 */
 /***/ (function(module, exports) {
 
 // Copyright Joyent, Inc. and other Node contributors.
@@ -2448,7 +2872,7 @@ function isUndefined(arg) {
 
 
 /***/ }),
-/* 46 */
+/* 47 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2542,7 +2966,7 @@ var ServerAPI = function () {
 exports.default = ServerAPI;
 
 /***/ }),
-/* 47 */
+/* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2600,7 +3024,7 @@ var ArticleRedirecter = function ArticleRedirecter(props) {
 exports.default = ArticleRedirecter;
 
 /***/ }),
-/* 48 */
+/* 49 */
 /***/ (function(module, exports) {
 
 var g;
@@ -2627,7 +3051,7 @@ module.exports = g;
 
 
 /***/ }),
-/* 49 */
+/* 50 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2651,7 +3075,7 @@ var storeShape = __WEBPACK_IMPORTED_MODULE_0_prop_types___default.a.shape({
 });
 
 /***/ }),
-/* 50 */
+/* 51 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2663,7 +3087,7 @@ var storeShape = __WEBPACK_IMPORTED_MODULE_0_prop_types___default.a.shape({
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__utils_Subscription__ = __webpack_require__(126);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__utils_PropTypes__ = __webpack_require__(49);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__utils_PropTypes__ = __webpack_require__(50);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -2955,14 +3379,14 @@ selectorFactory) {
 }
 
 /***/ }),
-/* 51 */
+/* 52 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = wrapMapToPropsConstant;
 /* unused harmony export getDependsOnOwnProps */
 /* harmony export (immutable) */ __webpack_exports__["b"] = wrapMapToPropsFunc;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__utils_verifyPlainObject__ = __webpack_require__(52);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__utils_verifyPlainObject__ = __webpack_require__(53);
 
 
 function wrapMapToPropsConstant(getConstant) {
@@ -3032,7 +3456,7 @@ function wrapMapToPropsFunc(mapToProps, methodName) {
 }
 
 /***/ }),
-/* 52 */
+/* 53 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3049,7 +3473,7 @@ function verifyPlainObject(value, displayName, methodName) {
 }
 
 /***/ }),
-/* 53 */
+/* 54 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3063,7 +3487,7 @@ var Symbol = __WEBPACK_IMPORTED_MODULE_0__root_js__["a" /* default */].Symbol;
 
 
 /***/ }),
-/* 54 */
+/* 55 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3182,7 +3606,7 @@ var ServerAPI = function () {
 exports.default = ServerAPI;
 
 /***/ }),
-/* 55 */
+/* 56 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3192,7 +3616,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(8);
+var _reactDom = __webpack_require__(7);
 
 var _reactRouterDom = __webpack_require__(21);
 
@@ -3200,7 +3624,7 @@ var _dispatcher = __webpack_require__(11);
 
 var _dispatcher2 = _interopRequireDefault(_dispatcher);
 
-__webpack_require__(94);
+__webpack_require__(95);
 
 var _home = __webpack_require__(16);
 
@@ -3221,7 +3645,6 @@ var Index = function Index(props) {
 (0, _reactDom.render)(_react2.default.createElement(Index, null), document.getElementById('main'));
 
 /***/ }),
-/* 56 */,
 /* 57 */,
 /* 58 */,
 /* 59 */,
@@ -3257,7 +3680,8 @@ var Index = function Index(props) {
 /* 89 */,
 /* 90 */,
 /* 91 */,
-/* 92 */
+/* 92 */,
+/* 93 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -3269,11 +3693,11 @@ var Index = function Index(props) {
  * of patent rights can be found in the PATENTS file in the same directory.
  */
 
-module.exports.Dispatcher = __webpack_require__(93);
+module.exports.Dispatcher = __webpack_require__(94);
 
 
 /***/ }),
-/* 93 */
+/* 94 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3510,13 +3934,13 @@ var Dispatcher = (function () {
 module.exports = Dispatcher;
 
 /***/ }),
-/* 94 */
+/* 95 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(95);
+var content = __webpack_require__(96);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -3524,7 +3948,7 @@ var transform;
 var options = {"hmr":true}
 options.transform = transform
 // add the styles to the DOM
-var update = __webpack_require__(97)(content, options);
+var update = __webpack_require__(98)(content, options);
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -3541,21 +3965,21 @@ if(false) {
 }
 
 /***/ }),
-/* 95 */
+/* 96 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(96)(false);
+exports = module.exports = __webpack_require__(97)(false);
 // imports
 
 
 // module
-exports.push([module.i, "body {\n  margin: 0;\n  padding: 0;\n  font-size: 16px;\n  font-family: Arial, 'Times New Roman', Times, serif;\n  font-weight: 100;\n  overflow-x: hidden;\n}\nspan + span {\n  margin-left: 5px;\n}\nbutton {\n  font-size: 14px;\n}\n.wrapper {\n  width: 100%;\n  height: 100%;\n}\n.wrapper.wrapper-home {\n  background-color: #fff;\n}\n.wrapper.wrapper-basic,\n.wrapper.wrapper-advance {\n  width: calc(100% - (15px * 2));\n  margin: auto;\n  padding: 15px 15px;\n}\n.linkBtn {\n  cursor: pointer;\n  color: #aaa;\n}\n.linkBtn:hover {\n  color: #000;\n}\n.wrapper .sideContentBG {\n  background-color: #000;\n  bottom: 0;\n  left: 0;\n  position: fixed;\n  top: 0;\n  width: 200px;\n}\n.wrapper .sideContent {\n  width: 200px;\n  background-color: #000;\n  color: #fff;\n  float: left;\n  min-height: 100vh;\n}\n.wrapper .sideContent .header {\n  background-color: #61dafb;\n  margin-bottom: 15px;\n  position: relative;\n  height: 104px;\n}\n.wrapper .sideContent .groupname {\n  background-color: #000;\n  line-height: 20px;\n  text-align: right;\n  padding: 2px 15px;\n}\n.wrapper .sideContent .icon {\n  -webkit-border-radius: 10px;\n  -moz-border-radius: 10px;\n  border-radius: 10px;\n  width: 50px;\n  height: 50px;\n  line-height: 50px;\n  background-color: #000;\n  text-align: center;\n  margin: 15px;\n  font-size: 36px;\n}\n.wrapper .sideContent .icon .fa {\n  vertical-align: middle;\n}\n.wrapper .sideContent .welcome {\n  left: calc(50px + (15px * 2));\n  line-height: 20px;\n  text-align: center;\n  padding: 30px 0;\n  position: absolute;\n  bottom: 0;\n  right: 0;\n  color: #000;\n}\n.wrapper .mainContent {\n  margin: 0 100px 0 200px;\n  background-color: transparent;\n  min-height: 100vh;\n}\n.btb-exampleLayout.wrapper {\n  display: inline-block;\n  width: unset;\n}\n.btb-exampleLayout.title {\n  font-size: 16px;\n  color: #000;\n  font-weight: 700;\n  margin: 5px 0;\n}\n.btb-exampleLayout.part {\n  margin: 5px;\n}\n.btb-exampleLayout.block {\n  min-width: 150px;\n  vertical-align: top;\n}\n.btb-exampleLayout.inlineBlock {\n  min-width: 150px;\n  vertical-align: top;\n  display: inline-block;\n}\n.btb-exampleLayout.inlineBlock + .inlineBlock {\n  margin-left: 10px;\n}\n.btb-articleLayout.mainTitle {\n  font-size: 30px;\n  font-weight: bold;\n  margin: 30px 15px 0;\n}\n.btb-articleLayout.mainDescription {\n  margin: 0 15px 30px;\n}\n.btb-articleLayout.section {\n  width: 100%;\n  font-size: 14px;\n}\n.btb-articleLayout.section + .btb-articleLayout.section {\n  margin-top: 30px;\n}\n.btb-articleLayout.sectionTitle {\n  color: #aaa;\n  border-bottom: 1px solid #aaa;\n  margin: 0 15px;\n  font-weight: bold;\n}\n.btb-articleLayout.sectionSubtitle {\n  font-weight: bold;\n  margin: 15px 0;\n}\n.btb-articleLayout.content {\n  color: #000;\n  margin: 15px 30px;\n}\n.btb-articleLayout.content-pre {\n  color: #f3f3f3;\n  background-color: #373940;\n  font-family: Consolas, \"Liberation Mono\", Menlo, Monaco, Courier, monospace;\n  margin: 15px 30px;\n  padding: 10px 15px;\n  white-space: pre-wrap;\n}\n.btb-articleLayout.content-item {\n  text-align: center;\n  margin: 15px 30px;\n}\n.btb-articleLayout.notice {\n  color: #aaa;\n  display: inline;\n}\n.btb-articleLayout.buttonGroup {\n  margin: 0 15px;\n}\n.btb-articleRedirectBtn {\n  border: 1px solid #aaa;\n  border-radius: 15px;\n  color: #aaa;\n  cursor: pointer;\n  font-size: 13px;\n  padding: 3px 5px;\n  position: fixed;\n  bottom: 15px;\n  right: 15px;\n}\n.btb-articleRedirectBtn:hover {\n  border-color: #000;\n  color: #000;\n}\n.example-userList {\n  padding: 5px;\n  border: 1px solid #aaa;\n  border-radius: 5px;\n  box-shadow: 2px 2px 4px 2px #aaa;\n}\n.example-userList .userList-add {\n  margin-top: 10px;\n}\n.example-userList .userList-add .userList-input {\n  border: 2px solid #aaa;\n  border-radius: 5px;\n  font-size: 10px;\n  padding: 2px 10px;\n}\n.example-userList .userList-add .userList-input:focus,\n.example-userList .userList-add .userList-input:hover {\n  border-color: #777;\n}\n.example-userList .userList-add .userList-addButton {\n  color: #aaa;\n  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;\n  border: medium none;\n  font-size: 15px;\n  margin-left: 5px;\n  padding: 0;\n  vertical-align: top;\n  cursor: pointer;\n}\n.example-userList .userList-add .userList-addButton:hover {\n  color: #ff0000;\n}\n.example-userList .example-block .userList-info {\n  margin-right: 40px;\n}\n.example-userList .userList-list {\n  border: 2px solid #aaa;\n  border-radius: 7px;\n  padding: 0px;\n  margin: 5px 0;\n}\n.example-userList .userList-list .userList-entry {\n  border-radius: 5px;\n  cursor: default;\n  padding: 2px 5px;\n  position: relative;\n  text-align: left;\n  overflow: hidden;\n}\n.example-userList .userList-list .userList-entry .userList-info {\n  margin-right: 40px;\n}\n.example-userList .userList-list .userList-entry .userList-deleteButton {\n  -webkit-transition: opacity 0.5s ease 0s, right 0.5s ease 0s;\n  -moz-transition: opacity 0.5s ease 0s, right 0.5s ease 0s;\n  -o-transition: opacity 0.5s ease 0s, right 0.5s ease 0s;\n  transition: opacity 0.5s ease 0s, right 0.5s ease 0s;\n  color: #ff0000;\n  opacity: 0;\n  position: absolute;\n  right: -20px;\n  top: 3px;\n  cursor: pointer;\n}\n.example-userList .userList-list .userList-entry:hover {\n  background-color: #ccc;\n}\n.example-userList .userList-list .userList-entry:hover .userList-deleteButton {\n  right: 2px;\n  opacity: 1;\n}\n.example-userList .userList-list .userList-entry .userList-moveButton {\n  -webkit-transition: opacity 0.5s ease 0s, right 0.5s ease 0s;\n  -moz-transition: opacity 0.5s ease 0s, right 0.5s ease 0s;\n  -o-transition: opacity 0.5s ease 0s, right 0.5s ease 0s;\n  transition: opacity 0.5s ease 0s, right 0.5s ease 0s;\n  color: #ff0000;\n  opacity: 0;\n  position: absolute;\n  right: -20px;\n  top: 3px;\n  cursor: pointer;\n}\n.example-userList .userList-list .userList-entry:hover {\n  background-color: #ccc;\n}\n.example-userList .userList-list .userList-entry:hover .userList-moveButton {\n  right: 22px;\n  opacity: 1;\n}\n.example-userList .userList-list .userList-entry-empty {\n  list-style: outside none none;\n  text-align: center;\n}\n.btb-menu.menu {\n  color: #fff;\n}\n.btb-menu.menu .layer-item.activeTop {\n  background-color: #373940;\n  border-left: 5px solid #61dafb;\n}\n.btb-menu.menu .layer-item.activeParent > .item-content .content-name {\n  color: #61dafb;\n}\n.btb-menu.menu .layer-item.activeParent > .item-content .collapse-arrow {\n  border-color: #61dafb transparent transparent;\n}\n.btb-menu.menu .layer-item.active > .item-content {\n  background-color: #373940;\n}\n.btb-menu.menu .layer-item.active > .item-content .content-name {\n  color: #61dafb;\n}\n.btb-menu.menu .layer-item.active > .item-content .collapse-arrow {\n  border-color: #61dafb transparent transparent;\n}\n.btb-menu.menu .item-content:hover {\n  background-color: #373940;\n}\n.btb-menu.menu .item-content:hover .content-name {\n  color: #61dafb;\n}\n.btb-menu.menu .item-content:hover .collapse-arrow {\n  border-color: #61dafb transparent transparent;\n}\n.btb-menu.menu .collapse-arrow {\n  border-color: #fff transparent transparent;\n}\n.btb-list.content-nodetree {\n  background-color: #d6e4ff;\n  margin: auto;\n  width: calc(100% - (75px * 2));\n  padding: 15px;\n}\n.btb-table.content-paramlist {\n  margin: auto;\n  width: calc(100% - (60px * 2));\n}\n.btb-table.content-paramlist .table-list {\n  border-collapse: collapse;\n  border-spacing: 0;\n}\n.btb-table.content-paramlist .tr-th {\n  background-color: #d6e4ff;\n  border: 2px solid #d6e4ff;\n  padding: 2px 15px;\n}\n.btb-table.content-paramlist .tr-td {\n  border: 2px solid #d6e4ff;\n  text-align: center;\n  padding: 2px 15px;\n}\n.btb-table.content-paramlist .td-name,\n.btb-table.content-paramlist .td-notice {\n  text-align: left;\n}\n.btb-table.content-paramlist .content-pre {\n  margin: 5px 0;\n  padding: 5px 15px;\n}\n", ""]);
+exports.push([module.i, "body {\n  margin: 0;\n  padding: 0;\n  font-size: 16px;\n  font-family: Arial, 'Times New Roman', Times, serif;\n  font-weight: 100;\n  overflow-x: hidden;\n}\nspan + span {\n  margin-left: 5px;\n}\nbutton {\n  font-size: 14px;\n}\n.wrapper {\n  width: 100%;\n  height: 100%;\n}\n.wrapper.wrapper-home {\n  background-color: #fff;\n}\n.wrapper.wrapper-basic,\n.wrapper.wrapper-advance {\n  width: calc(100% - (15px * 2));\n  margin: auto;\n  padding: 15px 15px;\n}\n.linkBtn {\n  cursor: pointer;\n  color: #aaa;\n}\n.linkBtn:hover {\n  color: #000;\n}\n.wrapper .sideContentBG {\n  background-color: #000;\n  bottom: 0;\n  left: 0;\n  position: fixed;\n  top: 0;\n  width: 200px;\n}\n.wrapper .sideContent {\n  width: 200px;\n  background-color: #000;\n  color: #fff;\n  float: left;\n  min-height: 100vh;\n}\n.wrapper .sideContent .header {\n  background-color: #61dafb;\n  margin-bottom: 15px;\n  position: relative;\n  height: 104px;\n}\n.wrapper .sideContent .groupname {\n  background-color: #000;\n  line-height: 20px;\n  text-align: right;\n  padding: 2px 15px;\n}\n.wrapper .sideContent .icon {\n  -webkit-border-radius: 10px;\n  -moz-border-radius: 10px;\n  border-radius: 10px;\n  width: 50px;\n  height: 50px;\n  line-height: 50px;\n  background-color: #000;\n  text-align: center;\n  margin: 15px;\n  font-size: 36px;\n}\n.wrapper .sideContent .icon .fa {\n  vertical-align: middle;\n}\n.wrapper .sideContent .welcome {\n  left: calc(50px + (15px * 2));\n  line-height: 20px;\n  text-align: center;\n  padding: 30px 0;\n  position: absolute;\n  bottom: 0;\n  right: 0;\n  color: #000;\n}\n.wrapper .mainContent {\n  margin: 0 100px 0 200px;\n  background-color: transparent;\n  min-height: 100vh;\n}\n.btb-exampleLayout.wrapper {\n  display: inline-block;\n  width: unset;\n}\n.btb-exampleLayout.title {\n  font-size: 16px;\n  color: #000;\n  font-weight: 700;\n  margin: 5px 0;\n}\n.btb-exampleLayout.part {\n  margin: 5px;\n}\n.btb-exampleLayout.block {\n  min-width: 150px;\n  vertical-align: top;\n}\n.btb-exampleLayout.inlineBlock {\n  min-width: 150px;\n  vertical-align: top;\n  display: inline-block;\n}\n.btb-exampleLayout.inlineBlock + .inlineBlock {\n  margin-left: 10px;\n}\n.btb-articleLayout.mainTitle {\n  font-size: 30px;\n  font-weight: bold;\n  margin: 30px 15px 0;\n}\n.btb-articleLayout.mainDescription {\n  margin: 0 15px 30px;\n}\n.btb-articleLayout.section {\n  width: 100%;\n  font-size: 14px;\n}\n.btb-articleLayout.section + .btb-articleLayout.section {\n  margin-top: 30px;\n}\n.btb-articleLayout.sectionTitle {\n  color: #aaa;\n  border-bottom: 1px solid #aaa;\n  margin: 0 15px;\n  font-weight: bold;\n}\n.btb-articleLayout.sectionSubtitle {\n  font-weight: bold;\n  margin: 15px 0;\n}\n.btb-articleLayout.content {\n  color: #000;\n  margin: 15px 30px;\n}\n.btb-articleLayout.content-pre {\n  color: #f3f3f3;\n  background-color: #373940;\n  font-family: Consolas, \"Liberation Mono\", Menlo, Monaco, Courier, monospace;\n  margin: 15px 30px;\n  padding: 10px 15px;\n  white-space: pre-wrap;\n}\n.btb-articleLayout.content-item {\n  text-align: center;\n  margin: 15px 30px;\n}\n.btb-articleLayout.notice {\n  color: #aaa;\n  display: inline;\n}\n.btb-articleLayout.buttonGroup {\n  margin: 0 15px;\n}\n.btb-articleRedirectBtn {\n  border: 1px solid #aaa;\n  border-radius: 15px;\n  color: #aaa;\n  cursor: pointer;\n  font-size: 13px;\n  padding: 3px 5px;\n  position: fixed;\n  bottom: 15px;\n  right: 15px;\n}\n.btb-articleRedirectBtn:hover {\n  border-color: #000;\n  color: #000;\n}\n.example-userList {\n  padding: 5px;\n  border: 1px solid #aaa;\n  border-radius: 5px;\n  box-shadow: 2px 2px 4px 2px #aaa;\n}\n.example-userList .userList-add {\n  margin-top: 10px;\n}\n.example-userList .userList-add .userList-input {\n  border: 2px solid #aaa;\n  border-radius: 5px;\n  font-size: 10px;\n  padding: 2px 10px;\n}\n.example-userList .userList-add .userList-input:focus,\n.example-userList .userList-add .userList-input:hover {\n  border-color: #777;\n}\n.example-userList .userList-add .userList-addButton {\n  color: #aaa;\n  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;\n  border: medium none;\n  font-size: 15px;\n  margin-left: 5px;\n  padding: 0;\n  vertical-align: top;\n  cursor: pointer;\n}\n.example-userList .userList-add .userList-addButton:hover {\n  color: #ff0000;\n}\n.example-userList .example-block .userList-info {\n  margin-right: 40px;\n}\n.example-userList .userList-list {\n  border: 2px solid #aaa;\n  border-radius: 7px;\n  padding: 0px;\n  margin: 5px 0;\n}\n.example-userList .userList-list .userList-entry {\n  border-radius: 5px;\n  cursor: default;\n  padding: 2px 5px;\n  position: relative;\n  text-align: left;\n  overflow: hidden;\n}\n.example-userList .userList-list .userList-entry .userList-info {\n  margin-right: 40px;\n}\n.example-userList .userList-list .userList-entry .userList-deleteButton {\n  -webkit-transition: opacity 0.5s ease 0s, right 0.5s ease 0s;\n  -moz-transition: opacity 0.5s ease 0s, right 0.5s ease 0s;\n  -o-transition: opacity 0.5s ease 0s, right 0.5s ease 0s;\n  transition: opacity 0.5s ease 0s, right 0.5s ease 0s;\n  color: #ff0000;\n  opacity: 0;\n  position: absolute;\n  right: -20px;\n  top: 3px;\n  cursor: pointer;\n}\n.example-userList .userList-list .userList-entry:hover {\n  background-color: #ccc;\n}\n.example-userList .userList-list .userList-entry:hover .userList-deleteButton {\n  right: 2px;\n  opacity: 1;\n}\n.example-userList .userList-list .userList-entry .userList-moveButton {\n  -webkit-transition: opacity 0.5s ease 0s, right 0.5s ease 0s;\n  -moz-transition: opacity 0.5s ease 0s, right 0.5s ease 0s;\n  -o-transition: opacity 0.5s ease 0s, right 0.5s ease 0s;\n  transition: opacity 0.5s ease 0s, right 0.5s ease 0s;\n  color: #ff0000;\n  opacity: 0;\n  position: absolute;\n  right: -20px;\n  top: 3px;\n  cursor: pointer;\n}\n.example-userList .userList-list .userList-entry:hover {\n  background-color: #ccc;\n}\n.example-userList .userList-list .userList-entry:hover .userList-moveButton {\n  right: 22px;\n  opacity: 1;\n}\n.example-userList .userList-list .userList-entry-empty {\n  list-style: outside none none;\n  text-align: center;\n}\n.btb-menu.menu {\n  color: #fff;\n}\n.btb-menu.menu .layer-item.activeTop {\n  background-color: #373940;\n  border-left: 5px solid #61dafb;\n}\n.btb-menu.menu .layer-item.activeParent > .item-content .content-name {\n  color: #61dafb;\n}\n.btb-menu.menu .layer-item.activeParent > .item-content .collapse-arrow {\n  border-color: #61dafb transparent transparent;\n}\n.btb-menu.menu .layer-item.active > .item-content {\n  background-color: #373940;\n}\n.btb-menu.menu .layer-item.active > .item-content .content-name {\n  color: #61dafb;\n}\n.btb-menu.menu .layer-item.active > .item-content .collapse-arrow {\n  border-color: #61dafb transparent transparent;\n}\n.btb-menu.menu .item-content:hover {\n  background-color: #373940;\n}\n.btb-menu.menu .item-content:hover .content-name {\n  color: #61dafb;\n}\n.btb-menu.menu .item-content:hover .collapse-arrow {\n  border-color: #61dafb transparent transparent;\n}\n.btb-menu.menu .collapse-arrow {\n  border-color: #fff transparent transparent;\n}\n.btb-list.content-nodetree {\n  background-color: #d6e4ff;\n  margin: auto;\n  width: calc(100% - (75px * 2));\n  padding: 15px;\n}\n.btb-table.content-paramlist {\n  margin: auto;\n  width: calc(100% - (60px * 2));\n}\n.btb-table.content-paramlist .table-list {\n  border-collapse: collapse;\n  border-spacing: 0;\n}\n.btb-table.content-paramlist .tr-th {\n  background-color: #d6e4ff;\n  border: 2px solid #d6e4ff;\n  padding: 2px 15px;\n}\n.btb-table.content-paramlist .tr-td {\n  border: 2px solid #d6e4ff;\n  text-align: center;\n  padding: 2px 15px;\n}\n.btb-table.content-paramlist .td-name {\n  text-align: left;\n  white-space: nowrap;\n}\n.btb-table.content-paramlist .td-notice {\n  text-align: left;\n}\n.btb-table.content-paramlist .content-pre {\n  margin: 5px 0;\n  padding: 5px 15px;\n}\n", ""]);
 
 // exports
 
 
 /***/ }),
-/* 96 */
+/* 97 */
 /***/ (function(module, exports) {
 
 /*
@@ -3637,7 +4061,7 @@ function toComment(sourceMap) {
 
 
 /***/ }),
-/* 97 */
+/* 98 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -3693,7 +4117,7 @@ var singleton = null;
 var	singletonCounter = 0;
 var	stylesInsertedAtTop = [];
 
-var	fixUrls = __webpack_require__(98);
+var	fixUrls = __webpack_require__(99);
 
 module.exports = function(list, options) {
 	if (typeof DEBUG !== "undefined" && DEBUG) {
@@ -4009,7 +4433,7 @@ function updateLink (link, options, obj) {
 
 
 /***/ }),
-/* 98 */
+/* 99 */
 /***/ (function(module, exports) {
 
 
@@ -4104,416 +4528,7 @@ module.exports = function (css) {
 
 
 /***/ }),
-/* 99 */,
-/* 100 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-
-
-
-var CONTENT_HEIGHT = 30;
-var menuThis = void 0;
-
-function MenuInfoObj(obj) {
-  var _this = this;
-
-  this['index'] = '';
-  this['name'] = '';
-  this['children'] = [];
-  this['defaultCollapse'] = true;
-  Object.keys(obj).map(function (key) {
-    _this[key] = obj[key];
-  });
-
-  if ('' == this['name']) {
-    this['name'] = this['index'];
-  };
-};
-
-var Menu = function (_React$Component) {
-  _inherits(Menu, _React$Component);
-
-  function Menu(props) {
-    _classCallCheck(this, Menu);
-
-    var _this2 = _possibleConstructorReturn(this, (Menu.__proto__ || Object.getPrototypeOf(Menu)).call(this, props));
-
-    _this2.env = {
-      menuArr: [],
-      styleObj: {},
-      inputRefFn: function inputRefFn() {},
-      acticveIndex: '',
-      itemOnClickFn: function itemOnClickFn() {},
-      featureCollapsible: {
-        enable: false,
-        customCollapseButton: '',
-        itemOnCollapseFn: function itemOnCollapseFn() {}
-      }
-    };
-    _this2.val = {
-      hasFoundActive: false,
-      hasFoundActiveTop: false
-    };
-    _this2.collapseStatusList = {};
-    return _this2;
-  }
-
-  _createClass(Menu, [{
-    key: 'componentWillMount',
-    value: function componentWillMount() {
-      this.updateENVFn(this.props);
-    }
-  }, {
-    key: 'componentWillReceiveProps',
-    value: function componentWillReceiveProps(nextProps) {
-      this.updateENVFn(nextProps);
-    }
-  }, {
-    key: 'render',
-    value: function render() {
-      var _this3 = this;
-
-      this.val.hasFoundActive = false;
-      this.val.hasFoundActiveTop = false;
-      var content = [];
-      var menuArr = this.env.menuArr;
-      var nextLayer = 0;
-      var itemCount = menuArr.length;
-      menuArr.map(function (item) {
-        itemCount += _this3.countRecursionFn(item);
-      });
-      var props_menu = this.createBasicProps('btb-menu');
-      if (this.props.className) {
-        props_menu.className += ' ' + this.props.className;
-      };
-      var content_height = parseInt(!this.env.styleObj['item-content'] ? CONTENT_HEIGHT : this.env.styleObj['item-content']['height'] ? this.env.styleObj['item-content']['height'] : this.env.styleObj['item-content']['line-height'] ? this.env.styleObj['item-content']['line-height'] : CONTENT_HEIGHT);
-      props_menu.style['height'] = itemCount * content_height;
-      var props_layer = this.createBasicProps('menu-layer');
-      var layerNextName = 'layer-' + nextLayer;
-      props_layer.className += ' ' + layerNextName;
-      if (this.env.styleObj[layerNextName]) {
-        Object.keys(this.env.styleObj[layerNextName]).map(function (config) {
-          props_layer.style[config] = _this3.env.styleObj[layerNextName][config];
-        });
-      };
-      content.push(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        'div',
-        _extends({}, props_menu, { ref: function ref(_ref) {
-            _this3._refHandler(_ref);
-          } }),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          'ul',
-          props_layer,
-          menuArr.map(function (item) {
-            var content_menu = [];
-            content_menu.push(_this3.menuRenderFn(item, nextLayer));
-            return content_menu;
-          })
-        )
-      ));
-      return content;
-    }
-  }, {
-    key: 'updateENVFn',
-    value: function updateENVFn(source) {
-      var _this4 = this;
-
-      this.env = {
-        menuArr: [],
-        acticveIndex: '',
-        styleObj: {},
-        itemOnClickFn: function itemOnClickFn() {},
-        inputRefFn: function inputRefFn() {},
-        featureCollapsible: {
-          enable: false,
-          customCollapseButton: '',
-          itemOnCollapseFn: function itemOnCollapseFn() {}
-        }
-      };
-      var isChanged = source['acticveIndex'] && source['acticveIndex'] != this.env['acticveIndex'] ? true : false;
-      Object.keys(source).map(function (entry) {
-        switch (entry) {
-          case 'featureCollapsible':
-            Object.keys(source.featureCollapsible).map(function (collapse_entry) {
-              _this4.env.featureCollapsible[collapse_entry] = source.featureCollapsible[collapse_entry];
-            });
-            break;
-          default:
-            _this4.env[entry] = source[entry];
-            break;
-        };
-      });
-      menuThis = this;
-
-      var menuArr = this.env.menuArr;
-      menuArr.map(function (item) {
-        var infoObj = new MenuInfoObj(item);
-        _this4.initCollapseStautsFn(infoObj);
-        if (isChanged) {
-          _this4.expandRecursionFn(infoObj);
-        }
-      });
-    }
-  }, {
-    key: 'initCollapseStautsFn',
-    value: function initCollapseStautsFn(source) {
-      var infoObj = new MenuInfoObj(source);
-      if (0 < infoObj.children.length && 'undefined' == typeof this.collapseStatusList[infoObj.index]) {
-        this.collapseStatusList[infoObj.index] = menuThis.env.featureCollapsible.enable ? infoObj.defaultCollapse : false;
-      };
-
-      for (var i = 0; i < infoObj.children.length; i++) {
-        this.initCollapseStautsFn(infoObj.children[i]);
-      };
-    }
-  }, {
-    key: 'createBasicProps',
-    value: function createBasicProps(name) {
-      var obj = {
-        className: name,
-        style: this.env.styleObj[name] ? this.env.styleObj[name] : {}
-      };
-      return obj;
-    }
-  }, {
-    key: 'menuRenderFn',
-    value: function menuRenderFn(source, layerCounter) {
-      var _this5 = this;
-
-      var infoObj = new MenuInfoObj(source);
-      var content = [];
-      var isMatch = false;
-      var hasChildren = 0 < infoObj.children.length ? true : false;
-      var layerPaddingLeft = layerCounter * 15;
-      var nextLayer = layerCounter + 1;
-      var props_item = this.createBasicProps('layer-item');
-      if (!this.val.hasFoundActive) {
-        if (this.env.acticveIndex == infoObj.index) {
-          props_item.className += ' active';
-          this.val.hasFoundActive = true;
-          isMatch = true;
-        } else {
-          if (hasChildren && this.searchRecursionFn(infoObj)) {
-            props_item.className += ' activeParent';
-            isMatch = true;
-          };
-        };
-        if (isMatch && !this.val.hasFoundActiveTop) {
-          props_item.className += ' activeTop';
-          this.val.hasFoundActiveTop = true;
-        };
-      };
-      var props_content = this.createBasicProps('item-content');
-      props_content.style['padding-left'] = layerPaddingLeft;
-      props_content.onClick = function (event) {
-        _this5._itemOnClickHandler(event, infoObj);
-      };
-      var props_name = this.createBasicProps('content-name');
-      content.push(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        'li',
-        props_item,
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          'div',
-          props_content,
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            'div',
-            props_name,
-            infoObj.name
-          ),
-          function () {
-            var content_collapse = [];
-            if (hasChildren && _this5.env.featureCollapsible.enable) {
-              if ('' == _this5.env.featureCollapsible.customCollapseButton) {
-                var props_collapse = _this5.createBasicProps('content-collapse');
-                if (_this5.collapseStatusList[infoObj.index]) {
-                  props_collapse.className += ' collapsed';
-                };
-                props_collapse.onClick = function (event) {
-                  _this5._itemOnCollapseHandler(event, infoObj);
-                };
-                var props_arrow = _this5.createBasicProps('collapse-arrow');
-                content_collapse.push(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                  'div',
-                  props_collapse,
-                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', props_arrow)
-                ));
-              } else {
-                var props_custom_collapse = _this5.createBasicProps('content-custom-collapse');
-                if (_this5.collapseStatusList[infoObj.index]) {
-                  props_custom_collapse.className += ' collapsed';
-                };
-                props_custom_collapse.onClick = function (event) {
-                  _this5._itemOnCollapseHandler(event, infoObj);
-                };
-                content_collapse.push(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                  'div',
-                  props_custom_collapse,
-                  _this5.env.featureCollapsible.customCollapseButton
-                ));
-              }
-            };
-            return content_collapse;
-          }()
-        ),
-        function () {
-          var content_submenu = [];
-          if (hasChildren) {
-            var props_submenu = _this5.createBasicProps('item-submenu');
-            if (_this5.env.featureCollapsible.enable && _this5.collapseStatusList[infoObj.index]) {
-              props_submenu.className += ' collapsed';
-            };
-            var content_height = parseInt(!_this5.env.styleObj['item-content'] ? CONTENT_HEIGHT : _this5.env.styleObj['item-content']['height'] ? _this5.env.styleObj['item-content']['height'] : _this5.env.styleObj['item-content']['line-height'] ? _this5.env.styleObj['item-content']['line-height'] : CONTENT_HEIGHT);
-            props_submenu.style['height'] = _this5.countRecursionFn(infoObj) * content_height;
-            var props_layer = _this5.createBasicProps('menu-layer');
-            var layerNextName = 'layer-' + nextLayer;
-            props_layer.className += ' ' + layerNextName;
-            if (_this5.env.styleObj[layerNextName]) {
-              Object.keys(_this5.env.styleObj[layerNextName]).map(function (config) {
-                props_layer.style[config] = _this5.env.styleObj[layerNextName][config];
-              });
-            };
-            content_submenu.push(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-              'div',
-              props_submenu,
-              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                'ul',
-                props_layer,
-                infoObj.children.map(function (item) {
-                  var content_menu = [];
-                  content_menu.push(_this5.menuRenderFn(item, nextLayer));
-                  return content_menu;
-                })
-              )
-            ));
-          };
-          return content_submenu;
-        }()
-      ));
-      return content;
-    }
-  }, {
-    key: 'searchRecursionFn',
-    value: function searchRecursionFn(source) {
-      var infoObj = new MenuInfoObj(source);
-      for (var i = 0; i < infoObj.children.length; i++) {
-        if (this.env.acticveIndex == infoObj.children[i].index || this.searchRecursionFn(infoObj.children[i])) {
-          return true;
-        };
-      };
-      return false;
-    }
-  }, {
-    key: 'countRecursionFn',
-    value: function countRecursionFn(source) {
-      var infoObj = new MenuInfoObj(source);
-      var count = 0;
-      if (!this.collapseStatusList[infoObj.index]) {
-        count = infoObj.children.length;
-        for (var i = 0; i < infoObj.children.length; i++) {
-          count += this.countRecursionFn(infoObj.children[i]);
-        };
-      };
-      return count;
-    }
-  }, {
-    key: 'expandRecursionFn',
-    value: function expandRecursionFn(source) {
-      var infoObj = new MenuInfoObj(source);
-      for (var i = 0; i < infoObj.children.length; i++) {
-        if (this.env.acticveIndex == infoObj.children[i].index) {
-          this.collapseStatusList[infoObj.index] = false;
-          break;
-        };
-        if (this.searchRecursionFn(infoObj.children[i])) {
-          this.collapseStatusList[infoObj.index] = false;
-          this.expandRecursionFn(infoObj.children[i]);
-        };
-      };
-    }
-  }, {
-    key: '_refHandler',
-    value: function _refHandler(ref) {
-      this.env.inputRefFn(ref);
-    }
-  }, {
-    key: '_itemOnClickHandler',
-    value: function _itemOnClickHandler(event, infoObj) {
-      if (event.stopPropagation) {
-        // standard
-        event.stopPropagation();
-      } else {
-        // IE6-8
-        event.cancelBubble = true;
-      };
-      this.env.acticveIndex = infoObj.index;
-      this.env.itemOnClickFn(infoObj);
-
-      if (0 < infoObj.children.length) {
-        this.collapseStatusList[infoObj.index] = false;
-        infoObj.event = { value: false };
-        this.env.featureCollapsible.itemOnCollapseFn(infoObj);
-      };
-      this.forceUpdate();
-    }
-  }, {
-    key: '_itemOnCollapseHandler',
-    value: function _itemOnCollapseHandler(event, infoObj) {
-      if (event.stopPropagation) {
-        // standard
-        event.stopPropagation();
-      } else {
-        // IE6-8
-        event.cancelBubble = true;
-      };
-      this.collapseStatusList[infoObj.index] = !this.collapseStatusList[infoObj.index];
-      infoObj.event = { value: !this.collapseStatusList[infoObj.index] };
-      this.env.featureCollapsible.itemOnCollapseFn(infoObj);
-      this.forceUpdate();
-    }
-  }]);
-
-  return Menu;
-}(__WEBPACK_IMPORTED_MODULE_0_react___default.a.Component);
-
-;
-
-Menu.propTypes = {
-  menuArr: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.array.isRequired,
-  styleObj: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.object,
-  inputRefFn: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.func,
-  acticveIndex: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.string,
-  itemOnClickFn: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.func,
-  featureCollapsible: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.object
-};
-
-Menu.defaultProps = {
-  menuArr: [],
-  styleObj: {},
-  inputRefFn: function inputRefFn() {},
-  acticveIndex: '',
-  itemOnClickFn: function itemOnClickFn() {},
-  featureCollapsible: {}
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (Menu);
-
-/***/ }),
+/* 100 */,
 /* 101 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -4558,6 +4573,9 @@ var menuList = new Array({
     'children': [{
       'index': 'BTB_MENU_BASIC',
       'name': 'Basic'
+    }, {
+      'index': 'BTB_MENU_EXAMPLE',
+      'name': 'Example'
     }, {
       'index': 'BTB_MENU_ADV',
       'name': 'Advanced'
@@ -4908,7 +4926,7 @@ var _articleLayout = __webpack_require__(5);
 
 var _articleLayout2 = _interopRequireDefault(_articleLayout);
 
-var _articleRedirecter = __webpack_require__(47);
+var _articleRedirecter = __webpack_require__(48);
 
 var _articleRedirecter2 = _interopRequireDefault(_articleRedirecter);
 
@@ -4942,7 +4960,8 @@ var introductionExampleTitle = 'Example';
 var introductionExampleContent = _react2.default.createElement(
   'span',
   null,
-  'The following shown is a user list. It is the example with our discussion to Flux. And here is source code of ',
+  'The following shown is a user list. It is the example with our discussion to Flux. And here is source code of',
+  ' ',
   _react2.default.createElement(
     'a',
     { target: '_blank', href: 'https://github.com/BlackToolBoxLaboratory/blacktbox-demo/tree/master/src/example/articleFlux/example' },
@@ -5333,7 +5352,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(8);
+var _reactDom = __webpack_require__(7);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
@@ -5341,7 +5360,7 @@ var _reactFontawesome = __webpack_require__(1);
 
 var _reactFontawesome2 = _interopRequireDefault(_reactFontawesome);
 
-var _exampleLayout = __webpack_require__(7);
+var _exampleLayout = __webpack_require__(8);
 
 var _exampleLayout2 = _interopRequireDefault(_exampleLayout);
 
@@ -5582,7 +5601,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(8);
+var _reactDom = __webpack_require__(7);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
@@ -5590,7 +5609,7 @@ var _reactFontawesome = __webpack_require__(1);
 
 var _reactFontawesome2 = _interopRequireDefault(_reactFontawesome);
 
-var _exampleLayout = __webpack_require__(7);
+var _exampleLayout = __webpack_require__(8);
 
 var _exampleLayout2 = _interopRequireDefault(_exampleLayout);
 
@@ -5803,11 +5822,11 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _merge = __webpack_require__(44);
+var _merge = __webpack_require__(45);
 
 var _merge2 = _interopRequireDefault(_merge);
 
-var _events = __webpack_require__(45);
+var _events = __webpack_require__(46);
 
 var _dispatcher = __webpack_require__(11);
 
@@ -5993,7 +6012,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(8);
+var _reactDom = __webpack_require__(7);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
@@ -6001,11 +6020,11 @@ var _reactFontawesome = __webpack_require__(1);
 
 var _reactFontawesome2 = _interopRequireDefault(_reactFontawesome);
 
-var _exampleLayout = __webpack_require__(7);
+var _exampleLayout = __webpack_require__(8);
 
 var _exampleLayout2 = _interopRequireDefault(_exampleLayout);
 
-var _serverAPI = __webpack_require__(46);
+var _serverAPI = __webpack_require__(47);
 
 var _serverAPI2 = _interopRequireDefault(_serverAPI);
 
@@ -6222,13 +6241,13 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _merge = __webpack_require__(44);
+var _merge = __webpack_require__(45);
 
 var _merge2 = _interopRequireDefault(_merge);
 
-var _events = __webpack_require__(45);
+var _events = __webpack_require__(46);
 
-var _serverAPI = __webpack_require__(46);
+var _serverAPI = __webpack_require__(47);
 
 var _serverAPI2 = _interopRequireDefault(_serverAPI);
 
@@ -6390,7 +6409,7 @@ var _articleLayout = __webpack_require__(5);
 
 var _articleLayout2 = _interopRequireDefault(_articleLayout);
 
-var _articleRedirecter = __webpack_require__(47);
+var _articleRedirecter = __webpack_require__(48);
 
 var _articleRedirecter2 = _interopRequireDefault(_articleRedirecter);
 
@@ -6802,7 +6821,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(8);
+var _reactDom = __webpack_require__(7);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
@@ -6810,7 +6829,7 @@ var _reactFontawesome = __webpack_require__(1);
 
 var _reactFontawesome2 = _interopRequireDefault(_reactFontawesome);
 
-var _exampleLayout = __webpack_require__(7);
+var _exampleLayout = __webpack_require__(8);
 
 var _exampleLayout2 = _interopRequireDefault(_exampleLayout);
 
@@ -7192,7 +7211,7 @@ if (typeof self !== 'undefined') {
 var result = Object(__WEBPACK_IMPORTED_MODULE_0__ponyfill_js__["a" /* default */])(root);
 /* harmony default export */ __webpack_exports__["a"] = (result);
 
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(48), __webpack_require__(123)(module)))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(49), __webpack_require__(123)(module)))
 
 /***/ }),
 /* 123 */
@@ -7259,7 +7278,7 @@ function symbolObservablePonyfill(root) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__utils_PropTypes__ = __webpack_require__(49);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__utils_PropTypes__ = __webpack_require__(50);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__utils_warning__ = __webpack_require__(30);
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -7439,7 +7458,7 @@ var Subscription = function () {
 
 "use strict";
 /* unused harmony export createConnect */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_connectAdvanced__ = __webpack_require__(50);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_connectAdvanced__ = __webpack_require__(51);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__utils_shallowEqual__ = __webpack_require__(128);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__mapDispatchToProps__ = __webpack_require__(129);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__mapStateToProps__ = __webpack_require__(139);
@@ -7595,7 +7614,7 @@ function shallowEqual(objA, objB) {
 /* unused harmony export whenMapDispatchToPropsIsMissing */
 /* unused harmony export whenMapDispatchToPropsIsObject */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_redux__ = __webpack_require__(13);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__wrapMapToProps__ = __webpack_require__(51);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__wrapMapToProps__ = __webpack_require__(52);
 
 
 
@@ -7694,7 +7713,7 @@ function isPlainObject(value) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Symbol_js__ = __webpack_require__(53);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Symbol_js__ = __webpack_require__(54);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__getRawTag_js__ = __webpack_require__(134);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__objectToString_js__ = __webpack_require__(135);
 
@@ -7754,14 +7773,14 @@ var freeGlobal = typeof global == 'object' && global && global.Object === Object
 
 /* harmony default export */ __webpack_exports__["a"] = (freeGlobal);
 
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(48)))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(49)))
 
 /***/ }),
 /* 134 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Symbol_js__ = __webpack_require__(53);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Symbol_js__ = __webpack_require__(54);
 
 
 /** Used for built-in method references. */
@@ -7918,7 +7937,7 @@ function isObjectLike(value) {
 "use strict";
 /* unused harmony export whenMapStateToPropsIsFunction */
 /* unused harmony export whenMapStateToPropsIsMissing */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__wrapMapToProps__ = __webpack_require__(51);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__wrapMapToProps__ = __webpack_require__(52);
 
 
 function whenMapStateToPropsIsFunction(mapStateToProps) {
@@ -7942,7 +7961,7 @@ function whenMapStateToPropsIsMissing(mapStateToProps) {
 /* unused harmony export wrapMergePropsFunc */
 /* unused harmony export whenMergePropsIsFunction */
 /* unused harmony export whenMergePropsIsOmitted */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__utils_verifyPlainObject__ = __webpack_require__(52);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__utils_verifyPlainObject__ = __webpack_require__(53);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 
@@ -8143,7 +8162,7 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRedux = __webpack_require__(6);
 
-var _exampleLayout = __webpack_require__(7);
+var _exampleLayout = __webpack_require__(8);
 
 var _exampleLayout2 = _interopRequireDefault(_exampleLayout);
 
@@ -8290,7 +8309,7 @@ var _reactFontawesome = __webpack_require__(1);
 
 var _reactFontawesome2 = _interopRequireDefault(_reactFontawesome);
 
-var _exampleLayout = __webpack_require__(7);
+var _exampleLayout = __webpack_require__(8);
 
 var _exampleLayout2 = _interopRequireDefault(_exampleLayout);
 
@@ -8947,7 +8966,7 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRedux = __webpack_require__(6);
 
-var _exampleLayout = __webpack_require__(7);
+var _exampleLayout = __webpack_require__(8);
 
 var _exampleLayout2 = _interopRequireDefault(_exampleLayout);
 
@@ -9095,7 +9114,7 @@ var _reactFontawesome = __webpack_require__(1);
 
 var _reactFontawesome2 = _interopRequireDefault(_reactFontawesome);
 
-var _exampleLayout = __webpack_require__(7);
+var _exampleLayout = __webpack_require__(8);
 
 var _exampleLayout2 = _interopRequireDefault(_exampleLayout);
 
@@ -9507,7 +9526,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _serverAPI = __webpack_require__(54);
+var _serverAPI = __webpack_require__(55);
 
 var _serverAPI2 = _interopRequireDefault(_serverAPI);
 
@@ -9562,7 +9581,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _serverAPI = __webpack_require__(54);
+var _serverAPI = __webpack_require__(55);
 
 var _serverAPI2 = _interopRequireDefault(_serverAPI);
 
@@ -9841,7 +9860,8 @@ var renderTitle = 'RENDER';
 var renderContent = _react2.default.createElement(
   'span',
   null,
-  'Notice: DOM properties are still work with ',
+  'Notice: DOM properties are still work with',
+  ' ',
   _react2.default.createElement(
     'a',
     { target: '_blank', href: 'https://reactjs.org/docs/dom-elements.html' },
@@ -9856,7 +9876,7 @@ var nodeTreeContent = 'Here showing the node structure. Each node with className
 var nodeTreeNotice = 'Notice: The layer.index is counted base on 0.';
 
 var INSTALLATION_PRE = '$ npm install --save blacktbox-list\n\n// using ES6 modules\nimport BTBList from \'blacktbox-list\';\n\n// using CommonJS modules\nvar BTBList = require(\'blacktbox-list\');';
-var RENDER_PRE = '<BTBList \n  listArr: [],\n  styleObj: {},\n  inputRefFn: ()=>{}\n/>';
+var RENDER_PRE = '<BTBList \n  listArr= []\n  styleObj= {}\n  inputRefFn= {()=>{}}\n/>';
 var LISTARR_PRE = 'listArr = [{\n  name: \'\',\n  children: [...]\n}, ...]';
 var SUBLISTARR_PRE = 'children = [{\n  name: \'\',\n  children: [...]\n}, ...]';
 var STYLEOBJ_PRE = 'styleObj = {\n  \'Node\'s className\': {CSS Object}\n  , ...\n}';
@@ -9873,7 +9893,7 @@ var PARAM_BODY = new Array({ name: 'listArr', type: 'Array', default: '[]', noti
     'pre',
     { className: 'content-pre' },
     STYLEOBJ_PRE
-  ) }, { name: 'inputRefFn', type: 'Function', default: '()=>{}', notice: 'To catch ref with (ref)=>{variable = ref}.' });
+  ) }, { name: 'inputRefFn', type: 'Function', default: '(ref)=>{}', notice: 'To catch ref with (ref)=>{variable = ref}. (Only for stateful function)' });
 var NODE_TREE = new Array({
   'name': '<div> .btb-list',
   'children': [{
@@ -10001,11 +10021,13 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
 var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(8);
+var _reactDom = __webpack_require__(7);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
@@ -10022,6 +10044,12 @@ var _articleLayout = __webpack_require__(5);
 var _articleLayout2 = _interopRequireDefault(_articleLayout);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 var mainTitle = _react2.default.createElement(
   'span',
@@ -10100,114 +10128,136 @@ var styleObj = {
     'color': '#8c8c8c',
     'font-size': '14px'
   }
-};;
-
-var Example = function Example(props) {
-  var content = [];
-  var listRef = void 0;
-  content.push(_react2.default.createElement(
-    'div',
-    { className: 'wrapper wrapper-basic' },
-    _react2.default.createElement(
-      _articleLayout2.default.MainTitle,
-      null,
-      mainTitle
-    ),
-    _react2.default.createElement(
-      _articleLayout2.default.MainDescription,
-      null,
-      mainDescriptionStr
-    ),
-    _react2.default.createElement(
-      _articleLayout2.default.Section,
-      null,
-      _react2.default.createElement(
-        _articleLayout2.default.SectionTitle,
-        null,
-        exampleTitle
-      ),
-      _react2.default.createElement(
-        _articleLayout2.default.Content,
-        null,
-        _react2.default.createElement(_blacktboxList2.default, {
-          listArr: listArr,
-          styleObj: styleObj,
-          inputRefFn: function inputRefFn(ref) {
-            listRef = ref;
-          }
-        })
-      ),
-      _react2.default.createElement(
-        _articleLayout2.default.Item,
-        null,
-        _react2.default.createElement(
-          'button',
-          { onClick: function onClick() {
-              _consoleLogRef();
-            } },
-          exampleButtonText
-        )
-      )
-    ),
-    _react2.default.createElement(
-      _articleLayout2.default.Section,
-      null,
-      _react2.default.createElement(
-        _articleLayout2.default.SectionTitle,
-        null,
-        rourceCodeTitle
-      ),
-      _react2.default.createElement(
-        _articleLayout2.default.Content,
-        null,
-        _react2.default.createElement(
-          _articleLayout2.default.SectionSubtitle,
-          null,
-          rourceCodeSubTitle_Render
-        ),
-        _react2.default.createElement(
-          _articleLayout2.default.Pre,
-          null,
-          ROURCECODE_RENDER_PRE
-        )
-      ),
-      _react2.default.createElement(
-        _articleLayout2.default.Content,
-        null,
-        _react2.default.createElement(
-          _articleLayout2.default.SectionSubtitle,
-          null,
-          rourceCodeSubTitle_Style
-        ),
-        _react2.default.createElement(
-          _articleLayout2.default.Pre,
-          null,
-          ROURCECODE_STYLE_PRE
-        )
-      ),
-      _react2.default.createElement(
-        _articleLayout2.default.Content,
-        null,
-        _react2.default.createElement(
-          _articleLayout2.default.SectionSubtitle,
-          null,
-          rourceCodeSubTitle_List
-        ),
-        _react2.default.createElement(
-          _articleLayout2.default.Pre,
-          null,
-          ROURCECODE_LIST_PRE
-        )
-      )
-    )
-  ));
-  return content;
-
-  function _consoleLogRef() {
-    var listRef = _reactDom2.default.findDOMNode(listRef);
-    console.log('listRef', listRef);
-  };
 };
+
+var Example = function (_Component) {
+  _inherits(Example, _Component);
+
+  function Example(props) {
+    _classCallCheck(this, Example);
+
+    var _this = _possibleConstructorReturn(this, (Example.__proto__ || Object.getPrototypeOf(Example)).call(this, props));
+
+    _this.listRef = [];
+    return _this;
+  }
+
+  _createClass(Example, [{
+    key: 'render',
+    value: function render() {
+      var _this2 = this;
+
+      var content = [];
+      content.push(_react2.default.createElement(
+        'div',
+        { className: 'wrapper wrapper-basic' },
+        _react2.default.createElement(
+          _articleLayout2.default.MainTitle,
+          null,
+          mainTitle
+        ),
+        _react2.default.createElement(
+          _articleLayout2.default.MainDescription,
+          null,
+          mainDescriptionStr
+        ),
+        _react2.default.createElement(
+          _articleLayout2.default.Section,
+          null,
+          _react2.default.createElement(
+            _articleLayout2.default.SectionTitle,
+            null,
+            exampleTitle
+          ),
+          _react2.default.createElement(
+            _articleLayout2.default.Content,
+            null,
+            _react2.default.createElement(_blacktboxList2.default, {
+              listArr: listArr,
+              styleObj: styleObj,
+              inputRefFn: function inputRefFn(ref) {
+                _this2.listRef = ref;
+              }
+            })
+          ),
+          _react2.default.createElement(
+            _articleLayout2.default.Item,
+            null,
+            _react2.default.createElement(
+              'button',
+              { onClick: function onClick() {
+                  _this2._consoleLogRef();
+                } },
+              exampleButtonText
+            )
+          )
+        ),
+        _react2.default.createElement(
+          _articleLayout2.default.Section,
+          null,
+          _react2.default.createElement(
+            _articleLayout2.default.SectionTitle,
+            null,
+            rourceCodeTitle
+          ),
+          _react2.default.createElement(
+            _articleLayout2.default.Content,
+            null,
+            _react2.default.createElement(
+              _articleLayout2.default.SectionSubtitle,
+              null,
+              rourceCodeSubTitle_Render
+            ),
+            _react2.default.createElement(
+              _articleLayout2.default.Pre,
+              null,
+              ROURCECODE_RENDER_PRE
+            )
+          ),
+          _react2.default.createElement(
+            _articleLayout2.default.Content,
+            null,
+            _react2.default.createElement(
+              _articleLayout2.default.SectionSubtitle,
+              null,
+              rourceCodeSubTitle_Style
+            ),
+            _react2.default.createElement(
+              _articleLayout2.default.Pre,
+              null,
+              ROURCECODE_STYLE_PRE
+            )
+          ),
+          _react2.default.createElement(
+            _articleLayout2.default.Content,
+            null,
+            _react2.default.createElement(
+              _articleLayout2.default.SectionSubtitle,
+              null,
+              rourceCodeSubTitle_List
+            ),
+            _react2.default.createElement(
+              _articleLayout2.default.Pre,
+              null,
+              ROURCECODE_LIST_PRE
+            )
+          )
+        )
+      ));
+      return content;
+    }
+  }, {
+    key: '_consoleLogRef',
+    value: function _consoleLogRef() {
+      var listRef = _reactDom2.default.findDOMNode(this.listRef);
+      console.log('listRef', listRef);
+    }
+  }]);
+
+  return Example;
+}(_react.Component);
+
+;
 
 exports.default = Example;
 
@@ -10260,7 +10310,8 @@ var installationTitle = 'INSTALLATION';
 var installationContent = _react2.default.createElement(
   'span',
   null,
-  'Using with ',
+  'Using with',
+  ' ',
   _react2.default.createElement(
     'a',
     { target: '_blank', href: 'https://www.npmjs.com' },
@@ -10291,7 +10342,7 @@ var nodeTreeListTitle = 'Mode List:';
 var nodeTreeNotice = 'Notice: The th.index come from tableHeadArr.';
 
 var INSTALLATION_PRE = '$ npm install --save blacktbox-table\n\n// using ES6 modules\nimport BTBTable from \'blacktbox-table\';\n\n// using CommonJS modules\nvar BTBTable = require(\'blacktbox-table\');';
-var RENDER_PRE = '<BTBTable \n  tableHeadArr: [],\n  tableBobyArr: [],\n  modeObj: {\n    mode: \'list\'\n  },\n  styleObj: {},\n  inputRefFn: ()=>{}\n/>';
+var RENDER_PRE = '<BTBTable \n  tableHeadArr = []\n  tableBobyArr = []\n  modeObj: {\n    mode: \'list\'\n  }\n  styleObj: {}\n  inputRefFn: {()=>{}}\n/>';
 // const TABLEHEADARR_PRE = 
 // `tableHeadArr = [{
 //   name: '',
@@ -10309,28 +10360,28 @@ var PARAM_BODY = new Array({ name: 'tableHeadArr', type: 'Array', default: '[]',
     { className: 'content-pre' },
     TABLEHEADARR_PRE
   ) }, { name: '- name', type: 'String or Node', default: '\'\', ()', notice: 'String or Node to show table head name.' }, { name: '- index', type: 'String', default: '\'\'', notice: 'index of tableBobyArr.index.' },
-//   {name: '- sortType',          type: 'String',         default: '\'\'',    notice: '[Unsupported Yet] index\'s sort type. {value: custom, string, number, ip, mac}'},
-//   {name: '- sortFn',            type: 'Function',       default: '()=>{}',  notice: '[Unsupported Yet] define sort function while sortType is custom.'},
-//   {name: '- defaultSortStatus', type: 'String',         default: '\'\'',    notice: '[Unsupported Yet] String to index tableBobyArr[\'index\'].'},
+//   {name: '- sortType',          type: 'String',         default: '\'\'',    notice: `[Unsupported Yet] index\'s sort type. {value: custom, string, number, ip, mac}`},
+//   {name: '- sortFn',            type: 'Function',       default: '()=>{}',  notice: `[Unsupported Yet] define sort function while sortType is custom.`},
+//   {name: '- defaultSortStatus', type: 'String',         default: '\'\'',    notice: `[Unsupported Yet] String to index tableBobyArr['index'].`},
 { name: 'tableBobyArr', type: 'Array', default: '[]', notice: _react2.default.createElement(
     'pre',
     { className: 'content-pre' },
     TABLEBODYARR_PRE
   ) }, { name: 'modeObj', type: 'Object', default: '{}', notice: '' }, { name: '- mode', type: 'String', default: 'list', notice: 'mode of table. {value: info, list}' },
-//   {name: '- listFeatureSearch', type: 'Object',         default: '{}',      notice: '[Unsupported Yet] Table in list mode can show result with search\'s parameters'},
-//   {name: '- - keyword',         type: 'String',         default: '\'\'',    notice: '[Unsupported Yet] Keyword to search data. Keyword with space can do multiple conditions search.'},
-//   {name: '- - matchAll',        type: 'Boolean',        default: 'false',   notice: '[Unsupported Yet] MatchAll to search data matched with all conditions.'},
-//   {name: '- listFeatureSort',   type: 'Object',         default: '{}',      notice: '[Unsupported Yet] Table in list mode can show result with sort\'s parameters.'},
-//   {name: '- - enable',          type: 'Boolean',        default: 'false',   notice: '[Unsupported Yet] Enable sort feature for table in list mode.'},
-//   {name: '- - defaultSortHead', type: 'String',         default: '\'\'',    notice: '[Unsupported Yet] Default active head to sort table.'},
-//   {name: '- listFeaturePage',   type: 'Object',         default: '{}',      notice: '[Unsupported Yet] Table in list mode can show result with page\'s parameters.'},
-//   {name: '- - perPage',         type: 'Number',         default: '0',       notice: '[Unsupported Yet] Show how many data by per-group.'},
-//   {name: '- - page',            type: 'Number',         default: '0',       notice: '[Unsupported Yet] Index page of table to show'},
+//   {name: '- listFeatureSearch', type: 'Object',         default: '{}',      notice: `[Unsupported Yet] Table in list mode can show result with search's parameters`},
+//   {name: '- - keyword',         type: 'String',         default: '\'\'',    notice: `[Unsupported Yet] Keyword to search data. Keyword with space can do multiple conditions search.`},
+//   {name: '- - matchAll',        type: 'Boolean',        default: 'false',   notice: `[Unsupported Yet] MatchAll to search data matched with all conditions.`},
+//   {name: '- listFeatureSort',   type: 'Object',         default: '{}',      notice: `[Unsupported Yet] Table in list mode can show result with sort's parameters.`},
+//   {name: '- - enable',          type: 'Boolean',        default: 'false',   notice: `[Unsupported Yet] Enable sort feature for table in list mode.`},
+//   {name: '- - defaultSortHead', type: 'String',         default: '\'\'',    notice: `[Unsupported Yet] Default active head to sort table.`},
+//   {name: '- listFeaturePage',   type: 'Object',         default: '{}',      notice: `[Unsupported Yet] Table in list mode can show result with page's parameters.`},
+//   {name: '- - perPage',         type: 'Number',         default: '0',       notice: `[Unsupported Yet] Show how many data by per-group.`},
+//   {name: '- - page',            type: 'Number',         default: '0',       notice: `[Unsupported Yet] Index page of table to show`},
 { name: 'styleObj', type: 'Object', default: '{}', notice: _react2.default.createElement(
     'pre',
     { className: 'content-pre' },
     STYLEOBJ_PRE
-  ) }, { name: 'inputRefFn', type: 'Function', default: '()=>{}', notice: 'To catch ref with (ref)=>{variable = ref}.' });
+  ) }, { name: 'inputRefFn', type: 'Function', default: '()=>{}', notice: 'To catch ref with (ref)=>{variable = ref}. (Only for stateful function)' });
 
 var NODE_TREE_INFO = new Array({
   'name': '<div> .btb-table',
@@ -10535,7 +10586,8 @@ var installationTitle = 'INSTALLATION';
 var installationContent = _react2.default.createElement(
   'span',
   null,
-  'Using with ',
+  'Using with',
+  ' ',
   _react2.default.createElement(
     'a',
     { target: '_blank', href: 'https://www.npmjs.com' },
@@ -10549,7 +10601,8 @@ var renderTitle = 'RENDER';
 var renderContent = _react2.default.createElement(
   'span',
   null,
-  'Notice: DOM properties are still work with ',
+  'Notice: DOM properties are still work with',
+  ' ',
   _react2.default.createElement(
     'a',
     { target: '_blank', href: 'https://reactjs.org/docs/dom-elements.html' },
@@ -10564,7 +10617,7 @@ var nodeTreeContent = 'Here showing the node structure. Each node with className
 var nodeTreeNotice = 'Notice: The layer.index is counted base on 0.';
 
 var INSTALLATION_PRE = '$ npm install --save blacktbox-menu\n\n// using ES6 modules\nimport BTBMenu from \'blacktbox-menu\';\n\n// using CommonJS modules\nvar BTBMenu = require(\'blacktbox-menu\');';
-var RENDER_PRE = '<BTBMenu \n  menuArr: [],\n  styleObj: {},\n  inputRefFn: ()=>{},\n  acticveIndex: \'\',\n  itemOnClickFn: ()=>{},\n  featureCollapsible: {\n    enable: false,\n    customCollapseButton: \'\',\n    itemOnCollapseFn: ()=>{}\n  }\n/>';
+var RENDER_PRE = '<BTBMenu \n  menuArr = []\n  styleObj = {}\n  inputRefFn = {()=>{}}\n  acticveIndex = \'\'\n  itemOnClickFn = {()=>{}}\n  featureCollapsible={\n    \'enable\': false,\n    \'itemClickWithCollapseEnable\': false,\n    \'defaultCollapse\': true,\n    \'customCollapseButton\': \'\',\n    \'customExtendButton\': \'\',\n    \'itemOnCollapseFn\': ()=>{}\n  }\n/>';
 var MENUARR_PRE = 'menuArr = [{\n  name: \'\',\n  index: \'\',\n  defaultCollapse: true,\n  children: [...]\n}, ...]';
 var SUBMENUARR_PRE = 'children = [{\n  name: \'\',\n  index: \'\',\n  defaultCollapse: true,\n  children: [...]\n}, ...]';
 var STYLEOBJ_PRE = 'styleObj = {\n  \'Node\'s className\': {CSS Object}\n  , ...\n}';
@@ -10577,11 +10630,11 @@ var PARAM_BODY = new Array({ name: 'menuArr', type: 'Array', default: '[]', noti
     'pre',
     { className: 'content-pre' },
     SUBMENUARR_PRE
-  ) }, { name: 'acticveIndex', type: 'String', default: '\'\'', notice: 'Default active menu entry\'s ID.' }, { name: 'itemOnClickFn', type: 'Function', default: '()=>{}', notice: 'Menu entry\'s onClick function.' }, { name: 'featureCollapsible', type: 'Object', default: '{}', notice: '' }, { name: '- enable', type: 'Boolean', default: 'false', notice: 'Enable collapse function of menu.' }, { name: '- customCollapseButton', type: 'String or Node', default: '\'\', ()', notice: 'We have default collapse button, but you can customize our collapse button by using this.' }, { name: '- itemOnCollapseFn', type: 'Function', default: '()=>{}', notice: 'Menu entry\'s arrow onClick function.' }, { name: 'styleObj', type: 'Object', default: '{}', notice: _react2.default.createElement(
+  ) }, { name: 'acticveIndex', type: 'String', default: '\'\'', notice: 'Default active menu entry\'s ID.' }, { name: 'itemOnClickFn', type: 'Function', default: '(eventObj)=>{}', notice: 'Menu entry\'s onClick function.' }, { name: 'featureCollapsible', type: 'Object', default: '{}', notice: '' }, { name: '- enable', type: 'Boolean', default: 'false', notice: 'Enable collapse function of menu.' }, { name: '- itemClickWithCollapseEnable', type: 'Boolean', default: 'false', notice: 'The item click and collapse are distinct event. If you prefer to collapse/extend menu while clicking, please use this. When the extensible menu items clicked, it will trigger collapse event before click event.' }, { name: '- defaultCollapse', type: 'Boolean', default: 'true', notice: 'Default collapse or not of menu, and this is secondary to menuArr\'s defaultCollapse.' }, { name: '- customCollapseButton', type: 'String or Node', default: '\'\', ()', notice: 'We have default collapse button, but you can customize collapse button by using this.' }, { name: '- customExtendButton', type: 'String or Node', default: '\'\', ()', notice: 'We have default collapse button, but you can customize extend button by using this. If you don\'t need this, you can just use customCollapseButton with style(css) to implement collapse/extend button' }, { name: '- itemOnCollapseFn', type: 'Function', default: '(eventObj)=>{}', notice: 'Menu entry\'s arrow onClick function.' }, { name: 'styleObj', type: 'Object', default: '{}', notice: _react2.default.createElement(
     'pre',
     { className: 'content-pre' },
     STYLEOBJ_PRE
-  ) }, { name: 'inputRefFn', type: 'Function', default: '()=>{}', notice: 'To catch ref with (ref)=>{variable = ref}.' });
+  ) }, { name: 'inputRefFn', type: 'Function', default: '(ref)=>{}', notice: 'To catch ref with (ref)=>{variable = ref}. (Only for stateful function)' });
 
 var NODE_TREE = new Array({
   'name': '<div> .btb-menu',
@@ -10720,6 +10773,334 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactDom = __webpack_require__(7);
+
+var _reactDom2 = _interopRequireDefault(_reactDom);
+
+var _reactFontawesome = __webpack_require__(1);
+
+var _reactFontawesome2 = _interopRequireDefault(_reactFontawesome);
+
+var _blacktboxMenu = __webpack_require__(44);
+
+var _blacktboxMenu2 = _interopRequireDefault(_blacktboxMenu);
+
+var _articleLayout = __webpack_require__(5);
+
+var _articleLayout2 = _interopRequireDefault(_articleLayout);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var mainTitle = _react2.default.createElement(
+  'span',
+  null,
+  'Blacktbox-menu ',
+  _react2.default.createElement(
+    'a',
+    { target: '_blank', className: 'linkBtn', href: 'https://github.com/BlackToolBoxLaboratory/blacktbox-menu' },
+    _react2.default.createElement(_reactFontawesome2.default, { name: 'github', fixedWidth: true })
+  )
+);
+var mainDescriptionStr = 'Example';
+
+var exampleTitle = 'EXAMPLE';
+var exampleSubTitle_Notice = 'Notice';
+var exampleSubTitle_Notice_Contnet = ['You can see the menuRef, clickEventObj and collapseEventObj from console.log, while triggering events.', 'To let the extensible menu items can be collapse/extend while clicked, please set the itemClickWithCollapseEnable true.', 'To mark which menu item is active. You will need to implement it by style(css) with the class group: activeTop, activeParent, active.'];
+var exampleButtonText = 'Show menuRef to console.log';
+
+var rourceCodeTitle = 'SOURCECODE';
+var rourceCodeSubTitle_Render = 'Render';
+var rourceCodeSubTitle_List = 'List';
+var rourceCodeSubTitle_Style = 'Style';
+var rourceCodeSubTitle_DefaultActive = 'Default Active';
+
+var ROURCECODE_RENDER_PRE = '<BTBMenu \n  menuArr={menuArr}\n  styleObj={styleObj}\n  inputRefFn={(ref)=>{this.menuRef=ref}}\n  acticveIndex={acticveIndex}\n  itemOnClickFn={this._itemOnClickFn}\n  featureCollapsible= {{\n    \'enable\': true,\n    \'itemClickWithCollapseEnable\': falae,\n    \'defaultCollapse\': false,\n    \'customCollapseButton\': \'Collapsed\',\n    \'customExtendButton\': \'Extended\',\n    \'itemOnCollapseFn\': this._itemOnCollapseFn\n  }}\n/>';
+var ROURCECODE_LIST_PRE = 'menuArr = [\n{\n  \'index\': \'M1\',\n  \'name\': \'Menu: 1\',\n  \'children\': [\n  {\n    \'index\': \'M1-1\',\n    \'name\': \'Menu: 1-1\'\n  },\n  {\n    \'index\': \'M1-2\',\n    \'name\': \'Menu: 1-2\',\n    \'defaultCollapse\': true,\n    \'children\': [\n    {\n      \'index\': \'M1-2-1\',\n      \'name\': \'Menu: 1-2-1\'\n    },\n    {\n      \'index\': \'M1-2-2\',\n      \'name\': \'Menu: 1-2-2\'\n    }]\n  },\n  {\n    \'index\': \'M1-3\',\n    \'name\': \'Menu: 1-3\',\n    \'children\': [\n    {\n      \'index\': \'M1-3-1\',\n      \'name\': \'Menu: 1-3-1\'\n    },\n    {\n      \'index\': \'M1-3-2\',\n      \'name\': \'Menu: 1-3-2\'\n    }]\n  }]\n},\n{\n  \'index\': \'M2\',\n  \'name\': \'Menu: 2\',\n  \'defaultCollapse\': true,\n  \'children\': [\n  {\n    \'index\': \'M2-1\',\n    \'name\': \'Menu: 2-1\',\n    \'children\': [\n    {\n      \'index\': \'M2-1-1\',\n      \'name\': \'Menu: 2-1-1\',\n      \'children\': [\n      {\n        \'index\': \'M2-1-1-1\',\n        \'name\': \'Menu: 2-1-1-1\'\n      }]\n    }]\n  },\n  {\n    \'index\': \'M2-2\',\n    \'name\': \'Menu: 2-2\'\n  }]\n}];';
+var ROURCECODE_STYLE_PRE = 'styleObj = {\n  \'btb-menu\': {\n    \'background-color\': \'#000\',\n    \'padding\': \'1px\',\n    \'font-weight\': \'bold\',\n    \'color\': \'#000\'\n  },\n  \'layer-0\' : {\n    \'background-color\': \'#85a5ff\'\n  },\n  \'layer-1\' : {\n    \'background-color\': \'#adc6ff\'\n  },\n  \'layer-2\' : {\n    \'background-color\': \'#d6e4ff\'\n  },\n  \'layer-3\' : {\n    \'background-color\': \'#f0f5ff\'\n  }\n};';
+var ROUCECODE_DEFAULTACTIVE_PRE = 'acticveIndex = \'M2-1-1-1\';';
+
+var menuArr = [{
+  'index': 'M1',
+  'name': 'Menu: 1',
+  'children': [{
+    'index': 'M1-1',
+    'name': 'Menu: 1-1'
+  }, {
+    'index': 'M1-2',
+    'name': 'Menu: 1-2',
+    'defaultCollapse': true,
+    'children': [{
+      'index': 'M1-2-1',
+      'name': 'Menu: 1-2-1'
+    }, {
+      'index': 'M1-2-2',
+      'name': 'Menu: 1-2-2'
+    }]
+  }, {
+    'index': 'M1-3',
+    'name': 'Menu: 1-3',
+    'children': [{
+      'index': 'M1-3-1',
+      'name': 'Menu: 1-3-1'
+    }, {
+      'index': 'M1-3-2',
+      'name': 'Menu: 1-3-2'
+    }]
+  }]
+}, {
+  'index': 'M2',
+  'name': 'Menu: 2',
+  'defaultCollapse': true,
+  'children': [{
+    'index': 'M2-1',
+    'name': 'Menu: 2-1',
+    'children': [{
+      'index': 'M2-1-1',
+      'name': 'Menu: 2-1-1',
+      'children': [{
+        'index': 'M2-1-1-1',
+        'name': 'Menu: 2-1-1-1'
+      }]
+    }]
+  }, {
+    'index': 'M2-2',
+    'name': 'Menu: 2-2'
+  }]
+}];
+var styleObj = {
+  'btb-menu': {
+    'background-color': '#000',
+    'padding': '1px',
+    'font-weight': 'bold',
+    'color': '#000'
+  },
+  'layer-0': {
+    'background-color': '#85a5ff'
+  },
+  'layer-1': {
+    'background-color': '#adc6ff'
+  },
+  'layer-2': {
+    'background-color': '#d6e4ff'
+  },
+  'layer-3': {
+    'background-color': '#f0f5ff'
+  }
+};
+var acticveIndex = 'M2-1-1-1';
+
+var Example = function (_Component) {
+  _inherits(Example, _Component);
+
+  function Example(props) {
+    _classCallCheck(this, Example);
+
+    var _this = _possibleConstructorReturn(this, (Example.__proto__ || Object.getPrototypeOf(Example)).call(this, props));
+
+    _this.menuRef = [];
+    return _this;
+  }
+
+  _createClass(Example, [{
+    key: 'render',
+    value: function render() {
+      var _this2 = this;
+
+      var content = [];
+      content.push(_react2.default.createElement(
+        'div',
+        { className: 'wrapper wrapper-basic' },
+        _react2.default.createElement(
+          _articleLayout2.default.MainTitle,
+          null,
+          mainTitle
+        ),
+        _react2.default.createElement(
+          _articleLayout2.default.MainDescription,
+          null,
+          mainDescriptionStr
+        ),
+        _react2.default.createElement(
+          _articleLayout2.default.Section,
+          null,
+          _react2.default.createElement(
+            _articleLayout2.default.SectionTitle,
+            null,
+            exampleTitle
+          ),
+          _react2.default.createElement(
+            _articleLayout2.default.Content,
+            null,
+            _react2.default.createElement(_blacktboxMenu2.default, {
+              menuArr: menuArr,
+              styleObj: styleObj,
+              inputRefFn: function inputRefFn(ref) {
+                _this2.menuRef = ref;
+              },
+              acticveIndex: acticveIndex,
+              itemOnClickFn: this._itemOnClickFn,
+              featureCollapsible: {
+                'enable': true,
+                'itemClickWithCollapseEnable': false,
+                'defaultCollapse': false,
+                'customCollapseButton': 'Extend',
+                'customExtendButton': 'Collapse',
+                'itemOnCollapseFn': this._itemOnCollapseFn
+              }
+            })
+          ),
+          _react2.default.createElement(
+            _articleLayout2.default.Item,
+            null,
+            _react2.default.createElement(
+              'button',
+              { onClick: function onClick() {
+                  _this2._consoleLogRef();
+                } },
+              exampleButtonText
+            )
+          ),
+          _react2.default.createElement(
+            _articleLayout2.default.Content,
+            null,
+            _react2.default.createElement(
+              _articleLayout2.default.SectionSubtitle,
+              null,
+              exampleSubTitle_Notice
+            ),
+            _react2.default.createElement(
+              _articleLayout2.default.Content,
+              null,
+              _react2.default.createElement(
+                'ul',
+                null,
+                exampleSubTitle_Notice_Contnet.map(function (entry) {
+                  return _react2.default.createElement(
+                    'li',
+                    null,
+                    entry
+                  );
+                })
+              )
+            )
+          )
+        ),
+        _react2.default.createElement(
+          _articleLayout2.default.Section,
+          null,
+          _react2.default.createElement(
+            _articleLayout2.default.SectionTitle,
+            null,
+            rourceCodeTitle
+          ),
+          _react2.default.createElement(
+            _articleLayout2.default.Content,
+            null,
+            _react2.default.createElement(
+              _articleLayout2.default.SectionSubtitle,
+              null,
+              rourceCodeSubTitle_Render
+            ),
+            _react2.default.createElement(
+              _articleLayout2.default.Pre,
+              null,
+              ROURCECODE_RENDER_PRE
+            )
+          ),
+          _react2.default.createElement(
+            _articleLayout2.default.Content,
+            null,
+            _react2.default.createElement(
+              _articleLayout2.default.SectionSubtitle,
+              null,
+              rourceCodeSubTitle_Style
+            ),
+            _react2.default.createElement(
+              _articleLayout2.default.Pre,
+              null,
+              ROURCECODE_STYLE_PRE
+            )
+          ),
+          _react2.default.createElement(
+            _articleLayout2.default.Content,
+            null,
+            _react2.default.createElement(
+              _articleLayout2.default.SectionSubtitle,
+              null,
+              rourceCodeSubTitle_List
+            ),
+            _react2.default.createElement(
+              _articleLayout2.default.Pre,
+              null,
+              ROURCECODE_LIST_PRE
+            )
+          ),
+          _react2.default.createElement(
+            _articleLayout2.default.Content,
+            null,
+            _react2.default.createElement(
+              _articleLayout2.default.SectionSubtitle,
+              null,
+              rourceCodeSubTitle_DefaultActive
+            ),
+            _react2.default.createElement(
+              _articleLayout2.default.Pre,
+              null,
+              ROUCECODE_DEFAULTACTIVE_PRE
+            )
+          )
+        )
+      ));
+      return content;
+    }
+  }, {
+    key: '_itemOnClickFn',
+    value: function _itemOnClickFn(eventObj) {
+      console.log('clickEventObj', eventObj);
+    }
+  }, {
+    key: '_itemOnCollapseFn',
+    value: function _itemOnCollapseFn(eventObj) {
+      console.log('collapseEventObj', eventObj);
+    }
+  }, {
+    key: '_consoleLogRef',
+    value: function _consoleLogRef() {
+      var menuRef = _reactDom2.default.findDOMNode(this.menuRef);
+      console.log('menuRef', menuRef);
+    }
+  }]);
+
+  return Example;
+}(_react.Component);
+
+;
+
+exports.default = Example;
+
+/***/ }),
+/* 172 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
 var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
@@ -10768,9 +11149,7 @@ var reactRouterVersion4RouterListContent = 'Same as 4.x, we need to build a rout
 var reactRouterVersion4RedirectContent = _react2.default.createElement(
   'span',
   null,
-  'And then, we can use ',
-  '<Link>',
-  ' to do redirect. However if we need to use something like hashHistory.push to do redirect. You can use withRouter. But we prefer to build our history to use. In that way, we need to install ',
+  'And then, we can use <Link> to do redirect. However if we need to use something like hashHistory.push to do redirect. You can use withRouter. But we prefer to build our history to use. In that way, we need to install ',
   _react2.default.createElement(
     'a',
     { target: '_blank', href: 'https://www.npmjs.com/package/history' },
@@ -10780,7 +11159,7 @@ var reactRouterVersion4RedirectContent = _react2.default.createElement(
   ' additionally.'
 );
 var reactRouterVersion4CreateHistoryContent = 'Then we need to have a component to create our history.';
-var reactRouterVersion4HistoryPushContent = 'Finally, we can use our history.push to do redirect. Also we can add the history.push to our Blacktbox-menu\'s parameter: itemOnClickFn with a router list to switch path.';
+var reactRouterVersion4HistoryPushContent = 'Finally, we can use our history.push to do redirect. Also we can add the history.push to our Blacktbox-menu\'s parameter: itemOnClickFn with a route list to implement the redirection.';
 
 var REACTROUTER_23_ROUTER = '<Router history={hashHistory}>\n  <Route path=\'/\' component={Index}>\n    ...\n  <Route>\n</Router>';
 var REACTROUTER_23_REDIRECT = '<Link to={...}>\n\nhashHistory.push(...)';
@@ -10903,7 +11282,7 @@ var Adavnce = function Adavnce(props) {
 exports.default = Adavnce;
 
 /***/ }),
-/* 172 */
+/* 173 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10954,4 +11333,4 @@ var NotFound = function NotFound(props) {
 exports.default = NotFound;
 
 /***/ })
-],[55]);
+],[56]);
