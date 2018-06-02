@@ -1967,64 +1967,26 @@ Menu.defaultProps = {
 /* 42 */,
 /* 43 */,
 /* 44 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
 
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _propTypes = __webpack_require__(2);
-
-var _propTypes2 = _interopRequireDefault(_propTypes);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var _extends = Object.assign || function (target) {
-  for (var i = 1; i < arguments.length; i++) {
-    var source = arguments[i];for (var key in source) {
-      if (Object.prototype.hasOwnProperty.call(source, key)) {
-        target[key] = source[key];
-      }
-    }
-  }return target;
-};
-
-var _createClass = function () {
-  function defineProperties(target, props) {
-    for (var i = 0; i < props.length; i++) {
-      var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);
-    }
-  }return function (Constructor, protoProps, staticProps) {
-    if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;
-  };
-}();
-
-function _classCallCheck(instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError("Cannot call a class as a function");
-  }
-}
-
-function _possibleConstructorReturn(self, call) {
-  if (!self) {
-    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-  }return call && ((typeof call === "undefined" ? "undefined" : _typeof(call)) === "object" || typeof call === "function") ? call : self;
-}
-
-function _inherits(subClass, superClass) {
-  if (typeof superClass !== "function" && superClass !== null) {
-    throw new TypeError("Super expression must either be null or a function, not " + (typeof superClass === "undefined" ? "undefined" : _typeof(superClass)));
-  }subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
-}
 
 var CONTENT_HEIGHT = 30;
 var menuThis = void 0;
@@ -2115,13 +2077,25 @@ var Menu = function (_React$Component) {
           props_layer.style[config] = _this3.env.styleObj[layerNextName][config];
         });
       };
-      content.push(_react2.default.createElement('div', _extends({}, props_menu, { ref: function ref(_ref) {
-          _this3._refHandler(_ref);
-        } }), _react2.default.createElement('div', props_content, _react2.default.createElement('ul', props_layer, menuArr.map(function (item) {
-        var content_menu = [];
-        content_menu.push(_this3.menuRenderFn(item, nextLayer));
-        return content_menu;
-      })))));
+      content.push(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'div',
+        _extends({}, props_menu, { ref: function ref(_ref) {
+            _this3._refHandler(_ref);
+          } }),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'div',
+          props_content,
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'ul',
+            props_layer,
+            menuArr.map(function (item) {
+              var content_menu = [];
+              content_menu.push(_this3.menuRenderFn(item, nextLayer));
+              return content_menu;
+            })
+          )
+        )
+      ));
       return content;
     }
   }, {
@@ -2223,56 +2197,86 @@ var Menu = function (_React$Component) {
         _this5._itemOnClickHandler(event, infoObj);
       };
       var props_name = this.createBasicProps('content-name');
-      content.push(_react2.default.createElement('li', props_item, _react2.default.createElement('div', props_content, _react2.default.createElement('div', props_name, infoObj.name), function () {
-        var content_collapse = [];
-        if (hasChildren && _this5.env.featureCollapsible.enable) {
-          if ('' == _this5.env.featureCollapsible.customCollapseButton) {
-            var props_collapse = _this5.createBasicProps('content-collapse');
-            if (_this5.collapseStatusList[infoObj.index]) {
-              props_collapse.className += ' collapsed';
+      content.push(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'li',
+        props_item,
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'div',
+          props_content,
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'div',
+            props_name,
+            infoObj.name
+          ),
+          function () {
+            var content_collapse = [];
+            if (hasChildren && _this5.env.featureCollapsible.enable) {
+              if ('' == _this5.env.featureCollapsible.customCollapseButton) {
+                var props_collapse = _this5.createBasicProps('content-collapse');
+                if (_this5.collapseStatusList[infoObj.index]) {
+                  props_collapse.className += ' collapsed';
+                };
+                props_collapse.onClick = function (event) {
+                  _this5._itemOnCollapseHandler(event, infoObj);
+                };
+                var props_arrow = _this5.createBasicProps('collapse-arrow');
+                content_collapse.push(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                  'div',
+                  props_collapse,
+                  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', props_arrow)
+                ));
+              } else {
+                var props_custom_collapse = _this5.createBasicProps('content-custom-collapse');
+                if (_this5.collapseStatusList[infoObj.index]) {
+                  props_custom_collapse.className += ' collapsed';
+                };
+                props_custom_collapse.onClick = function (event) {
+                  _this5._itemOnCollapseHandler(event, infoObj);
+                };
+                content_collapse.push(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                  'div',
+                  props_custom_collapse,
+                  _this5.collapseStatusList[infoObj.index] || '' == _this5.env.featureCollapsible.customExtendButton ? _this5.env.featureCollapsible.customCollapseButton : _this5.env.featureCollapsible.customExtendButton
+                ));
+              }
             };
-            props_collapse.onClick = function (event) {
-              _this5._itemOnCollapseHandler(event, infoObj);
+            return content_collapse;
+          }()
+        ),
+        function () {
+          var content_submenu = [];
+          if (hasChildren) {
+            var props_submenu = _this5.createBasicProps('item-submenu');
+            if (_this5.env.featureCollapsible.enable && _this5.collapseStatusList[infoObj.index]) {
+              props_submenu.className += ' collapsed';
             };
-            var props_arrow = _this5.createBasicProps('collapse-arrow');
-            content_collapse.push(_react2.default.createElement('div', props_collapse, _react2.default.createElement('div', props_arrow)));
-          } else {
-            var props_custom_collapse = _this5.createBasicProps('content-custom-collapse');
-            if (_this5.collapseStatusList[infoObj.index]) {
-              props_custom_collapse.className += ' collapsed';
+            var content_height = parseInt(!_this5.env.styleObj['item-content'] ? CONTENT_HEIGHT : _this5.env.styleObj['item-content']['height'] ? _this5.env.styleObj['item-content']['height'] : _this5.env.styleObj['item-content']['line-height'] ? _this5.env.styleObj['item-content']['line-height'] : CONTENT_HEIGHT);
+            props_submenu.style['height'] = _this5.countRecursionFn(infoObj) * content_height;
+            var props_layer = _this5.createBasicProps('menu-layer');
+            var layerNextName = 'layer-' + nextLayer;
+            props_layer.className += ' ' + layerNextName;
+            if (_this5.env.styleObj[layerNextName]) {
+              Object.keys(_this5.env.styleObj[layerNextName]).map(function (config) {
+                props_layer.style[config] = _this5.env.styleObj[layerNextName][config];
+              });
             };
-            props_custom_collapse.onClick = function (event) {
-              _this5._itemOnCollapseHandler(event, infoObj);
-            };
-            content_collapse.push(_react2.default.createElement('div', props_custom_collapse, _this5.collapseStatusList[infoObj.index] || '' == _this5.env.featureCollapsible.customExtendButton ? _this5.env.featureCollapsible.customCollapseButton : _this5.env.featureCollapsible.customExtendButton));
-          }
-        };
-        return content_collapse;
-      }()), function () {
-        var content_submenu = [];
-        if (hasChildren) {
-          var props_submenu = _this5.createBasicProps('item-submenu');
-          if (_this5.env.featureCollapsible.enable && _this5.collapseStatusList[infoObj.index]) {
-            props_submenu.className += ' collapsed';
+            content_submenu.push(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              'div',
+              props_submenu,
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'ul',
+                props_layer,
+                infoObj.children.map(function (item) {
+                  var content_menu = [];
+                  content_menu.push(_this5.menuRenderFn(item, nextLayer));
+                  return content_menu;
+                })
+              )
+            ));
           };
-          var content_height = parseInt(!_this5.env.styleObj['item-content'] ? CONTENT_HEIGHT : _this5.env.styleObj['item-content']['height'] ? _this5.env.styleObj['item-content']['height'] : _this5.env.styleObj['item-content']['line-height'] ? _this5.env.styleObj['item-content']['line-height'] : CONTENT_HEIGHT);
-          props_submenu.style['height'] = _this5.countRecursionFn(infoObj) * content_height;
-          var props_layer = _this5.createBasicProps('menu-layer');
-          var layerNextName = 'layer-' + nextLayer;
-          props_layer.className += ' ' + layerNextName;
-          if (_this5.env.styleObj[layerNextName]) {
-            Object.keys(_this5.env.styleObj[layerNextName]).map(function (config) {
-              props_layer.style[config] = _this5.env.styleObj[layerNextName][config];
-            });
-          };
-          content_submenu.push(_react2.default.createElement('div', props_submenu, _react2.default.createElement('ul', props_layer, infoObj.children.map(function (item) {
-            var content_menu = [];
-            content_menu.push(_this5.menuRenderFn(item, nextLayer));
-            return content_menu;
-          }))));
-        };
-        return content_submenu;
-      }()));
+          return content_submenu;
+        }()
+      ));
       return content;
     }
   }, {
@@ -2358,17 +2362,17 @@ var Menu = function (_React$Component) {
   }]);
 
   return Menu;
-}(_react2.default.Component);
+}(__WEBPACK_IMPORTED_MODULE_0_react___default.a.Component);
 
 ;
 
 Menu.propTypes = {
-  menuArr: _propTypes2.default.array.isRequired,
-  styleObj: _propTypes2.default.object,
-  inputRefFn: _propTypes2.default.func,
-  acticveIndex: _propTypes2.default.string,
-  itemOnClickFn: _propTypes2.default.func,
-  featureCollapsible: _propTypes2.default.object
+  menuArr: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.array.isRequired,
+  styleObj: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.object,
+  inputRefFn: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.func,
+  acticveIndex: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.string,
+  itemOnClickFn: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.func,
+  featureCollapsible: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.object
 };
 
 Menu.defaultProps = {
@@ -2380,7 +2384,7 @@ Menu.defaultProps = {
   featureCollapsible: {}
 };
 
-exports.default = Menu;
+/* harmony default export */ __webpack_exports__["default"] = (Menu);
 
 /***/ }),
 /* 45 */
@@ -10639,28 +10643,31 @@ var PARAM_BODY = new Array({ name: 'menuArr', type: 'Array', default: '[]', noti
 var NODE_TREE = new Array({
   'name': '<div> .btb-menu',
   'children': [{
-    'name': '<ul> .menu-layer-0',
+    'name': '<div> .menu-content',
     'children': [{
-      'name': '<li> .layer-item',
+      'name': '<ul> .menu-layer-0',
       'children': [{
-        'name': '<div> .iterm-content',
+        'name': '<li> .layer-item',
         'children': [{
-          'name': '<div> .content-name'
-        }, {
-          'name': '<div> .content-collapse (.collapsed)',
+          'name': '<div> .iterm-content',
           'children': [{
-            'name': '<div> .collapse-arrow'
+            'name': '<div> .content-name'
+          }, {
+            'name': '<div> .content-collapse (.collapsed)',
+            'children': [{
+              'name': '<div> .collapse-arrow'
+            }]
+          }, {
+            'name': '<div> .content-custom-collapse (.collapsed)',
+            'children': [{
+              'name': '{customized}'
+            }]
           }]
         }, {
-          'name': '<div> .content-custom-collapse (.collapsed)',
+          'name': '<div> .item-submenu (.collapsed)',
           'children': [{
-            'name': '{customized}'
+            'name': '<ul> .menu-layer-1'
           }]
-        }]
-      }, {
-        'name': '<div> .item-submenu (.collapsed)',
-        'children': [{
-          'name': '<ul> .menu-layer-1'
         }]
       }]
     }]
