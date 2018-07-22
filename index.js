@@ -10897,12 +10897,12 @@ var rourceCodeSubTitle_Style = 'Style';
 
 var ROURCECODE_RENDER_PRE = '<BTBTable \n  tableHeadArr={tableHeaderArr}\n  tableBobyArr={tableBodyArr}\n  modeObj={modeObj}\n  styleObj={styleObj}\n  refFn={(ref)=>{this.infoRef=ref}}\n/>';
 var ROURCECODE_HEADER_PRE = 'tableHeaderArr = [\n  {name: \'Name\',        index: \'name\'},\n  {name: \'Description\', index: \'desc\'},\n  {name: \'OS Type\',     index: \'osType\'},\n  {name: \'IP Address\',  index: \'ipAddr\'},\n  {name: \'MAC Address\', index: \'macAddr\'},\n  {name: \'Statue\',      index: \'status\'}\n];';
-var ROURCECODE_BODY_PRE = 'tableBodyArr = [\n  {\n    name: \'Device 1\', \n    desc: \'\', \n    osType: \'IOS\', \n    ipAddr: \'192.168.0.50\', \n    macAddr: \'11:22:33:44:55:66\', \n    status: \'Disconnected\'\n  }\n];';
+var ROURCECODE_BODY_PRE = 'tableBodyArr = [\n  {\n    name: \'Device 1\',  \n    devType: \'phone\',   \n    osType: \'ios\',      \n    ipAddr: \'192.168.0.50\',   \n    macAddr: \'B4:A2:07:44:55:2A\', \n    traffic: \'1.7 MB / 45 KB\', \n    status: 0, \n    statusDesc: \'Disconnected\'\n  },\n  {\n    name: \'Device 2\',  \n    devType: \'notebook\',   \n    osType: \'windows\',      \n    ipAddr: \'192.168.0.52\',   \n    macAddr: \'B4:A2:07:44:DD:FF\', \n    traffic: \'4.8 MB / 27 KB\', \n    status: 0, \n    statusDesc: \'Disconnected\'\n  }\n];';
 var ROURCECODE_MODE_PRE = 'modeObj = {\n  mode : \'info\'\n};';
 var ROURCECODE_STYLE_PRE = 'styleObj = {\n  \'btb-table\': {\n    \'text-align\': \'center\'\n  },\n  \'table-info\': {\n    \'margin\': \'auto\',\n    \'box-shadow\': \'2px 2px 4px 2px #aaa\'\n  },\n  \'tr-th\': {\n    \'background-color\': \'#bae7ff\',\n    \'padding\': \'2px 5px\'\n  },\n  \'tr-td\': {\n    \'padding\': \'2px 10px\'\n  },\n  \'tr-name\': {\n    \'font-weight\': \'bold\'\n  },\n  \'td-ipAddr\': {\n    \'color\': \'blue\',\n    \'text-decoration\': \'underline\'\n  }\n};';
 
 var tableHeaderArr = [{ name: 'Name', index: 'name' }, { name: 'Type', index: 'devType' }, { name: 'OS', index: 'osType' }, { name: 'IP Address', index: 'ipAddr' }, { name: 'MAC Address', index: 'macAddr' }, { name: 'Traffic(tx / rx)', index: 'traffic' }, { name: 'Statue', index: 'statusDesc' }];
-var tableBodyArr = [{ name: 'Device 1', devType: 'phone', osType: 'ios', ipAddr: '192.168.0.50', macAddr: 'B4:A2:07:44:55:2A', traffic: '1.7 MB / 45 KB', status: 0, statusDesc: 'Disconnected' }];
+var tableBodyArr = [{ name: 'Device 1', devType: 'phone', osType: 'ios', ipAddr: '192.168.0.50', macAddr: 'B4:A2:07:44:55:2A', traffic: '1.7 MB / 45 KB', status: 0, statusDesc: 'Disconnected' }, { name: 'Device 2', devType: 'notebook', osType: 'windows', ipAddr: '192.168.0.52', macAddr: 'B4:A2:07:44:DD:FF', traffic: '4.8 MB / 27 KB', status: 0, statusDesc: 'Disconnected' }];
 var modeObj = {
   mode: 'info'
 };
