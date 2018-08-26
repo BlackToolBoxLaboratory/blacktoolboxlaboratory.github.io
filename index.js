@@ -1150,6 +1150,7 @@ var Menu = function (_React$Component) {
         };
       });
       this.env = newENV;
+      this.searchStatusArr = Object(__WEBPACK_IMPORTED_MODULE_3__applicationFn_js__["b" /* dataSearching */])(this.env);
     }
   }]);
 
@@ -1638,7 +1639,9 @@ exports.default = RightListAction;
 
 "use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = createBasicProps;
-/* harmony export (immutable) */ __webpack_exports__["b"] = pagingFn;
+/* harmony export (immutable) */ __webpack_exports__["c"] = pagingFn;
+/* harmony export (immutable) */ __webpack_exports__["d"] = resultFn;
+/* harmony export (immutable) */ __webpack_exports__["b"] = dataSearching;
 function createBasicProps(env, name) {
   var obj = {
     className: name,
@@ -1647,16 +1650,63 @@ function createBasicProps(env, name) {
   return obj;
 };
 
-function pagingFn(config, source) {
+function pagingFn(pageConfig, source) {
   var resultArr = [];
-  if (config.enable) {
-    var index = config.pageIndex;
-    var perPage = config.dataPerPage;
+  if (pageConfig.enable) {
+    var index = pageConfig.pageIndex;
+    var perPage = pageConfig.dataPerPage;
     resultArr = source.slice((index - 1) * perPage, index * perPage);
   } else {
     resultArr = source;
-  }
+  };
   return resultArr;
+};
+
+function resultFn(searchStatusArr, sortStatusArr, source) {
+  var resultArr = [];
+  source.map(function (entry, index) {
+    if (searchStatusArr[index]) {
+      resultArr.push(entry);
+    }
+  });
+  return resultArr;
+};
+
+function dataSearching(env) {
+  var searchStatusArr = [];
+  var searchConfig = env.modeObj.listFeatureSearch;
+  var attributeArr = [];
+  var matchArr = [];
+  if ('list' == env.modeObj.mode && searchConfig.enable && 0 < searchConfig.searchInputArr.length) {
+    if (searchConfig.searchSpecAttributeEnable) {
+      attributeArr = searchConfig.searchSpecAttributeArr.slice(0);
+    } else {
+      attributeArr = env.tableHeadArr.map(function (entry) {
+        return entry.index;
+      });
+    };
+    matchArr = env.tableBobyArr.map(function (data) {
+      var matchCounter = 0;
+      searchConfig.searchInputArr.map(function (target) {
+        for (var i = 0; i < attributeArr.length; i++) {
+          if (data[attributeArr[i]].toString().match(target)) {
+            matchCounter += 1;
+            break;
+          };
+        };
+      });
+      return matchCounter;
+    });
+    searchStatusArr = matchArr.map(function (entry) {
+      var matchRate = entry / searchConfig.searchInputArr.length;
+      return searchConfig.searchMatchRateTheshold <= matchRate;
+    });
+  } else {
+    searchStatusArr = env.tableBobyArr.map(function (entry) {
+      return true;
+    });
+  };
+  return searchStatusArr;
 };
 
 /***/ }),
@@ -1760,8 +1810,9 @@ function ENVDefaultObj() {
       listFeatureSearch: {
         enable: false,
         searchInputArr: [],
-        searchAttributeArr: [],
-        searchMatchTheshold: 1
+        searchMatchRateTheshold: 1,
+        searchSpecAttributeEnable: false,
+        searchSpecAttributeArr: ['']
       },
       listFeatureSort: {
         enable: false,
@@ -1774,7 +1825,7 @@ function ENVDefaultObj() {
       },
       listFeaturePage: {
         enable: false,
-        pataPerPage: 10,
+        dataPerPage: 10,
         pageIndex: 1
       }
     },
@@ -10084,7 +10135,8 @@ function listHeadRenderFn(tableThis) {
 
 function listBodyRenderFn(tableThis) {
   var content = [];
-  var dataArr = Object(__WEBPACK_IMPORTED_MODULE_2__applicationFn_js__["b" /* pagingFn */])(tableThis.env.modeObj.listFeaturePage, tableThis.env.tableBobyArr);
+  var reourceArr = Object(__WEBPACK_IMPORTED_MODULE_2__applicationFn_js__["d" /* resultFn */])(tableThis.searchStatusArr, tableThis.sortStatusArr, tableThis.env.tableBobyArr);
+  var dataArr = Object(__WEBPACK_IMPORTED_MODULE_2__applicationFn_js__["c" /* pagingFn */])(tableThis.env.modeObj.listFeaturePage, reourceArr);
   var props_tbody = Object(__WEBPACK_IMPORTED_MODULE_2__applicationFn_js__["a" /* createBasicProps */])(tableThis.env, 'list-tbody');
   content.push(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
     'tbody',
@@ -10465,7 +10517,7 @@ var nodeTreeListTitle = 'Mode List:';
 var nodeTreeNotice = 'Notice: The th.index come from tableHeadArr.';
 
 var INSTALLATION_PRE = '$ npm install --save blacktbox-table\n\n// using ES6 modules\nimport BTBTable from \'blacktbox-table\';\n\n// using CommonJS modules\nvar BTBTable = require(\'blacktbox-table\');';
-var RENDER_PRE = '<BTBTable \n  tableHeadArr = []\n  tableBobyArr = []\n  modeObj: {\n    mode: \'list\',\n    listFeaturePage: {\n      enable: false,\n      dataPerPage: 10,\n      pageIndex: 1\n    }\n  },\n  noDataMessage: \'\',\n  styleObj: {}\n  refFn: {()=>{}}\n/>';
+var RENDER_PRE = '<BTBTable \n  tableHeadArr = []\n  tableBobyArr = []\n  modeObj: {\n    mode: \'list\',\n    listFeatureSearch: {\n        enable: false,\n        searchInputArr: [],\n        searchMatchRateTheshold: 1,\n        searchSpecAttributeEnable: false,\n        searchSpecAttributeArr: [\'\']\n      },\n    listFeaturePage: {\n      enable: false,\n      dataPerPage: 10,\n      pageIndex: 1\n    }\n  },\n  noDataMessage: \'\',\n  styleObj: {}\n  refFn: {()=>{}}\n/>';
 // const TABLEHEADARR_PRE = 
 // `tableHeadArr = [{
 //   name: '',
@@ -10490,14 +10542,11 @@ var PARAM_BODY = new Array({ name: 'tableHeadArr', type: 'Array', default: '[]',
     'pre',
     { className: 'content-pre' },
     TABLEBODYARR_PRE
-  ) }, { name: 'modeObj', type: 'Object', default: '{}', notice: '' }, { name: '- mode', type: 'String', default: 'list', notice: 'mode of table. {value: info, list}' },
-//   {name: '- listFeatureSearch', type: 'Object',         default: '{}',      notice: `[Unsupported Yet] Table in list mode can show result with search's parameters`},
-//   {name: '- - keyword',         type: 'String',         default: '\'\'',    notice: `[Unsupported Yet] Keyword to search data. Keyword with space can do multiple conditions search.`},
-//   {name: '- - matchAll',        type: 'Boolean',        default: 'false',   notice: `[Unsupported Yet] MatchAll to search data matched with all conditions.`},
+  ) }, { name: 'modeObj', type: 'Object', default: '{}', notice: '' }, { name: '- mode', type: 'String', default: 'list', notice: 'mode of table. {value: info, list}' }, { name: '- listFeatureSearch', type: 'Object', default: '{}', notice: 'Feature for list mode.' }, { name: '- - enable', type: 'Boolean', default: 'false', notice: 'Enable searching feature' }, { name: '- - searchInputArr', type: 'Array', default: '[]', notice: 'Searched target splited to an array.' }, { name: '- - searchMatchRateTheshold', type: 'Float', default: '1', notice: 'Theshod of seached match rate which between 0-1.' }, { name: '- - searchSpecAttributeEnable', type: 'Boolean', default: 'false', notice: 'Enable to support search with specific attributes from tableBobyArr.' }, { name: '- - searchSpecAttributeArr', type: 'Array', default: '[]', notice: 'List of specific attributes from tableBobyArr.' },
 //   {name: '- listFeatureSort',   type: 'Object',         default: '{}',      notice: `[Unsupported Yet] Table in list mode can show result with sort's parameters.`},
 //   {name: '- - enable',          type: 'Boolean',        default: 'false',   notice: `[Unsupported Yet] Enable sort feature for table in list mode.`},
 //   {name: '- - defaultSortHead', type: 'String',         default: '\'\'',    notice: `[Unsupported Yet] Default active head to sort table.`},
-{ name: '- listFeaturePage', type: 'Object', default: '{}', notice: 'Feature for list mode.' }, { name: '- - enable', type: 'Boolean', default: 'false', notice: 'Enable paging function.' }, { name: '- - dataPerPage', type: 'Number', default: '10', notice: 'Control how many data shown per page.' }, { name: '- - pageIndex', type: 'Number', default: '1', notice: 'Index of the page.' }, { name: 'noDataMessage', type: 'String', default: '\'No data avaliable\'', notice: 'To show string while there has no date avaliable.' }, { name: 'styleObj', type: 'Object', default: '{}', notice: _react2.default.createElement(
+{ name: '- listFeaturePage', type: 'Object', default: '{}', notice: 'Feature for list mode.' }, { name: '- - enable', type: 'Boolean', default: 'false', notice: 'Enable paging feature.' }, { name: '- - dataPerPage', type: 'Number', default: '10', notice: 'Control how many data shown per page.' }, { name: '- - pageIndex', type: 'Number', default: '1', notice: 'Index of the page.' }, { name: 'noDataMessage', type: 'String', default: '\'No data avaliable\'', notice: 'To show string while there has no date avaliable.' }, { name: 'styleObj', type: 'Object', default: '{}', notice: _react2.default.createElement(
     'pre',
     { className: 'content-pre' },
     STYLEOBJ_PRE
@@ -10728,10 +10777,10 @@ var rourceCodeSubTitle_Mode = 'mode';
 var rourceCodeSubTitle_Style = 'Style';
 
 var ROURCECODE_RENDER_PRE = '<BTBTable \n  tableHeadArr={tableHeaderArr}\n  tableBobyArr={tableBodyArr}\n  modeObj={modeObj}\n  noDataMessage={noDataStr}\n  styleObj={styleObj}\n  refFn={(ref)=>{this.listRef=ref}}\n/>';
-var ROURCECODE_HEADER_PRE = 'tableHeaderArr = [\n  {name: \'Name\',        index: \'name\'},\n  {name: \'Description\', index: \'desc\'},\n  {name: \'OS Type\',     index: \'osType\'},\n  {name: \'IP Address\',  index: \'ipAddr\'},\n  {name: \'MAC Address\', index: \'macAddr\'},\n  {name: \'Statue\',      index: \'status\'}\n];';
-var ROURCECODE_BODY_PRE = 'tableBodyArr = [\n  {\n    name: \'Device 1\', \n    desc: \'My phone\', \n    osType: \'IOS\', \n    ipAddr: \'192.168.0.50\', \n    macAddr: \'11:22:33:44:55:66\', \n    status: \'Disconnected\'\n  }\n];';
+var ROURCECODE_HEADER_PRE = 'tableHeaderArr = [\n  {name: \'Name\',              index: \'name\',     },\n  {name: \'Type\',              index: \'devType\',  },\n  {name: \'OS\',                index: \'osType\',   },\n  {name: \'IP\',                index: \'ipAddr\',   },\n  {name: \'MAC\',               index: \'macAddr\',  },\n  {name: \'Traffic(tx / rx)\',  index: \'traffic\',  },\n  {name: \'Statue\',            index: \'statusDesc\'}\n];';
+var ROURCECODE_BODY_PRE = 'tableBodyArr = [\n  {name: \'Device 1\',  devType: \'phone\',   osType: \'ios\',      ipAddr: \'192.168.0.50\',   macAddr: \'B4:A2:07:44:55:2A\', traffic: \'0 MB / 0 KB\',     status: 0, statusDesc: \'Disconnected\'},\n  {name: \'Device 2\',  devType: \'switch\',  osType: \'linux\',    ipAddr: \'192.168.0.37\',   macAddr: \'7E:EF:02:44:AE:25\', traffic: \'2.7 MB / 263 KB\', status: 1, statusDesc: \'Connected\'},\n  {name: \'Device 3\',  devType: \'ap\',      osType: \'linux\',    ipAddr: \'192.168.0.121\',  macAddr: \'EF:2B:15:44:32:B4\', traffic: \'0 MB / 0 KB\',     status: 2, statusDesc: \'Locked\'},\n  {name: \'Device 4\',  devType: \'phone\',   osType: \'android\',  ipAddr: \'192.168.0.9\',    macAddr: \'F5:22:33:44:55:35\', traffic: \'0 MB / 0 KB\',     status: 0, statusDesc: \'Disconnected\'},\n  {name: \'Device 5\',  devType: \'ap\',      osType: \'linux\',    ipAddr: \'192.168.0.27\',   macAddr: \'7E:EF:B2:44:28:3B\', traffic: \'1.3 MB / 725 KB\', status: 1, statusDesc: \'Connected\'},\n  {name: \'Device 6\',  devType: \'pc\',      osType: \'windows\',  ipAddr: \'192.168.0.11\',   macAddr: \'11:22:24:44:5E:90\', traffic: \'0 MB / 0 KB\',     status: 2, statusDesc: \'Locked\'},\n  {name: \'Device 7\',  devType: \'phone\',   osType: \'ios\',      ipAddr: \'192.168.0.6\',    macAddr: \'11:FF:33:44:55:A3\', traffic: \'1.2 MB / 45 KB\',  status: 1, statusDesc: \'Connected\'},\n  {name: \'Device 8\',  devType: \'pc\',      osType: \'linux\',    ipAddr: \'192.168.0.3\',    macAddr: \'B2:FE:B8:44:55:6D\', traffic: \'4.8 MB / 3.7 MB\', status: 1, statusDesc: \'Connected\'},\n  {name: \'Device 9\',  devType: \'pc\',      osType: \'windows\',  ipAddr: \'192.168.0.18\',   macAddr: \'E4:AA:74:44:38:E1\', traffic: \'0 MB / 0 KB\',     status: 2, statusDesc: \'Locked\'},\n  {name: \'Device 10\', devType: \'switch\',  osType: \'linux\',    ipAddr: \'192.168.0.245\',  macAddr: \'E2:BA:33:44:48:AB\', traffic: \'0 MB / 0 KB\',     status: 0, statusDesc: \'Disconnected\'},\n  {name: \'Device 11\', devType: \'ap\',      osType: \'linux\',    ipAddr: \'192.168.0.210\',  macAddr: \'2A:FE:7A:27:38:27\', traffic: \'0 MB / 0 KB\',     status: 0, statusDesc: \'Disconnected\'},\n  {name: \'Device 12\', devType: \'phone\',   osType: \'android\',  ipAddr: \'192.168.0.163\',  macAddr: \'FE:22:9B:44:26:08\', traffic: \'0 MB / 0 KB\',     status: 2, statusDesc: \'Locked\'},\n  {name: \'Device 13\', devType: \'phone\',   osType: \'android\',  ipAddr: \'192.168.0.84\',   macAddr: \'B4:22:27:44:55:B2\', traffic: \'1.5 MB / 235 KB\', status: 1, statusDesc: \'Connected\'}\n];';
 var ROURCECODE_MSG_PRE = 'noDataStr = \'No data.\';';
-var ROURCECODE_MODE_PRE = 'modeObj = {\n  mode : \'list\'\n};';
+var ROURCECODE_MODE_PRE = 'modeObj = {\n  mode : \'list\',\n  listFeatureSearch: {\n    enable: true,\n    searchInputArr: [],\n    searchMatchRateTheshold: 0,\n    searchSpecAttributeEnable: true,\n    searchSpecAttributeArr: [\'name\', \'devType\', \'osType\', \'ipAddr\', \'macAddr\', \'status\']\n  },\n  listFeaturePage: {\n    enable: true,\n    dataPerPage: 10,\n    pageIndex: 1\n  }\n};';
 var ROURCECODE_STYLE_PRE = 'styleObj = {\n  \'btb-table\': {\n    \'text-align\': \'center\'\n  },\n  \'table-list\': {\n    \'box-shadow\': \'2px 2px 4px 2px #aaa\'\n  },\n  \'tr-th\': {\n    \'background-color\': \'#bae7ff\',\n    \'padding\': \'2px 5px\'\n  },\n  \'tr-td\': {\n    \'padding\': \'2px 10px\'\n  },\n  \'td-name\': {\n    \'font-weight\': \'bold\'\n  },\n  \'td-ipAddr\': {\n    \'color\': \'blue\',\n    \'text-decoration\': \'underline\'\n  },\n  \'tr-noData\': {\n    \'color\': \'red\'\n  }\n};';
 
 var sortFeatureArr = [{ sortable: true, sortType: '', sortContent: '', defaultSortState: 'desc' }, { sortable: true, sortType: '', sortContent: '', defaultSortState: 'asc' }, { sortable: true, sortType: '', sortContent: '', defaultSortState: 'desc' }, { sortable: true, sortType: '', sortContent: '', defaultSortState: 'desc' }, { sortable: true, sortType: '', sortContent: '', defaultSortState: 'asc' }, { sortable: false, sortType: '', sortContent: '', defaultSortState: 'asc' }, { sortable: true, sortType: '', sortContent: '', defaultSortState: 'asc' }];
@@ -10740,6 +10789,13 @@ var tableBodyArr = [{ name: 'Device 1', devType: 'phone', osType: 'ios', ipAddr:
 var noDataStr = 'No data.';
 var modeObj = {
   mode: 'list',
+  listFeatureSearch: {
+    enable: true,
+    searchInputArr: [],
+    searchMatchRateTheshold: 0,
+    searchSpecAttributeEnable: true,
+    searchSpecAttributeArr: ['name', 'devType', 'osType', 'ipAddr', 'macAddr', 'status']
+  },
   listFeaturePage: {
     enable: true,
     dataPerPage: 10,
@@ -10781,6 +10837,10 @@ var Example = function (_Component) {
     var _this = _possibleConstructorReturn(this, (Example.__proto__ || Object.getPrototypeOf(Example)).call(this, props));
 
     _this.listRef = [];
+    _this.env = {
+      searchInputArr: [],
+      searchMatchRateTheshold: 0
+    };
     return _this;
   }
 
@@ -10814,6 +10874,7 @@ var Example = function (_Component) {
           _react2.default.createElement(
             _articleLayout2.default.Content,
             null,
+            this.searchConfigRender(),
             _react2.default.createElement(_blacktboxTable2.default, {
               tableHeadArr: tableHeaderArr,
               tableBobyArr: tableBodyArr,
@@ -10824,7 +10885,7 @@ var Example = function (_Component) {
                 _this2.listRef = ref;
               }
             }),
-            this.temp_pagingConfigRender()
+            this.pageConfigRender()
           ),
           _react2.default.createElement(
             _articleLayout2.default.Item,
@@ -10941,9 +11002,67 @@ var Example = function (_Component) {
       console.log('listRef', listRef);
     }
   }, {
-    key: 'temp_pagingConfigRender',
-    value: function temp_pagingConfigRender() {
+    key: 'searchConfigRender',
+    value: function searchConfigRender() {
       var _this3 = this;
+
+      var content = [];
+      var searchInput = this.env.searchInputArr.join(' ');
+      var searchMatchRate = this.env.searchMatchRateTheshold;
+      content.push(_react2.default.createElement(
+        'div',
+        {
+          style: { 'margin-bottom': '10px', 'text-align': 'left' }
+        },
+        function () {
+          // data information
+          var content_input = [];
+          content_input.push(_react2.default.createElement(
+            'div',
+            null,
+            'Search Input: ',
+            _react2.default.createElement('input', { type: 'text', style: { 'font-size': '14px' }, value: searchInput, onChange: function onChange(event) {
+                _this3._searchInputHandler(event);
+              }, placeholder: 'Search Input' })
+          ));
+          return content_input;
+        }(),
+        function () {
+          // data information
+          var content_matchedRate = [];
+          content_matchedRate.push(_react2.default.createElement(
+            'div',
+            null,
+            'Search Matched Rate Theshold: ',
+            _react2.default.createElement('input', { type: 'text', style: { 'font-size': '14px' }, value: searchMatchRate, onChange: function onChange(event) {
+                _this3._searchMatchRateHandler(event);
+              }, placeholder: 'Search Matched Rate Theshold' })
+          ));
+          return content_matchedRate;
+        }(),
+        function () {
+          // data information
+          var content_searchBtn = [];
+          content_searchBtn.push(_react2.default.createElement(
+            'div',
+            null,
+            _react2.default.createElement(
+              'button',
+              { onClick: function onClick() {
+                  _this3._searchHandler();
+                } },
+              'Search'
+            )
+          ));
+          return content_searchBtn;
+        }()
+      ));
+      return content;
+    }
+  }, {
+    key: 'pageConfigRender',
+    value: function pageConfigRender() {
+      var _this4 = this;
 
       var content = [];
       var dataTotal = tableBodyArr.length;
@@ -10989,7 +11108,7 @@ var Example = function (_Component) {
                 style: { 'font-size': '14px' },
                 value: dataPerPage,
                 onChange: function onChange(event) {
-                  _this3._perPageSelectHandler(event);
+                  _this4._perPageSelectHandler(event);
                 }
               },
               optionArr.map(function (entry_value) {
@@ -11021,7 +11140,7 @@ var Example = function (_Component) {
                     className: modeObj.listFeaturePage.pageIndex == i ? 'active' : '',
                     value: i,
                     onClick: function onClick(event) {
-                      _this3._pageIndexButton(event);
+                      _this4._pageIndexButton(event);
                     }
                   },
                   i
@@ -11034,6 +11153,30 @@ var Example = function (_Component) {
         }()
       ));
       return content;
+    }
+  }, {
+    key: '_searchInputHandler',
+    value: function _searchInputHandler(event) {
+      this.env.searchInputArr = event.target.value.split(' ');
+      this.forceUpdate();
+    }
+  }, {
+    key: '_searchMatchRateHandler',
+    value: function _searchMatchRateHandler(event) {
+      this.env.searchMatchRateTheshold = event.target.value;
+      this.forceUpdate();
+    }
+  }, {
+    key: '_searchHandler',
+    value: function _searchHandler() {
+      var matchedRate = parseFloat(this.env.searchMatchRateTheshold);
+      if (0 <= matchedRate && 1 >= matchedRate) {
+        modeObj.listFeatureSearch.searchInputArr = this.env.searchInputArr.slice(0);
+        modeObj.listFeatureSearch.searchMatchRateTheshold = matchedRate;
+        this.forceUpdate();
+      } else {
+        alert('Remind: Search Match Rate Theshold must be float between 0-1');
+      };
     }
   }, {
     key: '_perPageSelectHandler',
