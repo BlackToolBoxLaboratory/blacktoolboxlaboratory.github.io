@@ -255,8 +255,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__dataObj_js__ = __webpack_require__(47);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__mainRenderFn_js__ = __webpack_require__(106);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__dataObj_js__ = __webpack_require__(48);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__applicationFn_js__ = __webpack_require__(34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__mainRenderFn_js__ = __webpack_require__(106);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -264,6 +265,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
 
 
 
@@ -296,7 +298,7 @@ var Menu = function (_React$Component) {
   }, {
     key: 'render',
     value: function render() {
-      return Object(__WEBPACK_IMPORTED_MODULE_3__mainRenderFn_js__["a" /* mainRenderFn */])(this);
+      return Object(__WEBPACK_IMPORTED_MODULE_4__mainRenderFn_js__["a" /* mainRenderFn */])(this);
     }
   }, {
     key: 'updateENVFn',
@@ -305,7 +307,20 @@ var Menu = function (_React$Component) {
 
       this.env = new __WEBPACK_IMPORTED_MODULE_2__dataObj_js__["a" /* ENVDefaultObj */]().env;
       Object.keys(source).map(function (entry) {
-        _this2.env[entry] = source[entry];
+        switch (entry) {
+          case 'styleObj':
+            Object.keys(source.styleObj).map(function (node_entry) {
+              _this2.env.styleObj[node_entry] = {};
+              Object.keys(source.styleObj[node_entry]).map(function (style_entry) {
+                var camelCaseStyleName = Object(__WEBPACK_IMPORTED_MODULE_3__applicationFn_js__["a" /* camelCaseTransformerFn */])(style_entry);
+                _this2.env.styleObj[node_entry][camelCaseStyleName] = source.styleObj[node_entry][style_entry];
+              });
+            });
+            break;
+          default:
+            _this2.env[entry] = source[entry];
+            break;
+        }
       });
     }
   }]);
@@ -314,15 +329,11 @@ var Menu = function (_React$Component) {
 }(__WEBPACK_IMPORTED_MODULE_0_react___default.a.Component);
 
 Menu.propTypes = {
-  listArr: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.array.isRequired,
-  styleObj: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.object,
-  refFn: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.func
+  listArr: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.array.isRequired
 };
 
 Menu.defaultProps = {
-  listArr: [],
-  styleObj: {},
-  refFn: function refFn() {}
+  listArr: []
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Menu);
@@ -940,7 +951,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__dataObj_js__ = __webpack_require__(35);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__dataObj_js__ = __webpack_require__(36);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__applicationFn_js__ = __webpack_require__(21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__mainRenderFn_js__ = __webpack_require__(174);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -958,13 +969,13 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 
 
-var Menu = function (_React$Component) {
-  _inherits(Menu, _React$Component);
+var Table = function (_React$Component) {
+  _inherits(Table, _React$Component);
 
-  function Menu(props) {
-    _classCallCheck(this, Menu);
+  function Table(props) {
+    _classCallCheck(this, Table);
 
-    var _this = _possibleConstructorReturn(this, (Menu.__proto__ || Object.getPrototypeOf(Menu)).call(this, props));
+    var _this = _possibleConstructorReturn(this, (Table.__proto__ || Object.getPrototypeOf(Table)).call(this, props));
 
     _this.env = new __WEBPACK_IMPORTED_MODULE_2__dataObj_js__["b" /* ENVDefaultObj */]().env;
     _this.searchStatusArr = new Array();
@@ -972,7 +983,7 @@ var Menu = function (_React$Component) {
     return _this;
   }
 
-  _createClass(Menu, [{
+  _createClass(Table, [{
     key: 'componentWillMount',
     value: function componentWillMount() {
       this.updateENVFn(this.props);
@@ -993,6 +1004,15 @@ var Menu = function (_React$Component) {
       var newENV = new __WEBPACK_IMPORTED_MODULE_2__dataObj_js__["b" /* ENVDefaultObj */]().env;
       Object.keys(source).map(function (entry) {
         switch (entry) {
+          case 'styleObj':
+            Object.keys(source.styleObj).map(function (node_entry) {
+              newENV.styleObj[node_entry] = {};
+              Object.keys(source.styleObj[node_entry]).map(function (style_entry) {
+                var camelCaseStyleName = Object(__WEBPACK_IMPORTED_MODULE_3__applicationFn_js__["a" /* camelCaseTransformerFn */])(style_entry);
+                newENV.styleObj[node_entry][camelCaseStyleName] = source.styleObj[node_entry][style_entry];
+              });
+            });
+            break;
           case 'modeObj':
             Object.keys(source.modeObj).map(function (modeObj_entry) {
               switch (modeObj_entry) {
@@ -1015,30 +1035,24 @@ var Menu = function (_React$Component) {
         }
       });
       this.env = newENV;
-      this.searchStatusArr = Object(__WEBPACK_IMPORTED_MODULE_3__applicationFn_js__["b" /* dataSearching */])(this.env);
+      this.searchStatusArr = Object(__WEBPACK_IMPORTED_MODULE_3__applicationFn_js__["c" /* dataSearching */])(this.env);
     }
   }]);
 
-  return Menu;
+  return Table;
 }(__WEBPACK_IMPORTED_MODULE_0_react___default.a.Component);
 
-Menu.propTypes = {
+Table.propTypes = {
   tableHeadArr: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.array.isRequired,
-  tableBodyArr: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.array.isRequired,
-  modeObj: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.object,
-  styleObj: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.object,
-  refFn: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.func
+  tableBodyArr: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.array.isRequired
 };
 
-Menu.defaultProps = {
+Table.defaultProps = {
   tableHeadArr: [],
-  tableBodyArr: [],
-  modeObj: {},
-  styleObj: {},
-  refFn: function refFn() {}
+  tableBodyArr: []
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Menu);
+/* harmony default export */ __webpack_exports__["default"] = (Table);
 
 /***/ }),
 /* 14 */,
@@ -1249,12 +1263,14 @@ exports.default = RightListAction;
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (immutable) */ __webpack_exports__["a"] = createBasicProps;
-/* harmony export (immutable) */ __webpack_exports__["c"] = pagingFn;
-/* harmony export (immutable) */ __webpack_exports__["d"] = resultFn;
-/* harmony export (immutable) */ __webpack_exports__["b"] = dataSearching;
+/* harmony export (immutable) */ __webpack_exports__["b"] = createBasicProps;
+/* harmony export (immutable) */ __webpack_exports__["d"] = pagingFn;
+/* harmony export (immutable) */ __webpack_exports__["e"] = resultFn;
+/* harmony export (immutable) */ __webpack_exports__["c"] = dataSearching;
+/* harmony export (immutable) */ __webpack_exports__["a"] = camelCaseTransformerFn;
 function createBasicProps(env, name) {
   var obj = {
+    key: name,
     className: name,
     style: env.styleObj[name] ? Object.assign({}, env.styleObj[name]) : {}
   };
@@ -1296,7 +1312,7 @@ function dataSearching(env) {
         return entry.index;
       });
     }
-    matchArr = env.tableBobyArr.map(function (data) {
+    matchArr = env.tableBodyArr.map(function (data) {
       var matchCounter = 0;
       searchConfig.searchInputArr.map(function (target) {
         for (var i = 0; i < attributeArr.length; i++) {
@@ -1308,22 +1324,31 @@ function dataSearching(env) {
       });
       return matchCounter;
     });
-    if (0 < parseFloat(searchConfig.searchMatchRateTheshold) && 1 > parseFloat(searchConfig.searchMatchRateTheshold)) {
+    if (0 <= parseFloat(searchConfig.searchMatchRateTheshold) && 1 >= parseFloat(searchConfig.searchMatchRateTheshold)) {
+      searchStatusArr = matchArr.map(function (entry) {
+        var matchRate = entry / searchConfig.searchInputArr.length;
+        return searchConfig.searchMatchRateTheshold <= matchRate;
+      });
+    } else {
       searchConfig.searchMatchRateTheshold = 0;
       /* eslint-disable no-console*/
       console.error('BLB Error: blacktbox-table.modeObj.listFeatureSearch.searchMatchRateTheshold should be float between 0-1.');
       /* eslint-enable no-console*/
     }
-    searchStatusArr = matchArr.map(function (entry) {
-      var matchRate = entry / searchConfig.searchInputArr.length;
-      return searchConfig.searchMatchRateTheshold <= matchRate;
-    });
   } else {
-    searchStatusArr = env.tableBobyArr.map(function () {
+    searchStatusArr = env.tableBodyArr.map(function () {
       return true;
     });
   }
   return searchStatusArr;
+}
+
+function camelCaseTransformerFn(orinal_name) {
+  var newName = '';
+  newName = orinal_name.replace(/-(\w)/g, function (all, letter) {
+    return letter.toUpperCase();
+  });
+  return newName;
 }
 
 /***/ }),
@@ -1355,7 +1380,7 @@ var _reactRouterDom = __webpack_require__(23);
 
 var _reactFontawesome = __webpack_require__(1);
 
-var _blacktboxMenu = __webpack_require__(46);
+var _blacktboxMenu = __webpack_require__(47);
 
 var _blacktboxMenu2 = _interopRequireDefault(_blacktboxMenu);
 
@@ -1643,16 +1668,18 @@ function MenuInfoObj(obj, defaultCollapse) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (immutable) */ __webpack_exports__["b"] = createBasicProps;
-/* harmony export (immutable) */ __webpack_exports__["d"] = initCollapseStautsFn;
-/* harmony export (immutable) */ __webpack_exports__["e"] = searchRecursionFn;
-/* harmony export (immutable) */ __webpack_exports__["a"] = countRecursionFn;
-/* harmony export (immutable) */ __webpack_exports__["c"] = expandRecursionFn;
+/* harmony export (immutable) */ __webpack_exports__["c"] = createBasicProps;
+/* harmony export (immutable) */ __webpack_exports__["e"] = initCollapseStautsFn;
+/* harmony export (immutable) */ __webpack_exports__["f"] = searchRecursionFn;
+/* harmony export (immutable) */ __webpack_exports__["b"] = countRecursionFn;
+/* harmony export (immutable) */ __webpack_exports__["d"] = expandRecursionFn;
+/* harmony export (immutable) */ __webpack_exports__["a"] = camelCaseTransformerFn;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__dataObj_js__ = __webpack_require__(30);
 
 
 function createBasicProps(env, name) {
   var obj = {
+    key: name,
     className: name,
     style: env.styleObj[name] ? Object.assign({}, env.styleObj[name]) : {}
   };
@@ -1662,7 +1689,7 @@ function createBasicProps(env, name) {
 function initCollapseStautsFn(menuThis, source) {
   var infoObj = new __WEBPACK_IMPORTED_MODULE_0__dataObj_js__["b" /* MenuInfoObj */](source, menuThis.env.featureCollapsible['defaultCollapse']);
   if (0 < infoObj.children.length && 'undefined' == typeof menuThis.collapseStatusList[infoObj.index]) {
-    menuThis.collapseStatusList[infoObj.index] = menuThis.env.featureCollapsible.enable ? infoObj.defaultCollapse : false;
+    menuThis.collapseStatusList[infoObj.index] = menuThis.env.featureCollapsible.enable;
   }
 
   for (var i = 0; i < infoObj.children.length; i++) {
@@ -1702,6 +1729,14 @@ function expandRecursionFn(menuThis, source) {
       expandRecursionFn(menuThis, infoObj.children[i]);
     }
   }
+}
+
+function camelCaseTransformerFn(orinal_name) {
+  var newName = '';
+  newName = orinal_name.replace(/-(\w)/g, function (all, letter) {
+    return letter.toUpperCase();
+  });
+  return newName;
 }
 
 /***/ }),
@@ -1759,6 +1794,30 @@ exports.default = MyHashHistory;
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony export (immutable) */ __webpack_exports__["b"] = createBasicProps;
+/* harmony export (immutable) */ __webpack_exports__["a"] = camelCaseTransformerFn;
+function createBasicProps(env, name) {
+  var obj = {
+    key: name,
+    className: name,
+    style: env.styleObj[name] ? Object.assign({}, env.styleObj[name]) : {}
+  };
+  return obj;
+}
+
+function camelCaseTransformerFn(orinal_name) {
+  var newName = '';
+  newName = orinal_name.replace(/-(\w)/g, function (all, letter) {
+    return letter.toUpperCase();
+  });
+  return newName;
+}
+
+/***/ }),
+/* 35 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = warning;
 /**
  * Prints a warning in the console if it exists.
@@ -1783,7 +1842,7 @@ function warning(message) {
 }
 
 /***/ }),
-/* 35 */
+/* 36 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1793,7 +1852,7 @@ function warning(message) {
 function ENVDefaultObj() {
   this['env'] = {
     tableHeadArr: [],
-    tableBobyArr: [],
+    tableBodyArr: [],
     modeObj: {
       mode: 'list',
       listFeatureSearch: {
@@ -1849,7 +1908,6 @@ function BodyObj(headerData, source) {
 }
 
 /***/ }),
-/* 36 */,
 /* 37 */,
 /* 38 */,
 /* 39 */,
@@ -1859,7 +1917,8 @@ function BodyObj(headerData, source) {
 /* 43 */,
 /* 44 */,
 /* 45 */,
-/* 46 */
+/* 46 */,
+/* 47 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1929,6 +1988,15 @@ var Menu = function (_React$Component) {
       var isChanged = source['acticveIndex'] && source['acticveIndex'] != this.env['acticveIndex'] ? true : false;
       Object.keys(source).map(function (entry) {
         switch (entry) {
+          case 'styleObj':
+            Object.keys(source.styleObj).map(function (node_entry) {
+              _this2.env.styleObj[node_entry] = {};
+              Object.keys(source.styleObj[node_entry]).map(function (style_entry) {
+                var camelCaseStyleName = Object(__WEBPACK_IMPORTED_MODULE_3__applicationFn_js__["a" /* camelCaseTransformerFn */])(style_entry);
+                _this2.env.styleObj[node_entry][camelCaseStyleName] = source.styleObj[node_entry][style_entry];
+              });
+            });
+            break;
           case 'featureCollapsible':
             Object.keys(source.featureCollapsible).map(function (collapse_entry) {
               _this2.env.featureCollapsible[collapse_entry] = source.featureCollapsible[collapse_entry];
@@ -1943,17 +2011,17 @@ var Menu = function (_React$Component) {
       var menuArr = this.env.menuArr;
       menuArr.map(function (item) {
         var infoObj = new __WEBPACK_IMPORTED_MODULE_2__dataObj_js__["b" /* MenuInfoObj */](item, _this2.env.featureCollapsible['defaultCollapse']);
-        Object(__WEBPACK_IMPORTED_MODULE_3__applicationFn_js__["d" /* initCollapseStautsFn */])(_this2, infoObj);
+        Object(__WEBPACK_IMPORTED_MODULE_3__applicationFn_js__["e" /* initCollapseStautsFn */])(_this2, infoObj);
         if (isChanged) {
-          Object(__WEBPACK_IMPORTED_MODULE_3__applicationFn_js__["c" /* expandRecursionFn */])(_this2, infoObj);
+          Object(__WEBPACK_IMPORTED_MODULE_3__applicationFn_js__["d" /* expandRecursionFn */])(_this2, infoObj);
         }
       });
-      if (!this.env.styleObj['item-content']) {
+      if (this.env.styleObj['item-content']) {
+        this.env.styleObj['item-content']['height'] = this.env.styleObj['item-content']['height'] ? this.env.styleObj['item-content']['height'] : this.env.styleObj['item-content']['lineHeight'] ? this.env.styleObj['item-content']['lineHeight'] : this.env.styleObj['item-content']['fontSize'] ? this.env.styleObj['item-content']['fontSize'] : CONTENT_HEIGHT + 'px';
+      } else {
         this.env.styleObj['item-content'] = {
           'height': CONTENT_HEIGHT + 'px'
         };
-      } else if (!this.env.styleObj['item-content']['height']) {
-        this.env.styleObj['item-content']['height'] = this.env.styleObj['item-content']['line-height'] ? this.env.styleObj['item-content']['line-height'] : this.env.styleObj['item-content']['font-size'] ? this.env.styleObj['item-content']['font-size'] : CONTENT_HEIGHT + 'px';
       }
     }
   }]);
@@ -1962,27 +2030,17 @@ var Menu = function (_React$Component) {
 }(__WEBPACK_IMPORTED_MODULE_0_react___default.a.Component);
 
 Menu.propTypes = {
-  menuArr: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.array.isRequired,
-  styleObj: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.object,
-  refFn: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.func,
-  acticveIndex: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.string,
-  itemOnClickFn: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.func,
-  featureCollapsible: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.object
+  menuArr: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.array.isRequired
 };
 
 Menu.defaultProps = {
-  menuArr: [],
-  styleObj: {},
-  refFn: function refFn() {},
-  acticveIndex: '',
-  itemOnClickFn: function itemOnClickFn() {},
-  featureCollapsible: {}
+  menuArr: []
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Menu);
 
 /***/ }),
-/* 47 */
+/* 48 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1992,7 +2050,8 @@ function ENVDefaultObj() {
   this['env'] = {
     listArr: [],
     styleObj: {},
-    refFn: function refFn() {}
+    refFn: function refFn() {},
+    itemOnClickFn: function itemOnClickFn() {}
   };
 }
 
@@ -2004,20 +2063,6 @@ function ListInfoObj(obj) {
   Object.keys(obj).map(function (key) {
     _this[key] = obj[key];
   });
-}
-
-/***/ }),
-/* 48 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (immutable) */ __webpack_exports__["a"] = createBasicProps;
-function createBasicProps(env, name) {
-  var obj = {
-    className: name,
-    style: env.styleObj[name] ? Object.assign({}, env.styleObj[name]) : {}
-  };
-  return obj;
 }
 
 /***/ }),
@@ -2595,7 +2640,7 @@ var storeShape = __WEBPACK_IMPORTED_MODULE_0_prop_types___default.a.shape({
 
 "use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = connectAdvanced;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_hoist_non_react_statics__ = __webpack_require__(44);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_hoist_non_react_statics__ = __webpack_require__(45);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_hoist_non_react_statics___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_hoist_non_react_statics__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_invariant__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_invariant___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_invariant__);
@@ -2977,7 +3022,7 @@ function wrapMapToPropsFunc(mapToProps, methodName) {
 "use strict";
 /* unused harmony export default */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash_es_isPlainObject__ = __webpack_require__(136);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__warning__ = __webpack_require__(34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__warning__ = __webpack_require__(35);
 
 
 
@@ -3231,7 +3276,7 @@ exports = module.exports = __webpack_require__(94)(false);
 
 
 // module
-exports.push([module.i, "body {\n  margin: 0;\n  padding: 0;\n  font-size: 16px;\n  font-family: Arial, 'Times New Roman', Times, serif;\n  font-weight: 100;\n  overflow-x: hidden;\n}\na > svg,\nli > svg,\nspan + svg {\n  margin-left: 5px;\n}\nbutton {\n  font-size: 14px;\n}\n.wrapper {\n  width: 100%;\n  height: 100%;\n}\n.wrapper.wrapper-home {\n  background-color: #000;\n}\n.wrapper.wrapper-basic,\n.wrapper.wrapper-advance {\n  width: calc(100% - (15px * 2));\n  margin: auto;\n  padding: 15px 15px;\n}\n.linkBtn {\n  cursor: pointer;\n  color: #aaa;\n}\n.linkBtn:hover {\n  color: #000;\n}\n.wrapper .sideContent {\n  width: 200px;\n  background-color: #000;\n  color: #fff;\n  vertical-align: top;\n  display: inline-block;\n  min-height: 100vh;\n}\n.wrapper .sideContent .header {\n  background-color: #61dafb;\n  margin-bottom: 15px;\n  position: relative;\n  height: 104px;\n}\n.wrapper .sideContent .groupname {\n  background-color: #000;\n  line-height: 20px;\n  text-align: right;\n  padding: 2px 15px;\n}\n.wrapper .sideContent .icon {\n  border-radius: 10px;\n  width: 50px;\n  height: 50px;\n  background-color: #000;\n  text-align: center;\n  margin: 15px;\n  font-size: 36px;\n}\n.wrapper .sideContent .icon svg {\n  margin-top: 7px;\n}\n.wrapper .sideContent .welcome {\n  left: calc(50px + (15px * 2));\n  line-height: 20px;\n  text-align: center;\n  padding: 30px 0;\n  position: absolute;\n  bottom: 0;\n  right: 0;\n  color: #000;\n}\n.wrapper .mainContent {\n  width: calc(100% - (200px + 130px ));\n  padding-right: 130px;\n  background-color: #fff;\n  display: inline-block;\n  min-height: 100vh;\n}\n.btb-exampleLayout.wrapper {\n  display: inline-block;\n  width: unset;\n}\n.btb-exampleLayout.title {\n  font-size: 16px;\n  color: #000;\n  font-weight: 700;\n  margin: 5px 0;\n}\n.btb-exampleLayout.part {\n  margin: 5px;\n}\n.btb-exampleLayout.block {\n  min-width: 150px;\n  vertical-align: top;\n}\n.btb-exampleLayout.inlineBlock {\n  min-width: 150px;\n  vertical-align: top;\n  display: inline-block;\n}\n.btb-exampleLayout.inlineBlock + .inlineBlock {\n  margin-left: 10px;\n}\n.btb-articleLayout.mainTitle {\n  font-size: 30px;\n  font-weight: bold;\n  margin: 30px 15px 0;\n}\n.btb-articleLayout.mainDescription {\n  margin: 0 15px 30px;\n}\n.btb-articleLayout.section {\n  width: 100%;\n  font-size: 14px;\n}\n.btb-articleLayout.section + .btb-articleLayout.section {\n  margin-top: 30px;\n}\n.btb-articleLayout.sectionTitle {\n  color: #aaa;\n  border-bottom: 1px solid #aaa;\n  margin: 0 15px;\n  font-weight: bold;\n}\n.btb-articleLayout.sectionSubtitle {\n  font-weight: bold;\n  margin: 15px 0;\n}\n.btb-articleLayout.content {\n  color: #000;\n  margin: 15px 30px;\n}\n.btb-articleLayout.content-pre {\n  color: #f3f3f3;\n  background-color: #373940;\n  font-family: Consolas, \"Liberation Mono\", Menlo, Monaco, Courier, monospace;\n  margin: 15px 30px;\n  padding: 10px 15px;\n  white-space: pre-wrap;\n}\n.btb-articleLayout.content-item {\n  text-align: center;\n  margin: 15px 30px;\n}\n.btb-articleLayout.notice {\n  color: #aaa;\n  display: inline;\n}\n.btb-articleLayout.buttonGroup {\n  margin: 0 15px;\n}\n.btb-articleRedirectBtn {\n  border: 1px solid #aaa;\n  border-radius: 15px;\n  color: #aaa;\n  cursor: pointer;\n  font-size: 13px;\n  padding: 3px 5px;\n  position: fixed;\n  bottom: 15px;\n  right: 15px;\n}\n.btb-articleRedirectBtn:hover {\n  border-color: #000;\n  color: #000;\n}\n.example-userList {\n  padding: 5px;\n  border: 1px solid #aaa;\n  border-radius: 5px;\n  box-shadow: 2px 2px 4px 2px #aaa;\n}\n.example-userList .userList-add {\n  margin-top: 10px;\n}\n.example-userList .userList-add .userList-input {\n  border: 2px solid #aaa;\n  border-radius: 5px;\n  font-size: 10px;\n  padding: 2px 10px;\n}\n.example-userList .userList-add .userList-input:focus,\n.example-userList .userList-add .userList-input:hover {\n  border-color: #777;\n}\n.example-userList .userList-add .userList-addButton {\n  color: #aaa;\n  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;\n  border: medium none;\n  font-size: 15px;\n  margin-left: 5px;\n  padding: 0;\n  vertical-align: top;\n  cursor: pointer;\n}\n.example-userList .userList-add .userList-addButton:hover {\n  color: #ff0000;\n}\n.example-userList .example-block .userList-info {\n  margin-right: 40px;\n}\n.example-userList .userList-list {\n  border: 2px solid #aaa;\n  border-radius: 7px;\n  padding: 0px;\n  margin: 5px 0;\n}\n.example-userList .userList-list .userList-entry {\n  border-radius: 5px;\n  cursor: default;\n  padding: 2px 5px;\n  position: relative;\n  text-align: left;\n  overflow: hidden;\n}\n.example-userList .userList-list .userList-entry .userList-info {\n  margin-right: 40px;\n}\n.example-userList .userList-list .userList-entry .userList-deleteButton {\n  transition: opacity 0.5s ease 0s, right 0.5s ease 0s;\n  color: #ff0000;\n  opacity: 0;\n  position: absolute;\n  right: -20px;\n  top: 3px;\n  cursor: pointer;\n}\n.example-userList .userList-list .userList-entry:hover {\n  background-color: #ccc;\n}\n.example-userList .userList-list .userList-entry:hover .userList-deleteButton {\n  right: 2px;\n  opacity: 1;\n}\n.example-userList .userList-list .userList-entry .userList-moveButton {\n  transition: opacity 0.5s ease 0s, right 0.5s ease 0s;\n  color: #ff0000;\n  opacity: 0;\n  position: absolute;\n  right: -20px;\n  top: 3px;\n  cursor: pointer;\n}\n.example-userList .userList-list .userList-entry:hover {\n  background-color: #ccc;\n}\n.example-userList .userList-list .userList-entry:hover .userList-moveButton {\n  right: 22px;\n  opacity: 1;\n}\n.example-userList .userList-list .userList-entry-empty {\n  list-style: outside none none;\n  text-align: center;\n}\n.btb-menu.menu {\n  color: #fff;\n}\n.btb-menu.menu .layer-item.activeTop {\n  background-color: #373940;\n  border-left: 5px solid #61dafb;\n}\n.btb-menu.menu .layer-item.activeParent > .item-content .content-name {\n  color: #61dafb;\n}\n.btb-menu.menu .layer-item.activeParent > .item-content .collapse-arrow {\n  border-color: #61dafb transparent transparent;\n}\n.btb-menu.menu .layer-item.active > .item-content {\n  background-color: #373940;\n}\n.btb-menu.menu .layer-item.active > .item-content .content-name {\n  color: #61dafb;\n}\n.btb-menu.menu .layer-item.active > .item-content .collapse-arrow {\n  border-color: #61dafb transparent transparent;\n}\n.btb-menu.menu .item-content:hover {\n  background-color: #373940;\n}\n.btb-menu.menu .item-content:hover .content-name {\n  color: #61dafb;\n}\n.btb-menu.menu .item-content:hover .collapse-arrow {\n  border-color: #61dafb transparent transparent;\n}\n.btb-menu.menu .collapse-arrow {\n  border-color: #fff transparent transparent;\n}\n.btb-list.content-nodetree {\n  background-color: #d6e4ff;\n  margin: auto;\n  width: calc(100% - (75px * 2));\n  padding: 15px;\n}\n.btb-table.content-paramlist {\n  margin: auto;\n  width: calc(100% - (60px * 2));\n}\n.btb-table.content-paramlist .table-list {\n  border-collapse: collapse;\n  border-spacing: 0;\n}\n.btb-table.content-paramlist .tr-th {\n  background-color: #d6e4ff;\n  border: 2px solid #d6e4ff;\n  padding: 2px 15px;\n}\n.btb-table.content-paramlist .tr-td {\n  border: 2px solid #d6e4ff;\n  text-align: center;\n  padding: 2px 15px;\n}\n.btb-table.content-paramlist .td-name {\n  text-align: left;\n  white-space: nowrap;\n}\n.btb-table.content-paramlist .td-notice {\n  text-align: left;\n}\n.btb-table.content-paramlist .content-pre {\n  margin: 5px 0;\n  padding: 5px 15px;\n}\n", ""]);
+exports.push([module.i, "body {\n  margin: 0;\n  padding: 0;\n  font-size: 16px;\n  font-family: Arial, 'Times New Roman', Times, serif;\n  font-weight: 100;\n  overflow-x: hidden;\n}\na > svg,\nli > svg,\nspan + svg {\n  margin-left: 5px;\n}\nbutton {\n  font-size: 14px;\n}\n.wrapper {\n  width: 100%;\n  height: 100%;\n}\n.wrapper.wrapper-home {\n  background-color: #000;\n}\n.wrapper.wrapper-basic,\n.wrapper.wrapper-advance {\n  width: calc(100% - (15px * 2));\n  margin: auto;\n  padding: 15px 15px;\n}\n.linkBtn {\n  cursor: pointer;\n  color: #aaa;\n}\n.linkBtn:hover {\n  color: #000;\n}\n.wrapper .sideContent {\n  width: 200px;\n  background-color: #000;\n  color: #fff;\n  vertical-align: top;\n  display: inline-block;\n  min-height: 100vh;\n}\n.wrapper .sideContent .header {\n  background-color: #61dafb;\n  margin-bottom: 15px;\n  position: relative;\n  height: 104px;\n}\n.wrapper .sideContent .groupname {\n  background-color: #000;\n  line-height: 20px;\n  text-align: right;\n  padding: 2px 15px;\n}\n.wrapper .sideContent .icon {\n  border-radius: 10px;\n  width: 50px;\n  height: 50px;\n  background-color: #000;\n  text-align: center;\n  margin: 15px;\n  font-size: 36px;\n}\n.wrapper .sideContent .icon svg {\n  margin-top: 7px;\n}\n.wrapper .sideContent .welcome {\n  left: calc(50px + (15px * 2));\n  line-height: 20px;\n  text-align: center;\n  padding: 30px 0;\n  position: absolute;\n  bottom: 0;\n  right: 0;\n  color: #000;\n}\n.wrapper .mainContent {\n  width: calc(100% - (200px + 130px ));\n  padding-right: 130px;\n  background-color: #fff;\n  display: inline-block;\n  min-height: 100vh;\n}\n.btb-exampleLayout.wrapper {\n  display: inline-block;\n  width: unset;\n}\n.btb-exampleLayout.title {\n  font-size: 16px;\n  color: #000;\n  font-weight: 700;\n  margin: 5px 0;\n}\n.btb-exampleLayout.part {\n  margin: 5px;\n}\n.btb-exampleLayout.block {\n  min-width: 150px;\n  vertical-align: top;\n}\n.btb-exampleLayout.inlineBlock {\n  min-width: 150px;\n  vertical-align: top;\n  display: inline-block;\n}\n.btb-exampleLayout.inlineBlock + .inlineBlock {\n  margin-left: 10px;\n}\n.btb-articleLayout.mainTitle {\n  font-size: 30px;\n  font-weight: bold;\n  margin: 30px 15px 0;\n}\n.btb-articleLayout.mainDescription {\n  margin: 0 15px 30px;\n}\n.btb-articleLayout.section {\n  width: 100%;\n  font-size: 14px;\n}\n.btb-articleLayout.section + .btb-articleLayout.section {\n  margin-top: 30px;\n}\n.btb-articleLayout.sectionTitle {\n  color: #aaa;\n  border-bottom: 1px solid #aaa;\n  margin: 0 15px;\n  font-weight: bold;\n}\n.btb-articleLayout.sectionSubtitle {\n  font-weight: bold;\n  margin: 15px 0;\n}\n.btb-articleLayout.content {\n  color: #000;\n  margin: 15px 30px;\n}\n.btb-articleLayout.content-pre {\n  color: #f3f3f3;\n  background-color: #373940;\n  font-family: Consolas, \"Liberation Mono\", Menlo, Monaco, Courier, monospace;\n  margin: 15px 30px;\n  padding: 10px 15px;\n  white-space: pre-wrap;\n}\n.btb-articleLayout.content-item {\n  text-align: center;\n  margin: 15px 30px;\n}\n.btb-articleLayout.notice {\n  color: #aaa;\n  display: inline;\n}\n.btb-articleLayout.buttonGroup {\n  margin: 0 15px;\n}\n.btb-articleRedirectBtn {\n  border: 1px solid #aaa;\n  border-radius: 15px;\n  color: #aaa;\n  cursor: pointer;\n  font-size: 13px;\n  padding: 3px 5px;\n  position: fixed;\n  bottom: 15px;\n  right: 15px;\n}\n.btb-articleRedirectBtn:hover {\n  border-color: #000;\n  color: #000;\n}\n.example-userList {\n  padding: 5px;\n  border: 1px solid #aaa;\n  border-radius: 5px;\n  box-shadow: 2px 2px 4px 2px #aaa;\n}\n.example-userList .userList-add {\n  margin-top: 10px;\n}\n.example-userList .userList-add .userList-input {\n  border: 2px solid #aaa;\n  border-radius: 5px;\n  font-size: 10px;\n  padding: 2px 10px;\n}\n.example-userList .userList-add .userList-input:focus,\n.example-userList .userList-add .userList-input:hover {\n  border-color: #777;\n}\n.example-userList .userList-add .userList-addButton {\n  color: #aaa;\n  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;\n  border: medium none;\n  font-size: 15px;\n  margin-left: 5px;\n  padding: 0;\n  vertical-align: top;\n  cursor: pointer;\n}\n.example-userList .userList-add .userList-addButton:hover {\n  color: #ff0000;\n}\n.example-userList .example-block .userList-info {\n  margin-right: 40px;\n}\n.example-userList .userList-list {\n  border: 2px solid #aaa;\n  border-radius: 7px;\n  padding: 0px;\n  margin: 5px 0;\n}\n.example-userList .userList-list .userList-entry {\n  border-radius: 5px;\n  cursor: default;\n  padding: 2px 5px;\n  position: relative;\n  text-align: left;\n  overflow: hidden;\n}\n.example-userList .userList-list .userList-entry .userList-info {\n  margin-right: 40px;\n}\n.example-userList .userList-list .userList-entry .userList-deleteButton {\n  transition: opacity 0.5s ease 0s, right 0.5s ease 0s;\n  color: #ff0000;\n  opacity: 0;\n  position: absolute;\n  right: -20px;\n  top: 3px;\n  cursor: pointer;\n}\n.example-userList .userList-list .userList-entry:hover {\n  background-color: #ccc;\n}\n.example-userList .userList-list .userList-entry:hover .userList-deleteButton {\n  right: 2px;\n  opacity: 1;\n}\n.example-userList .userList-list .userList-entry .userList-moveButton {\n  transition: opacity 0.5s ease 0s, right 0.5s ease 0s;\n  color: #ff0000;\n  opacity: 0;\n  position: absolute;\n  right: -20px;\n  top: 3px;\n  cursor: pointer;\n}\n.example-userList .userList-list .userList-entry:hover {\n  background-color: #ccc;\n}\n.example-userList .userList-list .userList-entry:hover .userList-moveButton {\n  right: 22px;\n  opacity: 1;\n}\n.example-userList .userList-list .userList-entry-empty {\n  list-style: outside none none;\n  text-align: center;\n}\n.btb-menu.menu {\n  color: #fff;\n}\n.btb-menu.menu .layer-item.activeTop {\n  background-color: #373940;\n  border-left: 5px solid #61dafb;\n}\n.btb-menu.menu .layer-item.activeParent > .item-content .content-name {\n  color: #61dafb;\n}\n.btb-menu.menu .layer-item.activeParent > .item-content .collapse-arrow {\n  border-color: #61dafb transparent transparent;\n}\n.btb-menu.menu .layer-item.active > .item-content {\n  background-color: #373940;\n}\n.btb-menu.menu .layer-item.active > .item-content .content-name {\n  color: #61dafb;\n}\n.btb-menu.menu .layer-item.active > .item-content .collapse-arrow {\n  border-color: #61dafb transparent transparent;\n}\n.btb-menu.menu .item-content:hover {\n  background-color: #373940;\n}\n.btb-menu.menu .item-content:hover .content-name {\n  color: #61dafb;\n}\n.btb-menu.menu .item-content:hover .collapse-arrow {\n  border-color: #61dafb transparent transparent;\n}\n.btb-menu.menu .collapse-arrow {\n  border-color: #fff transparent transparent;\n}\n.btb-list.content-nodetree {\n  background-color: #d6e4ff;\n  margin: auto;\n  width: calc(100% - (75px * 2));\n  padding: 15px;\n}\n.btb-list.content-nodetree .item-content {\n  cursor: initial;\n}\n.btb-table.content-paramlist {\n  margin: auto;\n  width: calc(100% - (60px * 2));\n}\n.btb-table.content-paramlist .table-list {\n  border-collapse: collapse;\n  border-spacing: 0;\n}\n.btb-table.content-paramlist .tr-th {\n  background-color: #d6e4ff;\n  border: 2px solid #d6e4ff;\n  padding: 2px 15px;\n}\n.btb-table.content-paramlist .tr-td {\n  border: 2px solid #d6e4ff;\n  text-align: center;\n  padding: 2px 15px;\n}\n.btb-table.content-paramlist .td-name {\n  text-align: left;\n  white-space: nowrap;\n}\n.btb-table.content-paramlist .td-notice {\n  text-align: left;\n}\n.btb-table.content-paramlist .content-pre {\n  margin: 5px 0;\n  padding: 5px 15px;\n}\n", ""]);
 
 // exports
 
@@ -3792,7 +3837,7 @@ module.exports = function (css) {
 "use strict";
 
 
-var _fontawesomeSvgCore = __webpack_require__(45);
+var _fontawesomeSvgCore = __webpack_require__(46);
 
 var _freeSolidSvgIcons = __webpack_require__(98);
 
@@ -7443,16 +7488,16 @@ function mainRenderFn(menuThis) {
   var nextLayer = 0;
   var itemCount = menuArr.length;
   menuArr.map(function (item) {
-    itemCount += Object(__WEBPACK_IMPORTED_MODULE_1__applicationFn_js__["a" /* countRecursionFn */])(menuThis, item);
+    itemCount += Object(__WEBPACK_IMPORTED_MODULE_1__applicationFn_js__["b" /* countRecursionFn */])(menuThis, item);
   });
-  var props_menu = Object(__WEBPACK_IMPORTED_MODULE_1__applicationFn_js__["b" /* createBasicProps */])(menuThis.env, 'btb-menu');
+  var props_menu = Object(__WEBPACK_IMPORTED_MODULE_1__applicationFn_js__["c" /* createBasicProps */])(menuThis.env, 'btb-menu');
   if (menuThis.props.className) {
     props_menu.className += ' ' + menuThis.props.className;
   }
-  var props_content = Object(__WEBPACK_IMPORTED_MODULE_1__applicationFn_js__["b" /* createBasicProps */])(menuThis.env, 'menu-content');
+  var props_content = Object(__WEBPACK_IMPORTED_MODULE_1__applicationFn_js__["c" /* createBasicProps */])(menuThis.env, 'menu-content');
   var content_height = parseInt(menuThis.env.styleObj['item-content']['height']);
   props_content.style['height'] = itemCount * content_height;
-  var props_layer = Object(__WEBPACK_IMPORTED_MODULE_1__applicationFn_js__["b" /* createBasicProps */])(menuThis.env, 'menu-layer');
+  var props_layer = Object(__WEBPACK_IMPORTED_MODULE_1__applicationFn_js__["c" /* createBasicProps */])(menuThis.env, 'menu-layer');
   var layerNextName = 'layer-' + nextLayer;
   props_layer.className += ' ' + layerNextName;
   if (menuThis.env.styleObj[layerNextName]) {
@@ -7508,14 +7553,14 @@ function menuRenderFn(menuThis, source, layerCounter) {
   var hasChildren = 0 < infoObj.children.length ? true : false;
   var layerPaddingLeft = layerCounter * 15;
   var nextLayer = layerCounter + 1;
-  var props_item = Object(__WEBPACK_IMPORTED_MODULE_2__applicationFn_js__["b" /* createBasicProps */])(menuThis.env, 'layer-item');
+  var props_item = Object(__WEBPACK_IMPORTED_MODULE_2__applicationFn_js__["c" /* createBasicProps */])(menuThis.env, 'layer-item');
   if (!menuThis.val.hasFoundActive) {
     if (menuThis.env.acticveIndex == infoObj.index) {
       props_item.className += ' active';
       menuThis.val.hasFoundActive = true;
       isMatch = true;
     } else {
-      if (hasChildren && Object(__WEBPACK_IMPORTED_MODULE_2__applicationFn_js__["e" /* searchRecursionFn */])(menuThis.env, infoObj)) {
+      if (hasChildren && Object(__WEBPACK_IMPORTED_MODULE_2__applicationFn_js__["f" /* searchRecursionFn */])(menuThis.env, infoObj)) {
         props_item.className += ' activeParent';
         isMatch = true;
       }
@@ -7525,12 +7570,12 @@ function menuRenderFn(menuThis, source, layerCounter) {
       menuThis.val.hasFoundActiveTop = true;
     }
   }
-  var props_content = Object(__WEBPACK_IMPORTED_MODULE_2__applicationFn_js__["b" /* createBasicProps */])(menuThis.env, 'item-content');
-  props_content.style['padding-left'] = layerPaddingLeft;
+  var props_content = Object(__WEBPACK_IMPORTED_MODULE_2__applicationFn_js__["c" /* createBasicProps */])(menuThis.env, 'item-content');
+  props_content.style['paddingLeft'] = layerPaddingLeft;
   props_content.onClick = function (event) {
     _itemOnClickHandler(event, menuThis, infoObj);
   };
-  var props_name = Object(__WEBPACK_IMPORTED_MODULE_2__applicationFn_js__["b" /* createBasicProps */])(menuThis.env, 'content-name');
+  var props_name = Object(__WEBPACK_IMPORTED_MODULE_2__applicationFn_js__["c" /* createBasicProps */])(menuThis.env, 'content-name');
   content.push(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
     'li',
     props_item,
@@ -7546,21 +7591,21 @@ function menuRenderFn(menuThis, source, layerCounter) {
         var content_collapse = [];
         if (hasChildren && menuThis.env.featureCollapsible.enable) {
           if ('' == menuThis.env.featureCollapsible.customCollapseButton) {
-            var props_collapse = Object(__WEBPACK_IMPORTED_MODULE_2__applicationFn_js__["b" /* createBasicProps */])(menuThis.env, 'content-collapse');
+            var props_collapse = Object(__WEBPACK_IMPORTED_MODULE_2__applicationFn_js__["c" /* createBasicProps */])(menuThis.env, 'content-collapse');
             if (menuThis.collapseStatusList[infoObj.index]) {
               props_collapse.className += ' collapsed';
             }
             props_collapse.onClick = function (event) {
               _itemOnCollapseHandler(event, menuThis, infoObj);
             };
-            var props_arrow = Object(__WEBPACK_IMPORTED_MODULE_2__applicationFn_js__["b" /* createBasicProps */])(menuThis.env, 'collapse-arrow');
+            var props_arrow = Object(__WEBPACK_IMPORTED_MODULE_2__applicationFn_js__["c" /* createBasicProps */])(menuThis.env, 'collapse-arrow');
             content_collapse.push(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
               'div',
               props_collapse,
               __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', props_arrow)
             ));
           } else {
-            var props_custom_collapse = Object(__WEBPACK_IMPORTED_MODULE_2__applicationFn_js__["b" /* createBasicProps */])(menuThis.env, 'content-custom-collapse');
+            var props_custom_collapse = Object(__WEBPACK_IMPORTED_MODULE_2__applicationFn_js__["c" /* createBasicProps */])(menuThis.env, 'content-custom-collapse');
             if (menuThis.collapseStatusList[infoObj.index]) {
               props_custom_collapse.className += ' collapsed';
             }
@@ -7580,13 +7625,13 @@ function menuRenderFn(menuThis, source, layerCounter) {
     function () {
       var content_submenu = [];
       if (hasChildren) {
-        var props_submenu = Object(__WEBPACK_IMPORTED_MODULE_2__applicationFn_js__["b" /* createBasicProps */])(menuThis.env, 'item-submenu');
+        var props_submenu = Object(__WEBPACK_IMPORTED_MODULE_2__applicationFn_js__["c" /* createBasicProps */])(menuThis.env, 'item-submenu');
         if (menuThis.env.featureCollapsible.enable && menuThis.collapseStatusList[infoObj.index]) {
           props_submenu.className += ' collapsed';
         }
         var content_height = parseInt(menuThis.env.styleObj['item-content']['height']);
-        props_submenu.style['height'] = Object(__WEBPACK_IMPORTED_MODULE_2__applicationFn_js__["a" /* countRecursionFn */])(menuThis, infoObj) * content_height;
-        var props_layer = Object(__WEBPACK_IMPORTED_MODULE_2__applicationFn_js__["b" /* createBasicProps */])(menuThis.env, 'menu-layer');
+        props_submenu.style['height'] = Object(__WEBPACK_IMPORTED_MODULE_2__applicationFn_js__["b" /* countRecursionFn */])(menuThis, infoObj) * content_height;
+        var props_layer = Object(__WEBPACK_IMPORTED_MODULE_2__applicationFn_js__["c" /* createBasicProps */])(menuThis.env, 'menu-layer');
         var layerNextName = 'layer-' + nextLayer;
         props_layer.className += ' ' + layerNextName;
         if (menuThis.env.styleObj[layerNextName]) {
@@ -7615,13 +7660,7 @@ function menuRenderFn(menuThis, source, layerCounter) {
 }
 
 function _itemOnClickHandler(event, menuThis, infoObj) {
-  if (event.stopPropagation) {
-    // standard
-    event.stopPropagation();
-  } else {
-    // IE6-8
-    event.cancelBubble = true;
-  }
+  event.stopPropagation();
   if (0 < infoObj.children.length && menuThis.env.featureCollapsible.itemClickWithCollapseEnable) {
     menuThis.collapseStatusList[infoObj.index] = !menuThis.collapseStatusList[infoObj.index];
     infoObj.collapseValue = menuThis.collapseStatusList[infoObj.index];
@@ -7635,13 +7674,7 @@ function _itemOnClickHandler(event, menuThis, infoObj) {
 }
 
 function _itemOnCollapseHandler(event, menuThis, infoObj) {
-  if (event.stopPropagation) {
-    // standard
-    event.stopPropagation();
-  } else {
-    // IE6-8
-    event.cancelBubble = true;
-  }
+  event.stopPropagation();
   menuThis.collapseStatusList[infoObj.index] = !menuThis.collapseStatusList[infoObj.index];
   infoObj.collapseValue = menuThis.collapseStatusList[infoObj.index];
   menuThis.env.featureCollapsible.itemOnCollapseFn(infoObj);
@@ -7687,11 +7720,11 @@ var menuList = new Array({
       'index': 'BTB_TABLE_BASIC',
       'name': 'Basic'
     }, {
-      'index': 'BTB_TABLE_EXAMPLE_LIST',
-      'name': 'Example List'
-    }, {
       'index': 'BTB_TABLE_EXAMPLE_INFO',
       'name': 'Example Info'
+    }, {
+      'index': 'BTB_TABLE_EXAMPLE_LIST',
+      'name': 'Example List'
     }]
   }, {
     'index': 'BTB_MENU',
@@ -8404,7 +8437,7 @@ exports.default = Index;
 /* harmony export (immutable) */ __webpack_exports__["a"] = mainRenderFn;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__applicationFn_js__ = __webpack_require__(48);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__applicationFn_js__ = __webpack_require__(34);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__listRenderFn_js__ = __webpack_require__(107);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
@@ -8417,11 +8450,11 @@ function mainRenderFn(listThis) {
   var content = [];
   var listArr = listThis.env.listArr;
   var nextLayer = 0;
-  var props_list = Object(__WEBPACK_IMPORTED_MODULE_1__applicationFn_js__["a" /* createBasicProps */])(listThis.env, 'btb-list');
+  var props_list = Object(__WEBPACK_IMPORTED_MODULE_1__applicationFn_js__["b" /* createBasicProps */])(listThis.env, 'btb-list');
   if (listThis.props.className) {
     props_list.className += ' ' + listThis.props.className;
   }
-  var props_layer = Object(__WEBPACK_IMPORTED_MODULE_1__applicationFn_js__["a" /* createBasicProps */])(listThis.env, 'list-layer');
+  var props_layer = Object(__WEBPACK_IMPORTED_MODULE_1__applicationFn_js__["b" /* createBasicProps */])(listThis.env, 'list-layer');
   var layerNextName = 'layer-' + nextLayer;
   props_layer.className += ' ' + layerNextName;
   if (listThis.env.styleObj[layerNextName]) {
@@ -8459,8 +8492,8 @@ function _refHandler(env, ref) {
 /* harmony export (immutable) */ __webpack_exports__["a"] = listRenderFn;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__dataObj_js__ = __webpack_require__(47);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__applicationFn_js__ = __webpack_require__(48);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__dataObj_js__ = __webpack_require__(48);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__applicationFn_js__ = __webpack_require__(34);
 
 
 
@@ -8471,9 +8504,12 @@ function listRenderFn(listThis, source, layerCounter) {
   var content = [];
   var hasChildren = 0 < infoObj.children.length ? true : false;
   var nextLayer = layerCounter + 1;
-  var props_item = Object(__WEBPACK_IMPORTED_MODULE_2__applicationFn_js__["a" /* createBasicProps */])(listThis.env, 'layer-item');
-  var props_content = Object(__WEBPACK_IMPORTED_MODULE_2__applicationFn_js__["a" /* createBasicProps */])(listThis.env, 'item-content');
-  var props_name = Object(__WEBPACK_IMPORTED_MODULE_2__applicationFn_js__["a" /* createBasicProps */])(listThis.env, 'content-name');
+  var props_item = Object(__WEBPACK_IMPORTED_MODULE_2__applicationFn_js__["b" /* createBasicProps */])(listThis.env, 'layer-item');
+  var props_content = Object(__WEBPACK_IMPORTED_MODULE_2__applicationFn_js__["b" /* createBasicProps */])(listThis.env, 'item-content');
+  props_content.onClick = function (event) {
+    _itemOnClickHandler(event, listThis, infoObj);
+  };
+  var props_name = Object(__WEBPACK_IMPORTED_MODULE_2__applicationFn_js__["b" /* createBasicProps */])(listThis.env, 'content-name');
   content.push(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
     'li',
     props_item,
@@ -8489,8 +8525,8 @@ function listRenderFn(listThis, source, layerCounter) {
     function () {
       var content_sublist = [];
       if (hasChildren) {
-        var props_sublist = Object(__WEBPACK_IMPORTED_MODULE_2__applicationFn_js__["a" /* createBasicProps */])(listThis.env, 'item-sublist');
-        var props_layer = Object(__WEBPACK_IMPORTED_MODULE_2__applicationFn_js__["a" /* createBasicProps */])(listThis.env, 'list-layer');
+        var props_sublist = Object(__WEBPACK_IMPORTED_MODULE_2__applicationFn_js__["b" /* createBasicProps */])(listThis.env, 'item-sublist');
+        var props_layer = Object(__WEBPACK_IMPORTED_MODULE_2__applicationFn_js__["b" /* createBasicProps */])(listThis.env, 'list-layer');
         var layerNextName = 'layer-' + nextLayer;
         props_layer.className += ' ' + layerNextName;
         if (listThis.env.styleObj[layerNextName]) {
@@ -8516,6 +8552,12 @@ function listRenderFn(listThis, source, layerCounter) {
     }()
   ));
   return content;
+}
+
+function _itemOnClickHandler(event, listThis, infoObj) {
+  event.stopPropagation();
+  listThis.env.itemOnClickFn(infoObj);
+  listThis.forceUpdate();
 }
 
 /***/ }),
@@ -10805,7 +10847,7 @@ function symbolObservablePonyfill(root) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__utils_PropTypes__ = __webpack_require__(52);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__utils_warning__ = __webpack_require__(34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__utils_warning__ = __webpack_require__(35);
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -11652,7 +11694,7 @@ function finalPropsSelectorFactory(dispatch, _ref2) {
 
 "use strict";
 /* unused harmony export default */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__utils_warning__ = __webpack_require__(34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__utils_warning__ = __webpack_require__(35);
 
 
 function verify(selector, methodName, displayName) {
@@ -13317,7 +13359,7 @@ var mainTitle = _react2.default.createElement(
     _react2.default.createElement(_reactFontawesome.FontAwesomeIcon, { icon: ['fab', 'npm'], fixedWidth: true })
   )
 );
-var mainDescriptionStr = 'List-maker tool. (Latest version: 1.1.3)';
+var mainDescriptionStr = 'List-maker tool. (Latest version: 1.2.1)';
 
 var installationTitle = 'INSTALLATION';
 var installationContent = _react2.default.createElement(
@@ -13353,7 +13395,7 @@ var nodeTreeContent = 'Here showing the node structure. Each node with className
 var nodeTreeNotice = 'Notice: The layer.index is counted base on 0.';
 
 var INSTALLATION_PRE = '$ npm install --save blacktbox-list\n\n// using ES6 modules\nimport BTBList from \'blacktbox-list\';\n\n// using CommonJS modules\nvar BTBList = require(\'blacktbox-list\');';
-var RENDER_PRE = '<BTBList \n  listArr= []\n  styleObj= {}\n  refFn= {()=>{}}\n/>';
+var RENDER_PRE = '<BTBList \n  listArr= []\n  styleObj= {}\n  refFn= {()=>{}}\n  itemOnClickFn = {()=>{}}\n/>';
 var LISTARR_PRE = 'listArr = [{\n  name: \'\',\n  children: [...]\n}, ...]';
 var SUBLISTARR_PRE = 'children = [{\n  name: \'\',\n  children: [...]\n}, ...]';
 var STYLEOBJ_PRE = 'styleObj = {\n  \'Node\'s className\': {CSS Object}\n  , ...\n}';
@@ -13370,7 +13412,7 @@ var PARAM_BODY = new Array({ name: 'listArr', type: 'Array', default: '[]', noti
     'pre',
     { className: 'content-pre' },
     STYLEOBJ_PRE
-  ) }, { name: 'refFn', type: 'Function', default: '(ref)=>{}', notice: 'To catch ref with (ref)=>{variable = ref}. (Only for stateful function)' });
+  ) }, { name: 'refFn', type: 'Function', default: '(ref)=>{}', notice: 'To catch ref with (ref)=>{variable = ref}. (Only for stateful function)' }, { name: 'itemOnClickFn', type: 'Function', default: '(eventObj)=>{}', notice: 'List entry\'s onClick function.' });
 var NODE_TREE = new Array({
   'name': '<div> .btb-list',
   'children': [{
@@ -13444,7 +13486,7 @@ var Basic = function Basic() {
       ),
       _react2.default.createElement(_blacktboxTable2.default, {
         tableHeadArr: PARAM_HEAD,
-        tableBobyArr: PARAM_BODY,
+        tableBodyArr: PARAM_BODY,
         modeObj: PARAM_MODE,
         className: 'content-paramlist'
       }),
@@ -13508,7 +13550,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 
 function mainRenderFn(tableThis) {
   var content = [];
-  var props_table = Object(__WEBPACK_IMPORTED_MODULE_1__applicationFn_js__["a" /* createBasicProps */])(tableThis.env, 'btb-table');
+  var props_table = Object(__WEBPACK_IMPORTED_MODULE_1__applicationFn_js__["b" /* createBasicProps */])(tableThis.env, 'btb-table');
   if (tableThis.props.className) {
     props_table.className += ' ' + tableThis.props.className;
   }
@@ -13545,7 +13587,7 @@ function _refHandler(env, ref) {
 /* harmony export (immutable) */ __webpack_exports__["a"] = infoRenderFn;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__dataObj_js__ = __webpack_require__(35);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__dataObj_js__ = __webpack_require__(36);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__applicationFn_js__ = __webpack_require__(21);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
@@ -13556,7 +13598,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 
 function infoRenderFn(tableThis) {
   var content = [];
-  var props_info = Object(__WEBPACK_IMPORTED_MODULE_2__applicationFn_js__["a" /* createBasicProps */])(tableThis.env, 'table-info');
+  var props_info = Object(__WEBPACK_IMPORTED_MODULE_2__applicationFn_js__["b" /* createBasicProps */])(tableThis.env, 'table-info');
   content.push(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
     'table',
     props_info,
@@ -13567,15 +13609,15 @@ function infoRenderFn(tableThis) {
 
 function infoBodyRenderFn(tableThis) {
   var content = [];
-  var dataArr = tableThis.env.tableBobyArr;
-  var props_tbody = Object(__WEBPACK_IMPORTED_MODULE_2__applicationFn_js__["a" /* createBasicProps */])(tableThis.env, 'info-tbody');
+  var dataArr = tableThis.env.tableBodyArr;
+  var props_tbody = Object(__WEBPACK_IMPORTED_MODULE_2__applicationFn_js__["b" /* createBasicProps */])(tableThis.env, 'info-tbody');
   content.push(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
     'tbody',
     props_tbody,
     tableThis.env.tableHeadArr.map(function (entry_head, entry_head_index) {
       var entry_th = new __WEBPACK_IMPORTED_MODULE_1__dataObj_js__["c" /* HeadObj */](entry_head);
       var content_tr = [];
-      var props_tr = Object(__WEBPACK_IMPORTED_MODULE_2__applicationFn_js__["a" /* createBasicProps */])(tableThis.env, 'tbody-tr');
+      var props_tr = Object(__WEBPACK_IMPORTED_MODULE_2__applicationFn_js__["b" /* createBasicProps */])(tableThis.env, 'tbody-tr');
       var trName = 'tr-' + entry_th.index;
       props_tr.className += ' ' + trName;
       if (tableThis.env.styleObj[trName]) {
@@ -13588,7 +13630,7 @@ function infoBodyRenderFn(tableThis) {
         props_tr,
         function () {
           var content_th = [];
-          var props_th = Object(__WEBPACK_IMPORTED_MODULE_2__applicationFn_js__["a" /* createBasicProps */])(tableThis.env, 'tr-th');
+          var props_th = Object(__WEBPACK_IMPORTED_MODULE_2__applicationFn_js__["b" /* createBasicProps */])(tableThis.env, 'tr-th');
           var thName = 'th-' + entry_th.index;
           props_th.className += ' ' + thName;
           if (tableThis.env.styleObj[thName]) {
@@ -13606,7 +13648,7 @@ function infoBodyRenderFn(tableThis) {
         dataArr.map(function (entry_body) {
           var entry_td = new __WEBPACK_IMPORTED_MODULE_1__dataObj_js__["a" /* BodyObj */](tableThis.env.tableHeadArr, entry_body);
           var content_td = [];
-          var props_td = Object(__WEBPACK_IMPORTED_MODULE_2__applicationFn_js__["a" /* createBasicProps */])(tableThis.env, 'tr-td');
+          var props_td = Object(__WEBPACK_IMPORTED_MODULE_2__applicationFn_js__["b" /* createBasicProps */])(tableThis.env, 'tr-td');
           var tdName = 'td-' + entry_th.index;
           props_td.className += ' ' + tdName;
           if (tableThis.env.styleObj[tdName]) {
@@ -13624,7 +13666,7 @@ function infoBodyRenderFn(tableThis) {
         function () {
           var content_noData = [];
           if (0 == entry_head_index && 0 == dataArr.length) {
-            var props_noData = Object(__WEBPACK_IMPORTED_MODULE_2__applicationFn_js__["a" /* createBasicProps */])(tableThis.env, 'tr-noData');
+            var props_noData = Object(__WEBPACK_IMPORTED_MODULE_2__applicationFn_js__["b" /* createBasicProps */])(tableThis.env, 'tr-noData');
             content_noData.push(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
               'td',
               _extends({}, props_noData, { rowSpan: tableThis.env.tableHeadArr.length }),
@@ -13648,7 +13690,7 @@ function infoBodyRenderFn(tableThis) {
 /* harmony export (immutable) */ __webpack_exports__["a"] = listRenderFn;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__dataObj_js__ = __webpack_require__(35);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__dataObj_js__ = __webpack_require__(36);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__applicationFn_js__ = __webpack_require__(21);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
@@ -13659,7 +13701,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 
 function listRenderFn(tableThis) {
   var content = [];
-  var props_list = Object(__WEBPACK_IMPORTED_MODULE_2__applicationFn_js__["a" /* createBasicProps */])(tableThis.env, 'table-list');
+  var props_list = Object(__WEBPACK_IMPORTED_MODULE_2__applicationFn_js__["b" /* createBasicProps */])(tableThis.env, 'table-list');
   content.push(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
     'table',
     props_list,
@@ -13671,8 +13713,8 @@ function listRenderFn(tableThis) {
 
 function listHeadRenderFn(tableThis) {
   var content = [];
-  var props_thead = Object(__WEBPACK_IMPORTED_MODULE_2__applicationFn_js__["a" /* createBasicProps */])(tableThis.env, 'list-thead');
-  var props_tr = Object(__WEBPACK_IMPORTED_MODULE_2__applicationFn_js__["a" /* createBasicProps */])(tableThis.env, 'thead-tr');
+  var props_thead = Object(__WEBPACK_IMPORTED_MODULE_2__applicationFn_js__["b" /* createBasicProps */])(tableThis.env, 'list-thead');
+  var props_tr = Object(__WEBPACK_IMPORTED_MODULE_2__applicationFn_js__["b" /* createBasicProps */])(tableThis.env, 'thead-tr');
   content.push(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
     'thead',
     props_thead,
@@ -13681,7 +13723,15 @@ function listHeadRenderFn(tableThis) {
       props_tr,
       tableThis.env.tableHeadArr.map(function (entry_head) {
         var entry_th = new __WEBPACK_IMPORTED_MODULE_1__dataObj_js__["c" /* HeadObj */](entry_head);
-        var props_th = Object(__WEBPACK_IMPORTED_MODULE_2__applicationFn_js__["a" /* createBasicProps */])(tableThis.env, 'tr-th');
+        var props_th = Object(__WEBPACK_IMPORTED_MODULE_2__applicationFn_js__["b" /* createBasicProps */])(tableThis.env, 'tr-th');
+        props_th.key += '-' + entry_th.index;
+        var thName = 'th-' + entry_th.index;
+        props_th.className += ' ' + thName;
+        if (tableThis.env.styleObj[thName]) {
+          Object.keys(tableThis.env.styleObj[thName]).map(function (config) {
+            props_th.style[config] = tableThis.env.styleObj[thName][config];
+          });
+        }
         return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           'th',
           props_th,
@@ -13695,23 +13745,30 @@ function listHeadRenderFn(tableThis) {
 
 function listBodyRenderFn(tableThis) {
   var content = [];
-  var reourceArr = Object(__WEBPACK_IMPORTED_MODULE_2__applicationFn_js__["d" /* resultFn */])(tableThis.searchStatusArr, tableThis.sortStatusArr, tableThis.env.tableBobyArr);
-  var dataArr = Object(__WEBPACK_IMPORTED_MODULE_2__applicationFn_js__["c" /* pagingFn */])(tableThis.env.modeObj.listFeaturePage, reourceArr);
-  var props_tbody = Object(__WEBPACK_IMPORTED_MODULE_2__applicationFn_js__["a" /* createBasicProps */])(tableThis.env, 'list-tbody');
+  var reourceArr = Object(__WEBPACK_IMPORTED_MODULE_2__applicationFn_js__["e" /* resultFn */])(tableThis.searchStatusArr, tableThis.sortStatusArr, tableThis.env.tableBodyArr);
+  var dataArr = Object(__WEBPACK_IMPORTED_MODULE_2__applicationFn_js__["d" /* pagingFn */])(tableThis.env.modeObj.listFeaturePage, reourceArr);
+  var props_tbody = Object(__WEBPACK_IMPORTED_MODULE_2__applicationFn_js__["b" /* createBasicProps */])(tableThis.env, 'list-tbody');
   content.push(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
     'tbody',
     props_tbody,
-    dataArr.map(function (entry_body) {
-      var entry_td = new __WEBPACK_IMPORTED_MODULE_1__dataObj_js__["a" /* BodyObj */](tableThis.env.tableHeadArr, entry_body);
+    dataArr.map(function (entry_body, bodyIndex) {
       var content_tr = [];
-      var props_tr = Object(__WEBPACK_IMPORTED_MODULE_2__applicationFn_js__["a" /* createBasicProps */])(tableThis.env, 'tbody-tr');
+      var props_tr = Object(__WEBPACK_IMPORTED_MODULE_2__applicationFn_js__["b" /* createBasicProps */])(tableThis.env, 'tbody-tr');
+      var trName = 'tr-' + bodyIndex;
+      props_tr.className += ' ' + trName;
+      if (tableThis.env.styleObj[trName]) {
+        Object.keys(tableThis.env.styleObj[trName]).map(function (config) {
+          props_tr.style[config] = tableThis.env.styleObj[trName][config];
+        });
+      }
+      var entry_td = new __WEBPACK_IMPORTED_MODULE_1__dataObj_js__["a" /* BodyObj */](tableThis.env.tableHeadArr, entry_body);
       content_tr.push(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'tr',
         props_tr,
         tableThis.env.tableHeadArr.map(function (entry_head) {
           var entry_th = new __WEBPACK_IMPORTED_MODULE_1__dataObj_js__["c" /* HeadObj */](entry_head);
           var content_td = [];
-          var props_td = Object(__WEBPACK_IMPORTED_MODULE_2__applicationFn_js__["a" /* createBasicProps */])(tableThis.env, 'tr-td');
+          var props_td = Object(__WEBPACK_IMPORTED_MODULE_2__applicationFn_js__["b" /* createBasicProps */])(tableThis.env, 'tr-td');
           var tdHeadName = 'td-' + entry_th.index;
           props_td.className += ' ' + tdHeadName;
           if (tableThis.env.styleObj[tdHeadName]) {
@@ -13732,11 +13789,16 @@ function listBodyRenderFn(tableThis) {
     function () {
       var content_noData = [];
       if (0 == dataArr.length) {
-        var props_noData = Object(__WEBPACK_IMPORTED_MODULE_2__applicationFn_js__["a" /* createBasicProps */])(tableThis.env, 'tr-noData');
+        var props_tr = Object(__WEBPACK_IMPORTED_MODULE_2__applicationFn_js__["b" /* createBasicProps */])(tableThis.env, 'tr-noData');
+        var props_td = Object(__WEBPACK_IMPORTED_MODULE_2__applicationFn_js__["b" /* createBasicProps */])(tableThis.env, 'td-noData');
         content_noData.push(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          'td',
-          _extends({}, props_noData, { colSpan: tableThis.env.tableHeadArr.length }),
-          tableThis.env.noDataMessage
+          'tr',
+          props_tr,
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'td',
+            _extends({}, props_td, { colSpan: tableThis.env.tableHeadArr.length }),
+            tableThis.env.noDataMessage
+          )
         ));
       }
       return content_noData;
@@ -13809,7 +13871,7 @@ var rourceCodeSubTitle_Render = 'Render';
 var rourceCodeSubTitle_List = 'List';
 var rourceCodeSubTitle_Style = 'Style';
 
-var ROURCECODE_RENDER_PRE = '<BTBList \n  listArr: listArr,\n  styleObj: styleObj,\n  refFn={(ref)=>{this.listRef=ref}}\n/>';
+var ROURCECODE_RENDER_PRE = '<BTBList \n  listArr: listArr\n  styleObj: styleObj\n  refFn={(ref)=>{this.listRef=ref}}\n  itemOnClickFn={this._itemOnClickFn}\n/>';
 var ROURCECODE_LIST_PRE = 'listArr = [\n{\n  \'name\': \'Tree: 1\',\n  \'children\': [\n  {\n    \'name\': \'Tree: 1-1\'\n  },\n  {\n    \'name\': \'Tree: 1-2\',\n    \'children\': [\n    {\n      \'name\': \'Tree: 1-2-1\'\n    },\n    {\n      \'name\': \'Tree: 1-2-2\'\n    }]\n  },\n  {\n    \'name\': \'Tree: 1-3\'\n  }]\n},\n{\n  \'name\': \'Tree: 2\',\n  \'children\': [\n  {\n    \'name\': \'Tree: 2-1\',\n    \'children\': [\n    {\n      \'name\': \'Tree: 2-1-1\',\n      \'children\': [\n      {\n        \'name\': \'Tree: 2-1-1-1\'\n      }]\n    }]\n  },\n  {\n    \'name\': \'Tree: 2-2\'\n  }]\n}];';
 var ROURCECODE_STYLE_PRE = 'styleObj = {\n  \'btb-list\': {\n    \'background-color\': \'#e6f7ff\',\n    \'font-weight\': \'bold\'\n  },\n  \'layer-item\': {\n    \'list-style-type\': \'none\'\n  },\n  \'layer-0\': {\n    \'color\': \'red\',\n    \'font-size\': \'16px\'\n  },\n  \'layer-1\': {\n    \'color\': \'purple\',\n    \'font-size\': \'14px\'\n  },\n  \'layer-2\': {\n    \'color\': \'blue\',\n    \'font-size\': \'12px\'\n  }\n};';
 
@@ -13915,7 +13977,8 @@ var Example = function (_Component) {
               styleObj: styleObj,
               refFn: function refFn(ref) {
                 _this2.listRef = ref;
-              }
+              },
+              itemOnClickFn: this._itemOnClickFn
             })
           ),
           _react2.default.createElement(
@@ -13985,6 +14048,13 @@ var Example = function (_Component) {
       return content;
     }
   }, {
+    key: '_itemOnClickFn',
+    value: function _itemOnClickFn(eventObj) {
+      /* eslint-disable no-console*/
+      console.log('clickEventObj', eventObj);
+      /* eslint-enable no-console*/
+    }
+  }, {
     key: '_consoleLogRef',
     value: function _consoleLogRef() {
       var listRef = _reactDom2.default.findDOMNode(this.listRef);
@@ -14045,7 +14115,7 @@ var mainTitle = _react2.default.createElement(
     _react2.default.createElement(_reactFontawesome.FontAwesomeIcon, { icon: ['fab', 'npm'], fixedWidth: true })
   )
 );
-var mainDescriptionStr = 'Table-maker tool. (Latest version: 0.3.1)';
+var mainDescriptionStr = 'Table-maker tool. (Latest version: 0.3.2)';
 
 var installationTitle = 'INSTALLATION';
 var installationContent = _react2.default.createElement(
@@ -14083,7 +14153,7 @@ var nodeTreeListTitle = 'Mode List:';
 var nodeTreeNotice = 'Notice: The th.index come from tableHeadArr.';
 
 var INSTALLATION_PRE = '$ npm install --save blacktbox-table\n\n// using ES6 modules\nimport BTBTable from \'blacktbox-table\';\n\n// using CommonJS modules\nvar BTBTable = require(\'blacktbox-table\');';
-var RENDER_PRE = '<BTBTable \n  tableHeadArr = []\n  tableBobyArr = []\n  modeObj: {\n    mode: \'list\',\n    listFeatureSearch: {\n        enable: false,\n        searchInputArr: [],\n        searchMatchRateTheshold: 1,\n        searchSpecAttributeEnable: false,\n        searchSpecAttributeArr: [\'\']\n      },\n    listFeaturePage: {\n      enable: false,\n      dataPerPage: 10,\n      pageIndex: 1\n    }\n  },\n  noDataMessage: \'\',\n  styleObj: {}\n  refFn: {()=>{}}\n/>';
+var RENDER_PRE = '<BTBTable \n  tableHeadArr = []\n  tableBodyArr = []\n  modeObj: {\n    mode: \'list\',\n    listFeatureSearch: {\n        enable: false,\n        searchInputArr: [],\n        searchMatchRateTheshold: 1,\n        searchSpecAttributeEnable: false,\n        searchSpecAttributeArr: [\'\']\n      },\n    listFeaturePage: {\n      enable: false,\n      dataPerPage: 10,\n      pageIndex: 1\n    }\n  },\n  noDataMessage: \'\',\n  styleObj: {}\n  refFn: {()=>{}}\n/>';
 // const TABLEHEADARR_PRE = 
 // `tableHeadArr = [{
 //   name: '',
@@ -14093,22 +14163,22 @@ var RENDER_PRE = '<BTBTable \n  tableHeadArr = []\n  tableBobyArr = []\n  modeOb
 //   defaultSortStatus: 'ascending'
 // }, ...]`;
 var TABLEHEADARR_PRE = 'tableHeadArr = [{\n  name: \'\',\n  index: \'\'\n}, ...]';
-var TABLEBODYARR_PRE = 'tableBobyArr = [\n  {tableHeadArr.index}: \'\'\n  , ...\n]';
+var TABLEBODYARR_PRE = 'tableBodyArr = [\n  {tableHeadArr.index}: \'\'\n  , ...\n]';
 var STYLEOBJ_PRE = 'styleObj = {\n  \'Node\'s className\': {CSS Object}\n  , ...\n}';
 var PARAM_HEAD = new Array({ name: 'Property Name', index: 'name' }, { name: 'Type', index: 'type' }, { name: 'Default', index: 'default' }, { name: 'Notice', index: 'notice' });
 var PARAM_BODY = new Array({ name: 'tableHeadArr', type: 'Array', default: '[]', notice: _react2.default.createElement(
     'pre',
     { className: 'content-pre' },
     TABLEHEADARR_PRE
-  ) }, { name: '- name', type: 'String or Node', default: '\'\', ()', notice: 'String or Node to show table head name.' }, { name: '- index', type: 'String', default: '\'\'', notice: 'index of tableBobyArr.index.' },
+  ) }, { name: '- name', type: 'String or Node', default: '\'\', ()', notice: 'String or Node to show table head name.' }, { name: '- index', type: 'String', default: '\'\'', notice: 'index of tableBodyArr.index.' },
 //   {name: '- sortType',          type: 'String',         default: '\'\'',    notice: `[Unsupported Yet] index\'s sort type. {value: custom, string, number, ip, mac}`},
 //   {name: '- sortFn',            type: 'Function',       default: '()=>{}',  notice: `[Unsupported Yet] define sort function while sortType is custom.`},
-//   {name: '- defaultSortStatus', type: 'String',         default: '\'\'',    notice: `[Unsupported Yet] String to index tableBobyArr['index'].`},
-{ name: 'tableBobyArr', type: 'Array', default: '[]', notice: _react2.default.createElement(
+//   {name: '- defaultSortStatus', type: 'String',         default: '\'\'',    notice: `[Unsupported Yet] String to index tableBodyArr['index'].`},
+{ name: 'tableBodyArr', type: 'Array', default: '[]', notice: _react2.default.createElement(
     'pre',
     { className: 'content-pre' },
     TABLEBODYARR_PRE
-  ) }, { name: 'modeObj', type: 'Object', default: '{}', notice: '' }, { name: '- mode', type: 'String', default: 'list', notice: 'mode of table. {value: info, list}' }, { name: '- listFeatureSearch', type: 'Object', default: '{}', notice: 'Feature for list mode.' }, { name: '- - enable', type: 'Boolean', default: 'false', notice: 'Enable searching feature' }, { name: '- - searchInputArr', type: 'Array', default: '[]', notice: 'Searched target splited to an array.' }, { name: '- - searchMatchRateTheshold', type: 'Float', default: '1', notice: 'Theshod of seached match rate which between 0-1.' }, { name: '- - searchSpecAttributeEnable', type: 'Boolean', default: 'false', notice: 'Enable to support search with specific attributes from tableBobyArr.' }, { name: '- - searchSpecAttributeArr', type: 'Array', default: '[]', notice: 'List of specific attributes from tableBobyArr.' },
+  ) }, { name: 'modeObj', type: 'Object', default: '{}', notice: '' }, { name: '- mode', type: 'String', default: 'list', notice: 'mode of table. {value: info, list}' }, { name: '- listFeatureSearch', type: 'Object', default: '{}', notice: 'Feature for list mode.' }, { name: '- - enable', type: 'Boolean', default: 'false', notice: 'Enable searching feature' }, { name: '- - searchInputArr', type: 'Array', default: '[]', notice: 'Searched target splited to an array.' }, { name: '- - searchMatchRateTheshold', type: 'Float', default: '1', notice: 'Theshod of seached match rate which between 0-1.' }, { name: '- - searchSpecAttributeEnable', type: 'Boolean', default: 'false', notice: 'Enable to support search with specific attributes from tableBodyArr.' }, { name: '- - searchSpecAttributeArr', type: 'Array', default: '[]', notice: 'List of specific attributes from tableBodyArr.' },
 //   {name: '- listFeatureSort',   type: 'Object',         default: '{}',      notice: `[Unsupported Yet] Table in list mode can show result with sort's parameters.`},
 //   {name: '- - enable',          type: 'Boolean',        default: 'false',   notice: `[Unsupported Yet] Enable sort feature for table in list mode.`},
 //   {name: '- - defaultSortHead', type: 'String',         default: '\'\'',    notice: `[Unsupported Yet] Default active head to sort table.`},
@@ -14140,9 +14210,9 @@ var NODE_TREE_INFO = new Array({
 var NODE_TREE_LIST = new Array({
   'name': '<div> .btb-table',
   'children': [{
-    'name': '<table> .table-info',
+    'name': '<table> .table-list',
     'children': [{
-      'name': '<thead> .info-thead',
+      'name': '<thead> .list-thead',
       'children': [{
         'name': '<tr> .thead-tr',
         'children': [{
@@ -14150,7 +14220,7 @@ var NODE_TREE_LIST = new Array({
         }]
       }]
     }, {
-      'name': '<tbody> .info-tbody',
+      'name': '<tbody> .list-tbody',
       'children': [{
         'name': '<tr> .tbody-tr',
         'children': [{
@@ -14215,7 +14285,7 @@ var Basic = function Basic() {
       ),
       _react2.default.createElement(_blacktboxTable2.default, {
         tableHeadArr: PARAM_HEAD,
-        tableBobyArr: PARAM_BODY,
+        tableBodyArr: PARAM_BODY,
         modeObj: PARAM_MODE,
         className: 'content-paramlist'
       }),
@@ -14330,7 +14400,7 @@ var mainTitle = _react2.default.createElement(
     _react2.default.createElement(_reactFontawesome.FontAwesomeIcon, { icon: ['fab', 'npm'], fixedWidth: true })
   )
 );
-var mainDescriptionStr = 'Example - Info';
+var mainDescriptionStr = 'Example - List';
 
 var exampleTitle = 'EXAMPLE';
 var exampleButtonText = 'Show listRef to console.log';
@@ -14343,7 +14413,7 @@ var rourceCodeSubTitle_Msg = 'Message for no data';
 var rourceCodeSubTitle_Mode = 'mode';
 var rourceCodeSubTitle_Style = 'Style';
 
-var ROURCECODE_RENDER_PRE = '<BTBTable \n  tableHeadArr={tableHeaderArr}\n  tableBobyArr={tableBodyArr}\n  modeObj={modeObj}\n  noDataMessage={noDataStr}\n  styleObj={styleObj}\n  refFn={(ref)=>{this.listRef=ref}}\n/>';
+var ROURCECODE_RENDER_PRE = '<BTBTable \n  tableHeadArr={tableHeaderArr}\n  tableBodyArr={tableBodyArr}\n  modeObj={modeObj}\n  noDataMessage={noDataStr}\n  styleObj={styleObj}\n  refFn={(ref)=>{this.listRef=ref}}\n/>';
 var ROURCECODE_HEADER_PRE = 'tableHeaderArr = [\n  {name: \'Name\',              index: \'name\',     },\n  {name: \'Type\',              index: \'devType\',  },\n  {name: \'OS\',                index: \'osType\',   },\n  {name: \'IP\',                index: \'ipAddr\',   },\n  {name: \'MAC\',               index: \'macAddr\',  },\n  {name: \'Traffic(tx / rx)\',  index: \'traffic\',  },\n  {name: \'Statue\',            index: \'statusDesc\'}\n];';
 var ROURCECODE_BODY_PRE = 'tableBodyArr = [\n  {name: \'Device 1\',  devType: \'phone\',   osType: \'ios\',      ipAddr: \'192.168.0.50\',   macAddr: \'B4:A2:07:44:55:2A\', traffic: \'0 MB / 0 KB\',     status: 0, statusDesc: \'Disconnected\'},\n  {name: \'Device 2\',  devType: \'switch\',  osType: \'linux\',    ipAddr: \'192.168.0.37\',   macAddr: \'7E:EF:02:44:AE:25\', traffic: \'2.7 MB / 263 KB\', status: 1, statusDesc: \'Connected\'},\n  {name: \'Device 3\',  devType: \'ap\',      osType: \'linux\',    ipAddr: \'192.168.0.121\',  macAddr: \'EF:2B:15:44:32:B4\', traffic: \'0 MB / 0 KB\',     status: 2, statusDesc: \'Locked\'},\n  {name: \'Device 4\',  devType: \'phone\',   osType: \'android\',  ipAddr: \'192.168.0.9\',    macAddr: \'F5:22:33:44:55:35\', traffic: \'0 MB / 0 KB\',     status: 0, statusDesc: \'Disconnected\'},\n  {name: \'Device 5\',  devType: \'ap\',      osType: \'linux\',    ipAddr: \'192.168.0.27\',   macAddr: \'7E:EF:B2:44:28:3B\', traffic: \'1.3 MB / 725 KB\', status: 1, statusDesc: \'Connected\'},\n  {name: \'Device 6\',  devType: \'pc\',      osType: \'windows\',  ipAddr: \'192.168.0.11\',   macAddr: \'11:22:24:44:5E:90\', traffic: \'0 MB / 0 KB\',     status: 2, statusDesc: \'Locked\'},\n  {name: \'Device 7\',  devType: \'phone\',   osType: \'ios\',      ipAddr: \'192.168.0.6\',    macAddr: \'11:FF:33:44:55:A3\', traffic: \'1.2 MB / 45 KB\',  status: 1, statusDesc: \'Connected\'},\n  {name: \'Device 8\',  devType: \'pc\',      osType: \'linux\',    ipAddr: \'192.168.0.3\',    macAddr: \'B2:FE:B8:44:55:6D\', traffic: \'4.8 MB / 3.7 MB\', status: 1, statusDesc: \'Connected\'},\n  {name: \'Device 9\',  devType: \'pc\',      osType: \'windows\',  ipAddr: \'192.168.0.18\',   macAddr: \'E4:AA:74:44:38:E1\', traffic: \'0 MB / 0 KB\',     status: 2, statusDesc: \'Locked\'},\n  {name: \'Device 10\', devType: \'switch\',  osType: \'linux\',    ipAddr: \'192.168.0.245\',  macAddr: \'E2:BA:33:44:48:AB\', traffic: \'0 MB / 0 KB\',     status: 0, statusDesc: \'Disconnected\'},\n  {name: \'Device 11\', devType: \'ap\',      osType: \'linux\',    ipAddr: \'192.168.0.210\',  macAddr: \'2A:FE:7A:27:38:27\', traffic: \'0 MB / 0 KB\',     status: 0, statusDesc: \'Disconnected\'},\n  {name: \'Device 12\', devType: \'phone\',   osType: \'android\',  ipAddr: \'192.168.0.163\',  macAddr: \'FE:22:9B:44:26:08\', traffic: \'0 MB / 0 KB\',     status: 2, statusDesc: \'Locked\'},\n  {name: \'Device 13\', devType: \'phone\',   osType: \'android\',  ipAddr: \'192.168.0.84\',   macAddr: \'B4:22:27:44:55:B2\', traffic: \'1.5 MB / 235 KB\', status: 1, statusDesc: \'Connected\'}\n];';
 var ROURCECODE_MSG_PRE = 'noDataStr = \'No data.\';';
@@ -14461,7 +14531,7 @@ var Example = function (_Component) {
             this.searchConfigRender(),
             _react2.default.createElement(_blacktboxTable2.default, {
               tableHeadArr: tableHeaderArr,
-              tableBobyArr: tableBodyArr,
+              tableBodyArr: tableBodyArr,
               modeObj: modeObj,
               noDataMessage: noDataStr,
               styleObj: styleObj,
@@ -14850,13 +14920,13 @@ var rourceCodeSubTitle_Body = 'Body';
 var rourceCodeSubTitle_Mode = 'mode';
 var rourceCodeSubTitle_Style = 'Style';
 
-var ROURCECODE_RENDER_PRE = '<BTBTable \n  tableHeadArr={tableHeaderArr}\n  tableBobyArr={tableBodyArr}\n  modeObj={modeObj}\n  styleObj={styleObj}\n  refFn={(ref)=>{this.infoRef=ref}}\n/>';
-var ROURCECODE_HEADER_PRE = 'tableHeaderArr = [\n  {name: \'Name\',        index: \'name\'},\n  {name: \'Description\', index: \'desc\'},\n  {name: \'OS Type\',     index: \'osType\'},\n  {name: \'IP Address\',  index: \'ipAddr\'},\n  {name: \'MAC Address\', index: \'macAddr\'},\n  {name: \'Statue\',      index: \'status\'}\n];';
+var ROURCECODE_RENDER_PRE = '<BTBTable \n  tableHeadArr={tableHeadArr}\n  tableBodyArr={tableBodyArr}\n  modeObj={modeObj}\n  styleObj={styleObj}\n  refFn={(ref)=>{this.infoRef=ref}}\n/>';
+var ROURCECODE_HEADER_PRE = 'tableHeadArr = [\n  {name: \'Name\',        index: \'name\'},\n  {name: \'Description\', index: \'desc\'},\n  {name: \'OS Type\',     index: \'osType\'},\n  {name: \'IP Address\',  index: \'ipAddr\'},\n  {name: \'MAC Address\', index: \'macAddr\'},\n  {name: \'Statue\',      index: \'status\'}\n];';
 var ROURCECODE_BODY_PRE = 'tableBodyArr = [\n  {\n    name: \'Device 1\',  \n    devType: \'phone\',   \n    osType: \'ios\',      \n    ipAddr: \'192.168.0.50\',   \n    macAddr: \'B4:A2:07:44:55:2A\', \n    traffic: \'1.7 MB / 45 KB\', \n    status: 0, \n    statusDesc: \'Disconnected\'\n  },\n  {\n    name: \'Device 2\',  \n    devType: \'notebook\',   \n    osType: \'windows\',      \n    ipAddr: \'192.168.0.52\',   \n    macAddr: \'B4:A2:07:44:DD:FF\', \n    traffic: \'4.8 MB / 27 KB\', \n    status: 0, \n    statusDesc: \'Disconnected\'\n  }\n];';
 var ROURCECODE_MODE_PRE = 'modeObj = {\n  mode : \'info\'\n};';
 var ROURCECODE_STYLE_PRE = 'styleObj = {\n  \'btb-table\': {\n    \'text-align\': \'center\'\n  },\n  \'table-info\': {\n    \'margin\': \'auto\',\n    \'box-shadow\': \'2px 2px 4px 2px #aaa\'\n  },\n  \'tr-th\': {\n    \'background-color\': \'#bae7ff\',\n    \'padding\': \'2px 5px\'\n  },\n  \'tr-td\': {\n    \'padding\': \'2px 10px\'\n  },\n  \'tr-name\': {\n    \'font-weight\': \'bold\'\n  },\n  \'td-ipAddr\': {\n    \'color\': \'blue\',\n    \'text-decoration\': \'underline\'\n  }\n};';
 
-var tableHeaderArr = [{ name: 'Name', index: 'name' }, { name: 'Type', index: 'devType' }, { name: 'OS', index: 'osType' }, { name: 'IP Address', index: 'ipAddr' }, { name: 'MAC Address', index: 'macAddr' }, { name: 'Traffic(tx / rx)', index: 'traffic' }, { name: 'Statue', index: 'statusDesc' }];
+var tableHeadArr = [{ name: 'Name', index: 'name' }, { name: 'Type', index: 'devType' }, { name: 'OS', index: 'osType' }, { name: 'IP Address', index: 'ipAddr' }, { name: 'MAC Address', index: 'macAddr' }, { name: 'Traffic(tx / rx)', index: 'traffic' }, { name: 'Statue', index: 'statusDesc' }];
 var tableBodyArr = [{ name: 'Device 1', devType: 'phone', osType: 'ios', ipAddr: '192.168.0.50', macAddr: 'B4:A2:07:44:55:2A', traffic: '1.7 MB / 45 KB', status: 0, statusDesc: 'Disconnected' }, { name: 'Device 2', devType: 'notebook', osType: 'windows', ipAddr: '192.168.0.52', macAddr: 'B4:A2:07:44:DD:FF', traffic: '4.8 MB / 27 KB', status: 0, statusDesc: 'Disconnected' }];
 var modeObj = {
   mode: 'info'
@@ -14928,8 +14998,8 @@ var Example = function (_Component) {
             _articleLayout2.default.Content,
             null,
             _react2.default.createElement(_blacktboxTable2.default, {
-              tableHeadArr: tableHeaderArr,
-              tableBobyArr: tableBodyArr,
+              tableHeadArr: tableHeadArr,
+              tableBodyArr: tableBodyArr,
               modeObj: modeObj,
               styleObj: styleObj,
               refFn: function refFn(ref) {
@@ -15092,7 +15162,7 @@ var mainTitle = _react2.default.createElement(
     _react2.default.createElement(_reactFontawesome.FontAwesomeIcon, { icon: ['fab', 'npm'], fixedWidth: true })
   )
 );
-var mainDescriptionStr = 'Menu-maker tool. (Latest version: 1.1.3)';
+var mainDescriptionStr = 'Menu-maker tool. (Latest version: 1.1.4)';
 
 var installationTitle = 'INSTALLATION';
 var installationContent = _react2.default.createElement(
@@ -15234,7 +15304,7 @@ var Basic = function Basic() {
       ),
       _react2.default.createElement(_blacktboxTable2.default, {
         tableHeadArr: PARAM_HEAD,
-        tableBobyArr: PARAM_BODY,
+        tableBodyArr: PARAM_BODY,
         modeObj: PARAM_MODE,
         className: 'content-paramlist'
       }),
@@ -15300,7 +15370,7 @@ var _reactDom2 = _interopRequireDefault(_reactDom);
 
 var _reactFontawesome = __webpack_require__(1);
 
-var _blacktboxMenu = __webpack_require__(46);
+var _blacktboxMenu = __webpack_require__(47);
 
 var _blacktboxMenu2 = _interopRequireDefault(_blacktboxMenu);
 
