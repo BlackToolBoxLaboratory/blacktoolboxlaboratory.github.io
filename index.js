@@ -15436,7 +15436,7 @@ var mainTitle = _react2.default.createElement(
     _react2.default.createElement(_reactFontawesome.FontAwesomeIcon, { icon: ['fab', 'npm'], fixedWidth: true })
   )
 );
-var mainDescriptionStr = 'Menu-maker tool. (Latest version: 1.1.4)';
+var mainDescriptionStr = 'Menu-maker tool. (Latest version: 1.1.3)';
 
 var installationTitle = 'INSTALLATION';
 var installationContent = _react2.default.createElement(
