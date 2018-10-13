@@ -15203,10 +15203,7 @@ var ROURCECODE_MODE_PRE = 'modeObj = {\n  mode : \'info\'\n};';
 var ROURCECODE_STYLE_PRE = 'styleObj = {\n  \'btb-table\': {\n    \'text-align\': \'center\'\n  },\n  \'table-info\': {\n    \'margin\': \'auto\',\n    \'box-shadow\': \'2px 2px 4px 2px #aaa\'\n  },\n  \'tr-th\': {\n    \'background-color\': \'#bae7ff\',\n    \'padding\': \'2px 5px\'\n  },\n  \'tr-td\': {\n    \'padding\': \'2px 10px\'\n  },\n  \'tr-name\': {\n    \'font-weight\': \'bold\'\n  },\n  \'td-ipAddr\': {\n    \'color\': \'blue\',\n    \'text-decoration\': \'underline\'\n  }\n};';
 
 var tableHeadArr = [{ name: 'Name', index: 'name' }, { name: 'Type', index: 'devType' }, { name: 'OS', index: 'osType' }, { name: 'IP Address', index: 'ipAddr' }, { name: 'MAC Address', index: 'macAddr' }, { name: 'Traffic(tx / rx)', index: 'traffic' }, { name: 'Statue', index: 'statusDesc' }];
-// const tableBodyArr = [
-//   {name : 'Device 1',  devType : 'phone',   osType : 'ios',      ipAddr : '192.168.0.50',   macAddr : 'B4:A2:07:44:55:2A', traffic : '1.7 MB / 45 KB', status : 0, statusDesc : 'Disconnected'},
-//   {name : 'Device 2',  devType : 'notebook',   osType : 'windows',      ipAddr : '192.168.0.52',   macAddr : 'B4:A2:07:44:DD:FF', traffic : '4.8 MB / 27 KB', status : 0, statusDesc : 'Disconnected'}
-// ];
+var tableBodyArr = [{ name: 'Device 1', devType: 'phone', osType: 'ios', ipAddr: '192.168.0.50', macAddr: 'B4:A2:07:44:55:2A', traffic: '1.7 MB / 45 KB', status: 0, statusDesc: 'Disconnected' }, { name: 'Device 2', devType: 'notebook', osType: 'windows', ipAddr: '192.168.0.52', macAddr: 'B4:A2:07:44:DD:FF', traffic: '4.8 MB / 27 KB', status: 0, statusDesc: 'Disconnected' }];
 var modeObj = {
   mode: 'info'
 };
@@ -15278,7 +15275,7 @@ var Example = function (_Component) {
             null,
             _react2.default.createElement(_blacktboxTable2.default, {
               tableHeadArr: tableHeadArr,
-              tableBodyArr: [],
+              tableBodyArr: tableBodyArr,
               modeObj: modeObj,
               styleObj: styleObj,
               refFn: function refFn(ref) {
