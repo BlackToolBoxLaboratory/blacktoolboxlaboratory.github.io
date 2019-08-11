@@ -3516,7 +3516,7 @@ if(false) {
 	// When the styles change, update the <style> tags
 	if(!content.locals) {
 		module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/postcss-loader/lib/index.js??ref--2-2!../../node_modules/less-loader/dist/cjs.js!./index.less", function() {
-			var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/postcss-loader/lib/index.js??ref--2-2!../../node_modules/less-loader/dist/cjs.js!./index.less");
+			var newContent = require("node_modules/css-loader/node_modules/postcss-loader/lib/node_modules/less-loader/dist/cjs.js!./index.less");
 			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 			update(newContent);
 		});
