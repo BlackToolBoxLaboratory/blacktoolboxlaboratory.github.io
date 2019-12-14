@@ -53,7 +53,7 @@
             Go to the page
           </div>
         </div>
-        <div class="product_block block-react">
+        <div id="redirect_react" class="product_block block-react">
           <img class="block_image" src="./img/BTB_React.png">
           <h3 class="block_title">
             React
@@ -96,6 +96,9 @@
     <script type="text/javascript" src="./libs/jquery/jquery.min.js"></script>
     <script>
       function loadEvent () {
+        $("#redirect_react").click(function(){
+          window.open('https://blacktoolboxlaboratory.github.io/react/v1/')
+        })
       };
       $(document).ready(function(){
         loadEvent();
