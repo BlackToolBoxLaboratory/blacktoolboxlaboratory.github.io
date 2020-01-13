@@ -6,26 +6,18 @@ const config = [
 ];
 
 function loadLanguage(currentlang) {
-  var recordLang = '';
-  var recordDictionary = {};
-  if(recordLang !== currentlang) {
-    let obj = new XMLHttpRequest();
-    obj.overrideMimeType('application/json');
-    obj.open('GET', location.origin + location.pathname +'/languages/'+ currentlang +'.json', true);
-    obj.onreadystatechange = function () {
-      if ((4 == obj.readyState)
-          && ('200' == obj.status)
-      )
-      {
-        console.log('test',obj.responseText)
-      }
-    };
-    obj.send(function(entry) {
-      console.log('back',entry)
-    });
-  } else {
-    return recordDictionary;
-  }
+  let obj = new XMLHttpRequest();
+  obj.overrideMimeType('application/json');
+  obj.open('GET', location.origin + location.pathname +'/languages/'+ currentlang +'.json', true);
+  obj.onreadystatechange = function () {
+    if ((4 == obj.readyState)
+        && ('200' == obj.status)
+    )
+    {
+      return obj.responseText;
+    }
+  };
+  obj.send();
 }
 
 globalThis['blacktoolbox-prototype-languages'].initializer(config);
@@ -37,16 +29,3 @@ function test() {
 }
 
 console.log(BTBLang.translate('test'))
-
-// let obj = new XMLHttpRequest();
-// obj.overrideMimeType('application/json');
-// obj.open('GET', `${location.origin}/frontendInfo.json`, true);
-// obj.onreadystatechange = function () {
-//   if ((4 == obj.readyState)
-//       && ('200' == obj.status)
-//   )
-//   {
-//     callback(JSON.parse(obj.responseText));
-//   }
-// };
-// obj.send(null);
