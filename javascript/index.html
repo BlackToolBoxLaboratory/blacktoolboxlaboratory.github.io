@@ -43,7 +43,13 @@
           For JavaScript
         </div>
       </div>
-      <div id="menu_trigger" class="header_menu font-xl margin-sm">
+      <div id="homepage_opener" class="header_menu font-xl margin-sm" onclick="openHomepage()">
+        <i class="fas fa-home fa-fw"></i>
+      </div>
+      <div id="language_selector" class="header_menu font-xl margin-sm" onclick="openLangSeletor()">
+        <i class="fas fa-globe fa-fw"></i>
+      </div>
+      <div id="menu_trigger" class="header_menu font-xl margin-sm" onclick="triggerMenu()">
         <i class="fas fa-bars fa-fw"></i>
       </div>
     </header>
@@ -53,8 +59,9 @@
       <aside id="menu_container" class="body_aside padding-y-lg"></aside>
     </div>
 
-
+    <script type="text/javascript" src="./libs/prototype-languages/index.min.js"></script>
     <script type="text/javascript" src="./libs/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="./plugins/prototype-languages.js"></script>
     <script>
       const routeMap = [
         {
@@ -118,7 +125,7 @@
             var paddingLeft = layer*16;
             var classActive = (REG_HASH.exec(window.location.hash) && entry.path === REG_HASH.exec(window.location.hash)[1])? 'route-active' : '';
             route += "<li class=\"layer_container\">";
-              if(entry.children && entry.children.length > 0)
+              if(entry.children)
               {
                 route += "<div class=\"container_route route-submenu padding-y-sm\" >";
                 route += "<div class=\"route_title\" style=\"padding-left:"+paddingLeft+"px\">"+entry.title+"</div>";
@@ -148,7 +155,12 @@
           if(source[i].path === path) {
             return source[i];
           } else if (path.search(source[i].path)===0) {
-            return searchRouteRecursive(path, source[i].children);
+            if(source[i].children && source[i].children>0)
+            {
+              return searchRouteRecursive(path, source[i].children);
+            } else {
+              return {};
+            }
           }
         }
         return {};
@@ -162,15 +174,20 @@
           redirectURL(REG_HASH.exec(target.location.hash)[1]);
         }
       }
-      function loadEvent () {
-        $("#menu_trigger").click(function(){
+      function openHomepage() {
+        window.open("https://blacktoolboxlaboratory.github.io/")
+      }
+      function openLangSeletor() {
+        
+      }
+      function triggerMenu() {
           if($("#body").hasClass("menu-hidden")) {
             $("#body").removeClass("menu-hidden");
           } else {
             $("#body").addClass("menu-hidden");
           }
-        });
-
+      }
+      function loadEvent () {
         window.onhashchange=function(event){
           configHashRouter(event.target);
         }
