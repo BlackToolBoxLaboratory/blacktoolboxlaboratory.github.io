@@ -11,7 +11,7 @@ function loadLanguage(currentlang) {
   if(recordLang !== currentlang) {
     let obj = new XMLHttpRequest();
     obj.overrideMimeType('application/json');
-    obj.open('GET', location.origin+'/languages/'+ currentlang +'.json', true);
+    obj.open('GET', location.origin + location.pathname +'/languages/'+ currentlang +'.json', true);
     obj.onreadystatechange = function () {
       if ((4 == obj.readyState)
           && ('200' == obj.status)
