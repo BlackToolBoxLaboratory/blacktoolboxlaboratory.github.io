@@ -17,7 +17,6 @@ function loadLanguage(currentlang) {
           && ('200' == obj.status)
       )
       {
-        callback(JSON.parse(obj.responseText));
         console.log('test',obj.responseText)
       }
     };

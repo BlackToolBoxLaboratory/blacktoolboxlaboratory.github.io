@@ -43,7 +43,7 @@
           For JavaScript
         </div>
       </div>
-      <div id="homepage_opener" class="header_menu font-xl margin-sm" onclick="openHomepage()">
+      <div id="homepage_opener" class="header_menu font-xl margin-sm" onclick="redirectHomepage()">
         <i class="fas fa-home fa-fw"></i>
       </div>
       <div id="language_selector" class="header_menu font-xl margin-sm" onclick="openLangSeletor()">
@@ -100,22 +100,6 @@
         menu += renderMenuRecursive(0,routeMap);
         menu += "</div>"
         $("#menu_container").html(menu);
-
-        $(".container_route.route-submenu").click(function() {
-          var target_collapse = $($(this).children(".route_collapsed"));
-          var target_layer = $(this).siblings(".menu_layer")
-          if(target_collapse.hasClass("collapsed-on")) {
-            target_collapse.removeClass("collapsed-on");
-            target_layer.stop().slideDown();
-          } else {
-            target_collapse.addClass("collapsed-on");
-            target_layer.stop().slideUp();
-          }
-        });
-
-        $(".container_route.route-endNode").click(function() {
-          window.location.hash = "#"+ this.getAttribute("path");
-        });
       }
       function renderMenuRecursive (layer, map) {
         var route = "";
@@ -127,13 +111,13 @@
             route += "<li class=\"layer_container\">";
               if(entry.children)
               {
-                route += "<div class=\"container_route route-submenu padding-y-sm\" >";
+                route += "<div id=\""+entry.id+"\" class=\"container_route route-submenu padding-y-sm\" onclick=\"triggerMenu('"+entry.id+"')\">";
                 route += "<div class=\"route_title\" style=\"padding-left:"+paddingLeft+"px\">"+entry.title+"</div>";
                 route += "<div class=\"route_collapsed transition-transform\"><i class=\"fas fa-caret-down fa-fw\"></i></div>";
                 route += "</div>";
                 route += renderMenuRecursive(layer+1, entry.children);
               } else {
-                route += "<div id=\""+entry.id+"\" class=\"container_route route-endNode padding-y-sm\" path=\""+ entry.path +"\">";
+                route += "<div id=\""+entry.id+"\" class=\"container_route route-endNode padding-y-sm\" onclick=\"redirectHash('"+entry.path+"')\">";
                 route += "<div class=\"route_title\" style=\"padding-left:"+paddingLeft+"px\">"+entry.title+"</div>";
                 route += "</div>";
               }
@@ -155,15 +139,39 @@
           if(source[i].path === path) {
             return source[i];
           } else if (path.search(source[i].path)===0) {
-            if(source[i].children && source[i].children>0)
+            if(source[i].children && source[i].children.length>0)
             {
               return searchRouteRecursive(path, source[i].children);
             } else {
-              return {};
+              return source[i];
             }
           }
         }
         return {};
+      }
+      function triggerMenu(id, state) {
+        var target_collapse = $($('#'+id).children(".route_collapsed"));
+        var target_layer = $('#'+id).siblings(".menu_layer");
+        switch(state) {
+          case "off":
+            target_collapse.removeClass("collapsed-on");
+            target_layer.stop().slideDown();
+            break;
+          case "on":
+            target_collapse.addClass("collapsed-on");
+            target_layer.stop().slideUp();
+            break;
+          default:
+            if(target_collapse.hasClass("collapsed-on")) {
+              triggerMenu(id, 'on');
+            } else {
+              triggerMenu(id, 'off');
+            }
+            break;
+        }
+      }
+      function redirectHash(path) {
+        window.location.hash = "#"+ path;
       }
       function configHashRouter(target) {
         if(!target.location.hash)
@@ -174,22 +182,35 @@
           redirectURL(REG_HASH.exec(target.location.hash)[1]);
         }
       }
-      function openHomepage() {
-        window.open("https://blacktoolboxlaboratory.github.io/")
+      function redirectHomepage() {
+        location.href = location.origin + location.pathname;
       }
       function openLangSeletor() {
         
       }
-      function triggerMenu() {
-          if($("#body").hasClass("menu-hidden")) {
-            $("#body").removeClass("menu-hidden");
-          } else {
+      function triggerMenu(state) {
+        switch(state) {
+          case 'hide':
             $("#body").addClass("menu-hidden");
-          }
+            break;
+          case 'show':
+            $("#body").removeClass("menu-hidden");
+            break;
+          default:
+            if($("#body").hasClass("menu-hidden")) {
+              triggerMenu('show');
+            } else {
+              triggerMenu('hide');
+            }
+            break;
+        }
       }
       function loadEvent () {
         window.onhashchange=function(event){
           configHashRouter(event.target);
+          if(window.innerWidth < SIZE_MD) {
+            triggerMenu('hide');
+          }
         }
       };
 
