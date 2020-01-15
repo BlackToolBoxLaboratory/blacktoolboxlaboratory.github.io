@@ -1,9 +1,13 @@
 window.BTBLang = new globalThis['blacktoolbox-prototype-languages'].default;
 
 const config = [
-  { index: 'en_US', label: 'English', dictionary: loadLanguage('en_US') },
-  { index: 'zh_TW', label: '繁體中文', dictionary: loadLanguage('zh_TW') },
+  { index: 'en_US', label: 'English', dictionary: {} },
+  { index: 'zh_TW', label: '繁體中文', dictionary: {} },
 ];
+
+config.forEach(function(entry){
+  entry.dictionary = loadLanguage(entry.index);
+})
 
 function loadLanguage(currentlang) {
   let obj = new XMLHttpRequest();
@@ -21,11 +25,5 @@ function loadLanguage(currentlang) {
 }
 
 globalThis['blacktoolbox-prototype-languages'].initializer(config);
-
-console.log(BTBLang)
-
-function test() {
-  console.log('123')
-}
 
 console.log(BTBLang.translate('test'))
