@@ -1,3 +1,8 @@
 {
-  "test": "測試"
+  "route": {
+    "about": "關於本站",
+    "packages": "套件",
+    "languages": "多語言切換器",
+    "validator": "變數驗證器"
+  }
 }
