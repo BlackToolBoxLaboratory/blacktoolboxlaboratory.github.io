@@ -28,10 +28,53 @@
   </head>
   <body id="about" class="page">
     <div class="page_container">
-      <h1>@Blacktoolbox/Prototype-Languages</h1>
+      <div class="page_head">
+        <h1 class="page_title">Languages</h1>
+        <a class="head_linkBtn linkBtn-github" href="https://github.com/BlackToolBoxLaboratory/prototype-languages" target="_blank">
+          <i class="fab fa-github fa-fw"></i>
+        </a>
+        <a class="head_linkBtn linkBtn-npm" href="https://www.npmjs.com/package/@blacktoolbox/prototype-languages" target="_blank">
+          <i class="fab fa-npm fa-fw"></i>
+        </a>
+      </div>
+      <section class="page_section">
+        <div class="section_title">
+          <div class="page_version">Version: 1.1.0</div>
+          <div class="page_releaseDate">Release Date: July. 13, 2019</div>
+        </div>
+        <div class="section_container container-description">
+          For developing the web-side of international services, we usually have the requirement to develop with the feature of multiple-languages supported. We already have a lot of masterpice such like i18n. But here we created our own multiple-languages package for lowing down the dependencies. And after adding a little code, we can apply it with other javascript frameworks like React.js, Vue.js ... and so on.
+        </div>
+      </section>
+      <section class="page_section">
+        <div class="section_title">INSTALLATION</div>
+        <div class="section_container">
+<pre class="section_pre">
+$ npm install --save @blacktoolbox/prototype-languages
+
+<code class="pre_notice">// using ES6 modules</code>
+import Language, { initializer } from '@blacktoolbox/prototype-languages';
+
+<code class="pre_notice">// using CommonJS modules</code>
+var Language= require('@blacktoolbox/prototype-languages');
+var initializer = require('@blacktoolbox/prototype-languages').initializer;
+
+<code class="pre_notice">// using in HTML directly</code>
+&lt;script type="text/javascript" src="./libs/prototype-languages/index.min.js"&gt;&lt;/script&gt;
+globalThis['blacktoolbox-prototype-languages'].default;
+globalThis['blacktoolbox-prototype-languages'].initializer;
+</pre>
+        </div>
+      </section>
+      <section class="page_section">
+        <div class="section_title">APPLICATION</div>
+      </section>
     </div>
 
     <div class="page_footNav">
+      <a class="footNav_linkBtn linkBtn-paypal" href="https://www.paypal.me/vannoel0628" target="_blank">
+        <i class="fab fa-paypal fa-fw"></i>
+      </a>
       <a class="footNav_linkBtn linkBtn-github" href="https://github.com/BlackToolBoxLaboratory" target="_blank">
         <i class="fab fa-github fa-fw"></i>
       </a>

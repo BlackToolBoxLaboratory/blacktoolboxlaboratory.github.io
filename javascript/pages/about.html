@@ -58,7 +58,7 @@
       <div class="container_section grid-row">
         <div class="grid-col col-md-3">
           <div class="section_title font-bold">Languages</div>
-          <a href="./languages.html">
+          <a href="#" onclick="redirectHash('packages/languages')">
             <i class="fas fa-link fa-fw"></i>
           </a>
         </div>
@@ -84,7 +84,7 @@
       <div class="container_section grid-row">
         <div class="grid-col col-md-3">
           <div class="section_title font-bold">Validator</div>
-          <a href="./validator.html">
+          <a href="#" onclick="redirectHash('packages/validator')">
             <i class="fas fa-link fa-fw"></i>
           </a>
         </div>
@@ -99,6 +99,9 @@
     </div>
 
     <div class="page_footNav">
+      <a class="footNav_linkBtn linkBtn-paypal" href="https://www.paypal.me/vannoel0628" target="_blank">
+        <i class="fab fa-paypal fa-fw"></i>
+      </a>
       <a class="footNav_linkBtn linkBtn-github" href="https://github.com/BlackToolBoxLaboratory" target="_blank">
         <i class="fab fa-github fa-fw"></i>
       </a>
@@ -123,7 +126,7 @@
     <script type="text/javascript" src="../libs/jquery/jquery.min.js"></script>
     <script>
       function redirectHash(path) {
-        window.location.hash = "#"+ path;
+        top.location.hash = "#"+ path;
       }
       function loadEvent () {
         $("#menu_trigger").click(function(){
