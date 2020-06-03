@@ -296,6 +296,9 @@
             togglePageMenu('hide');
           }
         }
+        $('#page').on("load", function () {
+          window.test = this
+        })
       };
       function translateAll() {
         $('[btb-lang]').each(function(index, entry){
