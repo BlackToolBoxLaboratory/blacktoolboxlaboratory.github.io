@@ -196,7 +196,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 32);
+/******/ 	return __webpack_require__(__webpack_require__.s = 33);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -207,7 +207,7 @@
 
 
 if (true) {
-  module.exports = __webpack_require__(18);
+  module.exports = __webpack_require__(19);
 } else {}
 
 
@@ -922,7 +922,7 @@ if (false) { var secondaryBuildName, initialBuildName, buildNames, key, global; 
 if (false) { var throwOnDirectAccess, ReactIs; } else {
   // By explicitly using `prop-types` you are opting into new production behavior.
   // http://fb.me/prop-types-in-prod
-  module.exports = __webpack_require__(25)();
+  module.exports = __webpack_require__(26)();
 }
 
 
@@ -4854,7 +4854,7 @@ var autoReplace = function autoReplace() {
 
 
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(8), __webpack_require__(22).setImmediate))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(8), __webpack_require__(23).setImmediate))
 
 /***/ }),
 /* 13 */
@@ -4961,7 +4961,7 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 
 
 if (true) {
-  module.exports = __webpack_require__(27);
+  module.exports = __webpack_require__(28);
 } else {}
 
 
@@ -5419,12 +5419,29 @@ if (true) {
   // DCE check should happen before ReactDOM bundle executes so that
   // DevTools can report bad minification during injection.
   checkDCE();
-  module.exports = __webpack_require__(19);
+  module.exports = __webpack_require__(20);
 } else {}
 
 
 /***/ }),
 /* 18 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+var routeMap = {
+  'HOME': '/',
+  'ABOUT': '/about',
+  'PACKAGES': '/packages',
+  'PACKAGES_LIST': '/packages/list',
+  'PACKAGES_LIST_BASIC': '/packages/list/basic',
+  'APPLICATIONS': '/applications',
+  'APPLICATIONS_LANGUAGES': '/applications/packages',
+  'APPLICATIONS_VALIDATOR': '/applications/validator'
+};
+/* harmony default export */ __webpack_exports__["a"] = (routeMap);
+
+/***/ }),
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5456,7 +5473,7 @@ exports.useLayoutEffect=function(a,b){return Z().useLayoutEffect(a,b)};exports.u
 
 
 /***/ }),
-/* 19 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5472,7 +5489,7 @@ exports.useLayoutEffect=function(a,b){return Z().useLayoutEffect(a,b)};exports.u
 /*
  Modernizr 3.0.0pre (Custom Build) | MIT
 */
-var aa=__webpack_require__(0),n=__webpack_require__(13),r=__webpack_require__(20);function u(a){for(var b="https://reactjs.org/docs/error-decoder.html?invariant="+a,c=1;c<arguments.length;c++)b+="&args[]="+encodeURIComponent(arguments[c]);return"Minified React error #"+a+"; visit "+b+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings."}if(!aa)throw Error(u(227));
+var aa=__webpack_require__(0),n=__webpack_require__(13),r=__webpack_require__(21);function u(a){for(var b="https://reactjs.org/docs/error-decoder.html?invariant="+a,c=1;c<arguments.length;c++)b+="&args[]="+encodeURIComponent(arguments[c]);return"Minified React error #"+a+"; visit "+b+" for the full message or use the non-minified dev environment for full errors and additional helpful warnings."}if(!aa)throw Error(u(227));
 function ba(a,b,c,d,e,f,g,h,k){var l=Array.prototype.slice.call(arguments,3);try{b.apply(c,l)}catch(m){this.onError(m)}}var da=!1,ea=null,fa=!1,ha=null,ia={onError:function(a){da=!0;ea=a}};function ja(a,b,c,d,e,f,g,h,k){da=!1;ea=null;ba.apply(ia,arguments)}function ka(a,b,c,d,e,f,g,h,k){ja.apply(this,arguments);if(da){if(da){var l=ea;da=!1;ea=null}else throw Error(u(198));fa||(fa=!0,ha=l)}}var la=null,ma=null,na=null;
 function oa(a,b,c){var d=a.type||"unknown-event";a.currentTarget=na(c);ka(d,b,void 0,a);a.currentTarget=null}var pa=null,qa={};
 function ra(){if(pa)for(var a in qa){var b=qa[a],c=pa.indexOf(a);if(!(-1<c))throw Error(u(96,a));if(!sa[c]){if(!b.extractEvents)throw Error(u(97,a));sa[c]=b;c=b.eventTypes;for(var d in c){var e=void 0;var f=c[d],g=b,h=d;if(ta.hasOwnProperty(h))throw Error(u(99,h));ta[h]=f;var k=f.phasedRegistrationNames;if(k){for(e in k)k.hasOwnProperty(e)&&ua(k[e],g,h);e=!0}else f.registrationName?(ua(f.registrationName,g,h),e=!0):e=!1;if(!e)throw Error(u(98,d,a));}}}}
@@ -5755,19 +5772,19 @@ exports.unstable_renderSubtreeIntoContainer=function(a,b,c,d){if(!gk(c))throw Er
 
 
 /***/ }),
-/* 20 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 if (true) {
-  module.exports = __webpack_require__(21);
+  module.exports = __webpack_require__(22);
 } else {}
 
 
 /***/ }),
-/* 21 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5795,7 +5812,7 @@ exports.unstable_shouldYield=function(){var a=exports.unstable_now();V(a);var b=
 
 
 /***/ }),
-/* 22 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {var scope = (typeof global !== "undefined" && global) ||
@@ -5851,7 +5868,7 @@ exports._unrefActive = exports.active = function(item) {
 };
 
 // setimmediate attaches itself to the global object
-__webpack_require__(23);
+__webpack_require__(24);
 // On some exotic environments, it's not clear which object `setimmediate` was
 // able to install onto.  Search each possibility in the same order as the
 // `setimmediate` library.
@@ -5865,7 +5882,7 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(8)))
 
 /***/ }),
-/* 23 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, process) {(function (global, undefined) {
@@ -6055,10 +6072,10 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
     attachTo.clearImmediate = clearImmediate;
 }(typeof self === "undefined" ? typeof global === "undefined" ? this : global : self));
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(8), __webpack_require__(24)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(8), __webpack_require__(25)))
 
 /***/ }),
-/* 24 */
+/* 25 */
 /***/ (function(module, exports) {
 
 // shim for using process in browser
@@ -6248,7 +6265,7 @@ process.umask = function() { return 0; };
 
 
 /***/ }),
-/* 25 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6261,7 +6278,7 @@ process.umask = function() { return 0; };
 
 
 
-var ReactPropTypesSecret = __webpack_require__(26);
+var ReactPropTypesSecret = __webpack_require__(27);
 
 function emptyFunction() {}
 function emptyFunctionWithReset() {}
@@ -6319,7 +6336,7 @@ module.exports = function() {
 
 
 /***/ }),
-/* 26 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6338,7 +6355,7 @@ module.exports = ReactPropTypesSecret;
 
 
 /***/ }),
-/* 27 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6360,17 +6377,6 @@ exports.isValidElementType=function(a){return"string"===typeof a||"function"===t
 
 
 /***/ }),
-/* 28 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-var routeMap = {
-  'HOME': '/',
-  'ABOUT': '/about'
-};
-/* harmony default export */ __webpack_exports__["a"] = (routeMap);
-
-/***/ }),
 /* 29 */,
 /* 30 */
 /***/ (function(module, exports, __webpack_require__) {
@@ -6378,8 +6384,14 @@ var routeMap = {
 // extracted by mini-css-extract-plugin
 
 /***/ }),
-/* 31 */,
-/* 32 */
+/* 31 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+
+/***/ }),
+/* 32 */,
+/* 33 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6398,6 +6410,11 @@ var react_router_dom = __webpack_require__(16);
 
 // EXTERNAL MODULE: ./node_modules/react-router/esm/react-router.js
 var react_router = __webpack_require__(1);
+
+// EXTERNAL MODULE: ./node_modules/@blacktoolbox/react-list/lib/index.css
+var lib = __webpack_require__(30);
+
+// CONCATENATED MODULE: ./src/plugins/btblab-react-list.js
 
 // EXTERNAL MODULE: ./node_modules/@fortawesome/fontawesome-svg-core/index.es.js
 var index_es = __webpack_require__(12);
@@ -15979,12 +15996,13 @@ faPaypal, faGithub, faNpm, faLinkedin, faWordpress, // far
 faEnvelope, // fas
 faHome, faGlobe, faBars, faExternalLinkAlt, faTools, faLink);
 // EXTERNAL MODULE: ./src/assets/styles/index.less
-var styles = __webpack_require__(30);
+var styles = __webpack_require__(31);
 
 // EXTERNAL MODULE: ./src/assets/definitions/routeMap.js
-var routeMap = __webpack_require__(28);
+var routeMap = __webpack_require__(18);
 
 // CONCATENATED MODULE: ./src/index.jsx
+
 
 
 
@@ -15996,9 +16014,14 @@ var src_App = function App() {
   return /*#__PURE__*/react_default.a.createElement(react_router_dom["HashRouter"], null, /*#__PURE__*/react_default.a.createElement(react["Suspense"], {
     fallback: /*#__PURE__*/react_default.a.createElement("div", null, "Loading...")
   }, /*#__PURE__*/react_default.a.createElement(react_router["g" /* Switch */], null, /*#__PURE__*/react_default.a.createElement(react_router["d" /* Route */], {
+    exact: true,
+    path: routeMap["a" /* default */].HOME
+  }, /*#__PURE__*/react_default.a.createElement(react_router["c" /* Redirect */], {
+    to: routeMap["a" /* default */].ABOUT
+  })), /*#__PURE__*/react_default.a.createElement(react_router["d" /* Route */], {
     path: routeMap["a" /* default */].HOME,
     component: /*#__PURE__*/react_default.a.lazy(function () {
-      return __webpack_require__.e(/* import() */ 2).then(__webpack_require__.bind(null, 33));
+      return __webpack_require__.e(/* import() */ 2).then(__webpack_require__.bind(null, 36));
     })
   }))));
 };
