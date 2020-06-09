@@ -453,6 +453,17 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
 /***/ }),
 
 /***/ 35:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var history__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6);
+
+var MyHashHistory = new history__WEBPACK_IMPORTED_MODULE_0__[/* createHashHistory */ "b"]();
+/* harmony default export */ __webpack_exports__["a"] = (MyHashHistory);
+
+/***/ }),
+
+/***/ 36:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -461,7 +472,7 @@ function e(e){return e&&"object"==typeof e&&"default"in e?e.default:e}var t=__we
 
 /***/ }),
 
-/***/ 36:
+/***/ 38:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -585,16 +596,12 @@ var Foot_Aside = function Aside(props) {
 
 /* harmony default export */ var Foot = (Foot_Aside);
 // EXTERNAL MODULE: ./node_modules/@blacktoolbox/react-list/lib/index.js
-var lib = __webpack_require__(35);
+var lib = __webpack_require__(36);
 var lib_default = /*#__PURE__*/__webpack_require__.n(lib);
 
-// EXTERNAL MODULE: ./node_modules/history/esm/history.js + 2 modules
-var esm_history = __webpack_require__(6);
+// EXTERNAL MODULE: ./src/history.js
+var src_history = __webpack_require__(35);
 
-// CONCATENATED MODULE: ./src/history.js
-
-var MyHashHistory = new esm_history["b" /* createHashHistory */]();
-/* harmony default export */ var src_history = (MyHashHistory);
 // CONCATENATED MODULE: ./src/assets/definitions/menuList.js
 var menuList = [{
   id: 'ABOUT',
@@ -659,8 +666,8 @@ var Aside_Aside = function Aside(props) {
     if (event.id === 'VERSION_1') {
       window.open('https://blacktoolboxlaboratory.github.io/react/v1/');
     } else {
-      if (routeMap["a" /* default */][event.id] !== src_history.location.pathname) {
-        src_history.push(routeMap["a" /* default */][event.id]);
+      if (routeMap["a" /* default */][event.id] !== src_history["a" /* default */].location.pathname) {
+        src_history["a" /* default */].push(routeMap["a" /* default */][event.id]);
         env.state_activeID.onChange(event.id);
         props.clickEntry();
       }
@@ -680,7 +687,7 @@ var Aside_Aside = function Aside(props) {
 
 function getRouteID() {
   var result = Object.keys(routeMap["a" /* default */]).find(function (key) {
-    return routeMap["a" /* default */][key] === src_history.location.pathname;
+    return routeMap["a" /* default */][key] === src_history["a" /* default */].location.pathname;
   });
   return result;
 }
