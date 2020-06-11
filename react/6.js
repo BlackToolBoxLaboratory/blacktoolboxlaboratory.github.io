@@ -1,4 +1,4 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[3],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[6],{
 
 /***/ 34:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -142,24 +142,7 @@ var openLink = function openLink(link) {
 
 /***/ }),
 
-/***/ 37:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-var packageObj = {
-  list: {
-    name: 'List',
-    routename: 'packages.list.basic',
-    description: 'This module of list creator based on React can do the help to make a list or mane component to our page. Normally it is a list make. But with some trigger action it can be a menu maker for route redirection or other feature we need.',
-    version: '2.0.0',
-    updated: 'Jun, 8, 2020'
-  }
-};
-/* harmony default export */ __webpack_exports__["a"] = (packageObj);
-
-/***/ }),
-
-/***/ 42:
+/***/ 41:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -170,119 +153,51 @@ __webpack_require__.r(__webpack_exports__);
 var react = __webpack_require__(0);
 var react_default = /*#__PURE__*/__webpack_require__.n(react);
 
-// EXTERNAL MODULE: ./node_modules/@fortawesome/react-fontawesome/index.es.js
-var index_es = __webpack_require__(29);
-
-// EXTERNAL MODULE: ./node_modules/@blacktoolbox/react-list/esm/index.js
-var esm = __webpack_require__(38);
-
 // EXTERNAL MODULE: ./src/modules/pageLayout/index.js + 4 modules
 var pageLayout = __webpack_require__(34);
-
-// EXTERNAL MODULE: ./src/assets/definitions/packageObj.js
-var packageObj = __webpack_require__(37);
 
 // EXTERNAL MODULE: ./src/utils/functions.js
 var functions = __webpack_require__(36);
 
-// CONCATENATED MODULE: ./src/components/packages/list/Basic.jsx
-
-
-
+// CONCATENATED MODULE: ./src/components/applications/Validator.jsx
 
 
 
 var packageInfo = {
-  'version': packageObj["a" /* default */].list.version,
-  'updated': packageObj["a" /* default */].list.updated,
-  'description': packageObj["a" /* default */].list.description,
+  'version': '1.0.0',
+  'updated': 'Jan. 20, 2020',
+  'description': 'Most form UI packages have their own validator to use for convenience. But sometimes we don\'t use only one UI packages to develop every single project. So we try to create the validator generally to adapt to every kind of form UI packages to allow us using just one type of validator coding patteren to develop with every UI packages.',
   'btnList': [{
     'id': 'github',
     'fa': ['fab', 'github'],
-    'url': 'https://github.com/BlackToolBoxLaboratory/react-list'
+    'url': 'https://github.com/BlackToolBoxLaboratory/prototype-validator'
   }, {
     'id': 'npm',
     'fa': ['fab', 'npm'],
-    'url': 'https://www.npmjs.com/package/@blacktoolbox/react-list'
+    'url': 'https://www.npmjs.com/package/@blacktoolbox/prototype-validator'
   }]
 };
-var preInstall = "$ npm install --save @blacktoolbox/reat-list\n\nimport BTBList from '@blacktoolbox/reat-list'\nimport '@blacktoolbox/react-list/lib/index.css'";
-var preRender = "<BTBList dataList={ Array } \n        dataList=\" Array of entryObj\" \n        defaultActiveID=\" String \"\n        activeID=\" String \"\n        collapseEnable=\" Boolean \"\n        onEntryClick=\" function(entryObj){} \"\n        onToggle=\" function(entryObj){} \"/>";
-var preEntryObj = "entryObj = {\n        id: '',\n        title: '',\n        defaultCollapsed: false,\n        children: [...]\n}";
-var nodeTree = [{
-  id: 'list',
-  title: '<div> .btb-react-list',
-  children: [{
-    id: 'layer',
-    title: '<ul> .btb-react-list-layer .layer-[layer count]',
-    children: [{
-      id: 'container',
-      title: '<li> .layer-container .layer-[layer count]',
-      children: [{
-        id: 'entry',
-        title: '<div> .container_entry .entry-[id] .entry-active',
-        children: [{
-          id: 'title',
-          title: '<div> .entry_title'
-        }, {
-          id: 'collapseBtn',
-          title: '<div> .entry_collapseBtn .collapseBtn-default',
-          children: [{
-            id: 'arrow',
-            title: '<div> .collapseBtn_arrow'
-          }]
-        }]
-      }, {
-        id: 'sublayer',
-        title: '<div>.list_sublayer',
-        children: [{
-          id: 'next',
-          title: '<ul>.btb-vue-list-layer.layer-[layer count + 1]'
-        }]
-      }]
-    }]
-  }]
-}];
 
-var Basic_Basic = function Basic() {
+var Validator_Validator = function Validator() {
   return /*#__PURE__*/react_default.a.createElement(pageLayout["b" /* Page */], {
-    className: "btb-pkg-list-basic"
+    className: "btb-app-validator"
   }, /*#__PURE__*/react_default.a.createElement(pageLayout["c" /* PageHead */], {
-    title: 'List Basic',
+    title: 'Validator Application',
     clickBtn: functions["a" /* openLink */],
     btnList: packageInfo.btnList
-  }), /*#__PURE__*/react_default.a.createElement(pageLayout["d" /* Section */], {
-    head: /*#__PURE__*/react_default.a.createElement(react_default.a.Fragment, null, "Version: ".concat(packageInfo.version), /*#__PURE__*/react_default.a.createElement("br", null), "Release Date: ".concat(packageInfo.updated))
-  }, /*#__PURE__*/react_default.a.createElement("p", null, packageInfo.description)), /*#__PURE__*/react_default.a.createElement(pageLayout["d" /* Section */], {
-    head: "INSTALLATION"
-  }, /*#__PURE__*/react_default.a.createElement("pre", {
-    className: "page_pre"
-  }, preInstall)), /*#__PURE__*/react_default.a.createElement(pageLayout["d" /* Section */], {
-    head: "RENDER"
-  }, /*#__PURE__*/react_default.a.createElement("pre", {
-    className: "page_pre"
-  }, preRender)), /*#__PURE__*/react_default.a.createElement(pageLayout["d" /* Section */], {
-    head: "PARAMETERS"
-  }, /*#__PURE__*/react_default.a.createElement("pre", {
-    className: "page_pre"
-  }, preEntryObj)), /*#__PURE__*/react_default.a.createElement(pageLayout["d" /* Section */], {
-    head: "NODE TREE"
-  }, /*#__PURE__*/react_default.a.createElement(esm["a" /* default */], {
-    className: "page_node_tree",
-    dataList: nodeTree
-  }), /*#__PURE__*/react_default.a.createElement("p", null, 'Note: The layer count is counted base on 0.')));
+  }));
 };
 
-/* harmony default export */ var list_Basic = (Basic_Basic);
-// CONCATENATED MODULE: ./src/routes/packages/list/BasicContainer.jsx
+/* harmony default export */ var applications_Validator = (Validator_Validator);
+// CONCATENATED MODULE: ./src/routes/applications/ValidatorContainer.jsx
 
 
 
-var BasicContainer_PackagesContaier = function PackagesContaier() {
-  return /*#__PURE__*/react_default.a.createElement(list_Basic, null);
+var ValidatorContainer_ValidatorContaier = function ValidatorContaier() {
+  return /*#__PURE__*/react_default.a.createElement(applications_Validator, null);
 };
 
-/* harmony default export */ var BasicContainer = __webpack_exports__["default"] = (BasicContainer_PackagesContaier);
+/* harmony default export */ var ValidatorContainer = __webpack_exports__["default"] = (ValidatorContainer_ValidatorContaier);
 
 /***/ })
 

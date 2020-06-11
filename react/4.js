@@ -1,4 +1,4 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[3],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[4],{
 
 /***/ 34:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -129,19 +129,6 @@ var Divider_Divider = function Divider() {
 
 /***/ }),
 
-/***/ 36:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return openLink; });
-var openLink = function openLink(link) {
-  window.open(link.url);
-};
-
-
-
-/***/ }),
-
 /***/ 37:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -159,7 +146,7 @@ var packageObj = {
 
 /***/ }),
 
-/***/ 42:
+/***/ 46:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -170,119 +157,118 @@ __webpack_require__.r(__webpack_exports__);
 var react = __webpack_require__(0);
 var react_default = /*#__PURE__*/__webpack_require__.n(react);
 
+// EXTERNAL MODULE: ./node_modules/react-router/esm/react-router.js
+var react_router = __webpack_require__(1);
+
 // EXTERNAL MODULE: ./node_modules/@fortawesome/react-fontawesome/index.es.js
 var index_es = __webpack_require__(29);
-
-// EXTERNAL MODULE: ./node_modules/@blacktoolbox/react-list/esm/index.js
-var esm = __webpack_require__(38);
 
 // EXTERNAL MODULE: ./src/modules/pageLayout/index.js + 4 modules
 var pageLayout = __webpack_require__(34);
 
+// CONCATENATED MODULE: ./src/components/about/package.jsx
+
+
+
+var package_Package = function Package(props) {
+  function _redirectRoute() {
+    props.redirectRoute(props.info.routename);
+  }
+
+  return /*#__PURE__*/react_default.a.createElement("div", {
+    className: ['btb-about-package grid-row', props.className].join(' ')
+  }, /*#__PURE__*/react_default.a.createElement("div", {
+    className: "grid-col-md-3"
+  }, /*#__PURE__*/react_default.a.createElement("div", {
+    className: "package_title"
+  }, props.info.name), /*#__PURE__*/react_default.a.createElement(index_es["FontAwesomeIcon"], {
+    className: "package_link",
+    icon: ['fas', 'link'],
+    fixedWidth: true,
+    onClick: _redirectRoute
+  })), /*#__PURE__*/react_default.a.createElement("div", {
+    className: "grid-col-md"
+  }, /*#__PURE__*/react_default.a.createElement("div", {
+    className: "package_description"
+  }, props.info.description), /*#__PURE__*/react_default.a.createElement("div", {
+    className: "package_version"
+  }, "Version ", props.info.version), /*#__PURE__*/react_default.a.createElement("div", {
+    className: "package_updated"
+  }, "Updated: ", props.info.updated)));
+};
+
+/* harmony default export */ var about_package = (package_Package);
 // EXTERNAL MODULE: ./src/assets/definitions/packageObj.js
 var packageObj = __webpack_require__(37);
 
-// EXTERNAL MODULE: ./src/utils/functions.js
-var functions = __webpack_require__(36);
-
-// CONCATENATED MODULE: ./src/components/packages/list/Basic.jsx
-
+// CONCATENATED MODULE: ./src/assets/images/BTB_React.png
+/* harmony default export */ var BTB_React = (__webpack_require__.p + "files/BTB_React.png");
+// CONCATENATED MODULE: ./src/components/about/About.jsx
 
 
 
 
 
-var packageInfo = {
-  'version': packageObj["a" /* default */].list.version,
-  'updated': packageObj["a" /* default */].list.updated,
-  'description': packageObj["a" /* default */].list.description,
-  'btnList': [{
-    'id': 'github',
-    'fa': ['fab', 'github'],
-    'url': 'https://github.com/BlackToolBoxLaboratory/react-list'
-  }, {
-    'id': 'npm',
-    'fa': ['fab', 'npm'],
-    'url': 'https://www.npmjs.com/package/@blacktoolbox/react-list'
-  }]
-};
-var preInstall = "$ npm install --save @blacktoolbox/reat-list\n\nimport BTBList from '@blacktoolbox/reat-list'\nimport '@blacktoolbox/react-list/lib/index.css'";
-var preRender = "<BTBList dataList={ Array } \n        dataList=\" Array of entryObj\" \n        defaultActiveID=\" String \"\n        activeID=\" String \"\n        collapseEnable=\" Boolean \"\n        onEntryClick=\" function(entryObj){} \"\n        onToggle=\" function(entryObj){} \"/>";
-var preEntryObj = "entryObj = {\n        id: '',\n        title: '',\n        defaultCollapsed: false,\n        children: [...]\n}";
-var nodeTree = [{
-  id: 'list',
-  title: '<div> .btb-react-list',
-  children: [{
-    id: 'layer',
-    title: '<ul> .btb-react-list-layer .layer-[layer count]',
-    children: [{
-      id: 'container',
-      title: '<li> .layer-container .layer-[layer count]',
-      children: [{
-        id: 'entry',
-        title: '<div> .container_entry .entry-[id] .entry-active',
-        children: [{
-          id: 'title',
-          title: '<div> .entry_title'
-        }, {
-          id: 'collapseBtn',
-          title: '<div> .entry_collapseBtn .collapseBtn-default',
-          children: [{
-            id: 'arrow',
-            title: '<div> .collapseBtn_arrow'
-          }]
-        }]
-      }, {
-        id: 'sublayer',
-        title: '<div>.list_sublayer',
-        children: [{
-          id: 'next',
-          title: '<ul>.btb-vue-list-layer.layer-[layer count + 1]'
-        }]
-      }]
-    }]
-  }]
-}];
 
-var Basic_Basic = function Basic() {
+
+
+var About_About = function About(props) {
+  function _redirectRoute(routename) {
+    props.history.push(routename);
+  }
+
   return /*#__PURE__*/react_default.a.createElement(pageLayout["b" /* Page */], {
-    className: "btb-pkg-list-basic"
-  }, /*#__PURE__*/react_default.a.createElement(pageLayout["c" /* PageHead */], {
-    title: 'List Basic',
-    clickBtn: functions["a" /* openLink */],
-    btnList: packageInfo.btnList
-  }), /*#__PURE__*/react_default.a.createElement(pageLayout["d" /* Section */], {
-    head: /*#__PURE__*/react_default.a.createElement(react_default.a.Fragment, null, "Version: ".concat(packageInfo.version), /*#__PURE__*/react_default.a.createElement("br", null), "Release Date: ".concat(packageInfo.updated))
-  }, /*#__PURE__*/react_default.a.createElement("p", null, packageInfo.description)), /*#__PURE__*/react_default.a.createElement(pageLayout["d" /* Section */], {
-    head: "INSTALLATION"
-  }, /*#__PURE__*/react_default.a.createElement("pre", {
-    className: "page_pre"
-  }, preInstall)), /*#__PURE__*/react_default.a.createElement(pageLayout["d" /* Section */], {
-    head: "RENDER"
-  }, /*#__PURE__*/react_default.a.createElement("pre", {
-    className: "page_pre"
-  }, preRender)), /*#__PURE__*/react_default.a.createElement(pageLayout["d" /* Section */], {
-    head: "PARAMETERS"
-  }, /*#__PURE__*/react_default.a.createElement("pre", {
-    className: "page_pre"
-  }, preEntryObj)), /*#__PURE__*/react_default.a.createElement(pageLayout["d" /* Section */], {
-    head: "NODE TREE"
-  }, /*#__PURE__*/react_default.a.createElement(esm["a" /* default */], {
-    className: "page_node_tree",
-    dataList: nodeTree
-  }), /*#__PURE__*/react_default.a.createElement("p", null, 'Note: The layer count is counted base on 0.')));
+    className: "btb-about"
+  }, /*#__PURE__*/react_default.a.createElement(pageLayout["d" /* Section */], {
+    className: "about_title grid-row direction-column align-items-center"
+  }, /*#__PURE__*/react_default.a.createElement("img", {
+    className: "title_image",
+    src: BTB_React,
+    alt: "BTB_React"
+  }), /*#__PURE__*/react_default.a.createElement("h1", {
+    className: "title_main hidden-down-md"
+  }, "Black Tool Box Laboratory"), /*#__PURE__*/react_default.a.createElement("h1", {
+    className: "title_main hidden-up-md"
+  }, "BTB Lab."), /*#__PURE__*/react_default.a.createElement("p", {
+    className: "title_sub"
+  }, "With React")), /*#__PURE__*/react_default.a.createElement(pageLayout["d" /* Section */], null, /*#__PURE__*/react_default.a.createElement("span", null, "React is the first framework of javascript when I join to the Frontend develipment club. Before that jQuery of curse is my first using when I am a software engineer. Here I aim to develop packages made with React. They are designed with basic logic for high degrees of freedom of customization and low dependency. While using, if you find some questions, bugs or issues. Or having some great ideas. Please feel free to let me know.")), /*#__PURE__*/react_default.a.createElement(pageLayout["d" /* Section */], {
+    className: "grid-row justify-content-center"
+  }, /*#__PURE__*/react_default.a.createElement("a", {
+    href: "mailto://vannoel0628@gmail.com",
+    target: "_blank"
+  }, /*#__PURE__*/react_default.a.createElement(index_es["FontAwesomeIcon"], {
+    icon: ['far', 'envelope'],
+    fixedWidth: true
+  }), /*#__PURE__*/react_default.a.createElement("span", null, "vannoel0628@gmail.com"))), /*#__PURE__*/react_default.a.createElement(pageLayout["a" /* Divider */], null), /*#__PURE__*/react_default.a.createElement(pageLayout["d" /* Section */], {
+    className: "grid-row justify-content-center"
+  }, /*#__PURE__*/react_default.a.createElement("span", null, "If you like all the works in BTB Lab. Please "), /*#__PURE__*/react_default.a.createElement("a", {
+    href: "https://www.paypal.me/vannoel0628",
+    target: "_blank"
+  }, /*#__PURE__*/react_default.a.createElement(index_es["FontAwesomeIcon"], {
+    icon: ['fab', 'paypal'],
+    fixedWidth: true
+  }), /*#__PURE__*/react_default.a.createElement("span", null, "buy me a coffee")), /*#__PURE__*/react_default.a.createElement("span", null, ". ")), /*#__PURE__*/react_default.a.createElement(pageLayout["a" /* Divider */], null), Object.keys(packageObj["a" /* default */]).map(function (entry) {
+    return /*#__PURE__*/react_default.a.createElement("div", {
+      key: entry
+    }, entry !== 'list' ? /*#__PURE__*/react_default.a.createElement(pageLayout["a" /* Divider */], null) : [], /*#__PURE__*/react_default.a.createElement(pageLayout["d" /* Section */], {
+      className: "about_package"
+    }, /*#__PURE__*/react_default.a.createElement(about_package, {
+      info: packageObj["a" /* default */][entry],
+      redirectRoute: _redirectRoute
+    })));
+  }));
 };
 
-/* harmony default export */ var list_Basic = (Basic_Basic);
-// CONCATENATED MODULE: ./src/routes/packages/list/BasicContainer.jsx
+/* harmony default export */ var about_About = (Object(react_router["o" /* withRouter */])(About_About));
+// CONCATENATED MODULE: ./src/routes/AboutContainer.jsx
 
 
 
-var BasicContainer_PackagesContaier = function PackagesContaier() {
-  return /*#__PURE__*/react_default.a.createElement(list_Basic, null);
+var AboutContainer_AboutContainer = function AboutContainer() {
+  return /*#__PURE__*/react_default.a.createElement(about_About, null);
 };
 
-/* harmony default export */ var BasicContainer = __webpack_exports__["default"] = (BasicContainer_PackagesContaier);
+/* harmony default export */ var routes_AboutContainer = __webpack_exports__["default"] = (AboutContainer_AboutContainer);
 
 /***/ })
 

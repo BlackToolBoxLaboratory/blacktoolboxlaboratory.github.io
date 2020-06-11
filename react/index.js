@@ -5391,6 +5391,23 @@ if (false) { var ariaCurrentType; }
 
 /***/ }),
 /* 17 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+var routeMap = {
+  'HOME': '/',
+  'ABOUT': '/about',
+  'PACKAGES': '/packages',
+  'PACKAGES_LIST': '/packages/list',
+  'PACKAGES_LIST_BASIC': '/packages/list/basic',
+  'APPLICATIONS': '/applications',
+  'APPLICATIONS_LANGUAGES': '/applications/languages',
+  'APPLICATIONS_VALIDATOR': '/applications/validator'
+};
+/* harmony default export */ __webpack_exports__["a"] = (routeMap);
+
+/***/ }),
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5422,23 +5439,6 @@ if (true) {
   module.exports = __webpack_require__(20);
 } else {}
 
-
-/***/ }),
-/* 18 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-var routeMap = {
-  'HOME': '/',
-  'ABOUT': '/about',
-  'PACKAGES': '/packages',
-  'PACKAGES_LIST': '/packages/list',
-  'PACKAGES_LIST_BASIC': '/packages/list/basic',
-  'APPLICATIONS': '/applications',
-  'APPLICATIONS_LANGUAGES': '/applications/packages',
-  'APPLICATIONS_VALIDATOR': '/applications/validator'
-};
-/* harmony default export */ __webpack_exports__["a"] = (routeMap);
 
 /***/ }),
 /* 19 */
@@ -6403,7 +6403,7 @@ var react = __webpack_require__(0);
 var react_default = /*#__PURE__*/__webpack_require__.n(react);
 
 // EXTERNAL MODULE: ./node_modules/react-dom/index.js
-var react_dom = __webpack_require__(17);
+var react_dom = __webpack_require__(18);
 
 // EXTERNAL MODULE: ./node_modules/react-router-dom/esm/react-router-dom.js
 var react_router_dom = __webpack_require__(16);
@@ -15999,7 +15999,7 @@ faHome, faGlobe, faBars, faExternalLinkAlt, faTools, faLink);
 var styles = __webpack_require__(31);
 
 // EXTERNAL MODULE: ./src/assets/definitions/routeMap.js
-var routeMap = __webpack_require__(18);
+var routeMap = __webpack_require__(17);
 
 // CONCATENATED MODULE: ./src/index.jsx
 
@@ -16021,7 +16021,7 @@ var src_App = function App() {
   })), /*#__PURE__*/react_default.a.createElement(react_router["d" /* Route */], {
     path: routeMap["a" /* default */].HOME,
     component: /*#__PURE__*/react_default.a.lazy(function () {
-      return __webpack_require__.e(/* import() */ 2).then(__webpack_require__.bind(null, 38));
+      return __webpack_require__.e(/* import() */ 2).then(__webpack_require__.bind(null, 45));
     })
   }))));
 };
