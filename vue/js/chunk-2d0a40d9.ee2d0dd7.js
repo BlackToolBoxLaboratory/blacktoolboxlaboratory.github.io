@@ -1,2 +1,0 @@
-(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-2d0a40d9"],{"0597":function(n,e,t){"use strict";t.r(e);var r=function(){var n=this,e=n.$createElement,t=n._self._c||e;return t("router-view")},u=[],a={name:"btb-pkg-list-container"},c=a,l=t("2877"),i=Object(l["a"])(c,r,u,!1,null,null,null);e["default"]=i.exports}}]);
-//# sourceMappingURL=chunk-2d0a40d9.ee2d0dd7.js.map
