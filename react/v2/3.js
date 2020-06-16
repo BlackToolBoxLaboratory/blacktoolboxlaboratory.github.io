@@ -424,7 +424,7 @@ var Basic_Basic = function Basic() {
     title: "Basic"
   }, /*#__PURE__*/react_default.a.createElement(react_table_esm["a" /* default */], {
     className: "page_table",
-    mode: "info",
+    mode: "list",
     headData: tableHeadArr_property,
     bodyData: tableBodyArr_basic
   })), /*#__PURE__*/react_default.a.createElement(pageLayout["a" /* Block */], {
