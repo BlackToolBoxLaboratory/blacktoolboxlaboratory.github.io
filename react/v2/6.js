@@ -170,21 +170,29 @@ var packageObj = {
     routename: _routeMap__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].PACKAGES_LIST_BASIC,
     description: 'This module of list creator made with React can do the help to make a list or mane component to our page. Normally it is a list make. But with some trigger action it can be a menu maker for route redirection or other feature we need.',
     version: '2.1.6',
-    updated: 'Jun, 14, 2020'
+    updated: 'Jun, 14, 2020',
+    link: {
+      github: 'https://github.com/BlackToolBoxLaboratory/react-list',
+      npm: 'https://www.npmjs.com/package/@blacktoolbox/react-list'
+    }
   },
   table: {
     name: 'Table',
     routename: _routeMap__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].PACKAGES_TABLE_BASIC,
     description: 'This module of table creator made with React can do the help to make a table component to our page. It has modes in list and info which are different ways to show data.',
-    version: '1.0.1',
-    updated: 'Jun, 13, 2020'
+    version: '1.1.0',
+    updated: 'Jun, 16, 2020',
+    link: {
+      github: 'https://github.com/BlackToolBoxLaboratory/react-table',
+      npm: 'https://www.npmjs.com/package/@blacktoolbox/react-table'
+    }
   }
 };
 /* harmony default export */ __webpack_exports__["a"] = (packageObj);
 
 /***/ }),
 
-/***/ 48:
+/***/ 47:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -207,7 +215,7 @@ var packageObj = __webpack_require__(38);
 // EXTERNAL MODULE: ./src/utils/functions.js
 var functions = __webpack_require__(36);
 
-// CONCATENATED MODULE: ./src/components/packages/list/exampleSlot.jsx
+// CONCATENATED MODULE: ./src/components/packages/list/exampleMenu.jsx
 
 
 
@@ -216,63 +224,50 @@ var functions = __webpack_require__(36);
 var packageInfo = {
   'version': packageObj["a" /* default */].list.version,
   'updated': packageObj["a" /* default */].list.updated,
-  'description': 'Sometimes we may want to show the entry from the list by button, input, icon, ... etc. Then we can ultilize this feature about customized slot. To the example as following, I show you how to customized the entry which ID is b2. For the package of list, every single ID corresponding to dataList can be customized by slotObj in String, Node, or Function way.',
+  'description': 'When we enable the collapseEnable with datalist, we will get a simple menu to use. And it will trigger the onToggle event function while clicked for Collapsing or Expending. Every entry can be active status after being clicked. Surely it will trigger the onEntryClick event function too. Besides for a menu, it can tag one as defaultActiveID. Also use the v-model to listen the value from activeID',
   'btnList': [{
     'id': 'github',
     'fa': ['fab', 'github'],
-    'url': 'https://github.com/BlackToolBoxLaboratory/react-list'
+    'url': packageObj["a" /* default */].list.link.github
   }, {
     'id': 'npm',
     'fa': ['fab', 'npm'],
-    'url': 'https://www.npmjs.com/package/@blacktoolbox/react-list'
+    'url': packageObj["a" /* default */].list.link.npm
   }]
 };
-var _listData = [{
-  id: 'b1',
-  title: 'Branch: 1',
+var _menuData = [{
+  id: 'f1',
+  title: 'Folder: 1',
   children: [{
-    id: 'l11',
-    title: 'Leaf: 1-1'
+    id: 't11',
+    title: 'Menu: 1-1'
   }, {
-    id: 'b12',
-    title: 'Branch: 1-2',
-    children: [{
-      id: 'l121',
-      title: 'Leaf: 1-2-1'
-    }, {
-      id: 'l122',
-      title: 'Leaf: 1-2-2'
-    }]
-  }, {
-    id: 'l13',
-    title: 'Leaf: 1-3'
+    id: 't12',
+    title: 'Menu: 1-2'
   }]
 }, {
-  id: 'b2',
-  title: 'Branch: 2',
+  id: 'f2',
+  title: 'Folder: 2',
+  defaultCollapsed: true,
   children: [{
-    id: 'l21',
-    title: 'Leaf: 2-1'
+    id: 't21',
+    title: 'Menu: 2-1'
   }, {
-    id: 'l22',
-    title: 'Leaf: 2-2'
+    id: 't22',
+    title: 'Menu: 2-2'
+  }, {
+    id: 't23',
+    title: 'Menu: 2-3'
   }]
 }];
-var _slotObj = {
-  'b2': function b2(entry) {
-    return /*#__PURE__*/react_default.a.createElement("div", null, "".concat(entry.id, " overwrited by Function"));
-  },
-  'l22': /*#__PURE__*/react_default.a.createElement("div", null, 'l22 overwrited by Node')
-};
-var preRender = "<BTBList \n        dataList={listData} \n        slotObj={slotObj}/>";
-var preListData = "const listData = [\n  { id: 'b1', title: 'Branch: 1', children: [\n          { id: 'l11', title: 'Leaf: 1-1' },\n          { id: 'b12', title: 'Branch: 1-2', children: [\n                  { id: 'l121', title: 'Leaf: 1-2-1' },\n                  { id: 'l122', title: 'Leaf: 1-2-2' }\n          ]},\n          { id: 'l13', title: 'Leaf: 1-3' }\n  ]},\n  { id: 'b2', title: 'Branch: 2', children: [\n          { id: 'l21', title: 'Leaf: 2-1' },\n          { id: 'l22', title: 'Leaf: 2-2' }\n  ]}\n]";
-var preSlotObj = "const _slotObj = {\n  'b2': (entry) => {\n    return (\n      <div>\n      {`${entry.id} overwrited by Function`}\n      </div>\n      )\n    },\n    'l22': (\n      <div>\n        {'l22 overwrited by Node'}\n      </div>\n    )\n  }";
+var preRender = "<btb-react-list dataList={menuData} />";
+var preListData = "const menuData = [\n  { id: 'f1', title: 'Folder: 1', children: [\n          { id: 't11', title: 'Menu: 1-1' },\n          { id: 't12', title: 'Menu: 1-2' }\n  ]},\n  { id: 'f2', title: 'Folder: 2', defaultCollapsed: true, children: [\n          { id: 't21', title: 'Menu: 2-1' },\n          { id: 't22', title: 'Menu: 2-2' },\n          { id: 't23', title: 'Menu: 2-3' }\n  ]}\n]";
 
-var exampleSlot_ExampleSlot = function ExampleSlot() {
+var exampleMenu_ExampleMenu = function ExampleMenu() {
   return /*#__PURE__*/react_default.a.createElement(pageLayout["c" /* Page */], {
-    className: "btb-pkg-list-example-slot"
+    className: "btb-pkg-list-example-menu"
   }, /*#__PURE__*/react_default.a.createElement(pageLayout["d" /* PageHead */], {
-    title: 'Example - Slot',
+    title: 'Example - Menu',
     clickBtn: functions["a" /* openLink */],
     btnList: packageInfo.btnList
   }), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
@@ -280,8 +275,8 @@ var exampleSlot_ExampleSlot = function ExampleSlot() {
   }, /*#__PURE__*/react_default.a.createElement("p", null, packageInfo.description)), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
     head: "EXAMPLE"
   }, /*#__PURE__*/react_default.a.createElement(esm["a" /* default */], {
-    dataList: _listData,
-    slotObj: _slotObj
+    dataList: _menuData,
+    collapseEnable: true
   })), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
     head: "CONFIGURATION"
   }, /*#__PURE__*/react_default.a.createElement(pageLayout["a" /* Block */], {
@@ -289,26 +284,22 @@ var exampleSlot_ExampleSlot = function ExampleSlot() {
   }, /*#__PURE__*/react_default.a.createElement("pre", {
     className: "page_pre"
   }, preRender)), /*#__PURE__*/react_default.a.createElement(pageLayout["a" /* Block */], {
-    title: "listData"
+    title: "menuData"
   }, /*#__PURE__*/react_default.a.createElement("pre", {
     className: "page_pre"
-  }, preListData)), /*#__PURE__*/react_default.a.createElement(pageLayout["a" /* Block */], {
-    title: "styleObj"
-  }, /*#__PURE__*/react_default.a.createElement("pre", {
-    className: "page_pre"
-  }, preSlotObj))));
+  }, preListData))));
 };
 
-/* harmony default export */ var exampleSlot = (exampleSlot_ExampleSlot);
-// CONCATENATED MODULE: ./src/routes/packages/list/ExampleSlotContainer.jsx
+/* harmony default export */ var exampleMenu = (exampleMenu_ExampleMenu);
+// CONCATENATED MODULE: ./src/routes/packages/list/ExampleMenuContainer.jsx
 
 
 
-var ExampleSlotContainer_ExampleSlotContaier = function ExampleSlotContaier() {
-  return /*#__PURE__*/react_default.a.createElement(exampleSlot, null);
+var ExampleMenuContainer_ExampleMenuContaier = function ExampleMenuContaier() {
+  return /*#__PURE__*/react_default.a.createElement(exampleMenu, null);
 };
 
-/* harmony default export */ var ExampleSlotContainer = __webpack_exports__["default"] = (ExampleSlotContainer_ExampleSlotContaier);
+/* harmony default export */ var ExampleMenuContainer = __webpack_exports__["default"] = (ExampleMenuContainer_ExampleMenuContaier);
 
 /***/ })
 

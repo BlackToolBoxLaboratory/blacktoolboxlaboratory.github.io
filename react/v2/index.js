@@ -16039,7 +16039,7 @@ var src_App = function App() {
   })), /*#__PURE__*/react_default.a.createElement(react_router["d" /* Route */], {
     path: routeMap["a" /* default */].HOME,
     component: /*#__PURE__*/react_default.a.lazy(function () {
-      return __webpack_require__.e(/* import() */ 2).then(__webpack_require__.bind(null, 52));
+      return __webpack_require__.e(/* import() */ 4).then(__webpack_require__.bind(null, 53));
     })
   }))));
 };

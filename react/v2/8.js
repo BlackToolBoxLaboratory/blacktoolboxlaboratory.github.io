@@ -145,6 +145,19 @@ var Divider_Divider = function Divider() {
 
 /***/ }),
 
+/***/ 36:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return openLink; });
+var openLink = function openLink(link) {
+  window.open(link.url);
+};
+
+
+
+/***/ }),
+
 /***/ 38:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -157,21 +170,29 @@ var packageObj = {
     routename: _routeMap__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].PACKAGES_LIST_BASIC,
     description: 'This module of list creator made with React can do the help to make a list or mane component to our page. Normally it is a list make. But with some trigger action it can be a menu maker for route redirection or other feature we need.',
     version: '2.1.6',
-    updated: 'Jun, 14, 2020'
+    updated: 'Jun, 14, 2020',
+    link: {
+      github: 'https://github.com/BlackToolBoxLaboratory/react-list',
+      npm: 'https://www.npmjs.com/package/@blacktoolbox/react-list'
+    }
   },
   table: {
     name: 'Table',
     routename: _routeMap__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].PACKAGES_TABLE_BASIC,
     description: 'This module of table creator made with React can do the help to make a table component to our page. It has modes in list and info which are different ways to show data.',
-    version: '1.0.1',
-    updated: 'Jun, 13, 2020'
+    version: '1.1.0',
+    updated: 'Jun, 16, 2020',
+    link: {
+      github: 'https://github.com/BlackToolBoxLaboratory/react-table',
+      npm: 'https://www.npmjs.com/package/@blacktoolbox/react-table'
+    }
   }
 };
 /* harmony default export */ __webpack_exports__["a"] = (packageObj);
 
 /***/ }),
 
-/***/ 53:
+/***/ 48:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -182,118 +203,158 @@ __webpack_require__.r(__webpack_exports__);
 var react = __webpack_require__(0);
 var react_default = /*#__PURE__*/__webpack_require__.n(react);
 
-// EXTERNAL MODULE: ./node_modules/react-router/esm/react-router.js
-var react_router = __webpack_require__(1);
-
-// EXTERNAL MODULE: ./node_modules/@fortawesome/react-fontawesome/index.es.js
-var index_es = __webpack_require__(29);
+// EXTERNAL MODULE: ./node_modules/@blacktoolbox/react-list/esm/index.js
+var esm = __webpack_require__(39);
 
 // EXTERNAL MODULE: ./src/modules/pageLayout/index.js + 5 modules
 var pageLayout = __webpack_require__(35);
 
-// CONCATENATED MODULE: ./src/components/about/package.jsx
-
-
-
-var package_Package = function Package(props) {
-  function _redirectRoute() {
-    props.redirectRoute(props.info.routename);
-  }
-
-  return /*#__PURE__*/react_default.a.createElement("div", {
-    className: ['btb-about-package grid-row', props.className].join(' ')
-  }, /*#__PURE__*/react_default.a.createElement("div", {
-    className: "grid-col-md-3"
-  }, /*#__PURE__*/react_default.a.createElement("div", {
-    className: "package_title"
-  }, props.info.name), /*#__PURE__*/react_default.a.createElement(index_es["FontAwesomeIcon"], {
-    className: "package_link",
-    icon: ['fas', 'link'],
-    fixedWidth: true,
-    onClick: _redirectRoute
-  })), /*#__PURE__*/react_default.a.createElement("div", {
-    className: "grid-col-md"
-  }, /*#__PURE__*/react_default.a.createElement("div", {
-    className: "package_description"
-  }, props.info.description), /*#__PURE__*/react_default.a.createElement("div", {
-    className: "package_version"
-  }, "Version ", props.info.version), /*#__PURE__*/react_default.a.createElement("div", {
-    className: "package_updated"
-  }, "Updated: ", props.info.updated)));
-};
-
-/* harmony default export */ var about_package = (package_Package);
 // EXTERNAL MODULE: ./src/assets/definitions/packageObj.js
 var packageObj = __webpack_require__(38);
 
-// CONCATENATED MODULE: ./src/assets/images/BTB_React.png
-/* harmony default export */ var BTB_React = (__webpack_require__.p + "files/BTB_React.png");
-// CONCATENATED MODULE: ./src/components/about/About.jsx
+// EXTERNAL MODULE: ./src/utils/functions.js
+var functions = __webpack_require__(36);
+
+// CONCATENATED MODULE: ./src/components/packages/list/exampleStyle.jsx
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
 
 
 
-
-
-var About_About = function About(props) {
-  function _redirectRoute(routename) {
-    props.history.push(routename);
+var packageInfo = {
+  'version': packageObj["a" /* default */].list.version,
+  'updated': packageObj["a" /* default */].list.updated,
+  'description': 'Here is going to show you about how to use the styleObj and the example of defaultActiveID and v-model of activeID. The activeID is used to mark focused entry, but also allowed to used defaultActiveID to mark entry as default in the begin. Then we can modify the style by the styleObj with using the node class name directly.',
+  'btnList': [{
+    'id': 'github',
+    'fa': ['fab', 'github'],
+    'url': packageObj["a" /* default */].list.link.github
+  }, {
+    'id': 'npm',
+    'fa': ['fab', 'npm'],
+    'url': packageObj["a" /* default */].list.link.npm
+  }]
+};
+var _listData = [{
+  id: 'b1',
+  title: 'Branch: 1',
+  children: [{
+    id: 'l11',
+    title: 'Leaf: 1-1'
+  }, {
+    id: 'b12',
+    title: 'Branch: 1-2',
+    children: [{
+      id: 'l121',
+      title: 'Leaf: 1-2-1'
+    }, {
+      id: 'l122',
+      title: 'Leaf: 1-2-2'
+    }]
+  }, {
+    id: 'l13',
+    title: 'Leaf: 1-3'
+  }]
+}, {
+  id: 'b2',
+  title: 'Branch: 2',
+  children: [{
+    id: 'l21',
+    title: 'Leaf: 2-1'
+  }, {
+    id: 'l22',
+    title: 'Leaf: 2-2'
+  }]
+}];
+var _styleObj = {
+  container_entry: {
+    cursor: 'pointer'
+  },
+  'entry-active': {
+    'background-color': '#00d8ff'
   }
+};
+var preActiveID_EntryClick = "const activeID = useActiveState('l13')\n\nfunction useActiveState (defaultSate) {\n  const [value, setState] = useState(defaultSate);\n  return {\n    value,\n    onChange : (data) => {\n      setState(data.id);\n    }\n  };\n}";
+var preRender = "<BTBList \n        dataList={listData} \n        styleObj={styleObj} \n        activeID={activeID.value} \n        onEntryClick={activeID.onChange}/>";
+var preListData = "const listData = [\n  { id: 'b1', title: 'Branch: 1', children: [\n          { id: 'l11', title: 'Leaf: 1-1' },\n          { id: 'b12', title: 'Branch: 1-2', children: [\n                  { id: 'l121', title: 'Leaf: 1-2-1' },\n                  { id: 'l122', title: 'Leaf: 1-2-2' }\n          ]},\n          { id: 'l13', title: 'Leaf: 1-3' }\n  ]},\n  { id: 'b2', title: 'Branch: 2', children: [\n          { id: 'l21', title: 'Leaf: 2-1' },\n          { id: 'l22', title: 'Leaf: 2-2' }\n  ]}\n]";
+var preStyleObj = "const _styleObj = {\n  'container_entry': {\n          cursor: 'pointer'\n  },\n  'entry-active': {\n          'background-color': '#b8dec9'\n  }\n}";
 
+var exampleStyle_ExampleStyle = function ExampleStyle() {
+  var activeID = useActiveState('l13');
   return /*#__PURE__*/react_default.a.createElement(pageLayout["c" /* Page */], {
-    className: "btb-about"
-  }, /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
-    className: "about_title grid-row direction-column align-items-center"
-  }, /*#__PURE__*/react_default.a.createElement("img", {
-    className: "title_image",
-    src: BTB_React,
-    alt: "BTB_React"
-  }), /*#__PURE__*/react_default.a.createElement("h1", {
-    className: "title_main hidden-down-md"
-  }, "Black Tool Box Laboratory"), /*#__PURE__*/react_default.a.createElement("h1", {
-    className: "title_main hidden-up-md"
-  }, "BTB Lab."), /*#__PURE__*/react_default.a.createElement("p", {
-    className: "title_sub"
-  }, "With React")), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], null, /*#__PURE__*/react_default.a.createElement("span", null, "React is the first framework of javascript when I join to the Frontend develipment club. Before that jQuery of curse is my first using when I am a software engineer. Here I aim to develop packages made with React. They are designed with basic logic for high degrees of freedom of customization and low dependency. While using, if you find some questions, bugs or issues. Or having some great ideas. Please feel free to let me know.")), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
-    className: "grid-row justify-content-center"
-  }, /*#__PURE__*/react_default.a.createElement("a", {
-    href: "mailto://vannoel0628@gmail.com",
-    target: "_blank"
-  }, /*#__PURE__*/react_default.a.createElement(index_es["FontAwesomeIcon"], {
-    icon: ['far', 'envelope'],
-    fixedWidth: true
-  }), /*#__PURE__*/react_default.a.createElement("span", null, "vannoel0628@gmail.com"))), /*#__PURE__*/react_default.a.createElement(pageLayout["b" /* Divider */], null), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
-    className: "grid-row justify-content-center"
-  }, /*#__PURE__*/react_default.a.createElement("span", null, "If you like all the works in BTB Lab. Please "), /*#__PURE__*/react_default.a.createElement("a", {
-    href: "https://www.paypal.me/vannoel0628",
-    target: "_blank"
-  }, /*#__PURE__*/react_default.a.createElement(index_es["FontAwesomeIcon"], {
-    icon: ['fab', 'paypal'],
-    fixedWidth: true
-  }), /*#__PURE__*/react_default.a.createElement("span", null, "buy me a coffee")), /*#__PURE__*/react_default.a.createElement("span", null, ". ")), /*#__PURE__*/react_default.a.createElement(pageLayout["b" /* Divider */], null), Object.keys(packageObj["a" /* default */]).map(function (entry) {
-    return /*#__PURE__*/react_default.a.createElement("div", {
-      key: entry
-    }, entry !== 'list' ? /*#__PURE__*/react_default.a.createElement(pageLayout["b" /* Divider */], null) : [], /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
-      className: "about_package"
-    }, /*#__PURE__*/react_default.a.createElement(about_package, {
-      info: packageObj["a" /* default */][entry],
-      redirectRoute: _redirectRoute
-    })));
-  }));
+    className: "btb-pkg-list-example-style"
+  }, /*#__PURE__*/react_default.a.createElement(pageLayout["d" /* PageHead */], {
+    title: 'Example - Style',
+    clickBtn: functions["a" /* openLink */],
+    btnList: packageInfo.btnList
+  }), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
+    head: /*#__PURE__*/react_default.a.createElement(react_default.a.Fragment, null, "Version: ".concat(packageInfo.version), /*#__PURE__*/react_default.a.createElement("br", null), "Release Date: ".concat(packageInfo.updated))
+  }, /*#__PURE__*/react_default.a.createElement("p", null, packageInfo.description)), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
+    head: "EXAMPLE"
+  }, /*#__PURE__*/react_default.a.createElement("p", {
+    className: "example_activeID"
+  }, "Active ID: ".concat(activeID.value)), /*#__PURE__*/react_default.a.createElement(esm["a" /* default */], {
+    dataList: _listData,
+    styleObj: _styleObj,
+    activeID: activeID.value,
+    onEntryClick: activeID.onChange
+  })), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
+    head: "CONFIGURATION"
+  }, /*#__PURE__*/react_default.a.createElement(pageLayout["a" /* Block */], {
+    title: "Render"
+  }, /*#__PURE__*/react_default.a.createElement("pre", {
+    className: "page_pre"
+  }, preRender)), /*#__PURE__*/react_default.a.createElement(pageLayout["a" /* Block */], {
+    title: "listData"
+  }, /*#__PURE__*/react_default.a.createElement("pre", {
+    className: "page_pre"
+  }, preListData)), /*#__PURE__*/react_default.a.createElement(pageLayout["a" /* Block */], {
+    title: "activeID & useState"
+  }, /*#__PURE__*/react_default.a.createElement("pre", {
+    className: "page_pre"
+  }, preActiveID_EntryClick)), /*#__PURE__*/react_default.a.createElement(pageLayout["a" /* Block */], {
+    title: "styleObj"
+  }, /*#__PURE__*/react_default.a.createElement("pre", {
+    className: "page_pre"
+  }, preStyleObj))));
 };
 
-/* harmony default export */ var about_About = (Object(react_router["o" /* withRouter */])(About_About));
-// CONCATENATED MODULE: ./src/routes/AboutContainer.jsx
+function useActiveState(defaultSate) {
+  var _useState = Object(react["useState"])(defaultSate),
+      _useState2 = _slicedToArray(_useState, 2),
+      value = _useState2[0],
+      setState = _useState2[1];
+
+  return {
+    value: value,
+    onChange: function onChange(data) {
+      setState(data.id);
+    }
+  };
+}
+
+/* harmony default export */ var exampleStyle = (exampleStyle_ExampleStyle);
+// CONCATENATED MODULE: ./src/routes/packages/list/ExampleStyleContainer.jsx
 
 
 
-var AboutContainer_AboutContainer = function AboutContainer() {
-  return /*#__PURE__*/react_default.a.createElement(about_About, null);
+var ExampleStyleContainer_ExampleStyleContaier = function ExampleStyleContaier() {
+  return /*#__PURE__*/react_default.a.createElement(exampleStyle, null);
 };
 
-/* harmony default export */ var routes_AboutContainer = __webpack_exports__["default"] = (AboutContainer_AboutContainer);
+/* harmony default export */ var ExampleStyleContainer = __webpack_exports__["default"] = (ExampleStyleContainer_ExampleStyleContaier);
 
 /***/ })
 

@@ -170,14 +170,22 @@ var packageObj = {
     routename: _routeMap__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].PACKAGES_LIST_BASIC,
     description: 'This module of list creator made with React can do the help to make a list or mane component to our page. Normally it is a list make. But with some trigger action it can be a menu maker for route redirection or other feature we need.',
     version: '2.1.6',
-    updated: 'Jun, 14, 2020'
+    updated: 'Jun, 14, 2020',
+    link: {
+      github: 'https://github.com/BlackToolBoxLaboratory/react-list',
+      npm: 'https://www.npmjs.com/package/@blacktoolbox/react-list'
+    }
   },
   table: {
     name: 'Table',
     routename: _routeMap__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].PACKAGES_TABLE_BASIC,
     description: 'This module of table creator made with React can do the help to make a table component to our page. It has modes in list and info which are different ways to show data.',
-    version: '1.0.1',
-    updated: 'Jun, 13, 2020'
+    version: '1.1.0',
+    updated: 'Jun, 16, 2020',
+    link: {
+      github: 'https://github.com/BlackToolBoxLaboratory/react-table',
+      npm: 'https://www.npmjs.com/package/@blacktoolbox/react-table'
+    }
   }
 };
 /* harmony default export */ __webpack_exports__["a"] = (packageObj);
@@ -207,7 +215,7 @@ var packageObj = __webpack_require__(38);
 // EXTERNAL MODULE: ./src/utils/functions.js
 var functions = __webpack_require__(36);
 
-// CONCATENATED MODULE: ./src/components/packages/list/exampleMenu.jsx
+// CONCATENATED MODULE: ./src/components/packages/list/exampleList.jsx
 
 
 
@@ -216,50 +224,56 @@ var functions = __webpack_require__(36);
 var packageInfo = {
   'version': packageObj["a" /* default */].list.version,
   'updated': packageObj["a" /* default */].list.updated,
-  'description': 'When we enable the collapseEnable with datalist, we will get a simple menu to use. And it will trigger the onToggle event function while clicked for Collapsing or Expending. Every entry can be active status after being clicked. Surely it will trigger the onEntryClick event function too. Besides for a menu, it can tag one as defaultActiveID. Also use the v-model to listen the value from activeID',
+  'description': 'Here is a very simple example for a list, if we just give a data list.',
   'btnList': [{
     'id': 'github',
     'fa': ['fab', 'github'],
-    'url': 'https://github.com/BlackToolBoxLaboratory/react-list'
+    'url': packageObj["a" /* default */].list.link.github
   }, {
     'id': 'npm',
     'fa': ['fab', 'npm'],
-    'url': 'https://www.npmjs.com/package/@blacktoolbox/react-list'
+    'url': packageObj["a" /* default */].list.link.npm
   }]
 };
-var _menuData = [{
-  id: 'f1',
-  title: 'Folder: 1',
+var _listData = [{
+  id: 'b1',
+  title: 'Branch: 1',
   children: [{
-    id: 't11',
-    title: 'Menu: 1-1'
+    id: 'l11',
+    title: 'Leaf: 1-1'
   }, {
-    id: 't12',
-    title: 'Menu: 1-2'
+    id: 'b12',
+    title: 'Branch: 1-2',
+    children: [{
+      id: 'l121',
+      title: 'Leaf: 1-2-1'
+    }, {
+      id: 'l122',
+      title: 'Leaf: 1-2-2'
+    }]
+  }, {
+    id: 'l13',
+    title: 'Leaf: 1-3'
   }]
 }, {
-  id: 'f2',
-  title: 'Folder: 2',
-  defaultCollapsed: true,
+  id: 'b2',
+  title: 'Branch: 2',
   children: [{
-    id: 't21',
-    title: 'Menu: 2-1'
+    id: 'l21',
+    title: 'Leaf: 2-1'
   }, {
-    id: 't22',
-    title: 'Menu: 2-2'
-  }, {
-    id: 't23',
-    title: 'Menu: 2-3'
+    id: 'l22',
+    title: 'Leaf: 2-2'
   }]
 }];
-var preRender = "<btb-react-list dataList={menuData} />";
-var preListData = "const menuData = [\n  { id: 'f1', title: 'Folder: 1', children: [\n          { id: 't11', title: 'Menu: 1-1' },\n          { id: 't12', title: 'Menu: 1-2' }\n  ]},\n  { id: 'f2', title: 'Folder: 2', defaultCollapsed: true, children: [\n          { id: 't21', title: 'Menu: 2-1' },\n          { id: 't22', title: 'Menu: 2-2' },\n          { id: 't23', title: 'Menu: 2-3' }\n  ]}\n]";
+var preRender = "<btb-react-list dataList={listData} />";
+var preListData = "const listData = [\n  { id: 'b1', title: 'Branch: 1', children: [\n          { id: 'l11', title: 'Leaf: 1-1' },\n          { id: 'b12', title: 'Branch: 1-2', children: [\n                  { id: 'l121', title: 'Leaf: 1-2-1' },\n                  { id: 'l122', title: 'Leaf: 1-2-2' }\n          ]},\n          { id: 'l13', title: 'Leaf: 1-3' }\n  ]},\n  { id: 'b2', title: 'Branch: 2', children: [\n          { id: 'l21', title: 'Leaf: 2-1' },\n          { id: 'l22', title: 'Leaf: 2-2' }\n  ]}\n]";
 
-var exampleMenu_ExampleMenu = function ExampleMenu() {
+var exampleList_ExampleList = function ExampleList() {
   return /*#__PURE__*/react_default.a.createElement(pageLayout["c" /* Page */], {
-    className: "btb-pkg-list-example-menu"
+    className: "btb-pkg-list-example-list"
   }, /*#__PURE__*/react_default.a.createElement(pageLayout["d" /* PageHead */], {
-    title: 'Example - Menu',
+    title: 'Example - List',
     clickBtn: functions["a" /* openLink */],
     btnList: packageInfo.btnList
   }), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
@@ -267,8 +281,7 @@ var exampleMenu_ExampleMenu = function ExampleMenu() {
   }, /*#__PURE__*/react_default.a.createElement("p", null, packageInfo.description)), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
     head: "EXAMPLE"
   }, /*#__PURE__*/react_default.a.createElement(esm["a" /* default */], {
-    dataList: _menuData,
-    collapseEnable: true
+    dataList: _listData
   })), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
     head: "CONFIGURATION"
   }, /*#__PURE__*/react_default.a.createElement(pageLayout["a" /* Block */], {
@@ -276,22 +289,22 @@ var exampleMenu_ExampleMenu = function ExampleMenu() {
   }, /*#__PURE__*/react_default.a.createElement("pre", {
     className: "page_pre"
   }, preRender)), /*#__PURE__*/react_default.a.createElement(pageLayout["a" /* Block */], {
-    title: "menuData"
+    title: "listData"
   }, /*#__PURE__*/react_default.a.createElement("pre", {
     className: "page_pre"
   }, preListData))));
 };
 
-/* harmony default export */ var exampleMenu = (exampleMenu_ExampleMenu);
-// CONCATENATED MODULE: ./src/routes/packages/list/ExampleMenuContainer.jsx
+/* harmony default export */ var exampleList = (exampleList_ExampleList);
+// CONCATENATED MODULE: ./src/routes/packages/list/ExampleListContainer.jsx
 
 
 
-var ExampleMenuContainer_ExampleMenuContaier = function ExampleMenuContaier() {
-  return /*#__PURE__*/react_default.a.createElement(exampleMenu, null);
+var ExampleListContainer_ExampleListContaier = function ExampleListContaier() {
+  return /*#__PURE__*/react_default.a.createElement(exampleList, null);
 };
 
-/* harmony default export */ var ExampleMenuContainer = __webpack_exports__["default"] = (ExampleMenuContainer_ExampleMenuContaier);
+/* harmony default export */ var ExampleListContainer = __webpack_exports__["default"] = (ExampleListContainer_ExampleListContaier);
 
 /***/ })
 
