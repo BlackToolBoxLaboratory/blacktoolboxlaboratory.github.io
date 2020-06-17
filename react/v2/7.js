@@ -277,7 +277,7 @@ var pageInfo = _objectSpread(_objectSpread({}, packageInfo["a" /* default */]), 
 var preRender = "<BTBTable \n        mode=\"compare\" \n        headData={headData} \n        bodyData={bodyData}\n        slotObj={slotObj}/>";
 var preHeadData = "const headDate = [\n  {name : 'Name', id : 'name' },\n  {name : 'Type', id : 'devType' },\n  {name : 'OS', id : 'osType' },\n  {name : 'IP', id : 'ipAddr' },\n  {name : 'MAC', id : 'macAddr' },\n  {name : 'Traffic(tx / rx)', id : 'traffic' },\n  {name : 'Statue', id : 'statusDesc'}\n];";
 var preBodyData = "const bodyData = [\n  {\n    name : 'Device 1',  \n    devType : 'phone',   \n    osType : 'ios',      \n    ipAddr : '192.168.0.50',   \n    macAddr : 'B4:A2:07:44:55:2A', \n    traffic : '1.7 MB / 45 KB', \n    status : 0, \n    statusDesc : 'Disconnected'\n  },\n  {\n    name : 'Device 2',  \n    devType : 'notebook',   \n    osType : 'windows',      \n    ipAddr : '192.168.0.52',   \n    macAddr : 'B4:A2:07:44:DD:FF', \n    traffic : '4.8 MB / 27 KB', \n    status : 0, \n    statusDesc : 'Disconnected'\n  }\n];";
-var preSlotObj = "const slotObj = {\n  'th-name'   : 'Device Name',\n  'th-ipAddr' : (\n    <span>\n      {'IP Link '}\n      <FAI className=\"item_button\" icon={['fas', 'external-link-alt']} fixedWidth />\n    </span>\n  ),\n  'td-ipAddr' : (data, column) => {\n    console.log('test', data, column);\n    return (\n      <a href={`http://${data[column.id]}`} target=\"_blank\">\n        {data[column.id]}\n      </a>\n    );\n  }\n};";
+var preSlotObj = "const slotObj = {\n  'th-name'   : 'Device Name',\n  'th-ipAddr' : (\n    <span>\n      {'IP Link '}\n      <FAI className=\"item_button\" icon={['fas', 'external-link-alt']} fixedWidth />\n    </span>\n  ),\n  'td-ipAddr' : (data, column) => {\n    return (\n      <a href={`http://${data[column.id]}`} target=\"_blank\">\n        {data[column.id]}\n      </a>\n    );\n  }\n};";
 var tableHeadArr_property = [{
   name: 'Name',
   id: 'name'
@@ -327,7 +327,6 @@ var slotObj = {
     fixedWidth: true
   })),
   'td-ipAddr': function tdIpAddr(data, column) {
-    console.log('test', data, column);
     return /*#__PURE__*/react_default.a.createElement("a", {
       href: "http://".concat(data[column.id]),
       target: "_blank"
@@ -341,7 +340,7 @@ var ExampleSlot_ExampleSlot = function ExampleSlot() {
   }, /*#__PURE__*/react_default.a.createElement(pageLayout["d" /* PageHead */], {
     title: pageInfo.title,
     clickBtn: functions["a" /* openLink */],
-    btnList: pageInfo.linkList
+    linkList: pageInfo.linkList
   }), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
     head: /*#__PURE__*/react_default.a.createElement(react_default.a.Fragment, null, "Version: ".concat(pageInfo.version), /*#__PURE__*/react_default.a.createElement("br", null), "Release Date: ".concat(pageInfo.updated))
   }, /*#__PURE__*/react_default.a.createElement("p", null, pageInfo.description)), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
