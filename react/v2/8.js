@@ -339,7 +339,7 @@ var ExampleStyle_ExampleStyle = function ExampleStyle() {
   }, /*#__PURE__*/react_default.a.createElement(pageLayout["d" /* PageHead */], {
     title: pageInfo.title,
     clickBtn: functions["a" /* openLink */],
-    btnList: pageInfo.btnList
+    btnList: pageInfo.linkList
   }), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
     head: /*#__PURE__*/react_default.a.createElement(react_default.a.Fragment, null, "Version: ".concat(pageInfo.version), /*#__PURE__*/react_default.a.createElement("br", null), "Release Date: ".concat(pageInfo.updated))
   }, /*#__PURE__*/react_default.a.createElement("p", null, pageInfo.description)), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {

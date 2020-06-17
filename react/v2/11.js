@@ -304,7 +304,7 @@ var ExampleSlot_ExampleSlot = function ExampleSlot() {
   }, /*#__PURE__*/react_default.a.createElement(pageLayout["d" /* PageHead */], {
     title: PageInfo.title,
     clickBtn: functions["a" /* openLink */],
-    btnList: PageInfo.btnList
+    btnList: PageInfo.linkList
   }), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
     head: /*#__PURE__*/react_default.a.createElement(react_default.a.Fragment, null, "Version: ".concat(PageInfo.version), /*#__PURE__*/react_default.a.createElement("br", null), "Release Date: ".concat(PageInfo.updated))
   }, /*#__PURE__*/react_default.a.createElement("p", null, PageInfo.description)), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
