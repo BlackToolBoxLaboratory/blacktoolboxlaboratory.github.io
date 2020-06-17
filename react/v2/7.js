@@ -49,7 +49,7 @@ var PageHead_PageHead = function PageHead(props) {
     className: "module-page-head"
   }, /*#__PURE__*/react_default.a.createElement("div", {
     className: "head_title"
-  }, props.title || ''), (props.btnList || []).map(function (btn) {
+  }, props.title || ''), (props.linkList || []).map(function (btn) {
     return /*#__PURE__*/react_default.a.createElement("div", {
       className: classnames_default()('head_btn', "btn-".concat(btn.id)),
       key: btn.id,
@@ -180,8 +180,8 @@ var packageObj = {
     name: 'Table',
     routename: _routeMap__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].PACKAGES_TABLE_BASIC,
     description: 'This module of table creator made with React can do the help to make a table component to our page. It has modes in list and info which are different ways to show data.',
-    version: '1.1.0',
-    updated: 'Jun, 16, 2020',
+    version: '1.2.0',
+    updated: 'Jun, 18, 2020',
     link: {
       github: 'https://github.com/BlackToolBoxLaboratory/react-table',
       npm: 'https://www.npmjs.com/package/@blacktoolbox/react-table'
@@ -192,7 +192,44 @@ var packageObj = {
 
 /***/ }),
 
-/***/ 49:
+/***/ 39:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(0);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(37);
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_1__);
+function c(t){return(c="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(t){return typeof t}:function(t){return t&&"function"==typeof Symbol&&t.constructor===Symbol&&t!==Symbol.prototype?"symbol":typeof t})(t)}var n=function(t,e){var a;return e.forEach((function(e){a=Object.assign({},a,o(t,e))})),a},o=function(t,e){var a={};return"object"===c(t)&&Object.keys(t).find((function(c){if(c===e)return a=Object.assign({},t[c]),!0})),a},l=react__WEBPACK_IMPORTED_MODULE_0___default.a.createContext(),r=react__WEBPACK_IMPORTED_MODULE_0___default.a.createContext(),s=function(){var c=Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(l);return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("thead",{className:"list_head",style:n(c.styleObj,["list_head"])},c.headData.length?react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr",{className:"head_tr",style:n(c.styleObj,["head_tr"])},c.headData.map((function(e){return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th",{className:classnames__WEBPACK_IMPORTED_MODULE_1___default()("tr_th","th-".concat(e.id)),key:e.id,style:n(c.styleObj,["tr_th","th-".concat(e.id)])},c.slotObj["th-".concat(e.id)]?"function"==typeof c.slotObj["th-".concat(e.id)]?c.slotObj["th-".concat(e.id)](e):c.slotObj["th-".concat(e.id)]:e.name)}))):[])},d=function(){var c=Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(l);return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody",{className:"list_body",style:n(c.styleObj,["list_body"])},c.bodyData.map((function(e,o){return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr",{className:classnames__WEBPACK_IMPORTED_MODULE_1___default()("body_tr","tr-".concat(o)),style:n(c.styleObj,["body_tr","tr-".concat(o)]),key:o},c.headData.map((function(o){return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td",{className:classnames__WEBPACK_IMPORTED_MODULE_1___default()("tr_td","td-".concat(o.id)),style:n(c.styleObj,["tr_td","td-".concat(o.id)]),key:o.id},c.slotObj["td-".concat(o.id)]?"function"==typeof c.slotObj["td-".concat(o.id)]?c.slotObj["td-".concat(o.id)](e,o):c.slotObj["td-".concat(o.id)]:e[o.id])})))})))},i=function(){var a=Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(l);return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table",{className:"table_list",style:n(a.styleObj,["table_list"])},react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(s,null),react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(d,null))},b=function(){var c=Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(l);return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment,null,c.bodyData.map((function(e,o){return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table",{className:classnames__WEBPACK_IMPORTED_MODULE_1___default()("table_info","info-".concat(o)),style:n(c.styleObj,["table_info","info-".concat(o)]),key:"".concat(e.id,"_").concat(o)},react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody",{className:"info_body",style:n(c.styleObj,["info_body"])},c.headData.map((function(o){return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr",{className:classnames__WEBPACK_IMPORTED_MODULE_1___default()("body_tr","tr-".concat(o.id)),style:n(c.styleObj,["body_tr","tr-".concat(o.id)]),key:o.id},react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th",{className:classnames__WEBPACK_IMPORTED_MODULE_1___default()("tr_th","th-".concat(o.id)),style:n(c.styleObj,["tr_th","th-".concat(o.id)])},c.slotObj["th-".concat(o.id)]?"function"==typeof c.slotObj["th-".concat(o.id)]?c.slotObj["th-".concat(o.id)](o):c.slotObj["th-".concat(o.id)]:o.name),react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td",{className:classnames__WEBPACK_IMPORTED_MODULE_1___default()("tr_td","td-".concat(o.id)),style:n(c.styleObj,["tr_td","td-".concat(o.id)])},c.slotObj["td-".concat(o.id)]?"function"==typeof c.slotObj["td-".concat(o.id)]?c.slotObj["td-".concat(o.id)](e,o):c.slotObj["td-".concat(o.id)]:e[o.id]))}))))})))},y=function(){var c=Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(l);return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table",{className:"table_compare",style:n(c.styleObj,["table_compare"])},react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody",{className:"compare_body",style:n(c.styleObj,["compare_body"])},c.headData.map((function(e){return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr",{className:classnames__WEBPACK_IMPORTED_MODULE_1___default()("body_tr","tr-".concat(e.id)),style:n(c.styleObj,["body_tr","tr-".concat(e.id)]),key:e.id},react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th",{className:classnames__WEBPACK_IMPORTED_MODULE_1___default()("tr_th","th-".concat(e.id)),style:n(c.styleObj,["tr_th","th-".concat(e.id)])},c.slotObj["th-".concat(e.id)]?"function"==typeof c.slotObj["th-".concat(e.id)]?c.slotObj["th-".concat(e.id)](e):c.slotObj["th-".concat(e.id)]:e.name),c.bodyData.map((function(o,l){return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td",{className:classnames__WEBPACK_IMPORTED_MODULE_1___default()("tr_td","td-".concat(e.id),"td-".concat(l)),style:n(c.styleObj,["tr_td","td-".concat(e.id),"td-".concat(l)]),key:"".concat(o.id,"_").concat(l)},c.slotObj["td-".concat(e.id)]?"function"==typeof c.slotObj["td-".concat(e.id)]?c.slotObj["td-".concat(e.id)](o,e):c.slotObj["td-".concat(e.id)]:o[e.id])})))}))))};/* harmony default export */ __webpack_exports__["a"] = (function(e){var c,o,s={headData:e.headData||[],bodyData:e.bodyData||[],styleObj:(c=e.styleObj||{},o={},Object.keys(c).forEach((function(t){o[t]={},Object.keys(c[t]).forEach((function(e){var a=e.replace(/-(\w)/g,(function(t,e){return e.toUpperCase()}));o[t][a]=c[t][e]}))})),o),slotObj:e.slotObj||{}},d={clickData:function(t){e.onDataClick&&e.onDataClick(t)}};return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(l.Provider,{value:s},react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(r.Provider,{value:d},react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div",{className:classnames__WEBPACK_IMPORTED_MODULE_1___default()("btb-react-table",e.className),style:n(s.styleObj,["btb-react-table"])},function(){switch(e.mode){case"info":return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(b,null);case"compare":return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(y,null);case"list":default:return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(i,null)}}())))});
+
+
+/***/ }),
+
+/***/ 40:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(38);
+
+var packageInfo = {
+  'version': _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].table.version,
+  'updated': _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].table.updated,
+  'description': _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].table.description,
+  'linkList': [{
+    'id': 'github',
+    'fa': ['fab', 'github'],
+    'url': _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].table.link.github
+  }, {
+    'id': 'npm',
+    'fa': ['fab', 'npm'],
+    'url': _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].table.link.npm
+  }]
+};
+/* harmony default export */ __webpack_exports__["a"] = (packageInfo);
+
+/***/ }),
+
+/***/ 57:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -203,120 +240,149 @@ __webpack_require__.r(__webpack_exports__);
 var react = __webpack_require__(0);
 var react_default = /*#__PURE__*/__webpack_require__.n(react);
 
-// EXTERNAL MODULE: ./node_modules/@blacktoolbox/react-list/esm/index.js
+// EXTERNAL MODULE: ./node_modules/@fortawesome/react-fontawesome/index.es.js
+var index_es = __webpack_require__(29);
+
+// EXTERNAL MODULE: ./node_modules/@blacktoolbox/react-table/esm/index.js
 var esm = __webpack_require__(39);
 
 // EXTERNAL MODULE: ./src/modules/pageLayout/index.js + 5 modules
 var pageLayout = __webpack_require__(35);
 
-// EXTERNAL MODULE: ./src/assets/definitions/packageObj.js
-var packageObj = __webpack_require__(38);
-
 // EXTERNAL MODULE: ./src/utils/functions.js
 var functions = __webpack_require__(36);
 
-// CONCATENATED MODULE: ./src/components/packages/list/exampleSlot.jsx
+// EXTERNAL MODULE: ./src/components/packages/table/packageInfo.js
+var packageInfo = __webpack_require__(40);
+
+// CONCATENATED MODULE: ./src/components/packages/table/ExampleSlot.jsx
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
 
 
 
-var packageInfo = {
-  'version': packageObj["a" /* default */].list.version,
-  'updated': packageObj["a" /* default */].list.updated,
-  'description': 'Sometimes we may want to show the entry from the list by button, input, icon, ... etc. Then we can ultilize this feature about customized slot. To the example as following, I show you how to customized the entry which ID is b2. For the package of list, every single ID corresponding to dataList can be customized by slotObj in String, Node, or Function way.',
-  'btnList': [{
-    'id': 'github',
-    'fa': ['fab', 'github'],
-    'url': packageObj["a" /* default */].list.link.github
-  }, {
-    'id': 'npm',
-    'fa': ['fab', 'npm'],
-    'url': packageObj["a" /* default */].list.link.npm
-  }]
-};
-var _listData = [{
-  id: 'b1',
-  title: 'Branch: 1',
-  children: [{
-    id: 'l11',
-    title: 'Leaf: 1-1'
-  }, {
-    id: 'b12',
-    title: 'Branch: 1-2',
-    children: [{
-      id: 'l121',
-      title: 'Leaf: 1-2-1'
-    }, {
-      id: 'l122',
-      title: 'Leaf: 1-2-2'
-    }]
-  }, {
-    id: 'l13',
-    title: 'Leaf: 1-3'
-  }]
+
+
+
+var pageInfo = _objectSpread(_objectSpread({}, packageInfo["a" /* default */]), {}, {
+  'title': 'Example - Slot',
+  'description': 'Sometimes we may want to show the entry from the list by button, input, icon, ... etc. Then we can ultilize this feature about customized slot. To the example as following, It shows how to customized by slotObj in String, Node, or Function way.'
+});
+
+var preRender = "<BTBTable \n        mode=\"compare\" \n        headData={headData} \n        bodyData={bodyData}\n        slotObj={slotObj}/>";
+var preHeadData = "const headDate = [\n  {name : 'Name', id : 'name' },\n  {name : 'Type', id : 'devType' },\n  {name : 'OS', id : 'osType' },\n  {name : 'IP', id : 'ipAddr' },\n  {name : 'MAC', id : 'macAddr' },\n  {name : 'Traffic(tx / rx)', id : 'traffic' },\n  {name : 'Statue', id : 'statusDesc'}\n];";
+var preBodyData = "const bodyData = [\n  {\n    name : 'Device 1',  \n    devType : 'phone',   \n    osType : 'ios',      \n    ipAddr : '192.168.0.50',   \n    macAddr : 'B4:A2:07:44:55:2A', \n    traffic : '1.7 MB / 45 KB', \n    status : 0, \n    statusDesc : 'Disconnected'\n  },\n  {\n    name : 'Device 2',  \n    devType : 'notebook',   \n    osType : 'windows',      \n    ipAddr : '192.168.0.52',   \n    macAddr : 'B4:A2:07:44:DD:FF', \n    traffic : '4.8 MB / 27 KB', \n    status : 0, \n    statusDesc : 'Disconnected'\n  }\n];";
+var preSlotObj = "const slotObj = {\n  'th-name'   : 'Device Name',\n  'th-ipAddr' : (\n    <span>\n      {'IP Link '}\n      <FAI className=\"item_button\" icon={['fas', 'external-link-alt']} fixedWidth />\n    </span>\n  ),\n  'td-ipAddr' : (data, column) => {\n    console.log('test', data, column);\n    return (\n      <a href={`http://${data[column.id]}`} target=\"_blank\">\n        {data[column.id]}\n      </a>\n    );\n  }\n};";
+var tableHeadArr_property = [{
+  name: 'Name',
+  id: 'name'
 }, {
-  id: 'b2',
-  title: 'Branch: 2',
-  children: [{
-    id: 'l21',
-    title: 'Leaf: 2-1'
-  }, {
-    id: 'l22',
-    title: 'Leaf: 2-2'
-  }]
+  name: 'Type',
+  id: 'devType'
+}, {
+  name: 'OS',
+  id: 'osType'
+}, {
+  name: 'IP',
+  id: 'ipAddr'
+}, {
+  name: 'MAC',
+  id: 'macAddr'
+}, {
+  name: 'Traffic(tx / rx)',
+  id: 'traffic'
+}, {
+  name: 'Statue',
+  id: 'statusDesc'
 }];
-var _slotObj = {
-  'b2': function b2(entry) {
-    return /*#__PURE__*/react_default.a.createElement("div", null, "".concat(entry.id, " overwrited by Function"));
-  },
-  'l22': /*#__PURE__*/react_default.a.createElement("div", null, 'l22 overwrited by Node')
+var tableBodyArr_data = [{
+  name: 'Device 1',
+  devType: 'phone',
+  osType: 'ios',
+  ipAddr: '192.168.0.50',
+  macAddr: 'B4:A2:07:44:55:2A',
+  traffic: '1.7 MB / 45 KB',
+  status: 0,
+  statusDesc: 'Disconnected'
+}, {
+  name: 'Device 2',
+  devType: 'notebook',
+  osType: 'windows',
+  ipAddr: '192.168.0.52',
+  macAddr: 'B4:A2:07:44:DD:FF',
+  traffic: '4.8 MB / 27 KB',
+  status: 0,
+  statusDesc: 'Disconnected'
+}];
+var slotObj = {
+  'th-name': 'Device Name',
+  'th-ipAddr': /*#__PURE__*/react_default.a.createElement("span", null, 'IP Link ', /*#__PURE__*/react_default.a.createElement(index_es["FontAwesomeIcon"], {
+    className: "item_button",
+    icon: ['fas', 'external-link-alt'],
+    fixedWidth: true
+  })),
+  'td-ipAddr': function tdIpAddr(data, column) {
+    console.log('test', data, column);
+    return /*#__PURE__*/react_default.a.createElement("a", {
+      href: "http://".concat(data[column.id]),
+      target: "_blank"
+    }, data[column.id]);
+  }
 };
-var preRender = "<BTBList \n        dataList={listData} \n        slotObj={slotObj}/>";
-var preListData = "const listData = [\n  { id: 'b1', title: 'Branch: 1', children: [\n          { id: 'l11', title: 'Leaf: 1-1' },\n          { id: 'b12', title: 'Branch: 1-2', children: [\n                  { id: 'l121', title: 'Leaf: 1-2-1' },\n                  { id: 'l122', title: 'Leaf: 1-2-2' }\n          ]},\n          { id: 'l13', title: 'Leaf: 1-3' }\n  ]},\n  { id: 'b2', title: 'Branch: 2', children: [\n          { id: 'l21', title: 'Leaf: 2-1' },\n          { id: 'l22', title: 'Leaf: 2-2' }\n  ]}\n]";
-var preSlotObj = "const _slotObj = {\n  'b2': (entry) => {\n    return (\n      <div>\n      {`${entry.id} overwrited by Function`}\n      </div>\n      )\n    },\n    'l22': (\n      <div>\n        {'l22 overwrited by Node'}\n      </div>\n    )\n  }";
 
-var exampleSlot_ExampleSlot = function ExampleSlot() {
+var ExampleSlot_ExampleSlot = function ExampleSlot() {
   return /*#__PURE__*/react_default.a.createElement(pageLayout["c" /* Page */], {
-    className: "btb-pkg-list-example-slot"
+    className: "btb-pkg-table-example-slot"
   }, /*#__PURE__*/react_default.a.createElement(pageLayout["d" /* PageHead */], {
-    title: 'Example - Slot',
+    title: pageInfo.title,
     clickBtn: functions["a" /* openLink */],
-    btnList: packageInfo.btnList
+    btnList: pageInfo.btnList
   }), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
-    head: /*#__PURE__*/react_default.a.createElement(react_default.a.Fragment, null, "Version: ".concat(packageInfo.version), /*#__PURE__*/react_default.a.createElement("br", null), "Release Date: ".concat(packageInfo.updated))
-  }, /*#__PURE__*/react_default.a.createElement("p", null, packageInfo.description)), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
+    head: /*#__PURE__*/react_default.a.createElement(react_default.a.Fragment, null, "Version: ".concat(pageInfo.version), /*#__PURE__*/react_default.a.createElement("br", null), "Release Date: ".concat(pageInfo.updated))
+  }, /*#__PURE__*/react_default.a.createElement("p", null, pageInfo.description)), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
     head: "EXAMPLE"
   }, /*#__PURE__*/react_default.a.createElement(esm["a" /* default */], {
-    dataList: _listData,
-    slotObj: _slotObj
+    className: "table_sample",
+    mode: "compare",
+    headData: tableHeadArr_property,
+    bodyData: tableBodyArr_data,
+    slotObj: slotObj
   })), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
-    head: "CONFIGURATION"
+    head: "SOURCECODE"
   }, /*#__PURE__*/react_default.a.createElement(pageLayout["a" /* Block */], {
-    title: "Render"
+    title: "render"
   }, /*#__PURE__*/react_default.a.createElement("pre", {
     className: "page_pre"
   }, preRender)), /*#__PURE__*/react_default.a.createElement(pageLayout["a" /* Block */], {
-    title: "listData"
+    title: "headData"
   }, /*#__PURE__*/react_default.a.createElement("pre", {
     className: "page_pre"
-  }, preListData)), /*#__PURE__*/react_default.a.createElement(pageLayout["a" /* Block */], {
-    title: "styleObj"
+  }, preHeadData)), /*#__PURE__*/react_default.a.createElement(pageLayout["a" /* Block */], {
+    title: "bodyData"
   }, /*#__PURE__*/react_default.a.createElement("pre", {
+    className: "page_pre"
+  }, preBodyData)), /*#__PURE__*/react_default.a.createElement(pageLayout["a" /* Block */], {
+    title: "slotObj"
+  }, /*#__PURE__*/react_default.a.createElement("p", null, '\'th-name\' shows the customized slot with pure string. \'th-ipAddr\' shows how to customized with Node. And \'td-ipAddr\' shows how to customized with function.'), /*#__PURE__*/react_default.a.createElement("pre", {
     className: "page_pre"
   }, preSlotObj))));
 };
 
-/* harmony default export */ var exampleSlot = (exampleSlot_ExampleSlot);
-// CONCATENATED MODULE: ./src/routes/packages/list/ExampleSlotContainer.jsx
+/* harmony default export */ var table_ExampleSlot = (ExampleSlot_ExampleSlot);
+// CONCATENATED MODULE: ./src/routes/packages/table/ExampleSlotContainer.jsx
 
 
 
-var ExampleSlotContainer_ExampleSlotContaier = function ExampleSlotContaier() {
-  return /*#__PURE__*/react_default.a.createElement(exampleSlot, null);
+var ExampleSlotContainer_ExampleSlotContainer = function ExampleSlotContainer() {
+  return /*#__PURE__*/react_default.a.createElement(table_ExampleSlot, null);
 };
 
-/* harmony default export */ var ExampleSlotContainer = __webpack_exports__["default"] = (ExampleSlotContainer_ExampleSlotContaier);
+/* harmony default export */ var table_ExampleSlotContainer = __webpack_exports__["default"] = (ExampleSlotContainer_ExampleSlotContainer);
 
 /***/ })
 

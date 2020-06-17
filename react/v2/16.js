@@ -1,4 +1,4 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[15],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[16],{
 
 /***/ 35:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -158,7 +158,7 @@ var openLink = function openLink(link) {
 
 /***/ }),
 
-/***/ 45:
+/***/ 46:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -175,45 +175,45 @@ var pageLayout = __webpack_require__(35);
 // EXTERNAL MODULE: ./src/utils/functions.js
 var functions = __webpack_require__(36);
 
-// CONCATENATED MODULE: ./src/components/applications/Languages.jsx
+// CONCATENATED MODULE: ./src/components/applications/Validator.jsx
 
 
 
 var packageInfo = {
-  'version': '1.1.1',
+  'version': '1.0.0',
   'updated': 'Jan. 20, 2020',
-  'description': 'For developing the web-side of international services, we usually have the requirement to develop with the feature of multiple-languages supported. We already have a lot of masterpice such like i18n. But here we created our own multiple-languages package for lowing down the dependencies. And after adding a little code, we can apply it with other javascript frameworks like React, Vue ... and so on.',
+  'description': 'Most form UI packages have their own validator to use for convenience. But sometimes we don\'t use only one UI packages to develop every single project. So we try to create the validator generally to adapt to every kind of form UI packages to allow us using just one type of validator coding patteren to develop with every UI packages.',
   'btnList': [{
     'id': 'github',
     'fa': ['fab', 'github'],
-    'url': 'https://github.com/BlackToolBoxLaboratory/prototype-languages'
+    'url': 'https://github.com/BlackToolBoxLaboratory/prototype-validator'
   }, {
     'id': 'npm',
     'fa': ['fab', 'npm'],
-    'url': 'https://www.npmjs.com/package/@blacktoolbox/prototype-languages'
+    'url': 'https://www.npmjs.com/package/@blacktoolbox/prototype-validator'
   }]
 };
 
-var Languages_Languages = function Languages() {
+var Validator_Validator = function Validator() {
   return /*#__PURE__*/react_default.a.createElement(pageLayout["c" /* Page */], {
-    className: "btb-app-languages"
+    className: "btb-app-validator"
   }, /*#__PURE__*/react_default.a.createElement(pageLayout["d" /* PageHead */], {
-    title: 'Languages Application',
+    title: 'Validator Application',
     clickBtn: functions["a" /* openLink */],
     btnList: packageInfo.btnList
   }));
 };
 
-/* harmony default export */ var applications_Languages = (Languages_Languages);
-// CONCATENATED MODULE: ./src/routes/applications/LanguagesContainer.jsx
+/* harmony default export */ var applications_Validator = (Validator_Validator);
+// CONCATENATED MODULE: ./src/routes/applications/ValidatorContainer.jsx
 
 
 
-var LanguagesContainer_LanguagesContaier = function LanguagesContaier() {
-  return /*#__PURE__*/react_default.a.createElement(applications_Languages, null);
+var ValidatorContainer_ValidatorContaier = function ValidatorContaier() {
+  return /*#__PURE__*/react_default.a.createElement(applications_Validator, null);
 };
 
-/* harmony default export */ var LanguagesContainer = __webpack_exports__["default"] = (LanguagesContainer_LanguagesContaier);
+/* harmony default export */ var ValidatorContainer = __webpack_exports__["default"] = (ValidatorContainer_ValidatorContaier);
 
 /***/ })
 

@@ -5092,6 +5092,11 @@ var routeMap = {
   'PACKAGES_LIST_EXAMPLE_SLOT': '/packages/list/example/slot',
   'PACKAGES_TABLE': '/packages/table',
   'PACKAGES_TABLE_BASIC': '/packages/table/basic',
+  'PACKAGES_TABLE_EXAMPLE_LIST': '/packages/table/example/list',
+  'PACKAGES_TABLE_EXAMPLE_INFO': '/packages/table/example/info',
+  'PACKAGES_TABLE_EXAMPLE_COMPARE': '/packages/table/example/compare',
+  'PACKAGES_TABLE_EXAMPLE_STYLE': '/packages/table/example/style',
+  'PACKAGES_TABLE_EXAMPLE_SLOT': '/packages/table/example/slot',
   'APPLICATIONS': '/applications',
   'APPLICATIONS_LANGUAGES': '/applications/languages',
   'APPLICATIONS_VALIDATOR': '/applications/validator'
@@ -16039,7 +16044,7 @@ var src_App = function App() {
   })), /*#__PURE__*/react_default.a.createElement(react_router["d" /* Route */], {
     path: routeMap["a" /* default */].HOME,
     component: /*#__PURE__*/react_default.a.lazy(function () {
-      return __webpack_require__.e(/* import() */ 4).then(__webpack_require__.bind(null, 53));
+      return __webpack_require__.e(/* import() */ 13).then(__webpack_require__.bind(null, 60));
     })
   }))));
 };

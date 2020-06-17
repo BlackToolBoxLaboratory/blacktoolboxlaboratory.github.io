@@ -49,7 +49,7 @@ var PageHead_PageHead = function PageHead(props) {
     className: "module-page-head"
   }, /*#__PURE__*/react_default.a.createElement("div", {
     className: "head_title"
-  }, props.title || ''), (props.btnList || []).map(function (btn) {
+  }, props.title || ''), (props.linkList || []).map(function (btn) {
     return /*#__PURE__*/react_default.a.createElement("div", {
       className: classnames_default()('head_btn', "btn-".concat(btn.id)),
       key: btn.id,
@@ -180,8 +180,8 @@ var packageObj = {
     name: 'Table',
     routename: _routeMap__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].PACKAGES_TABLE_BASIC,
     description: 'This module of table creator made with React can do the help to make a table component to our page. It has modes in list and info which are different ways to show data.',
-    version: '1.1.0',
-    updated: 'Jun, 16, 2020',
+    version: '1.2.0',
+    updated: 'Jun, 18, 2020',
     link: {
       github: 'https://github.com/BlackToolBoxLaboratory/react-table',
       npm: 'https://www.npmjs.com/package/@blacktoolbox/react-table'
@@ -192,7 +192,44 @@ var packageObj = {
 
 /***/ }),
 
-/***/ 47:
+/***/ 39:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(0);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(37);
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_1__);
+function c(t){return(c="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(t){return typeof t}:function(t){return t&&"function"==typeof Symbol&&t.constructor===Symbol&&t!==Symbol.prototype?"symbol":typeof t})(t)}var n=function(t,e){var a;return e.forEach((function(e){a=Object.assign({},a,o(t,e))})),a},o=function(t,e){var a={};return"object"===c(t)&&Object.keys(t).find((function(c){if(c===e)return a=Object.assign({},t[c]),!0})),a},l=react__WEBPACK_IMPORTED_MODULE_0___default.a.createContext(),r=react__WEBPACK_IMPORTED_MODULE_0___default.a.createContext(),s=function(){var c=Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(l);return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("thead",{className:"list_head",style:n(c.styleObj,["list_head"])},c.headData.length?react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr",{className:"head_tr",style:n(c.styleObj,["head_tr"])},c.headData.map((function(e){return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th",{className:classnames__WEBPACK_IMPORTED_MODULE_1___default()("tr_th","th-".concat(e.id)),key:e.id,style:n(c.styleObj,["tr_th","th-".concat(e.id)])},c.slotObj["th-".concat(e.id)]?"function"==typeof c.slotObj["th-".concat(e.id)]?c.slotObj["th-".concat(e.id)](e):c.slotObj["th-".concat(e.id)]:e.name)}))):[])},d=function(){var c=Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(l);return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody",{className:"list_body",style:n(c.styleObj,["list_body"])},c.bodyData.map((function(e,o){return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr",{className:classnames__WEBPACK_IMPORTED_MODULE_1___default()("body_tr","tr-".concat(o)),style:n(c.styleObj,["body_tr","tr-".concat(o)]),key:o},c.headData.map((function(o){return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td",{className:classnames__WEBPACK_IMPORTED_MODULE_1___default()("tr_td","td-".concat(o.id)),style:n(c.styleObj,["tr_td","td-".concat(o.id)]),key:o.id},c.slotObj["td-".concat(o.id)]?"function"==typeof c.slotObj["td-".concat(o.id)]?c.slotObj["td-".concat(o.id)](e,o):c.slotObj["td-".concat(o.id)]:e[o.id])})))})))},i=function(){var a=Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(l);return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table",{className:"table_list",style:n(a.styleObj,["table_list"])},react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(s,null),react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(d,null))},b=function(){var c=Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(l);return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment,null,c.bodyData.map((function(e,o){return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table",{className:classnames__WEBPACK_IMPORTED_MODULE_1___default()("table_info","info-".concat(o)),style:n(c.styleObj,["table_info","info-".concat(o)]),key:"".concat(e.id,"_").concat(o)},react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody",{className:"info_body",style:n(c.styleObj,["info_body"])},c.headData.map((function(o){return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr",{className:classnames__WEBPACK_IMPORTED_MODULE_1___default()("body_tr","tr-".concat(o.id)),style:n(c.styleObj,["body_tr","tr-".concat(o.id)]),key:o.id},react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th",{className:classnames__WEBPACK_IMPORTED_MODULE_1___default()("tr_th","th-".concat(o.id)),style:n(c.styleObj,["tr_th","th-".concat(o.id)])},c.slotObj["th-".concat(o.id)]?"function"==typeof c.slotObj["th-".concat(o.id)]?c.slotObj["th-".concat(o.id)](o):c.slotObj["th-".concat(o.id)]:o.name),react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td",{className:classnames__WEBPACK_IMPORTED_MODULE_1___default()("tr_td","td-".concat(o.id)),style:n(c.styleObj,["tr_td","td-".concat(o.id)])},c.slotObj["td-".concat(o.id)]?"function"==typeof c.slotObj["td-".concat(o.id)]?c.slotObj["td-".concat(o.id)](e,o):c.slotObj["td-".concat(o.id)]:e[o.id]))}))))})))},y=function(){var c=Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(l);return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table",{className:"table_compare",style:n(c.styleObj,["table_compare"])},react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody",{className:"compare_body",style:n(c.styleObj,["compare_body"])},c.headData.map((function(e){return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr",{className:classnames__WEBPACK_IMPORTED_MODULE_1___default()("body_tr","tr-".concat(e.id)),style:n(c.styleObj,["body_tr","tr-".concat(e.id)]),key:e.id},react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th",{className:classnames__WEBPACK_IMPORTED_MODULE_1___default()("tr_th","th-".concat(e.id)),style:n(c.styleObj,["tr_th","th-".concat(e.id)])},c.slotObj["th-".concat(e.id)]?"function"==typeof c.slotObj["th-".concat(e.id)]?c.slotObj["th-".concat(e.id)](e):c.slotObj["th-".concat(e.id)]:e.name),c.bodyData.map((function(o,l){return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td",{className:classnames__WEBPACK_IMPORTED_MODULE_1___default()("tr_td","td-".concat(e.id),"td-".concat(l)),style:n(c.styleObj,["tr_td","td-".concat(e.id),"td-".concat(l)]),key:"".concat(o.id,"_").concat(l)},c.slotObj["td-".concat(e.id)]?"function"==typeof c.slotObj["td-".concat(e.id)]?c.slotObj["td-".concat(e.id)](o,e):c.slotObj["td-".concat(e.id)]:o[e.id])})))}))))};/* harmony default export */ __webpack_exports__["a"] = (function(e){var c,o,s={headData:e.headData||[],bodyData:e.bodyData||[],styleObj:(c=e.styleObj||{},o={},Object.keys(c).forEach((function(t){o[t]={},Object.keys(c[t]).forEach((function(e){var a=e.replace(/-(\w)/g,(function(t,e){return e.toUpperCase()}));o[t][a]=c[t][e]}))})),o),slotObj:e.slotObj||{}},d={clickData:function(t){e.onDataClick&&e.onDataClick(t)}};return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(l.Provider,{value:s},react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(r.Provider,{value:d},react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div",{className:classnames__WEBPACK_IMPORTED_MODULE_1___default()("btb-react-table",e.className),style:n(s.styleObj,["btb-react-table"])},function(){switch(e.mode){case"info":return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(b,null);case"compare":return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(y,null);case"list":default:return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(i,null)}}())))});
+
+
+/***/ }),
+
+/***/ 40:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(38);
+
+var packageInfo = {
+  'version': _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].table.version,
+  'updated': _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].table.updated,
+  'description': _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].table.description,
+  'linkList': [{
+    'id': 'github',
+    'fa': ['fab', 'github'],
+    'url': _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].table.link.github
+  }, {
+    'id': 'npm',
+    'fa': ['fab', 'npm'],
+    'url': _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].table.link.npm
+  }]
+};
+/* harmony default export */ __webpack_exports__["a"] = (packageInfo);
+
+/***/ }),
+
+/***/ 53:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -203,103 +240,196 @@ __webpack_require__.r(__webpack_exports__);
 var react = __webpack_require__(0);
 var react_default = /*#__PURE__*/__webpack_require__.n(react);
 
-// EXTERNAL MODULE: ./node_modules/@blacktoolbox/react-list/esm/index.js
+// EXTERNAL MODULE: ./node_modules/@blacktoolbox/react-table/esm/index.js
 var esm = __webpack_require__(39);
 
 // EXTERNAL MODULE: ./src/modules/pageLayout/index.js + 5 modules
 var pageLayout = __webpack_require__(35);
 
-// EXTERNAL MODULE: ./src/assets/definitions/packageObj.js
-var packageObj = __webpack_require__(38);
-
 // EXTERNAL MODULE: ./src/utils/functions.js
 var functions = __webpack_require__(36);
 
-// CONCATENATED MODULE: ./src/components/packages/list/exampleMenu.jsx
+// EXTERNAL MODULE: ./src/components/packages/table/packageInfo.js
+var packageInfo = __webpack_require__(40);
+
+// CONCATENATED MODULE: ./src/components/packages/table/ExampleList.jsx
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
 
 
 
-var packageInfo = {
-  'version': packageObj["a" /* default */].list.version,
-  'updated': packageObj["a" /* default */].list.updated,
-  'description': 'When we enable the collapseEnable with datalist, we will get a simple menu to use. And it will trigger the onToggle event function while clicked for Collapsing or Expending. Every entry can be active status after being clicked. Surely it will trigger the onEntryClick event function too. Besides for a menu, it can tag one as defaultActiveID. Also use the v-model to listen the value from activeID',
-  'btnList': [{
-    'id': 'github',
-    'fa': ['fab', 'github'],
-    'url': packageObj["a" /* default */].list.link.github
-  }, {
-    'id': 'npm',
-    'fa': ['fab', 'npm'],
-    'url': packageObj["a" /* default */].list.link.npm
-  }]
-};
-var _menuData = [{
-  id: 'f1',
-  title: 'Folder: 1',
-  children: [{
-    id: 't11',
-    title: 'Menu: 1-1'
-  }, {
-    id: 't12',
-    title: 'Menu: 1-2'
-  }]
+
+
+var pageInfo = _objectSpread(_objectSpread({}, packageInfo["a" /* default */]), {}, {
+  'title': 'Example - List',
+  'description': 'Here has very simple example to show how to use the list mode.'
+});
+
+var preRender = "<BTBTable\n        mode=\"list\" \n        headData={headData} \n        bodyData={bodyData}/>";
+var preHeadData = "const headData = [\n  {name : 'Name', id : 'name'},\n  {name : 'Type', id : 'devType'},\n  {name : 'OS', id : 'osType'},\n  {name : 'IP', id : 'ipAddr'},\n  {name : 'MAC', id : 'macAddr'},\n  {name : 'Traffic(tx / rx)', id : 'traffic'},\n  {name : 'Statue', id : 'statusDesc'}\n];";
+var preBodyData = "const bodyData = [\n  {name : 'Device 1', devType : 'phone', osType : 'ios', ipAddr : '192.168.0.50', macAddr : 'B4:A2:07:44:55:2A', traffic : '0 MB / 0 KB', status : 0, statusDesc : 'Disconnected'},\n  {name : 'Device 2', devType : 'switch', osType : 'linux', ipAddr : '192.168.0.37', macAddr : '7E:EF:02:44:AE:25', traffic : '2.7 MB / 263 KB', status : 1, statusDesc : 'Connected'},\n  {name : 'Device 3', devType : 'ap', osType : 'linux', ipAddr : '192.168.0.121', macAddr : 'EF:2B:15:44:32:B4', traffic : '0 MB / 0 KB', status : 2, statusDesc : 'Locked'},\n  {name : 'Device 4', devType : 'phone', osType : 'android',  ipAddr : '192.168.0.9', macAddr : 'F5:22:33:44:55:35', traffic : '0 MB / 0 KB', status : 0, statusDesc : 'Disconnected'},\n  {name : 'Device 5', devType : 'ap', osType : 'linux', ipAddr : '192.168.0.27', macAddr : '7E:EF:B2:44:28:3B', traffic : '1.3 MB / 725 KB', status : 1, statusDesc : 'Connected'},\n  {name : 'Device 6', devType : 'pc', osType : 'windows', ipAddr : '192.168.0.11', macAddr : '11:22:24:44:5E:90', traffic : '0 MB / 0 KB', status : 2, statusDesc : 'Locked'},\n  {name : 'Device 7', devType : 'phone', osType : 'ios', ipAddr : '192.168.0.6', macAddr : '11:FF:33:44:55:A3', traffic : '1.2 MB / 45 KB', status : 1, statusDesc : 'Connected'},\n  {name : 'Device 8', devType : 'pc', osType : 'linux', ipAddr : '192.168.0.3', macAddr : 'B2:FE:B8:44:55:6D', traffic : '4.8 MB / 3.7 MB', status : 1, statusDesc : 'Connected'},\n  {name : 'Device 9', devType : 'pc', osType : 'windows',  ipAddr : '192.168.0.18', macAddr : 'E4:AA:74:44:38:E1', traffic : '0 MB / 0 KB', status : 2, statusDesc : 'Locked'},\n  {name : 'Device 10', devType : 'switch', osType : 'linux', ipAddr : '192.168.0.245', macAddr : 'E2:BA:33:44:48:AB', traffic : '0 MB / 0 KB', status : 0, statusDesc : 'Disconnected'}\n];";
+var tableHeadArr_property = [{
+  name: 'Name',
+  id: 'name'
 }, {
-  id: 'f2',
-  title: 'Folder: 2',
-  defaultCollapsed: true,
-  children: [{
-    id: 't21',
-    title: 'Menu: 2-1'
-  }, {
-    id: 't22',
-    title: 'Menu: 2-2'
-  }, {
-    id: 't23',
-    title: 'Menu: 2-3'
-  }]
+  name: 'Type',
+  id: 'devType'
+}, {
+  name: 'OS',
+  id: 'osType'
+}, {
+  name: 'IP',
+  id: 'ipAddr'
+}, {
+  name: 'MAC',
+  id: 'macAddr'
+}, {
+  name: 'Traffic(tx / rx)',
+  id: 'traffic'
+}, {
+  name: 'Statue',
+  id: 'statusDesc'
 }];
-var preRender = "<btb-react-list dataList={menuData} />";
-var preListData = "const menuData = [\n  { id: 'f1', title: 'Folder: 1', children: [\n          { id: 't11', title: 'Menu: 1-1' },\n          { id: 't12', title: 'Menu: 1-2' }\n  ]},\n  { id: 'f2', title: 'Folder: 2', defaultCollapsed: true, children: [\n          { id: 't21', title: 'Menu: 2-1' },\n          { id: 't22', title: 'Menu: 2-2' },\n          { id: 't23', title: 'Menu: 2-3' }\n  ]}\n]";
+var tableBodyArr_data = [{
+  name: 'Device 1',
+  devType: 'phone',
+  osType: 'ios',
+  ipAddr: '192.168.0.50',
+  macAddr: 'B4:A2:07:44:55:2A',
+  traffic: '0 MB / 0 KB',
+  status: 0,
+  statusDesc: 'Disconnected'
+}, {
+  name: 'Device 2',
+  devType: 'switch',
+  osType: 'linux',
+  ipAddr: '192.168.0.37',
+  macAddr: '7E:EF:02:44:AE:25',
+  traffic: '2.7 MB / 263 KB',
+  status: 1,
+  statusDesc: 'Connected'
+}, {
+  name: 'Device 3',
+  devType: 'ap',
+  osType: 'linux',
+  ipAddr: '192.168.0.121',
+  macAddr: 'EF:2B:15:44:32:B4',
+  traffic: '0 MB / 0 KB',
+  status: 2,
+  statusDesc: 'Locked'
+}, {
+  name: 'Device 4',
+  devType: 'phone',
+  osType: 'android',
+  ipAddr: '192.168.0.9',
+  macAddr: 'F5:22:33:44:55:35',
+  traffic: '0 MB / 0 KB',
+  status: 0,
+  statusDesc: 'Disconnected'
+}, {
+  name: 'Device 5',
+  devType: 'ap',
+  osType: 'linux',
+  ipAddr: '192.168.0.27',
+  macAddr: '7E:EF:B2:44:28:3B',
+  traffic: '1.3 MB / 725 KB',
+  status: 1,
+  statusDesc: 'Connected'
+}, {
+  name: 'Device 6',
+  devType: 'pc',
+  osType: 'windows',
+  ipAddr: '192.168.0.11',
+  macAddr: '11:22:24:44:5E:90',
+  traffic: '0 MB / 0 KB',
+  status: 2,
+  statusDesc: 'Locked'
+}, {
+  name: 'Device 7',
+  devType: 'phone',
+  osType: 'ios',
+  ipAddr: '192.168.0.6',
+  macAddr: '11:FF:33:44:55:A3',
+  traffic: '1.2 MB / 45 KB',
+  status: 1,
+  statusDesc: 'Connected'
+}, {
+  name: 'Device 8',
+  devType: 'pc',
+  osType: 'linux',
+  ipAddr: '192.168.0.3',
+  macAddr: 'B2:FE:B8:44:55:6D',
+  traffic: '4.8 MB / 3.7 MB',
+  status: 1,
+  statusDesc: 'Connected'
+}, {
+  name: 'Device 9',
+  devType: 'pc',
+  osType: 'windows',
+  ipAddr: '192.168.0.18',
+  macAddr: 'E4:AA:74:44:38:E1',
+  traffic: '0 MB / 0 KB',
+  status: 2,
+  statusDesc: 'Locked'
+}, {
+  name: 'Device 10',
+  devType: 'switch',
+  osType: 'linux',
+  ipAddr: '192.168.0.245',
+  macAddr: 'E2:BA:33:44:48:AB',
+  traffic: '0 MB / 0 KB',
+  status: 0,
+  statusDesc: 'Disconnected'
+}];
 
-var exampleMenu_ExampleMenu = function ExampleMenu() {
+var ExampleList_ExampleMode = function ExampleMode() {
   return /*#__PURE__*/react_default.a.createElement(pageLayout["c" /* Page */], {
-    className: "btb-pkg-list-example-menu"
+    className: "btb-pkg-table-example-list"
   }, /*#__PURE__*/react_default.a.createElement(pageLayout["d" /* PageHead */], {
-    title: 'Example - Menu',
+    title: pageInfo.title,
     clickBtn: functions["a" /* openLink */],
-    btnList: packageInfo.btnList
+    btnList: pageInfo.btnList
   }), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
-    head: /*#__PURE__*/react_default.a.createElement(react_default.a.Fragment, null, "Version: ".concat(packageInfo.version), /*#__PURE__*/react_default.a.createElement("br", null), "Release Date: ".concat(packageInfo.updated))
-  }, /*#__PURE__*/react_default.a.createElement("p", null, packageInfo.description)), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
+    head: /*#__PURE__*/react_default.a.createElement(react_default.a.Fragment, null, "Version: ".concat(pageInfo.version), /*#__PURE__*/react_default.a.createElement("br", null), "Release Date: ".concat(pageInfo.updated))
+  }, /*#__PURE__*/react_default.a.createElement("p", null, pageInfo.description)), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
     head: "EXAMPLE"
   }, /*#__PURE__*/react_default.a.createElement(esm["a" /* default */], {
-    dataList: _menuData,
-    collapseEnable: true
+    className: "table_sample",
+    mode: "list",
+    headData: tableHeadArr_property,
+    bodyData: tableBodyArr_data
   })), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
-    head: "CONFIGURATION"
+    head: "SOURCECODE"
   }, /*#__PURE__*/react_default.a.createElement(pageLayout["a" /* Block */], {
-    title: "Render"
+    title: "render"
   }, /*#__PURE__*/react_default.a.createElement("pre", {
     className: "page_pre"
   }, preRender)), /*#__PURE__*/react_default.a.createElement(pageLayout["a" /* Block */], {
-    title: "menuData"
+    title: "headData"
   }, /*#__PURE__*/react_default.a.createElement("pre", {
     className: "page_pre"
-  }, preListData))));
+  }, preHeadData)), /*#__PURE__*/react_default.a.createElement(pageLayout["a" /* Block */], {
+    title: "bodyData"
+  }, /*#__PURE__*/react_default.a.createElement("pre", {
+    className: "page_pre"
+  }, preBodyData))));
 };
 
-/* harmony default export */ var exampleMenu = (exampleMenu_ExampleMenu);
-// CONCATENATED MODULE: ./src/routes/packages/list/ExampleMenuContainer.jsx
+/* harmony default export */ var ExampleList = (ExampleList_ExampleMode);
+// CONCATENATED MODULE: ./src/routes/packages/table/ExampleListContainer.jsx
 
 
 
-var ExampleMenuContainer_ExampleMenuContaier = function ExampleMenuContaier() {
-  return /*#__PURE__*/react_default.a.createElement(exampleMenu, null);
+var ExampleListContainer_ExampleListContainer = function ExampleListContainer() {
+  return /*#__PURE__*/react_default.a.createElement(ExampleList, null);
 };
 
-/* harmony default export */ var ExampleMenuContainer = __webpack_exports__["default"] = (ExampleMenuContainer_ExampleMenuContaier);
+/* harmony default export */ var table_ExampleListContainer = __webpack_exports__["default"] = (ExampleListContainer_ExampleListContainer);
 
 /***/ })
 

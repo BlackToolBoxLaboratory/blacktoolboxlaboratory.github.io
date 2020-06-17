@@ -49,7 +49,7 @@ var PageHead_PageHead = function PageHead(props) {
     className: "module-page-head"
   }, /*#__PURE__*/react_default.a.createElement("div", {
     className: "head_title"
-  }, props.title || ''), (props.btnList || []).map(function (btn) {
+  }, props.title || ''), (props.linkList || []).map(function (btn) {
     return /*#__PURE__*/react_default.a.createElement("div", {
       className: classnames_default()('head_btn', "btn-".concat(btn.id)),
       key: btn.id,
@@ -158,7 +158,65 @@ var openLink = function openLink(link) {
 
 /***/ }),
 
-/***/ 44:
+/***/ 38:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var _routeMap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(16);
+
+var packageObj = {
+  list: {
+    name: 'List',
+    routename: _routeMap__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].PACKAGES_LIST_BASIC,
+    description: 'This module of list creator made with React can do the help to make a list or mane component to our page. Normally it is a list make. But with some trigger action it can be a menu maker for route redirection or other feature we need.',
+    version: '2.1.6',
+    updated: 'Jun, 14, 2020',
+    link: {
+      github: 'https://github.com/BlackToolBoxLaboratory/react-list',
+      npm: 'https://www.npmjs.com/package/@blacktoolbox/react-list'
+    }
+  },
+  table: {
+    name: 'Table',
+    routename: _routeMap__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].PACKAGES_TABLE_BASIC,
+    description: 'This module of table creator made with React can do the help to make a table component to our page. It has modes in list and info which are different ways to show data.',
+    version: '1.2.0',
+    updated: 'Jun, 18, 2020',
+    link: {
+      github: 'https://github.com/BlackToolBoxLaboratory/react-table',
+      npm: 'https://www.npmjs.com/package/@blacktoolbox/react-table'
+    }
+  }
+};
+/* harmony default export */ __webpack_exports__["a"] = (packageObj);
+
+/***/ }),
+
+/***/ 41:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(38);
+
+var packageInfo = {
+  'version': _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].list.version,
+  'updated': _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].list.updated,
+  'description': _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].list.description,
+  'linkList': [{
+    'id': 'github',
+    'fa': ['fab', 'github'],
+    'url': _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].list.link.github
+  }, {
+    'id': 'npm',
+    'fa': ['fab', 'npm'],
+    'url': _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].list.link.npm
+  }]
+};
+/* harmony default export */ __webpack_exports__["a"] = (packageInfo);
+
+/***/ }),
+
+/***/ 51:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -169,51 +227,118 @@ __webpack_require__.r(__webpack_exports__);
 var react = __webpack_require__(0);
 var react_default = /*#__PURE__*/__webpack_require__.n(react);
 
+// EXTERNAL MODULE: ./node_modules/@blacktoolbox/react-list/esm/index.js
+var esm = __webpack_require__(42);
+
 // EXTERNAL MODULE: ./src/modules/pageLayout/index.js + 5 modules
 var pageLayout = __webpack_require__(35);
 
 // EXTERNAL MODULE: ./src/utils/functions.js
 var functions = __webpack_require__(36);
 
-// CONCATENATED MODULE: ./src/components/applications/Validator.jsx
+// EXTERNAL MODULE: ./src/components/packages/list/packageInfo.js
+var packageInfo = __webpack_require__(41);
+
+// CONCATENATED MODULE: ./src/components/packages/list/ExampleSlot.jsx
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
 
-var packageInfo = {
-  'version': '1.0.0',
-  'updated': 'Jan. 20, 2020',
-  'description': 'Most form UI packages have their own validator to use for convenience. But sometimes we don\'t use only one UI packages to develop every single project. So we try to create the validator generally to adapt to every kind of form UI packages to allow us using just one type of validator coding patteren to develop with every UI packages.',
-  'btnList': [{
-    'id': 'github',
-    'fa': ['fab', 'github'],
-    'url': 'https://github.com/BlackToolBoxLaboratory/prototype-validator'
+
+
+
+
+var PageInfo = _objectSpread(_objectSpread({}, packageInfo["a" /* default */]), {}, {
+  'title': 'Example - Slot',
+  'description': 'Sometimes we may want to show the entry from the list by button, input, icon, ... etc. Then we can ultilize this feature about customized slot. To the example as following, I show you how to customized the entry which ID is b2. For the package of list, every single ID corresponding to dataList can be customized by slotObj in String, Node, or Function way.'
+});
+
+var _listData = [{
+  id: 'b1',
+  title: 'Branch: 1',
+  children: [{
+    id: 'l11',
+    title: 'Leaf: 1-1'
   }, {
-    'id': 'npm',
-    'fa': ['fab', 'npm'],
-    'url': 'https://www.npmjs.com/package/@blacktoolbox/prototype-validator'
+    id: 'b12',
+    title: 'Branch: 1-2',
+    children: [{
+      id: 'l121',
+      title: 'Leaf: 1-2-1'
+    }, {
+      id: 'l122',
+      title: 'Leaf: 1-2-2'
+    }]
+  }, {
+    id: 'l13',
+    title: 'Leaf: 1-3'
   }]
+}, {
+  id: 'b2',
+  title: 'Branch: 2',
+  children: [{
+    id: 'l21',
+    title: 'Leaf: 2-1'
+  }, {
+    id: 'l22',
+    title: 'Leaf: 2-2'
+  }]
+}];
+var _slotObj = {
+  'b2': function b2(entry) {
+    return /*#__PURE__*/react_default.a.createElement("div", null, "".concat(entry.id, " overwrited by Function"));
+  },
+  'l22': /*#__PURE__*/react_default.a.createElement("div", null, 'l22 overwrited by Node')
 };
+var preRender = "<BTBList \n        dataList={listData} \n        slotObj={slotObj}/>";
+var preListData = "const listData = [\n  { id: 'b1', title: 'Branch: 1', children: [\n          { id: 'l11', title: 'Leaf: 1-1' },\n          { id: 'b12', title: 'Branch: 1-2', children: [\n                  { id: 'l121', title: 'Leaf: 1-2-1' },\n                  { id: 'l122', title: 'Leaf: 1-2-2' }\n          ]},\n          { id: 'l13', title: 'Leaf: 1-3' }\n  ]},\n  { id: 'b2', title: 'Branch: 2', children: [\n          { id: 'l21', title: 'Leaf: 2-1' },\n          { id: 'l22', title: 'Leaf: 2-2' }\n  ]}\n]";
+var preSlotObj = "const _slotObj = {\n  'b2': (entry) => {\n    return (\n      <div>\n      {`${entry.id} overwrited by Function`}\n      </div>\n      )\n    },\n    'l22': (\n      <div>\n        {'l22 overwrited by Node'}\n      </div>\n    )\n  }";
 
-var Validator_Validator = function Validator() {
+var ExampleSlot_ExampleSlot = function ExampleSlot() {
   return /*#__PURE__*/react_default.a.createElement(pageLayout["c" /* Page */], {
-    className: "btb-app-validator"
+    className: "btb-pkg-list-example-slot"
   }, /*#__PURE__*/react_default.a.createElement(pageLayout["d" /* PageHead */], {
-    title: 'Validator Application',
+    title: PageInfo.title,
     clickBtn: functions["a" /* openLink */],
-    btnList: packageInfo.btnList
-  }));
+    btnList: PageInfo.btnList
+  }), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
+    head: /*#__PURE__*/react_default.a.createElement(react_default.a.Fragment, null, "Version: ".concat(PageInfo.version), /*#__PURE__*/react_default.a.createElement("br", null), "Release Date: ".concat(PageInfo.updated))
+  }, /*#__PURE__*/react_default.a.createElement("p", null, PageInfo.description)), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
+    head: "EXAMPLE"
+  }, /*#__PURE__*/react_default.a.createElement(esm["a" /* default */], {
+    dataList: _listData,
+    slotObj: _slotObj
+  })), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
+    head: "SOURCECODE"
+  }, /*#__PURE__*/react_default.a.createElement(pageLayout["a" /* Block */], {
+    title: "render"
+  }, /*#__PURE__*/react_default.a.createElement("pre", {
+    className: "page_pre"
+  }, preRender)), /*#__PURE__*/react_default.a.createElement(pageLayout["a" /* Block */], {
+    title: "listData"
+  }, /*#__PURE__*/react_default.a.createElement("pre", {
+    className: "page_pre"
+  }, preListData)), /*#__PURE__*/react_default.a.createElement(pageLayout["a" /* Block */], {
+    title: "styleObj"
+  }, /*#__PURE__*/react_default.a.createElement("pre", {
+    className: "page_pre"
+  }, preSlotObj))));
 };
 
-/* harmony default export */ var applications_Validator = (Validator_Validator);
-// CONCATENATED MODULE: ./src/routes/applications/ValidatorContainer.jsx
+/* harmony default export */ var list_ExampleSlot = (ExampleSlot_ExampleSlot);
+// CONCATENATED MODULE: ./src/routes/packages/list/ExampleSlotContainer.jsx
 
 
 
-var ValidatorContainer_ValidatorContaier = function ValidatorContaier() {
-  return /*#__PURE__*/react_default.a.createElement(applications_Validator, null);
+var ExampleSlotContainer_ExampleSlotContaier = function ExampleSlotContaier() {
+  return /*#__PURE__*/react_default.a.createElement(list_ExampleSlot, null);
 };
 
-/* harmony default export */ var ValidatorContainer = __webpack_exports__["default"] = (ValidatorContainer_ValidatorContaier);
+/* harmony default export */ var ExampleSlotContainer = __webpack_exports__["default"] = (ExampleSlotContainer_ExampleSlotContaier);
 
 /***/ })
 

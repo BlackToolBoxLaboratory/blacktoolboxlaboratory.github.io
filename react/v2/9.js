@@ -49,7 +49,7 @@ var PageHead_PageHead = function PageHead(props) {
     className: "module-page-head"
   }, /*#__PURE__*/react_default.a.createElement("div", {
     className: "head_title"
-  }, props.title || ''), (props.btnList || []).map(function (btn) {
+  }, props.title || ''), (props.linkList || []).map(function (btn) {
     return /*#__PURE__*/react_default.a.createElement("div", {
       className: classnames_default()('head_btn', "btn-".concat(btn.id)),
       key: btn.id,
@@ -145,6 +145,19 @@ var Divider_Divider = function Divider() {
 
 /***/ }),
 
+/***/ 36:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return openLink; });
+var openLink = function openLink(link) {
+  window.open(link.url);
+};
+
+
+
+/***/ }),
+
 /***/ 38:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -167,8 +180,8 @@ var packageObj = {
     name: 'Table',
     routename: _routeMap__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].PACKAGES_TABLE_BASIC,
     description: 'This module of table creator made with React can do the help to make a table component to our page. It has modes in list and info which are different ways to show data.',
-    version: '1.1.0',
-    updated: 'Jun, 16, 2020',
+    version: '1.2.0',
+    updated: 'Jun, 18, 2020',
     link: {
       github: 'https://github.com/BlackToolBoxLaboratory/react-table',
       npm: 'https://www.npmjs.com/package/@blacktoolbox/react-table'
@@ -179,7 +192,31 @@ var packageObj = {
 
 /***/ }),
 
-/***/ 54:
+/***/ 41:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(38);
+
+var packageInfo = {
+  'version': _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].list.version,
+  'updated': _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].list.updated,
+  'description': _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].list.description,
+  'linkList': [{
+    'id': 'github',
+    'fa': ['fab', 'github'],
+    'url': _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].list.link.github
+  }, {
+    'id': 'npm',
+    'fa': ['fab', 'npm'],
+    'url': _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].list.link.npm
+  }]
+};
+/* harmony default export */ __webpack_exports__["a"] = (packageInfo);
+
+/***/ }),
+
+/***/ 48:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -190,53 +227,24 @@ __webpack_require__.r(__webpack_exports__);
 var react = __webpack_require__(0);
 var react_default = /*#__PURE__*/__webpack_require__.n(react);
 
-// EXTERNAL MODULE: ./node_modules/react-router/esm/react-router.js
-var react_router = __webpack_require__(1);
-
-// EXTERNAL MODULE: ./node_modules/@fortawesome/react-fontawesome/index.es.js
-var index_es = __webpack_require__(29);
+// EXTERNAL MODULE: ./node_modules/@blacktoolbox/react-list/esm/index.js
+var esm = __webpack_require__(42);
 
 // EXTERNAL MODULE: ./src/modules/pageLayout/index.js + 5 modules
 var pageLayout = __webpack_require__(35);
 
-// CONCATENATED MODULE: ./src/components/about/package.jsx
+// EXTERNAL MODULE: ./src/utils/functions.js
+var functions = __webpack_require__(36);
 
+// EXTERNAL MODULE: ./src/components/packages/list/packageInfo.js
+var packageInfo = __webpack_require__(41);
 
+// CONCATENATED MODULE: ./src/components/packages/list/ExampleList.jsx
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
-var package_Package = function Package(props) {
-  function _redirectRoute() {
-    props.redirectRoute(props.info.routename);
-  }
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
-  return /*#__PURE__*/react_default.a.createElement("div", {
-    className: ['btb-about-package grid-row', props.className].join(' ')
-  }, /*#__PURE__*/react_default.a.createElement("div", {
-    className: "grid-col-md-3"
-  }, /*#__PURE__*/react_default.a.createElement("div", {
-    className: "package_title"
-  }, props.info.name), /*#__PURE__*/react_default.a.createElement(index_es["FontAwesomeIcon"], {
-    className: "package_link",
-    icon: ['fas', 'link'],
-    fixedWidth: true,
-    onClick: _redirectRoute
-  })), /*#__PURE__*/react_default.a.createElement("div", {
-    className: "grid-col-md"
-  }, /*#__PURE__*/react_default.a.createElement("div", {
-    className: "package_description"
-  }, props.info.description), /*#__PURE__*/react_default.a.createElement("div", {
-    className: "package_version"
-  }, "Version ", props.info.version), /*#__PURE__*/react_default.a.createElement("div", {
-    className: "package_updated"
-  }, "Updated: ", props.info.updated)));
-};
-
-/* harmony default export */ var about_package = (package_Package);
-// EXTERNAL MODULE: ./src/assets/definitions/packageObj.js
-var packageObj = __webpack_require__(38);
-
-// CONCATENATED MODULE: ./src/assets/images/BTB_React.png
-/* harmony default export */ var BTB_React = (__webpack_require__.p + "files/BTB_React.png");
-// CONCATENATED MODULE: ./src/components/about/About.jsx
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
 
@@ -244,64 +252,81 @@ var packageObj = __webpack_require__(38);
 
 
 
+var PageInfo = _objectSpread(_objectSpread({}, packageInfo["a" /* default */]), {}, {
+  'title': 'Example - List',
+  'description': 'Here is a very simple example for a list, if we just give a data list.'
+});
 
-var About_About = function About(props) {
-  function _redirectRoute(routename) {
-    props.history.push(routename);
-  }
+var _listData = [{
+  id: 'b1',
+  title: 'Branch: 1',
+  children: [{
+    id: 'l11',
+    title: 'Leaf: 1-1'
+  }, {
+    id: 'b12',
+    title: 'Branch: 1-2',
+    children: [{
+      id: 'l121',
+      title: 'Leaf: 1-2-1'
+    }, {
+      id: 'l122',
+      title: 'Leaf: 1-2-2'
+    }]
+  }, {
+    id: 'l13',
+    title: 'Leaf: 1-3'
+  }]
+}, {
+  id: 'b2',
+  title: 'Branch: 2',
+  children: [{
+    id: 'l21',
+    title: 'Leaf: 2-1'
+  }, {
+    id: 'l22',
+    title: 'Leaf: 2-2'
+  }]
+}];
+var preRender = "<btb-react-list dataList={listData} />";
+var preListData = "const listData = [\n  { id: 'b1', title: 'Branch: 1', children: [\n          { id: 'l11', title: 'Leaf: 1-1' },\n          { id: 'b12', title: 'Branch: 1-2', children: [\n                  { id: 'l121', title: 'Leaf: 1-2-1' },\n                  { id: 'l122', title: 'Leaf: 1-2-2' }\n          ]},\n          { id: 'l13', title: 'Leaf: 1-3' }\n  ]},\n  { id: 'b2', title: 'Branch: 2', children: [\n          { id: 'l21', title: 'Leaf: 2-1' },\n          { id: 'l22', title: 'Leaf: 2-2' }\n  ]}\n]";
 
+var ExampleList_ExampleList = function ExampleList() {
   return /*#__PURE__*/react_default.a.createElement(pageLayout["c" /* Page */], {
-    className: "btb-about"
-  }, /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
-    className: "about_title grid-row direction-column align-items-center"
-  }, /*#__PURE__*/react_default.a.createElement("img", {
-    className: "title_image",
-    src: BTB_React,
-    alt: "BTB_React"
-  }), /*#__PURE__*/react_default.a.createElement("h1", {
-    className: "title_main hidden-down-md"
-  }, "Black Tool Box Laboratory"), /*#__PURE__*/react_default.a.createElement("h1", {
-    className: "title_main hidden-up-md"
-  }, "BTB Lab."), /*#__PURE__*/react_default.a.createElement("p", {
-    className: "title_sub"
-  }, "With React")), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], null, /*#__PURE__*/react_default.a.createElement("span", null, "React is the first framework of javascript when I join to the Frontend develipment club. Before that jQuery of curse is my first using when I am a software engineer. Here I aim to develop packages made with React. They are designed with basic logic for high degrees of freedom of customization and low dependency. While using, if you find some questions, bugs or issues. Or having some great ideas. Please feel free to let me know.")), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
-    className: "grid-row justify-content-center"
-  }, /*#__PURE__*/react_default.a.createElement("a", {
-    href: "mailto://vannoel0628@gmail.com",
-    target: "_blank"
-  }, /*#__PURE__*/react_default.a.createElement(index_es["FontAwesomeIcon"], {
-    icon: ['far', 'envelope'],
-    fixedWidth: true
-  }), /*#__PURE__*/react_default.a.createElement("span", null, "vannoel0628@gmail.com"))), /*#__PURE__*/react_default.a.createElement(pageLayout["b" /* Divider */], null), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
-    className: "grid-row justify-content-center"
-  }, /*#__PURE__*/react_default.a.createElement("span", null, "If you like all the works in BTB Lab. Please "), /*#__PURE__*/react_default.a.createElement("a", {
-    href: "https://www.paypal.me/vannoel0628",
-    target: "_blank"
-  }, /*#__PURE__*/react_default.a.createElement(index_es["FontAwesomeIcon"], {
-    icon: ['fab', 'paypal'],
-    fixedWidth: true
-  }), /*#__PURE__*/react_default.a.createElement("span", null, "buy me a coffee")), /*#__PURE__*/react_default.a.createElement("span", null, ". ")), /*#__PURE__*/react_default.a.createElement(pageLayout["b" /* Divider */], null), Object.keys(packageObj["a" /* default */]).map(function (entry) {
-    return /*#__PURE__*/react_default.a.createElement("div", {
-      key: entry
-    }, entry !== 'list' ? /*#__PURE__*/react_default.a.createElement(pageLayout["b" /* Divider */], null) : [], /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
-      className: "about_package"
-    }, /*#__PURE__*/react_default.a.createElement(about_package, {
-      info: packageObj["a" /* default */][entry],
-      redirectRoute: _redirectRoute
-    })));
-  }));
+    className: "btb-pkg-list-example-list"
+  }, /*#__PURE__*/react_default.a.createElement(pageLayout["d" /* PageHead */], {
+    title: PageInfo.title,
+    clickBtn: functions["a" /* openLink */],
+    btnList: PageInfo.btnList
+  }), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
+    head: /*#__PURE__*/react_default.a.createElement(react_default.a.Fragment, null, "Version: ".concat(PageInfo.version), /*#__PURE__*/react_default.a.createElement("br", null), "Release Date: ".concat(PageInfo.updated))
+  }, /*#__PURE__*/react_default.a.createElement("p", null, PageInfo.description)), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
+    head: "EXAMPLE"
+  }, /*#__PURE__*/react_default.a.createElement(esm["a" /* default */], {
+    dataList: _listData
+  })), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
+    head: "SOURCECODE"
+  }, /*#__PURE__*/react_default.a.createElement(pageLayout["a" /* Block */], {
+    title: "Render"
+  }, /*#__PURE__*/react_default.a.createElement("pre", {
+    className: "page_pre"
+  }, preRender)), /*#__PURE__*/react_default.a.createElement(pageLayout["a" /* Block */], {
+    title: "listData"
+  }, /*#__PURE__*/react_default.a.createElement("pre", {
+    className: "page_pre"
+  }, preListData))));
 };
 
-/* harmony default export */ var about_About = (Object(react_router["o" /* withRouter */])(About_About));
-// CONCATENATED MODULE: ./src/routes/AboutContainer.jsx
+/* harmony default export */ var list_ExampleList = (ExampleList_ExampleList);
+// CONCATENATED MODULE: ./src/routes/packages/list/ExampleListContainer.jsx
 
 
 
-var AboutContainer_AboutContainer = function AboutContainer() {
-  return /*#__PURE__*/react_default.a.createElement(about_About, null);
+var ExampleListContainer_ExampleListContaier = function ExampleListContaier() {
+  return /*#__PURE__*/react_default.a.createElement(list_ExampleList, null);
 };
 
-/* harmony default export */ var routes_AboutContainer = __webpack_exports__["default"] = (AboutContainer_AboutContainer);
+/* harmony default export */ var ExampleListContainer = __webpack_exports__["default"] = (ExampleListContainer_ExampleListContaier);
 
 /***/ })
 
