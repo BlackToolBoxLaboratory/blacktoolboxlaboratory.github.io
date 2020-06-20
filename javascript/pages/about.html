@@ -120,7 +120,7 @@
     <script>
       function translateAll() {
         $('[btb-lang]').each(function(index, entry){
-          $(entry).html(top.envLang.translate(entry.getAttribute('btb-lang')))
+          $(entry).html(top.envLang.translate('about.'+entry.getAttribute('btb-lang')))
         })
       }
 
