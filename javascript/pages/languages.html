@@ -75,8 +75,8 @@ var initializer = require('@blacktoolbox/prototype-languages').initializer;
       <section class="page_section">
         <div class="section_title" btb-lang="package.section.title.application">APPLICATION</div>
         <div class="section_block">
-          <div class="block_title" btb-lang="package.about.block.initializer.title">Initializer</div>
-          <div class="block_description" btb-lang="package.about.block.initializer.description.initial">
+          <div class="block_title" btb-lang="package.languages.block.initializer.title">Initializer</div>
+          <div class="block_description" btb-lang="package.languages.block.initializer.description.initial">
             Before to use, we have to initialize. The input is an Array and the structure of each entry is { index: '', label: '', dictionary: {...} } as each language.
           </div>
 <pre class="page_pre">
@@ -85,7 +85,7 @@ initializer([
   { index: 'zh_TW', label: 'Taiwan', dictionary: {'text': '測試 %1, 測試%2, 測試 %1'} }
 ])
 </pre>
-          <div class="block_description" btb-lang="package.about.block.initializer.description.nest">
+          <div class="block_description" btb-lang="package.languages.block.initializer.description.nest">
             After v1.1.0, it is supported to use nest-structure dictionary which means we can defined.
           </div>
 <pre class="page_pre">
@@ -101,13 +101,13 @@ dictionary: {
   }
 }
 </pre>
-          <div class="block_description" btb-lang="package.about.block.initializer.description.result">
+          <div class="block_description" btb-lang="package.languages.block.initializer.description.result">
             Then, languages.translate('a.aa.aaa') will be 'AAA' and languages.translate('b.ba') will be 'BA'. And while can not finding its string, it will response the key path as our input. like languages.translate('notFound') will be 'notFound'.
           </div>
         </div>
         <div class="section_block">
-          <div class="block_title" btb-lang="package.about.block.methods.title">Methods</div>
-          <div class="block_description" btb-lang="package.about.block.methods.description.configuration">
+          <div class="block_title" btb-lang="package.languages.block.methods.title">Methods</div>
+          <div class="block_description" btb-lang="package.languages.block.methods.description.configuration">
             We can begin to use after to create a instance from Language. The default language is the first in the initializerconfig.
           </div>
 <pre class="page_pre">
@@ -117,24 +117,24 @@ const languages = new Language();
 <code class="pre_notice">// using in HTML directly</code>
 const languages = new globalThis['btblab-languages'].default();
 </pre>
-          <div class="block_description" btb-lang="package.about.block.methods.introduction">
+          <div class="block_description" btb-lang="package.languages.block.methods.introduction">
             Then, we have some methods inside the Language.
           </div>
           <div class="block_entry">
             <div class="entry_title">- menu();</div>
-            <div class="entry_content" btb-lang="package.about.block.methods.menu">// To list out the menu of languages, for you can render a language list as a selector likely.</div>
+            <div class="entry_content" btb-lang="package.languages.block.methods.menu">// To list out the menu of languages, for you can render a language list as a selector likely.</div>
           </div>
           <div class="block_entry">
             <div class="entry_title">- get(); </div>
-            <div class="entry_content" btb-lang="package.about.block.methods.get">// To get the current language.</div>
+            <div class="entry_content" btb-lang="package.languages.block.methods.get">// To get the current language.</div>
           </div>
           <div class="block_entry">
             <div class="entry_title">- set(languageIndex);</div>
-            <div class="entry_content" btb-lang="package.about.block.methods.set">// To set new language Index as current language. Do not forget to update rendering, and then all translate() will be with the new setting.</div>
+            <div class="entry_content" btb-lang="package.languages.block.methods.set">// To set new language Index as current language. Do not forget to update rendering, and then all translate() will be with the new setting.</div>
           </div>
           <div class="block_entry">
             <div class="entry_title">- translate(stringIndex, repacement);</div>
-            <div class="entry_content" btb-lang="package.about.block.methods.translate">// To translate string by the current language. And the repacement is optional input.</div>
+            <div class="entry_content" btb-lang="package.languages.block.methods.translate">// To translate string by the current language. And the repacement is optional input.</div>
 <pre class="page_pre">
 <code class="pre_notice">// For example: text is the index of 'test %1, test%2, test %1';</code>
 languages.translate('text');
