@@ -217,9 +217,9 @@ const structureStatus = function() {
 
     <script type="text/javascript" src="../libs/jquery/jquery.min.js"></script>
     <script>
-       function translateAll() {
+      function translateAll() {
         $('[btb-lang]').each(function(index, entry){
-          $(entry).html(top.envLang.translate('package.validator.'+entry.getAttribute('btb-lang')))
+          $(entry).html(top.envLang.translate(entry.getAttribute('btb-lang')))
         })
       }
 
