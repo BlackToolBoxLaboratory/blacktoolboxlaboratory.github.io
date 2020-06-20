@@ -29,6 +29,7 @@ function langLoader(currentlang, callbackFn) {
       }
       return JSON.parse(obj.responseText);
     }
+    top.document.getElementById('page').src = top.document.getElementById('page').src;
   };
   obj.send();
 }
