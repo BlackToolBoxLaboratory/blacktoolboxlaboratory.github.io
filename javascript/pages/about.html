@@ -118,14 +118,6 @@
 
     <script type="text/javascript" src="../libs/jquery/jquery.min.js"></script>
     <script>
-      var envLang = new top.window.BTBLang.class();
-
-      const LS_Name = 'BTBLAb';
-      var LS_Object = (localStorage.getItem(LS_Name) && JSON.parse(localStorage.getItem(LS_Name))) || {};
-      function detectLang() {
-        top.BTBLang.langLoader(LS_Object.lang || top.envLang.get().index, translateAll)
-      }
-
       function translateAll() {
         $('[btb-lang]').each(function(index, entry){
           $(entry).html(top.envLang.translate(entry.getAttribute('btb-lang')))
@@ -137,9 +129,7 @@
       }
 
       $(document).ready(function(){
-        console.log('envLang',envLang)
-        console.log('about',envLang.translate('about'))
-        // detectLang();
+        translateAll();
       });
     </script>
   </body>
