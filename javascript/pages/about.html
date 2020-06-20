@@ -34,7 +34,7 @@
         <h1 class="title_main main-sm font-xl margin-y-sm">BTB Lab.</h1>
         <p class="title_sub margin-y-sm">For JavaScript</p>
       </div>
-      <div class="page_section">
+      <div class="page_section" btb-lang="test">
         I aim to develope some useful tool for front-end development. And they are based on JavaScript only so we could use them into some other JavaScript frameworks. And they are called "prototype-" as their prefix means we can use them with React, Vue, ... so on. While using, if you find some questions, bugs or issues. Or having some ideas. Please feel free to let me know.
       </div>
       <div class="page_section grid-row justify-content-center">
@@ -117,10 +117,30 @@
     </div>
 
     <script type="text/javascript" src="../libs/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="../plugins/prototype-languages.js"></script>
     <script>
+      console.log('window.BTBLang',window.BTBLang)
+      var envLang = new window.BTBLang.class();
+
+      const LS_Name = 'BTBLAb';
+      var LS_Object = (localStorage.getItem(LS_Name) && JSON.parse(localStorage.getItem(LS_Name))) || {};
+      function detectLang() {
+        window.BTBLang.langLoader(LS_Object.lang || envLang.get().index, translateAll)
+      }
+
+      function translateAll() {
+        $('[btb-lang]').each(function(index, entry){
+          $(entry).html(envLang.translate(entry.getAttribute('btb-lang')))
+        })
+      }
+
       function redirectHash(path) {
         top.location.hash = "#/"+ path;
       }
+
+      $(document).ready(function(){
+        detectLang();
+      });
     </script>
   </body>
 </html>
