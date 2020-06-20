@@ -117,15 +117,11 @@
     </div>
 
     <script type="text/javascript" src="../libs/jquery/jquery.min.js"></script>
-    <script type="text/javascript" src="../plugins/prototype-languages.js"></script>
     <script>
-      console.log('window.BTBLang',window.BTBLang)
-      var envLang = new window.BTBLang.class();
-
       const LS_Name = 'BTBLAb';
       var LS_Object = (localStorage.getItem(LS_Name) && JSON.parse(localStorage.getItem(LS_Name))) || {};
       function detectLang() {
-        window.BTBLang.langLoader(LS_Object.lang || envLang.get().index, translateAll)
+        top.BTBLang.langLoader(LS_Object.lang || top.envLang.get().index, translateAll)
       }
 
       function translateAll() {
