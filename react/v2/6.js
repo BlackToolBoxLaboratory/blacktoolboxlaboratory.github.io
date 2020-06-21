@@ -1,6 +1,6 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[6],{
 
-/***/ 35:
+/***/ 46:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -27,11 +27,11 @@ var Page_Page = function Page(props) {
 
 /* harmony default export */ var pageLayout_Page = (Page_Page);
 // EXTERNAL MODULE: ./node_modules/classnames/index.js
-var classnames = __webpack_require__(37);
+var classnames = __webpack_require__(48);
 var classnames_default = /*#__PURE__*/__webpack_require__.n(classnames);
 
 // EXTERNAL MODULE: ./node_modules/@fortawesome/react-fontawesome/index.es.js
-var index_es = __webpack_require__(29);
+var index_es = __webpack_require__(36);
 
 // CONCATENATED MODULE: ./src/modules/pageLayout/PageHead.jsx
 
@@ -145,7 +145,7 @@ var Divider_Divider = function Divider() {
 
 /***/ }),
 
-/***/ 36:
+/***/ 47:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -158,19 +158,19 @@ var openLink = function openLink(link) {
 
 /***/ }),
 
-/***/ 38:
+/***/ 49:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var _routeMap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(16);
+/* harmony import */ var _routeMap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(18);
 
 var packageObj = {
   list: {
     name: 'List',
     routename: _routeMap__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].PACKAGES_LIST_BASIC,
     description: 'This module of list creator made with React can do the help to make a list or mane component to our page. Normally it is a list make. But with some trigger action it can be a menu maker for route redirection or other feature we need.',
-    version: '2.1.6',
-    updated: 'Jun, 14, 2020',
+    version: '2.2.0',
+    updated: 'Jun, 21, 2020',
     link: {
       github: 'https://github.com/BlackToolBoxLaboratory/react-list',
       npm: 'https://www.npmjs.com/package/@blacktoolbox/react-list'
@@ -180,11 +180,22 @@ var packageObj = {
     name: 'Table',
     routename: _routeMap__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].PACKAGES_TABLE_BASIC,
     description: 'This module of table creator made with React can do the help to make a table component to our page. It has modes in list and info which are different ways to show data.',
-    version: '1.2.0',
-    updated: 'Jun, 18, 2020',
+    version: '1.4.0',
+    updated: 'Jun, 21, 2020',
     link: {
       github: 'https://github.com/BlackToolBoxLaboratory/react-table',
       npm: 'https://www.npmjs.com/package/@blacktoolbox/react-table'
+    }
+  },
+  popover: {
+    name: 'Popover',
+    routename: _routeMap__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].PACKAGES_POPOVER_BASIC,
+    description: 'This module of popover creator made with React can do the help to make a popover component to our page. The popover can do th e thing about popover and dropdown.',
+    version: '1.0.0',
+    updated: 'Jun, 21, 2020',
+    link: {
+      github: 'https://github.com/BlackToolBoxLaboratory/react-popover',
+      npm: 'https://www.npmjs.com/package/@blacktoolbox/react-popover'
     }
   }
 };
@@ -192,24 +203,24 @@ var packageObj = {
 
 /***/ }),
 
-/***/ 39:
+/***/ 50:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(0);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(37);
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(48);
 /* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_1__);
-function c(t){return(c="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(t){return typeof t}:function(t){return t&&"function"==typeof Symbol&&t.constructor===Symbol&&t!==Symbol.prototype?"symbol":typeof t})(t)}var n=function(t,e){var a;return e.forEach((function(e){a=Object.assign({},a,o(t,e))})),a},o=function(t,e){var a={};return"object"===c(t)&&Object.keys(t).find((function(c){if(c===e)return a=Object.assign({},t[c]),!0})),a},l=react__WEBPACK_IMPORTED_MODULE_0___default.a.createContext(),r=react__WEBPACK_IMPORTED_MODULE_0___default.a.createContext(),s=function(){var c=Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(l);return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("thead",{className:"list_head",style:n(c.styleObj,["list_head"])},c.headData.length?react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr",{className:"head_tr",style:n(c.styleObj,["head_tr"])},c.headData.map((function(e){return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th",{className:classnames__WEBPACK_IMPORTED_MODULE_1___default()("tr_th","th-".concat(e.id)),key:e.id,style:n(c.styleObj,["tr_th","th-".concat(e.id)])},c.slotObj["th-".concat(e.id)]?"function"==typeof c.slotObj["th-".concat(e.id)]?c.slotObj["th-".concat(e.id)](e):c.slotObj["th-".concat(e.id)]:e.name)}))):[])},d=function(){var c=Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(l);return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody",{className:"list_body",style:n(c.styleObj,["list_body"])},c.bodyData.map((function(e,o){return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr",{className:classnames__WEBPACK_IMPORTED_MODULE_1___default()("body_tr","tr-".concat(o)),style:n(c.styleObj,["body_tr","tr-".concat(o)]),key:o},c.headData.map((function(o){return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td",{className:classnames__WEBPACK_IMPORTED_MODULE_1___default()("tr_td","td-".concat(o.id)),style:n(c.styleObj,["tr_td","td-".concat(o.id)]),key:o.id},c.slotObj["td-".concat(o.id)]?"function"==typeof c.slotObj["td-".concat(o.id)]?c.slotObj["td-".concat(o.id)](e,o):c.slotObj["td-".concat(o.id)]:e[o.id])})))})))},i=function(){var a=Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(l);return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table",{className:"table_list",style:n(a.styleObj,["table_list"])},react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(s,null),react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(d,null))},b=function(){var c=Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(l);return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment,null,c.bodyData.map((function(e,o){return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table",{className:classnames__WEBPACK_IMPORTED_MODULE_1___default()("table_info","info-".concat(o)),style:n(c.styleObj,["table_info","info-".concat(o)]),key:"".concat(e.id,"_").concat(o)},react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody",{className:"info_body",style:n(c.styleObj,["info_body"])},c.headData.map((function(o){return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr",{className:classnames__WEBPACK_IMPORTED_MODULE_1___default()("body_tr","tr-".concat(o.id)),style:n(c.styleObj,["body_tr","tr-".concat(o.id)]),key:o.id},react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th",{className:classnames__WEBPACK_IMPORTED_MODULE_1___default()("tr_th","th-".concat(o.id)),style:n(c.styleObj,["tr_th","th-".concat(o.id)])},c.slotObj["th-".concat(o.id)]?"function"==typeof c.slotObj["th-".concat(o.id)]?c.slotObj["th-".concat(o.id)](o):c.slotObj["th-".concat(o.id)]:o.name),react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td",{className:classnames__WEBPACK_IMPORTED_MODULE_1___default()("tr_td","td-".concat(o.id)),style:n(c.styleObj,["tr_td","td-".concat(o.id)])},c.slotObj["td-".concat(o.id)]?"function"==typeof c.slotObj["td-".concat(o.id)]?c.slotObj["td-".concat(o.id)](e,o):c.slotObj["td-".concat(o.id)]:e[o.id]))}))))})))},y=function(){var c=Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(l);return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table",{className:"table_compare",style:n(c.styleObj,["table_compare"])},react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody",{className:"compare_body",style:n(c.styleObj,["compare_body"])},c.headData.map((function(e){return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr",{className:classnames__WEBPACK_IMPORTED_MODULE_1___default()("body_tr","tr-".concat(e.id)),style:n(c.styleObj,["body_tr","tr-".concat(e.id)]),key:e.id},react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th",{className:classnames__WEBPACK_IMPORTED_MODULE_1___default()("tr_th","th-".concat(e.id)),style:n(c.styleObj,["tr_th","th-".concat(e.id)])},c.slotObj["th-".concat(e.id)]?"function"==typeof c.slotObj["th-".concat(e.id)]?c.slotObj["th-".concat(e.id)](e):c.slotObj["th-".concat(e.id)]:e.name),c.bodyData.map((function(o,l){return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td",{className:classnames__WEBPACK_IMPORTED_MODULE_1___default()("tr_td","td-".concat(e.id),"td-".concat(l)),style:n(c.styleObj,["tr_td","td-".concat(e.id),"td-".concat(l)]),key:"".concat(o.id,"_").concat(l)},c.slotObj["td-".concat(e.id)]?"function"==typeof c.slotObj["td-".concat(e.id)]?c.slotObj["td-".concat(e.id)](o,e):c.slotObj["td-".concat(e.id)]:o[e.id])})))}))))};/* harmony default export */ __webpack_exports__["a"] = (function(e){var c,o,s={headData:e.headData||[],bodyData:e.bodyData||[],styleObj:(c=e.styleObj||{},o={},Object.keys(c).forEach((function(t){o[t]={},Object.keys(c[t]).forEach((function(e){var a=e.replace(/-(\w)/g,(function(t,e){return e.toUpperCase()}));o[t][a]=c[t][e]}))})),o),slotObj:e.slotObj||{}},d={clickData:function(t){e.onDataClick&&e.onDataClick(t)}};return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(l.Provider,{value:s},react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(r.Provider,{value:d},react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div",{className:classnames__WEBPACK_IMPORTED_MODULE_1___default()("btb-react-table",e.className),style:n(s.styleObj,["btb-react-table"])},function(){switch(e.mode){case"info":return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(b,null);case"compare":return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(y,null);case"list":default:return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(i,null)}}())))});
+function c(t){return(c="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(t){return typeof t}:function(t){return t&&"function"==typeof Symbol&&t.constructor===Symbol&&t!==Symbol.prototype?"symbol":typeof t})(t)}var n=function(t,e){var a;return e.forEach((function(e){a=Object.assign({},a,o(t,e))})),a},o=function(t,e){var a={};return"object"===c(t)&&Object.keys(t).find((function(c){if(c===e)return a=Object.assign({},t[c]),!0})),a},l=react__WEBPACK_IMPORTED_MODULE_0___default.a.createContext(),r=react__WEBPACK_IMPORTED_MODULE_0___default.a.createContext(),s=function(){var c=Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(l);return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("thead",{className:"list_head",style:n(c.styleObj,["list_head"])},c.headData.length?react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr",{className:"head_tr",style:n(c.styleObj,["head_tr"])},c.headData.map((function(e){return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th",{className:classnames__WEBPACK_IMPORTED_MODULE_1___default()("tr_th","th-".concat(e.id)),key:e.id,style:n(c.styleObj,["tr_th","th-".concat(e.id)])},c.slotObj["th-".concat(e.id)]?"function"==typeof c.slotObj["th-".concat(e.id)]?c.slotObj["th-".concat(e.id)](e):c.slotObj["th-".concat(e.id)]:e.name)}))):[])},d=function(){var c=Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(l);return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody",{className:"list_body",style:n(c.styleObj,["list_body"])},c.bodyData.map((function(e,o){return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr",{className:classnames__WEBPACK_IMPORTED_MODULE_1___default()("body_tr","tr-".concat(o)),style:n(c.styleObj,["body_tr","tr-".concat(o)]),key:o},c.headData.map((function(o){return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td",{className:classnames__WEBPACK_IMPORTED_MODULE_1___default()("tr_td","td-".concat(o.id)),style:n(c.styleObj,["tr_td","td-".concat(o.id)]),key:o.id},c.slotObj["td-".concat(o.id)]?"function"==typeof c.slotObj["td-".concat(o.id)]?c.slotObj["td-".concat(o.id)](e,o):c.slotObj["td-".concat(o.id)]:e[o.id])})))})))},i=function(){var a=Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(l);return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table",{className:"table_list",style:n(a.styleObj,["table_list"])},react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(s,null),react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(d,null))},b=function(){var c=Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(l);return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment,null,c.bodyData.map((function(e,o){return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table",{className:classnames__WEBPACK_IMPORTED_MODULE_1___default()("table_info","info-".concat(o)),style:n(c.styleObj,["table_info","info-".concat(o)]),key:"".concat(e.id,"_").concat(o)},react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody",{className:"info_body",style:n(c.styleObj,["info_body"])},c.headData.map((function(o){return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr",{className:classnames__WEBPACK_IMPORTED_MODULE_1___default()("body_tr","tr-".concat(o.id)),style:n(c.styleObj,["body_tr","tr-".concat(o.id)]),key:o.id},react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th",{className:classnames__WEBPACK_IMPORTED_MODULE_1___default()("tr_th","th-".concat(o.id)),style:n(c.styleObj,["tr_th","th-".concat(o.id)])},c.slotObj["th-".concat(o.id)]?"function"==typeof c.slotObj["th-".concat(o.id)]?c.slotObj["th-".concat(o.id)](o):c.slotObj["th-".concat(o.id)]:o.name),react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td",{className:classnames__WEBPACK_IMPORTED_MODULE_1___default()("tr_td","td-".concat(o.id)),style:n(c.styleObj,["tr_td","td-".concat(o.id)])},c.slotObj["td-".concat(o.id)]?"function"==typeof c.slotObj["td-".concat(o.id)]?c.slotObj["td-".concat(o.id)](e,o):c.slotObj["td-".concat(o.id)]:e[o.id]))}))))})))},y=function(){var c=Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(l);return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table",{className:"table_compare",style:n(c.styleObj,["table_compare"])},react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody",{className:"compare_body",style:n(c.styleObj,["compare_body"])},c.headData.map((function(e){return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr",{className:classnames__WEBPACK_IMPORTED_MODULE_1___default()("body_tr","tr-".concat(e.id)),style:n(c.styleObj,["body_tr","tr-".concat(e.id)]),key:e.id},react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th",{className:classnames__WEBPACK_IMPORTED_MODULE_1___default()("tr_th","th-".concat(e.id)),style:n(c.styleObj,["tr_th","th-".concat(e.id)])},c.slotObj["th-".concat(e.id)]?"function"==typeof c.slotObj["th-".concat(e.id)]?c.slotObj["th-".concat(e.id)](e):c.slotObj["th-".concat(e.id)]:e.name),c.bodyData.map((function(o,l){return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td",{className:classnames__WEBPACK_IMPORTED_MODULE_1___default()("tr_td","td-".concat(e.id),"td-".concat(l)),style:n(c.styleObj,["tr_td","td-".concat(e.id),"td-".concat(l)]),key:"".concat(o.id,"_").concat(l)},c.slotObj["td-".concat(e.id)]?"function"==typeof c.slotObj["td-".concat(e.id)]?c.slotObj["td-".concat(e.id)](o,e):c.slotObj["td-".concat(e.id)]:o[e.id])})))}))))},m=react__WEBPACK_IMPORTED_MODULE_0___default.a.forwardRef((function(e,c){var o,s,d={headData:e.headData||[],bodyData:e.bodyData||[],styleObj:(o=e.styleObj||{},s={},Object.keys(o).forEach((function(t){s[t]={},Object.keys(o[t]).forEach((function(e){var a=e.replace(/-(\w)/g,(function(t,e){return e.toUpperCase()}));s[t][a]=o[t][e]}))})),s),slotObj:e.slotObj||{}},m={clickData:function(t){e.onDataClick&&e.onDataClick(t)}};return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(l.Provider,{value:d},react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(r.Provider,{value:m},react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div",{ref:c,className:classnames__WEBPACK_IMPORTED_MODULE_1___default()("btb-react-table",e.className),style:n(d.styleObj,["btb-react-table"])},function(){switch(e.mode){case"info":return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(b,null);case"compare":return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(y,null);case"list":default:return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(i,null)}}())))}));/* harmony default export */ __webpack_exports__["a"] = (m);
 
 
 /***/ }),
 
-/***/ 40:
+/***/ 51:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(38);
+/* harmony import */ var _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(49);
 
 var packageInfo = {
   'version': _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].table.version,
@@ -229,7 +240,7 @@ var packageInfo = {
 
 /***/ }),
 
-/***/ 53:
+/***/ 70:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -241,18 +252,18 @@ var react = __webpack_require__(0);
 var react_default = /*#__PURE__*/__webpack_require__.n(react);
 
 // EXTERNAL MODULE: ./node_modules/@blacktoolbox/react-table/esm/index.js
-var esm = __webpack_require__(39);
+var esm = __webpack_require__(50);
 
 // EXTERNAL MODULE: ./src/modules/pageLayout/index.js + 5 modules
-var pageLayout = __webpack_require__(35);
+var pageLayout = __webpack_require__(46);
 
 // EXTERNAL MODULE: ./src/utils/functions.js
-var functions = __webpack_require__(36);
+var functions = __webpack_require__(47);
 
 // EXTERNAL MODULE: ./src/components/packages/table/packageInfo.js
-var packageInfo = __webpack_require__(40);
+var packageInfo = __webpack_require__(51);
 
-// CONCATENATED MODULE: ./src/components/packages/table/ExampleList.jsx
+// CONCATENATED MODULE: ./src/components/packages/table/ExampleInfo.jsx
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
@@ -266,13 +277,13 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 var pageInfo = _objectSpread(_objectSpread({}, packageInfo["a" /* default */]), {}, {
-  'title': 'Example - List',
-  'description': 'Here has very simple example to show how to use the list mode.'
+  'title': 'Example - Info',
+  'description': 'Here has very simple example to show how to use the info mode.'
 });
 
-var preRender = "<BTBTable\n        mode=\"list\" \n        headData={headData} \n        bodyData={bodyData}/>";
+var preRender = "<BTBTable \n        mode=\"info\" \n        headData={headData} \n        bodyData={bodyData}/>";
 var preHeadData = "const headData = [\n  {name : 'Name', id : 'name'},\n  {name : 'Type', id : 'devType'},\n  {name : 'OS', id : 'osType'},\n  {name : 'IP', id : 'ipAddr'},\n  {name : 'MAC', id : 'macAddr'},\n  {name : 'Traffic(tx / rx)', id : 'traffic'},\n  {name : 'Statue', id : 'statusDesc'}\n];";
-var preBodyData = "const bodyData = [\n  {name : 'Device 1', devType : 'phone', osType : 'ios', ipAddr : '192.168.0.50', macAddr : 'B4:A2:07:44:55:2A', traffic : '0 MB / 0 KB', status : 0, statusDesc : 'Disconnected'},\n  {name : 'Device 2', devType : 'switch', osType : 'linux', ipAddr : '192.168.0.37', macAddr : '7E:EF:02:44:AE:25', traffic : '2.7 MB / 263 KB', status : 1, statusDesc : 'Connected'},\n  {name : 'Device 3', devType : 'ap', osType : 'linux', ipAddr : '192.168.0.121', macAddr : 'EF:2B:15:44:32:B4', traffic : '0 MB / 0 KB', status : 2, statusDesc : 'Locked'},\n  {name : 'Device 4', devType : 'phone', osType : 'android',  ipAddr : '192.168.0.9', macAddr : 'F5:22:33:44:55:35', traffic : '0 MB / 0 KB', status : 0, statusDesc : 'Disconnected'},\n  {name : 'Device 5', devType : 'ap', osType : 'linux', ipAddr : '192.168.0.27', macAddr : '7E:EF:B2:44:28:3B', traffic : '1.3 MB / 725 KB', status : 1, statusDesc : 'Connected'},\n  {name : 'Device 6', devType : 'pc', osType : 'windows', ipAddr : '192.168.0.11', macAddr : '11:22:24:44:5E:90', traffic : '0 MB / 0 KB', status : 2, statusDesc : 'Locked'},\n  {name : 'Device 7', devType : 'phone', osType : 'ios', ipAddr : '192.168.0.6', macAddr : '11:FF:33:44:55:A3', traffic : '1.2 MB / 45 KB', status : 1, statusDesc : 'Connected'},\n  {name : 'Device 8', devType : 'pc', osType : 'linux', ipAddr : '192.168.0.3', macAddr : 'B2:FE:B8:44:55:6D', traffic : '4.8 MB / 3.7 MB', status : 1, statusDesc : 'Connected'},\n  {name : 'Device 9', devType : 'pc', osType : 'windows',  ipAddr : '192.168.0.18', macAddr : 'E4:AA:74:44:38:E1', traffic : '0 MB / 0 KB', status : 2, statusDesc : 'Locked'},\n  {name : 'Device 10', devType : 'switch', osType : 'linux', ipAddr : '192.168.0.245', macAddr : 'E2:BA:33:44:48:AB', traffic : '0 MB / 0 KB', status : 0, statusDesc : 'Disconnected'}\n];";
+var preBodyData = "const bodyData = [\n  {\n    name : 'Device 1',  \n    devType : 'phone',   \n    osType : 'ios',      \n    ipAddr : '192.168.0.50',   \n    macAddr : 'B4:A2:07:44:55:2A', \n    traffic : '1.7 MB / 45 KB', \n    status : 0, \n    statusDesc : 'Disconnected'\n  },\n  {\n    name : 'Device 2',  \n    devType : 'notebook',   \n    osType : 'windows',      \n    ipAddr : '192.168.0.52',   \n    macAddr : 'B4:A2:07:44:DD:FF', \n    traffic : '4.8 MB / 27 KB', \n    status : 0, \n    statusDesc : 'Disconnected'\n  }\n];";
 var tableHeadArr_property = [{
   name: 'Name',
   id: 'name'
@@ -301,95 +312,23 @@ var tableBodyArr_data = [{
   osType: 'ios',
   ipAddr: '192.168.0.50',
   macAddr: 'B4:A2:07:44:55:2A',
-  traffic: '0 MB / 0 KB',
+  traffic: '1.7 MB / 45 KB',
   status: 0,
   statusDesc: 'Disconnected'
 }, {
   name: 'Device 2',
-  devType: 'switch',
-  osType: 'linux',
-  ipAddr: '192.168.0.37',
-  macAddr: '7E:EF:02:44:AE:25',
-  traffic: '2.7 MB / 263 KB',
-  status: 1,
-  statusDesc: 'Connected'
-}, {
-  name: 'Device 3',
-  devType: 'ap',
-  osType: 'linux',
-  ipAddr: '192.168.0.121',
-  macAddr: 'EF:2B:15:44:32:B4',
-  traffic: '0 MB / 0 KB',
-  status: 2,
-  statusDesc: 'Locked'
-}, {
-  name: 'Device 4',
-  devType: 'phone',
-  osType: 'android',
-  ipAddr: '192.168.0.9',
-  macAddr: 'F5:22:33:44:55:35',
-  traffic: '0 MB / 0 KB',
-  status: 0,
-  statusDesc: 'Disconnected'
-}, {
-  name: 'Device 5',
-  devType: 'ap',
-  osType: 'linux',
-  ipAddr: '192.168.0.27',
-  macAddr: '7E:EF:B2:44:28:3B',
-  traffic: '1.3 MB / 725 KB',
-  status: 1,
-  statusDesc: 'Connected'
-}, {
-  name: 'Device 6',
-  devType: 'pc',
+  devType: 'notebook',
   osType: 'windows',
-  ipAddr: '192.168.0.11',
-  macAddr: '11:22:24:44:5E:90',
-  traffic: '0 MB / 0 KB',
-  status: 2,
-  statusDesc: 'Locked'
-}, {
-  name: 'Device 7',
-  devType: 'phone',
-  osType: 'ios',
-  ipAddr: '192.168.0.6',
-  macAddr: '11:FF:33:44:55:A3',
-  traffic: '1.2 MB / 45 KB',
-  status: 1,
-  statusDesc: 'Connected'
-}, {
-  name: 'Device 8',
-  devType: 'pc',
-  osType: 'linux',
-  ipAddr: '192.168.0.3',
-  macAddr: 'B2:FE:B8:44:55:6D',
-  traffic: '4.8 MB / 3.7 MB',
-  status: 1,
-  statusDesc: 'Connected'
-}, {
-  name: 'Device 9',
-  devType: 'pc',
-  osType: 'windows',
-  ipAddr: '192.168.0.18',
-  macAddr: 'E4:AA:74:44:38:E1',
-  traffic: '0 MB / 0 KB',
-  status: 2,
-  statusDesc: 'Locked'
-}, {
-  name: 'Device 10',
-  devType: 'switch',
-  osType: 'linux',
-  ipAddr: '192.168.0.245',
-  macAddr: 'E2:BA:33:44:48:AB',
-  traffic: '0 MB / 0 KB',
+  ipAddr: '192.168.0.52',
+  macAddr: 'B4:A2:07:44:DD:FF',
+  traffic: '4.8 MB / 27 KB',
   status: 0,
   statusDesc: 'Disconnected'
 }];
 
-var ExampleList_ExampleMode = function ExampleMode() {
+var ExampleInfo_ExampleMode = function ExampleMode() {
   return /*#__PURE__*/react_default.a.createElement(pageLayout["c" /* Page */], {
-    className: "btb-pkg-table-example-list"
+    className: "btb-pkg-table-example-info"
   }, /*#__PURE__*/react_default.a.createElement(pageLayout["d" /* PageHead */], {
     title: pageInfo.title,
     clickBtn: functions["a" /* openLink */],
@@ -400,7 +339,7 @@ var ExampleList_ExampleMode = function ExampleMode() {
     head: "EXAMPLE"
   }, /*#__PURE__*/react_default.a.createElement(esm["a" /* default */], {
     className: "table_sample",
-    mode: "list",
+    mode: "info",
     headData: tableHeadArr_property,
     bodyData: tableBodyArr_data
   })), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
@@ -420,16 +359,16 @@ var ExampleList_ExampleMode = function ExampleMode() {
   }, preBodyData))));
 };
 
-/* harmony default export */ var ExampleList = (ExampleList_ExampleMode);
-// CONCATENATED MODULE: ./src/routes/packages/table/ExampleListContainer.jsx
+/* harmony default export */ var ExampleInfo = (ExampleInfo_ExampleMode);
+// CONCATENATED MODULE: ./src/routes/packages/table/ExampleInfoContainer.jsx
 
 
 
-var ExampleListContainer_ExampleListContainer = function ExampleListContainer() {
-  return /*#__PURE__*/react_default.a.createElement(ExampleList, null);
+var ExampleInfoContainer_ExampleInfoContainer = function ExampleInfoContainer() {
+  return /*#__PURE__*/react_default.a.createElement(ExampleInfo, null);
 };
 
-/* harmony default export */ var table_ExampleListContainer = __webpack_exports__["default"] = (ExampleListContainer_ExampleListContainer);
+/* harmony default export */ var table_ExampleInfoContainer = __webpack_exports__["default"] = (ExampleInfoContainer_ExampleInfoContainer);
 
 /***/ })
 

@@ -1,6 +1,6 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[12],{
 
-/***/ 35:
+/***/ 46:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -27,11 +27,11 @@ var Page_Page = function Page(props) {
 
 /* harmony default export */ var pageLayout_Page = (Page_Page);
 // EXTERNAL MODULE: ./node_modules/classnames/index.js
-var classnames = __webpack_require__(37);
+var classnames = __webpack_require__(48);
 var classnames_default = /*#__PURE__*/__webpack_require__.n(classnames);
 
 // EXTERNAL MODULE: ./node_modules/@fortawesome/react-fontawesome/index.es.js
-var index_es = __webpack_require__(29);
+var index_es = __webpack_require__(36);
 
 // CONCATENATED MODULE: ./src/modules/pageLayout/PageHead.jsx
 
@@ -145,7 +145,7 @@ var Divider_Divider = function Divider() {
 
 /***/ }),
 
-/***/ 36:
+/***/ 47:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -158,19 +158,19 @@ var openLink = function openLink(link) {
 
 /***/ }),
 
-/***/ 38:
+/***/ 49:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var _routeMap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(16);
+/* harmony import */ var _routeMap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(18);
 
 var packageObj = {
   list: {
     name: 'List',
     routename: _routeMap__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].PACKAGES_LIST_BASIC,
     description: 'This module of list creator made with React can do the help to make a list or mane component to our page. Normally it is a list make. But with some trigger action it can be a menu maker for route redirection or other feature we need.',
-    version: '2.1.6',
-    updated: 'Jun, 14, 2020',
+    version: '2.2.0',
+    updated: 'Jun, 21, 2020',
     link: {
       github: 'https://github.com/BlackToolBoxLaboratory/react-list',
       npm: 'https://www.npmjs.com/package/@blacktoolbox/react-list'
@@ -180,11 +180,22 @@ var packageObj = {
     name: 'Table',
     routename: _routeMap__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].PACKAGES_TABLE_BASIC,
     description: 'This module of table creator made with React can do the help to make a table component to our page. It has modes in list and info which are different ways to show data.',
-    version: '1.2.0',
-    updated: 'Jun, 18, 2020',
+    version: '1.4.0',
+    updated: 'Jun, 21, 2020',
     link: {
       github: 'https://github.com/BlackToolBoxLaboratory/react-table',
       npm: 'https://www.npmjs.com/package/@blacktoolbox/react-table'
+    }
+  },
+  popover: {
+    name: 'Popover',
+    routename: _routeMap__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].PACKAGES_POPOVER_BASIC,
+    description: 'This module of popover creator made with React can do the help to make a popover component to our page. The popover can do th e thing about popover and dropdown.',
+    version: '1.0.0',
+    updated: 'Jun, 21, 2020',
+    link: {
+      github: 'https://github.com/BlackToolBoxLaboratory/react-popover',
+      npm: 'https://www.npmjs.com/package/@blacktoolbox/react-popover'
     }
   }
 };
@@ -192,11 +203,11 @@ var packageObj = {
 
 /***/ }),
 
-/***/ 41:
+/***/ 52:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(38);
+/* harmony import */ var _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(49);
 
 var packageInfo = {
   'version': _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].list.version,
@@ -216,7 +227,7 @@ var packageInfo = {
 
 /***/ }),
 
-/***/ 50:
+/***/ 67:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -228,30 +239,18 @@ var react = __webpack_require__(0);
 var react_default = /*#__PURE__*/__webpack_require__.n(react);
 
 // EXTERNAL MODULE: ./node_modules/@blacktoolbox/react-list/esm/index.js
-var esm = __webpack_require__(42);
+var esm = __webpack_require__(53);
 
 // EXTERNAL MODULE: ./src/modules/pageLayout/index.js + 5 modules
-var pageLayout = __webpack_require__(35);
+var pageLayout = __webpack_require__(46);
 
 // EXTERNAL MODULE: ./src/utils/functions.js
-var functions = __webpack_require__(36);
+var functions = __webpack_require__(47);
 
 // EXTERNAL MODULE: ./src/components/packages/list/packageInfo.js
-var packageInfo = __webpack_require__(41);
+var packageInfo = __webpack_require__(52);
 
-// CONCATENATED MODULE: ./src/components/packages/list/ExampleStyle.jsx
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
-
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
-function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
+// CONCATENATED MODULE: ./src/components/packages/list/ExampleSlot.jsx
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
@@ -265,8 +264,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 var PageInfo = _objectSpread(_objectSpread({}, packageInfo["a" /* default */]), {}, {
-  'title': 'Example - Style',
-  'description': 'Here is going to show you about how to use the styleObj and the example of defaultActiveID and v-model of activeID. The activeID is used to mark focused entry, but also allowed to used defaultActiveID to mark entry as default in the begin. Then we can modify the style by the styleObj with using the node class name directly.'
+  'title': 'Example - Slot',
+  'description': 'Sometimes we may want to show the entry from the list by button, input, icon, ... etc. Then we can ultilize this feature about customized slot. To the example as following, I show you how to customized the entry which ID is b2. For the package of list, every single ID corresponding to dataList can be customized by slotObj in String, Node, or Function way.'
 });
 
 var _listData = [{
@@ -300,23 +299,19 @@ var _listData = [{
     title: 'Leaf: 2-2'
   }]
 }];
-var _styleObj = {
-  container_entry: {
-    cursor: 'pointer'
+var _slotObj = {
+  'b2': function b2(entry) {
+    return /*#__PURE__*/react_default.a.createElement("div", null, "".concat(entry.id, " overwrited by Function"));
   },
-  'entry-active': {
-    'background-color': '#00d8ff'
-  }
+  'l22': /*#__PURE__*/react_default.a.createElement("div", null, 'l22 overwrited by Node')
 };
-var preActiveID_EntryClick = "const activeID = useActiveState('l13')\n\nfunction useActiveState (defaultSate) {\n  const [value, setState] = useState(defaultSate);\n  return {\n    value,\n    onChange : (data) => {\n      setState(data.id);\n    }\n  };\n}";
-var preRender = "<BTBList \n        dataList={listData} \n        styleObj={styleObj} \n        activeID={activeID.value} \n        onEntryClick={activeID.onChange}/>";
+var preRender = "<BTBList \n        dataList={listData} \n        slotObj={slotObj}/>";
 var preListData = "const listData = [\n  { id: 'b1', title: 'Branch: 1', children: [\n          { id: 'l11', title: 'Leaf: 1-1' },\n          { id: 'b12', title: 'Branch: 1-2', children: [\n                  { id: 'l121', title: 'Leaf: 1-2-1' },\n                  { id: 'l122', title: 'Leaf: 1-2-2' }\n          ]},\n          { id: 'l13', title: 'Leaf: 1-3' }\n  ]},\n  { id: 'b2', title: 'Branch: 2', children: [\n          { id: 'l21', title: 'Leaf: 2-1' },\n          { id: 'l22', title: 'Leaf: 2-2' }\n  ]}\n]";
-var preStyleObj = "const _styleObj = {\n  'container_entry': {\n          cursor: 'pointer'\n  },\n  'entry-active': {\n          'background-color': '#b8dec9'\n  }\n}";
+var preSlotObj = "const _slotObj = {\n  'b2': (entry) => {\n    return (\n      <div>\n      {`${entry.id} overwrited by Function`}\n      </div>\n      )\n    },\n    'l22': (\n      <div>\n        {'l22 overwrited by Node'}\n      </div>\n    )\n  }";
 
-var ExampleStyle_ExampleStyle = function ExampleStyle() {
-  var activeID = useActiveState('l13');
+var ExampleSlot_ExampleSlot = function ExampleSlot() {
   return /*#__PURE__*/react_default.a.createElement(pageLayout["c" /* Page */], {
-    className: "btb-pkg-list-example-style"
+    className: "btb-pkg-list-example-slot"
   }, /*#__PURE__*/react_default.a.createElement(pageLayout["d" /* PageHead */], {
     title: PageInfo.title,
     clickBtn: functions["a" /* openLink */],
@@ -325,13 +320,9 @@ var ExampleStyle_ExampleStyle = function ExampleStyle() {
     head: /*#__PURE__*/react_default.a.createElement(react_default.a.Fragment, null, "Version: ".concat(PageInfo.version), /*#__PURE__*/react_default.a.createElement("br", null), "Release Date: ".concat(PageInfo.updated))
   }, /*#__PURE__*/react_default.a.createElement("p", null, PageInfo.description)), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
     head: "EXAMPLE"
-  }, /*#__PURE__*/react_default.a.createElement("p", {
-    className: "example_activeID"
-  }, "Active ID: ".concat(activeID.value)), /*#__PURE__*/react_default.a.createElement(esm["a" /* default */], {
+  }, /*#__PURE__*/react_default.a.createElement(esm["a" /* default */], {
     dataList: _listData,
-    styleObj: _styleObj,
-    activeID: activeID.value,
-    onEntryClick: activeID.onChange
+    slotObj: _slotObj
   })), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
     head: "SOURCECODE"
   }, /*#__PURE__*/react_default.a.createElement(pageLayout["a" /* Block */], {
@@ -343,40 +334,22 @@ var ExampleStyle_ExampleStyle = function ExampleStyle() {
   }, /*#__PURE__*/react_default.a.createElement("pre", {
     className: "page_pre"
   }, preListData)), /*#__PURE__*/react_default.a.createElement(pageLayout["a" /* Block */], {
-    title: "activeID & useState"
-  }, /*#__PURE__*/react_default.a.createElement("pre", {
-    className: "page_pre"
-  }, preActiveID_EntryClick)), /*#__PURE__*/react_default.a.createElement(pageLayout["a" /* Block */], {
     title: "styleObj"
   }, /*#__PURE__*/react_default.a.createElement("pre", {
     className: "page_pre"
-  }, preStyleObj))));
+  }, preSlotObj))));
 };
 
-function useActiveState(defaultSate) {
-  var _useState = Object(react["useState"])(defaultSate),
-      _useState2 = _slicedToArray(_useState, 2),
-      value = _useState2[0],
-      setState = _useState2[1];
-
-  return {
-    value: value,
-    onChange: function onChange(data) {
-      setState(data.id);
-    }
-  };
-}
-
-/* harmony default export */ var list_ExampleStyle = (ExampleStyle_ExampleStyle);
-// CONCATENATED MODULE: ./src/routes/packages/list/ExampleStyleContainer.jsx
+/* harmony default export */ var list_ExampleSlot = (ExampleSlot_ExampleSlot);
+// CONCATENATED MODULE: ./src/routes/packages/list/ExampleSlotContainer.jsx
 
 
 
-var ExampleStyleContainer_ExampleStyleContaier = function ExampleStyleContaier() {
-  return /*#__PURE__*/react_default.a.createElement(list_ExampleStyle, null);
+var ExampleSlotContainer_ExampleSlotContaier = function ExampleSlotContaier() {
+  return /*#__PURE__*/react_default.a.createElement(list_ExampleSlot, null);
 };
 
-/* harmony default export */ var ExampleStyleContainer = __webpack_exports__["default"] = (ExampleStyleContainer_ExampleStyleContaier);
+/* harmony default export */ var ExampleSlotContainer = __webpack_exports__["default"] = (ExampleSlotContainer_ExampleSlotContaier);
 
 /***/ })
 

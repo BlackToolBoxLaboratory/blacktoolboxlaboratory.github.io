@@ -1,6 +1,6 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[14],{
 
-/***/ 35:
+/***/ 46:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -27,11 +27,11 @@ var Page_Page = function Page(props) {
 
 /* harmony default export */ var pageLayout_Page = (Page_Page);
 // EXTERNAL MODULE: ./node_modules/classnames/index.js
-var classnames = __webpack_require__(37);
+var classnames = __webpack_require__(48);
 var classnames_default = /*#__PURE__*/__webpack_require__.n(classnames);
 
 // EXTERNAL MODULE: ./node_modules/@fortawesome/react-fontawesome/index.es.js
-var index_es = __webpack_require__(29);
+var index_es = __webpack_require__(36);
 
 // CONCATENATED MODULE: ./src/modules/pageLayout/PageHead.jsx
 
@@ -145,19 +145,19 @@ var Divider_Divider = function Divider() {
 
 /***/ }),
 
-/***/ 38:
+/***/ 49:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var _routeMap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(16);
+/* harmony import */ var _routeMap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(18);
 
 var packageObj = {
   list: {
     name: 'List',
     routename: _routeMap__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].PACKAGES_LIST_BASIC,
     description: 'This module of list creator made with React can do the help to make a list or mane component to our page. Normally it is a list make. But with some trigger action it can be a menu maker for route redirection or other feature we need.',
-    version: '2.1.6',
-    updated: 'Jun, 14, 2020',
+    version: '2.2.0',
+    updated: 'Jun, 21, 2020',
     link: {
       github: 'https://github.com/BlackToolBoxLaboratory/react-list',
       npm: 'https://www.npmjs.com/package/@blacktoolbox/react-list'
@@ -167,11 +167,22 @@ var packageObj = {
     name: 'Table',
     routename: _routeMap__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].PACKAGES_TABLE_BASIC,
     description: 'This module of table creator made with React can do the help to make a table component to our page. It has modes in list and info which are different ways to show data.',
-    version: '1.2.0',
-    updated: 'Jun, 18, 2020',
+    version: '1.4.0',
+    updated: 'Jun, 21, 2020',
     link: {
       github: 'https://github.com/BlackToolBoxLaboratory/react-table',
       npm: 'https://www.npmjs.com/package/@blacktoolbox/react-table'
+    }
+  },
+  popover: {
+    name: 'Popover',
+    routename: _routeMap__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].PACKAGES_POPOVER_BASIC,
+    description: 'This module of popover creator made with React can do the help to make a popover component to our page. The popover can do th e thing about popover and dropdown.',
+    version: '1.0.0',
+    updated: 'Jun, 21, 2020',
+    link: {
+      github: 'https://github.com/BlackToolBoxLaboratory/react-popover',
+      npm: 'https://www.npmjs.com/package/@blacktoolbox/react-popover'
     }
   }
 };
@@ -179,7 +190,7 @@ var packageObj = {
 
 /***/ }),
 
-/***/ 61:
+/***/ 78:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -191,13 +202,13 @@ var react = __webpack_require__(0);
 var react_default = /*#__PURE__*/__webpack_require__.n(react);
 
 // EXTERNAL MODULE: ./node_modules/react-router/esm/react-router.js
-var react_router = __webpack_require__(1);
+var react_router = __webpack_require__(2);
 
 // EXTERNAL MODULE: ./node_modules/@fortawesome/react-fontawesome/index.es.js
-var index_es = __webpack_require__(29);
+var index_es = __webpack_require__(36);
 
 // EXTERNAL MODULE: ./src/modules/pageLayout/index.js + 5 modules
-var pageLayout = __webpack_require__(35);
+var pageLayout = __webpack_require__(46);
 
 // CONCATENATED MODULE: ./src/components/about/package.jsx
 
@@ -232,7 +243,7 @@ var package_Package = function Package(props) {
 
 /* harmony default export */ var about_package = (package_Package);
 // EXTERNAL MODULE: ./src/assets/definitions/packageObj.js
-var packageObj = __webpack_require__(38);
+var packageObj = __webpack_require__(49);
 
 // CONCATENATED MODULE: ./src/assets/images/BTB_React.png
 /* harmony default export */ var BTB_React = (__webpack_require__.p + "files/BTB_React.png");
@@ -244,8 +255,7 @@ var packageObj = __webpack_require__(38);
 
 
 
-
-var About_About = function About(props) {
+var About = Object(react_router["o" /* withRouter */])(function (props) {
   function _redirectRoute(routename) {
     props.history.push(routename);
   }
@@ -290,9 +300,8 @@ var About_About = function About(props) {
       redirectRoute: _redirectRoute
     })));
   }));
-};
-
-/* harmony default export */ var about_About = (Object(react_router["o" /* withRouter */])(About_About));
+});
+/* harmony default export */ var about_About = (About);
 // CONCATENATED MODULE: ./src/routes/AboutContainer.jsx
 
 

@@ -1,6 +1,6 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[15],{
 
-/***/ 35:
+/***/ 46:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -27,11 +27,11 @@ var Page_Page = function Page(props) {
 
 /* harmony default export */ var pageLayout_Page = (Page_Page);
 // EXTERNAL MODULE: ./node_modules/classnames/index.js
-var classnames = __webpack_require__(37);
+var classnames = __webpack_require__(48);
 var classnames_default = /*#__PURE__*/__webpack_require__.n(classnames);
 
 // EXTERNAL MODULE: ./node_modules/@fortawesome/react-fontawesome/index.es.js
-var index_es = __webpack_require__(29);
+var index_es = __webpack_require__(36);
 
 // CONCATENATED MODULE: ./src/modules/pageLayout/PageHead.jsx
 
@@ -145,7 +145,7 @@ var Divider_Divider = function Divider() {
 
 /***/ }),
 
-/***/ 36:
+/***/ 47:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -158,7 +158,7 @@ var openLink = function openLink(link) {
 
 /***/ }),
 
-/***/ 45:
+/***/ 60:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -170,10 +170,10 @@ var react = __webpack_require__(0);
 var react_default = /*#__PURE__*/__webpack_require__.n(react);
 
 // EXTERNAL MODULE: ./src/modules/pageLayout/index.js + 5 modules
-var pageLayout = __webpack_require__(35);
+var pageLayout = __webpack_require__(46);
 
 // EXTERNAL MODULE: ./src/utils/functions.js
-var functions = __webpack_require__(36);
+var functions = __webpack_require__(47);
 
 // CONCATENATED MODULE: ./src/components/applications/Languages.jsx
 

@@ -1,6 +1,6 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[10],{
 
-/***/ 35:
+/***/ 46:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -27,11 +27,11 @@ var Page_Page = function Page(props) {
 
 /* harmony default export */ var pageLayout_Page = (Page_Page);
 // EXTERNAL MODULE: ./node_modules/classnames/index.js
-var classnames = __webpack_require__(37);
+var classnames = __webpack_require__(48);
 var classnames_default = /*#__PURE__*/__webpack_require__.n(classnames);
 
 // EXTERNAL MODULE: ./node_modules/@fortawesome/react-fontawesome/index.es.js
-var index_es = __webpack_require__(29);
+var index_es = __webpack_require__(36);
 
 // CONCATENATED MODULE: ./src/modules/pageLayout/PageHead.jsx
 
@@ -145,7 +145,7 @@ var Divider_Divider = function Divider() {
 
 /***/ }),
 
-/***/ 36:
+/***/ 47:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -158,19 +158,19 @@ var openLink = function openLink(link) {
 
 /***/ }),
 
-/***/ 38:
+/***/ 49:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var _routeMap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(16);
+/* harmony import */ var _routeMap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(18);
 
 var packageObj = {
   list: {
     name: 'List',
     routename: _routeMap__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].PACKAGES_LIST_BASIC,
     description: 'This module of list creator made with React can do the help to make a list or mane component to our page. Normally it is a list make. But with some trigger action it can be a menu maker for route redirection or other feature we need.',
-    version: '2.1.6',
-    updated: 'Jun, 14, 2020',
+    version: '2.2.0',
+    updated: 'Jun, 21, 2020',
     link: {
       github: 'https://github.com/BlackToolBoxLaboratory/react-list',
       npm: 'https://www.npmjs.com/package/@blacktoolbox/react-list'
@@ -180,11 +180,22 @@ var packageObj = {
     name: 'Table',
     routename: _routeMap__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].PACKAGES_TABLE_BASIC,
     description: 'This module of table creator made with React can do the help to make a table component to our page. It has modes in list and info which are different ways to show data.',
-    version: '1.2.0',
-    updated: 'Jun, 18, 2020',
+    version: '1.4.0',
+    updated: 'Jun, 21, 2020',
     link: {
       github: 'https://github.com/BlackToolBoxLaboratory/react-table',
       npm: 'https://www.npmjs.com/package/@blacktoolbox/react-table'
+    }
+  },
+  popover: {
+    name: 'Popover',
+    routename: _routeMap__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].PACKAGES_POPOVER_BASIC,
+    description: 'This module of popover creator made with React can do the help to make a popover component to our page. The popover can do th e thing about popover and dropdown.',
+    version: '1.0.0',
+    updated: 'Jun, 21, 2020',
+    link: {
+      github: 'https://github.com/BlackToolBoxLaboratory/react-popover',
+      npm: 'https://www.npmjs.com/package/@blacktoolbox/react-popover'
     }
   }
 };
@@ -192,11 +203,11 @@ var packageObj = {
 
 /***/ }),
 
-/***/ 41:
+/***/ 52:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(38);
+/* harmony import */ var _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(49);
 
 var packageInfo = {
   'version': _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].list.version,
@@ -216,7 +227,7 @@ var packageInfo = {
 
 /***/ }),
 
-/***/ 49:
+/***/ 64:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -228,18 +239,18 @@ var react = __webpack_require__(0);
 var react_default = /*#__PURE__*/__webpack_require__.n(react);
 
 // EXTERNAL MODULE: ./node_modules/@blacktoolbox/react-list/esm/index.js
-var esm = __webpack_require__(42);
+var esm = __webpack_require__(53);
 
 // EXTERNAL MODULE: ./src/modules/pageLayout/index.js + 5 modules
-var pageLayout = __webpack_require__(35);
+var pageLayout = __webpack_require__(46);
 
 // EXTERNAL MODULE: ./src/utils/functions.js
-var functions = __webpack_require__(36);
+var functions = __webpack_require__(47);
 
 // EXTERNAL MODULE: ./src/components/packages/list/packageInfo.js
-var packageInfo = __webpack_require__(41);
+var packageInfo = __webpack_require__(52);
 
-// CONCATENATED MODULE: ./src/components/packages/list/ExampleMenu.jsx
+// CONCATENATED MODULE: ./src/components/packages/list/ExampleList.jsx
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
@@ -253,41 +264,47 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 var PageInfo = _objectSpread(_objectSpread({}, packageInfo["a" /* default */]), {}, {
-  'title': 'Example - Menu',
-  'description': 'When we enable the collapseEnable with datalist, we will get a simple menu to use. And it will trigger the onToggle event function while clicked for Collapsing or Expending. Every entry can be active status after being clicked. Surely it will trigger the onEntryClick event function too. Besides for a menu, it can tag one as defaultActiveID. Also utilize the useState to work with activeID'
+  'title': 'Example - List',
+  'description': 'Here is a very simple example for a list, if we just give a data list.'
 });
 
-var _menuData = [{
-  id: 'f1',
-  title: 'Folder: 1',
+var _listData = [{
+  id: 'b1',
+  title: 'Branch: 1',
   children: [{
-    id: 't11',
-    title: 'Menu: 1-1'
+    id: 'l11',
+    title: 'Leaf: 1-1'
   }, {
-    id: 't12',
-    title: 'Menu: 1-2'
+    id: 'b12',
+    title: 'Branch: 1-2',
+    children: [{
+      id: 'l121',
+      title: 'Leaf: 1-2-1'
+    }, {
+      id: 'l122',
+      title: 'Leaf: 1-2-2'
+    }]
+  }, {
+    id: 'l13',
+    title: 'Leaf: 1-3'
   }]
 }, {
-  id: 'f2',
-  title: 'Folder: 2',
-  defaultCollapsed: true,
+  id: 'b2',
+  title: 'Branch: 2',
   children: [{
-    id: 't21',
-    title: 'Menu: 2-1'
+    id: 'l21',
+    title: 'Leaf: 2-1'
   }, {
-    id: 't22',
-    title: 'Menu: 2-2'
-  }, {
-    id: 't23',
-    title: 'Menu: 2-3'
+    id: 'l22',
+    title: 'Leaf: 2-2'
   }]
 }];
-var preRender = "<btb-react-list dataList={menuData} />";
-var preListData = "const menuData = [\n  { id: 'f1', title: 'Folder: 1', children: [\n          { id: 't11', title: 'Menu: 1-1' },\n          { id: 't12', title: 'Menu: 1-2' }\n  ]},\n  { id: 'f2', title: 'Folder: 2', defaultCollapsed: true, children: [\n          { id: 't21', title: 'Menu: 2-1' },\n          { id: 't22', title: 'Menu: 2-2' },\n          { id: 't23', title: 'Menu: 2-3' }\n  ]}\n]";
+var preRender = "<btb-react-list dataList={listData} />";
+var preListData = "const listData = [\n  { id: 'b1', title: 'Branch: 1', children: [\n          { id: 'l11', title: 'Leaf: 1-1' },\n          { id: 'b12', title: 'Branch: 1-2', children: [\n                  { id: 'l121', title: 'Leaf: 1-2-1' },\n                  { id: 'l122', title: 'Leaf: 1-2-2' }\n          ]},\n          { id: 'l13', title: 'Leaf: 1-3' }\n  ]},\n  { id: 'b2', title: 'Branch: 2', children: [\n          { id: 'l21', title: 'Leaf: 2-1' },\n          { id: 'l22', title: 'Leaf: 2-2' }\n  ]}\n]";
 
-var ExampleMenu_ExampleMenu = function ExampleMenu() {
+var ExampleList_ExampleList = function ExampleList() {
   return /*#__PURE__*/react_default.a.createElement(pageLayout["c" /* Page */], {
-    className: "btb-pkg-list-example-menu"
+    className: "btb-pkg-list-example-list"
   }, /*#__PURE__*/react_default.a.createElement(pageLayout["d" /* PageHead */], {
     title: PageInfo.title,
     clickBtn: functions["a" /* openLink */],
@@ -297,31 +314,30 @@ var ExampleMenu_ExampleMenu = function ExampleMenu() {
   }, /*#__PURE__*/react_default.a.createElement("p", null, PageInfo.description)), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
     head: "EXAMPLE"
   }, /*#__PURE__*/react_default.a.createElement(esm["a" /* default */], {
-    dataList: _menuData,
-    collapseEnable: true
+    dataList: _listData
   })), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
     head: "SOURCECODE"
   }, /*#__PURE__*/react_default.a.createElement(pageLayout["a" /* Block */], {
-    title: "render"
+    title: "Render"
   }, /*#__PURE__*/react_default.a.createElement("pre", {
     className: "page_pre"
   }, preRender)), /*#__PURE__*/react_default.a.createElement(pageLayout["a" /* Block */], {
-    title: "menuData"
+    title: "listData"
   }, /*#__PURE__*/react_default.a.createElement("pre", {
     className: "page_pre"
   }, preListData))));
 };
 
-/* harmony default export */ var list_ExampleMenu = (ExampleMenu_ExampleMenu);
-// CONCATENATED MODULE: ./src/routes/packages/list/ExampleMenuContainer.jsx
+/* harmony default export */ var list_ExampleList = (ExampleList_ExampleList);
+// CONCATENATED MODULE: ./src/routes/packages/list/ExampleListContainer.jsx
 
 
 
-var ExampleMenuContainer_ExampleMenuContaier = function ExampleMenuContaier() {
-  return /*#__PURE__*/react_default.a.createElement(list_ExampleMenu, null);
+var ExampleListContainer_ExampleListContaier = function ExampleListContaier() {
+  return /*#__PURE__*/react_default.a.createElement(list_ExampleList, null);
 };
 
-/* harmony default export */ var ExampleMenuContainer = __webpack_exports__["default"] = (ExampleMenuContainer_ExampleMenuContaier);
+/* harmony default export */ var ExampleListContainer = __webpack_exports__["default"] = (ExampleListContainer_ExampleListContaier);
 
 /***/ })
 
