@@ -191,8 +191,8 @@ var packageObj = {
     name: 'Popover',
     routename: _routeMap__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].PACKAGES_POPOVER_BASIC,
     description: 'This module of popover creator made with React can do the help to make a popover component to our page. The popover can do th e thing about popover and dropdown.',
-    version: '1.0.0',
-    updated: 'Jun, 21, 2020',
+    version: '1.1.1',
+    updated: 'Jun, 22, 2020',
     link: {
       github: 'https://github.com/BlackToolBoxLaboratory/react-popover',
       npm: 'https://www.npmjs.com/package/@blacktoolbox/react-popover'
@@ -203,7 +203,7 @@ var packageObj = {
 
 /***/ }),
 
-/***/ 52:
+/***/ 53:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -239,7 +239,7 @@ var react = __webpack_require__(0);
 var react_default = /*#__PURE__*/__webpack_require__.n(react);
 
 // EXTERNAL MODULE: ./node_modules/@blacktoolbox/react-list/esm/index.js
-var esm = __webpack_require__(53);
+var esm = __webpack_require__(52);
 
 // EXTERNAL MODULE: ./src/modules/pageLayout/index.js + 5 modules
 var pageLayout = __webpack_require__(46);
@@ -248,9 +248,9 @@ var pageLayout = __webpack_require__(46);
 var functions = __webpack_require__(47);
 
 // EXTERNAL MODULE: ./src/components/packages/list/packageInfo.js
-var packageInfo = __webpack_require__(52);
+var packageInfo = __webpack_require__(53);
 
-// CONCATENATED MODULE: ./src/components/packages/list/ExampleSlot.jsx
+// CONCATENATED MODULE: ./src/components/packages/list/ExampleMenu.jsx
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
@@ -264,54 +264,41 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 var PageInfo = _objectSpread(_objectSpread({}, packageInfo["a" /* default */]), {}, {
-  'title': 'Example - Slot',
-  'description': 'Sometimes we may want to show the entry from the list by button, input, icon, ... etc. Then we can ultilize this feature about customized slot. To the example as following, I show you how to customized the entry which ID is b2. For the package of list, every single ID corresponding to dataList can be customized by slotObj in String, Node, or Function way.'
+  'title': 'Example - Menu',
+  'description': 'When we enable the collapseEnable with datalist, we will get a simple menu to use. And it will trigger the onToggle event function while clicked for Collapsing or Expending. Every entry can be active status after being clicked. Surely it will trigger the onEntryClick event function too. Besides for a menu, it can tag one as defaultActiveID. Also utilize the useState to work with activeID'
 });
 
-var _listData = [{
-  id: 'b1',
-  title: 'Branch: 1',
+var _menuData = [{
+  id: 'f1',
+  title: 'Folder: 1',
   children: [{
-    id: 'l11',
-    title: 'Leaf: 1-1'
+    id: 't11',
+    title: 'Menu: 1-1'
   }, {
-    id: 'b12',
-    title: 'Branch: 1-2',
-    children: [{
-      id: 'l121',
-      title: 'Leaf: 1-2-1'
-    }, {
-      id: 'l122',
-      title: 'Leaf: 1-2-2'
-    }]
-  }, {
-    id: 'l13',
-    title: 'Leaf: 1-3'
+    id: 't12',
+    title: 'Menu: 1-2'
   }]
 }, {
-  id: 'b2',
-  title: 'Branch: 2',
+  id: 'f2',
+  title: 'Folder: 2',
+  defaultCollapsed: true,
   children: [{
-    id: 'l21',
-    title: 'Leaf: 2-1'
+    id: 't21',
+    title: 'Menu: 2-1'
   }, {
-    id: 'l22',
-    title: 'Leaf: 2-2'
+    id: 't22',
+    title: 'Menu: 2-2'
+  }, {
+    id: 't23',
+    title: 'Menu: 2-3'
   }]
 }];
-var _slotObj = {
-  'b2': function b2(entry) {
-    return /*#__PURE__*/react_default.a.createElement("div", null, "".concat(entry.id, " overwrited by Function"));
-  },
-  'l22': /*#__PURE__*/react_default.a.createElement("div", null, 'l22 overwrited by Node')
-};
-var preRender = "<BTBList \n        dataList={listData} \n        slotObj={slotObj}/>";
-var preListData = "const listData = [\n  { id: 'b1', title: 'Branch: 1', children: [\n          { id: 'l11', title: 'Leaf: 1-1' },\n          { id: 'b12', title: 'Branch: 1-2', children: [\n                  { id: 'l121', title: 'Leaf: 1-2-1' },\n                  { id: 'l122', title: 'Leaf: 1-2-2' }\n          ]},\n          { id: 'l13', title: 'Leaf: 1-3' }\n  ]},\n  { id: 'b2', title: 'Branch: 2', children: [\n          { id: 'l21', title: 'Leaf: 2-1' },\n          { id: 'l22', title: 'Leaf: 2-2' }\n  ]}\n]";
-var preSlotObj = "const _slotObj = {\n  'b2': (entry) => {\n    return (\n      <div>\n      {`${entry.id} overwrited by Function`}\n      </div>\n      )\n    },\n    'l22': (\n      <div>\n        {'l22 overwrited by Node'}\n      </div>\n    )\n  }";
+var preRender = "<btb-react-list dataList={menuData} />";
+var preListData = "const menuData = [\n  { id: 'f1', title: 'Folder: 1', children: [\n          { id: 't11', title: 'Menu: 1-1' },\n          { id: 't12', title: 'Menu: 1-2' }\n  ]},\n  { id: 'f2', title: 'Folder: 2', defaultCollapsed: true, children: [\n          { id: 't21', title: 'Menu: 2-1' },\n          { id: 't22', title: 'Menu: 2-2' },\n          { id: 't23', title: 'Menu: 2-3' }\n  ]}\n]";
 
-var ExampleSlot_ExampleSlot = function ExampleSlot() {
+var ExampleMenu_ExampleMenu = function ExampleMenu() {
   return /*#__PURE__*/react_default.a.createElement(pageLayout["c" /* Page */], {
-    className: "btb-pkg-list-example-slot"
+    className: "btb-pkg-list-example-menu"
   }, /*#__PURE__*/react_default.a.createElement(pageLayout["d" /* PageHead */], {
     title: PageInfo.title,
     clickBtn: functions["a" /* openLink */],
@@ -321,8 +308,8 @@ var ExampleSlot_ExampleSlot = function ExampleSlot() {
   }, /*#__PURE__*/react_default.a.createElement("p", null, PageInfo.description)), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
     head: "EXAMPLE"
   }, /*#__PURE__*/react_default.a.createElement(esm["a" /* default */], {
-    dataList: _listData,
-    slotObj: _slotObj
+    dataList: _menuData,
+    collapseEnable: true
   })), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
     head: "SOURCECODE"
   }, /*#__PURE__*/react_default.a.createElement(pageLayout["a" /* Block */], {
@@ -330,26 +317,22 @@ var ExampleSlot_ExampleSlot = function ExampleSlot() {
   }, /*#__PURE__*/react_default.a.createElement("pre", {
     className: "page_pre"
   }, preRender)), /*#__PURE__*/react_default.a.createElement(pageLayout["a" /* Block */], {
-    title: "listData"
+    title: "menuData"
   }, /*#__PURE__*/react_default.a.createElement("pre", {
     className: "page_pre"
-  }, preListData)), /*#__PURE__*/react_default.a.createElement(pageLayout["a" /* Block */], {
-    title: "styleObj"
-  }, /*#__PURE__*/react_default.a.createElement("pre", {
-    className: "page_pre"
-  }, preSlotObj))));
+  }, preListData))));
 };
 
-/* harmony default export */ var list_ExampleSlot = (ExampleSlot_ExampleSlot);
-// CONCATENATED MODULE: ./src/routes/packages/list/ExampleSlotContainer.jsx
+/* harmony default export */ var list_ExampleMenu = (ExampleMenu_ExampleMenu);
+// CONCATENATED MODULE: ./src/routes/packages/list/ExampleMenuContainer.jsx
 
 
 
-var ExampleSlotContainer_ExampleSlotContaier = function ExampleSlotContaier() {
-  return /*#__PURE__*/react_default.a.createElement(list_ExampleSlot, null);
+var ExampleMenuContainer_ExampleMenuContaier = function ExampleMenuContaier() {
+  return /*#__PURE__*/react_default.a.createElement(list_ExampleMenu, null);
 };
 
-/* harmony default export */ var ExampleSlotContainer = __webpack_exports__["default"] = (ExampleSlotContainer_ExampleSlotContaier);
+/* harmony default export */ var ExampleMenuContainer = __webpack_exports__["default"] = (ExampleMenuContainer_ExampleMenuContaier);
 
 /***/ })
 

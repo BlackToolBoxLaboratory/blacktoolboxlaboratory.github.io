@@ -8725,7 +8725,7 @@ var react_table_lib = __webpack_require__(39);
 
 // CONCATENATED MODULE: ./src/plugins/btblab-react-table.js
 
-// EXTERNAL MODULE: ../react-popover/lib/index.css
+// EXTERNAL MODULE: ./node_modules/@blacktoolbox/react-popover/lib/index.css
 var react_popover_lib = __webpack_require__(40);
 
 // CONCATENATED MODULE: ./src/plugins/btblab-react-popover.js
@@ -19004,7 +19004,7 @@ var src_App = function App() {
   })), /*#__PURE__*/react_default.a.createElement(react_router["d" /* Route */], {
     path: routeMap["a" /* default */].HOME,
     component: /*#__PURE__*/react_default.a.lazy(function () {
-      return Promise.all(/* import() */[__webpack_require__.e(2), __webpack_require__.e(17)]).then(__webpack_require__.bind(null, 77));
+      return Promise.all(/* import() */[__webpack_require__.e(2), __webpack_require__.e(18)]).then(__webpack_require__.bind(null, 78));
     })
   }))))));
 };

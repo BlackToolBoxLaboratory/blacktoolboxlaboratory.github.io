@@ -191,8 +191,8 @@ var packageObj = {
     name: 'Popover',
     routename: _routeMap__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].PACKAGES_POPOVER_BASIC,
     description: 'This module of popover creator made with React can do the help to make a popover component to our page. The popover can do th e thing about popover and dropdown.',
-    version: '1.0.0',
-    updated: 'Jun, 21, 2020',
+    version: '1.1.1',
+    updated: 'Jun, 22, 2020',
     link: {
       github: 'https://github.com/BlackToolBoxLaboratory/react-popover',
       npm: 'https://www.npmjs.com/package/@blacktoolbox/react-popover'
@@ -203,31 +203,20 @@ var packageObj = {
 
 /***/ }),
 
-/***/ 52:
+/***/ 50:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(49);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(0);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(48);
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_1__);
+function c(t){return(c="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(t){return typeof t}:function(t){return t&&"function"==typeof Symbol&&t.constructor===Symbol&&t!==Symbol.prototype?"symbol":typeof t})(t)}var n=function(t,e){var a;return e.forEach((function(e){a=Object.assign({},a,o(t,e))})),a},o=function(t,e){var a={};return"object"===c(t)&&Object.keys(t).find((function(c){if(c===e)return a=Object.assign({},t[c]),!0})),a},l=react__WEBPACK_IMPORTED_MODULE_0___default.a.createContext(),r=react__WEBPACK_IMPORTED_MODULE_0___default.a.createContext(),s=function(){var c=Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(l);return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("thead",{className:"list_head",style:n(c.styleObj,["list_head"])},c.headData.length?react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr",{className:"head_tr",style:n(c.styleObj,["head_tr"])},c.headData.map((function(e){return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th",{className:classnames__WEBPACK_IMPORTED_MODULE_1___default()("tr_th","th-".concat(e.id)),key:e.id,style:n(c.styleObj,["tr_th","th-".concat(e.id)])},c.slotObj["th-".concat(e.id)]?"function"==typeof c.slotObj["th-".concat(e.id)]?c.slotObj["th-".concat(e.id)](e):c.slotObj["th-".concat(e.id)]:e.name)}))):[])},d=function(){var c=Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(l);return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody",{className:"list_body",style:n(c.styleObj,["list_body"])},c.bodyData.map((function(e,o){return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr",{className:classnames__WEBPACK_IMPORTED_MODULE_1___default()("body_tr","tr-".concat(o)),style:n(c.styleObj,["body_tr","tr-".concat(o)]),key:o},c.headData.map((function(o){return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td",{className:classnames__WEBPACK_IMPORTED_MODULE_1___default()("tr_td","td-".concat(o.id)),style:n(c.styleObj,["tr_td","td-".concat(o.id)]),key:o.id},c.slotObj["td-".concat(o.id)]?"function"==typeof c.slotObj["td-".concat(o.id)]?c.slotObj["td-".concat(o.id)](e,o):c.slotObj["td-".concat(o.id)]:e[o.id])})))})))},i=function(){var a=Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(l);return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table",{className:"table_list",style:n(a.styleObj,["table_list"])},react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(s,null),react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(d,null))},b=function(){var c=Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(l);return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment,null,c.bodyData.map((function(e,o){return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table",{className:classnames__WEBPACK_IMPORTED_MODULE_1___default()("table_info","info-".concat(o)),style:n(c.styleObj,["table_info","info-".concat(o)]),key:"".concat(e.id,"_").concat(o)},react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody",{className:"info_body",style:n(c.styleObj,["info_body"])},c.headData.map((function(o){return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr",{className:classnames__WEBPACK_IMPORTED_MODULE_1___default()("body_tr","tr-".concat(o.id)),style:n(c.styleObj,["body_tr","tr-".concat(o.id)]),key:o.id},react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th",{className:classnames__WEBPACK_IMPORTED_MODULE_1___default()("tr_th","th-".concat(o.id)),style:n(c.styleObj,["tr_th","th-".concat(o.id)])},c.slotObj["th-".concat(o.id)]?"function"==typeof c.slotObj["th-".concat(o.id)]?c.slotObj["th-".concat(o.id)](o):c.slotObj["th-".concat(o.id)]:o.name),react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td",{className:classnames__WEBPACK_IMPORTED_MODULE_1___default()("tr_td","td-".concat(o.id)),style:n(c.styleObj,["tr_td","td-".concat(o.id)])},c.slotObj["td-".concat(o.id)]?"function"==typeof c.slotObj["td-".concat(o.id)]?c.slotObj["td-".concat(o.id)](e,o):c.slotObj["td-".concat(o.id)]:e[o.id]))}))))})))},y=function(){var c=Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(l);return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table",{className:"table_compare",style:n(c.styleObj,["table_compare"])},react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody",{className:"compare_body",style:n(c.styleObj,["compare_body"])},c.headData.map((function(e){return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr",{className:classnames__WEBPACK_IMPORTED_MODULE_1___default()("body_tr","tr-".concat(e.id)),style:n(c.styleObj,["body_tr","tr-".concat(e.id)]),key:e.id},react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th",{className:classnames__WEBPACK_IMPORTED_MODULE_1___default()("tr_th","th-".concat(e.id)),style:n(c.styleObj,["tr_th","th-".concat(e.id)])},c.slotObj["th-".concat(e.id)]?"function"==typeof c.slotObj["th-".concat(e.id)]?c.slotObj["th-".concat(e.id)](e):c.slotObj["th-".concat(e.id)]:e.name),c.bodyData.map((function(o,l){return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td",{className:classnames__WEBPACK_IMPORTED_MODULE_1___default()("tr_td","td-".concat(e.id),"td-".concat(l)),style:n(c.styleObj,["tr_td","td-".concat(e.id),"td-".concat(l)]),key:"".concat(o.id,"_").concat(l)},c.slotObj["td-".concat(e.id)]?"function"==typeof c.slotObj["td-".concat(e.id)]?c.slotObj["td-".concat(e.id)](o,e):c.slotObj["td-".concat(e.id)]:o[e.id])})))}))))},m=react__WEBPACK_IMPORTED_MODULE_0___default.a.forwardRef((function(e,c){var o,s,d={headData:e.headData||[],bodyData:e.bodyData||[],styleObj:(o=e.styleObj||{},s={},Object.keys(o).forEach((function(t){s[t]={},Object.keys(o[t]).forEach((function(e){var a=e.replace(/-(\w)/g,(function(t,e){return e.toUpperCase()}));s[t][a]=o[t][e]}))})),s),slotObj:e.slotObj||{}},m={clickData:function(t){e.onDataClick&&e.onDataClick(t)}};return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(l.Provider,{value:d},react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(r.Provider,{value:m},react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div",{ref:c,className:classnames__WEBPACK_IMPORTED_MODULE_1___default()("btb-react-table",e.className),style:n(d.styleObj,["btb-react-table"])},function(){switch(e.mode){case"info":return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(b,null);case"compare":return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(y,null);case"list":default:return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(i,null)}}())))}));/* harmony default export */ __webpack_exports__["a"] = (m);
 
-var packageInfo = {
-  'version': _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].list.version,
-  'updated': _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].list.updated,
-  'description': _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].list.description,
-  'linkList': [{
-    'id': 'github',
-    'fa': ['fab', 'github'],
-    'url': _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].list.link.github
-  }, {
-    'id': 'npm',
-    'fa': ['fab', 'npm'],
-    'url': _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].list.link.npm
-  }]
-};
-/* harmony default export */ __webpack_exports__["a"] = (packageInfo);
 
 /***/ }),
 
-/***/ 64:
+/***/ 61:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -239,7 +228,10 @@ var react = __webpack_require__(0);
 var react_default = /*#__PURE__*/__webpack_require__.n(react);
 
 // EXTERNAL MODULE: ./node_modules/@blacktoolbox/react-list/esm/index.js
-var esm = __webpack_require__(53);
+var esm = __webpack_require__(52);
+
+// EXTERNAL MODULE: ./node_modules/@blacktoolbox/react-table/esm/index.js
+var react_table_esm = __webpack_require__(50);
 
 // EXTERNAL MODULE: ./src/modules/pageLayout/index.js + 5 modules
 var pageLayout = __webpack_require__(46);
@@ -247,10 +239,27 @@ var pageLayout = __webpack_require__(46);
 // EXTERNAL MODULE: ./src/utils/functions.js
 var functions = __webpack_require__(47);
 
-// EXTERNAL MODULE: ./src/components/packages/list/packageInfo.js
-var packageInfo = __webpack_require__(52);
+// EXTERNAL MODULE: ./src/assets/definitions/packageObj.js
+var packageObj = __webpack_require__(49);
 
-// CONCATENATED MODULE: ./src/components/packages/list/ExampleList.jsx
+// CONCATENATED MODULE: ./src/components/packages/popover/packageInfo.js
+
+var packageInfo = {
+  'version': packageObj["a" /* default */].popover.version,
+  'updated': packageObj["a" /* default */].popover.updated,
+  'description': packageObj["a" /* default */].popover.description,
+  'linkList': [{
+    'id': 'github',
+    'fa': ['fab', 'github'],
+    'url': packageObj["a" /* default */].popover.link.github
+  }, {
+    'id': 'npm',
+    'fa': ['fab', 'npm'],
+    'url': packageObj["a" /* default */].popover.link.npm
+  }]
+};
+/* harmony default export */ var popover_packageInfo = (packageInfo);
+// CONCATENATED MODULE: ./src/components/packages/popover/Basic.jsx
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
@@ -263,48 +272,103 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
-var PageInfo = _objectSpread(_objectSpread({}, packageInfo["a" /* default */]), {}, {
-  'title': 'Example - List',
-  'description': 'Here is a very simple example for a list, if we just give a data list.'
+
+var PageInfo = _objectSpread(_objectSpread({}, popover_packageInfo), {}, {
+  'title': 'Popover Basic'
 });
 
-var _listData = [{
-  id: 'b1',
-  title: 'Branch: 1',
+var preInstall = "$ npm install --save @blacktoolbox/reat-popover\n\nimport BTBPopover from '@blacktoolbox/reat-popover'\nimport '@blacktoolbox/react-popover/lib/index.css'";
+var preRender = "<BTBPopover\n        showState=\" Boolean \" \n        showPosition=\" String \"\n        showAlign=\" String \"\n        stateLock=\" Boolean \"\n        withArrow=\" Boolean \"\n        autoDetect=\" Boolean \"\n        trigger=\" String || Node \"\n        styleObj=\" Object \"\n        onToggle=\" function(){} \"\n        onShow=\" function(){} \"\n        onHide=\" function(){} \"/>\n        {popover content}\n</BTBPopover>";
+var preStyleObj = "styleObj = {\n        [ className ]: { inline CSS }\n}";
+var nodeTree = [{
+  id: 'popover',
+  title: '<div> .btb-react-popover .popover-align-{begin ||center || end} .popover-arrow',
   children: [{
-    id: 'l11',
-    title: 'Leaf: 1-1'
+    id: 'trigger',
+    title: '<div> .popover_trigger'
   }, {
-    id: 'b12',
-    title: 'Branch: 1-2',
-    children: [{
-      id: 'l121',
-      title: 'Leaf: 1-2-1'
-    }, {
-      id: 'l122',
-      title: 'Leaf: 1-2-2'
-    }]
-  }, {
-    id: 'l13',
-    title: 'Leaf: 1-3'
-  }]
-}, {
-  id: 'b2',
-  title: 'Branch: 2',
-  children: [{
-    id: 'l21',
-    title: 'Leaf: 2-1'
-  }, {
-    id: 'l22',
-    title: 'Leaf: 2-2'
+    id: 'content',
+    title: '<div> .popover_content .content-show .content-position-{top || bottom || left || right}'
   }]
 }];
-var preRender = "<btb-react-list dataList={listData} />";
-var preListData = "const listData = [\n  { id: 'b1', title: 'Branch: 1', children: [\n          { id: 'l11', title: 'Leaf: 1-1' },\n          { id: 'b12', title: 'Branch: 1-2', children: [\n                  { id: 'l121', title: 'Leaf: 1-2-1' },\n                  { id: 'l122', title: 'Leaf: 1-2-2' }\n          ]},\n          { id: 'l13', title: 'Leaf: 1-3' }\n  ]},\n  { id: 'b2', title: 'Branch: 2', children: [\n          { id: 'l21', title: 'Leaf: 2-1' },\n          { id: 'l22', title: 'Leaf: 2-2' }\n  ]}\n]";
+var tableHeadArr_property = [{
+  name: 'Property Name',
+  id: 'title'
+}, {
+  name: 'Type',
+  id: 'type'
+}, {
+  name: 'Default',
+  id: 'default'
+}, {
+  name: 'Notice',
+  id: 'notice'
+}];
+var tableBodyArr_basic = [{
+  title: 'showState',
+  type: 'Boolean',
+  default: 'false',
+  notice: 'We could use the parameter to overwrite the showState of popover.'
+}, {
+  title: 'showPosition',
+  type: 'String',
+  default: 'bottom',
+  notice: 'The position of popover. Options in top || right || bottom || left.'
+}, {
+  title: 'showAlign',
+  type: 'String',
+  default: 'begin',
+  notice: 'The align of popover. Options in begin || center || end.'
+}, {
+  title: 'stateLock',
+  type: 'Boolean',
+  default: 'true',
+  notice: 'To keep showState in true or false.'
+}, {
+  title: 'withArrow',
+  type: 'Boolean',
+  default: 'true',
+  notice: 'The tiny caret to let popover become conversation block. Get it false when we prefer a dropdown.'
+}, {
+  title: 'autoDetect',
+  type: 'Boolean',
+  default: 'true',
+  notice: 'Default it will detect the window\'s inner edge of browser. When the popover show overglow to browser, it will adjust by self. We could get it false, if we don\'t need the feature working.'
+}, {
+  title: 'trigger',
+  type: 'String || Node',
+  default: 'Trigger',
+  notice: 'Render the popover toggle trigger node.'
+}, {
+  title: 'styleObj',
+  type: 'Object',
+  default: '{}',
+  notice: 'Object of customized style.'
+}, {
+  title: 'onToggle',
+  type: 'Function',
+  default: 'undefined',
+  notice: 'Event function trigged when popover is toggle no matter showing or hiding.'
+}, {
+  title: 'onShow',
+  type: 'Function',
+  default: 'undefined',
+  notice: 'Event function trigged when popover is going to show.'
+}, {
+  title: 'onHide',
+  type: 'Function',
+  default: 'undefined',
+  notice: 'Event function trigged when popover is going to hidd.'
+}, {
+  title: 'ref',
+  type: 'useRef',
+  default: 'undefined',
+  notice: 'For the feature of React.ref'
+}];
 
-var ExampleList_ExampleList = function ExampleList() {
+var Basic_Basic = function Basic() {
   return /*#__PURE__*/react_default.a.createElement(pageLayout["c" /* Page */], {
-    className: "btb-pkg-list-example-list"
+    className: "btb-pkg-popover-basic"
   }, /*#__PURE__*/react_default.a.createElement(pageLayout["d" /* PageHead */], {
     title: PageInfo.title,
     clickBtn: functions["a" /* openLink */],
@@ -312,32 +376,44 @@ var ExampleList_ExampleList = function ExampleList() {
   }), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
     head: /*#__PURE__*/react_default.a.createElement(react_default.a.Fragment, null, "Version: ".concat(PageInfo.version), /*#__PURE__*/react_default.a.createElement("br", null), "Release Date: ".concat(PageInfo.updated))
   }, /*#__PURE__*/react_default.a.createElement("p", null, PageInfo.description)), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
-    head: "EXAMPLE"
-  }, /*#__PURE__*/react_default.a.createElement(esm["a" /* default */], {
-    dataList: _listData
-  })), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
-    head: "SOURCECODE"
+    head: "INSTALLATION"
+  }, /*#__PURE__*/react_default.a.createElement("pre", {
+    className: "page_pre"
+  }, preInstall)), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
+    head: "RENDER"
+  }, /*#__PURE__*/react_default.a.createElement("pre", {
+    className: "page_pre"
+  }, preRender)), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
+    head: "PARAMETERS"
   }, /*#__PURE__*/react_default.a.createElement(pageLayout["a" /* Block */], {
-    title: "Render"
-  }, /*#__PURE__*/react_default.a.createElement("pre", {
+    title: "Basic"
+  }, /*#__PURE__*/react_default.a.createElement(react_table_esm["a" /* default */], {
+    className: "page_table",
+    mode: "list",
+    headData: tableHeadArr_property,
+    bodyData: tableBodyArr_basic
+  })), /*#__PURE__*/react_default.a.createElement(pageLayout["a" /* Block */], {
+    title: "styleObj"
+  }, /*#__PURE__*/react_default.a.createElement("p", null, "Any className in this module could add inline CSS by styleObj."), /*#__PURE__*/react_default.a.createElement("pre", {
     className: "page_pre"
-  }, preRender)), /*#__PURE__*/react_default.a.createElement(pageLayout["a" /* Block */], {
-    title: "listData"
-  }, /*#__PURE__*/react_default.a.createElement("pre", {
-    className: "page_pre"
-  }, preListData))));
+  }, preStyleObj))), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
+    head: "NODE TREE"
+  }, /*#__PURE__*/react_default.a.createElement(esm["a" /* default */], {
+    className: "page_node_tree",
+    dataList: nodeTree
+  })));
 };
 
-/* harmony default export */ var list_ExampleList = (ExampleList_ExampleList);
-// CONCATENATED MODULE: ./src/routes/packages/list/ExampleListContainer.jsx
+/* harmony default export */ var popover_Basic = (Basic_Basic);
+// CONCATENATED MODULE: ./src/routes/packages/popover/BasicContainer.jsx
 
 
 
-var ExampleListContainer_ExampleListContaier = function ExampleListContaier() {
-  return /*#__PURE__*/react_default.a.createElement(list_ExampleList, null);
+var BasicContainer_BasicContaier = function BasicContaier() {
+  return /*#__PURE__*/react_default.a.createElement(popover_Basic, null);
 };
 
-/* harmony default export */ var ExampleListContainer = __webpack_exports__["default"] = (ExampleListContainer_ExampleListContaier);
+/* harmony default export */ var BasicContainer = __webpack_exports__["default"] = (BasicContainer_BasicContaier);
 
 /***/ })
 
