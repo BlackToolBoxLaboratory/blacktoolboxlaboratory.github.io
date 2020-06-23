@@ -153,33 +153,33 @@ var Divider_Divider = function Divider() {
 
 var packageObj = {
   list: {
-    name: 'List',
+    name: 'package.list.name',
     routename: _routeMap__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].PACKAGES_LIST_BASIC,
-    description: 'This module of list creator made with React can do the help to make a list or mane component to our page. Normally it is a list make. But with some trigger action it can be a menu maker for route redirection or other feature we need.',
+    description: 'package.list.description.basic',
     version: '2.2.0',
-    updated: 'Jun, 21, 2020',
+    updated: '2020-06-21',
     link: {
       github: 'https://github.com/BlackToolBoxLaboratory/react-list',
       npm: 'https://www.npmjs.com/package/@blacktoolbox/react-list'
     }
   },
   table: {
-    name: 'Table',
+    name: 'package.table.name',
     routename: _routeMap__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].PACKAGES_TABLE_BASIC,
-    description: 'This module of table creator made with React can do the help to make a table component to our page. It has modes in list and info which are different ways to show data.',
+    description: 'package.table.description.basic',
     version: '1.4.0',
-    updated: 'Jun, 21, 2020',
+    updated: '2020-06-21',
     link: {
       github: 'https://github.com/BlackToolBoxLaboratory/react-table',
       npm: 'https://www.npmjs.com/package/@blacktoolbox/react-table'
     }
   },
   popover: {
-    name: 'Popover',
+    name: 'package.popover.name',
     routename: _routeMap__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].PACKAGES_POPOVER_BASIC,
-    description: 'This module of popover creator made with React can do the help to make a popover component to our page. The popover can do th e thing about popover and dropdown.',
+    description: 'package.popover.description.basic',
     version: '1.1.1',
-    updated: 'Jun, 22, 2020',
+    updated: '2020-06-22',
     link: {
       github: 'https://github.com/BlackToolBoxLaboratory/react-popover',
       npm: 'https://www.npmjs.com/package/@blacktoolbox/react-popover'
@@ -190,7 +190,7 @@ var packageObj = {
 
 /***/ }),
 
-/***/ 79:
+/***/ 80:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -201,20 +201,36 @@ __webpack_require__.r(__webpack_exports__);
 var react = __webpack_require__(0);
 var react_default = /*#__PURE__*/__webpack_require__.n(react);
 
+// EXTERNAL MODULE: ./node_modules/react-redux/es/index.js + 22 modules
+var es = __webpack_require__(31);
+
 // EXTERNAL MODULE: ./node_modules/react-router/esm/react-router.js
 var react_router = __webpack_require__(2);
 
 // EXTERNAL MODULE: ./node_modules/@fortawesome/react-fontawesome/index.es.js
 var index_es = __webpack_require__(36);
 
+// EXTERNAL MODULE: ./node_modules/recompose/dist/Recompose.esm.js + 1 modules
+var Recompose_esm = __webpack_require__(55);
+
 // EXTERNAL MODULE: ./src/modules/pageLayout/index.js + 5 modules
 var pageLayout = __webpack_require__(46);
+
+// EXTERNAL MODULE: ./src/plugins/btblab-prototype-languages.js + 2 modules
+var btblab_prototype_languages = __webpack_require__(54);
 
 // CONCATENATED MODULE: ./src/components/about/package.jsx
 
 
 
-var package_Package = function Package(props) {
+
+
+var enhance = Object(Recompose_esm["a" /* compose */])(Object(es["b" /* connect */])(function (state) {
+  return {
+    'languageSetting': state.language.languageSetting
+  };
+}));
+var Package = enhance(function (props) {
   function _redirectRoute() {
     props.redirectRoute(props.info.routename);
   }
@@ -225,7 +241,7 @@ var package_Package = function Package(props) {
     className: "grid-col-md-3"
   }, /*#__PURE__*/react_default.a.createElement("div", {
     className: "package_title"
-  }, props.info.name), /*#__PURE__*/react_default.a.createElement(index_es["FontAwesomeIcon"], {
+  }, btblab_prototype_languages["a" /* lang */].translate(props.info.name)), /*#__PURE__*/react_default.a.createElement(index_es["FontAwesomeIcon"], {
     className: "package_link",
     icon: ['fas', 'link'],
     fixedWidth: true,
@@ -234,14 +250,13 @@ var package_Package = function Package(props) {
     className: "grid-col-md"
   }, /*#__PURE__*/react_default.a.createElement("div", {
     className: "package_description"
-  }, props.info.description), /*#__PURE__*/react_default.a.createElement("div", {
+  }, btblab_prototype_languages["a" /* lang */].translate(props.info.description)), /*#__PURE__*/react_default.a.createElement("div", {
     className: "package_version"
-  }, "Version ", props.info.version), /*#__PURE__*/react_default.a.createElement("div", {
+  }, "".concat(btblab_prototype_languages["a" /* lang */].translate('package.version_colon')).concat(props.info.version)), /*#__PURE__*/react_default.a.createElement("div", {
     className: "package_updated"
-  }, "Updated: ", props.info.updated)));
-};
-
-/* harmony default export */ var about_package = (package_Package);
+  }, "".concat(btblab_prototype_languages["a" /* lang */].translate('package.release_colon')).concat(props.info.updated))));
+});
+/* harmony default export */ var about_package = (Package);
 // EXTERNAL MODULE: ./src/assets/definitions/packageObj.js
 var packageObj = __webpack_require__(49);
 
@@ -255,7 +270,15 @@ var packageObj = __webpack_require__(49);
 
 
 
-var About = Object(react_router["o" /* withRouter */])(function (props) {
+
+
+
+var About_enhance = Object(Recompose_esm["a" /* compose */])(Object(es["b" /* connect */])(function (state) {
+  return {
+    'languageSetting': state.language.languageSetting
+  };
+}), react_router["o" /* withRouter */]);
+var About = About_enhance(function (props) {
   function _redirectRoute(routename) {
     props.history.push(routename);
   }
@@ -274,7 +297,7 @@ var About = Object(react_router["o" /* withRouter */])(function (props) {
     className: "title_main hidden-up-md"
   }, "BTB Lab."), /*#__PURE__*/react_default.a.createElement("p", {
     className: "title_sub"
-  }, "With React")), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], null, /*#__PURE__*/react_default.a.createElement("span", null, "React is the first framework of javascript when I join to the Frontend develipment club. Before that jQuery of curse is my first using when I am a software engineer. Here I aim to develop packages made with React. They are designed with basic logic for high degrees of freedom of customization and low dependency. While using, if you find some questions, bugs or issues. Or having some great ideas. Please feel free to let me know.")), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
+  }, "With React")), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], null, /*#__PURE__*/react_default.a.createElement("span", null, btblab_prototype_languages["a" /* lang */].translate('about.description'))), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
     className: "grid-row justify-content-center"
   }, /*#__PURE__*/react_default.a.createElement("a", {
     href: "mailto://vannoel0628@gmail.com",
@@ -284,13 +307,13 @@ var About = Object(react_router["o" /* withRouter */])(function (props) {
     fixedWidth: true
   }), /*#__PURE__*/react_default.a.createElement("span", null, "vannoel0628@gmail.com"))), /*#__PURE__*/react_default.a.createElement(pageLayout["b" /* Divider */], null), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
     className: "grid-row justify-content-center"
-  }, /*#__PURE__*/react_default.a.createElement("span", null, "If you like all the works in BTB Lab. Please "), /*#__PURE__*/react_default.a.createElement("a", {
+  }, /*#__PURE__*/react_default.a.createElement("span", null, btblab_prototype_languages["a" /* lang */].translate('about.donate.1')), /*#__PURE__*/react_default.a.createElement("a", {
     href: "https://www.paypal.me/vannoel0628",
     target: "_blank"
   }, /*#__PURE__*/react_default.a.createElement(index_es["FontAwesomeIcon"], {
     icon: ['fab', 'paypal'],
     fixedWidth: true
-  }), /*#__PURE__*/react_default.a.createElement("span", null, "buy me a coffee")), /*#__PURE__*/react_default.a.createElement("span", null, ". ")), /*#__PURE__*/react_default.a.createElement(pageLayout["b" /* Divider */], null), Object.keys(packageObj["a" /* default */]).map(function (entry) {
+  }), /*#__PURE__*/react_default.a.createElement("span", null, btblab_prototype_languages["a" /* lang */].translate('about.donate.2'))), /*#__PURE__*/react_default.a.createElement("span", null, btblab_prototype_languages["a" /* lang */].translate('about.donate.3'))), /*#__PURE__*/react_default.a.createElement(pageLayout["b" /* Divider */], null), Object.keys(packageObj["a" /* default */]).map(function (entry) {
     return /*#__PURE__*/react_default.a.createElement("div", {
       key: entry
     }, entry !== 'list' ? /*#__PURE__*/react_default.a.createElement(pageLayout["b" /* Divider */], null) : [], /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {

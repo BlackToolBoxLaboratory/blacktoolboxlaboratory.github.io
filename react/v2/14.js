@@ -166,33 +166,33 @@ var openLink = function openLink(link) {
 
 var packageObj = {
   list: {
-    name: 'List',
+    name: 'package.list.name',
     routename: _routeMap__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].PACKAGES_LIST_BASIC,
-    description: 'This module of list creator made with React can do the help to make a list or mane component to our page. Normally it is a list make. But with some trigger action it can be a menu maker for route redirection or other feature we need.',
+    description: 'package.list.description.basic',
     version: '2.2.0',
-    updated: 'Jun, 21, 2020',
+    updated: '2020-06-21',
     link: {
       github: 'https://github.com/BlackToolBoxLaboratory/react-list',
       npm: 'https://www.npmjs.com/package/@blacktoolbox/react-list'
     }
   },
   table: {
-    name: 'Table',
+    name: 'package.table.name',
     routename: _routeMap__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].PACKAGES_TABLE_BASIC,
-    description: 'This module of table creator made with React can do the help to make a table component to our page. It has modes in list and info which are different ways to show data.',
+    description: 'package.table.description.basic',
     version: '1.4.0',
-    updated: 'Jun, 21, 2020',
+    updated: '2020-06-21',
     link: {
       github: 'https://github.com/BlackToolBoxLaboratory/react-table',
       npm: 'https://www.npmjs.com/package/@blacktoolbox/react-table'
     }
   },
   popover: {
-    name: 'Popover',
+    name: 'package.popover.name',
     routename: _routeMap__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].PACKAGES_POPOVER_BASIC,
-    description: 'This module of popover creator made with React can do the help to make a popover component to our page. The popover can do th e thing about popover and dropdown.',
+    description: 'package.popover.description.basic',
     version: '1.1.1',
-    updated: 'Jun, 22, 2020',
+    updated: '2020-06-22',
     link: {
       github: 'https://github.com/BlackToolBoxLaboratory/react-popover',
       npm: 'https://www.npmjs.com/package/@blacktoolbox/react-popover'
@@ -227,7 +227,7 @@ var packageInfo = {
 
 /***/ }),
 
-/***/ 68:
+/***/ 69:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -237,6 +237,12 @@ __webpack_require__.r(__webpack_exports__);
 // EXTERNAL MODULE: ./node_modules/react/index.js
 var react = __webpack_require__(0);
 var react_default = /*#__PURE__*/__webpack_require__.n(react);
+
+// EXTERNAL MODULE: ./node_modules/react-redux/es/index.js + 22 modules
+var es = __webpack_require__(31);
+
+// EXTERNAL MODULE: ./node_modules/recompose/dist/Recompose.esm.js + 1 modules
+var Recompose_esm = __webpack_require__(55);
 
 // EXTERNAL MODULE: ./node_modules/@blacktoolbox/react-list/esm/index.js
 var esm = __webpack_require__(52);
@@ -249,6 +255,9 @@ var functions = __webpack_require__(47);
 
 // EXTERNAL MODULE: ./src/components/packages/list/packageInfo.js
 var packageInfo = __webpack_require__(53);
+
+// EXTERNAL MODULE: ./src/plugins/btblab-prototype-languages.js + 2 modules
+var btblab_prototype_languages = __webpack_require__(54);
 
 // CONCATENATED MODULE: ./src/components/packages/list/ExampleStyle.jsx
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
@@ -274,6 +283,14 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
+
+
+
+var enhance = Object(Recompose_esm["a" /* compose */])(Object(es["b" /* connect */])(function (state) {
+  return {
+    'languageSetting': state.language.languageSetting
+  };
+}));
 
 var PageInfo = _objectSpread(_objectSpread({}, packageInfo["a" /* default */]), {}, {
   'title': 'Example - Style',
@@ -323,8 +340,7 @@ var preActiveID_EntryClick = "const activeID = useActiveState('l13')\n\nfunction
 var preRender = "<BTBList \n        dataList={listData} \n        styleObj={styleObj} \n        activeID={activeID.value} \n        onEntryClick={activeID.onChange}/>";
 var preListData = "const listData = [\n  { id: 'b1', title: 'Branch: 1', children: [\n          { id: 'l11', title: 'Leaf: 1-1' },\n          { id: 'b12', title: 'Branch: 1-2', children: [\n                  { id: 'l121', title: 'Leaf: 1-2-1' },\n                  { id: 'l122', title: 'Leaf: 1-2-2' }\n          ]},\n          { id: 'l13', title: 'Leaf: 1-3' }\n  ]},\n  { id: 'b2', title: 'Branch: 2', children: [\n          { id: 'l21', title: 'Leaf: 2-1' },\n          { id: 'l22', title: 'Leaf: 2-2' }\n  ]}\n]";
 var preStyleObj = "const _styleObj = {\n  'container_entry': {\n          cursor: 'pointer'\n  },\n  'entry-active': {\n          'background-color': '#b8dec9'\n  }\n}";
-
-var ExampleStyle_ExampleStyle = function ExampleStyle() {
+var ExampleStyle = enhance(function () {
   var activeID = useActiveState('l13');
   return /*#__PURE__*/react_default.a.createElement(pageLayout["c" /* Page */], {
     className: "btb-pkg-list-example-style"
@@ -362,7 +378,7 @@ var ExampleStyle_ExampleStyle = function ExampleStyle() {
   }, /*#__PURE__*/react_default.a.createElement("pre", {
     className: "page_pre"
   }, preStyleObj))));
-};
+});
 
 function useActiveState(defaultSate) {
   var _useState = Object(react["useState"])(defaultSate),
@@ -378,7 +394,7 @@ function useActiveState(defaultSate) {
   };
 }
 
-/* harmony default export */ var list_ExampleStyle = (ExampleStyle_ExampleStyle);
+/* harmony default export */ var list_ExampleStyle = (ExampleStyle);
 // CONCATENATED MODULE: ./src/routes/packages/list/ExampleStyleContainer.jsx
 
 

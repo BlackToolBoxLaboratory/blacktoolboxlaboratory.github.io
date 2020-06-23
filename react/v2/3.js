@@ -166,33 +166,33 @@ var openLink = function openLink(link) {
 
 var packageObj = {
   list: {
-    name: 'List',
+    name: 'package.list.name',
     routename: _routeMap__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].PACKAGES_LIST_BASIC,
-    description: 'This module of list creator made with React can do the help to make a list or mane component to our page. Normally it is a list make. But with some trigger action it can be a menu maker for route redirection or other feature we need.',
+    description: 'package.list.description.basic',
     version: '2.2.0',
-    updated: 'Jun, 21, 2020',
+    updated: '2020-06-21',
     link: {
       github: 'https://github.com/BlackToolBoxLaboratory/react-list',
       npm: 'https://www.npmjs.com/package/@blacktoolbox/react-list'
     }
   },
   table: {
-    name: 'Table',
+    name: 'package.table.name',
     routename: _routeMap__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].PACKAGES_TABLE_BASIC,
-    description: 'This module of table creator made with React can do the help to make a table component to our page. It has modes in list and info which are different ways to show data.',
+    description: 'package.table.description.basic',
     version: '1.4.0',
-    updated: 'Jun, 21, 2020',
+    updated: '2020-06-21',
     link: {
       github: 'https://github.com/BlackToolBoxLaboratory/react-table',
       npm: 'https://www.npmjs.com/package/@blacktoolbox/react-table'
     }
   },
   popover: {
-    name: 'Popover',
+    name: 'package.popover.name',
     routename: _routeMap__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].PACKAGES_POPOVER_BASIC,
-    description: 'This module of popover creator made with React can do the help to make a popover component to our page. The popover can do th e thing about popover and dropdown.',
+    description: 'package.popover.description.basic',
     version: '1.1.1',
-    updated: 'Jun, 22, 2020',
+    updated: '2020-06-22',
     link: {
       github: 'https://github.com/BlackToolBoxLaboratory/react-popover',
       npm: 'https://www.npmjs.com/package/@blacktoolbox/react-popover'
@@ -240,7 +240,7 @@ var packageInfo = {
 
 /***/ }),
 
-/***/ 65:
+/***/ 66:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -250,6 +250,12 @@ __webpack_require__.r(__webpack_exports__);
 // EXTERNAL MODULE: ./node_modules/react/index.js
 var react = __webpack_require__(0);
 var react_default = /*#__PURE__*/__webpack_require__.n(react);
+
+// EXTERNAL MODULE: ./node_modules/react-redux/es/index.js + 22 modules
+var es = __webpack_require__(31);
+
+// EXTERNAL MODULE: ./node_modules/recompose/dist/Recompose.esm.js + 1 modules
+var Recompose_esm = __webpack_require__(55);
 
 // EXTERNAL MODULE: ./node_modules/@blacktoolbox/react-list/esm/index.js
 var esm = __webpack_require__(52);
@@ -266,6 +272,9 @@ var functions = __webpack_require__(47);
 // EXTERNAL MODULE: ./src/components/packages/list/packageInfo.js
 var packageInfo = __webpack_require__(53);
 
+// EXTERNAL MODULE: ./src/plugins/btblab-prototype-languages.js + 2 modules
+var btblab_prototype_languages = __webpack_require__(54);
+
 // CONCATENATED MODULE: ./src/components/packages/list/Basic.jsx
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
@@ -280,9 +289,15 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
-var PageInfo = _objectSpread(_objectSpread({}, packageInfo["a" /* default */]), {}, {
-  'title': 'List Basic'
-});
+
+
+var enhance = Object(Recompose_esm["a" /* compose */])(Object(es["b" /* connect */])(function (state) {
+  return {
+    'languageSetting': state.language.languageSetting
+  };
+}));
+
+var PageInfo = _objectSpread({}, packageInfo["a" /* default */]);
 
 var preInstall = "$ npm install --save @blacktoolbox/reat-list\n\nimport BTBList from '@blacktoolbox/reat-list'\nimport '@blacktoolbox/react-list/lib/index.css'";
 var preRender = "<BTBList\n        dataList=\" Array of entryObj \" \n        defaultActiveID=\" String \"\n        activeID=\" String \"\n        collapseEnable=\" Boolean \"\n        styleObj=\" Object \"\n        slotObj=\" Object \"\n        onEntryClick=\" function(entryObj){} \"\n        onToggle=\" function(entryObj){} \"/>";
@@ -348,132 +363,148 @@ var tableHeadArr_entry = [{
 }];
 var tableBodyArr_basic = [{
   title: 'dataList',
-  type: 'Array',
+  type: 'package.paramType.array',
   default: '[]',
-  notice: 'List of dataObj.'
+  notice: 'package.list.property.dataList'
 }, {
   title: 'activeID',
-  type: 'String',
+  type: 'package.paramType.string',
   default: 'undefined',
-  notice: 'Actived entry.'
+  notice: 'package.list.property.activeID'
 }, {
   title: 'defaultActiveID',
-  type: 'String',
+  type: 'package.paramType.string',
   default: 'undefined',
-  notice: 'Default actived entry.'
+  notice: 'package.list.property.defaultActiveID'
 }, {
   title: 'collapseEnable',
-  type: 'Boolean',
+  type: 'package.paramType.boolean',
   default: 'false',
-  notice: 'Width of table.'
+  notice: 'package.list.property.collapseEnable'
 }, {
   title: 'styleObj',
-  type: 'Object',
+  type: 'package.paramType.object',
   default: '{}',
-  notice: 'Object of customized style.'
+  notice: 'package.list.property.styleObj'
 }, {
   title: 'slotObj',
-  type: 'Object',
+  type: 'package.paramType.object',
   default: '{}',
-  notice: 'Object of slot which for render specific entry.'
+  notice: 'package.list.property.slotObj'
 }, {
   title: 'onEntryClick',
-  type: 'Function',
+  type: 'package.paramType.function',
   default: 'undefined',
-  notice: 'Function for entry clicked.'
+  notice: 'package.list.property.onEntryClick'
 }, {
   title: 'onToggle',
-  type: 'Function',
+  type: 'package.paramType.function',
   default: 'undefined',
-  notice: 'Fuction for while collapseEnable is ture and some collapsing triggered.'
+  notice: 'package.list.property.onToggle'
 }, {
   title: 'ref',
   type: 'useRef',
   default: 'undefined',
-  notice: 'For the feature of React.ref'
+  notice: 'package.list.property.ref'
 }];
 var tableBodyArr_entry = [{
   title: 'id',
-  type: 'String',
-  notice: 'Identity of entry.'
+  type: 'package.paramType.string',
+  notice: 'package.list.entryObj.id'
 }, {
   title: 'title',
-  type: 'String || Node',
-  notice: 'Name of entry.'
+  type: 'package.paramType.string||package.paramType.node',
+  notice: 'package.list.entryObj.title'
 }, {
   title: 'defaultCollapsed',
-  type: 'String',
-  notice: 'Default value to collapsed of extend.'
+  type: 'package.paramType.string',
+  notice: 'package.list.entryObj.defaultCollapsed'
 }, {
   title: 'children',
-  type: 'Array',
-  notice: 'sublist'
+  type: 'package.paramType.array',
+  notice: 'package.list.entryObj.children'
 }];
 var tableBodyArr_slot = [{
   title: '[ id of entryObj ]',
-  type: 'String || Node || Function',
-  notice: /*#__PURE__*/react_default.a.createElement(react_default.a.Fragment, null, "Slot for customized entry. Here is the example for function if used. The porps will be entry corresponding the id.", /*#__PURE__*/react_default.a.createElement("pre", {
-    className: "page_pre"
-  }, "(entry) => {}"))
+  type: 'package.paramType.string||package.paramType.node||package.paramType.function',
+  notice: 'package.list.slotObj.entryObj'
 }];
+var tableSlotObj = {
+  'td-type': function tdType(data, column) {
+    var sep = data[column.id].split('||');
+    var result = '';
 
-var Basic_Basic = function Basic() {
+    if (sep.length > 0) {
+      result = sep.map(function (item) {
+        return btblab_prototype_languages["a" /* lang */].translate(item);
+      }).join(' || ');
+    } else {
+      result = data[column.id] === 'useRef' ? 'useRef' : btblab_prototype_languages["a" /* lang */].translate(data[column.id]);
+    }
+
+    return result;
+  },
+  'td-notice': function tdNotice(data, column) {
+    return btblab_prototype_languages["a" /* lang */].translate(data[column.id]);
+  }
+};
+var Basic = enhance(function () {
   return /*#__PURE__*/react_default.a.createElement(pageLayout["c" /* Page */], {
     className: "btb-pkg-list-basic"
   }, /*#__PURE__*/react_default.a.createElement(pageLayout["d" /* PageHead */], {
-    title: PageInfo.title,
+    title: btblab_prototype_languages["a" /* lang */].translate('package.list.name'),
     clickBtn: functions["a" /* openLink */],
     linkList: PageInfo.linkList
   }), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
-    head: /*#__PURE__*/react_default.a.createElement(react_default.a.Fragment, null, "Version: ".concat(PageInfo.version), /*#__PURE__*/react_default.a.createElement("br", null), "Release Date: ".concat(PageInfo.updated))
+    head: /*#__PURE__*/react_default.a.createElement(react_default.a.Fragment, null, "".concat(btblab_prototype_languages["a" /* lang */].translate('package.version_colon')).concat(PageInfo.version), /*#__PURE__*/react_default.a.createElement("br", null), "".concat(btblab_prototype_languages["a" /* lang */].translate('package.release_colon')).concat(PageInfo.updated))
   }, /*#__PURE__*/react_default.a.createElement("p", null, PageInfo.description)), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
-    head: "INSTALLATION"
+    head: btblab_prototype_languages["a" /* lang */].translate('package.section.installation')
   }, /*#__PURE__*/react_default.a.createElement("pre", {
     className: "page_pre"
   }, preInstall)), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
-    head: "RENDER"
+    head: btblab_prototype_languages["a" /* lang */].translate('package.section.render')
   }, /*#__PURE__*/react_default.a.createElement("pre", {
     className: "page_pre"
   }, preRender)), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
-    head: "PARAMETERS"
-  }, /*#__PURE__*/react_default.a.createElement(pageLayout["a" /* Block */], {
-    title: "Basic"
+    head: btblab_prototype_languages["a" /* lang */].translate('package.section.parameters')
   }, /*#__PURE__*/react_default.a.createElement(react_table_esm["a" /* default */], {
     className: "page_table",
     mode: "list",
     headData: tableHeadArr_property,
-    bodyData: tableBodyArr_basic
-  })), /*#__PURE__*/react_default.a.createElement(pageLayout["a" /* Block */], {
+    bodyData: tableBodyArr_basic,
+    slotObj: tableSlotObj
+  }), /*#__PURE__*/react_default.a.createElement(pageLayout["a" /* Block */], {
     title: "entryObj"
-  }, /*#__PURE__*/react_default.a.createElement("p", null, "If entry.children is defined. While clicking this entry will trigger onToggle. If not, it will trigger onEntryClick."), /*#__PURE__*/react_default.a.createElement("pre", {
+  }, /*#__PURE__*/react_default.a.createElement("p", null, btblab_prototype_languages["a" /* lang */].translate('package.list.parameters.entryObj')), /*#__PURE__*/react_default.a.createElement("pre", {
     className: "page_pre"
   }, preEntryObj), /*#__PURE__*/react_default.a.createElement(react_table_esm["a" /* default */], {
     className: "page_table",
     mode: "list",
     headData: tableHeadArr_entry,
-    bodyData: tableBodyArr_entry
+    bodyData: tableBodyArr_entry,
+    slotObj: tableSlotObj
   })), /*#__PURE__*/react_default.a.createElement(pageLayout["a" /* Block */], {
     title: "styleObj"
-  }, /*#__PURE__*/react_default.a.createElement("p", null, "Any className in this module could add inline CSS by styleObj."), /*#__PURE__*/react_default.a.createElement("pre", {
+  }, /*#__PURE__*/react_default.a.createElement("p", null, btblab_prototype_languages["a" /* lang */].translate('package.list.parameters.styleObj')), /*#__PURE__*/react_default.a.createElement("pre", {
     className: "page_pre"
   }, preStyleObj)), /*#__PURE__*/react_default.a.createElement(pageLayout["a" /* Block */], {
     title: "slotObj"
-  }, /*#__PURE__*/react_default.a.createElement("p", null, "We could replace the default node with entryobj.id by slotObj. "), /*#__PURE__*/react_default.a.createElement("pre", {
+  }, /*#__PURE__*/react_default.a.createElement("p", null, btblab_prototype_languages["a" /* lang */].translate('package.list.parameters.slotObj')), /*#__PURE__*/react_default.a.createElement("pre", {
     className: "page_pre"
   }, preSlotObj), /*#__PURE__*/react_default.a.createElement(react_table_esm["a" /* default */], {
     className: "page_table",
     mode: "list",
     headData: tableHeadArr_entry,
-    bodyData: tableBodyArr_slot
+    bodyData: tableBodyArr_slot,
+    slotObj: tableSlotObj
   }))), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
-    head: "NODE TREE"
+    head: btblab_prototype_languages["a" /* lang */].translate('package.section.nodeTree')
   }, /*#__PURE__*/react_default.a.createElement(esm["a" /* default */], {
     className: "page_node_tree",
     dataList: nodeTree
-  }), /*#__PURE__*/react_default.a.createElement("p", null, 'Note: The layer count is counted base on 0.')));
-};
-
-/* harmony default export */ var list_Basic = (Basic_Basic);
+  }), /*#__PURE__*/react_default.a.createElement("p", null, btblab_prototype_languages["a" /* lang */].translate('package.list.nodeTree.notice'))));
+});
+/* harmony default export */ var list_Basic = (Basic);
 // CONCATENATED MODULE: ./src/routes/packages/list/BasicContainer.jsx
 
 

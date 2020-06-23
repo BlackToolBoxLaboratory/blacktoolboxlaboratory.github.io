@@ -1,34 +1,15 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[18],{
 
-/***/ 78:
+/***/ 54:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-// ESM COMPAT FLAG
-__webpack_require__.r(__webpack_exports__);
 
-// EXTERNAL MODULE: ./node_modules/react/index.js
-var react = __webpack_require__(0);
-var react_default = /*#__PURE__*/__webpack_require__.n(react);
-
-// EXTERNAL MODULE: ./node_modules/react-router/esm/react-router.js
-var react_router = __webpack_require__(2);
-
-// EXTERNAL MODULE: ./src/assets/definitions/routeMap.js
-var routeMap = __webpack_require__(18);
-
-// EXTERNAL MODULE: ./node_modules/react-redux/es/index.js + 22 modules
-var es = __webpack_require__(32);
-
-// EXTERNAL MODULE: ./node_modules/classnames/index.js
-var classnames = __webpack_require__(48);
-var classnames_default = /*#__PURE__*/__webpack_require__.n(classnames);
-
-// EXTERNAL MODULE: ./node_modules/recompose/dist/Recompose.esm.js + 1 modules
-var Recompose_esm = __webpack_require__(55);
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, "a", function() { return /* binding */ lang; });
 
 // EXTERNAL MODULE: ./node_modules/@blacktoolbox/prototype-languages/es/index.js + 1 modules
-var prototype_languages_es = __webpack_require__(64);
+var es = __webpack_require__(65);
 
 // CONCATENATED MODULE: ./src/assets/languages/en.js
 /* harmony default export */ var en = ({
@@ -66,6 +47,78 @@ var prototype_languages_es = __webpack_require__(64);
       'validator': 'Validator'
     },
     'version_1': 'Version 1'
+  },
+  'about': {
+    'description': 'React is the first framework of javascript when I join to the Frontend develipment club. Before that jQuery of curse is my first using when I am a software engineer. Here I aim to develop packages made with React. They are designed with basic logic for high degrees of freedom of customization and low dependency. While using, if you find some questions, bugs or issues. Or having some great ideas. Please feel free to let me know.',
+    'donate': {
+      '1': 'If you like all the works in BTB Lab. Please ',
+      '2': 'buy me a coffee',
+      '3': '.'
+    }
+  },
+  'package': {
+    'version_colon': 'Version: ',
+    'release_colon': 'Release Date: ',
+    'section': {
+      'installation': 'INSTALLATION',
+      'render': 'RENDER',
+      'parameters': 'PARAMETERS',
+      'nodeTree': 'NODE TREE'
+    },
+    'paramType': {
+      'array': 'Array',
+      'object': 'Object',
+      'string': 'String',
+      'function': 'Function',
+      'boolean': 'Boolean',
+      'node': 'Node'
+    },
+    'list': {
+      'name': 'List',
+      'description': {
+        'basic': 'This module of list creator made with React can do the help to make a list or mane component to our page. Normally it is a list make. But with some trigger action it can be a menu maker for route redirection or other feature we need.'
+      },
+      'parameters': {
+        'entryObj': 'If entry.children is defined. While clicking this entry will trigger onToggle. If not, it will trigger onEntryClick.',
+        'styleObj': 'Any className in this module could add inline CSS by styleObj.',
+        'slotObj': 'We could replace the default node with entryobj.id by slotObj.'
+      },
+      'property': {
+        'dataList': 'List of entryObj.',
+        'activeID': 'Actived entry.',
+        'defaultActiveID': 'Default actived entry.',
+        'collapseEnable': 'Enable the feature of collapse.',
+        'styleObj': 'Object of customized style.',
+        'slotObj': 'Object of slot which for render specific entry.',
+        'onEntryClick': 'Function for entry clicked.',
+        'onToggle': 'Fuction for while collapseEnable is ture and some collapsing triggered.',
+        'ref': 'For the feature of React.ref'
+      },
+      'entryObj': {
+        'id': 'Identity of entry.',
+        'title': 'Name of entry.',
+        'defaultCollapsed': 'Default value to collapsed of extend.',
+        'children': 'sublist'
+      },
+      'slotObj': {
+        'entryObj': 'Slot for customized entry. Here is the example for function if used. The porps will be entry corresponding the id. If you are using function to slot, the function will be (entry) => {}. And the entry is the source data specified.'
+      },
+      'nodeTree': {
+        'notice': 'Note: The layer count is counted base on 0.'
+      }
+    },
+    'table': {
+      'name': 'Table',
+      'description': {
+        'basic': 'This module of table creator made with React can do the help to make a table component to our page. It has modes in list and info which are different ways to show data.'
+      }
+    },
+    'popover': {
+      'name': 'Popover',
+      'description': {
+        'basic': 'This module of popover creator made with React can do the help to make a popover component to our page. The popover can do th e thing about popover and dropdown.'
+      }
+    }
   }
 });
 // CONCATENATED MODULE: ./src/assets/languages/zh.js
@@ -85,7 +138,7 @@ var prototype_languages_es = __webpack_require__(64);
         }
       },
       'table': {
-        'root': '表格',
+        'root': '表',
         'example': {
           'list': '範例-List',
           'info': '範例-Info',
@@ -104,13 +157,85 @@ var prototype_languages_es = __webpack_require__(64);
       'validator': '驗證器'
     },
     'version_1': '前往舊站 v1'
+  },
+  'about': {
+    'description': 'React 是我入門前端時，第一個學習的JavaScript框架，事實上，在這之前也有使用 jQuery 的開發經驗，當我還是嵌入式系統的軟體工程師時。這邊主要基於 React 的設計思維，利用其 React 特有的性質來開發低依賴性、高自由度的套件，以利於完成客製化需求，如果這些套件在使用上有什麼困難，或者對於套件的開發有其他的想法或期待，還請多多與我分享您的想法。',
+    'donate': {
+      '1': '如果您喜歡 BTB Lab. 的開發成果與設計方式。您的',
+      '2': '小小捐款',
+      '3': '是給予我莫大的肯定與鼓勵。'
+    }
+  },
+  'package': {
+    'version_colon': '發布版本：',
+    'release_colon': '發布日期：',
+    'section': {
+      'installation': '安裝',
+      'render': '渲染',
+      'parameters': '參數',
+      'nodeTree': '節點樹'
+    },
+    'paramType': {
+      'array': '陣列',
+      'object': '物件',
+      'string': '字串',
+      'function': '函式',
+      'boolean': '布林',
+      'node': '節點'
+    },
+    'list': {
+      'name': '清單',
+      'description': {
+        'basic': '這個套件結合清單與菜單的功能，利用展開收闔的功能，以及導頁的功能(React-router, history,...等)，便是後台網站常見的菜單，配合我們設計的氣泡框。便可成為下拉式選單。'
+      },
+      'parameters': {
+        'entryObj': '如果 entry.children 有被定義。則當點擊時會觸發 onToggle ，反之，則觸發 onEntryClick 。',
+        'styleObj': '套件中任何具有 className 的節點，皆能使用 styleObj 定義 inline CSS。',
+        'slotObj': '資料中的項目皆能以 id 在 slotObj 定義客製化的節點內容。'
+      },
+      'property': {
+        'dataList': 'entryObj 的陣列。',
+        'activeID': '激活的 entry 的 id。',
+        'defaultActiveID': '預設激活的 entry 的 id。',
+        'collapseEnable': '開啟展開 / 收合功能。',
+        'styleObj': '客製化外觀。',
+        'slotObj': '客製化節點。',
+        'onEntryClick': '項目點擊事件函式。',
+        'onToggle': '項目層展開 / 收合切換之事件函式。',
+        'ref': '支援 React.ref。'
+      },
+      'entryObj': {
+        'id': '項目識別名。',
+        'title': '項目顯示名。',
+        'defaultCollapsed': '當項目具有子清單，可預設展開 / 收合狀態。',
+        'children': '子清單。'
+      },
+      'slotObj': {
+        'entryObj': '套件支援客製化節點的功能，當以函式客製節點渲染時，函式初始為 (entry) => {} ，其中輸入值為該節點的原始資料。'
+      },
+      'nodeTree': {
+        'notice': '附註：層的計算係由0開始。'
+      }
+    },
+    'table': {
+      'name': '表',
+      'description': {
+        'basic': '表的設計本身分成三種模式：列表、資訊與資訊並列，使用視窗監聽，再配合客製化的外觀。即可完成漂亮的響應式的表顯示。未來還會再擴充表頭的設定功能，讓表可以更輕易地完成：分頁、排序、搜尋、欄位過濾等功能。'
+      }
+    },
+    'popover': {
+      'name': '氣泡框',
+      'description': {
+        'basic': '氣泡框預設有偵測視窗邊界的功能，可靈活的切換顯示位置與對齊方式，也具有強制鎖定顯示狀態的設計，另外如果結合氣泡框與清單的套件，便可成為下拉式選單。'
+      }
+    }
   }
 });
 // CONCATENATED MODULE: ./src/plugins/btblab-prototype-languages.js
 
 
 
-Object(prototype_languages_es["b" /* initializer */])([{
+Object(es["b" /* initializer */])([{
   index: 'en',
   label: 'Eglish',
   dictionary: en
@@ -119,9 +244,42 @@ Object(prototype_languages_es["b" /* initializer */])([{
   label: '繁體中文',
   dictionary: zh
 }]);
-var lang = new prototype_languages_es["a" /* default */]();
+var lang = new es["a" /* default */]();
+
+/***/ }),
+
+/***/ 79:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+// ESM COMPAT FLAG
+__webpack_require__.r(__webpack_exports__);
+
+// EXTERNAL MODULE: ./node_modules/react/index.js
+var react = __webpack_require__(0);
+var react_default = /*#__PURE__*/__webpack_require__.n(react);
+
+// EXTERNAL MODULE: ./node_modules/react-router/esm/react-router.js
+var react_router = __webpack_require__(2);
+
+// EXTERNAL MODULE: ./src/assets/definitions/routeMap.js
+var routeMap = __webpack_require__(18);
+
+// EXTERNAL MODULE: ./node_modules/react-redux/es/index.js + 22 modules
+var es = __webpack_require__(31);
+
+// EXTERNAL MODULE: ./node_modules/classnames/index.js
+var classnames = __webpack_require__(48);
+var classnames_default = /*#__PURE__*/__webpack_require__.n(classnames);
+
+// EXTERNAL MODULE: ./node_modules/recompose/dist/Recompose.esm.js + 1 modules
+var Recompose_esm = __webpack_require__(55);
+
+// EXTERNAL MODULE: ./src/plugins/btblab-prototype-languages.js + 2 modules
+var btblab_prototype_languages = __webpack_require__(54);
+
 // EXTERNAL MODULE: ./src/stores/langStore.js
-var langStore = __webpack_require__(31);
+var langStore = __webpack_require__(32);
 
 // EXTERNAL MODULE: ./node_modules/@fortawesome/react-fontawesome/index.es.js
 var index_es = __webpack_require__(36);
@@ -130,7 +288,7 @@ var index_es = __webpack_require__(36);
 var esm = __webpack_require__(52);
 
 // EXTERNAL MODULE: ./node_modules/@blacktoolbox/react-popover/esm/index.js
-var react_popover_esm = __webpack_require__(57);
+var react_popover_esm = __webpack_require__(58);
 
 // CONCATENATED MODULE: ./src/components/layout/Head.jsx
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
@@ -179,12 +337,12 @@ var Head = enhance(function (props) {
 
   function _switchLang(event) {
     props.dispatch(langStore["a" /* langAction */].setLang(event.index));
-    lang.set(event.index);
+    btblab_prototype_languages["a" /* lang */].set(event.index);
     env.state_showPopover.onToggle(false);
   }
 
   function _getLangList() {
-    var langList = lang.menu().map(function (entry) {
+    var langList = btblab_prototype_languages["a" /* lang */].menu().map(function (entry) {
       return _objectSpread(_objectSpread({}, entry), {}, {
         "id": entry.index,
         "title": entry.label
@@ -236,7 +394,7 @@ var Head = enhance(function (props) {
     })
   }), /*#__PURE__*/react_default.a.createElement(esm["a" /* default */], {
     dataList: _getLangList(),
-    activeID: lang.get().index,
+    activeID: btblab_prototype_languages["a" /* lang */].get().index,
     onEntryClick: _switchLang
   }))), /*#__PURE__*/react_default.a.createElement("div", {
     className: "head_item"
@@ -503,7 +661,7 @@ function translateMenu() {
 
 function translateMenuRecursive(obj) {
   var result = Aside_objectSpread(Aside_objectSpread({}, obj), {}, {
-    title: obj.langIndex ? lang.translate(obj.langIndex) : obj.title
+    title: obj.langIndex ? btblab_prototype_languages["a" /* lang */].translate(obj.langIndex) : obj.title
   });
 
   if (obj.children) {
@@ -576,13 +734,13 @@ var Layout = Layout_enhance(function (props) {
   var _initialLang = function _initialLang() {
     if (!props.languageSetting.length) {
       var userLang = navigator.language || navigator.userLanguage;
-      var result = lang.menu().find(function (item) {
+      var result = btblab_prototype_languages["a" /* lang */].menu().find(function (item) {
         return userLang.search(new RegExp(item.index, 'i')) >= 0;
       });
-      lang.set(result.index);
+      btblab_prototype_languages["a" /* lang */].set(result.index);
       props.dispatch(langStore["a" /* langAction */].setLang(result.index));
     } else {
-      lang.set(props.languageSetting);
+      btblab_prototype_languages["a" /* lang */].set(props.languageSetting);
     }
   };
 
@@ -650,17 +808,17 @@ var HomeContainer_HomeContainer = function HomeContainer() {
   })), /*#__PURE__*/react_default.a.createElement(react_router["g" /* Switch */], null, /*#__PURE__*/react_default.a.createElement(react_router["d" /* Route */], {
     path: routeMap["a" /* default */].ABOUT,
     component: /*#__PURE__*/react_default.a.lazy(function () {
-      return __webpack_require__.e(/* import() */ 15).then(__webpack_require__.bind(null, 79));
+      return __webpack_require__.e(/* import() */ 15).then(__webpack_require__.bind(null, 80));
     })
   }), /*#__PURE__*/react_default.a.createElement(react_router["d" /* Route */], {
     path: routeMap["a" /* default */].PACKAGES,
     component: /*#__PURE__*/react_default.a.lazy(function () {
-      return __webpack_require__.e(/* import() */ 20).then(__webpack_require__.bind(null, 76));
+      return __webpack_require__.e(/* import() */ 20).then(__webpack_require__.bind(null, 77));
     })
   }), /*#__PURE__*/react_default.a.createElement(react_router["d" /* Route */], {
     path: routeMap["a" /* default */].APPLICATIONS,
     component: /*#__PURE__*/react_default.a.lazy(function () {
-      return __webpack_require__.e(/* import() */ 19).then(__webpack_require__.bind(null, 77));
+      return __webpack_require__.e(/* import() */ 19).then(__webpack_require__.bind(null, 78));
     })
   }))));
 };

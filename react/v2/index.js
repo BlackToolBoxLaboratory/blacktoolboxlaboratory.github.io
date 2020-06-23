@@ -7083,44 +7083,6 @@ var result = Object(_ponyfill_js__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"]
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return action; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return reducer; });
-var initialState = {
-  languageSetting: ''
-};
-var action = {
-  setLang: function setLang(data) {
-    return {
-      type: 'LANG_SET',
-      data: data
-    };
-  }
-};
-
-var reducer = function reducer() {
-  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
-  var action = arguments.length > 1 ? arguments[1] : undefined;
-  var result = state;
-
-  switch (action.type) {
-    case 'LANG_SET':
-      result = {
-        languageSetting: action.data
-      };
-      return result;
-
-    default:
-      return state;
-  }
-};
-
-
-
-/***/ }),
-/* 32 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, "a", function() { return /* reexport */ components_Provider; });
@@ -8389,6 +8351,44 @@ setBatch(react_dom["unstable_batchedUpdates"]);
 
 
 /***/ }),
+/* 32 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return action; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return reducer; });
+var initialState = {
+  languageSetting: ''
+};
+var action = {
+  setLang: function setLang(data) {
+    return {
+      type: 'LANG_SET',
+      data: data
+    };
+  }
+};
+
+var reducer = function reducer() {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
+  var action = arguments.length > 1 ? arguments[1] : undefined;
+  var result = state;
+
+  switch (action.type) {
+    case 'LANG_SET':
+      result = {
+        languageSetting: action.data
+      };
+      return result;
+
+    default:
+      return state;
+  }
+};
+
+
+
+/***/ }),
 /* 33 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -8704,7 +8704,7 @@ var react_default = /*#__PURE__*/__webpack_require__.n(react);
 var react_dom = __webpack_require__(15);
 
 // EXTERNAL MODULE: ./node_modules/react-redux/es/index.js + 22 modules
-var es = __webpack_require__(32);
+var es = __webpack_require__(31);
 
 // EXTERNAL MODULE: ./node_modules/redux-persist/lib/integration/react.js
 var integration_react = __webpack_require__(34);
@@ -18959,7 +18959,7 @@ var lib_storage = __webpack_require__(35);
 var storage_default = /*#__PURE__*/__webpack_require__.n(lib_storage);
 
 // EXTERNAL MODULE: ./src/stores/langStore.js
-var langStore = __webpack_require__(31);
+var langStore = __webpack_require__(32);
 
 // CONCATENATED MODULE: ./src/stores/index.js
 
@@ -19004,7 +19004,7 @@ var src_App = function App() {
   })), /*#__PURE__*/react_default.a.createElement(react_router["d" /* Route */], {
     path: routeMap["a" /* default */].HOME,
     component: /*#__PURE__*/react_default.a.lazy(function () {
-      return Promise.all(/* import() */[__webpack_require__.e(2), __webpack_require__.e(18)]).then(__webpack_require__.bind(null, 78));
+      return Promise.all(/* import() */[__webpack_require__.e(2), __webpack_require__.e(18)]).then(__webpack_require__.bind(null, 79));
     })
   }))))));
 };
