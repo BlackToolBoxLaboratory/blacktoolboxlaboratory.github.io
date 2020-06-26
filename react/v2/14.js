@@ -203,7 +203,7 @@ var packageObj = {
 
 /***/ }),
 
-/***/ 53:
+/***/ 55:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -242,10 +242,10 @@ var react_default = /*#__PURE__*/__webpack_require__.n(react);
 var es = __webpack_require__(31);
 
 // EXTERNAL MODULE: ./node_modules/recompose/dist/Recompose.esm.js + 1 modules
-var Recompose_esm = __webpack_require__(55);
+var Recompose_esm = __webpack_require__(51);
 
 // EXTERNAL MODULE: ./node_modules/@blacktoolbox/react-list/esm/index.js
-var esm = __webpack_require__(52);
+var esm = __webpack_require__(54);
 
 // EXTERNAL MODULE: ./src/modules/pageLayout/index.js + 5 modules
 var pageLayout = __webpack_require__(46);
@@ -254,10 +254,10 @@ var pageLayout = __webpack_require__(46);
 var functions = __webpack_require__(47);
 
 // EXTERNAL MODULE: ./src/components/packages/list/packageInfo.js
-var packageInfo = __webpack_require__(53);
+var packageInfo = __webpack_require__(55);
 
 // EXTERNAL MODULE: ./src/plugins/btblab-prototype-languages.js + 2 modules
-var btblab_prototype_languages = __webpack_require__(54);
+var btblab_prototype_languages = __webpack_require__(50);
 
 // CONCATENATED MODULE: ./src/components/packages/list/ExampleStyle.jsx
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
@@ -272,12 +272,6 @@ function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 
 
 
@@ -291,12 +285,6 @@ var enhance = Object(Recompose_esm["a" /* compose */])(Object(es["b" /* connect 
     'languageSetting': state.language.languageSetting
   };
 }));
-
-var PageInfo = _objectSpread(_objectSpread({}, packageInfo["a" /* default */]), {}, {
-  'title': 'Example - Style',
-  'description': 'Here is going to show you about how to use the styleObj and the example of defaultActiveID and v-model of activeID. The activeID is used to mark focused entry, but also allowed to used defaultActiveID to mark entry as default in the begin. Then we can modify the style by the styleObj with using the node class name directly.'
-});
-
 var _listData = [{
   id: 'b1',
   title: 'Branch: 1',
@@ -345,13 +333,13 @@ var ExampleStyle = enhance(function () {
   return /*#__PURE__*/react_default.a.createElement(pageLayout["c" /* Page */], {
     className: "btb-pkg-list-example-style"
   }, /*#__PURE__*/react_default.a.createElement(pageLayout["d" /* PageHead */], {
-    title: PageInfo.title,
+    title: btblab_prototype_languages["a" /* lang */].translate('package.list.example.style.title'),
     clickBtn: functions["a" /* openLink */],
-    linkList: PageInfo.linkList
+    linkList: packageInfo["a" /* default */].linkList
   }), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
-    head: /*#__PURE__*/react_default.a.createElement(react_default.a.Fragment, null, "Version: ".concat(PageInfo.version), /*#__PURE__*/react_default.a.createElement("br", null), "Release Date: ".concat(PageInfo.updated))
-  }, /*#__PURE__*/react_default.a.createElement("p", null, PageInfo.description)), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
-    head: "EXAMPLE"
+    head: /*#__PURE__*/react_default.a.createElement(react_default.a.Fragment, null, "".concat(btblab_prototype_languages["a" /* lang */].translate('package.version_colon')).concat(packageInfo["a" /* default */].version), /*#__PURE__*/react_default.a.createElement("br", null), "".concat(btblab_prototype_languages["a" /* lang */].translate('package.release_colon')).concat(packageInfo["a" /* default */].updated))
+  }, /*#__PURE__*/react_default.a.createElement("p", null, btblab_prototype_languages["a" /* lang */].translate('package.list.example.style.description'))), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
+    head: btblab_prototype_languages["a" /* lang */].translate('package.section.example')
   }, /*#__PURE__*/react_default.a.createElement("p", {
     className: "example_activeID"
   }, "Active ID: ".concat(activeID.value)), /*#__PURE__*/react_default.a.createElement(esm["a" /* default */], {
@@ -360,12 +348,10 @@ var ExampleStyle = enhance(function () {
     activeID: activeID.value,
     onEntryClick: activeID.onChange
   })), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
-    head: "SOURCECODE"
-  }, /*#__PURE__*/react_default.a.createElement(pageLayout["a" /* Block */], {
-    title: "render"
+    head: btblab_prototype_languages["a" /* lang */].translate('package.section.sourceCode')
   }, /*#__PURE__*/react_default.a.createElement("pre", {
     className: "page_pre"
-  }, preRender)), /*#__PURE__*/react_default.a.createElement(pageLayout["a" /* Block */], {
+  }, preRender), /*#__PURE__*/react_default.a.createElement(pageLayout["a" /* Block */], {
     title: "listData"
   }, /*#__PURE__*/react_default.a.createElement("pre", {
     className: "page_pre"

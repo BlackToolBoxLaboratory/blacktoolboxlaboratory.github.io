@@ -203,7 +203,7 @@ var packageObj = {
 
 /***/ }),
 
-/***/ 50:
+/***/ 52:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -227,11 +227,17 @@ __webpack_require__.r(__webpack_exports__);
 var react = __webpack_require__(0);
 var react_default = /*#__PURE__*/__webpack_require__.n(react);
 
+// EXTERNAL MODULE: ./node_modules/react-redux/es/index.js + 22 modules
+var es = __webpack_require__(31);
+
+// EXTERNAL MODULE: ./node_modules/recompose/dist/Recompose.esm.js + 1 modules
+var Recompose_esm = __webpack_require__(51);
+
 // EXTERNAL MODULE: ./node_modules/@blacktoolbox/react-list/esm/index.js
-var esm = __webpack_require__(52);
+var esm = __webpack_require__(54);
 
 // EXTERNAL MODULE: ./node_modules/@blacktoolbox/react-table/esm/index.js
-var react_table_esm = __webpack_require__(50);
+var react_table_esm = __webpack_require__(52);
 
 // EXTERNAL MODULE: ./src/modules/pageLayout/index.js + 5 modules
 var pageLayout = __webpack_require__(46);
@@ -259,12 +265,10 @@ var packageInfo = {
   }]
 };
 /* harmony default export */ var popover_packageInfo = (packageInfo);
+// EXTERNAL MODULE: ./src/plugins/btblab-prototype-languages.js + 2 modules
+var btblab_prototype_languages = __webpack_require__(50);
+
 // CONCATENATED MODULE: ./src/components/packages/popover/Basic.jsx
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
 
@@ -273,10 +277,12 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
-var PageInfo = _objectSpread(_objectSpread({}, popover_packageInfo), {}, {
-  'title': 'Popover Basic'
-});
 
+var enhance = Object(Recompose_esm["a" /* compose */])(Object(es["b" /* connect */])(function (state) {
+  return {
+    'languageSetting': state.language.languageSetting
+  };
+}));
 var preInstall = "$ npm install --save @blacktoolbox/reat-popover\n\nimport BTBPopover from '@blacktoolbox/reat-popover'\nimport '@blacktoolbox/react-popover/lib/index.css'";
 var preRender = "<BTBPopover\n        showState=\" Boolean \" \n        showPosition=\" String \"\n        showAlign=\" String \"\n        stateLock=\" Boolean \"\n        withArrow=\" Boolean \"\n        autoDetect=\" Boolean \"\n        trigger=\" String || Node \"\n        styleObj=\" Object \"\n        onToggle=\" function(){} \"\n        onShow=\" function(){} \"\n        onHide=\" function(){} \"/>\n        {popover content}\n</BTBPopover>";
 var preStyleObj = "styleObj = {\n        [ className ]: { inline CSS }\n}";
@@ -306,105 +312,121 @@ var tableHeadArr_property = [{
 }];
 var tableBodyArr_basic = [{
   title: 'showState',
-  type: 'Boolean',
+  type: 'package.paramType.boolean',
   default: 'false',
-  notice: 'We could use the parameter to overwrite the showState of popover.'
+  notice: 'package.popover.property.showState'
 }, {
   title: 'showPosition',
-  type: 'String',
-  default: 'bottom',
-  notice: 'The position of popover. Options in top || right || bottom || left.'
+  type: 'package.paramType.string',
+  default: '"bottom"',
+  notice: 'package.popover.property.showPosition'
 }, {
   title: 'showAlign',
-  type: 'String',
-  default: 'begin',
-  notice: 'The align of popover. Options in begin || center || end.'
+  type: 'package.paramType.string',
+  default: '"begin"',
+  notice: 'package.popover.property.showAlign'
 }, {
   title: 'stateLock',
-  type: 'Boolean',
+  type: 'package.paramType.boolean',
   default: 'true',
-  notice: 'To keep showState in true or false.'
+  notice: 'package.popover.property.stateLock'
 }, {
   title: 'withArrow',
-  type: 'Boolean',
+  type: 'package.paramType.boolean',
   default: 'true',
-  notice: 'The tiny caret to let popover become conversation block. Get it false when we prefer a dropdown.'
+  notice: 'package.popover.property.withArrow'
 }, {
   title: 'autoDetect',
-  type: 'Boolean',
+  type: 'package.paramType.boolean',
   default: 'true',
-  notice: 'Default it will detect the window\'s inner edge of browser. When the popover show overglow to browser, it will adjust by self. We could get it false, if we don\'t need the feature working.'
+  notice: 'package.popover.property.autoDetect'
 }, {
   title: 'trigger',
-  type: 'String || Node',
-  default: 'Trigger',
-  notice: 'Render the popover toggle trigger node.'
+  type: 'package.paramType.string||package.paramType.node',
+  default: '"Trigger"',
+  notice: 'package.popover.property.trigger'
 }, {
   title: 'styleObj',
-  type: 'Object',
+  type: 'package.paramType.object',
   default: '{}',
-  notice: 'Object of customized style.'
+  notice: 'package.popover.property.styleObj'
 }, {
   title: 'onToggle',
-  type: 'Function',
+  type: 'package.paramType.function',
   default: 'undefined',
-  notice: 'Event function trigged when popover is toggle no matter showing or hiding.'
+  notice: 'package.popover.property.onToggle'
 }, {
   title: 'onShow',
-  type: 'Function',
+  type: 'package.paramType.function',
   default: 'undefined',
-  notice: 'Event function trigged when popover is going to show.'
+  notice: 'package.popover.property.onShow'
 }, {
   title: 'onHide',
-  type: 'Function',
+  type: 'package.paramType.function',
   default: 'undefined',
-  notice: 'Event function trigged when popover is going to hidd.'
+  notice: 'package.popover.property.onHide'
 }, {
   title: 'ref',
   type: 'useRef',
   default: 'undefined',
-  notice: 'For the feature of React.ref'
+  notice: 'package.popover.property.ref'
 }];
+var tableSlotObj = {
+  'td-type': function tdType(data, column) {
+    var sep = data[column.id].split('||');
+    var result = '';
 
-var Basic_Basic = function Basic() {
+    if (sep.length > 0) {
+      result = sep.map(function (item) {
+        return btblab_prototype_languages["a" /* lang */].translate(item);
+      }).join(' || ');
+    } else {
+      result = data[column.id] === 'useRef' ? 'useRef' : btblab_prototype_languages["a" /* lang */].translate(data[column.id]);
+    }
+
+    return result;
+  },
+  'td-notice': function tdNotice(data, column) {
+    return btblab_prototype_languages["a" /* lang */].translate(data[column.id]);
+  }
+};
+var Basic = enhance(function () {
   return /*#__PURE__*/react_default.a.createElement(pageLayout["c" /* Page */], {
     className: "btb-pkg-popover-basic"
   }, /*#__PURE__*/react_default.a.createElement(pageLayout["d" /* PageHead */], {
-    title: PageInfo.title,
+    title: btblab_prototype_languages["a" /* lang */].translate('package.popover.name'),
     clickBtn: functions["a" /* openLink */],
-    linkList: PageInfo.linkList
+    linkList: popover_packageInfo.linkList
   }), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
-    head: /*#__PURE__*/react_default.a.createElement(react_default.a.Fragment, null, "Version: ".concat(PageInfo.version), /*#__PURE__*/react_default.a.createElement("br", null), "Release Date: ".concat(PageInfo.updated))
-  }, /*#__PURE__*/react_default.a.createElement("p", null, PageInfo.description)), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
-    head: "INSTALLATION"
+    head: /*#__PURE__*/react_default.a.createElement(react_default.a.Fragment, null, "".concat(btblab_prototype_languages["a" /* lang */].translate('package.version_colon')).concat(popover_packageInfo.version), /*#__PURE__*/react_default.a.createElement("br", null), "".concat(btblab_prototype_languages["a" /* lang */].translate('package.release_colon')).concat(popover_packageInfo.updated))
+  }, /*#__PURE__*/react_default.a.createElement("p", null, btblab_prototype_languages["a" /* lang */].translate(popover_packageInfo.description))), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
+    head: btblab_prototype_languages["a" /* lang */].translate('package.section.installation')
   }, /*#__PURE__*/react_default.a.createElement("pre", {
     className: "page_pre"
   }, preInstall)), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
-    head: "RENDER"
+    head: btblab_prototype_languages["a" /* lang */].translate('package.section.render')
   }, /*#__PURE__*/react_default.a.createElement("pre", {
     className: "page_pre"
   }, preRender)), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
-    head: "PARAMETERS"
-  }, /*#__PURE__*/react_default.a.createElement(pageLayout["a" /* Block */], {
-    title: "Basic"
+    head: btblab_prototype_languages["a" /* lang */].translate('package.section.parameters')
   }, /*#__PURE__*/react_default.a.createElement(react_table_esm["a" /* default */], {
     className: "page_table",
     mode: "list",
     headData: tableHeadArr_property,
-    bodyData: tableBodyArr_basic
-  })), /*#__PURE__*/react_default.a.createElement(pageLayout["a" /* Block */], {
+    bodyData: tableBodyArr_basic,
+    slotObj: tableSlotObj
+  }), /*#__PURE__*/react_default.a.createElement(pageLayout["a" /* Block */], {
     title: "styleObj"
-  }, /*#__PURE__*/react_default.a.createElement("p", null, "Any className in this module could add inline CSS by styleObj."), /*#__PURE__*/react_default.a.createElement("pre", {
+  }, /*#__PURE__*/react_default.a.createElement("p", null, btblab_prototype_languages["a" /* lang */].translate('package.popover.parameters.styleObj')), /*#__PURE__*/react_default.a.createElement("pre", {
     className: "page_pre"
   }, preStyleObj))), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
-    head: "NODE TREE"
+    head: btblab_prototype_languages["a" /* lang */].translate('package.section.nodeTree')
   }, /*#__PURE__*/react_default.a.createElement(esm["a" /* default */], {
     className: "page_node_tree",
     dataList: nodeTree
   })));
-};
-
-/* harmony default export */ var popover_Basic = (Basic_Basic);
+});
+/* harmony default export */ var popover_Basic = (Basic);
 // CONCATENATED MODULE: ./src/routes/packages/popover/BasicContainer.jsx
 
 

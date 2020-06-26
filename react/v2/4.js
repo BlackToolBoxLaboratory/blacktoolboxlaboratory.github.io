@@ -203,7 +203,7 @@ var packageObj = {
 
 /***/ }),
 
-/***/ 50:
+/***/ 52:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -216,7 +216,7 @@ function c(t){return(c="function"==typeof Symbol&&"symbol"==typeof Symbol.iterat
 
 /***/ }),
 
-/***/ 51:
+/***/ 53:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -251,11 +251,17 @@ __webpack_require__.r(__webpack_exports__);
 var react = __webpack_require__(0);
 var react_default = /*#__PURE__*/__webpack_require__.n(react);
 
+// EXTERNAL MODULE: ./node_modules/react-redux/es/index.js + 22 modules
+var es = __webpack_require__(31);
+
+// EXTERNAL MODULE: ./node_modules/recompose/dist/Recompose.esm.js + 1 modules
+var Recompose_esm = __webpack_require__(51);
+
 // EXTERNAL MODULE: ./node_modules/@blacktoolbox/react-list/esm/index.js
-var esm = __webpack_require__(52);
+var esm = __webpack_require__(54);
 
 // EXTERNAL MODULE: ./node_modules/@blacktoolbox/react-table/esm/index.js
-var react_table_esm = __webpack_require__(50);
+var react_table_esm = __webpack_require__(52);
 
 // EXTERNAL MODULE: ./src/modules/pageLayout/index.js + 5 modules
 var pageLayout = __webpack_require__(46);
@@ -264,14 +270,12 @@ var pageLayout = __webpack_require__(46);
 var functions = __webpack_require__(47);
 
 // EXTERNAL MODULE: ./src/components/packages/table/packageInfo.js
-var packageInfo = __webpack_require__(51);
+var packageInfo = __webpack_require__(53);
+
+// EXTERNAL MODULE: ./src/plugins/btblab-prototype-languages.js + 2 modules
+var btblab_prototype_languages = __webpack_require__(50);
 
 // CONCATENATED MODULE: ./src/components/packages/table/Basic.jsx
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
 
@@ -280,10 +284,12 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
-var pageInfo = _objectSpread(_objectSpread({}, packageInfo["a" /* default */]), {}, {
-  'title': 'Table - Basic'
-});
 
+var enhance = Object(Recompose_esm["a" /* compose */])(Object(es["b" /* connect */])(function (state) {
+  return {
+    'languageSetting': state.language.languageSetting
+  };
+}));
 var preInstall = "$ npm install --save @blacktoolbox/reat-table\n\nimport BTBTable from '@blacktoolbox/reat-table'\nimport '@blacktoolbox/react-table/lib/index.css'";
 var preRender = "<BTBTable\n        headData=\" Array of headObj\" \n        bodyData=\" Array of bodyObj \"\n        mode=\" String \"\n        styleObj=\" Object \"\n        slotObj=\" Object \"\n        onDataClick=\" function(bodyObj){} \"/>";
 var preHeadObj = "headObj = {\n        id: '',\n        name: ''\n}";
@@ -380,17 +386,7 @@ var tableHeadArr_property = [{
   name: 'Notice',
   id: 'notice'
 }];
-var tableHeadArr_headObj = [{
-  name: 'Name',
-  id: 'title'
-}, {
-  name: 'Type',
-  id: 'type'
-}, {
-  name: 'Notice',
-  id: 'notice'
-}];
-var tableHeadArr_slot = [{
+var tableHeadArr_entry = [{
   name: 'Name',
   id: 'title'
 }, {
@@ -402,138 +398,152 @@ var tableHeadArr_slot = [{
 }];
 var tableBodyArr_basic = [{
   title: 'headData',
-  type: 'Array',
+  type: 'package.paramType.array',
   default: '[]',
-  notice: 'List of headObj.'
+  notice: 'package.table.property.headData'
 }, {
   title: 'bodyData',
-  type: 'Array',
+  type: 'package.paramType.array',
   default: '[]',
-  notice: 'List of bodyObj.'
+  notice: 'package.table.property.bodyData'
 }, {
   title: 'mode',
-  type: 'String',
-  default: 'list',
-  notice: 'Value in \'list\', \'info\' or \'compare\''
+  type: 'package.paramType.string',
+  default: '"list"',
+  notice: 'package.table.property.mode'
 }, {
   title: 'styleObj',
-  type: 'Object',
+  type: 'package.paramType.object',
   default: '{}',
-  notice: 'Object of customized style.'
+  notice: 'package.table.property.styleObj'
 }, {
   title: 'slotObj',
-  type: 'Object',
+  type: 'package.paramType.object',
   default: '{}',
-  notice: 'Object of customized entry of head or body.'
+  notice: 'package.table.property.slotObj'
 }, {
   title: 'onDataClick',
-  type: 'Function',
+  type: 'package.paramType.function',
   default: 'undefined',
-  notice: 'Function for data clicked.'
+  notice: 'package.table.property.onDataClick'
 }, {
   title: 'ref',
   type: 'useRef',
   default: 'undefined',
-  notice: 'For the feature of React.ref'
+  notice: 'package.table.property.ref'
 }];
 var tableBodyArr_headObj = [{
   title: 'id',
-  type: 'Array',
+  type: 'package.paramType.string',
   default: '[]',
-  notice: 'Identity of column.'
+  notice: 'package.table.headObj.id'
 }, {
   title: 'name',
-  type: 'Array',
+  type: 'package.paramType.string',
   default: '[]',
-  notice: 'Name of column.'
+  notice: 'package.table.headObj.name'
 }];
 var tableBodyArr_slot = [{
   title: '[ th_${ headObj.id } ]',
-  type: 'String || Node || Function',
-  notice: /*#__PURE__*/react_default.a.createElement(react_default.a.Fragment, null, "Slot for customized th of data. Here is the example for function if used. The porps will be entry corresponding the id.", /*#__PURE__*/react_default.a.createElement("pre", {
-    className: "page_pre"
-  }, "(headObj) => {}"))
+  type: 'package.paramType.string||package.paramType.node||package.paramType.function',
+  notice: 'package.table.slotObj.th'
 }, {
   title: '[ td_${ headObj.id } ]',
-  type: 'String || Node || Function',
-  notice: /*#__PURE__*/react_default.a.createElement(react_default.a.Fragment, null, "Slot for customized td of data. Here is the example for function if used. The porps will be entry corresponding the id.", /*#__PURE__*/react_default.a.createElement("pre", {
-    className: "page_pre"
-  }, "(bodyObj, headObj) => {}"))
+  type: 'package.paramType.string||package.paramType.node||package.paramType.function',
+  notice: 'package.table.slotObj.td'
 }];
+var tableSlotObj = {
+  'td-type': function tdType(data, column) {
+    var sep = data[column.id].split('||');
+    var result = '';
 
-var Basic_Basic = function Basic() {
+    if (sep.length > 0) {
+      result = sep.map(function (item) {
+        return btblab_prototype_languages["a" /* lang */].translate(item);
+      }).join(' || ');
+    } else {
+      result = data[column.id] === 'useRef' ? 'useRef' : btblab_prototype_languages["a" /* lang */].translate(data[column.id]);
+    }
+
+    return result;
+  },
+  'td-notice': function tdNotice(data, column) {
+    return btblab_prototype_languages["a" /* lang */].translate(data[column.id]);
+  }
+};
+var Basic = enhance(function () {
   return /*#__PURE__*/react_default.a.createElement(pageLayout["c" /* Page */], {
     className: "btb-pkg-table-basic"
   }, /*#__PURE__*/react_default.a.createElement(pageLayout["d" /* PageHead */], {
-    title: pageInfo.title,
+    title: btblab_prototype_languages["a" /* lang */].translate('package.table.name'),
     clickBtn: functions["a" /* openLink */],
-    linkList: pageInfo.linkList
+    linkList: packageInfo["a" /* default */].linkList
   }), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
-    head: /*#__PURE__*/react_default.a.createElement(react_default.a.Fragment, null, "Version: ".concat(pageInfo.version), /*#__PURE__*/react_default.a.createElement("br", null), "Release Date: ".concat(pageInfo.updated))
-  }, /*#__PURE__*/react_default.a.createElement("p", null, pageInfo.description)), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
-    head: "INSTALLATION"
+    head: /*#__PURE__*/react_default.a.createElement(react_default.a.Fragment, null, "".concat(btblab_prototype_languages["a" /* lang */].translate('package.version_colon')).concat(packageInfo["a" /* default */].version), /*#__PURE__*/react_default.a.createElement("br", null), "".concat(btblab_prototype_languages["a" /* lang */].translate('package.release_colon')).concat(packageInfo["a" /* default */].updated))
+  }, /*#__PURE__*/react_default.a.createElement("p", null, btblab_prototype_languages["a" /* lang */].translate(packageInfo["a" /* default */].description))), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
+    head: btblab_prototype_languages["a" /* lang */].translate('package.section.installation')
   }, /*#__PURE__*/react_default.a.createElement("pre", {
     className: "page_pre"
   }, preInstall)), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
-    head: "RENDER"
+    head: btblab_prototype_languages["a" /* lang */].translate('package.section.render')
   }, /*#__PURE__*/react_default.a.createElement("pre", {
     className: "page_pre"
   }, preRender)), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
-    head: "PARAMETERS"
-  }, /*#__PURE__*/react_default.a.createElement(pageLayout["a" /* Block */], {
-    title: "Basic"
+    head: btblab_prototype_languages["a" /* lang */].translate('package.section.parameters')
   }, /*#__PURE__*/react_default.a.createElement(react_table_esm["a" /* default */], {
     className: "page_table",
     mode: "list",
     headData: tableHeadArr_property,
-    bodyData: tableBodyArr_basic
-  })), /*#__PURE__*/react_default.a.createElement(pageLayout["a" /* Block */], {
+    bodyData: tableBodyArr_basic,
+    slotObj: tableSlotObj
+  }), /*#__PURE__*/react_default.a.createElement(pageLayout["a" /* Block */], {
     title: "headObj"
   }, /*#__PURE__*/react_default.a.createElement("pre", {
     className: "page_pre"
   }, preHeadObj), /*#__PURE__*/react_default.a.createElement(react_table_esm["a" /* default */], {
     className: "page_table",
     mode: "list",
-    headData: tableHeadArr_headObj,
-    bodyData: tableBodyArr_headObj
+    headData: tableHeadArr_entry,
+    bodyData: tableBodyArr_headObj,
+    slotObj: tableSlotObj
   })), /*#__PURE__*/react_default.a.createElement(pageLayout["a" /* Block */], {
     title: "bodyObj"
   }, /*#__PURE__*/react_default.a.createElement("pre", {
     className: "page_pre"
   }, preBodyObj)), /*#__PURE__*/react_default.a.createElement(pageLayout["a" /* Block */], {
     title: "styleObj"
-  }, /*#__PURE__*/react_default.a.createElement("p", null, "Any className in this module could add inline CSS by styleObj."), /*#__PURE__*/react_default.a.createElement("pre", {
+  }, /*#__PURE__*/react_default.a.createElement("p", null, btblab_prototype_languages["a" /* lang */].translate('package.table.parameters.styleObj')), /*#__PURE__*/react_default.a.createElement("pre", {
     className: "page_pre"
   }, preStyleObj)), /*#__PURE__*/react_default.a.createElement(pageLayout["a" /* Block */], {
     title: "slotObj"
-  }, /*#__PURE__*/react_default.a.createElement("p", null, "We could replace the default node with bodyObj.id by slotObj. However we need the prefix to specify which node we want to customized th or td. "), /*#__PURE__*/react_default.a.createElement("pre", {
+  }, /*#__PURE__*/react_default.a.createElement("p", null, btblab_prototype_languages["a" /* lang */].translate('package.table.parameters.slotObj')), /*#__PURE__*/react_default.a.createElement("pre", {
     className: "page_pre"
   }, preSlotObj), /*#__PURE__*/react_default.a.createElement(react_table_esm["a" /* default */], {
     className: "page_table",
     mode: "list",
-    headData: tableHeadArr_slot,
-    bodyData: tableBodyArr_slot
+    headData: tableHeadArr_entry,
+    bodyData: tableBodyArr_slot,
+    slotObj: tableSlotObj
   }))), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
-    head: "NODE TREE"
+    head: btblab_prototype_languages["a" /* lang */].translate('package.section.nodeTree')
   }, /*#__PURE__*/react_default.a.createElement(pageLayout["a" /* Block */], {
-    title: "List Mode"
+    title: btblab_prototype_languages["a" /* lang */].translate('package.table.nodeTree.list')
   }, /*#__PURE__*/react_default.a.createElement(esm["a" /* default */], {
     className: "page_node_tree",
     dataList: nodeTree_list
-  }), /*#__PURE__*/react_default.a.createElement("p", null, 'Note: The data order is counted base on 0.')), /*#__PURE__*/react_default.a.createElement(pageLayout["a" /* Block */], {
-    title: "Info Mode"
+  }), /*#__PURE__*/react_default.a.createElement("p", null, btblab_prototype_languages["a" /* lang */].translate('package.table.nodeTree.notice'))), /*#__PURE__*/react_default.a.createElement(pageLayout["a" /* Block */], {
+    title: btblab_prototype_languages["a" /* lang */].translate('package.table.nodeTree.info')
   }, /*#__PURE__*/react_default.a.createElement(esm["a" /* default */], {
     className: "page_node_tree",
     dataList: nodeTree_info
-  }), /*#__PURE__*/react_default.a.createElement("p", null, 'Note: The data order is counted base on 0.')), /*#__PURE__*/react_default.a.createElement(pageLayout["a" /* Block */], {
-    title: "Compare Mode"
+  }), /*#__PURE__*/react_default.a.createElement("p", null, btblab_prototype_languages["a" /* lang */].translate('package.table.nodeTree.notice'))), /*#__PURE__*/react_default.a.createElement(pageLayout["a" /* Block */], {
+    title: btblab_prototype_languages["a" /* lang */].translate('package.table.nodeTree.compare')
   }, /*#__PURE__*/react_default.a.createElement(esm["a" /* default */], {
     className: "page_node_tree",
     dataList: nodeTree_compare
-  }), /*#__PURE__*/react_default.a.createElement("p", null, 'Note: The data order is counted base on 0.'))));
-};
-
-/* harmony default export */ var table_Basic = (Basic_Basic);
+  }), /*#__PURE__*/react_default.a.createElement("p", null, btblab_prototype_languages["a" /* lang */].translate('package.table.nodeTree.notice')))));
+});
+/* harmony default export */ var table_Basic = (Basic);
 // CONCATENATED MODULE: ./src/routes/packages/table/BasicContainer.jsx
 
 

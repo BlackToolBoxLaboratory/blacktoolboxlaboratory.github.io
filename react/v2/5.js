@@ -203,7 +203,7 @@ var packageObj = {
 
 /***/ }),
 
-/***/ 50:
+/***/ 52:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -216,7 +216,7 @@ function c(t){return(c="function"==typeof Symbol&&"symbol"==typeof Symbol.iterat
 
 /***/ }),
 
-/***/ 51:
+/***/ 53:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -251,8 +251,14 @@ __webpack_require__.r(__webpack_exports__);
 var react = __webpack_require__(0);
 var react_default = /*#__PURE__*/__webpack_require__.n(react);
 
+// EXTERNAL MODULE: ./node_modules/react-redux/es/index.js + 22 modules
+var es = __webpack_require__(31);
+
+// EXTERNAL MODULE: ./node_modules/recompose/dist/Recompose.esm.js + 1 modules
+var Recompose_esm = __webpack_require__(51);
+
 // EXTERNAL MODULE: ./node_modules/@blacktoolbox/react-table/esm/index.js
-var esm = __webpack_require__(50);
+var esm = __webpack_require__(52);
 
 // EXTERNAL MODULE: ./src/modules/pageLayout/index.js + 5 modules
 var pageLayout = __webpack_require__(46);
@@ -261,14 +267,12 @@ var pageLayout = __webpack_require__(46);
 var functions = __webpack_require__(47);
 
 // EXTERNAL MODULE: ./src/components/packages/table/packageInfo.js
-var packageInfo = __webpack_require__(51);
+var packageInfo = __webpack_require__(53);
+
+// EXTERNAL MODULE: ./src/plugins/btblab-prototype-languages.js + 2 modules
+var btblab_prototype_languages = __webpack_require__(50);
 
 // CONCATENATED MODULE: ./src/components/packages/table/ExampleCompare.jsx
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
 
@@ -276,11 +280,12 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
-var pageInfo = _objectSpread(_objectSpread({}, packageInfo["a" /* default */]), {}, {
-  'title': 'Example - Compare',
-  'description': 'Here has very simple example to show how to use the compare mode.'
-});
 
+var enhance = Object(Recompose_esm["a" /* compose */])(Object(es["b" /* connect */])(function (state) {
+  return {
+    'languageSetting': state.language.languageSetting
+  };
+}));
 var preRender = "<BTBTable \n        mode=\"compare\" \n        headData={headData} \n        bodyData={bodyData}/>";
 var preHeadData = "const headDate = [\n  {name : 'Name', id : 'name' },\n  {name : 'Type', id : 'devType' },\n  {name : 'OS', id : 'osType' },\n  {name : 'IP', id : 'ipAddr' },\n  {name : 'MAC', id : 'macAddr' },\n  {name : 'Traffic(tx / rx)', id : 'traffic' },\n  {name : 'Statue', id : 'statusDesc'}\n];";
 var preBodyData = "const bodyData = [\n  {\n    name : 'Device 1',  \n    devType : 'phone',   \n    osType : 'ios',      \n    ipAddr : '192.168.0.50',   \n    macAddr : 'B4:A2:07:44:55:2A', \n    traffic : '1.7 MB / 45 KB', \n    status : 0, \n    statusDesc : 'Disconnected'\n  },\n  {\n    name : 'Device 2',  \n    devType : 'notebook',   \n    osType : 'windows',      \n    ipAddr : '192.168.0.52',   \n    macAddr : 'B4:A2:07:44:DD:FF', \n    traffic : '4.8 MB / 27 KB', \n    status : 0, \n    statusDesc : 'Disconnected'\n  }\n];";
@@ -325,30 +330,27 @@ var tableBodyArr_data = [{
   status: 0,
   statusDesc: 'Disconnected'
 }];
-
-var ExampleCompare_ExampleMode = function ExampleMode() {
+var ExampleCompare = enhance(function () {
   return /*#__PURE__*/react_default.a.createElement(pageLayout["c" /* Page */], {
     className: "btb-pkg-table-example-compare"
   }, /*#__PURE__*/react_default.a.createElement(pageLayout["d" /* PageHead */], {
-    title: pageInfo.title,
+    title: btblab_prototype_languages["a" /* lang */].translate('package.table.example.compare.title'),
     clickBtn: functions["a" /* openLink */],
-    linkList: pageInfo.linkList
+    linkList: packageInfo["a" /* default */].linkList
   }), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
-    head: /*#__PURE__*/react_default.a.createElement(react_default.a.Fragment, null, "Version: ".concat(pageInfo.version), /*#__PURE__*/react_default.a.createElement("br", null), "Release Date: ".concat(pageInfo.updated))
-  }, /*#__PURE__*/react_default.a.createElement("p", null, pageInfo.description)), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
-    head: "EXAMPLE"
+    head: /*#__PURE__*/react_default.a.createElement(react_default.a.Fragment, null, "".concat(btblab_prototype_languages["a" /* lang */].translate('package.version_colon')).concat(packageInfo["a" /* default */].version), /*#__PURE__*/react_default.a.createElement("br", null), "".concat(btblab_prototype_languages["a" /* lang */].translate('package.release_colon')).concat(packageInfo["a" /* default */].updated))
+  }, /*#__PURE__*/react_default.a.createElement("p", null, btblab_prototype_languages["a" /* lang */].translate('package.table.example.compare.description'))), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
+    head: btblab_prototype_languages["a" /* lang */].translate('package.section.example')
   }, /*#__PURE__*/react_default.a.createElement(esm["a" /* default */], {
     className: "table_sample",
     mode: "compare",
     headData: tableHeadArr_property,
     bodyData: tableBodyArr_data
   })), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
-    head: "SOURCECODE"
-  }, /*#__PURE__*/react_default.a.createElement(pageLayout["a" /* Block */], {
-    title: "render"
+    head: btblab_prototype_languages["a" /* lang */].translate('package.section.sourceCode')
   }, /*#__PURE__*/react_default.a.createElement("pre", {
     className: "page_pre"
-  }, preRender)), /*#__PURE__*/react_default.a.createElement(pageLayout["a" /* Block */], {
+  }, preRender), /*#__PURE__*/react_default.a.createElement(pageLayout["a" /* Block */], {
     title: "headData"
   }, /*#__PURE__*/react_default.a.createElement("pre", {
     className: "page_pre"
@@ -357,15 +359,14 @@ var ExampleCompare_ExampleMode = function ExampleMode() {
   }, /*#__PURE__*/react_default.a.createElement("pre", {
     className: "page_pre"
   }, preBodyData))));
-};
-
-/* harmony default export */ var ExampleCompare = (ExampleCompare_ExampleMode);
+});
+/* harmony default export */ var table_ExampleCompare = (ExampleCompare);
 // CONCATENATED MODULE: ./src/routes/packages/table/ExampleCompareContainer.jsx
 
 
 
 var ExampleCompareContainer_ExampleCompareContainer = function ExampleCompareContainer() {
-  return /*#__PURE__*/react_default.a.createElement(ExampleCompare, null);
+  return /*#__PURE__*/react_default.a.createElement(table_ExampleCompare, null);
 };
 
 /* harmony default export */ var table_ExampleCompareContainer = __webpack_exports__["default"] = (ExampleCompareContainer_ExampleCompareContainer);

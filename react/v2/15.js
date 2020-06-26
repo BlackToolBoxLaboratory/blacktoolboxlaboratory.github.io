@@ -211,13 +211,13 @@ var react_router = __webpack_require__(2);
 var index_es = __webpack_require__(36);
 
 // EXTERNAL MODULE: ./node_modules/recompose/dist/Recompose.esm.js + 1 modules
-var Recompose_esm = __webpack_require__(55);
+var Recompose_esm = __webpack_require__(51);
 
 // EXTERNAL MODULE: ./src/modules/pageLayout/index.js + 5 modules
 var pageLayout = __webpack_require__(46);
 
 // EXTERNAL MODULE: ./src/plugins/btblab-prototype-languages.js + 2 modules
-var btblab_prototype_languages = __webpack_require__(54);
+var btblab_prototype_languages = __webpack_require__(50);
 
 // CONCATENATED MODULE: ./src/components/about/package.jsx
 
