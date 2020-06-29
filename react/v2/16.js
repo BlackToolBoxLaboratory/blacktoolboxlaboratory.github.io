@@ -169,21 +169,42 @@ __webpack_require__.r(__webpack_exports__);
 var react = __webpack_require__(0);
 var react_default = /*#__PURE__*/__webpack_require__.n(react);
 
+// EXTERNAL MODULE: ./node_modules/react-redux/es/index.js + 22 modules
+var es = __webpack_require__(31);
+
+// EXTERNAL MODULE: ./node_modules/recompose/dist/Recompose.esm.js + 1 modules
+var Recompose_esm = __webpack_require__(51);
+
+// EXTERNAL MODULE: ./node_modules/@fortawesome/react-fontawesome/index.es.js
+var index_es = __webpack_require__(36);
+
 // EXTERNAL MODULE: ./src/modules/pageLayout/index.js + 5 modules
 var pageLayout = __webpack_require__(46);
 
 // EXTERNAL MODULE: ./src/utils/functions.js
 var functions = __webpack_require__(47);
 
+// EXTERNAL MODULE: ./src/plugins/btblab-prototype-languages.js + 2 modules
+var btblab_prototype_languages = __webpack_require__(50);
+
 // CONCATENATED MODULE: ./src/components/applications/Languages.jsx
 
 
 
+
+
+
+
+var enhance = Object(Recompose_esm["a" /* compose */])(Object(es["b" /* connect */])(function (state) {
+  return {
+    'languageSetting': state.language.languageSetting
+  };
+}));
 var packageInfo = {
   'version': '1.1.1',
-  'updated': 'Jan. 20, 2020',
-  'description': 'For developing the web-side of international services, we usually have the requirement to develop with the feature of multiple-languages supported. We already have a lot of masterpice such like i18n. But here we created our own multiple-languages package for lowing down the dependencies. And after adding a little code, we can apply it with other javascript frameworks like React, Vue ... and so on.',
-  'btnList': [{
+  'updated': '2020-06-20',
+  'description': 'application.languages.description',
+  'linkList': [{
     'id': 'github',
     'fa': ['fab', 'github'],
     'url': 'https://github.com/BlackToolBoxLaboratory/prototype-languages'
@@ -193,18 +214,46 @@ var packageInfo = {
     'url': 'https://www.npmjs.com/package/@blacktoolbox/prototype-languages'
   }]
 };
-
-var Languages_Languages = function Languages() {
+var preInstall = "$ npm install --save @blacktoolbox/prototype-languages";
+var preInitializaer = "import { initializer } from '@blacktoolbox/prototype-languages';\n\nimport en from '@src/assets/languages/en.js';\nimport zh from '@src/assets/languages/zh.js';\n\ninitializer([\n        { index : 'en', label : 'Eglish', dictionary : en },\n        { index : 'zh', label : '\u7E41\u9AD4\u4E2D\u6587', dictionary : zh }\n]);";
+var preImplement = "import Language from '@blacktoolbox/prototype-languages';\n\nconst lang = new Language()";
+var Languages = enhance(function () {
   return /*#__PURE__*/react_default.a.createElement(pageLayout["c" /* Page */], {
     className: "btb-app-languages"
   }, /*#__PURE__*/react_default.a.createElement(pageLayout["d" /* PageHead */], {
-    title: 'Languages Application',
+    title: btblab_prototype_languages["a" /* lang */].translate('application.languages.name'),
     clickBtn: functions["a" /* openLink */],
-    btnList: packageInfo.btnList
-  }));
-};
-
-/* harmony default export */ var applications_Languages = (Languages_Languages);
+    linkList: packageInfo.linkList
+  }), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
+    head: /*#__PURE__*/react_default.a.createElement(react_default.a.Fragment, null, "".concat(btblab_prototype_languages["a" /* lang */].translate('package.version_colon')).concat(packageInfo.version), /*#__PURE__*/react_default.a.createElement("br", null), "".concat(btblab_prototype_languages["a" /* lang */].translate('package.release_colon')).concat(packageInfo.updated))
+  }, /*#__PURE__*/react_default.a.createElement("p", null, btblab_prototype_languages["a" /* lang */].translate(packageInfo.description))), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
+    head: btblab_prototype_languages["a" /* lang */].translate('application.section.installation')
+  }, /*#__PURE__*/react_default.a.createElement("p", null, btblab_prototype_languages["a" /* lang */].translate('application.languages.installation.description'), /*#__PURE__*/react_default.a.createElement("a", {
+    className: "inline-link",
+    href: "https://blacktoolboxlaboratory.github.io/javascript/#/packages/languages",
+    target: "_blank"
+  }, /*#__PURE__*/react_default.a.createElement(index_es["FontAwesomeIcon"], {
+    icon: ['fas', 'external-link-alt'],
+    fixedWidth: true
+  }), /*#__PURE__*/react_default.a.createElement("span", null, btblab_prototype_languages["a" /* lang */].translate('application.languages.installation.linkName')))), /*#__PURE__*/react_default.a.createElement("pre", {
+    className: "page_pre"
+  }, preInstall)), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
+    head: btblab_prototype_languages["a" /* lang */].translate('application.section.initializer')
+  }, /*#__PURE__*/react_default.a.createElement("p", null, btblab_prototype_languages["a" /* lang */].translate('application.languages.initializer')), /*#__PURE__*/react_default.a.createElement("pre", {
+    className: "page_pre"
+  }, preInitializaer)), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
+    head: btblab_prototype_languages["a" /* lang */].translate('application.section.impletement')
+  }, /*#__PURE__*/react_default.a.createElement("p", null, btblab_prototype_languages["a" /* lang */].translate('application.languages.impletement')), /*#__PURE__*/react_default.a.createElement("pre", {
+    className: "page_pre"
+  }, preImplement)), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
+    head: btblab_prototype_languages["a" /* lang */].translate('application.section.trigger')
+  }, /*#__PURE__*/react_default.a.createElement("p", null, btblab_prototype_languages["a" /* lang */].translate('application.languages.trigger.description')), /*#__PURE__*/react_default.a.createElement(pageLayout["a" /* Block */], {
+    title: "Distpatch"
+  }, /*#__PURE__*/react_default.a.createElement("p", null, btblab_prototype_languages["a" /* lang */].translate('application.languages.trigger.dispatch'))), /*#__PURE__*/react_default.a.createElement(pageLayout["a" /* Block */], {
+    title: "Key"
+  }, /*#__PURE__*/react_default.a.createElement("p", null, btblab_prototype_languages["a" /* lang */].translate('application.languages.trigger.key')))));
+});
+/* harmony default export */ var applications_Languages = (Languages);
 // CONCATENATED MODULE: ./src/routes/applications/LanguagesContainer.jsx
 
 
