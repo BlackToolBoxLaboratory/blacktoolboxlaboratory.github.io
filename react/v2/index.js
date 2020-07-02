@@ -5796,6 +5796,8 @@ var routeMap = {
   'PACKAGES_TABLE_EXAMPLE_SLOT': '/packages/table/example/slot',
   'PACKAGES_POPOVER': '/packages/popover',
   'PACKAGES_POPOVER_BASIC': '/packages/popover/basic',
+  'PACKAGES_POPOVER_EXAMPLE_POSITION': '/packages/popover/example/position',
+  'PACKAGES_POPOVER_EXAMPLE_ALIGN': '/packages/popover/example/align',
   'APPLICATIONS': '/applications',
   'APPLICATIONS_LANGUAGES': '/applications/languages',
   'APPLICATIONS_VALIDATOR': '/applications/validator'
@@ -19004,7 +19006,7 @@ var src_App = function App() {
   })), /*#__PURE__*/react_default.a.createElement(react_router["d" /* Route */], {
     path: routeMap["a" /* default */].HOME,
     component: /*#__PURE__*/react_default.a.lazy(function () {
-      return Promise.all(/* import() */[__webpack_require__.e(2), __webpack_require__.e(18)]).then(__webpack_require__.bind(null, 79));
+      return Promise.all(/* import() */[__webpack_require__.e(2), __webpack_require__.e(20)]).then(__webpack_require__.bind(null, 82));
     })
   }))))));
 };

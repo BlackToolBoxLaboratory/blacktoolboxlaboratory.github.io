@@ -27,7 +27,7 @@ var Page_Page = function Page(props) {
 
 /* harmony default export */ var pageLayout_Page = (Page_Page);
 // EXTERNAL MODULE: ./node_modules/classnames/index.js
-var classnames = __webpack_require__(48);
+var classnames = __webpack_require__(49);
 var classnames_default = /*#__PURE__*/__webpack_require__.n(classnames);
 
 // EXTERNAL MODULE: ./node_modules/@fortawesome/react-fontawesome/index.es.js
@@ -158,7 +158,7 @@ var openLink = function openLink(link) {
 
 /***/ }),
 
-/***/ 49:
+/***/ 48:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -191,8 +191,8 @@ var packageObj = {
     name: 'package.popover.name',
     routename: _routeMap__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].PACKAGES_POPOVER_BASIC,
     description: 'package.popover.description.basic',
-    version: '1.1.1',
-    updated: '2020-06-22',
+    version: '1.2.0',
+    updated: '2020-06-30',
     link: {
       github: 'https://github.com/BlackToolBoxLaboratory/react-popover',
       npm: 'https://www.npmjs.com/package/@blacktoolbox/react-popover'
@@ -209,14 +209,38 @@ var packageObj = {
 "use strict";
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(0);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(48);
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(49);
 /* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_1__);
 function c(t){return(c="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(t){return typeof t}:function(t){return t&&"function"==typeof Symbol&&t.constructor===Symbol&&t!==Symbol.prototype?"symbol":typeof t})(t)}var n=function(t,e){var a;return e.forEach((function(e){a=Object.assign({},a,o(t,e))})),a},o=function(t,e){var a={};return"object"===c(t)&&Object.keys(t).find((function(c){if(c===e)return a=Object.assign({},t[c]),!0})),a},l=react__WEBPACK_IMPORTED_MODULE_0___default.a.createContext(),r=react__WEBPACK_IMPORTED_MODULE_0___default.a.createContext(),s=function(){var c=Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(l);return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("thead",{className:"list_head",style:n(c.styleObj,["list_head"])},c.headData.length?react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr",{className:"head_tr",style:n(c.styleObj,["head_tr"])},c.headData.map((function(e){return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th",{className:classnames__WEBPACK_IMPORTED_MODULE_1___default()("tr_th","th-".concat(e.id)),key:e.id,style:n(c.styleObj,["tr_th","th-".concat(e.id)])},c.slotObj["th-".concat(e.id)]?"function"==typeof c.slotObj["th-".concat(e.id)]?c.slotObj["th-".concat(e.id)](e):c.slotObj["th-".concat(e.id)]:e.name)}))):[])},d=function(){var c=Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(l);return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody",{className:"list_body",style:n(c.styleObj,["list_body"])},c.bodyData.map((function(e,o){return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr",{className:classnames__WEBPACK_IMPORTED_MODULE_1___default()("body_tr","tr-".concat(o)),style:n(c.styleObj,["body_tr","tr-".concat(o)]),key:o},c.headData.map((function(o){return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td",{className:classnames__WEBPACK_IMPORTED_MODULE_1___default()("tr_td","td-".concat(o.id)),style:n(c.styleObj,["tr_td","td-".concat(o.id)]),key:o.id},c.slotObj["td-".concat(o.id)]?"function"==typeof c.slotObj["td-".concat(o.id)]?c.slotObj["td-".concat(o.id)](e,o):c.slotObj["td-".concat(o.id)]:e[o.id])})))})))},i=function(){var a=Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(l);return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table",{className:"table_list",style:n(a.styleObj,["table_list"])},react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(s,null),react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(d,null))},b=function(){var c=Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(l);return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment,null,c.bodyData.map((function(e,o){return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table",{className:classnames__WEBPACK_IMPORTED_MODULE_1___default()("table_info","info-".concat(o)),style:n(c.styleObj,["table_info","info-".concat(o)]),key:"".concat(e.id,"_").concat(o)},react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody",{className:"info_body",style:n(c.styleObj,["info_body"])},c.headData.map((function(o){return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr",{className:classnames__WEBPACK_IMPORTED_MODULE_1___default()("body_tr","tr-".concat(o.id)),style:n(c.styleObj,["body_tr","tr-".concat(o.id)]),key:o.id},react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th",{className:classnames__WEBPACK_IMPORTED_MODULE_1___default()("tr_th","th-".concat(o.id)),style:n(c.styleObj,["tr_th","th-".concat(o.id)])},c.slotObj["th-".concat(o.id)]?"function"==typeof c.slotObj["th-".concat(o.id)]?c.slotObj["th-".concat(o.id)](o):c.slotObj["th-".concat(o.id)]:o.name),react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td",{className:classnames__WEBPACK_IMPORTED_MODULE_1___default()("tr_td","td-".concat(o.id)),style:n(c.styleObj,["tr_td","td-".concat(o.id)])},c.slotObj["td-".concat(o.id)]?"function"==typeof c.slotObj["td-".concat(o.id)]?c.slotObj["td-".concat(o.id)](e,o):c.slotObj["td-".concat(o.id)]:e[o.id]))}))))})))},y=function(){var c=Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(l);return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table",{className:"table_compare",style:n(c.styleObj,["table_compare"])},react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody",{className:"compare_body",style:n(c.styleObj,["compare_body"])},c.headData.map((function(e){return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr",{className:classnames__WEBPACK_IMPORTED_MODULE_1___default()("body_tr","tr-".concat(e.id)),style:n(c.styleObj,["body_tr","tr-".concat(e.id)]),key:e.id},react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th",{className:classnames__WEBPACK_IMPORTED_MODULE_1___default()("tr_th","th-".concat(e.id)),style:n(c.styleObj,["tr_th","th-".concat(e.id)])},c.slotObj["th-".concat(e.id)]?"function"==typeof c.slotObj["th-".concat(e.id)]?c.slotObj["th-".concat(e.id)](e):c.slotObj["th-".concat(e.id)]:e.name),c.bodyData.map((function(o,l){return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td",{className:classnames__WEBPACK_IMPORTED_MODULE_1___default()("tr_td","td-".concat(e.id),"td-".concat(l)),style:n(c.styleObj,["tr_td","td-".concat(e.id),"td-".concat(l)]),key:"".concat(o.id,"_").concat(l)},c.slotObj["td-".concat(e.id)]?"function"==typeof c.slotObj["td-".concat(e.id)]?c.slotObj["td-".concat(e.id)](o,e):c.slotObj["td-".concat(e.id)]:o[e.id])})))}))))},m=react__WEBPACK_IMPORTED_MODULE_0___default.a.forwardRef((function(e,c){var o,s,d={headData:e.headData||[],bodyData:e.bodyData||[],styleObj:(o=e.styleObj||{},s={},Object.keys(o).forEach((function(t){s[t]={},Object.keys(o[t]).forEach((function(e){var a=e.replace(/-(\w)/g,(function(t,e){return e.toUpperCase()}));s[t][a]=o[t][e]}))})),s),slotObj:e.slotObj||{}},m={clickData:function(t){e.onDataClick&&e.onDataClick(t)}};return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(l.Provider,{value:d},react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(r.Provider,{value:m},react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div",{ref:c,className:classnames__WEBPACK_IMPORTED_MODULE_1___default()("btb-react-table",e.className),style:n(d.styleObj,["btb-react-table"])},function(){switch(e.mode){case"info":return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(b,null);case"compare":return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(y,null);case"list":default:return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(i,null)}}())))}));/* harmony default export */ __webpack_exports__["a"] = (m);
 
 
 /***/ }),
 
-/***/ 62:
+/***/ 54:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(48);
+
+var packageInfo = {
+  'version': _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].table.version,
+  'updated': _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].table.updated,
+  'description': _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].table.description,
+  'linkList': [{
+    'id': 'github',
+    'fa': ['fab', 'github'],
+    'url': _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].table.link.github
+  }, {
+    'id': 'npm',
+    'fa': ['fab', 'npm'],
+    'url': _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].table.link.npm
+  }]
+};
+/* harmony default export */ __webpack_exports__["a"] = (packageInfo);
+
+/***/ }),
+
+/***/ 75:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -233,11 +257,8 @@ var es = __webpack_require__(31);
 // EXTERNAL MODULE: ./node_modules/recompose/dist/Recompose.esm.js + 1 modules
 var Recompose_esm = __webpack_require__(51);
 
-// EXTERNAL MODULE: ./node_modules/@blacktoolbox/react-list/esm/index.js
-var esm = __webpack_require__(54);
-
 // EXTERNAL MODULE: ./node_modules/@blacktoolbox/react-table/esm/index.js
-var react_table_esm = __webpack_require__(52);
+var esm = __webpack_require__(52);
 
 // EXTERNAL MODULE: ./src/modules/pageLayout/index.js + 5 modules
 var pageLayout = __webpack_require__(46);
@@ -245,31 +266,13 @@ var pageLayout = __webpack_require__(46);
 // EXTERNAL MODULE: ./src/utils/functions.js
 var functions = __webpack_require__(47);
 
-// EXTERNAL MODULE: ./src/assets/definitions/packageObj.js
-var packageObj = __webpack_require__(49);
+// EXTERNAL MODULE: ./src/components/packages/table/packageInfo.js
+var packageInfo = __webpack_require__(54);
 
-// CONCATENATED MODULE: ./src/components/packages/popover/packageInfo.js
-
-var packageInfo = {
-  'version': packageObj["a" /* default */].popover.version,
-  'updated': packageObj["a" /* default */].popover.updated,
-  'description': packageObj["a" /* default */].popover.description,
-  'linkList': [{
-    'id': 'github',
-    'fa': ['fab', 'github'],
-    'url': packageObj["a" /* default */].popover.link.github
-  }, {
-    'id': 'npm',
-    'fa': ['fab', 'npm'],
-    'url': packageObj["a" /* default */].popover.link.npm
-  }]
-};
-/* harmony default export */ var popover_packageInfo = (packageInfo);
 // EXTERNAL MODULE: ./src/plugins/btblab-prototype-languages.js + 2 modules
 var btblab_prototype_languages = __webpack_require__(50);
 
-// CONCATENATED MODULE: ./src/components/packages/popover/Basic.jsx
-
+// CONCATENATED MODULE: ./src/components/packages/table/ExampleStyle.jsx
 
 
 
@@ -283,159 +286,113 @@ var enhance = Object(Recompose_esm["a" /* compose */])(Object(es["b" /* connect 
     'languageSetting': state.language.languageSetting
   };
 }));
-var preInstall = "$ npm install --save @blacktoolbox/reat-popover\n\nimport BTBPopover from '@blacktoolbox/reat-popover'\nimport '@blacktoolbox/react-popover/lib/index.css'";
-var preRender = "<BTBPopover\n        showState=\" Boolean \" \n        showPosition=\" String \"\n        showAlign=\" String \"\n        stateLock=\" Boolean \"\n        withArrow=\" Boolean \"\n        autoDetect=\" Boolean \"\n        trigger=\" String || Node \"\n        styleObj=\" Object \"\n        onToggle=\" function(){} \"\n        onShow=\" function(){} \"\n        onHide=\" function(){} \"/>\n        {popover content}\n</BTBPopover>";
-var preStyleObj = "styleObj = {\n        [ className ]: { inline CSS }\n}";
-var nodeTree = [{
-  id: 'popover',
-  title: '<div> .btb-react-popover .popover-align-{begin ||center || end} .popover-arrow',
-  children: [{
-    id: 'trigger',
-    title: '<div> .popover_trigger'
-  }, {
-    id: 'content',
-    title: '<div> .popover_content .content-show .content-position-{top || bottom || left || right}'
-  }]
-}];
+var preRender = "<BTBTable \n        mode=\"compare\" \n        headData={headData} \n        bodyData={bodyData}\n        styleObj={styleObj}/>";
+var preHeadData = "const headDate = [\n  {name : 'Name', id : 'name' },\n  {name : 'Type', id : 'devType' },\n  {name : 'OS', id : 'osType' },\n  {name : 'IP', id : 'ipAddr' },\n  {name : 'MAC', id : 'macAddr' },\n  {name : 'Traffic(tx / rx)', id : 'traffic' },\n  {name : 'Statue', id : 'statusDesc'}\n];";
+var preBodyData = "const bodyData = [\n  {\n    name : 'Device 1',  \n    devType : 'phone',   \n    osType : 'ios',      \n    ipAddr : '192.168.0.50',   \n    macAddr : 'B4:A2:07:44:55:2A', \n    traffic : '1.7 MB / 45 KB', \n    status : 0, \n    statusDesc : 'Disconnected'\n  },\n  {\n    name : 'Device 2',  \n    devType : 'notebook',   \n    osType : 'windows',      \n    ipAddr : '192.168.0.52',   \n    macAddr : 'B4:A2:07:44:DD:FF', \n    traffic : '4.8 MB / 27 KB', \n    status : 0, \n    statusDesc : 'Disconnected'\n  }\n];";
+var preStyleObj = "const styleObj = {\n  'table_compare' : {\n    'box-shadow' : '0 15px 30px -10px rgba(92, 101, 107, 0.15)',\n    'background-color' : '#ffffff'\n  },\n  'tr_th' : {\n    'padding' : '0.25rem 0.5rem',\n    'width' : '100px',\n    'background-color' : '#BAE0E7'\n  },\n  'tr_td' : {\n    'padding' : '0.25rem 0.5rem',\n    'width' : '100px',\n    'text-align' : 'center',\n    'border-left' : '2px solid #BAE0E7'\n  }\n};";
 var tableHeadArr_property = [{
-  name: 'Property Name',
-  id: 'title'
+  name: 'Name',
+  id: 'name'
 }, {
   name: 'Type',
-  id: 'type'
+  id: 'devType'
 }, {
-  name: 'Default',
-  id: 'default'
+  name: 'OS',
+  id: 'osType'
 }, {
-  name: 'Notice',
-  id: 'notice'
+  name: 'IP',
+  id: 'ipAddr'
+}, {
+  name: 'MAC',
+  id: 'macAddr'
+}, {
+  name: 'Traffic(tx / rx)',
+  id: 'traffic'
+}, {
+  name: 'Statue',
+  id: 'statusDesc'
 }];
-var tableBodyArr_basic = [{
-  title: 'showState',
-  type: 'package.paramType.boolean',
-  default: 'false',
-  notice: 'package.popover.property.showState'
+var tableBodyArr_data = [{
+  name: 'Device 1',
+  devType: 'phone',
+  osType: 'ios',
+  ipAddr: '192.168.0.50',
+  macAddr: 'B4:A2:07:44:55:2A',
+  traffic: '1.7 MB / 45 KB',
+  status: 0,
+  statusDesc: 'Disconnected'
 }, {
-  title: 'showPosition',
-  type: 'package.paramType.string',
-  default: '"bottom"',
-  notice: 'package.popover.property.showPosition'
-}, {
-  title: 'showAlign',
-  type: 'package.paramType.string',
-  default: '"begin"',
-  notice: 'package.popover.property.showAlign'
-}, {
-  title: 'stateLock',
-  type: 'package.paramType.boolean',
-  default: 'true',
-  notice: 'package.popover.property.stateLock'
-}, {
-  title: 'withArrow',
-  type: 'package.paramType.boolean',
-  default: 'true',
-  notice: 'package.popover.property.withArrow'
-}, {
-  title: 'autoDetect',
-  type: 'package.paramType.boolean',
-  default: 'true',
-  notice: 'package.popover.property.autoDetect'
-}, {
-  title: 'trigger',
-  type: 'package.paramType.string||package.paramType.node',
-  default: '"Trigger"',
-  notice: 'package.popover.property.trigger'
-}, {
-  title: 'styleObj',
-  type: 'package.paramType.object',
-  default: '{}',
-  notice: 'package.popover.property.styleObj'
-}, {
-  title: 'onToggle',
-  type: 'package.paramType.function',
-  default: 'undefined',
-  notice: 'package.popover.property.onToggle'
-}, {
-  title: 'onShow',
-  type: 'package.paramType.function',
-  default: 'undefined',
-  notice: 'package.popover.property.onShow'
-}, {
-  title: 'onHide',
-  type: 'package.paramType.function',
-  default: 'undefined',
-  notice: 'package.popover.property.onHide'
-}, {
-  title: 'ref',
-  type: 'useRef',
-  default: 'undefined',
-  notice: 'package.popover.property.ref'
+  name: 'Device 2',
+  devType: 'notebook',
+  osType: 'windows',
+  ipAddr: '192.168.0.52',
+  macAddr: 'B4:A2:07:44:DD:FF',
+  traffic: '4.8 MB / 27 KB',
+  status: 0,
+  statusDesc: 'Disconnected'
 }];
-var tableSlotObj = {
-  'td-type': function tdType(data, column) {
-    var sep = data[column.id].split('||');
-    var result = '';
-
-    if (sep.length > 0) {
-      result = sep.map(function (item) {
-        return btblab_prototype_languages["a" /* lang */].translate(item);
-      }).join(' || ');
-    } else {
-      result = data[column.id] === 'useRef' ? 'useRef' : btblab_prototype_languages["a" /* lang */].translate(data[column.id]);
-    }
-
-    return result;
+var styleObj = {
+  'table_compare': {
+    'box-shadow': '0 15px 30px -10px rgba(92, 101, 107, 0.15)',
+    'background-color': '#ffffff'
   },
-  'td-notice': function tdNotice(data, column) {
-    return btblab_prototype_languages["a" /* lang */].translate(data[column.id]);
+  'tr_th': {
+    'padding': '0.25rem 0.5rem',
+    'width': '100px',
+    'background-color': '#BAE0E7'
+  },
+  'tr_td': {
+    'padding': '0.25rem 0.5rem',
+    'width': '100px',
+    'text-align': 'center',
+    'border-left': '2px solid #BAE0E7'
   }
 };
-var Basic = enhance(function () {
+var ExampleStyle = enhance(function () {
   return /*#__PURE__*/react_default.a.createElement(pageLayout["c" /* Page */], {
-    className: "btb-pkg-popover-basic"
+    className: "btb-pkg-table-example-style"
   }, /*#__PURE__*/react_default.a.createElement(pageLayout["d" /* PageHead */], {
-    title: btblab_prototype_languages["a" /* lang */].translate('package.popover.name'),
+    title: btblab_prototype_languages["a" /* lang */].translate('package.table.example.style.title'),
     clickBtn: functions["a" /* openLink */],
-    linkList: popover_packageInfo.linkList
+    linkList: packageInfo["a" /* default */].linkList
   }), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
-    head: /*#__PURE__*/react_default.a.createElement(react_default.a.Fragment, null, "".concat(btblab_prototype_languages["a" /* lang */].translate('package.version_colon')).concat(popover_packageInfo.version), /*#__PURE__*/react_default.a.createElement("br", null), "".concat(btblab_prototype_languages["a" /* lang */].translate('package.release_colon')).concat(popover_packageInfo.updated))
-  }, /*#__PURE__*/react_default.a.createElement("p", null, btblab_prototype_languages["a" /* lang */].translate(popover_packageInfo.description))), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
-    head: btblab_prototype_languages["a" /* lang */].translate('package.section.installation')
-  }, /*#__PURE__*/react_default.a.createElement("pre", {
-    className: "page_pre"
-  }, preInstall)), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
-    head: btblab_prototype_languages["a" /* lang */].translate('package.section.render')
-  }, /*#__PURE__*/react_default.a.createElement("pre", {
-    className: "page_pre"
-  }, preRender)), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
-    head: btblab_prototype_languages["a" /* lang */].translate('package.section.parameters')
-  }, /*#__PURE__*/react_default.a.createElement(react_table_esm["a" /* default */], {
-    className: "page_table",
-    mode: "list",
-    headData: tableHeadArr_property,
-    bodyData: tableBodyArr_basic,
-    slotObj: tableSlotObj
-  }), /*#__PURE__*/react_default.a.createElement(pageLayout["a" /* Block */], {
-    title: "styleObj"
-  }, /*#__PURE__*/react_default.a.createElement("p", null, btblab_prototype_languages["a" /* lang */].translate('package.popover.parameters.styleObj')), /*#__PURE__*/react_default.a.createElement("pre", {
-    className: "page_pre"
-  }, preStyleObj))), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
-    head: btblab_prototype_languages["a" /* lang */].translate('package.section.nodeTree')
+    head: /*#__PURE__*/react_default.a.createElement(react_default.a.Fragment, null, "".concat(btblab_prototype_languages["a" /* lang */].translate('package.version_colon')).concat(packageInfo["a" /* default */].version), /*#__PURE__*/react_default.a.createElement("br", null), "".concat(btblab_prototype_languages["a" /* lang */].translate('package.release_colon')).concat(packageInfo["a" /* default */].updated))
+  }, /*#__PURE__*/react_default.a.createElement("p", null, btblab_prototype_languages["a" /* lang */].translate('package.table.example.style.description'))), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
+    head: btblab_prototype_languages["a" /* lang */].translate('package.section.example')
   }, /*#__PURE__*/react_default.a.createElement(esm["a" /* default */], {
-    className: "page_node_tree",
-    dataList: nodeTree
-  })));
+    className: "table_sample",
+    mode: "compare",
+    headData: tableHeadArr_property,
+    bodyData: tableBodyArr_data,
+    styleObj: styleObj
+  })), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
+    head: btblab_prototype_languages["a" /* lang */].translate('package.section.sourceCode')
+  }, /*#__PURE__*/react_default.a.createElement("pre", {
+    className: "page_pre"
+  }, preRender), /*#__PURE__*/react_default.a.createElement(pageLayout["a" /* Block */], {
+    title: "headData"
+  }, /*#__PURE__*/react_default.a.createElement("pre", {
+    className: "page_pre"
+  }, preHeadData)), /*#__PURE__*/react_default.a.createElement(pageLayout["a" /* Block */], {
+    title: "bodyData"
+  }, /*#__PURE__*/react_default.a.createElement("pre", {
+    className: "page_pre"
+  }, preBodyData)), /*#__PURE__*/react_default.a.createElement(pageLayout["a" /* Block */], {
+    title: "styleObj"
+  }, /*#__PURE__*/react_default.a.createElement("pre", {
+    className: "page_pre"
+  }, preStyleObj))));
 });
-/* harmony default export */ var popover_Basic = (Basic);
-// CONCATENATED MODULE: ./src/routes/packages/popover/BasicContainer.jsx
+/* harmony default export */ var table_ExampleStyle = (ExampleStyle);
+// CONCATENATED MODULE: ./src/routes/packages/table/ExampleStyleContainer.jsx
 
 
 
-var BasicContainer_BasicContaier = function BasicContaier() {
-  return /*#__PURE__*/react_default.a.createElement(popover_Basic, null);
+var ExampleStyleContainer_ExampleStyleContainer = function ExampleStyleContainer() {
+  return /*#__PURE__*/react_default.a.createElement(table_ExampleStyle, null);
 };
 
-/* harmony default export */ var BasicContainer = __webpack_exports__["default"] = (BasicContainer_BasicContaier);
+/* harmony default export */ var table_ExampleStyleContainer = __webpack_exports__["default"] = (ExampleStyleContainer_ExampleStyleContainer);
 
 /***/ })
 

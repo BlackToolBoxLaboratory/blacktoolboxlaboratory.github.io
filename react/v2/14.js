@@ -27,7 +27,7 @@ var Page_Page = function Page(props) {
 
 /* harmony default export */ var pageLayout_Page = (Page_Page);
 // EXTERNAL MODULE: ./node_modules/classnames/index.js
-var classnames = __webpack_require__(48);
+var classnames = __webpack_require__(49);
 var classnames_default = /*#__PURE__*/__webpack_require__.n(classnames);
 
 // EXTERNAL MODULE: ./node_modules/@fortawesome/react-fontawesome/index.es.js
@@ -158,7 +158,7 @@ var openLink = function openLink(link) {
 
 /***/ }),
 
-/***/ 49:
+/***/ 48:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -191,8 +191,8 @@ var packageObj = {
     name: 'package.popover.name',
     routename: _routeMap__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].PACKAGES_POPOVER_BASIC,
     description: 'package.popover.description.basic',
-    version: '1.1.1',
-    updated: '2020-06-22',
+    version: '1.2.0',
+    updated: '2020-06-30',
     link: {
       github: 'https://github.com/BlackToolBoxLaboratory/react-popover',
       npm: 'https://www.npmjs.com/package/@blacktoolbox/react-popover'
@@ -207,7 +207,7 @@ var packageObj = {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(49);
+/* harmony import */ var _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(48);
 
 var packageInfo = {
   'version': _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].list.version,
@@ -245,7 +245,7 @@ var es = __webpack_require__(31);
 var Recompose_esm = __webpack_require__(51);
 
 // EXTERNAL MODULE: ./node_modules/@blacktoolbox/react-list/esm/index.js
-var esm = __webpack_require__(54);
+var esm = __webpack_require__(53);
 
 // EXTERNAL MODULE: ./src/modules/pageLayout/index.js + 5 modules
 var pageLayout = __webpack_require__(46);

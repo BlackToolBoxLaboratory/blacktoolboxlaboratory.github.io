@@ -27,7 +27,7 @@ var Page_Page = function Page(props) {
 
 /* harmony default export */ var pageLayout_Page = (Page_Page);
 // EXTERNAL MODULE: ./node_modules/classnames/index.js
-var classnames = __webpack_require__(48);
+var classnames = __webpack_require__(49);
 var classnames_default = /*#__PURE__*/__webpack_require__.n(classnames);
 
 // EXTERNAL MODULE: ./node_modules/@fortawesome/react-fontawesome/index.es.js
@@ -145,20 +145,52 @@ var Divider_Divider = function Divider() {
 
 /***/ }),
 
-/***/ 47:
+/***/ 48:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return openLink; });
-var openLink = function openLink(link) {
-  window.open(link.url);
+/* harmony import */ var _routeMap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(18);
+
+var packageObj = {
+  list: {
+    name: 'package.list.name',
+    routename: _routeMap__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].PACKAGES_LIST_BASIC,
+    description: 'package.list.description.basic',
+    version: '2.2.0',
+    updated: '2020-06-21',
+    link: {
+      github: 'https://github.com/BlackToolBoxLaboratory/react-list',
+      npm: 'https://www.npmjs.com/package/@blacktoolbox/react-list'
+    }
+  },
+  table: {
+    name: 'package.table.name',
+    routename: _routeMap__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].PACKAGES_TABLE_BASIC,
+    description: 'package.table.description.basic',
+    version: '1.4.0',
+    updated: '2020-06-21',
+    link: {
+      github: 'https://github.com/BlackToolBoxLaboratory/react-table',
+      npm: 'https://www.npmjs.com/package/@blacktoolbox/react-table'
+    }
+  },
+  popover: {
+    name: 'package.popover.name',
+    routename: _routeMap__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].PACKAGES_POPOVER_BASIC,
+    description: 'package.popover.description.basic',
+    version: '1.2.0',
+    updated: '2020-06-30',
+    link: {
+      github: 'https://github.com/BlackToolBoxLaboratory/react-popover',
+      npm: 'https://www.npmjs.com/package/@blacktoolbox/react-popover'
+    }
+  }
 };
-
-
+/* harmony default export */ __webpack_exports__["a"] = (packageObj);
 
 /***/ }),
 
-/***/ 64:
+/***/ 83:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -169,51 +201,139 @@ __webpack_require__.r(__webpack_exports__);
 var react = __webpack_require__(0);
 var react_default = /*#__PURE__*/__webpack_require__.n(react);
 
+// EXTERNAL MODULE: ./node_modules/react-redux/es/index.js + 22 modules
+var es = __webpack_require__(31);
+
+// EXTERNAL MODULE: ./node_modules/react-router/esm/react-router.js
+var react_router = __webpack_require__(2);
+
+// EXTERNAL MODULE: ./node_modules/recompose/dist/Recompose.esm.js + 1 modules
+var Recompose_esm = __webpack_require__(51);
+
+// EXTERNAL MODULE: ./node_modules/@fortawesome/react-fontawesome/index.es.js
+var index_es = __webpack_require__(36);
+
 // EXTERNAL MODULE: ./src/modules/pageLayout/index.js + 5 modules
 var pageLayout = __webpack_require__(46);
 
-// EXTERNAL MODULE: ./src/utils/functions.js
-var functions = __webpack_require__(47);
+// EXTERNAL MODULE: ./src/plugins/btblab-prototype-languages.js + 2 modules
+var btblab_prototype_languages = __webpack_require__(50);
 
-// CONCATENATED MODULE: ./src/components/applications/Validator.jsx
+// CONCATENATED MODULE: ./src/components/about/package.jsx
 
 
 
-var packageInfo = {
-  'version': '1.0.0',
-  'updated': 'Jan. 20, 2020',
-  'description': 'Most form UI packages have their own validator to use for convenience. But sometimes we don\'t use only one UI packages to develop every single project. So we try to create the validator generally to adapt to every kind of form UI packages to allow us using just one type of validator coding patteren to develop with every UI packages.',
-  'btnList': [{
-    'id': 'github',
-    'fa': ['fab', 'github'],
-    'url': 'https://github.com/BlackToolBoxLaboratory/prototype-validator'
-  }, {
-    'id': 'npm',
-    'fa': ['fab', 'npm'],
-    'url': 'https://www.npmjs.com/package/@blacktoolbox/prototype-validator'
-  }]
-};
 
-var Validator_Validator = function Validator() {
+
+var enhance = Object(Recompose_esm["a" /* compose */])(Object(es["b" /* connect */])(function (state) {
+  return {
+    'languageSetting': state.language.languageSetting
+  };
+}));
+var Package = enhance(function (props) {
+  function _redirectRoute() {
+    props.redirectRoute(props.info.routename);
+  }
+
+  return /*#__PURE__*/react_default.a.createElement("div", {
+    className: ['btb-about-package grid-row', props.className].join(' ')
+  }, /*#__PURE__*/react_default.a.createElement("div", {
+    className: "grid-col-md-3"
+  }, /*#__PURE__*/react_default.a.createElement("div", {
+    className: "package_title"
+  }, btblab_prototype_languages["a" /* lang */].translate(props.info.name)), /*#__PURE__*/react_default.a.createElement(index_es["FontAwesomeIcon"], {
+    className: "package_link",
+    icon: ['fas', 'link'],
+    fixedWidth: true,
+    onClick: _redirectRoute
+  })), /*#__PURE__*/react_default.a.createElement("div", {
+    className: "grid-col-md"
+  }, /*#__PURE__*/react_default.a.createElement("div", {
+    className: "package_description"
+  }, btblab_prototype_languages["a" /* lang */].translate(props.info.description)), /*#__PURE__*/react_default.a.createElement("div", {
+    className: "package_version"
+  }, "".concat(btblab_prototype_languages["a" /* lang */].translate('package.version_colon')).concat(props.info.version)), /*#__PURE__*/react_default.a.createElement("div", {
+    className: "package_updated"
+  }, "".concat(btblab_prototype_languages["a" /* lang */].translate('package.release_colon')).concat(props.info.updated))));
+});
+/* harmony default export */ var about_package = (Package);
+// EXTERNAL MODULE: ./src/assets/definitions/packageObj.js
+var packageObj = __webpack_require__(48);
+
+// CONCATENATED MODULE: ./src/assets/images/BTB_React.png
+/* harmony default export */ var BTB_React = (__webpack_require__.p + "files/BTB_React.png");
+// CONCATENATED MODULE: ./src/components/about/About.jsx
+
+
+
+
+
+
+
+
+
+
+var About_enhance = Object(Recompose_esm["a" /* compose */])(Object(es["b" /* connect */])(function (state) {
+  return {
+    'languageSetting': state.language.languageSetting
+  };
+}), react_router["o" /* withRouter */]);
+var About = About_enhance(function (props) {
+  function _redirectRoute(routename) {
+    props.history.push(routename);
+  }
+
   return /*#__PURE__*/react_default.a.createElement(pageLayout["c" /* Page */], {
-    className: "btb-app-validator"
-  }, /*#__PURE__*/react_default.a.createElement(pageLayout["d" /* PageHead */], {
-    title: 'Validator Application',
-    clickBtn: functions["a" /* openLink */],
-    btnList: packageInfo.btnList
+    className: "btb-about"
+  }, /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
+    className: "about_title grid-row direction-column align-items-center"
+  }, /*#__PURE__*/react_default.a.createElement("img", {
+    className: "title_image",
+    src: BTB_React,
+    alt: "BTB_React"
+  }), /*#__PURE__*/react_default.a.createElement("h1", {
+    className: "title_main hidden-down-md"
+  }, "Black Tool Box Laboratory"), /*#__PURE__*/react_default.a.createElement("h1", {
+    className: "title_main hidden-up-md"
+  }, "BTB Lab."), /*#__PURE__*/react_default.a.createElement("p", {
+    className: "title_sub"
+  }, "With React")), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], null, /*#__PURE__*/react_default.a.createElement("span", null, btblab_prototype_languages["a" /* lang */].translate('about.description'))), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
+    className: "grid-row justify-content-center"
+  }, /*#__PURE__*/react_default.a.createElement("a", {
+    href: "mailto://vannoel0628@gmail.com",
+    target: "_blank"
+  }, /*#__PURE__*/react_default.a.createElement(index_es["FontAwesomeIcon"], {
+    icon: ['far', 'envelope'],
+    fixedWidth: true
+  }), /*#__PURE__*/react_default.a.createElement("span", null, "vannoel0628@gmail.com"))), /*#__PURE__*/react_default.a.createElement(pageLayout["b" /* Divider */], null), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
+    className: "grid-row justify-content-center"
+  }, /*#__PURE__*/react_default.a.createElement("span", null, btblab_prototype_languages["a" /* lang */].translate('about.donate.1')), /*#__PURE__*/react_default.a.createElement("a", {
+    href: "https://www.paypal.me/vannoel0628",
+    target: "_blank"
+  }, /*#__PURE__*/react_default.a.createElement(index_es["FontAwesomeIcon"], {
+    icon: ['fab', 'paypal'],
+    fixedWidth: true
+  }), /*#__PURE__*/react_default.a.createElement("span", null, btblab_prototype_languages["a" /* lang */].translate('about.donate.2'))), /*#__PURE__*/react_default.a.createElement("span", null, btblab_prototype_languages["a" /* lang */].translate('about.donate.3'))), /*#__PURE__*/react_default.a.createElement(pageLayout["b" /* Divider */], null), Object.keys(packageObj["a" /* default */]).map(function (entry) {
+    return /*#__PURE__*/react_default.a.createElement("div", {
+      key: entry
+    }, entry !== 'list' ? /*#__PURE__*/react_default.a.createElement(pageLayout["b" /* Divider */], null) : [], /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
+      className: "about_package"
+    }, /*#__PURE__*/react_default.a.createElement(about_package, {
+      info: packageObj["a" /* default */][entry],
+      redirectRoute: _redirectRoute
+    })));
   }));
+});
+/* harmony default export */ var about_About = (About);
+// CONCATENATED MODULE: ./src/routes/AboutContainer.jsx
+
+
+
+var AboutContainer_AboutContainer = function AboutContainer() {
+  return /*#__PURE__*/react_default.a.createElement(about_About, null);
 };
 
-/* harmony default export */ var applications_Validator = (Validator_Validator);
-// CONCATENATED MODULE: ./src/routes/applications/ValidatorContainer.jsx
-
-
-
-var ValidatorContainer_ValidatorContaier = function ValidatorContaier() {
-  return /*#__PURE__*/react_default.a.createElement(applications_Validator, null);
-};
-
-/* harmony default export */ var ValidatorContainer = __webpack_exports__["default"] = (ValidatorContainer_ValidatorContaier);
+/* harmony default export */ var routes_AboutContainer = __webpack_exports__["default"] = (AboutContainer_AboutContainer);
 
 /***/ })
 

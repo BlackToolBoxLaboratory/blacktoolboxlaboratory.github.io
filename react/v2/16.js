@@ -27,7 +27,7 @@ var Page_Page = function Page(props) {
 
 /* harmony default export */ var pageLayout_Page = (Page_Page);
 // EXTERNAL MODULE: ./node_modules/classnames/index.js
-var classnames = __webpack_require__(48);
+var classnames = __webpack_require__(49);
 var classnames_default = /*#__PURE__*/__webpack_require__.n(classnames);
 
 // EXTERNAL MODULE: ./node_modules/@fortawesome/react-fontawesome/index.es.js
@@ -158,7 +158,76 @@ var openLink = function openLink(link) {
 
 /***/ }),
 
-/***/ 63:
+/***/ 48:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var _routeMap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(18);
+
+var packageObj = {
+  list: {
+    name: 'package.list.name',
+    routename: _routeMap__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].PACKAGES_LIST_BASIC,
+    description: 'package.list.description.basic',
+    version: '2.2.0',
+    updated: '2020-06-21',
+    link: {
+      github: 'https://github.com/BlackToolBoxLaboratory/react-list',
+      npm: 'https://www.npmjs.com/package/@blacktoolbox/react-list'
+    }
+  },
+  table: {
+    name: 'package.table.name',
+    routename: _routeMap__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].PACKAGES_TABLE_BASIC,
+    description: 'package.table.description.basic',
+    version: '1.4.0',
+    updated: '2020-06-21',
+    link: {
+      github: 'https://github.com/BlackToolBoxLaboratory/react-table',
+      npm: 'https://www.npmjs.com/package/@blacktoolbox/react-table'
+    }
+  },
+  popover: {
+    name: 'package.popover.name',
+    routename: _routeMap__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].PACKAGES_POPOVER_BASIC,
+    description: 'package.popover.description.basic',
+    version: '1.2.0',
+    updated: '2020-06-30',
+    link: {
+      github: 'https://github.com/BlackToolBoxLaboratory/react-popover',
+      npm: 'https://www.npmjs.com/package/@blacktoolbox/react-popover'
+    }
+  }
+};
+/* harmony default export */ __webpack_exports__["a"] = (packageObj);
+
+/***/ }),
+
+/***/ 56:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(48);
+
+var packageInfo = {
+  'version': _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].popover.version,
+  'updated': _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].popover.updated,
+  'description': _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].popover.description,
+  'linkList': [{
+    'id': 'github',
+    'fa': ['fab', 'github'],
+    'url': _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].popover.link.github
+  }, {
+    'id': 'npm',
+    'fa': ['fab', 'npm'],
+    'url': _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].popover.link.npm
+  }]
+};
+/* harmony default export */ __webpack_exports__["a"] = (packageInfo);
+
+/***/ }),
+
+/***/ 78:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -175,8 +244,11 @@ var es = __webpack_require__(31);
 // EXTERNAL MODULE: ./node_modules/recompose/dist/Recompose.esm.js + 1 modules
 var Recompose_esm = __webpack_require__(51);
 
-// EXTERNAL MODULE: ./node_modules/@fortawesome/react-fontawesome/index.es.js
-var index_es = __webpack_require__(36);
+// EXTERNAL MODULE: ./node_modules/@blacktoolbox/react-list/esm/index.js
+var esm = __webpack_require__(53);
+
+// EXTERNAL MODULE: ./node_modules/@blacktoolbox/react-popover/esm/index.js
+var react_popover_esm = __webpack_require__(57);
 
 // EXTERNAL MODULE: ./src/modules/pageLayout/index.js + 5 modules
 var pageLayout = __webpack_require__(46);
@@ -184,10 +256,27 @@ var pageLayout = __webpack_require__(46);
 // EXTERNAL MODULE: ./src/utils/functions.js
 var functions = __webpack_require__(47);
 
+// EXTERNAL MODULE: ./src/components/packages/popover/packageInfo.js
+var packageInfo = __webpack_require__(56);
+
 // EXTERNAL MODULE: ./src/plugins/btblab-prototype-languages.js + 2 modules
 var btblab_prototype_languages = __webpack_require__(50);
 
-// CONCATENATED MODULE: ./src/components/applications/Languages.jsx
+// CONCATENATED MODULE: ./src/components/packages/popover/ExamplePosition.jsx
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
 
 
 
@@ -200,69 +289,65 @@ var enhance = Object(Recompose_esm["a" /* compose */])(Object(es["b" /* connect 
     'languageSetting': state.language.languageSetting
   };
 }));
-var packageInfo = {
-  'version': '1.1.1',
-  'updated': '2020-06-20',
-  'description': 'application.languages.description',
-  'linkList': [{
-    'id': 'github',
-    'fa': ['fab', 'github'],
-    'url': 'https://github.com/BlackToolBoxLaboratory/prototype-languages'
-  }, {
-    'id': 'npm',
-    'fa': ['fab', 'npm'],
-    'url': 'https://www.npmjs.com/package/@blacktoolbox/prototype-languages'
-  }]
-};
-var preInstall = "$ npm install --save @blacktoolbox/prototype-languages";
-var preInitializaer = "import { initializer } from '@blacktoolbox/prototype-languages';\n\nimport en from '@src/assets/languages/en.js';\nimport zh from '@src/assets/languages/zh.js';\n\ninitializer([\n        { index : 'en', label : 'Eglish', dictionary : en },\n        { index : 'zh', label : '\u7E41\u9AD4\u4E2D\u6587', dictionary : zh }\n]);";
-var preImplement = "import Language from '@blacktoolbox/prototype-languages';\n\nconst lang = new Language()";
-var Languages = enhance(function () {
+var preRender = "<BTBPopover showPosition={\"left\"} trigger={(<button>Left</button>)}>\n        Example: Left\n</BTBPopover>\n\n<BTBPopover showPosition={\"top\"} trigger={(<button>Top</button>)}>\n        Example: Top\n</BTBPopover>\n\n<BTBPopover showPosition={\"bottom\"} trigger={(<button>Bottom</button>)}>\n        Example: Bottom\n</BTBPopover>\n\n<BTBPopover showPosition={\"right\"} trigger={(<button>Right</button>)}>\n        EXample: Right\n</BTBPopover>";
+var ExamplePosition = enhance(function () {
+  var env = {
+    state_showPopover1: useActiveState(true),
+    state_showPopover2: useActiveState(true)
+  };
   return /*#__PURE__*/react_default.a.createElement(pageLayout["c" /* Page */], {
-    className: "btb-app-languages"
+    className: "btb-pkg-popover-example-position"
   }, /*#__PURE__*/react_default.a.createElement(pageLayout["d" /* PageHead */], {
-    title: btblab_prototype_languages["a" /* lang */].translate('application.languages.name'),
+    title: btblab_prototype_languages["a" /* lang */].translate('package.popover.example.position.title'),
     clickBtn: functions["a" /* openLink */],
-    linkList: packageInfo.linkList
+    linkList: packageInfo["a" /* default */].linkList
   }), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
-    head: /*#__PURE__*/react_default.a.createElement(react_default.a.Fragment, null, "".concat(btblab_prototype_languages["a" /* lang */].translate('package.version_colon')).concat(packageInfo.version), /*#__PURE__*/react_default.a.createElement("br", null), "".concat(btblab_prototype_languages["a" /* lang */].translate('package.release_colon')).concat(packageInfo.updated))
-  }, /*#__PURE__*/react_default.a.createElement("p", null, btblab_prototype_languages["a" /* lang */].translate(packageInfo.description))), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
-    head: btblab_prototype_languages["a" /* lang */].translate('application.section.installation')
-  }, /*#__PURE__*/react_default.a.createElement("p", null, btblab_prototype_languages["a" /* lang */].translate('application.languages.installation.description'), /*#__PURE__*/react_default.a.createElement("a", {
-    className: "inline-link",
-    href: "https://blacktoolboxlaboratory.github.io/javascript/#/packages/languages",
-    target: "_blank"
-  }, /*#__PURE__*/react_default.a.createElement(index_es["FontAwesomeIcon"], {
-    icon: ['fas', 'external-link-alt'],
-    fixedWidth: true
-  }), /*#__PURE__*/react_default.a.createElement("span", null, btblab_prototype_languages["a" /* lang */].translate('application.languages.installation.linkName')))), /*#__PURE__*/react_default.a.createElement("pre", {
+    head: /*#__PURE__*/react_default.a.createElement(react_default.a.Fragment, null, "".concat(btblab_prototype_languages["a" /* lang */].translate('package.version_colon')).concat(packageInfo["a" /* default */].version), /*#__PURE__*/react_default.a.createElement("br", null), "".concat(btblab_prototype_languages["a" /* lang */].translate('package.release_colon')).concat(packageInfo["a" /* default */].updated))
+  }, /*#__PURE__*/react_default.a.createElement("p", null, btblab_prototype_languages["a" /* lang */].translate('package.popover.example.position.description'))), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
+    head: btblab_prototype_languages["a" /* lang */].translate('package.section.example')
+  }, /*#__PURE__*/react_default.a.createElement(react_popover_esm["a" /* default */], {
+    showPosition: "left",
+    trigger: /*#__PURE__*/react_default.a.createElement("button", null, "Left")
+  }, "Example: Left"), /*#__PURE__*/react_default.a.createElement(react_popover_esm["a" /* default */], {
+    showPosition: "top",
+    trigger: /*#__PURE__*/react_default.a.createElement("button", null, "Top")
+  }, "Example: Top"), /*#__PURE__*/react_default.a.createElement(react_popover_esm["a" /* default */], {
+    showPosition: "bottom",
+    trigger: /*#__PURE__*/react_default.a.createElement("button", null, "Bottom")
+  }, "Example: Bottom"), /*#__PURE__*/react_default.a.createElement(react_popover_esm["a" /* default */], {
+    showPosition: "right",
+    trigger: /*#__PURE__*/react_default.a.createElement("button", null, "Right")
+  }, "EXample: Right")), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
+    head: btblab_prototype_languages["a" /* lang */].translate('package.section.sourceCode')
+  }, /*#__PURE__*/react_default.a.createElement("pre", {
     className: "page_pre"
-  }, preInstall)), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
-    head: btblab_prototype_languages["a" /* lang */].translate('application.section.initializer')
-  }, /*#__PURE__*/react_default.a.createElement("p", null, btblab_prototype_languages["a" /* lang */].translate('application.languages.initializer')), /*#__PURE__*/react_default.a.createElement("pre", {
-    className: "page_pre"
-  }, preInitializaer)), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
-    head: btblab_prototype_languages["a" /* lang */].translate('application.section.impletement')
-  }, /*#__PURE__*/react_default.a.createElement("p", null, btblab_prototype_languages["a" /* lang */].translate('application.languages.impletement')), /*#__PURE__*/react_default.a.createElement("pre", {
-    className: "page_pre"
-  }, preImplement)), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
-    head: btblab_prototype_languages["a" /* lang */].translate('application.section.trigger')
-  }, /*#__PURE__*/react_default.a.createElement("p", null, btblab_prototype_languages["a" /* lang */].translate('application.languages.trigger.description')), /*#__PURE__*/react_default.a.createElement(pageLayout["a" /* Block */], {
-    title: "Distpatch"
-  }, /*#__PURE__*/react_default.a.createElement("p", null, btblab_prototype_languages["a" /* lang */].translate('application.languages.trigger.dispatch'))), /*#__PURE__*/react_default.a.createElement(pageLayout["a" /* Block */], {
-    title: "Key"
-  }, /*#__PURE__*/react_default.a.createElement("p", null, btblab_prototype_languages["a" /* lang */].translate('application.languages.trigger.key')))));
+  }, preRender)));
 });
-/* harmony default export */ var applications_Languages = (Languages);
-// CONCATENATED MODULE: ./src/routes/applications/LanguagesContainer.jsx
+
+function useActiveState(defaultSate) {
+  var _useState = Object(react["useState"])(defaultSate),
+      _useState2 = _slicedToArray(_useState, 2),
+      value = _useState2[0],
+      setState = _useState2[1];
+
+  return {
+    showState: value,
+    onToggle: function onToggle(data) {
+      setState(data);
+    }
+  };
+}
+
+/* harmony default export */ var popover_ExamplePosition = (ExamplePosition);
+// CONCATENATED MODULE: ./src/routes/packages/popover/ExamplePositionContainer.jsx
 
 
 
-var LanguagesContainer_LanguagesContaier = function LanguagesContaier() {
-  return /*#__PURE__*/react_default.a.createElement(applications_Languages, null);
+var ExamplePositionContainer_ExamplePositionContaier = function ExamplePositionContaier() {
+  return /*#__PURE__*/react_default.a.createElement(popover_ExamplePosition, null);
 };
 
-/* harmony default export */ var LanguagesContainer = __webpack_exports__["default"] = (LanguagesContainer_LanguagesContaier);
+/* harmony default export */ var ExamplePositionContainer = __webpack_exports__["default"] = (ExamplePositionContainer_ExamplePositionContaier);
 
 /***/ })
 

@@ -27,7 +27,7 @@ var Page_Page = function Page(props) {
 
 /* harmony default export */ var pageLayout_Page = (Page_Page);
 // EXTERNAL MODULE: ./node_modules/classnames/index.js
-var classnames = __webpack_require__(48);
+var classnames = __webpack_require__(49);
 var classnames_default = /*#__PURE__*/__webpack_require__.n(classnames);
 
 // EXTERNAL MODULE: ./node_modules/@fortawesome/react-fontawesome/index.es.js
@@ -145,7 +145,20 @@ var Divider_Divider = function Divider() {
 
 /***/ }),
 
-/***/ 49:
+/***/ 47:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return openLink; });
+var openLink = function openLink(link) {
+  window.open(link.url);
+};
+
+
+
+/***/ }),
+
+/***/ 48:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -178,8 +191,8 @@ var packageObj = {
     name: 'package.popover.name',
     routename: _routeMap__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].PACKAGES_POPOVER_BASIC,
     description: 'package.popover.description.basic',
-    version: '1.1.1',
-    updated: '2020-06-22',
+    version: '1.2.0',
+    updated: '2020-06-30',
     link: {
       github: 'https://github.com/BlackToolBoxLaboratory/react-popover',
       npm: 'https://www.npmjs.com/package/@blacktoolbox/react-popover'
@@ -190,7 +203,31 @@ var packageObj = {
 
 /***/ }),
 
-/***/ 80:
+/***/ 56:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(48);
+
+var packageInfo = {
+  'version': _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].popover.version,
+  'updated': _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].popover.updated,
+  'description': _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].popover.description,
+  'linkList': [{
+    'id': 'github',
+    'fa': ['fab', 'github'],
+    'url': _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].popover.link.github
+  }, {
+    'id': 'npm',
+    'fa': ['fab', 'npm'],
+    'url': _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].popover.link.npm
+  }]
+};
+/* harmony default export */ __webpack_exports__["a"] = (packageInfo);
+
+/***/ }),
+
+/***/ 79:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -204,22 +241,44 @@ var react_default = /*#__PURE__*/__webpack_require__.n(react);
 // EXTERNAL MODULE: ./node_modules/react-redux/es/index.js + 22 modules
 var es = __webpack_require__(31);
 
-// EXTERNAL MODULE: ./node_modules/react-router/esm/react-router.js
-var react_router = __webpack_require__(2);
-
 // EXTERNAL MODULE: ./node_modules/recompose/dist/Recompose.esm.js + 1 modules
 var Recompose_esm = __webpack_require__(51);
 
-// EXTERNAL MODULE: ./node_modules/@fortawesome/react-fontawesome/index.es.js
-var index_es = __webpack_require__(36);
+// EXTERNAL MODULE: ./node_modules/@blacktoolbox/react-list/esm/index.js
+var esm = __webpack_require__(53);
+
+// EXTERNAL MODULE: ./node_modules/@blacktoolbox/react-popover/esm/index.js
+var react_popover_esm = __webpack_require__(57);
 
 // EXTERNAL MODULE: ./src/modules/pageLayout/index.js + 5 modules
 var pageLayout = __webpack_require__(46);
 
+// EXTERNAL MODULE: ./src/utils/functions.js
+var functions = __webpack_require__(47);
+
+// EXTERNAL MODULE: ./src/components/packages/popover/packageInfo.js
+var packageInfo = __webpack_require__(56);
+
 // EXTERNAL MODULE: ./src/plugins/btblab-prototype-languages.js + 2 modules
 var btblab_prototype_languages = __webpack_require__(50);
 
-// CONCATENATED MODULE: ./src/components/about/package.jsx
+// CONCATENATED MODULE: ./src/components/packages/popover/ExampleAlign.jsx
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
+
+
 
 
 
@@ -230,110 +289,62 @@ var enhance = Object(Recompose_esm["a" /* compose */])(Object(es["b" /* connect 
     'languageSetting': state.language.languageSetting
   };
 }));
-var Package = enhance(function (props) {
-  function _redirectRoute() {
-    props.redirectRoute(props.info.routename);
-  }
-
-  return /*#__PURE__*/react_default.a.createElement("div", {
-    className: ['btb-about-package grid-row', props.className].join(' ')
-  }, /*#__PURE__*/react_default.a.createElement("div", {
-    className: "grid-col-md-3"
-  }, /*#__PURE__*/react_default.a.createElement("div", {
-    className: "package_title"
-  }, btblab_prototype_languages["a" /* lang */].translate(props.info.name)), /*#__PURE__*/react_default.a.createElement(index_es["FontAwesomeIcon"], {
-    className: "package_link",
-    icon: ['fas', 'link'],
-    fixedWidth: true,
-    onClick: _redirectRoute
-  })), /*#__PURE__*/react_default.a.createElement("div", {
-    className: "grid-col-md"
-  }, /*#__PURE__*/react_default.a.createElement("div", {
-    className: "package_description"
-  }, btblab_prototype_languages["a" /* lang */].translate(props.info.description)), /*#__PURE__*/react_default.a.createElement("div", {
-    className: "package_version"
-  }, "".concat(btblab_prototype_languages["a" /* lang */].translate('package.version_colon')).concat(props.info.version)), /*#__PURE__*/react_default.a.createElement("div", {
-    className: "package_updated"
-  }, "".concat(btblab_prototype_languages["a" /* lang */].translate('package.release_colon')).concat(props.info.updated))));
-});
-/* harmony default export */ var about_package = (Package);
-// EXTERNAL MODULE: ./src/assets/definitions/packageObj.js
-var packageObj = __webpack_require__(49);
-
-// CONCATENATED MODULE: ./src/assets/images/BTB_React.png
-/* harmony default export */ var BTB_React = (__webpack_require__.p + "files/BTB_React.png");
-// CONCATENATED MODULE: ./src/components/about/About.jsx
-
-
-
-
-
-
-
-
-
-
-var About_enhance = Object(Recompose_esm["a" /* compose */])(Object(es["b" /* connect */])(function (state) {
-  return {
-    'languageSetting': state.language.languageSetting
+var preRender = "<BTBPopover showAlign={\"begin\"} trigger={(<button>Begin</button>)}>\n        Example: Begin\n</BTBPopover>\n\n<BTBPopover showAlign={\"center\"} trigger={(<button>Center</button>)}>\n        Example: Center\n</BTBPopover>\n\n<BTBPopover showAlign={\"end\"} trigger={(<button>End</button>)}>\n        Example: End\n</BTBPopover>";
+var ExampleAlign = enhance(function () {
+  var env = {
+    state_showPopover1: useActiveState(true),
+    state_showPopover2: useActiveState(true)
   };
-}), react_router["o" /* withRouter */]);
-var About = About_enhance(function (props) {
-  function _redirectRoute(routename) {
-    props.history.push(routename);
-  }
-
   return /*#__PURE__*/react_default.a.createElement(pageLayout["c" /* Page */], {
-    className: "btb-about"
-  }, /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
-    className: "about_title grid-row direction-column align-items-center"
-  }, /*#__PURE__*/react_default.a.createElement("img", {
-    className: "title_image",
-    src: BTB_React,
-    alt: "BTB_React"
-  }), /*#__PURE__*/react_default.a.createElement("h1", {
-    className: "title_main hidden-down-md"
-  }, "Black Tool Box Laboratory"), /*#__PURE__*/react_default.a.createElement("h1", {
-    className: "title_main hidden-up-md"
-  }, "BTB Lab."), /*#__PURE__*/react_default.a.createElement("p", {
-    className: "title_sub"
-  }, "With React")), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], null, /*#__PURE__*/react_default.a.createElement("span", null, btblab_prototype_languages["a" /* lang */].translate('about.description'))), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
-    className: "grid-row justify-content-center"
-  }, /*#__PURE__*/react_default.a.createElement("a", {
-    href: "mailto://vannoel0628@gmail.com",
-    target: "_blank"
-  }, /*#__PURE__*/react_default.a.createElement(index_es["FontAwesomeIcon"], {
-    icon: ['far', 'envelope'],
-    fixedWidth: true
-  }), /*#__PURE__*/react_default.a.createElement("span", null, "vannoel0628@gmail.com"))), /*#__PURE__*/react_default.a.createElement(pageLayout["b" /* Divider */], null), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
-    className: "grid-row justify-content-center"
-  }, /*#__PURE__*/react_default.a.createElement("span", null, btblab_prototype_languages["a" /* lang */].translate('about.donate.1')), /*#__PURE__*/react_default.a.createElement("a", {
-    href: "https://www.paypal.me/vannoel0628",
-    target: "_blank"
-  }, /*#__PURE__*/react_default.a.createElement(index_es["FontAwesomeIcon"], {
-    icon: ['fab', 'paypal'],
-    fixedWidth: true
-  }), /*#__PURE__*/react_default.a.createElement("span", null, btblab_prototype_languages["a" /* lang */].translate('about.donate.2'))), /*#__PURE__*/react_default.a.createElement("span", null, btblab_prototype_languages["a" /* lang */].translate('about.donate.3'))), /*#__PURE__*/react_default.a.createElement(pageLayout["b" /* Divider */], null), Object.keys(packageObj["a" /* default */]).map(function (entry) {
-    return /*#__PURE__*/react_default.a.createElement("div", {
-      key: entry
-    }, entry !== 'list' ? /*#__PURE__*/react_default.a.createElement(pageLayout["b" /* Divider */], null) : [], /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
-      className: "about_package"
-    }, /*#__PURE__*/react_default.a.createElement(about_package, {
-      info: packageObj["a" /* default */][entry],
-      redirectRoute: _redirectRoute
-    })));
-  }));
+    className: "btb-pkg-popover-example-align"
+  }, /*#__PURE__*/react_default.a.createElement(pageLayout["d" /* PageHead */], {
+    title: btblab_prototype_languages["a" /* lang */].translate('package.popover.example.align.title'),
+    clickBtn: functions["a" /* openLink */],
+    linkList: packageInfo["a" /* default */].linkList
+  }), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
+    head: /*#__PURE__*/react_default.a.createElement(react_default.a.Fragment, null, "".concat(btblab_prototype_languages["a" /* lang */].translate('package.version_colon')).concat(packageInfo["a" /* default */].version), /*#__PURE__*/react_default.a.createElement("br", null), "".concat(btblab_prototype_languages["a" /* lang */].translate('package.release_colon')).concat(packageInfo["a" /* default */].updated))
+  }, /*#__PURE__*/react_default.a.createElement("p", null, btblab_prototype_languages["a" /* lang */].translate('package.popover.example.align.description'))), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
+    head: btblab_prototype_languages["a" /* lang */].translate('package.section.example')
+  }, /*#__PURE__*/react_default.a.createElement(react_popover_esm["a" /* default */], {
+    showAlign: "begin",
+    trigger: /*#__PURE__*/react_default.a.createElement("button", null, "Begin")
+  }, "Example: Begin"), /*#__PURE__*/react_default.a.createElement(react_popover_esm["a" /* default */], {
+    showAlign: "center",
+    trigger: /*#__PURE__*/react_default.a.createElement("button", null, "Center")
+  }, "Example: Center"), /*#__PURE__*/react_default.a.createElement(react_popover_esm["a" /* default */], {
+    showAlign: "end",
+    trigger: /*#__PURE__*/react_default.a.createElement("button", null, "End")
+  }, "Example: End")), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
+    head: btblab_prototype_languages["a" /* lang */].translate('package.section.sourceCode')
+  }, /*#__PURE__*/react_default.a.createElement("pre", {
+    className: "page_pre"
+  }, preRender)));
 });
-/* harmony default export */ var about_About = (About);
-// CONCATENATED MODULE: ./src/routes/AboutContainer.jsx
+
+function useActiveState(defaultSate) {
+  var _useState = Object(react["useState"])(defaultSate),
+      _useState2 = _slicedToArray(_useState, 2),
+      value = _useState2[0],
+      setState = _useState2[1];
+
+  return {
+    showState: value,
+    onToggle: function onToggle(data) {
+      setState(data);
+    }
+  };
+}
+
+/* harmony default export */ var popover_ExampleAlign = (ExampleAlign);
+// CONCATENATED MODULE: ./src/routes/packages/popover/ExampleAlignContainer.jsx
 
 
 
-var AboutContainer_AboutContainer = function AboutContainer() {
-  return /*#__PURE__*/react_default.a.createElement(about_About, null);
+var ExampleAlignContainer_ExampleAlignContaier = function ExampleAlignContaier() {
+  return /*#__PURE__*/react_default.a.createElement(popover_ExampleAlign, null);
 };
 
-/* harmony default export */ var routes_AboutContainer = __webpack_exports__["default"] = (AboutContainer_AboutContainer);
+/* harmony default export */ var ExampleAlignContainer = __webpack_exports__["default"] = (ExampleAlignContainer_ExampleAlignContaier);
 
 /***/ })
 
