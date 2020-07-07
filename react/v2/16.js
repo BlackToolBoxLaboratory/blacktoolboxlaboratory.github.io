@@ -191,8 +191,8 @@ var packageObj = {
     name: 'package.popover.name',
     routename: _routeMap__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].PACKAGES_POPOVER_BASIC,
     description: 'package.popover.description.basic',
-    version: '1.2.0',
-    updated: '2020-06-30',
+    version: '1.2.1',
+    updated: '2020-07-07',
     link: {
       github: 'https://github.com/BlackToolBoxLaboratory/react-popover',
       npm: 'https://www.npmjs.com/package/@blacktoolbox/react-popover'
@@ -244,11 +244,8 @@ var es = __webpack_require__(31);
 // EXTERNAL MODULE: ./node_modules/recompose/dist/Recompose.esm.js + 1 modules
 var Recompose_esm = __webpack_require__(51);
 
-// EXTERNAL MODULE: ./node_modules/@blacktoolbox/react-list/esm/index.js
-var esm = __webpack_require__(53);
-
 // EXTERNAL MODULE: ./node_modules/@blacktoolbox/react-popover/esm/index.js
-var react_popover_esm = __webpack_require__(57);
+var esm = __webpack_require__(57);
 
 // EXTERNAL MODULE: ./src/modules/pageLayout/index.js + 5 modules
 var pageLayout = __webpack_require__(46);
@@ -263,19 +260,6 @@ var packageInfo = __webpack_require__(56);
 var btblab_prototype_languages = __webpack_require__(50);
 
 // CONCATENATED MODULE: ./src/components/packages/popover/ExamplePosition.jsx
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
-
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
-function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
-
 
 
 
@@ -291,10 +275,6 @@ var enhance = Object(Recompose_esm["a" /* compose */])(Object(es["b" /* connect 
 }));
 var preRender = "<BTBPopover showPosition={\"left\"} trigger={(<button>Left</button>)}>\n        Example: Left\n</BTBPopover>\n\n<BTBPopover showPosition={\"top\"} trigger={(<button>Top</button>)}>\n        Example: Top\n</BTBPopover>\n\n<BTBPopover showPosition={\"bottom\"} trigger={(<button>Bottom</button>)}>\n        Example: Bottom\n</BTBPopover>\n\n<BTBPopover showPosition={\"right\"} trigger={(<button>Right</button>)}>\n        EXample: Right\n</BTBPopover>";
 var ExamplePosition = enhance(function () {
-  var env = {
-    state_showPopover1: useActiveState(true),
-    state_showPopover2: useActiveState(true)
-  };
   return /*#__PURE__*/react_default.a.createElement(pageLayout["c" /* Page */], {
     className: "btb-pkg-popover-example-position"
   }, /*#__PURE__*/react_default.a.createElement(pageLayout["d" /* PageHead */], {
@@ -305,39 +285,36 @@ var ExamplePosition = enhance(function () {
     head: /*#__PURE__*/react_default.a.createElement(react_default.a.Fragment, null, "".concat(btblab_prototype_languages["a" /* lang */].translate('package.version_colon')).concat(packageInfo["a" /* default */].version), /*#__PURE__*/react_default.a.createElement("br", null), "".concat(btblab_prototype_languages["a" /* lang */].translate('package.release_colon')).concat(packageInfo["a" /* default */].updated))
   }, /*#__PURE__*/react_default.a.createElement("p", null, btblab_prototype_languages["a" /* lang */].translate('package.popover.example.position.description'))), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
     head: btblab_prototype_languages["a" /* lang */].translate('package.section.example')
-  }, /*#__PURE__*/react_default.a.createElement(react_popover_esm["a" /* default */], {
+  }, /*#__PURE__*/react_default.a.createElement("div", {
+    className: "align_vertical"
+  }, /*#__PURE__*/react_default.a.createElement(esm["a" /* default */], {
+    className: "align_vertical",
     showPosition: "left",
     trigger: /*#__PURE__*/react_default.a.createElement("button", null, "Left")
-  }, "Example: Left"), /*#__PURE__*/react_default.a.createElement(react_popover_esm["a" /* default */], {
+  }, "Example: Left")), /*#__PURE__*/react_default.a.createElement("div", {
+    className: "align_vertical"
+  }, /*#__PURE__*/react_default.a.createElement(esm["a" /* default */], {
+    className: "align_vertical",
     showPosition: "top",
     trigger: /*#__PURE__*/react_default.a.createElement("button", null, "Top")
-  }, "Example: Top"), /*#__PURE__*/react_default.a.createElement(react_popover_esm["a" /* default */], {
+  }, "Example: Top")), /*#__PURE__*/react_default.a.createElement("div", {
+    className: "align_vertical"
+  }, /*#__PURE__*/react_default.a.createElement(esm["a" /* default */], {
+    className: "align_vertical",
     showPosition: "bottom",
     trigger: /*#__PURE__*/react_default.a.createElement("button", null, "Bottom")
-  }, "Example: Bottom"), /*#__PURE__*/react_default.a.createElement(react_popover_esm["a" /* default */], {
+  }, "Example: Bottom")), /*#__PURE__*/react_default.a.createElement("div", {
+    className: "align_vertical"
+  }, /*#__PURE__*/react_default.a.createElement(esm["a" /* default */], {
+    className: "align_vertical",
     showPosition: "right",
     trigger: /*#__PURE__*/react_default.a.createElement("button", null, "Right")
-  }, "EXample: Right")), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
+  }, "EXample: Right"))), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
     head: btblab_prototype_languages["a" /* lang */].translate('package.section.sourceCode')
   }, /*#__PURE__*/react_default.a.createElement("pre", {
     className: "page_pre"
   }, preRender)));
 });
-
-function useActiveState(defaultSate) {
-  var _useState = Object(react["useState"])(defaultSate),
-      _useState2 = _slicedToArray(_useState, 2),
-      value = _useState2[0],
-      setState = _useState2[1];
-
-  return {
-    showState: value,
-    onToggle: function onToggle(data) {
-      setState(data);
-    }
-  };
-}
-
 /* harmony default export */ var popover_ExamplePosition = (ExamplePosition);
 // CONCATENATED MODULE: ./src/routes/packages/popover/ExamplePositionContainer.jsx
 

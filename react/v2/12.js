@@ -191,8 +191,8 @@ var packageObj = {
     name: 'package.popover.name',
     routename: _routeMap__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].PACKAGES_POPOVER_BASIC,
     description: 'package.popover.description.basic',
-    version: '1.2.0',
-    updated: '2020-06-30',
+    version: '1.2.1',
+    updated: '2020-07-07',
     link: {
       github: 'https://github.com/BlackToolBoxLaboratory/react-popover',
       npm: 'https://www.npmjs.com/package/@blacktoolbox/react-popover'
@@ -245,7 +245,7 @@ var es = __webpack_require__(31);
 var Recompose_esm = __webpack_require__(51);
 
 // EXTERNAL MODULE: ./node_modules/@blacktoolbox/react-list/esm/index.js
-var esm = __webpack_require__(53);
+var esm = __webpack_require__(54);
 
 // EXTERNAL MODULE: ./src/modules/pageLayout/index.js + 5 modules
 var pageLayout = __webpack_require__(46);

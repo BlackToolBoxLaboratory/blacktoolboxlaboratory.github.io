@@ -191,8 +191,8 @@ var packageObj = {
     name: 'package.popover.name',
     routename: _routeMap__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].PACKAGES_POPOVER_BASIC,
     description: 'package.popover.description.basic',
-    version: '1.2.0',
-    updated: '2020-06-30',
+    version: '1.2.1',
+    updated: '2020-07-07',
     link: {
       github: 'https://github.com/BlackToolBoxLaboratory/react-popover',
       npm: 'https://www.npmjs.com/package/@blacktoolbox/react-popover'
@@ -216,7 +216,7 @@ function c(t){return(c="function"==typeof Symbol&&"symbol"==typeof Symbol.iterat
 
 /***/ }),
 
-/***/ 54:
+/***/ 53:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -270,7 +270,7 @@ var pageLayout = __webpack_require__(46);
 var functions = __webpack_require__(47);
 
 // EXTERNAL MODULE: ./src/components/packages/table/packageInfo.js
-var packageInfo = __webpack_require__(54);
+var packageInfo = __webpack_require__(53);
 
 // EXTERNAL MODULE: ./src/plugins/btblab-prototype-languages.js + 2 modules
 var btblab_prototype_languages = __webpack_require__(50);

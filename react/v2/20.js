@@ -208,6 +208,8 @@ var es = __webpack_require__(65);
         'ref': 'For the feature of React.ref.'
       },
       'example': {
+        'vertical': 'Vertical',
+        'horizontal': 'Horizontal',
         'position': {
           'title': 'Example: Position',
           'description': 'Here is simply to show the popover with position configured. The popover is default to enable autoDetect function which means while the popover showing over the boundary of browser. It will adjust automatically.'
@@ -440,6 +442,8 @@ var es = __webpack_require__(65);
         'ref': '支援 React.ref。'
       },
       'example': {
+        'vertical': '垂直',
+        'horizontal': '水平',
         'position': {
           'title': '範例：顯示位置',
           'description': '簡單地顯示如何控制氣泡框顯示的位置。氣泡框預設啟用瀏覽器邊界偵測（autoDetect），當氣泡框超出瀏覽器邊界時，會依據顯示位置與對齊方式做濤整，此功能也可以關掉。'
@@ -529,7 +533,7 @@ var langStore = __webpack_require__(32);
 var index_es = __webpack_require__(36);
 
 // EXTERNAL MODULE: ./node_modules/@blacktoolbox/react-list/esm/index.js
-var esm = __webpack_require__(53);
+var esm = __webpack_require__(54);
 
 // EXTERNAL MODULE: ./node_modules/@blacktoolbox/react-popover/esm/index.js
 var react_popover_esm = __webpack_require__(57);
