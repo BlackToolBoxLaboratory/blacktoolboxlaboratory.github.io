@@ -288,25 +288,21 @@ var ExamplePosition = enhance(function () {
   }, /*#__PURE__*/react_default.a.createElement("div", {
     className: "align_vertical"
   }, /*#__PURE__*/react_default.a.createElement(esm["a" /* default */], {
-    className: "align_vertical",
     showPosition: "left",
     trigger: /*#__PURE__*/react_default.a.createElement("button", null, "Left")
   }, "Example: Left")), /*#__PURE__*/react_default.a.createElement("div", {
     className: "align_vertical"
   }, /*#__PURE__*/react_default.a.createElement(esm["a" /* default */], {
-    className: "align_vertical",
     showPosition: "top",
     trigger: /*#__PURE__*/react_default.a.createElement("button", null, "Top")
   }, "Example: Top")), /*#__PURE__*/react_default.a.createElement("div", {
     className: "align_vertical"
   }, /*#__PURE__*/react_default.a.createElement(esm["a" /* default */], {
-    className: "align_vertical",
     showPosition: "bottom",
     trigger: /*#__PURE__*/react_default.a.createElement("button", null, "Bottom")
   }, "Example: Bottom")), /*#__PURE__*/react_default.a.createElement("div", {
     className: "align_vertical"
   }, /*#__PURE__*/react_default.a.createElement(esm["a" /* default */], {
-    className: "align_vertical",
     showPosition: "right",
     trigger: /*#__PURE__*/react_default.a.createElement("button", null, "Right")
   }, "EXample: Right"))), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
