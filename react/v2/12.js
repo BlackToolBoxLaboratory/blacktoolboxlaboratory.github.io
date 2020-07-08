@@ -1,6 +1,6 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[12],{
 
-/***/ 46:
+/***/ 47:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -27,7 +27,7 @@ var Page_Page = function Page(props) {
 
 /* harmony default export */ var pageLayout_Page = (Page_Page);
 // EXTERNAL MODULE: ./node_modules/classnames/index.js
-var classnames = __webpack_require__(49);
+var classnames = __webpack_require__(50);
 var classnames_default = /*#__PURE__*/__webpack_require__.n(classnames);
 
 // EXTERNAL MODULE: ./node_modules/@fortawesome/react-fontawesome/index.es.js
@@ -145,7 +145,7 @@ var Divider_Divider = function Divider() {
 
 /***/ }),
 
-/***/ 47:
+/***/ 48:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -158,7 +158,7 @@ var openLink = function openLink(link) {
 
 /***/ }),
 
-/***/ 48:
+/***/ 49:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -197,17 +197,28 @@ var packageObj = {
       github: 'https://github.com/BlackToolBoxLaboratory/react-popover',
       npm: 'https://www.npmjs.com/package/@blacktoolbox/react-popover'
     }
+  },
+  button: {
+    name: 'package.button.name',
+    routename: _routeMap__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].PACKAGES_BUTTON_BASIC,
+    description: 'package.button.description.basic',
+    version: '1.0.0',
+    updated: '2020-07-08',
+    link: {
+      github: 'https://github.com/BlackToolBoxLaboratory/react-button',
+      npm: 'https://www.npmjs.com/package/@blacktoolbox/react-button'
+    }
   }
 };
 /* harmony default export */ __webpack_exports__["a"] = (packageObj);
 
 /***/ }),
 
-/***/ 55:
+/***/ 56:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(48);
+/* harmony import */ var _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(49);
 
 var packageInfo = {
   'version': _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].list.version,
@@ -227,7 +238,7 @@ var packageInfo = {
 
 /***/ }),
 
-/***/ 68:
+/***/ 70:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -242,24 +253,24 @@ var react_default = /*#__PURE__*/__webpack_require__.n(react);
 var es = __webpack_require__(31);
 
 // EXTERNAL MODULE: ./node_modules/recompose/dist/Recompose.esm.js + 1 modules
-var Recompose_esm = __webpack_require__(51);
+var Recompose_esm = __webpack_require__(52);
 
 // EXTERNAL MODULE: ./node_modules/@blacktoolbox/react-list/esm/index.js
-var esm = __webpack_require__(54);
+var esm = __webpack_require__(55);
 
 // EXTERNAL MODULE: ./src/modules/pageLayout/index.js + 5 modules
-var pageLayout = __webpack_require__(46);
+var pageLayout = __webpack_require__(47);
 
 // EXTERNAL MODULE: ./src/utils/functions.js
-var functions = __webpack_require__(47);
+var functions = __webpack_require__(48);
 
 // EXTERNAL MODULE: ./src/components/packages/list/packageInfo.js
-var packageInfo = __webpack_require__(55);
+var packageInfo = __webpack_require__(56);
 
 // EXTERNAL MODULE: ./src/plugins/btblab-prototype-languages.js + 2 modules
-var btblab_prototype_languages = __webpack_require__(50);
+var btblab_prototype_languages = __webpack_require__(51);
 
-// CONCATENATED MODULE: ./src/components/packages/list/ExampleMenu.jsx
+// CONCATENATED MODULE: ./src/components/packages/list/ExampleList.jsx
 
 
 
@@ -273,67 +284,72 @@ var enhance = Object(Recompose_esm["a" /* compose */])(Object(es["b" /* connect 
     'languageSetting': state.language.languageSetting
   };
 }));
-var _menuData = [{
-  id: 'f1',
-  title: 'Folder: 1',
+var _listData = [{
+  id: 'b1',
+  title: 'Branch: 1',
   children: [{
-    id: 't11',
-    title: 'Menu: 1-1'
+    id: 'l11',
+    title: 'Leaf: 1-1'
   }, {
-    id: 't12',
-    title: 'Menu: 1-2'
+    id: 'b12',
+    title: 'Branch: 1-2',
+    children: [{
+      id: 'l121',
+      title: 'Leaf: 1-2-1'
+    }, {
+      id: 'l122',
+      title: 'Leaf: 1-2-2'
+    }]
+  }, {
+    id: 'l13',
+    title: 'Leaf: 1-3'
   }]
 }, {
-  id: 'f2',
-  title: 'Folder: 2',
-  defaultCollapsed: true,
+  id: 'b2',
+  title: 'Branch: 2',
   children: [{
-    id: 't21',
-    title: 'Menu: 2-1'
+    id: 'l21',
+    title: 'Leaf: 2-1'
   }, {
-    id: 't22',
-    title: 'Menu: 2-2'
-  }, {
-    id: 't23',
-    title: 'Menu: 2-3'
+    id: 'l22',
+    title: 'Leaf: 2-2'
   }]
 }];
-var preRender = "<btb-react-list dataList={menuData} />";
-var preListData = "const menuData = [\n  { id: 'f1', title: 'Folder: 1', children: [\n          { id: 't11', title: 'Menu: 1-1' },\n          { id: 't12', title: 'Menu: 1-2' }\n  ]},\n  { id: 'f2', title: 'Folder: 2', defaultCollapsed: true, children: [\n          { id: 't21', title: 'Menu: 2-1' },\n          { id: 't22', title: 'Menu: 2-2' },\n          { id: 't23', title: 'Menu: 2-3' }\n  ]}\n]";
-var ExampleMenu = enhance(function () {
+var preRender = "<btb-react-list dataList={listData} />";
+var preListData = "const listData = [\n  { id: 'b1', title: 'Branch: 1', children: [\n          { id: 'l11', title: 'Leaf: 1-1' },\n          { id: 'b12', title: 'Branch: 1-2', children: [\n                  { id: 'l121', title: 'Leaf: 1-2-1' },\n                  { id: 'l122', title: 'Leaf: 1-2-2' }\n          ]},\n          { id: 'l13', title: 'Leaf: 1-3' }\n  ]},\n  { id: 'b2', title: 'Branch: 2', children: [\n          { id: 'l21', title: 'Leaf: 2-1' },\n          { id: 'l22', title: 'Leaf: 2-2' }\n  ]}\n]";
+var ExampleList = enhance(function () {
   return /*#__PURE__*/react_default.a.createElement(pageLayout["c" /* Page */], {
-    className: "btb-pkg-list-example-menu"
+    className: "btb-pkg-list-example-list"
   }, /*#__PURE__*/react_default.a.createElement(pageLayout["d" /* PageHead */], {
-    title: btblab_prototype_languages["a" /* lang */].translate('package.list.example.menu.title'),
+    title: btblab_prototype_languages["a" /* lang */].translate('package.list.example.list.title'),
     clickBtn: functions["a" /* openLink */],
     linkList: packageInfo["a" /* default */].linkList
   }), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
     head: /*#__PURE__*/react_default.a.createElement(react_default.a.Fragment, null, "".concat(btblab_prototype_languages["a" /* lang */].translate('package.version_colon')).concat(packageInfo["a" /* default */].version), /*#__PURE__*/react_default.a.createElement("br", null), "".concat(btblab_prototype_languages["a" /* lang */].translate('package.release_colon')).concat(packageInfo["a" /* default */].updated))
-  }, /*#__PURE__*/react_default.a.createElement("p", null, btblab_prototype_languages["a" /* lang */].translate('package.list.example.menu.description'))), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
+  }, /*#__PURE__*/react_default.a.createElement("p", null, btblab_prototype_languages["a" /* lang */].translate('package.list.example.list.description'))), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
     head: btblab_prototype_languages["a" /* lang */].translate('package.section.example')
   }, /*#__PURE__*/react_default.a.createElement(esm["a" /* default */], {
-    dataList: _menuData,
-    collapseEnable: true
+    dataList: _listData
   })), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
     head: btblab_prototype_languages["a" /* lang */].translate('package.section.sourceCode')
   }, /*#__PURE__*/react_default.a.createElement("pre", {
     className: "page_pre"
   }, preRender), /*#__PURE__*/react_default.a.createElement(pageLayout["a" /* Block */], {
-    title: "menuData"
+    title: "listData"
   }, /*#__PURE__*/react_default.a.createElement("pre", {
     className: "page_pre"
   }, preListData))));
 });
-/* harmony default export */ var list_ExampleMenu = (ExampleMenu);
-// CONCATENATED MODULE: ./src/routes/packages/list/ExampleMenuContainer.jsx
+/* harmony default export */ var list_ExampleList = (ExampleList);
+// CONCATENATED MODULE: ./src/routes/packages/list/ExampleListContainer.jsx
 
 
 
-var ExampleMenuContainer_ExampleMenuContaier = function ExampleMenuContaier() {
-  return /*#__PURE__*/react_default.a.createElement(list_ExampleMenu, null);
+var ExampleListContainer_ExampleListContaier = function ExampleListContaier() {
+  return /*#__PURE__*/react_default.a.createElement(list_ExampleList, null);
 };
 
-/* harmony default export */ var ExampleMenuContainer = __webpack_exports__["default"] = (ExampleMenuContainer_ExampleMenuContaier);
+/* harmony default export */ var ExampleListContainer = __webpack_exports__["default"] = (ExampleListContainer_ExampleListContaier);
 
 /***/ })
 

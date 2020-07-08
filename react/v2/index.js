@@ -196,7 +196,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 45);
+/******/ 	return __webpack_require__(__webpack_require__.s = 46);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -5798,6 +5798,12 @@ var routeMap = {
   'PACKAGES_POPOVER_BASIC': '/packages/popover/basic',
   'PACKAGES_POPOVER_EXAMPLE_POSITION': '/packages/popover/example/position',
   'PACKAGES_POPOVER_EXAMPLE_ALIGN': '/packages/popover/example/align',
+  'PACKAGES_BUTTON': '/packages/button',
+  'PACKAGES_BUTTON_BASIC': '/packages/button/basic',
+  'PACKAGES_BUTTON_EXAMPLE_BUTTON': '/packages/table/example/button',
+  'PACKAGES_BUTTON_EXAMPLE_GROUP': '/packages/table/example/group',
+  'PACKAGES_BUTTON_EXAMPLE_PAGINATION': '/packages/table/example/pagination',
+  'PACKAGES_BUTTON_EXAMPLE_STYLE': '/packages/table/example/style',
   'APPLICATIONS': '/applications',
   'APPLICATIONS_LANGUAGES': '/applications/languages',
   'APPLICATIONS_VALIDATOR': '/applications/validator'
@@ -8543,7 +8549,7 @@ _defineProperty(PersistGate, "defaultProps", {
 exports.__esModule = true;
 exports.default = void 0;
 
-var _createWebStorage = _interopRequireDefault(__webpack_require__(42));
+var _createWebStorage = _interopRequireDefault(__webpack_require__(43));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -8610,13 +8616,19 @@ module.exports = function(originalModule) {
 /* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
+// extracted by mini-css-extract-plugin
+
+/***/ }),
+/* 43 */
+/***/ (function(module, exports, __webpack_require__) {
+
 "use strict";
 
 
 exports.__esModule = true;
 exports.default = createWebStorage;
 
-var _getStorage = _interopRequireDefault(__webpack_require__(43));
+var _getStorage = _interopRequireDefault(__webpack_require__(44));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -8642,7 +8654,7 @@ function createWebStorage(type) {
 }
 
 /***/ }),
-/* 43 */
+/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8690,8 +8702,8 @@ function getStorage(type) {
 }
 
 /***/ }),
-/* 44 */,
-/* 45 */
+/* 45 */,
+/* 46 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8731,6 +8743,11 @@ var react_table_lib = __webpack_require__(39);
 var react_popover_lib = __webpack_require__(40);
 
 // CONCATENATED MODULE: ./src/plugins/btblab-react-popover.js
+
+// EXTERNAL MODULE: ./node_modules/@blacktoolbox/react-button/lib/index.css
+var react_button_lib = __webpack_require__(41);
+
+// CONCATENATED MODULE: ./src/plugins/btblab-react-button.js
 
 // EXTERNAL MODULE: ./node_modules/@fortawesome/fontawesome-svg-core/index.es.js
 var index_es = __webpack_require__(16);
@@ -18312,7 +18329,7 @@ faPaypal, faGithub, faNpm, faLinkedin, faWordpress, // far
 faEnvelope, // fas
 faHome, faGlobe, faBars, faExternalLinkAlt, faTools, faLink, index_es_faBuilding);
 // EXTERNAL MODULE: ./src/assets/styles/index.less
-var styles = __webpack_require__(41);
+var styles = __webpack_require__(42);
 
 // EXTERNAL MODULE: ./src/assets/definitions/routeMap.js
 var routeMap = __webpack_require__(18);
@@ -18991,6 +19008,7 @@ var stores_persistor = persistStore(stores_store);
 
 
 
+
 var src_App = function App() {
   return /*#__PURE__*/react_default.a.createElement(es["a" /* Provider */], {
     store: stores_store
@@ -19006,7 +19024,7 @@ var src_App = function App() {
   })), /*#__PURE__*/react_default.a.createElement(react_router["d" /* Route */], {
     path: routeMap["a" /* default */].HOME,
     component: /*#__PURE__*/react_default.a.lazy(function () {
-      return Promise.all(/* import() */[__webpack_require__.e(2), __webpack_require__.e(20)]).then(__webpack_require__.bind(null, 82));
+      return Promise.all(/* import() */[__webpack_require__.e(2), __webpack_require__.e(21)]).then(__webpack_require__.bind(null, 85));
     })
   }))))));
 };
