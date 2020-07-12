@@ -1,6 +1,6 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[27],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[29],{
 
-/***/ 89:
+/***/ 90:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -17,29 +17,34 @@ var PackagesContaier = function PackagesContaier() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Suspense"], {
     fallback: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Loading...")
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__[/* Switch */ "g"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__[/* Route */ "d"], {
-    path: _src_assets_definitions_routeMap_js__WEBPACK_IMPORTED_MODULE_2__[/* default */ "a"].PACKAGES_LIST_BASIC,
+    path: _src_assets_definitions_routeMap_js__WEBPACK_IMPORTED_MODULE_2__[/* default */ "a"].PACKAGES_TABLE_BASIC,
     component: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.lazy(function () {
-      return __webpack_require__.e(/* import() */ 4).then(__webpack_require__.bind(null, 97));
+      return __webpack_require__.e(/* import() */ 6).then(__webpack_require__.bind(null, 102));
     })
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__[/* Route */ "d"], {
-    path: _src_assets_definitions_routeMap_js__WEBPACK_IMPORTED_MODULE_2__[/* default */ "a"].PACKAGES_LIST_EXAMPLE_LIST,
+    path: _src_assets_definitions_routeMap_js__WEBPACK_IMPORTED_MODULE_2__[/* default */ "a"].PACKAGES_TABLE_EXAMPLE_LIST,
     component: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.lazy(function () {
-      return __webpack_require__.e(/* import() */ 13).then(__webpack_require__.bind(null, 98));
+      return __webpack_require__.e(/* import() */ 9).then(__webpack_require__.bind(null, 103));
     })
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__[/* Route */ "d"], {
-    path: _src_assets_definitions_routeMap_js__WEBPACK_IMPORTED_MODULE_2__[/* default */ "a"].PACKAGES_LIST_EXAMPLE_MENU,
+    path: _src_assets_definitions_routeMap_js__WEBPACK_IMPORTED_MODULE_2__[/* default */ "a"].PACKAGES_TABLE_EXAMPLE_INFO,
     component: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.lazy(function () {
-      return __webpack_require__.e(/* import() */ 14).then(__webpack_require__.bind(null, 99));
+      return __webpack_require__.e(/* import() */ 8).then(__webpack_require__.bind(null, 104));
     })
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__[/* Route */ "d"], {
-    path: _src_assets_definitions_routeMap_js__WEBPACK_IMPORTED_MODULE_2__[/* default */ "a"].PACKAGES_LIST_EXAMPLE_STYLE,
+    path: _src_assets_definitions_routeMap_js__WEBPACK_IMPORTED_MODULE_2__[/* default */ "a"].PACKAGES_TABLE_EXAMPLE_COMPARE,
     component: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.lazy(function () {
-      return __webpack_require__.e(/* import() */ 16).then(__webpack_require__.bind(null, 100));
+      return __webpack_require__.e(/* import() */ 7).then(__webpack_require__.bind(null, 105));
     })
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__[/* Route */ "d"], {
-    path: _src_assets_definitions_routeMap_js__WEBPACK_IMPORTED_MODULE_2__[/* default */ "a"].PACKAGES_LIST_EXAMPLE_SLOT,
+    path: _src_assets_definitions_routeMap_js__WEBPACK_IMPORTED_MODULE_2__[/* default */ "a"].PACKAGES_TABLE_EXAMPLE_STYLE,
     component: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.lazy(function () {
-      return __webpack_require__.e(/* import() */ 15).then(__webpack_require__.bind(null, 101));
+      return __webpack_require__.e(/* import() */ 11).then(__webpack_require__.bind(null, 106));
+    })
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__[/* Route */ "d"], {
+    path: _src_assets_definitions_routeMap_js__WEBPACK_IMPORTED_MODULE_2__[/* default */ "a"].PACKAGES_TABLE_EXAMPLE_SLOT,
+    component: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.lazy(function () {
+      return __webpack_require__.e(/* import() */ 10).then(__webpack_require__.bind(null, 107));
     })
   })));
 };

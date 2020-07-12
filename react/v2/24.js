@@ -1,6 +1,6 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[24],{
 
-/***/ 64:
+/***/ 112:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -13,18 +13,23 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var PackagesContaier = function PackagesContaier() {
+var ApplicationsContaier = function ApplicationsContaier() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Suspense"], {
     fallback: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Loading...")
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__[/* Switch */ "g"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__[/* Route */ "d"], {
-    path: _src_assets_definitions_routeMap_js__WEBPACK_IMPORTED_MODULE_2__[/* default */ "a"].PACKAGES_BUTTON_BASIC,
+    path: _src_assets_definitions_routeMap_js__WEBPACK_IMPORTED_MODULE_2__[/* default */ "a"].APPLICATIONS_LANGUAGES,
     component: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.lazy(function () {
-      return __webpack_require__.e(/* import() */ 11).then(__webpack_require__.bind(null, 65));
+      return __webpack_require__.e(/* import() */ 21).then(__webpack_require__.bind(null, 94));
+    })
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__[/* Route */ "d"], {
+    path: _src_assets_definitions_routeMap_js__WEBPACK_IMPORTED_MODULE_2__[/* default */ "a"].APPLICATIONS_VALIDATOR,
+    component: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.lazy(function () {
+      return __webpack_require__.e(/* import() */ 22).then(__webpack_require__.bind(null, 95));
     })
   })));
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (PackagesContaier);
+/* harmony default export */ __webpack_exports__["default"] = (ApplicationsContaier);
 
 /***/ })
 

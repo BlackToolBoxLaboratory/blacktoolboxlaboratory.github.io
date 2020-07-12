@@ -1,5 +1,147 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[19],{
 
+/***/ 115:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+// ESM COMPAT FLAG
+__webpack_require__.r(__webpack_exports__);
+
+// EXTERNAL MODULE: ./node_modules/react/index.js
+var react = __webpack_require__(0);
+var react_default = /*#__PURE__*/__webpack_require__.n(react);
+
+// EXTERNAL MODULE: ./node_modules/react-redux/es/index.js + 22 modules
+var es = __webpack_require__(31);
+
+// EXTERNAL MODULE: ./node_modules/react-router/esm/react-router.js
+var react_router = __webpack_require__(2);
+
+// EXTERNAL MODULE: ./node_modules/recompose/dist/Recompose.esm.js + 1 modules
+var Recompose_esm = __webpack_require__(52);
+
+// EXTERNAL MODULE: ./node_modules/@fortawesome/react-fontawesome/index.es.js
+var index_es = __webpack_require__(36);
+
+// EXTERNAL MODULE: ./src/modules/pageLayout/index.js + 5 modules
+var pageLayout = __webpack_require__(47);
+
+// EXTERNAL MODULE: ./src/plugins/btblab-prototype-languages.js + 2 modules
+var btblab_prototype_languages = __webpack_require__(51);
+
+// CONCATENATED MODULE: ./src/components/about/PackageCard.jsx
+
+
+
+
+var PackageCard_PackageCard = function PackageCard(props) {
+  function _redirectRoute() {
+    props.redirectRoute(props.info.routename);
+  }
+
+  return /*#__PURE__*/react_default.a.createElement("div", {
+    className: ['btb-about-package-card grid-row', props.className].join(' ')
+  }, /*#__PURE__*/react_default.a.createElement("div", {
+    className: "grid-col-md-3"
+  }, /*#__PURE__*/react_default.a.createElement("div", {
+    className: "card_title"
+  }, btblab_prototype_languages["a" /* lang */].translate(props.info.name)), /*#__PURE__*/react_default.a.createElement(index_es["FontAwesomeIcon"], {
+    className: "card_link",
+    icon: ['fas', 'link'],
+    fixedWidth: true,
+    onClick: _redirectRoute
+  })), /*#__PURE__*/react_default.a.createElement("div", {
+    className: "grid-col-md"
+  }, /*#__PURE__*/react_default.a.createElement("div", {
+    className: "card_description"
+  }, btblab_prototype_languages["a" /* lang */].translate(props.info.description)), /*#__PURE__*/react_default.a.createElement("div", {
+    className: "card_version"
+  }, "".concat(btblab_prototype_languages["a" /* lang */].translate('package.version_colon')).concat(props.info.version)), /*#__PURE__*/react_default.a.createElement("div", {
+    className: "card_updated"
+  }, "".concat(btblab_prototype_languages["a" /* lang */].translate('package.release_colon')).concat(props.info.updated))));
+};
+
+/* harmony default export */ var about_PackageCard = (PackageCard_PackageCard);
+// EXTERNAL MODULE: ./src/assets/definitions/packageObj.js
+var packageObj = __webpack_require__(50);
+
+// CONCATENATED MODULE: ./src/assets/images/BTB_React.png
+/* harmony default export */ var BTB_React = (__webpack_require__.p + "files/BTB_React.png");
+// CONCATENATED MODULE: ./src/components/about/About.jsx
+
+
+
+
+
+
+
+
+
+
+var enhance = Object(Recompose_esm["a" /* compose */])(Object(es["b" /* connect */])(function (state) {
+  return {
+    'languageSetting': state.language.languageSetting
+  };
+}), react_router["o" /* withRouter */]);
+var About = enhance(function (props) {
+  function _redirectRoute(routename) {
+    props.history.push(routename);
+  }
+
+  return /*#__PURE__*/react_default.a.createElement(pageLayout["c" /* Page */], {
+    className: "btb-about"
+  }, /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
+    className: "about_title grid-row direction-column align-items-center"
+  }, /*#__PURE__*/react_default.a.createElement("img", {
+    className: "title_image",
+    src: BTB_React,
+    alt: "BTB_React"
+  }), /*#__PURE__*/react_default.a.createElement("h1", {
+    className: "title_main hidden-down-md"
+  }, "Black Tool Box Laboratory"), /*#__PURE__*/react_default.a.createElement("h1", {
+    className: "title_main hidden-up-md"
+  }, "BTB Lab."), /*#__PURE__*/react_default.a.createElement("p", {
+    className: "title_sub"
+  }, "With React")), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], null, /*#__PURE__*/react_default.a.createElement("span", null, btblab_prototype_languages["a" /* lang */].translate('about.description'))), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
+    className: "grid-row justify-content-center"
+  }, /*#__PURE__*/react_default.a.createElement("a", {
+    href: "mailto://vannoel0628@gmail.com",
+    target: "_blank"
+  }, /*#__PURE__*/react_default.a.createElement(index_es["FontAwesomeIcon"], {
+    icon: ['far', 'envelope'],
+    fixedWidth: true
+  }), /*#__PURE__*/react_default.a.createElement("span", null, "vannoel0628@gmail.com"))), /*#__PURE__*/react_default.a.createElement(pageLayout["b" /* Divider */], null), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
+    className: "grid-row justify-content-center"
+  }, /*#__PURE__*/react_default.a.createElement("span", null, btblab_prototype_languages["a" /* lang */].translate('about.donate.1')), /*#__PURE__*/react_default.a.createElement("a", {
+    href: "https://www.paypal.me/vannoel0628",
+    target: "_blank"
+  }, /*#__PURE__*/react_default.a.createElement(index_es["FontAwesomeIcon"], {
+    icon: ['fab', 'paypal'],
+    fixedWidth: true
+  }), /*#__PURE__*/react_default.a.createElement("span", null, btblab_prototype_languages["a" /* lang */].translate('about.donate.2'))), /*#__PURE__*/react_default.a.createElement("span", null, btblab_prototype_languages["a" /* lang */].translate('about.donate.3'))), /*#__PURE__*/react_default.a.createElement(pageLayout["b" /* Divider */], null), Object.keys(packageObj["a" /* default */]).map(function (entry) {
+    return /*#__PURE__*/react_default.a.createElement("div", {
+      key: entry
+    }, entry !== 'list' ? /*#__PURE__*/react_default.a.createElement(pageLayout["b" /* Divider */], null) : [], /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
+      className: "about_package"
+    }, /*#__PURE__*/react_default.a.createElement(about_PackageCard, {
+      info: packageObj["a" /* default */][entry],
+      redirectRoute: _redirectRoute
+    })));
+  }));
+});
+/* harmony default export */ var about_About = (About);
+// CONCATENATED MODULE: ./src/routes/AboutContainer.jsx
+
+
+
+var AboutContainer_AboutContainer = function AboutContainer() {
+  return /*#__PURE__*/react_default.a.createElement(about_About, null);
+};
+
+/* harmony default export */ var routes_AboutContainer = __webpack_exports__["default"] = (AboutContainer_AboutContainer);
+
+/***/ }),
+
 /***/ 47:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -27,7 +169,7 @@ var Page_Page = function Page(props) {
 
 /* harmony default export */ var pageLayout_Page = (Page_Page);
 // EXTERNAL MODULE: ./node_modules/classnames/index.js
-var classnames = __webpack_require__(50);
+var classnames = __webpack_require__(49);
 var classnames_default = /*#__PURE__*/__webpack_require__.n(classnames);
 
 // EXTERNAL MODULE: ./node_modules/@fortawesome/react-fontawesome/index.es.js
@@ -145,124 +287,59 @@ var Divider_Divider = function Divider() {
 
 /***/ }),
 
-/***/ 48:
+/***/ 50:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return openLink; });
-var openLink = function openLink(link) {
-  window.open(link.url);
+/* harmony import */ var _routeMap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(18);
+
+var packageObj = {
+  list: {
+    name: 'package.list.name',
+    routename: _routeMap__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].PACKAGES_LIST_BASIC,
+    description: 'package.list.description.basic',
+    version: '2.2.0',
+    updated: '2020-06-21',
+    link: {
+      github: 'https://github.com/BlackToolBoxLaboratory/react-list',
+      npm: 'https://www.npmjs.com/package/@blacktoolbox/react-list'
+    }
+  },
+  table: {
+    name: 'package.table.name',
+    routename: _routeMap__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].PACKAGES_TABLE_BASIC,
+    description: 'package.table.description.basic',
+    version: '1.4.0',
+    updated: '2020-06-21',
+    link: {
+      github: 'https://github.com/BlackToolBoxLaboratory/react-table',
+      npm: 'https://www.npmjs.com/package/@blacktoolbox/react-table'
+    }
+  },
+  popover: {
+    name: 'package.popover.name',
+    routename: _routeMap__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].PACKAGES_POPOVER_BASIC,
+    description: 'package.popover.description.basic',
+    version: '1.2.1',
+    updated: '2020-07-07',
+    link: {
+      github: 'https://github.com/BlackToolBoxLaboratory/react-popover',
+      npm: 'https://www.npmjs.com/package/@blacktoolbox/react-popover'
+    }
+  },
+  button: {
+    name: 'package.button.name',
+    routename: _routeMap__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].PACKAGES_BUTTON_BASIC,
+    description: 'package.button.description.basic',
+    version: '1.0.0',
+    updated: '2020-07-08',
+    link: {
+      github: 'https://github.com/BlackToolBoxLaboratory/react-button',
+      npm: 'https://www.npmjs.com/package/@blacktoolbox/react-button'
+    }
+  }
 };
-
-
-
-/***/ }),
-
-/***/ 66:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-// ESM COMPAT FLAG
-__webpack_require__.r(__webpack_exports__);
-
-// EXTERNAL MODULE: ./node_modules/react/index.js
-var react = __webpack_require__(0);
-var react_default = /*#__PURE__*/__webpack_require__.n(react);
-
-// EXTERNAL MODULE: ./node_modules/react-redux/es/index.js + 22 modules
-var es = __webpack_require__(31);
-
-// EXTERNAL MODULE: ./node_modules/recompose/dist/Recompose.esm.js + 1 modules
-var Recompose_esm = __webpack_require__(52);
-
-// EXTERNAL MODULE: ./node_modules/@fortawesome/react-fontawesome/index.es.js
-var index_es = __webpack_require__(36);
-
-// EXTERNAL MODULE: ./src/modules/pageLayout/index.js + 5 modules
-var pageLayout = __webpack_require__(47);
-
-// EXTERNAL MODULE: ./src/utils/functions.js
-var functions = __webpack_require__(48);
-
-// EXTERNAL MODULE: ./src/plugins/btblab-prototype-languages.js + 2 modules
-var btblab_prototype_languages = __webpack_require__(51);
-
-// CONCATENATED MODULE: ./src/components/applications/Languages.jsx
-
-
-
-
-
-
-
-var enhance = Object(Recompose_esm["a" /* compose */])(Object(es["b" /* connect */])(function (state) {
-  return {
-    'languageSetting': state.language.languageSetting
-  };
-}));
-var packageInfo = {
-  'version': '1.1.1',
-  'updated': '2020-06-20',
-  'description': 'application.languages.description',
-  'linkList': [{
-    'id': 'github',
-    'fa': ['fab', 'github'],
-    'url': 'https://github.com/BlackToolBoxLaboratory/prototype-languages'
-  }, {
-    'id': 'npm',
-    'fa': ['fab', 'npm'],
-    'url': 'https://www.npmjs.com/package/@blacktoolbox/prototype-languages'
-  }]
-};
-var preInstall = "$ npm install --save @blacktoolbox/prototype-languages";
-var preInitializaer = "import { initializer } from '@blacktoolbox/prototype-languages';\n\nimport en from '@src/assets/languages/en.js';\nimport zh from '@src/assets/languages/zh.js';\n\ninitializer([\n        { index : 'en', label : 'Eglish', dictionary : en },\n        { index : 'zh', label : '\u7E41\u9AD4\u4E2D\u6587', dictionary : zh }\n]);";
-var preImplement = "import Language from '@blacktoolbox/prototype-languages';\n\nconst lang = new Language()";
-var Languages = enhance(function () {
-  return /*#__PURE__*/react_default.a.createElement(pageLayout["c" /* Page */], {
-    className: "btb-app-languages"
-  }, /*#__PURE__*/react_default.a.createElement(pageLayout["d" /* PageHead */], {
-    title: btblab_prototype_languages["a" /* lang */].translate('application.languages.name'),
-    clickBtn: functions["a" /* openLink */],
-    linkList: packageInfo.linkList
-  }), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
-    head: /*#__PURE__*/react_default.a.createElement(react_default.a.Fragment, null, "".concat(btblab_prototype_languages["a" /* lang */].translate('package.version_colon')).concat(packageInfo.version), /*#__PURE__*/react_default.a.createElement("br", null), "".concat(btblab_prototype_languages["a" /* lang */].translate('package.release_colon')).concat(packageInfo.updated))
-  }, /*#__PURE__*/react_default.a.createElement("p", null, btblab_prototype_languages["a" /* lang */].translate(packageInfo.description))), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
-    head: btblab_prototype_languages["a" /* lang */].translate('application.section.installation')
-  }, /*#__PURE__*/react_default.a.createElement("p", null, btblab_prototype_languages["a" /* lang */].translate('application.languages.installation.description'), /*#__PURE__*/react_default.a.createElement("a", {
-    className: "inline-link",
-    href: "https://blacktoolboxlaboratory.github.io/javascript/#/packages/languages",
-    target: "_blank"
-  }, /*#__PURE__*/react_default.a.createElement(index_es["FontAwesomeIcon"], {
-    icon: ['fas', 'external-link-alt'],
-    fixedWidth: true
-  }), /*#__PURE__*/react_default.a.createElement("span", null, btblab_prototype_languages["a" /* lang */].translate('application.languages.installation.linkName')))), /*#__PURE__*/react_default.a.createElement("pre", {
-    className: "page_pre"
-  }, preInstall)), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
-    head: btblab_prototype_languages["a" /* lang */].translate('application.section.initializer')
-  }, /*#__PURE__*/react_default.a.createElement("p", null, btblab_prototype_languages["a" /* lang */].translate('application.languages.initializer')), /*#__PURE__*/react_default.a.createElement("pre", {
-    className: "page_pre"
-  }, preInitializaer)), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
-    head: btblab_prototype_languages["a" /* lang */].translate('application.section.impletement')
-  }, /*#__PURE__*/react_default.a.createElement("p", null, btblab_prototype_languages["a" /* lang */].translate('application.languages.impletement')), /*#__PURE__*/react_default.a.createElement("pre", {
-    className: "page_pre"
-  }, preImplement)), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
-    head: btblab_prototype_languages["a" /* lang */].translate('application.section.trigger')
-  }, /*#__PURE__*/react_default.a.createElement("p", null, btblab_prototype_languages["a" /* lang */].translate('application.languages.trigger.description')), /*#__PURE__*/react_default.a.createElement(pageLayout["a" /* Block */], {
-    title: "Distpatch"
-  }, /*#__PURE__*/react_default.a.createElement("p", null, btblab_prototype_languages["a" /* lang */].translate('application.languages.trigger.dispatch'))), /*#__PURE__*/react_default.a.createElement(pageLayout["a" /* Block */], {
-    title: "Key"
-  }, /*#__PURE__*/react_default.a.createElement("p", null, btblab_prototype_languages["a" /* lang */].translate('application.languages.trigger.key')))));
-});
-/* harmony default export */ var applications_Languages = (Languages);
-// CONCATENATED MODULE: ./src/routes/applications/LanguagesContainer.jsx
-
-
-
-var LanguagesContainer_LanguagesContaier = function LanguagesContaier() {
-  return /*#__PURE__*/react_default.a.createElement(applications_Languages, null);
-};
-
-/* harmony default export */ var LanguagesContainer = __webpack_exports__["default"] = (LanguagesContainer_LanguagesContaier);
+/* harmony default export */ __webpack_exports__["a"] = (packageObj);
 
 /***/ })
 
