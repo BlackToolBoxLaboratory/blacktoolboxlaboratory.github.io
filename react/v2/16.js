@@ -1,6 +1,6 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[16],{
 
-/***/ 100:
+/***/ 115:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -18,33 +18,21 @@ var es = __webpack_require__(31);
 var Recompose_esm = __webpack_require__(52);
 
 // EXTERNAL MODULE: ./node_modules/@blacktoolbox/react-list/esm/index.js
-var esm = __webpack_require__(56);
-
-// EXTERNAL MODULE: ./src/modules/pageLayout/index.js + 5 modules
-var pageLayout = __webpack_require__(47);
-
-// EXTERNAL MODULE: ./src/utils/functions.js
-var functions = __webpack_require__(48);
-
-// EXTERNAL MODULE: ./src/components/packages/list/packageInfo.js
-var packageInfo = __webpack_require__(57);
+var esm = __webpack_require__(54);
 
 // EXTERNAL MODULE: ./src/plugins/btblab-prototype-languages.js + 2 modules
 var btblab_prototype_languages = __webpack_require__(51);
 
-// CONCATENATED MODULE: ./src/components/packages/list/ExampleStyle.jsx
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+// EXTERNAL MODULE: ./src/utils/functions.js
+var functions = __webpack_require__(48);
 
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+// EXTERNAL MODULE: ./src/modules/pageLayout/index.js + 5 modules
+var pageLayout = __webpack_require__(47);
 
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+// EXTERNAL MODULE: ./src/components/packages/button/packageInfo.js
+var packageInfo = __webpack_require__(56);
 
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
-function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
+// CONCATENATED MODULE: ./src/components/packages/button/ExamplePagination.jsx
 
 
 
@@ -58,111 +46,27 @@ var enhance = Object(Recompose_esm["a" /* compose */])(Object(es["b" /* connect 
     'languageSetting': state.language.languageSetting
   };
 }));
-var _listData = [{
-  id: 'b1',
-  title: 'Branch: 1',
-  children: [{
-    id: 'l11',
-    title: 'Leaf: 1-1'
-  }, {
-    id: 'b12',
-    title: 'Branch: 1-2',
-    children: [{
-      id: 'l121',
-      title: 'Leaf: 1-2-1'
-    }, {
-      id: 'l122',
-      title: 'Leaf: 1-2-2'
-    }]
-  }, {
-    id: 'l13',
-    title: 'Leaf: 1-3'
-  }]
-}, {
-  id: 'b2',
-  title: 'Branch: 2',
-  children: [{
-    id: 'l21',
-    title: 'Leaf: 2-1'
-  }, {
-    id: 'l22',
-    title: 'Leaf: 2-2'
-  }]
-}];
-var _styleObj = {
-  container_entry: {
-    cursor: 'pointer'
-  },
-  'entry-active': {
-    'background-color': '#00d8ff'
-  }
-};
-var preActiveID_EntryClick = "const activeID = useActiveState('l13')\n\nfunction useActiveState (defaultSate) {\n  const [value, setState] = useState(defaultSate);\n  return {\n    value,\n    onChange : (data) => {\n      setState(data.id);\n    }\n  };\n}";
-var preRender = "<BTBList \n        dataList={listData} \n        styleObj={styleObj} \n        activeID={activeID.value} \n        onEntryClick={activeID.onChange}/>";
-var preListData = "const listData = [\n  { id: 'b1', title: 'Branch: 1', children: [\n          { id: 'l11', title: 'Leaf: 1-1' },\n          { id: 'b12', title: 'Branch: 1-2', children: [\n                  { id: 'l121', title: 'Leaf: 1-2-1' },\n                  { id: 'l122', title: 'Leaf: 1-2-2' }\n          ]},\n          { id: 'l13', title: 'Leaf: 1-3' }\n  ]},\n  { id: 'b2', title: 'Branch: 2', children: [\n          { id: 'l21', title: 'Leaf: 2-1' },\n          { id: 'l22', title: 'Leaf: 2-2' }\n  ]}\n]";
-var preStyleObj = "const _styleObj = {\n  'container_entry': {\n          cursor: 'pointer'\n  },\n  'entry-active': {\n          'background-color': '#b8dec9'\n  }\n}";
-var ExampleStyle = enhance(function () {
-  var activeID = useActiveState('l13');
+var ExamplePagination = enhance(function () {
   return /*#__PURE__*/react_default.a.createElement(pageLayout["c" /* Page */], {
-    className: "btb-pkg-list-example-style"
+    className: "btb-pkg-button-example-pagination"
   }, /*#__PURE__*/react_default.a.createElement(pageLayout["d" /* PageHead */], {
-    title: btblab_prototype_languages["a" /* lang */].translate('package.list.example.style.title'),
+    title: btblab_prototype_languages["a" /* lang */].translate('package.button.example.pagination.title'),
     clickBtn: functions["a" /* openLink */],
     linkList: packageInfo["a" /* default */].linkList
   }), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
     head: /*#__PURE__*/react_default.a.createElement(react_default.a.Fragment, null, "".concat(btblab_prototype_languages["a" /* lang */].translate('package.version_colon')).concat(packageInfo["a" /* default */].version), /*#__PURE__*/react_default.a.createElement("br", null), "".concat(btblab_prototype_languages["a" /* lang */].translate('package.release_colon')).concat(packageInfo["a" /* default */].updated))
-  }, /*#__PURE__*/react_default.a.createElement("p", null, btblab_prototype_languages["a" /* lang */].translate('package.list.example.style.description'))), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
-    head: btblab_prototype_languages["a" /* lang */].translate('package.section.example')
-  }, /*#__PURE__*/react_default.a.createElement("p", {
-    className: "example_activeID"
-  }, "Active ID: ".concat(activeID.value)), /*#__PURE__*/react_default.a.createElement(esm["a" /* default */], {
-    dataList: _listData,
-    styleObj: _styleObj,
-    activeID: activeID.value,
-    onEntryClick: activeID.onChange
-  })), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
-    head: btblab_prototype_languages["a" /* lang */].translate('package.section.sourceCode')
-  }, /*#__PURE__*/react_default.a.createElement("pre", {
-    className: "page_pre"
-  }, preRender), /*#__PURE__*/react_default.a.createElement(pageLayout["a" /* Block */], {
-    title: "listData"
-  }, /*#__PURE__*/react_default.a.createElement("pre", {
-    className: "page_pre"
-  }, preListData)), /*#__PURE__*/react_default.a.createElement(pageLayout["a" /* Block */], {
-    title: "activeID & useState"
-  }, /*#__PURE__*/react_default.a.createElement("pre", {
-    className: "page_pre"
-  }, preActiveID_EntryClick)), /*#__PURE__*/react_default.a.createElement(pageLayout["a" /* Block */], {
-    title: "styleObj"
-  }, /*#__PURE__*/react_default.a.createElement("pre", {
-    className: "page_pre"
-  }, preStyleObj))));
+  }, /*#__PURE__*/react_default.a.createElement("p", null, "Pagination")));
 });
-
-function useActiveState(defaultSate) {
-  var _useState = Object(react["useState"])(defaultSate),
-      _useState2 = _slicedToArray(_useState, 2),
-      value = _useState2[0],
-      setState = _useState2[1];
-
-  return {
-    value: value,
-    onChange: function onChange(data) {
-      setState(data.id);
-    }
-  };
-}
-
-/* harmony default export */ var list_ExampleStyle = (ExampleStyle);
-// CONCATENATED MODULE: ./src/routes/packages/list/ExampleStyleContainer.jsx
+/* harmony default export */ var button_ExamplePagination = (ExamplePagination);
+// CONCATENATED MODULE: ./src/routes/packages/button/ExamplePaginationContainer.jsx
 
 
 
-var ExampleStyleContainer_ExampleStyleContaier = function ExampleStyleContaier() {
-  return /*#__PURE__*/react_default.a.createElement(list_ExampleStyle, null);
+var ExamplePaginationContainer_ExamplePaginationContaier = function ExamplePaginationContaier() {
+  return /*#__PURE__*/react_default.a.createElement(button_ExamplePagination, null);
 };
 
-/* harmony default export */ var ExampleStyleContainer = __webpack_exports__["default"] = (ExampleStyleContainer_ExampleStyleContaier);
+/* harmony default export */ var ExamplePaginationContainer = __webpack_exports__["default"] = (ExamplePaginationContainer_ExamplePaginationContaier);
 
 /***/ }),
 
@@ -193,7 +97,7 @@ var Page_Page = function Page(props) {
 
 /* harmony default export */ var pageLayout_Page = (Page_Page);
 // EXTERNAL MODULE: ./node_modules/classnames/index.js
-var classnames = __webpack_require__(49);
+var classnames = __webpack_require__(50);
 var classnames_default = /*#__PURE__*/__webpack_require__.n(classnames);
 
 // EXTERNAL MODULE: ./node_modules/@fortawesome/react-fontawesome/index.es.js
@@ -324,7 +228,7 @@ var openLink = function openLink(link) {
 
 /***/ }),
 
-/***/ 50:
+/***/ 49:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -367,7 +271,10 @@ var packageObj = {
   button: {
     name: 'package.button.name',
     routename: _routeMap__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].PACKAGES_BUTTON_BASIC,
-    description: 'package.button.description.basic',
+    description: {
+      button: 'package.button.description.button',
+      group: 'package.button.description.group'
+    },
     version: '1.0.0',
     updated: '2020-07-08',
     link: {
@@ -380,24 +287,25 @@ var packageObj = {
 
 /***/ }),
 
-/***/ 57:
+/***/ 56:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(50);
+/* harmony import */ var _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(49);
 
 var packageInfo = {
-  'version': _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].list.version,
-  'updated': _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].list.updated,
-  'description': _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].list.description,
+  'version': _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].button.version,
+  'updated': _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].button.updated,
+  'descriptionButton': _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].button.description.button,
+  'descriptionGroup': _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].button.description.group,
   'linkList': [{
     'id': 'github',
     'fa': ['fab', 'github'],
-    'url': _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].list.link.github
+    'url': _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].button.link.github
   }, {
     'id': 'npm',
     'fa': ['fab', 'npm'],
-    'url': _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].list.link.npm
+    'url': _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].button.link.npm
   }]
 };
 /* harmony default export */ __webpack_exports__["a"] = (packageInfo);

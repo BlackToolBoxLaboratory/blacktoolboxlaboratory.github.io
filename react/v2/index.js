@@ -5800,11 +5800,13 @@ var routeMap = {
   'PACKAGES_POPOVER_EXAMPLE_POSITION': '/packages/popover/example/position',
   'PACKAGES_POPOVER_EXAMPLE_ALIGN': '/packages/popover/example/align',
   'PACKAGES_BUTTON': '/packages/button',
-  'PACKAGES_BUTTON_BASIC': '/packages/button/basic',
-  'PACKAGES_BUTTON_EXAMPLE_BUTTON': '/packages/table/example/button',
-  'PACKAGES_BUTTON_EXAMPLE_GROUP': '/packages/table/example/group',
-  'PACKAGES_BUTTON_EXAMPLE_PAGINATION': '/packages/table/example/pagination',
-  'PACKAGES_BUTTON_EXAMPLE_STYLE': '/packages/table/example/style',
+  'PACKAGES_BUTTON_BASIC_BUTTON': '/packages/button/basic/button',
+  'PACKAGES_BUTTON_BASIC_GROUP': '/packages/button/basic/group',
+  'PACKAGES_BUTTON_EXAMPLE_BUTTON': '/packages/button/example/button',
+  'PACKAGES_BUTTON_EXAMPLE_GROUP': '/packages/button/example/group',
+  'PACKAGES_BUTTON_EXAMPLE_PAGINATION': '/packages/button/example/pagination',
+  'PACKAGES_BUTTON_EXAMPLE_STYLE': '/packages/button/example/style',
+  'PACKAGES_BUTTON_EXAMPLE_SLOT': '/packages/button/example/slot',
   'APPLICATIONS': '/applications',
   'APPLICATIONS_LANGUAGES': '/applications/languages',
   'APPLICATIONS_VALIDATOR': '/applications/validator'
@@ -8745,7 +8747,7 @@ var react_popover_lib = __webpack_require__(40);
 
 // CONCATENATED MODULE: ./src/plugins/btblab-react-popover.js
 
-// EXTERNAL MODULE: ./node_modules/@blacktoolbox/react-button/lib/index.css
+// EXTERNAL MODULE: ../react-button/lib/index.css
 var react_button_lib = __webpack_require__(41);
 
 // CONCATENATED MODULE: ./src/plugins/btblab-react-button.js
@@ -19025,7 +19027,7 @@ var src_App = function App() {
   })), /*#__PURE__*/react_default.a.createElement(react_router["d" /* Route */], {
     path: routeMap["a" /* default */].HOME,
     component: /*#__PURE__*/react_default.a.lazy(function () {
-      return Promise.all(/* import() */[__webpack_require__.e(3), __webpack_require__.e(23)]).then(__webpack_require__.bind(null, 114));
+      return Promise.all(/* import() */[__webpack_require__.e(3), __webpack_require__.e(29)]).then(__webpack_require__.bind(null, 121));
     })
   }))))));
 };

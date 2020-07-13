@@ -1,11 +1,11 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[2],Array(54).concat([
-/* 54 */
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[2],Array(55).concat([
+/* 55 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var bind = __webpack_require__(61);
+var bind = __webpack_require__(62);
 
 /*global toString:true*/
 
@@ -350,13 +350,13 @@ module.exports = {
 
 
 /***/ }),
-/* 55 */,
 /* 56 */,
 /* 57 */,
 /* 58 */,
 /* 59 */,
 /* 60 */,
-/* 61 */
+/* 61 */,
+/* 62 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -374,13 +374,13 @@ module.exports = function bind(fn, thisArg) {
 
 
 /***/ }),
-/* 62 */
+/* 63 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var utils = __webpack_require__(54);
+var utils = __webpack_require__(55);
 
 function encode(val) {
   return encodeURIComponent(val).
@@ -452,7 +452,7 @@ module.exports = function buildURL(url, params, paramsSerializer) {
 
 
 /***/ }),
-/* 63 */
+/* 64 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -464,14 +464,14 @@ module.exports = function isCancel(value) {
 
 
 /***/ }),
-/* 64 */
+/* 65 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {
 
-var utils = __webpack_require__(54);
-var normalizeHeaderName = __webpack_require__(76);
+var utils = __webpack_require__(55);
+var normalizeHeaderName = __webpack_require__(77);
 
 var DEFAULT_CONTENT_TYPE = {
   'Content-Type': 'application/x-www-form-urlencoded'
@@ -487,10 +487,10 @@ function getDefaultAdapter() {
   var adapter;
   if (typeof XMLHttpRequest !== 'undefined') {
     // For browsers use XHR adapter
-    adapter = __webpack_require__(65);
+    adapter = __webpack_require__(66);
   } else if (typeof process !== 'undefined' && Object.prototype.toString.call(process) === '[object process]') {
     // For node use HTTP adapter
-    adapter = __webpack_require__(65);
+    adapter = __webpack_require__(66);
   }
   return adapter;
 }
@@ -569,19 +569,19 @@ module.exports = defaults;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(20)))
 
 /***/ }),
-/* 65 */
+/* 66 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var utils = __webpack_require__(54);
-var settle = __webpack_require__(77);
-var buildURL = __webpack_require__(62);
-var buildFullPath = __webpack_require__(79);
-var parseHeaders = __webpack_require__(82);
-var isURLSameOrigin = __webpack_require__(83);
-var createError = __webpack_require__(66);
+var utils = __webpack_require__(55);
+var settle = __webpack_require__(78);
+var buildURL = __webpack_require__(63);
+var buildFullPath = __webpack_require__(80);
+var parseHeaders = __webpack_require__(83);
+var isURLSameOrigin = __webpack_require__(84);
+var createError = __webpack_require__(67);
 
 module.exports = function xhrAdapter(config) {
   return new Promise(function dispatchXhrRequest(resolve, reject) {
@@ -678,7 +678,7 @@ module.exports = function xhrAdapter(config) {
     // This is only done if running in a standard browser environment.
     // Specifically not if we're in a web worker, or react-native.
     if (utils.isStandardBrowserEnv()) {
-      var cookies = __webpack_require__(84);
+      var cookies = __webpack_require__(85);
 
       // Add xsrf header
       var xsrfValue = (config.withCredentials || isURLSameOrigin(fullPath)) && config.xsrfCookieName ?
@@ -756,13 +756,13 @@ module.exports = function xhrAdapter(config) {
 
 
 /***/ }),
-/* 66 */
+/* 67 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var enhanceError = __webpack_require__(78);
+var enhanceError = __webpack_require__(79);
 
 /**
  * Create an Error with the specified message, config, error code, request and response.
@@ -781,13 +781,13 @@ module.exports = function createError(message, config, code, request, response) 
 
 
 /***/ }),
-/* 67 */
+/* 68 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var utils = __webpack_require__(54);
+var utils = __webpack_require__(55);
 
 /**
  * Config-specific merge-function which creates a new config-object
@@ -861,7 +861,7 @@ module.exports = function mergeConfig(config1, config2) {
 
 
 /***/ }),
-/* 68 */
+/* 69 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -887,24 +887,24 @@ module.exports = Cancel;
 
 
 /***/ }),
-/* 69 */,
-/* 70 */
+/* 70 */,
+/* 71 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(71);
+module.exports = __webpack_require__(72);
 
 /***/ }),
-/* 71 */
+/* 72 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var utils = __webpack_require__(54);
-var bind = __webpack_require__(61);
-var Axios = __webpack_require__(72);
-var mergeConfig = __webpack_require__(67);
-var defaults = __webpack_require__(64);
+var utils = __webpack_require__(55);
+var bind = __webpack_require__(62);
+var Axios = __webpack_require__(73);
+var mergeConfig = __webpack_require__(68);
+var defaults = __webpack_require__(65);
 
 /**
  * Create an instance of Axios
@@ -937,15 +937,15 @@ axios.create = function create(instanceConfig) {
 };
 
 // Expose Cancel & CancelToken
-axios.Cancel = __webpack_require__(68);
-axios.CancelToken = __webpack_require__(85);
-axios.isCancel = __webpack_require__(63);
+axios.Cancel = __webpack_require__(69);
+axios.CancelToken = __webpack_require__(86);
+axios.isCancel = __webpack_require__(64);
 
 // Expose all/spread
 axios.all = function all(promises) {
   return Promise.all(promises);
 };
-axios.spread = __webpack_require__(86);
+axios.spread = __webpack_require__(87);
 
 module.exports = axios;
 
@@ -954,17 +954,17 @@ module.exports.default = axios;
 
 
 /***/ }),
-/* 72 */
+/* 73 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var utils = __webpack_require__(54);
-var buildURL = __webpack_require__(62);
-var InterceptorManager = __webpack_require__(73);
-var dispatchRequest = __webpack_require__(74);
-var mergeConfig = __webpack_require__(67);
+var utils = __webpack_require__(55);
+var buildURL = __webpack_require__(63);
+var InterceptorManager = __webpack_require__(74);
+var dispatchRequest = __webpack_require__(75);
+var mergeConfig = __webpack_require__(68);
 
 /**
  * Create a new instance of Axios
@@ -1055,13 +1055,13 @@ module.exports = Axios;
 
 
 /***/ }),
-/* 73 */
+/* 74 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var utils = __webpack_require__(54);
+var utils = __webpack_require__(55);
 
 function InterceptorManager() {
   this.handlers = [];
@@ -1114,16 +1114,16 @@ module.exports = InterceptorManager;
 
 
 /***/ }),
-/* 74 */
+/* 75 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var utils = __webpack_require__(54);
-var transformData = __webpack_require__(75);
-var isCancel = __webpack_require__(63);
-var defaults = __webpack_require__(64);
+var utils = __webpack_require__(55);
+var transformData = __webpack_require__(76);
+var isCancel = __webpack_require__(64);
+var defaults = __webpack_require__(65);
 
 /**
  * Throws a `Cancel` if cancellation has been requested.
@@ -1200,13 +1200,13 @@ module.exports = function dispatchRequest(config) {
 
 
 /***/ }),
-/* 75 */
+/* 76 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var utils = __webpack_require__(54);
+var utils = __webpack_require__(55);
 
 /**
  * Transform the data for a request or a response
@@ -1227,13 +1227,13 @@ module.exports = function transformData(data, headers, fns) {
 
 
 /***/ }),
-/* 76 */
+/* 77 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var utils = __webpack_require__(54);
+var utils = __webpack_require__(55);
 
 module.exports = function normalizeHeaderName(headers, normalizedName) {
   utils.forEach(headers, function processHeader(value, name) {
@@ -1246,13 +1246,13 @@ module.exports = function normalizeHeaderName(headers, normalizedName) {
 
 
 /***/ }),
-/* 77 */
+/* 78 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var createError = __webpack_require__(66);
+var createError = __webpack_require__(67);
 
 /**
  * Resolve or reject a Promise based on response status.
@@ -1278,7 +1278,7 @@ module.exports = function settle(resolve, reject, response) {
 
 
 /***/ }),
-/* 78 */
+/* 79 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1327,14 +1327,14 @@ module.exports = function enhanceError(error, config, code, request, response) {
 
 
 /***/ }),
-/* 79 */
+/* 80 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var isAbsoluteURL = __webpack_require__(80);
-var combineURLs = __webpack_require__(81);
+var isAbsoluteURL = __webpack_require__(81);
+var combineURLs = __webpack_require__(82);
 
 /**
  * Creates a new URL by combining the baseURL with the requestedURL,
@@ -1354,7 +1354,7 @@ module.exports = function buildFullPath(baseURL, requestedURL) {
 
 
 /***/ }),
-/* 80 */
+/* 81 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1375,7 +1375,7 @@ module.exports = function isAbsoluteURL(url) {
 
 
 /***/ }),
-/* 81 */
+/* 82 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1396,13 +1396,13 @@ module.exports = function combineURLs(baseURL, relativeURL) {
 
 
 /***/ }),
-/* 82 */
+/* 83 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var utils = __webpack_require__(54);
+var utils = __webpack_require__(55);
 
 // Headers whose duplicates are ignored by node
 // c.f. https://nodejs.org/api/http.html#http_message_headers
@@ -1456,13 +1456,13 @@ module.exports = function parseHeaders(headers) {
 
 
 /***/ }),
-/* 83 */
+/* 84 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var utils = __webpack_require__(54);
+var utils = __webpack_require__(55);
 
 module.exports = (
   utils.isStandardBrowserEnv() ?
@@ -1531,13 +1531,13 @@ module.exports = (
 
 
 /***/ }),
-/* 84 */
+/* 85 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var utils = __webpack_require__(54);
+var utils = __webpack_require__(55);
 
 module.exports = (
   utils.isStandardBrowserEnv() ?
@@ -1591,13 +1591,13 @@ module.exports = (
 
 
 /***/ }),
-/* 85 */
+/* 86 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var Cancel = __webpack_require__(68);
+var Cancel = __webpack_require__(69);
 
 /**
  * A `CancelToken` is an object that can be used to request cancellation of an operation.
@@ -1655,7 +1655,7 @@ module.exports = CancelToken;
 
 
 /***/ }),
-/* 86 */
+/* 87 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1689,14 +1689,14 @@ module.exports = function spread(callback) {
 
 
 /***/ }),
-/* 87 */
+/* 88 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports,"__esModule",{value:!0});var _typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},_extends=Object.assign||function(e){for(var t=1;t<arguments.length;t++){var r=arguments[t];for(var n in r)Object.prototype.hasOwnProperty.call(r,n)&&(e[n]=r[n])}return e},_createClass=function(){function n(e,t){for(var r=0;r<t.length;r++){var n=t[r];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(e,n.key,n)}}return function(e,t,r){return t&&n(e.prototype,t),r&&n(e,r),e}}(),_apexcharts=__webpack_require__(88),_apexcharts2=_interopRequireDefault(_apexcharts),_react=__webpack_require__(0),_react2=_interopRequireDefault(_react),_propTypes=__webpack_require__(3),_propTypes2=_interopRequireDefault(_propTypes);function _interopRequireDefault(e){return e&&e.__esModule?e:{default:e}}function _defineProperty(e,t,r){return t in e?Object.defineProperty(e,t,{value:r,enumerable:!0,configurable:!0,writable:!0}):e[t]=r,e}function _objectWithoutProperties(e,t){var r={};for(var n in e)0<=t.indexOf(n)||Object.prototype.hasOwnProperty.call(e,n)&&(r[n]=e[n]);return r}function _classCallCheck(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}function _possibleConstructorReturn(e,t){if(!e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!t||"object"!=typeof t&&"function"!=typeof t?e:t}function _inherits(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function, not "+typeof t);e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}}),t&&(Object.setPrototypeOf?Object.setPrototypeOf(e,t):e.__proto__=t)}window.ApexCharts=_apexcharts2.default;var Charts=function(){function r(e){_classCallCheck(this,r);var t=_possibleConstructorReturn(this,(r.__proto__||Object.getPrototypeOf(r)).call(this,e));return _react2.default.createRef?t.chartRef=_react2.default.createRef():t.setRef=function(e){return t.chartRef=e},t.chart=null,t}return _inherits(r,_react.Component),_createClass(r,[{key:"render",value:function(){var e=_objectWithoutProperties(this.props,[]);return _react2.default.createElement("div",_extends({ref:_react2.default.createRef?this.chartRef:this.setRef},e))}},{key:"componentDidMount",value:function(){var e=_react2.default.createRef?this.chartRef.current:this.chartRef;this.chart=new _apexcharts2.default(e,this.getConfig()),this.chart.render()}},{key:"getConfig",value:function(){var e=this.props,t=e.type,r=e.height,n=e.width,o=e.series,i=e.options,a={chart:{type:t,height:r,width:n},series:o};return this.extend(i,a)}},{key:"isObject",value:function(e){return e&&"object"===(void 0===e?"undefined":_typeof(e))&&!Array.isArray(e)&&null!=e}},{key:"extend",value:function(t,r){var n=this;"function"!=typeof Object.assign&&(Object.assign=function(e){if(null==e)throw new TypeError("Cannot convert undefined or null to object");for(var t=Object(e),r=1;r<arguments.length;r++){var n=arguments[r];if(null!=n)for(var o in n)n.hasOwnProperty(o)&&(t[o]=n[o])}return t});var o=Object.assign({},t);return this.isObject(t)&&this.isObject(r)&&Object.keys(r).forEach(function(e){n.isObject(r[e])&&e in t?o[e]=n.extend(t[e],r[e]):Object.assign(o,_defineProperty({},e,r[e]))}),o}},{key:"componentDidUpdate",value:function(e){if(!this.chart)return null;var t=this.props,r=t.options,n=t.series,o=t.height,i=t.width,a=JSON.stringify(e.options),s=JSON.stringify(e.series),c=JSON.stringify(r),u=JSON.stringify(n);a===c&&s===u&&o===e.height&&i===e.width||(s!==u&&a===c&&o===e.height&&i===e.width?this.chart.updateSeries(n):this.chart.updateOptions(this.getConfig()))}},{key:"componentWillUnmount",value:function(){this.chart&&"function"==typeof this.chart.destroy&&this.chart.destroy()}}]),r}();(exports.default=Charts).propTypes={type:_propTypes2.default.string.isRequired,width:_propTypes2.default.any,height:_propTypes2.default.any,series:_propTypes2.default.array.isRequired,options:_propTypes2.default.object.isRequired},Charts.defaultProps={type:"line",width:"100%",height:"auto"};
+Object.defineProperty(exports,"__esModule",{value:!0});var _typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},_extends=Object.assign||function(e){for(var t=1;t<arguments.length;t++){var r=arguments[t];for(var n in r)Object.prototype.hasOwnProperty.call(r,n)&&(e[n]=r[n])}return e},_createClass=function(){function n(e,t){for(var r=0;r<t.length;r++){var n=t[r];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(e,n.key,n)}}return function(e,t,r){return t&&n(e.prototype,t),r&&n(e,r),e}}(),_apexcharts=__webpack_require__(89),_apexcharts2=_interopRequireDefault(_apexcharts),_react=__webpack_require__(0),_react2=_interopRequireDefault(_react),_propTypes=__webpack_require__(3),_propTypes2=_interopRequireDefault(_propTypes);function _interopRequireDefault(e){return e&&e.__esModule?e:{default:e}}function _defineProperty(e,t,r){return t in e?Object.defineProperty(e,t,{value:r,enumerable:!0,configurable:!0,writable:!0}):e[t]=r,e}function _objectWithoutProperties(e,t){var r={};for(var n in e)0<=t.indexOf(n)||Object.prototype.hasOwnProperty.call(e,n)&&(r[n]=e[n]);return r}function _classCallCheck(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}function _possibleConstructorReturn(e,t){if(!e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return!t||"object"!=typeof t&&"function"!=typeof t?e:t}function _inherits(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function, not "+typeof t);e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,enumerable:!1,writable:!0,configurable:!0}}),t&&(Object.setPrototypeOf?Object.setPrototypeOf(e,t):e.__proto__=t)}window.ApexCharts=_apexcharts2.default;var Charts=function(){function r(e){_classCallCheck(this,r);var t=_possibleConstructorReturn(this,(r.__proto__||Object.getPrototypeOf(r)).call(this,e));return _react2.default.createRef?t.chartRef=_react2.default.createRef():t.setRef=function(e){return t.chartRef=e},t.chart=null,t}return _inherits(r,_react.Component),_createClass(r,[{key:"render",value:function(){var e=_objectWithoutProperties(this.props,[]);return _react2.default.createElement("div",_extends({ref:_react2.default.createRef?this.chartRef:this.setRef},e))}},{key:"componentDidMount",value:function(){var e=_react2.default.createRef?this.chartRef.current:this.chartRef;this.chart=new _apexcharts2.default(e,this.getConfig()),this.chart.render()}},{key:"getConfig",value:function(){var e=this.props,t=e.type,r=e.height,n=e.width,o=e.series,i=e.options,a={chart:{type:t,height:r,width:n},series:o};return this.extend(i,a)}},{key:"isObject",value:function(e){return e&&"object"===(void 0===e?"undefined":_typeof(e))&&!Array.isArray(e)&&null!=e}},{key:"extend",value:function(t,r){var n=this;"function"!=typeof Object.assign&&(Object.assign=function(e){if(null==e)throw new TypeError("Cannot convert undefined or null to object");for(var t=Object(e),r=1;r<arguments.length;r++){var n=arguments[r];if(null!=n)for(var o in n)n.hasOwnProperty(o)&&(t[o]=n[o])}return t});var o=Object.assign({},t);return this.isObject(t)&&this.isObject(r)&&Object.keys(r).forEach(function(e){n.isObject(r[e])&&e in t?o[e]=n.extend(t[e],r[e]):Object.assign(o,_defineProperty({},e,r[e]))}),o}},{key:"componentDidUpdate",value:function(e){if(!this.chart)return null;var t=this.props,r=t.options,n=t.series,o=t.height,i=t.width,a=JSON.stringify(e.options),s=JSON.stringify(e.series),c=JSON.stringify(r),u=JSON.stringify(n);a===c&&s===u&&o===e.height&&i===e.width||(s!==u&&a===c&&o===e.height&&i===e.width?this.chart.updateSeries(n):this.chart.updateOptions(this.getConfig()))}},{key:"componentWillUnmount",value:function(){this.chart&&"function"==typeof this.chart.destroy&&this.chart.destroy()}}]),r}();(exports.default=Charts).propTypes={type:_propTypes2.default.string.isRequired,width:_propTypes2.default.any,height:_propTypes2.default.any,series:_propTypes2.default.array.isRequired,options:_propTypes2.default.object.isRequired},Charts.defaultProps={type:"line",width:"100%",height:"auto"};
 
 /***/ }),
-/* 88 */
+/* 89 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";

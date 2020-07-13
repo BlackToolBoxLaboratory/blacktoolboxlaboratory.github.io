@@ -1,6 +1,6 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[17],{
 
-/***/ 110:
+/***/ 117:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -17,22 +17,22 @@ var es = __webpack_require__(31);
 // EXTERNAL MODULE: ./node_modules/recompose/dist/Recompose.esm.js + 1 modules
 var Recompose_esm = __webpack_require__(52);
 
-// EXTERNAL MODULE: ./node_modules/@blacktoolbox/react-popover/esm/index.js
-var esm = __webpack_require__(59);
-
-// EXTERNAL MODULE: ./src/modules/pageLayout/index.js + 5 modules
-var pageLayout = __webpack_require__(47);
-
-// EXTERNAL MODULE: ./src/utils/functions.js
-var functions = __webpack_require__(48);
-
-// EXTERNAL MODULE: ./src/components/packages/popover/packageInfo.js
-var packageInfo = __webpack_require__(58);
+// EXTERNAL MODULE: ./node_modules/@blacktoolbox/react-list/esm/index.js
+var esm = __webpack_require__(54);
 
 // EXTERNAL MODULE: ./src/plugins/btblab-prototype-languages.js + 2 modules
 var btblab_prototype_languages = __webpack_require__(51);
 
-// CONCATENATED MODULE: ./src/components/packages/popover/ExampleAlign.jsx
+// EXTERNAL MODULE: ./src/utils/functions.js
+var functions = __webpack_require__(48);
+
+// EXTERNAL MODULE: ./src/modules/pageLayout/index.js + 5 modules
+var pageLayout = __webpack_require__(47);
+
+// EXTERNAL MODULE: ./src/components/packages/button/packageInfo.js
+var packageInfo = __webpack_require__(56);
+
+// CONCATENATED MODULE: ./src/components/packages/button/ExampleSlot.jsx
 
 
 
@@ -46,74 +46,27 @@ var enhance = Object(Recompose_esm["a" /* compose */])(Object(es["b" /* connect 
     'languageSetting': state.language.languageSetting
   };
 }));
-var preRender = "<BTBPopover showPosition={\"top\"} showAlign={\"begin\"} trigger={(<button>Begin</button>)}>\n        Example: Begin\n</BTBPopover>\n\n<BTBPopover showPosition={\"top\"} showAlign={\"center\"} trigger={(<button>Center</button>)}>\n        Example: Center\n</BTBPopover>\n\n<BTBPopover showPosition={\"top\"} showAlign={\"end\"} trigger={(<button>End</button>)}>\n        Example: End\n</BTBPopover>\n\n<BTBPopover showPosition={\"left\"} showAlign={\"begin\"} trigger={(<button>Begin</button>)}>\n        Example: Begin\n</BTBPopover>\n\n<BTBPopover showPosition={\"left\"} showAlign={\"center\"} trigger={(<button>Center</button>)}>\n        Example: Center\n</BTBPopover>\n\n<BTBPopover showPosition={\"left\"} showAlign={\"end\"} trigger={(<button>End</button>)}>\n        Example: End\n</BTBPopover>";
-var ExampleAlign = enhance(function () {
+var ExampleSlot = enhance(function () {
   return /*#__PURE__*/react_default.a.createElement(pageLayout["c" /* Page */], {
-    className: "btb-pkg-popover-example-align"
+    className: "btb-pkg-button-example-slot"
   }, /*#__PURE__*/react_default.a.createElement(pageLayout["d" /* PageHead */], {
-    title: btblab_prototype_languages["a" /* lang */].translate('package.popover.example.align.title'),
+    title: btblab_prototype_languages["a" /* lang */].translate('package.button.example.slot.title'),
     clickBtn: functions["a" /* openLink */],
     linkList: packageInfo["a" /* default */].linkList
   }), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
     head: /*#__PURE__*/react_default.a.createElement(react_default.a.Fragment, null, "".concat(btblab_prototype_languages["a" /* lang */].translate('package.version_colon')).concat(packageInfo["a" /* default */].version), /*#__PURE__*/react_default.a.createElement("br", null), "".concat(btblab_prototype_languages["a" /* lang */].translate('package.release_colon')).concat(packageInfo["a" /* default */].updated))
-  }, /*#__PURE__*/react_default.a.createElement("p", null, btblab_prototype_languages["a" /* lang */].translate('package.popover.example.align.description'))), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
-    head: btblab_prototype_languages["a" /* lang */].translate('package.section.example')
-  }, /*#__PURE__*/react_default.a.createElement(pageLayout["a" /* Block */], {
-    title: btblab_prototype_languages["a" /* lang */].translate('package.popover.example.vertical')
-  }, /*#__PURE__*/react_default.a.createElement("div", {
-    className: "align_vertical"
-  }, /*#__PURE__*/react_default.a.createElement(esm["a" /* default */], {
-    showPosition: "top",
-    showAlign: "begin",
-    trigger: /*#__PURE__*/react_default.a.createElement("button", null, "Begin")
-  }, "Example: Begin")), /*#__PURE__*/react_default.a.createElement("div", {
-    className: "align_vertical"
-  }, /*#__PURE__*/react_default.a.createElement(esm["a" /* default */], {
-    showPosition: "top",
-    showAlign: "center",
-    trigger: /*#__PURE__*/react_default.a.createElement("button", null, "Center")
-  }, "Example: Center")), /*#__PURE__*/react_default.a.createElement("div", {
-    className: "align_vertical"
-  }, /*#__PURE__*/react_default.a.createElement(esm["a" /* default */], {
-    showPosition: "top",
-    showAlign: "end",
-    trigger: /*#__PURE__*/react_default.a.createElement("button", null, "End")
-  }, "Example: End"))), /*#__PURE__*/react_default.a.createElement(pageLayout["a" /* Block */], {
-    title: btblab_prototype_languages["a" /* lang */].translate('package.popover.example.horizontal')
-  }, /*#__PURE__*/react_default.a.createElement("div", {
-    className: "align_horizontal"
-  }, /*#__PURE__*/react_default.a.createElement(esm["a" /* default */], {
-    showPosition: "left",
-    showAlign: "begin",
-    trigger: /*#__PURE__*/react_default.a.createElement("button", null, "Begin")
-  }, "Example: Begin")), /*#__PURE__*/react_default.a.createElement("div", {
-    className: "align_horizontal"
-  }, /*#__PURE__*/react_default.a.createElement(esm["a" /* default */], {
-    showPosition: "left",
-    showAlign: "center",
-    trigger: /*#__PURE__*/react_default.a.createElement("button", null, "Center")
-  }, "Example: Center")), /*#__PURE__*/react_default.a.createElement("div", {
-    className: "align_horizontal"
-  }, /*#__PURE__*/react_default.a.createElement(esm["a" /* default */], {
-    showPosition: "left",
-    showAlign: "end",
-    trigger: /*#__PURE__*/react_default.a.createElement("button", null, "End")
-  }, "Example: End")))), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
-    head: btblab_prototype_languages["a" /* lang */].translate('package.section.sourceCode')
-  }, /*#__PURE__*/react_default.a.createElement("pre", {
-    className: "page_pre"
-  }, preRender)));
+  }, /*#__PURE__*/react_default.a.createElement("p", null, "Slot")));
 });
-/* harmony default export */ var popover_ExampleAlign = (ExampleAlign);
-// CONCATENATED MODULE: ./src/routes/packages/popover/ExampleAlignContainer.jsx
+/* harmony default export */ var button_ExampleSlot = (ExampleSlot);
+// CONCATENATED MODULE: ./src/routes/packages/button/ExampleSlotContainer.jsx
 
 
 
-var ExampleAlignContainer_ExampleAlignContaier = function ExampleAlignContaier() {
-  return /*#__PURE__*/react_default.a.createElement(popover_ExampleAlign, null);
+var ExampleSlotContainer_ExampleSlotContaier = function ExampleSlotContaier() {
+  return /*#__PURE__*/react_default.a.createElement(button_ExampleSlot, null);
 };
 
-/* harmony default export */ var ExampleAlignContainer = __webpack_exports__["default"] = (ExampleAlignContainer_ExampleAlignContaier);
+/* harmony default export */ var ExampleSlotContainer = __webpack_exports__["default"] = (ExampleSlotContainer_ExampleSlotContaier);
 
 /***/ }),
 
@@ -144,7 +97,7 @@ var Page_Page = function Page(props) {
 
 /* harmony default export */ var pageLayout_Page = (Page_Page);
 // EXTERNAL MODULE: ./node_modules/classnames/index.js
-var classnames = __webpack_require__(49);
+var classnames = __webpack_require__(50);
 var classnames_default = /*#__PURE__*/__webpack_require__.n(classnames);
 
 // EXTERNAL MODULE: ./node_modules/@fortawesome/react-fontawesome/index.es.js
@@ -275,7 +228,7 @@ var openLink = function openLink(link) {
 
 /***/ }),
 
-/***/ 50:
+/***/ 49:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -318,7 +271,10 @@ var packageObj = {
   button: {
     name: 'package.button.name',
     routename: _routeMap__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].PACKAGES_BUTTON_BASIC,
-    description: 'package.button.description.basic',
+    description: {
+      button: 'package.button.description.button',
+      group: 'package.button.description.group'
+    },
     version: '1.0.0',
     updated: '2020-07-08',
     link: {
@@ -331,24 +287,25 @@ var packageObj = {
 
 /***/ }),
 
-/***/ 58:
+/***/ 56:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(50);
+/* harmony import */ var _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(49);
 
 var packageInfo = {
-  'version': _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].popover.version,
-  'updated': _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].popover.updated,
-  'description': _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].popover.description,
+  'version': _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].button.version,
+  'updated': _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].button.updated,
+  'descriptionButton': _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].button.description.button,
+  'descriptionGroup': _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].button.description.group,
   'linkList': [{
     'id': 'github',
     'fa': ['fab', 'github'],
-    'url': _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].popover.link.github
+    'url': _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].button.link.github
   }, {
     'id': 'npm',
     'fa': ['fab', 'npm'],
-    'url': _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].popover.link.npm
+    'url': _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].button.link.npm
   }]
 };
 /* harmony default export */ __webpack_exports__["a"] = (packageInfo);

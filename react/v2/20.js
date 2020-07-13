@@ -1,6 +1,6 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[20],{
 
-/***/ 113:
+/***/ 100:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -14,304 +14,25 @@ var react_default = /*#__PURE__*/__webpack_require__.n(react);
 // EXTERNAL MODULE: ./node_modules/react-redux/es/index.js + 22 modules
 var es = __webpack_require__(31);
 
-// EXTERNAL MODULE: ./node_modules/react-router/esm/react-router.js
-var react_router = __webpack_require__(2);
-
 // EXTERNAL MODULE: ./node_modules/recompose/dist/Recompose.esm.js + 1 modules
 var Recompose_esm = __webpack_require__(52);
 
-// EXTERNAL MODULE: ./src/modules/pageLayout/index.js + 5 modules
-var pageLayout = __webpack_require__(47);
-
-// EXTERNAL MODULE: ./node_modules/@fortawesome/react-fontawesome/index.es.js
-var index_es = __webpack_require__(36);
-
-// CONCATENATED MODULE: ./src/modules/loadingDiv/LoadingDiv.jsx
-
-
-
-var LoadingDiv_LoadingDiv = function LoadingDiv() {
-  return /*#__PURE__*/react_default.a.createElement("div", {
-    className: "module-loading"
-  }, /*#__PURE__*/react_default.a.createElement(index_es["FontAwesomeIcon"], {
-    className: "loading_spinner",
-    icon: ['fas', 'spinner'],
-    fixedWidth: true,
-    spin: true,
-    pulse: true
-  }));
-};
-
-/* harmony default export */ var loadingDiv_LoadingDiv = (LoadingDiv_LoadingDiv);
-// CONCATENATED MODULE: ./src/modules/loadingDiv/index.js
-
-
-// EXTERNAL MODULE: ./node_modules/axios/index.js
-var axios = __webpack_require__(70);
-var axios_default = /*#__PURE__*/__webpack_require__.n(axios);
-
-// CONCATENATED MODULE: ./src/plugins/axios.js
-
-var instance_registry = axios_default.a.create({
-  baseURL: "".concat("https://registry.npmjs.org/")
-});
-var instance_api = axios_default.a.create({
-  baseURL: "".concat("https://api.npmjs.org/")
-});
-
-// CONCATENATED MODULE: ./src/apis/npmRegistry.js
-
-/* harmony default export */ var npmRegistry = ({
-  getPackageInfo: function getPackageInfo(Id) {
-    return instance_registry.get("/".concat(Id));
-  },
-  getPackages: function getPackages(lang) {
-    var paramText = '@blacktoolbox';
-
-    switch (lang) {
-      case 'js':
-        paramText += '/prototype-';
-        break;
-
-      case 'react':
-        paramText += '/react-';
-        break;
-
-      case 'vue':
-        paramText += '/vue-';
-        break;
-    }
-
-    return instance_registry.get('/-/v1/search', {
-      params: {
-        'text': paramText
-      }
-    });
-  }
-});
-// EXTERNAL MODULE: ./src/utils/functions.js
-var functions = __webpack_require__(48);
+// EXTERNAL MODULE: ./node_modules/@blacktoolbox/react-list/esm/index.js
+var esm = __webpack_require__(54);
 
 // EXTERNAL MODULE: ./src/plugins/btblab-prototype-languages.js + 2 modules
 var btblab_prototype_languages = __webpack_require__(51);
 
-// EXTERNAL MODULE: ./node_modules/react-apexcharts/dist/react-apexcharts.min.js
-var react_apexcharts_min = __webpack_require__(87);
-var react_apexcharts_min_default = /*#__PURE__*/__webpack_require__.n(react_apexcharts_min);
+// EXTERNAL MODULE: ./src/utils/functions.js
+var functions = __webpack_require__(48);
 
-// CONCATENATED MODULE: ./src/apis/npmAPI.js
+// EXTERNAL MODULE: ./src/modules/pageLayout/index.js + 5 modules
+var pageLayout = __webpack_require__(47);
 
-/* harmony default export */ var npmAPI = ({
-  getPackageDownloads: function getPackageDownloads(pkgName) {
-    return instance_api.get("/downloads/range/last-year/".concat(pkgName));
-  }
-});
-// CONCATENATED MODULE: ./utils/reviseISOString.js
-var formatISOString = /((\d{4})-(\d{2})-(\d{2}))T((\d{2}):(\d{2}):(\d{2})).\d{3}Z/; // 0: total
-// 1: Date(YYYY-MM-DD)
-// 2: Full Year
-// 3: Mounth
-// 4: Day
-// 5: Time(HH-MM-SS)
-// 6: Hour
-// 7: Minute
-// 8: Second
+// EXTERNAL MODULE: ./src/components/packages/list/packageInfo.js
+var packageInfo = __webpack_require__(58);
 
-var reviseISOString = function reviseISOString(isoString) {
-  var localISOString = new Date(Date.parse(isoString) - new Date().getTimezoneOffset() * 60 * 1000).toISOString();
-  var separateDateTime = formatISOString.exec(localISOString);
-  var obj = {};
-
-  if (separateDateTime) {
-    obj = {
-      'whole': separateDateTime[0],
-      'date': separateDateTime[1],
-      'year': separateDateTime[2],
-      'month': separateDateTime[3],
-      'day': separateDateTime[4],
-      'time': separateDateTime[5],
-      'hour': separateDateTime[6],
-      'minute': separateDateTime[7],
-      'second': separateDateTime[8]
-    };
-  }
-
-  return obj;
-};
-
-/* harmony default export */ var utils_reviseISOString = (reviseISOString);
-// CONCATENATED MODULE: ./src/components/overview/chartOptions.js
-var chartOptions = {
-  colors: ['#00d8ff'],
-  chart: {
-    animations: {
-      enabled: false
-    },
-    toolbar: {
-      show: false
-    },
-    zoom: {
-      enabled: false
-    },
-    sparkline: {
-      enabled: true
-    }
-  },
-  dataLabels: {
-    enabled: false
-  },
-  tooltip: {
-    x: {
-      show: false
-    }
-  },
-  grid: {
-    show: false
-  },
-  xaxis: {
-    labels: {
-      show: false
-    },
-    tooltip: {
-      enabled: false
-    }
-  },
-  yaxis: {
-    forceNiceScale: true,
-    labels: {
-      show: false
-    },
-    max: function max(_max) {
-      return _max + 10;
-    },
-    min: -10
-  }
-};
-/* harmony default export */ var overview_chartOptions = (chartOptions);
-// CONCATENATED MODULE: ./src/components/overview/PackageWidget.jsx
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
-
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
-function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
-
-
-
-
-
-
-
-var WEEK = 7;
-
-var PackageWidget_PackageWidget = function PackageWidget(props) {
-  var state_Series = useSeriesState();
-  var series = [{
-    name: btblab_prototype_languages["a" /* lang */].translate('chart.times'),
-    data: state_Series.series
-  }];
-  Object(react["useEffect"])(function () {
-    _getDownloads(props.data.name);
-  }, []);
-
-  function _getDownloads(pkgName) {
-    npmAPI.getPackageDownloads(pkgName).then(function (_ref) {
-      var data = _ref.data;
-      state_Series.update(data.downloads);
-    });
-  }
-
-  return /*#__PURE__*/react_default.a.createElement("div", {
-    className: ['btb-overview-package-widget', props.className].join(' ')
-  }, /*#__PURE__*/react_default.a.createElement("p", {
-    className: "widget_title"
-  }, props.data.name), /*#__PURE__*/react_default.a.createElement("p", {
-    className: "widget_description"
-  }, props.data.description), /*#__PURE__*/react_default.a.createElement("p", null, /*#__PURE__*/react_default.a.createElement("span", {
-    className: "widget_entry"
-  }, btblab_prototype_languages["a" /* lang */].translate('overview.version_colon')), /*#__PURE__*/react_default.a.createElement("span", {
-    className: "widget_value"
-  }, props.data.version)), /*#__PURE__*/react_default.a.createElement("p", null, /*#__PURE__*/react_default.a.createElement("span", {
-    className: "widget_entry"
-  }, btblab_prototype_languages["a" /* lang */].translate('overview.release_colon')), /*#__PURE__*/react_default.a.createElement("span", {
-    className: "widget_value"
-  }, utils_reviseISOString(props.data.date).date)), series[0].data.length ? /*#__PURE__*/react_default.a.createElement("div", {
-    className: "widget_chart"
-  }, /*#__PURE__*/react_default.a.createElement("p", {
-    className: "widget_row"
-  }, /*#__PURE__*/react_default.a.createElement("span", {
-    className: "widget_entry"
-  }, btblab_prototype_languages["a" /* lang */].translate('overview.downloads_colon'))), /*#__PURE__*/react_default.a.createElement(react_apexcharts_min_default.a, {
-    options: overview_chartOptions,
-    series: series,
-    type: "area",
-    height: "100%"
-  })) : /*#__PURE__*/react_default.a.createElement("div", {
-    className: "widget_chart grid-row justify-content-center align-items-center"
-  }, /*#__PURE__*/react_default.a.createElement(loadingDiv_LoadingDiv, null)));
-};
-
-function useSeriesState() {
-  var _useState = Object(react["useState"])([]),
-      _useState2 = _slicedToArray(_useState, 2),
-      series = _useState2[0],
-      setState = _useState2[1];
-
-  function _extractToWeekly(data) {
-    data.reverse();
-    var weekData = Array(Math.ceil(data.length / WEEK)).fill(0).map(function (entry, index) {
-      var count = 0;
-
-      for (var i = index * WEEK; i < Math.min((index + 1) * WEEK, data.length); i++) {
-        count += data[i].downloads;
-      }
-
-      return count;
-    });
-    return weekData.reverse();
-  }
-
-  return {
-    series: series,
-    update: function update(data) {
-      setState(_extractToWeekly(data || []));
-    }
-  };
-}
-
-/* harmony default export */ var overview_PackageWidget = (PackageWidget_PackageWidget);
-// CONCATENATED MODULE: ./src/components/overview/pageInfo.js
-var pageInfo = {
-  'description': 'overview.description',
-  'linkList': [{
-    'id': 'npm',
-    'fa': ['fab', 'npm'],
-    'url': 'https://www.npmjs.com/search?q=%40blacktoolbox%2Freact'
-  }]
-};
-/* harmony default export */ var overview_pageInfo = (pageInfo);
-// CONCATENATED MODULE: ./src/components/overview/Overview.jsx
-function Overview_slicedToArray(arr, i) { return Overview_arrayWithHoles(arr) || Overview_iterableToArrayLimit(arr, i) || Overview_unsupportedIterableToArray(arr, i) || Overview_nonIterableRest(); }
-
-function Overview_nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-
-function Overview_unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return Overview_arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return Overview_arrayLikeToArray(o, minLen); }
-
-function Overview_arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
-function Overview_iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
-function Overview_arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
-
-
-
+// CONCATENATED MODULE: ./src/components/packages/list/ExampleMenu.jsx
 
 
 
@@ -324,84 +45,68 @@ var enhance = Object(Recompose_esm["a" /* compose */])(Object(es["b" /* connect 
   return {
     'languageSetting': state.language.languageSetting
   };
-}), react_router["o" /* withRouter */]);
-var Overview = enhance(function () {
-  var state_Packages = {
-    'js': usePackagesState(),
-    'react': usePackagesState(),
-    'vue': usePackagesState()
-  };
-  Object(react["useEffect"])(function () {
-    _getPackages('js');
-
-    _getPackages('react');
-
-    _getPackages('vue');
-  }, []);
-
-  function _getPackages(type) {
-    npmRegistry.getPackages(type).then(function (_ref) {
-      var data = _ref.data;
-      state_Packages[type].update(data.objects);
-    });
-  }
-
-  function _renderPackages(type) {
-    if (state_Packages[type].packages.length) {
-      return /*#__PURE__*/react_default.a.createElement("div", {
-        className: "grid-row"
-      }, state_Packages[type].packages.map(function (entry) {
-        return /*#__PURE__*/react_default.a.createElement("div", {
-          className: "grid-col-lg-6",
-          key: entry.package.name
-        }, /*#__PURE__*/react_default.a.createElement(overview_PackageWidget, {
-          data: entry.package
-        }));
-      }));
-    } else {
-      return /*#__PURE__*/react_default.a.createElement(loadingDiv_LoadingDiv, null);
-    }
-  }
-
+}));
+var _menuData = [{
+  id: 'f1',
+  title: 'Folder: 1',
+  children: [{
+    id: 't11',
+    title: 'Menu: 1-1'
+  }, {
+    id: 't12',
+    title: 'Menu: 1-2'
+  }]
+}, {
+  id: 'f2',
+  title: 'Folder: 2',
+  defaultCollapsed: true,
+  children: [{
+    id: 't21',
+    title: 'Menu: 2-1'
+  }, {
+    id: 't22',
+    title: 'Menu: 2-2'
+  }, {
+    id: 't23',
+    title: 'Menu: 2-3'
+  }]
+}];
+var preRender = "<btb-react-list dataList={menuData} />";
+var preListData = "const menuData = [\n        { id: 'f1', title: 'Folder: 1', children: [\n                { id: 't11', title: 'Menu: 1-1' },\n                { id: 't12', title: 'Menu: 1-2' }\n        ]},\n        { id: 'f2', title: 'Folder: 2', defaultCollapsed: true, children: [\n                { id: 't21', title: 'Menu: 2-1' },\n                { id: 't22', title: 'Menu: 2-2' },\n                { id: 't23', title: 'Menu: 2-3' }\n        ]}\n]";
+var ExampleMenu = enhance(function () {
   return /*#__PURE__*/react_default.a.createElement(pageLayout["c" /* Page */], {
-    className: "btb-overview"
+    className: "btb-pkg-list-example-menu"
   }, /*#__PURE__*/react_default.a.createElement(pageLayout["d" /* PageHead */], {
-    title: btblab_prototype_languages["a" /* lang */].translate('overview.title'),
+    title: btblab_prototype_languages["a" /* lang */].translate('package.list.example.menu.title'),
     clickBtn: functions["a" /* openLink */],
-    linkList: overview_pageInfo.linkList
+    linkList: packageInfo["a" /* default */].linkList
   }), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
-    head: 'JAVASCRIPT'
-  }, _renderPackages('js')), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
-    head: 'REACT'
-  }, _renderPackages('react')), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
-    head: 'VUE'
-  }, _renderPackages('vue')));
+    head: /*#__PURE__*/react_default.a.createElement(react_default.a.Fragment, null, "".concat(btblab_prototype_languages["a" /* lang */].translate('package.version_colon')).concat(packageInfo["a" /* default */].version), /*#__PURE__*/react_default.a.createElement("br", null), "".concat(btblab_prototype_languages["a" /* lang */].translate('package.release_colon')).concat(packageInfo["a" /* default */].updated))
+  }, /*#__PURE__*/react_default.a.createElement("p", null, btblab_prototype_languages["a" /* lang */].translate('package.list.example.menu.description'))), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
+    head: btblab_prototype_languages["a" /* lang */].translate('package.section.example')
+  }, /*#__PURE__*/react_default.a.createElement(esm["a" /* default */], {
+    dataList: _menuData,
+    collapseEnable: true
+  })), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
+    head: btblab_prototype_languages["a" /* lang */].translate('package.section.sourceCode')
+  }, /*#__PURE__*/react_default.a.createElement("pre", {
+    className: "page_pre"
+  }, preRender), /*#__PURE__*/react_default.a.createElement(pageLayout["a" /* Block */], {
+    title: "menuData"
+  }, /*#__PURE__*/react_default.a.createElement("pre", {
+    className: "page_pre"
+  }, preListData))));
 });
-
-function usePackagesState() {
-  var _useState = Object(react["useState"])([]),
-      _useState2 = Overview_slicedToArray(_useState, 2),
-      packages = _useState2[0],
-      setState = _useState2[1];
-
-  return {
-    packages: packages,
-    update: function update(data) {
-      setState(data || []);
-    }
-  };
-}
-
-/* harmony default export */ var overview_Overview = (Overview);
-// CONCATENATED MODULE: ./src/routes/OverviewContainer.jsx
+/* harmony default export */ var list_ExampleMenu = (ExampleMenu);
+// CONCATENATED MODULE: ./src/routes/packages/list/ExampleMenuContainer.jsx
 
 
 
-var OverviewContainer_OverviewContainer = function OverviewContainer() {
-  return /*#__PURE__*/react_default.a.createElement(overview_Overview, null);
+var ExampleMenuContainer_ExampleMenuContaier = function ExampleMenuContaier() {
+  return /*#__PURE__*/react_default.a.createElement(list_ExampleMenu, null);
 };
 
-/* harmony default export */ var routes_OverviewContainer = __webpack_exports__["default"] = (OverviewContainer_OverviewContainer);
+/* harmony default export */ var ExampleMenuContainer = __webpack_exports__["default"] = (ExampleMenuContainer_ExampleMenuContaier);
 
 /***/ }),
 
@@ -432,7 +137,7 @@ var Page_Page = function Page(props) {
 
 /* harmony default export */ var pageLayout_Page = (Page_Page);
 // EXTERNAL MODULE: ./node_modules/classnames/index.js
-var classnames = __webpack_require__(49);
+var classnames = __webpack_require__(50);
 var classnames_default = /*#__PURE__*/__webpack_require__.n(classnames);
 
 // EXTERNAL MODULE: ./node_modules/@fortawesome/react-fontawesome/index.es.js
@@ -560,6 +265,89 @@ var openLink = function openLink(link) {
 };
 
 
+
+/***/ }),
+
+/***/ 49:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var _routeMap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(18);
+
+var packageObj = {
+  list: {
+    name: 'package.list.name',
+    routename: _routeMap__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].PACKAGES_LIST_BASIC,
+    description: 'package.list.description.basic',
+    version: '2.2.0',
+    updated: '2020-06-21',
+    link: {
+      github: 'https://github.com/BlackToolBoxLaboratory/react-list',
+      npm: 'https://www.npmjs.com/package/@blacktoolbox/react-list'
+    }
+  },
+  table: {
+    name: 'package.table.name',
+    routename: _routeMap__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].PACKAGES_TABLE_BASIC,
+    description: 'package.table.description.basic',
+    version: '1.4.0',
+    updated: '2020-06-21',
+    link: {
+      github: 'https://github.com/BlackToolBoxLaboratory/react-table',
+      npm: 'https://www.npmjs.com/package/@blacktoolbox/react-table'
+    }
+  },
+  popover: {
+    name: 'package.popover.name',
+    routename: _routeMap__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].PACKAGES_POPOVER_BASIC,
+    description: 'package.popover.description.basic',
+    version: '1.2.1',
+    updated: '2020-07-07',
+    link: {
+      github: 'https://github.com/BlackToolBoxLaboratory/react-popover',
+      npm: 'https://www.npmjs.com/package/@blacktoolbox/react-popover'
+    }
+  },
+  button: {
+    name: 'package.button.name',
+    routename: _routeMap__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].PACKAGES_BUTTON_BASIC,
+    description: {
+      button: 'package.button.description.button',
+      group: 'package.button.description.group'
+    },
+    version: '1.0.0',
+    updated: '2020-07-08',
+    link: {
+      github: 'https://github.com/BlackToolBoxLaboratory/react-button',
+      npm: 'https://www.npmjs.com/package/@blacktoolbox/react-button'
+    }
+  }
+};
+/* harmony default export */ __webpack_exports__["a"] = (packageObj);
+
+/***/ }),
+
+/***/ 58:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(49);
+
+var packageInfo = {
+  'version': _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].list.version,
+  'updated': _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].list.updated,
+  'description': _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].list.description,
+  'linkList': [{
+    'id': 'github',
+    'fa': ['fab', 'github'],
+    'url': _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].list.link.github
+  }, {
+    'id': 'npm',
+    'fa': ['fab', 'npm'],
+    'url': _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].list.link.npm
+  }]
+};
+/* harmony default export */ __webpack_exports__["a"] = (packageInfo);
 
 /***/ })
 

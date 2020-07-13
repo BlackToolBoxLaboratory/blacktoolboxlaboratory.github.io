@@ -27,7 +27,7 @@ var Page_Page = function Page(props) {
 
 /* harmony default export */ var pageLayout_Page = (Page_Page);
 // EXTERNAL MODULE: ./node_modules/classnames/index.js
-var classnames = __webpack_require__(49);
+var classnames = __webpack_require__(50);
 var classnames_default = /*#__PURE__*/__webpack_require__.n(classnames);
 
 // EXTERNAL MODULE: ./node_modules/@fortawesome/react-fontawesome/index.es.js
@@ -158,7 +158,7 @@ var openLink = function openLink(link) {
 
 /***/ }),
 
-/***/ 50:
+/***/ 49:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -201,7 +201,10 @@ var packageObj = {
   button: {
     name: 'package.button.name',
     routename: _routeMap__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].PACKAGES_BUTTON_BASIC,
-    description: 'package.button.description.basic',
+    description: {
+      button: 'package.button.description.button',
+      group: 'package.button.description.group'
+    },
     version: '1.0.0',
     updated: '2020-07-08',
     link: {
@@ -214,31 +217,32 @@ var packageObj = {
 
 /***/ }),
 
-/***/ 57:
+/***/ 56:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(50);
+/* harmony import */ var _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(49);
 
 var packageInfo = {
-  'version': _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].list.version,
-  'updated': _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].list.updated,
-  'description': _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].list.description,
+  'version': _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].button.version,
+  'updated': _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].button.updated,
+  'descriptionButton': _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].button.description.button,
+  'descriptionGroup': _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].button.description.group,
   'linkList': [{
     'id': 'github',
     'fa': ['fab', 'github'],
-    'url': _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].list.link.github
+    'url': _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].button.link.github
   }, {
     'id': 'npm',
     'fa': ['fab', 'npm'],
-    'url': _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].list.link.npm
+    'url': _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].button.link.npm
   }]
 };
 /* harmony default export */ __webpack_exports__["a"] = (packageInfo);
 
 /***/ }),
 
-/***/ 99:
+/***/ 94:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -255,22 +259,196 @@ var es = __webpack_require__(31);
 // EXTERNAL MODULE: ./node_modules/recompose/dist/Recompose.esm.js + 1 modules
 var Recompose_esm = __webpack_require__(52);
 
-// EXTERNAL MODULE: ./node_modules/@blacktoolbox/react-list/esm/index.js
-var esm = __webpack_require__(56);
+// EXTERNAL MODULE: ./node_modules/classnames/index.js
+var classnames = __webpack_require__(50);
+var classnames_default = /*#__PURE__*/__webpack_require__.n(classnames);
 
-// EXTERNAL MODULE: ./src/modules/pageLayout/index.js + 5 modules
-var pageLayout = __webpack_require__(47);
+// CONCATENATED MODULE: ../react-button/esm/index.js
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
-// EXTERNAL MODULE: ./src/utils/functions.js
-var functions = __webpack_require__(48);
 
-// EXTERNAL MODULE: ./src/components/packages/list/packageInfo.js
-var packageInfo = __webpack_require__(57);
+
+
+function esm_o(t) {
+  return (esm_o = "function" == typeof Symbol && "symbol" == _typeof(Symbol.iterator) ? function (t) {
+    return _typeof(t);
+  } : function (t) {
+    return t && "function" == typeof Symbol && t.constructor === Symbol && t !== Symbol.prototype ? "symbol" : _typeof(t);
+  })(t);
+}
+
+function esm_r(t, e) {
+  return function (t) {
+    if (Array.isArray(t)) return t;
+  }(t) || function (t, e) {
+    if ("undefined" == typeof Symbol || !(Symbol.iterator in Object(t))) return;
+    var n = [],
+        o = !0,
+        r = !1,
+        i = void 0;
+
+    try {
+      for (var c, a = t[Symbol.iterator](); !(o = (c = a.next()).done) && (n.push(c.value), !e || n.length !== e); o = !0) {
+        ;
+      }
+    } catch (t) {
+      r = !0, i = t;
+    } finally {
+      try {
+        o || null == a.return || a.return();
+      } finally {
+        if (r) throw i;
+      }
+    }
+
+    return n;
+  }(t, e) || function (t, e) {
+    if (!t) return;
+    if ("string" == typeof t) return esm_i(t, e);
+    var n = Object.prototype.toString.call(t).slice(8, -1);
+    "Object" === n && t.constructor && (n = t.constructor.name);
+    if ("Map" === n || "Set" === n) return Array.from(t);
+    if ("Arguments" === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return esm_i(t, e);
+  }(t, e) || function () {
+    throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+  }();
+}
+
+function esm_i(t, e) {
+  (null == e || e > t.length) && (e = t.length);
+
+  for (var n = 0, o = new Array(e); n < e; n++) {
+    o[n] = t[n];
+  }
+
+  return o;
+}
+
+var c = function c(t, e) {
+  var n;
+  return e.forEach(function (e) {
+    n = Object.assign({}, n, esm_a(t, e));
+  }), n;
+},
+    esm_a = function a(t, e) {
+  var n = {};
+  return "object" === esm_o(t) && Object.keys(t).find(function (o) {
+    if (o === e) return n = Object.assign({}, t[o]), !0;
+  }), n;
+},
+    u = function u(t) {
+  var e = {};
+  return Object.keys(t).forEach(function (n) {
+    e[n] = {}, Object.keys(t[n]).forEach(function (o) {
+      var r = o.replace(/-(\w)/g, function (t, e) {
+        return e.toUpperCase();
+      });
+      e[n][r] = t[n][o];
+    });
+  }), e;
+},
+    esm_l = /*#__PURE__*/react_default.a.forwardRef(function (e, o) {
+  var r = {
+    styleObj: u(e.styleObj || {})
+  };
+  return /*#__PURE__*/react_default.a.createElement("div", {
+    ref: o,
+    className: classnames_default()("btb-react-button", e.className),
+    style: c(r.styleObj, ["btb-react-button"]),
+    onClick: function onClick() {
+      void 0 !== e.onClick && e.onClick(e);
+    }
+  }, e.prependNode ? /*#__PURE__*/react_default.a.createElement("div", {
+    className: "button_item item-prepend",
+    style: c(r.styleObj, ["button_item", "item-prepend"]),
+    onClick: function onClick() {
+      void 0 !== e.onPrependClick && e.onPrependClick(e);
+    }
+  }, e.prependNode) : [], /*#__PURE__*/react_default.a.createElement("div", {
+    className: "button_item itme-core",
+    style: c(r.styleObj, ["button_item", "itme-core"]),
+    onClick: function onClick() {
+      void 0 !== e.onCoreClick && e.onCoreClick(e);
+    }
+  }, e.children || "Button"), e.appendNode ? /*#__PURE__*/react_default.a.createElement("div", {
+    className: "button_item item-append",
+    style: c(r.styleObj, ["button_item", "item-append"]),
+    onClick: function onClick() {
+      void 0 !== e.onAppendClick && e.onAppendClick(e);
+    }
+  }, e.appendNode) : []);
+}),
+    esm_b = /*#__PURE__*/react_default.a.forwardRef(function (o, i) {
+  var a,
+      l,
+      b,
+      s,
+      f,
+      p = {
+    state_activeID: (l = Object(react["useState"])(a), b = esm_r(l, 2), s = b[0], f = b[1], {
+      value: s,
+      onChange: function onChange(t) {
+        f(t);
+      }
+    }),
+    direction: o.direction ? o.direction : "horizontal",
+    styleObj: u(o.styleObj || {}),
+    slotObj: o.slotObj || {}
+  };
+
+  function m(t) {
+    void 0 !== o.onClick && o.onMemberClick(t);
+  }
+
+  return /*#__PURE__*/react_default.a.createElement("div", {
+    ref: i,
+    className: classnames_default()("btb-react-button-group", o.className, "group-".concat(p.direction)),
+    style: c(p.styleObj, ["btb-react-button-group", "group-".concat(p.direction)])
+  }, o.buttonList ? o.children.map(function (e) {
+    return /*#__PURE__*/react_default.a.createElement("div", {
+      className: classnames_default()("group_button", "button-".concat(e.id), {
+        "button-active": p.state_activeID.value === e.id
+      }),
+      style: c(p.styleObj, ["group_button", "button-".concat(e.id), p.state_activeID.value === e.id ? "button-active" : ""]),
+      key: e.id,
+      onClick: function onClick() {
+        m(e);
+      }
+    }, e);
+  }) : [], o.children ? o.children.map(function (e, o) {
+    return /*#__PURE__*/react_default.a.createElement("div", {
+      className: classnames_default()("group_button", "button-".concat(o)),
+      style: c(p.styleObj, ["group_button", "button-".concat(o)]),
+      key: "".concat(Date.now(), "_").concat(o),
+      onClick: function onClick() {
+        m(e);
+      }
+    }, e);
+  }) : [], o.buttonList.length || o.children ? [] : /*#__PURE__*/react_default.a.createElement("div", {
+    className: "group_button button-empty",
+    style: c(p.styleObj, ["group_button", "button-empty"])
+  }, "Empty"));
+});
+
+var esm_s = {
+  Button: esm_l,
+  ButtonGroup: esm_b
+};
+/* harmony default export */ var esm = (esm_s);
 
 // EXTERNAL MODULE: ./src/plugins/btblab-prototype-languages.js + 2 modules
 var btblab_prototype_languages = __webpack_require__(51);
 
-// CONCATENATED MODULE: ./src/components/packages/list/ExampleMenu.jsx
+// EXTERNAL MODULE: ./src/utils/functions.js
+var functions = __webpack_require__(48);
+
+// EXTERNAL MODULE: ./src/modules/pageLayout/index.js + 5 modules
+var pageLayout = __webpack_require__(47);
+
+// EXTERNAL MODULE: ./src/components/packages/button/packageInfo.js
+var packageInfo = __webpack_require__(56);
+
+// CONCATENATED MODULE: ./src/components/packages/button/ExampleButton.jsx
 
 
 
@@ -284,67 +462,88 @@ var enhance = Object(Recompose_esm["a" /* compose */])(Object(es["b" /* connect 
     'languageSetting': state.language.languageSetting
   };
 }));
-var _menuData = [{
-  id: 'f1',
-  title: 'Folder: 1',
-  children: [{
-    id: 't11',
-    title: 'Menu: 1-1'
-  }, {
-    id: 't12',
-    title: 'Menu: 1-2'
-  }]
-}, {
-  id: 'f2',
-  title: 'Folder: 2',
-  defaultCollapsed: true,
-  children: [{
-    id: 't21',
-    title: 'Menu: 2-1'
-  }, {
-    id: 't22',
-    title: 'Menu: 2-2'
-  }, {
-    id: 't23',
-    title: 'Menu: 2-3'
-  }]
-}];
-var preRender = "<btb-react-list dataList={menuData} />";
-var preListData = "const menuData = [\n  { id: 'f1', title: 'Folder: 1', children: [\n          { id: 't11', title: 'Menu: 1-1' },\n          { id: 't12', title: 'Menu: 1-2' }\n  ]},\n  { id: 'f2', title: 'Folder: 2', defaultCollapsed: true, children: [\n          { id: 't21', title: 'Menu: 2-1' },\n          { id: 't22', title: 'Menu: 2-2' },\n          { id: 't23', title: 'Menu: 2-3' }\n  ]}\n]";
-var ExampleMenu = enhance(function () {
+var preRender = "<BTBButton \n        prependNode=\"<<\" \n        appendNode={<span>{'>>'}</span>} \n        onClick={_onClick} \n        onPrependClick={_onPrependClick} \n        onCoreClick={_onCoreClick} \n        onAppendClick={_onAppendClick}>\n        {'Click Me!'}\n</BTBButton>";
+var preClick = "function _onClick () {\n        console.log('onClick');\n};\n\nfunction _onPrependClick () {\n        console.log('onPrependClick');\n};\n\nfunction _onCoreClick () {\n        console.log('onCoreClick');\n};\n\nfunction _onAppendClick () {\n        console.log('onAppendClick');\n};";
+var ExampleButton = enhance(function () {
+  function _onClick() {
+    console.log('onClick');
+  }
+
+  function _onPrependClick() {
+    console.log('onPrependClick');
+  }
+
+  function _onCoreClick() {
+    console.log('onCoreClick');
+  }
+
+  function _onAppendClick() {
+    console.log('onAppendClick');
+  }
+
   return /*#__PURE__*/react_default.a.createElement(pageLayout["c" /* Page */], {
-    className: "btb-pkg-list-example-menu"
+    className: "btb-pkg-button-example-button"
   }, /*#__PURE__*/react_default.a.createElement(pageLayout["d" /* PageHead */], {
-    title: btblab_prototype_languages["a" /* lang */].translate('package.list.example.menu.title'),
+    title: btblab_prototype_languages["a" /* lang */].translate('package.button.example.button.title'),
     clickBtn: functions["a" /* openLink */],
     linkList: packageInfo["a" /* default */].linkList
   }), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
     head: /*#__PURE__*/react_default.a.createElement(react_default.a.Fragment, null, "".concat(btblab_prototype_languages["a" /* lang */].translate('package.version_colon')).concat(packageInfo["a" /* default */].version), /*#__PURE__*/react_default.a.createElement("br", null), "".concat(btblab_prototype_languages["a" /* lang */].translate('package.release_colon')).concat(packageInfo["a" /* default */].updated))
-  }, /*#__PURE__*/react_default.a.createElement("p", null, btblab_prototype_languages["a" /* lang */].translate('package.list.example.menu.description'))), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
+  }, /*#__PURE__*/react_default.a.createElement("p", null, btblab_prototype_languages["a" /* lang */].translate('package.button.example.button.description'))), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
     head: btblab_prototype_languages["a" /* lang */].translate('package.section.example')
-  }, /*#__PURE__*/react_default.a.createElement(esm["a" /* default */], {
-    dataList: _menuData,
-    collapseEnable: true
-  })), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
+  }, /*#__PURE__*/react_default.a.createElement(esm_l, {
+    prependNode: "<<",
+    appendNode: /*#__PURE__*/react_default.a.createElement("span", null, '>>'),
+    onClick: _onClick,
+    onPrependClick: _onPrependClick,
+    onCoreClick: _onCoreClick,
+    onAppendClick: _onAppendClick
+  }, 'Click Me!')), /*#__PURE__*/react_default.a.createElement(pageLayout["e" /* Section */], {
     head: btblab_prototype_languages["a" /* lang */].translate('package.section.sourceCode')
   }, /*#__PURE__*/react_default.a.createElement("pre", {
     className: "page_pre"
   }, preRender), /*#__PURE__*/react_default.a.createElement(pageLayout["a" /* Block */], {
-    title: "menuData"
+    title: "Click"
   }, /*#__PURE__*/react_default.a.createElement("pre", {
     className: "page_pre"
-  }, preListData))));
+  }, preClick, "}"))));
 });
-/* harmony default export */ var list_ExampleMenu = (ExampleMenu);
-// CONCATENATED MODULE: ./src/routes/packages/list/ExampleMenuContainer.jsx
+/* harmony default export */ var button_ExampleButton = (ExampleButton);
+{
+  /* 
+  <BTBButtonGroup onClick={_onGroupClick}>
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+  </BTBButtonGroup>
+  <BTBButtonGroup onClick={_onGroupClick} direction="horizontal" styleObj={{'member-2' : {color : 'red'}}}>
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+  </BTBButtonGroup>
+  <BTBButtonGroup onClick={_onGroupClick}>
+  </BTBButtonGroup>
+  <BTBButtonGroup onClick={_onGroupClick} direction="vertical">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+  </BTBButtonGroup> */
+}
+// CONCATENATED MODULE: ./src/routes/packages/button/ExampleButtonContainer.jsx
 
 
 
-var ExampleMenuContainer_ExampleMenuContaier = function ExampleMenuContaier() {
-  return /*#__PURE__*/react_default.a.createElement(list_ExampleMenu, null);
+var ExampleButtonContainer_ExampleButtonContaier = function ExampleButtonContaier() {
+  return /*#__PURE__*/react_default.a.createElement(button_ExampleButton, null);
 };
 
-/* harmony default export */ var ExampleMenuContainer = __webpack_exports__["default"] = (ExampleMenuContainer_ExampleMenuContaier);
+/* harmony default export */ var ExampleButtonContainer = __webpack_exports__["default"] = (ExampleButtonContainer_ExampleButtonContaier);
 
 /***/ })
 
