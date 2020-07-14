@@ -907,8 +907,9 @@ var es = __webpack_require__(97);
         'group': 'Button - Group'
       },
       'description': {
-        'button': 'This module of button / button group creator made with React which can do the help to make a button / button group component to our page. Actually both components are designed totally different. I just put them into one package for utilization with single installation. Here I introduce you how to use the button component. Most fancy layout of button could be implemented via CSS. Even though this part is not my lab\'s target to develop components. I still will give some example to show how to implement some layout of button.',
-        'group': 'This module of button / button group creator made with React which can do the help to make a button / button group component to our page. Actually both components are designed totally different. I just put them into one package for utilization with single installation. Here I introduce you how to use the button group component. And I will show you how to utilize the button group to implement the pagination which is usually used with table.'
+        'basic': 'This module of button / button group creator made with React which can do the help to make a button / button group component to our page. Actually both components are designed totally different. So I just put them into one package for utilization with single installation.',
+        'button': 'This module of button / button group creator made with React which can do the help to make a button / button group component to our page. Actually both components are designed totally different. So I just put them into one package for utilization with single installation. Here I introduce you how to use the button component. Most fancy layout of button could be implemented via CSS. Even though this part is not my lab\'s target to develop components. I still will give some example to show how to implement some layout of button.',
+        'group': 'This module of button / button group creator made with React which can do the help to make a button / button group component to our page. Actually both components are designed totally different. So I just put them into one package for utilization with single installation. Here I introduce you how to use the button group component. And I will show you how to utilize the button group to implement the pagination which is usually used with table.'
       },
       'parameters': {
         'styleObj': 'Any className in this module could add inline CSS by styleObj.'
@@ -1215,8 +1216,9 @@ var es = __webpack_require__(97);
         'group': '按鈕 - 按鈕組'
       },
       'description': {
-        'button': '本套件包含兩個套件，一為按鈕（button），一為按鈕組（button group），事實上兩者開發的結構並無直接相關聯，只是兩者皆為按鈕相關的套件，放在同一個套件包裡，方便安裝使用，而這邊為按鈕的基本介紹。雖然外觀設計並非本實驗室開發套件的重點，然為了貼近實際應用，還是會提供一些常見的按鈕外觀作為範例。',
-        'group': '本套件包含兩個套件，一為按鈕（button），一為按鈕組（button group），事實上兩者開發的結構並無直接相關聯，只是兩者皆為按鈕相關的套件，放在同一個套件包裡，方便安裝使用，這邊為按鈕祖的基本介紹。範例的部分，還會展示如何使用按鈕組實作，常與表（table）配合使用的分頁按鈕組。'
+        'basic': '本套件包含兩個套件，一為按鈕（button），一為按鈕組（button group），事實上兩者開發的結構並無直接相關聯，只是兩者皆為按鈕相關的套件，所以放在同一個套件包裡，方便安裝使用。',
+        'button': '本套件包含兩個套件，一為按鈕（button），一為按鈕組（button group），事實上兩者開發的結構並無直接相關聯，只是兩者皆為按鈕相關的套件，所以放在同一個套件包裡，方便安裝使用，而這邊為按鈕的基本介紹。雖然外觀設計並非本實驗室開發套件的重點，然為了貼近實際應用，還是會提供一些常見的按鈕外觀作為範例。',
+        'group': '本套件包含兩個套件，一為按鈕（button），一為按鈕組（button group），事實上兩者開發的結構並無直接相關聯，只是兩者皆為按鈕相關的套件，所以放在同一個套件包裡，方便安裝使用，這邊為按鈕祖的基本介紹。範例的部分，還會展示如何使用按鈕組實作，常與表（table）配合使用的分頁按鈕組。'
       },
       'parameters': {
         'styleObj': '套件中任何具有 className 的節點，皆能使用 styleObj 定義 inline CSS。'

@@ -298,10 +298,9 @@ var packageObj = {
   button: {
     name: 'package.button.name',
     routename: _routeMap__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].PACKAGES_BUTTON_BASIC,
-    description: {
-      button: 'package.button.description.button',
-      group: 'package.button.description.group'
-    },
+    description: 'package.button.description.basic',
+    description_button: 'package.button.description.button',
+    description_group: 'package.button.description.group',
     version: '1.0.0',
     updated: '2020-07-08',
     link: {

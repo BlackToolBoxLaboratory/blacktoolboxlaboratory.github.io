@@ -201,10 +201,9 @@ var packageObj = {
   button: {
     name: 'package.button.name',
     routename: _routeMap__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].PACKAGES_BUTTON_BASIC,
-    description: {
-      button: 'package.button.description.button',
-      group: 'package.button.description.group'
-    },
+    description: 'package.button.description.basic',
+    description_button: 'package.button.description.button',
+    description_group: 'package.button.description.group',
     version: '1.0.0',
     updated: '2020-07-08',
     link: {
@@ -226,8 +225,8 @@ var packageObj = {
 var packageInfo = {
   'version': _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].button.version,
   'updated': _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].button.updated,
-  'descriptionButton': _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].button.description.button,
-  'descriptionGroup': _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].button.description.group,
+  'descriptionButton': _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].button.description_button,
+  'descriptionGroup': _src_assets_definitions_packageObj__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"].button.description_group,
   'linkList': [{
     'id': 'github',
     'fa': ['fab', 'github'],
