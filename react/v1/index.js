@@ -4103,7 +4103,7 @@ var _freeBrandsSvgIcons = __webpack_require__(101);
 
 _fontawesomeSvgCore.library.add(
 /* fas */
-_freeSolidSvgIcons.faUserCircle, _freeSolidSvgIcons.faLink, _freeSolidSvgIcons.faExternalLinkAlt, _freeSolidSvgIcons.faEnvelope, _freeSolidSvgIcons.faHome, _freeSolidSvgIcons.faArrowLeft, _freeSolidSvgIcons.faTrashAlt, _freeSolidSvgIcons.faPlusSquare, _freeSolidSvgIcons.faCaretSquareRight, _freeSolidSvgIcons.faCaretSquareLeft,
+_freeSolidSvgIcons.faUserCircle, _freeSolidSvgIcons.faLink, _freeSolidSvgIcons.faExternalLinkAlt, _freeSolidSvgIcons.faEnvelope, _freeSolidSvgIcons.faHome, _freeSolidSvgIcons.faArrowLeft, _freeSolidSvgIcons.faArrowRight, _freeSolidSvgIcons.faTrashAlt, _freeSolidSvgIcons.faPlusSquare, _freeSolidSvgIcons.faCaretSquareRight, _freeSolidSvgIcons.faCaretSquareLeft,
 /* fab */
 _freeBrandsSvgIcons.fab, _freeBrandsSvgIcons.faGithub, _freeBrandsSvgIcons.faNpm);
 
@@ -9256,7 +9256,7 @@ var Example = function (_Component) {
                     { className: 'userList-deleteButton', onClick: function onClick() {
                         _this2._deleteHandler(entry['ID']);
                       } },
-                    _react2.default.createElement(_reactFontawesome.FontAwesomeIcon, { icon: ['fas', 'trash'], fixedWidth: true })
+                    _react2.default.createElement(_reactFontawesome.FontAwesomeIcon, { icon: ['fas', 'trash-alt'], fixedWidth: true })
                   )
                 ));
                 return content_datalist_tr;
@@ -9916,7 +9916,7 @@ var Example = function (_Component) {
                     { className: 'userList-deleteButton', onClick: function onClick() {
                         _this2._deleteHandler(entry['ID']);
                       } },
-                    _react2.default.createElement(_reactFontawesome.FontAwesomeIcon, { icon: ['fas', 'trash'], fixedWidth: true })
+                    _react2.default.createElement(_reactFontawesome.FontAwesomeIcon, { icon: ['fas', 'trash-alt'], fixedWidth: true })
                   )
                 ));
                 return content_datalist_tr;
@@ -10810,7 +10810,7 @@ var App = function (_Component) {
                     { className: 'userList-deleteButton', onClick: function onClick() {
                         _this2._deleteHandler('left', entry['uId']);
                       } },
-                    _react2.default.createElement(_reactFontawesome.FontAwesomeIcon, { icon: ['fas', 'trash'], fixedWidth: true })
+                    _react2.default.createElement(_reactFontawesome.FontAwesomeIcon, { icon: ['fas', 'trash-alt'], fixedWidth: true })
                   )
                 ));
                 return content_datalist_tr;
@@ -10842,14 +10842,14 @@ var App = function (_Component) {
                     { className: 'userList-moveButton', onClick: function onClick() {
                         _this2._moveHandler('left', entry['uId']);
                       } },
-                    _react2.default.createElement(_reactFontawesome.FontAwesomeIcon, { icon: ['fas', 'caret-square-right'], fixedWidth: true })
+                    _react2.default.createElement(_reactFontawesome.FontAwesomeIcon, { icon: ['fas', 'caret-square-left'], fixedWidth: true })
                   ),
                   _react2.default.createElement(
                     'div',
                     { className: 'userList-deleteButton', onClick: function onClick() {
                         _this2._deleteHandler('right', entry['uId']);
                       } },
-                    _react2.default.createElement(_reactFontawesome.FontAwesomeIcon, { icon: ['fas', 'trash'], fixedWidth: true })
+                    _react2.default.createElement(_reactFontawesome.FontAwesomeIcon, { icon: ['fas', 'trash-alt'], fixedWidth: true })
                   )
                 ));
                 return content_datalist_tr;
@@ -12345,7 +12345,7 @@ var LeftList = function LeftList(_ref) {
           { className: 'userList-deleteButton', onClick: function onClick() {
               removeUserHandler(entry);
             } },
-          _react2.default.createElement(_reactFontawesome.FontAwesomeIcon, { icon: ['fas', 'trash'], fixedWidth: true })
+          _react2.default.createElement(_reactFontawesome.FontAwesomeIcon, { icon: ['fas', 'trash-alt'], fixedWidth: true })
         )
       ));
       return content_entry;
@@ -12475,7 +12475,7 @@ var RightList = function RightList(_ref) {
           { className: 'userList-deleteButton', onClick: function onClick() {
               removeUserHandler(entry);
             } },
-          _react2.default.createElement(_reactFontawesome.FontAwesomeIcon, { icon: ['fas', 'trash'], fixedWidth: true })
+          _react2.default.createElement(_reactFontawesome.FontAwesomeIcon, { icon: ['fas', 'trash-alt'], fixedWidth: true })
         )
       ));
       return content_entry;
@@ -13126,7 +13126,7 @@ var LeftList = function LeftList(_ref) {
           { className: 'userList-deleteButton', onClick: function onClick() {
               removeUserHandler(entry);
             } },
-          _react2.default.createElement(_reactFontawesome.FontAwesomeIcon, { icon: ['fas', 'trash'], fixedWidth: true })
+          _react2.default.createElement(_reactFontawesome.FontAwesomeIcon, { icon: ['fas', 'trash-alt'], fixedWidth: true })
         )
       ));
       return content_entry;
@@ -13256,7 +13256,7 @@ var RightList = function RightList(_ref) {
           { className: 'userList-deleteButton', onClick: function onClick() {
               removeUserHandler(entry);
             } },
-          _react2.default.createElement(_reactFontawesome.FontAwesomeIcon, { icon: ['fas', 'trash'], fixedWidth: true })
+          _react2.default.createElement(_reactFontawesome.FontAwesomeIcon, { icon: ['fas', 'trash-alt'], fixedWidth: true })
         )
       ));
       return content_entry;
@@ -13486,8 +13486,8 @@ var setupFinishedContent = _react2.default.createElement(
   'Welcome to ',
   _react2.default.createElement(
     'a',
-    { target: '_blank', href: 'http://localhost:9000' },
-    'http://localhost:9000',
+    { target: '_blank', href: 'http://localhost:8000' },
+    'http://localhost:8000',
     _react2.default.createElement(_reactFontawesome.FontAwesomeIcon, { icon: ['fas', 'external-link-alt'], fixedWidth: true })
   ),
   '.'
