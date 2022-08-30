@@ -3516,7 +3516,7 @@ if(false) {
 	// When the styles change, update the <style> tags
 	if(!content.locals) {
 		module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/postcss-loader/lib/index.js??ref--2-2!../../node_modules/less-loader/dist/cjs.js!./index.less", function() {
-			var newContent = require("node_modules/css-loader/node_modules/postcss-loader/lib/node_modules/less-loader/dist/cjs.js!./index.less");
+			var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/postcss-loader/lib/index.js??ref--2-2!../../node_modules/less-loader/dist/cjs.js!./index.less");
 			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 			update(newContent);
 		});
@@ -8380,7 +8380,7 @@ var introductionExampleContent = _react2.default.createElement(
   ' ',
   _react2.default.createElement(
     'a',
-    { target: '_blank', href: 'https://github.com/BlackToolBoxLaboratory/blacktbox-demo/tree/master/src/example/articleFlux/example' },
+    { target: '_blank', href: 'https://github.com/BlackToolBoxLaboratory/blacktbox-demo/tree/staging/version-1.0.0/src/example/articleFlux/example' },
     'example',
     _react2.default.createElement(_reactFontawesome.FontAwesomeIcon, { icon: ['fas', 'external-link-alt'], fixedWidth: true })
   ),
@@ -8392,7 +8392,7 @@ var introductionExampleAlgorithmDescription = _react2.default.createElement(
   'To implement the User List. Basically we need three factors: render(View), data(Store), access handler(Action). It is quite easy to implement it by coding them all together. However in systemic angle, if we want to separate them to keep system construction defined and used clear(to unify or generalize), we may need to use some framework to let system keep clear like Flux. And next, we will show it in Flux way. Comparing my ',
   _react2.default.createElement(
     'a',
-    { target: '_blank', href: 'https://github.com/BlackToolBoxLaboratory/blacktbox-demo/tree/master/src/example/articleFlux/exampleFlux' },
+    { target: '_blank', href: 'https://blacktoolbox.cogman.org/react/v1/#/articles/flux' },
     'Flux\'s example',
     _react2.default.createElement(_reactFontawesome.FontAwesomeIcon, { icon: ['fas', 'external-link-alt'], fixedWidth: true })
   ),
@@ -8423,7 +8423,7 @@ var advancedServerContent = _react2.default.createElement(
   'Then, here is the User List work with server API. And also here is the source code of ',
   _react2.default.createElement(
     'a',
-    { target: '_blank', href: 'https://github.com/BlackToolBoxLaboratory/blacktbox-demo/tree/master/src/example/articleFlux/exampleFlux_server' },
+    { target: '_blank', href: 'https://blacktoolbox.cogman.org/react/v1/#/articles/flux' },
     'Flux\'s example with server',
     _react2.default.createElement(_reactFontawesome.FontAwesomeIcon, { icon: ['fas', 'external-link-alt'], fixedWidth: true })
   )
@@ -10272,7 +10272,7 @@ var introductionContent = _react2.default.createElement(
   ' and use in our example for practice. My source code of example is ',
   _react2.default.createElement(
     'a',
-    { target: '_blank', href: 'https://github.com/BlackToolBoxLaboratory/blacktbox-demo/tree/master/src/example/articleRedux/example' },
+    { target: '_blank', href: 'https://github.com/BlackToolBoxLaboratory/blacktbox-demo/tree/staging/version-1.0.0/src/example/articleRedux/example' },
     'here',
     _react2.default.createElement(_reactFontawesome.FontAwesomeIcon, { icon: ['fas', 'external-link-alt'], fixedWidth: true })
   ),
@@ -10323,7 +10323,7 @@ var advancedServerContent = _react2.default.createElement(
   'Then, here is the User List work with server API. And also here is the source code of ',
   _react2.default.createElement(
     'a',
-    { target: '_blank', href: 'https://github.com/BlackToolBoxLaboratory/blacktbox-demo/tree/master/src/example/articleRedux/exampleRedux_server' },
+    { target: '_blank', href: 'https://github.com/BlackToolBoxLaboratory/blacktbox-demo/tree/staging/version-1.0.0/src/example/articleRedux/exampleRedux_server' },
     'Redux\'s example with server',
     _react2.default.createElement(_reactFontawesome.FontAwesomeIcon, { icon: ['fas', 'external-link-alt'], fixedWidth: true })
   )
