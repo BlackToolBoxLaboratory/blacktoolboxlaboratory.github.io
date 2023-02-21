@@ -1,0 +1,1 @@
+{"version":3,"file":"2007.b7b04761dcb98dea84c5.js","mappings":"sJAAA,IAAMA,EAAW,SAACC,GAChBC,OAAOC,KAAKF,EAAKG,IACnB,C","sources":["webpack://homepage_react/./src/utils/functions.js"],"sourcesContent":["const openLink = (link) => {\n  window.open(link.url);\n};\n\nexport { openLink };\n"],"names":["openLink","link","window","open","url"],"sourceRoot":""}

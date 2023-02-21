@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkhomepage_react=self.webpackChunkhomepage_react||[]).push([[2007],{2007:function(e,n,u){u.d(n,{n:function(){return c}});var c=function(e){window.open(e.url)}}}]);

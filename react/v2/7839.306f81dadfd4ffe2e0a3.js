@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkhomepage_react=self.webpackChunkhomepage_react||[]).push([[7839],{7839:function(e,i,n){var t=n(4989),a={version:t.Z.timeline.version,updated:t.Z.timeline.updated,description:t.Z.timeline.description,linkList:[{id:"github",fa:["fab","github"],url:t.Z.timeline.link.github},{id:"npm",fa:["fab","npm"],url:t.Z.timeline.link.npm}]};i.Z=a}}]);
