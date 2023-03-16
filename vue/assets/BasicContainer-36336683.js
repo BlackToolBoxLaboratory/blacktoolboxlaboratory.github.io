@@ -1,4 +1,4 @@
-import{p as u}from"./packageObj-ad5f4fef.js";import{o as S}from"./functions-b0e39c2c.js";import{d as k,_ as m,r as d,o as _,c as y,w as e,a as t,I as o,t as a,e as n}from"./index-7c65f873.js";const B=`<btb-vue-table
+import{p as u}from"./packageObj-8a69533a.js";import{o as S}from"./functions-b0e39c2c.js";import{d as k,_ as m,r as d,o as _,c as y,w as e,a as t,I as o,t as a,e as n}from"./index-d6024372.js";const B=`<btb-vue-table
         :headData=" Array of TableHeadObj" 
         :bodyData=" Array of TableBodyObj"
         :mode=" String "
