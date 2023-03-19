@@ -1,4 +1,4 @@
-import{p}from"./packageObj-77fd858e.js";import{o as k}from"./functions-b0e39c2c.js";import{d as j,_ as b,r as i,o as y,c as m,w as e,a as t,I as n,t as a,e as o}from"./index-7c9959a1.js";const O=`<btb-vue-list 
+import{p}from"./packageObj-15dea63c.js";import{o as k}from"./functions-b0e39c2c.js";import{d as j,_ as b,r as i,o as y,c as m,w as e,a as t,I as n,t as a,e as o}from"./index-95f06f98.js";const O=`<btb-vue-list 
         :dataList=" Array " 
         :activeID=" String "
         :collapseEnable=" Boolean "
