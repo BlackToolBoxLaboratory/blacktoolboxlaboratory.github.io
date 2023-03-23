@@ -1,0 +1,1 @@
+import{_ as o,r as t,o as n,c as r}from"./index-cb1d75c3.js";const c={name:"btb-pkg-container"};function a(s,_,p,i,f,m){const e=t("router-view");return n(),r(e)}const d=o(c,[["render",a]]);export{d as default};
