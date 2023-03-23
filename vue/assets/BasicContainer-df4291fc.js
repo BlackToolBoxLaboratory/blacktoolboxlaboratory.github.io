@@ -1,4 +1,4 @@
-import{p as u}from"./packageObj-ab89dbe7.js";import{d as S,bv as k,_ as m,r as d,o as _,c as y,w as e,a as t,M as o,f as a,e as n}from"./index-64022100.js";const B=`<btb-vue-table
+import{p as u}from"./packageObj-964ab5b0.js";import{d as S,bv as k,_ as m,r as d,o as _,c as y,w as e,a as t,M as o,f as a,e as n}from"./index-e8161bd7.js";const B=`<btb-vue-table
         :headData=" Array of TableHeadObj" 
         :bodyData=" Array of TableBodyObj"
         :mode=" String "
