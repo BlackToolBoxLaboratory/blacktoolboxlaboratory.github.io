@@ -1,4 +1,4 @@
-import{d as h,u as L,s as B,t as I,bv as C,_ as r,r as l,o as c,c as m,w as t,a as n,M as o,f as a,e as s}from"./index-cb1d75c3.js";import{p as D}from"./packageInfo-89b8c3cb.js";import"./packageObj-0bcbfd50.js";const v='<btb-vue-list :dataList="menuData" collapseEnable/>',x=`const menuData = [
+import{d as h,u as L,s as B,t as I,bv as C,_ as r,r as l,o as c,c as m,w as t,a as n,M as o,f as a,e as s}from"./index-d83f0453.js";import{p as D}from"./packageInfo-0260da02.js";import"./packageObj-d1ee65fd.js";const v='<btb-vue-list :dataList="menuData" collapseEnable/>',x=`const menuData = [
         { id: 'f1', title: 'Folder: 1', children: [
                 { id: 't11', title: 'Menu: 1-1' },
                 { id: 't12', title: 'Menu: 1-2' }
