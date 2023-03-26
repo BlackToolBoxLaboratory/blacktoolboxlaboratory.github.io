@@ -1,4 +1,4 @@
-import{d as _,u as $,s as B,t as V,bv as L,_ as c,r as i,o as v,c as f,w as n,a as l,M as o,f as e,e as t}from"./index-d83f0453.js";import{a as s}from"./applicationObj-672da7e5.js";const y={version:s.validator.version,updated:s.validator.updated,description:s.validator.description,linkList:[{id:"github",fa:["fab","github"],url:s.validator.link.github},{id:"npm",fa:["fab","npm"],url:s.validator.link.npm}]},C="$ npm install --save @blacktoolbox/prototype-validator",w=`import Validator from '@blacktoolbox/prototype-validator';
+import{d as _,u as $,s as B,t as V,bv as L,_ as c,r as i,o as v,c as f,w as n,a as l,M as o,f as e,e as t}from"./index-262b4e22.js";import{a as s}from"./applicationObj-97e09954.js";const y={version:s.validator.version,updated:s.validator.updated,description:s.validator.description,linkList:[{id:"github",fa:["fab","github"],url:s.validator.link.github},{id:"npm",fa:["fab","npm"],url:s.validator.link.npm}]},C="$ npm install --save @blacktoolbox/prototype-validator",w=`import Validator from '@blacktoolbox/prototype-validator';
 
 const validator = new Validator();
 

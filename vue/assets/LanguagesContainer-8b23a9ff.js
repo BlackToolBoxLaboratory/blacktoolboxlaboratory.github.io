@@ -1,4 +1,4 @@
-import{d as L,u as z,s as B,t as v,bv as y,_ as d,r as s,o as c,c as m,w as e,a as t,M as o,f as n,e as l}from"./index-d83f0453.js";import{a as p}from"./applicationObj-672da7e5.js";const C={version:p.languages.version,updated:p.languages.updated,description:p.languages.description,linkList:[{id:"github",fa:["fab","github"],url:p.languages.link.github},{id:"npm",fa:["fab","npm"],url:p.languages.link.npm}]},T="$ npm install --save @blacktoolbox/prototype-languages",j=`import { initializer } from '@blacktoolbox/prototype-languages';
+import{d as L,u as z,s as B,t as v,bv as y,_ as d,r as s,o as c,c as m,w as e,a as t,M as o,f as n,e as l}from"./index-262b4e22.js";import{a as p}from"./applicationObj-97e09954.js";const C={version:p.languages.version,updated:p.languages.updated,description:p.languages.description,linkList:[{id:"github",fa:["fab","github"],url:p.languages.link.github},{id:"npm",fa:["fab","npm"],url:p.languages.link.npm}]},T="$ npm install --save @blacktoolbox/prototype-languages",j=`import { initializer } from '@blacktoolbox/prototype-languages';
 
 import en from '@src/assets/languages/en.js';
 import zh from '@src/assets/languages/zh.js';
