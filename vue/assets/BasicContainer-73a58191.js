@@ -1,4 +1,4 @@
-import{d as B,u as A,s as D,t as $,bw as j,bv as O,_ as m,r,o as y,c as h,w as t,a as o,M as n,f as a,e as l}from"./index-8f4f504c.js";import{p as w}from"./packageInfo-0d34830e.js";import"./packageObj-cd967c47.js";const S=`$ npm install --save @blacktoolbox/vue-popover
+import{d as B,u as A,s as D,t as $,bw as j,bv as O,_ as m,r,o as y,c as h,w as t,a as o,M as n,f as a,e as l}from"./index-eb68d8c1.js";import{p as w}from"./packageInfo-19463ae0.js";import"./packageObj-2fa2689f.js";const S=`$ npm install --save @blacktoolbox/vue-popover
 
 import Vue from 'vue'
 

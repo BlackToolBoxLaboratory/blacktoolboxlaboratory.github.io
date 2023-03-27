@@ -1,4 +1,4 @@
-import{d as I,u as h,s as D,aJ as B,t as $,bv as j,_ as m,r as n,o as f,c as b,w as t,a,M as o,f as l,e as s}from"./index-8f4f504c.js";import{p as O}from"./packageInfo-64ffd6de.js";import"./packageObj-cd967c47.js";const S=`<btb-vue-list 
+import{d as I,u as h,s as D,aJ as B,t as $,bv as j,_ as m,r as n,o as f,c as b,w as t,a,M as o,f as l,e as s}from"./index-eb68d8c1.js";import{p as O}from"./packageInfo-b17e17ce.js";import"./packageObj-2fa2689f.js";const S=`<btb-vue-list 
         v-model:activeID="activeID"
         :dataList="listData"
         :styleObj="styleObj"/>`,C=`const listData = [

@@ -1,0 +1,1 @@
+import{_ as e,r,o as t,c as n}from"./index-eb68d8c1.js";const c={name:"btb-pkg-popover-container"};function s(a,p,_,i,f,m){const o=r("router-view");return t(),n(o)}const v=e(c,[["render",s]]);export{v as default};

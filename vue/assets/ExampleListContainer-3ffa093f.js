@@ -1,4 +1,4 @@
-import{d as B,u as $,s as I,t as D,bv as v,_ as c,r as n,o as u,c as m,w as t,a,M as i,f as l,e as s}from"./index-8f4f504c.js";import{p as C}from"./packageInfo-64ffd6de.js";import"./packageObj-cd967c47.js";const x='<btb-vue-list :dataList="listData"/>',T=`const listData = [
+import{d as B,u as $,s as I,t as D,bv as v,_ as c,r as n,o as u,c as m,w as t,a,M as i,f as l,e as s}from"./index-eb68d8c1.js";import{p as C}from"./packageInfo-b17e17ce.js";import"./packageObj-2fa2689f.js";const x='<btb-vue-list :dataList="listData"/>',T=`const listData = [
         { id: 'b1', title: 'Branch: 1', children: [
                 { id: 'l11', title: 'Leaf: 1-1' },
                 { id: 'b12', title: 'Branch: 1-2', children: [

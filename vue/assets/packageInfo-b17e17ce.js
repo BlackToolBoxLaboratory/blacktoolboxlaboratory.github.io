@@ -1,0 +1,1 @@
+import{p as i}from"./packageObj-2fa2689f.js";const p={version:i.list.version,updated:i.list.updated,description:i.list.description,linkList:[{id:"github",fa:["fab","github"],url:i.list.link.github},{id:"npm",fa:["fab","npm"],url:i.list.link.npm}]};export{p};

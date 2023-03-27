@@ -1,4 +1,4 @@
-import{d as k,u as x,s as B,t as $,bv as E,_ as m,r as l,o as d,c,w as o,a as t,M as n,f as a,e as p}from"./index-8f4f504c.js";import{p as I}from"./packageInfo-0d34830e.js";import"./packageObj-cd967c47.js";const L=`<btb-vue-popover position="left">
+import{d as k,u as x,s as B,t as $,bv as E,_ as m,r as l,o as d,c,w as o,a as t,M as n,f as a,e as p}from"./index-eb68d8c1.js";import{p as I}from"./packageInfo-19463ae0.js";import"./packageObj-2fa2689f.js";const L=`<btb-vue-popover position="left">
         <template #trigger>
                 <button>Left</button>
         </template>

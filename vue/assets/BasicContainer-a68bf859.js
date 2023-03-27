@@ -1,4 +1,4 @@
-import{d as O,u as L,s as D,t as _,bw as T,bv as $,_ as u,r as i,o as m,c as k,w as t,a as n,M as l,f as a,e as r}from"./index-8f4f504c.js";import{p as A}from"./packageInfo-64ffd6de.js";import"./packageObj-cd967c47.js";const C=`$ npm install --save @blacktoolbox/vue-list
+import{d as O,u as L,s as D,t as _,bw as T,bv as $,_ as u,r as i,o as m,c as k,w as t,a as n,M as l,f as a,e as r}from"./index-eb68d8c1.js";import{p as A}from"./packageInfo-b17e17ce.js";import"./packageObj-2fa2689f.js";const C=`$ npm install --save @blacktoolbox/vue-list
 
 import Vue from 'vue'
 

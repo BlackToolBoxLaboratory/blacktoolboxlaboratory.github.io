@@ -1,4 +1,4 @@
-import{d as $,u as v,s as I,t as S,bv as D,_ as c,r as o,o as m,c as u,w as t,a,M as n,f as l,e as i}from"./index-8f4f504c.js";import{p as w}from"./packageInfo-64ffd6de.js";import"./packageObj-cd967c47.js";const C=`<btb-vue-list :dataList="listData"/>
+import{d as $,u as v,s as I,t as S,bv as D,_ as c,r as o,o as m,c as u,w as t,a,M as n,f as l,e as i}from"./index-eb68d8c1.js";import{p as w}from"./packageInfo-b17e17ce.js";import"./packageObj-2fa2689f.js";const C=`<btb-vue-list :dataList="listData"/>
       <template #b2>
               {{'b2 customized by Slot'}}
       </template>

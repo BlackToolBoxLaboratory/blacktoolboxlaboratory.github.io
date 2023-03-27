@@ -1,4 +1,4 @@
-import{d as x,u as h,s as B,t as C,bv as $,_ as d,r as p,o as m,c,w as t,a as n,M as o,f as l,e as a}from"./index-8f4f504c.js";import{p as I}from"./packageInfo-0d34830e.js";import"./packageObj-cd967c47.js";const L=`<btb-vue-popover position="top" align="begin">
+import{d as x,u as h,s as B,t as C,bv as $,_ as d,r as p,o as m,c,w as t,a as n,M as o,f as l,e as a}from"./index-eb68d8c1.js";import{p as I}from"./packageInfo-19463ae0.js";import"./packageObj-2fa2689f.js";const L=`<btb-vue-popover position="top" align="begin">
         <template #trigger>
                 <button>Begin</button>
         </template>
