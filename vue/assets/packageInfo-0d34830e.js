@@ -1,0 +1,1 @@
+import{p}from"./packageObj-cd967c47.js";const i={version:p.popover.version,updated:p.popover.updated,description:p.popover.description,linkList:[{id:"github",fa:["fab","github"],url:p.popover.link.github},{id:"npm",fa:["fab","npm"],url:p.popover.link.npm}]};export{i as p};
