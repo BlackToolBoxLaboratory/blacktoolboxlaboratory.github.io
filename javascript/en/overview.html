@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="utf-8"/>
+  <meta http-equiv="Cache-Control" content="no-cache"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+  <link rel="stylesheet" type="text/css" href="/javascript/libs/fontawesome/css/all.min.css"/>
+  <link rel="stylesheet" type="text/css" href="/javascript/style/index.css"/>
+  <link rel="stylesheet" type="text/css" href="/javascript/style/overview.css"/>
+
+  <link rel="icon" href="/javascript/favicon.ico" type="image/x-icon"/>
+  <title>BTB Lab. | JavaScript | </title>
+  <meta name="google-site-verification" content="XjkUm8M885lvmNSs9BKe9khMCQY99rSfGsN3Tf6yfBY"/>
+
+  <meta property="og:title" content=""/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://blacktoolbox.cogman.org/javascript"/>
+  <meta property="og:image" content="https://blacktoolbox.cogman.org/javascript/images/logo_JavaScript.png"/>
+  <meta name="description" property="og:description" content=""/>
+
+  <meta property="fb:app_id" content="271733690121245"/>
+
+  <meta name="twitter:card" content="summary"/>
+  <meta name="twitter:site" content="@vannoel0628"/>
+  <meta name="twitter:creator" content="@vannoel0628"/>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QB4KF9ECZ6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || []
+    function gtag() {
+      dataLayer.push(arguments)
+    }
+    gtag("js", new Date())
+
+    gtag("config", "G-QB4KF9ECZ6")
+  </script>
+
+  <body id="overview" class="layout">
+    
+    <header class="layout_header padding-sm">
+  <div class="header_logo margin-sm radius-md">
+    <div class="logo_content font-3xl font-bold">
+      BJ
+    </div>
+  </div>
+  <div class="header_title margin-sm">
+    <div class="title_main main-md font-bold font-lg">
+      Black Tool Box Laboratory
+    </div>
+    <div class="title_main main-sm font-bold font-lg">
+      BTB
+    </div>
+    <div class="title_sub sub-md">
+      For JavaScript
+    </div>
+    <div class="title_sub sub-sm">
+      For JS
+    </div>
+  </div>
+  <a id="homepage_opener" class="header_item margin-md" href="https://blacktoolboxlaboratory.github.io/"
+        target="_blank" rel="noreferrer">
+    <i class="fas fa-building fa-fw header_button font-lg"></i>
+  </a>
+  <a id="homepage_opener" class="header_item margin-md" href="/javascript/en/index.html">
+    <i class="fas fa-home fa-fw header_button font-lg"></i>
+  </a>
+  <div id="language_opener" class="header_item item-lang margin-md">
+    <i class="fas fa-globe fa-fw header_button font-lg" onclick="toggleLangMenu()"></i>
+    <div id="language_menu" class="lang_container menu-hidden"></div>
+  </div>
+
+  <div id="menu_trigger" class="header_item margin-md">
+    <i class="fas fa-bars fa-fw header_button font-lg" onclick="togglePageMenu()"></i>
+  </div>
+</header>
+
+    
+    <main class="layout_body page">
+      
+<div class="page_container">
+  <div class="page_head">
+    <h1 class="page_title">Overview</h1>
+    <a class="head_linkBtn linkBtn-github" href="https://github.com/BlackToolBoxLaboratory?q=prototype"
+      target="_blank">
+      <i class="fab fa-github fa-fw"></i>
+    </a>
+    <a class="head_linkBtn linkBtn-npm" href="https://www.npmjs.com/search?q=%40blacktoolbox%2Fprototype"
+      target="_blank">
+      <i class="fab fa-npm fa-fw"></i>
+    </a>
+  </div>
+  <section class="page_section">
+    <div class="section_title">
+      JAVASCRIPT
+    </div>
+    <div id="jsList" class="grid-row"></div>
+  </section>
+  <section class="page_section">
+    <div class="section_title">
+      REACT
+    </div>
+    <div id="reactList" class="grid-row"></div>
+  </section>
+  <section class="page_section">
+    <div class="section_title">
+      VUE
+    </div>
+    <div id="vueList" class="grid-row"></div>
+  </section>
+</div>
+
+
+    </main>
+
+    
+    <div class="layout_footNav">
+  <a class="footNav_linkBtn linkBtn-github" href="https://github.com/BlackToolBoxLaboratory" target="_blank">
+    <i class="fab fa-github fa-fw"></i>
+  </a>
+  <a class="footNav_linkBtn linkBtn-npm" href="https://www.npmjs.com/org/blacktoolbox" target="_blank">
+    <i class="fab fa-npm fa-fw"></i>
+  </a>
+  <a class="footNav_linkBtn linkBtn-linkedin" href="https://www.linkedin.com/company/black-tool-box-laboratory/"
+    target="_blank">
+    <i class="fab fa-linkedin fa-fw"></i>
+  </a>
+  <a class="footNav_linkBtn linkBtn-email" href="mailto:vannoel@cogman.org" target="_blank">
+    <i class="far fa-envelope fa-fw"></i>
+  </a>
+</div>
+<footer class="layout_footer font-xs padding-md">
+  Copyright © Black Tool Box Laboratory. All rights reserved.
+</footer>
+
+    
+    <aside id="pageMenu_container" class="layout_aside"></aside>
+
+    
+
+    
+    <script type="text/javascript" src="/javascript/libs/prototype-languages/index.min.js"></script>
+    <script type="text/javascript" src="/javascript/libs/prototype-validator/index.min.js"></script>
+    <script type="text/javascript" src="/javascript/libs/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="/javascript/plugins/prototype-languages.js"></script>
+    <script type="text/javascript" src="/javascript/plugins/prototype-validator.js"></script>
+
+    <script>
+      const lang = JSON.parse("{&quot;route&quot;:{&quot;home&quot;:&quot;Homepage&quot;,&quot;about&quot;:&quot;About&quot;,&quot;overview&quot;:&quot;Overview&quot;,&quot;packages&quot;:&quot;Packages&quot;,&quot;languages&quot;:&quot;Languages&quot;,&quot;validator&quot;:&quot;Validator&quot;},&quot;overview&quot;:{&quot;version_colon&quot;:&quot;Version: &quot;,&quot;release_colon&quot;:&quot;Release Date: &quot;,&quot;download_colon&quot;:&quot;Latest Downloads: &quot;,&quot;downloads_colon&quot;:&quot;Weekly Downloads: &quot;},&quot;home&quot;:{&quot;description&quot;:&quot;I aim to develope some useful tool for front-end development. And they are based on JavaScript only so we could use them into some other JavaScript frameworks. And they are called &#39;prototype-&#39; as their prefix means we can use them with React, Vue, ... so on. While using, if you find some questions, bugs or issues. Or having some ideas. Please feel free to let me know.&quot;},&quot;package&quot;:{&quot;version_colon&quot;:&quot;Version: &quot;,&quot;release_colon&quot;:&quot;Release Date: &quot;,&quot;section&quot;:{&quot;title&quot;:{&quot;installation&quot;:&quot;INSTALLATION&quot;,&quot;application&quot;:&quot;APPLICATION&quot;}},&quot;languages&quot;:{&quot;description&quot;:&quot;For developing the website of international services, we usually have the requirement to develop with the feature of multiple-languages supported. We already have a lot of masterpice such like i18n. But here we created our own multiple-languages package for lowing down the dependencies. And after adding a little code, we can apply it with other javascript frameworks like React, Vue ... and so on.&quot;,&quot;block&quot;:{&quot;initializer&quot;:{&quot;title&quot;:&quot;Initializer&quot;,&quot;description&quot;:{&quot;initial&quot;:&quot;Before to use, we have to initialize. The input is an Array and the structure of each entry is { index: &#39;&#39;, label: &#39;&#39;, dictionary: {...} } as each language.&quot;,&quot;nest&quot;:&quot;After v1.1.0, it is supported to use nest-structure dictionary which means we can defined.&quot;,&quot;result&quot;:&quot;Then, languages.translate(&#39;a.aa.aaa&#39;) will be &#39;AAA&#39; and languages.translate(&#39;b.ba&#39;) will be &#39;BA&#39;. And while can not finding its string, it will response the key path as our input. like languages.translate(&#39;notFound&#39;) will be &#39;notFound&#39;.&quot;}},&quot;methods&quot;:{&quot;title&quot;:&quot;Methods&quot;,&quot;description&quot;:{&quot;configuration&quot;:&quot;We can begin to use after to create a instance from Language. The default language is the first in the initializerconfig.&quot;,&quot;introduction&quot;:&quot;Then, we have some methods inside the Language.&quot;},&quot;menu&quot;:&quot;// To list out the menu of languages, for you can render a language list as a selector likely.&quot;,&quot;get&quot;:&quot;// To get the current language.&quot;,&quot;set&quot;:&quot;// To set new language Index as current language. Do not forget to update rendering, and then all translate() will be with the new setting.&quot;,&quot;translate&quot;:&quot;// To translate string by the current language. And the repacement is optional input.&quot;}}},&quot;validator&quot;:{&quot;description&quot;:&quot;Most form UI packages have their own validator to use for convenience. But sometimes we don&#39;t use only one UI packages to develop every single project. So we try to create the validator generally to adapt to every kind of form UI packages to allow us using just one type of validator coding patteren to develop with every UI packages.&quot;,&quot;block&quot;:{&quot;event&quot;:{&quot;title&quot;:&quot;Event Rules&quot;,&quot;description&quot;:{&quot;example&quot;:&quot;The validator is designed as a validator for &#39;event&#39; which means it is not design for &#39;form&#39;. So it do not bind with form and only triggered by event or function. For this, we need defined the event rule map as follow for example as following.&quot;,&quot;structure&quot;:&quot;Every key name under rule are named with the concept of event, and they are also Array type which means we can have a list to make sure the values are actually we need. Every check rule can have their message. Cause the rule are defined in event angle. So we can execute when we need or different value validated with same rule depending on the user&#39;s design.&quot;},&quot;rule&quot;:&quot;Rule config included type and parameters.&quot;,&quot;message&quot;:&quot;Message for while fail.&quot;},&quot;ruleType&quot;:{&quot;title&quot;:&quot;Rule Type&quot;,&quot;description&quot;:{&quot;type&quot;:&quot;Now we support some rule.&quot;},&quot;rule&quot;:{&quot;type&quot;:&quot;Check input&#39;s typeof.&quot;,&quot;stringLength&quot;:&quot;Check the string&#39;s length between min and max. Otherwise, we can check min or max only like &#39;length|min:4&#39;.&quot;,&quot;absoluteLength&quot;:&quot;Check the string&#39;s absolute length like string.length === absLength.&quot;,&quot;numericRange&quot;:&quot;Check the number&#39;s range between min and max. Otherwise, we can check min or max only like &#39;range|min:4&#39;.&quot;,&quot;absoluteValue&quot;:&quot;Check the number&#39;s absolute value like number === absValue.&quot;,&quot;format&quot;:&quot;Supported: email, numeric, literal, ivp4, mac&quot;}},&quot;methods&quot;:{&quot;title&quot;:&quot;Methods&quot;,&quot;description&quot;:{&quot;implement&quot;:&quot;Firstly we have to implement it, when we want to use the validator.&quot;,&quot;introduction&quot;:&quot;And after defined the event-rule-map, we have some methods for using.&quot;},&quot;init&quot;:&quot;// To put our event-rule-map into the Validator to init it meanwhile create the status for each event rule.&quot;,&quot;status&quot;:&quot;// Status() means get all status, and status(event) means to get the status of event we want.&quot;,&quot;reset&quot;:&quot;// Reset the status of events.&quot;,&quot;validate&quot;:&quot;Validate the value while event triggered.&quot;},&quot;status&quot;:{&quot;title&quot;:&quot;Status&quot;,&quot;description&quot;:{&quot;structure&quot;:&quot;The structure of status for each event.&quot;,&quot;state&quot;:&quot;Every event could be the three type of status: null, false, true. And null means the status is initialized.&quot;}}}}},&quot;chart&quot;:{&quot;times&quot;:&quot;Times&quot;}}".replace(/&quot;/g,'"'));
+
+      const routeMap = [
+        {
+          id: "INDEX",
+          path: "index.html",
+          title: "About",
+          langIndex: "about",
+        }, {
+          id: "OVERVIEW",
+          path: "overview.html",
+          title: "Overview",
+          langIndex: "overview",
+        }, {
+          id: "PACKAGES",
+          title: "Packages",
+          langIndex: "packages",
+          children: [
+            {
+              id: "PACKAGES_LANGUAGES",
+              path: "packages/languages.html",
+              title: "Languages",
+              langIndex: "languages",
+            }, {
+              id: "PACKAGES_VALIDATOR",
+              path: "packages/validator.html",
+              title: "Validator",
+              langIndex: "validator",
+            }
+          ]
+        }
+      ];
+      const SIZE_MD = 768;
+
+      var envLang = new window
+        .BTBLang
+        .class ();
+
+      function renderLangMenu() {
+        var menu = "";
+        menu += "<ul class=\"lang_menu padding-y-sm padding-x-md radius-sm font-sm\">";
+        envLang
+          .menu()
+          .forEach(function (entry) {
+            var classActive = (entry.index === "en")
+              ? 'option-active'
+              : '';
+            var urlNodes = location.pathname.split('/');
+            var url = location.pathname;
+            if(['en', 'zh-Hant'].includes(urlNodes[2])) {
+              urlNodes[2] = entry.index;
+            } else {
+              urlNodes.splice(2, 0, entry.index);
+            }
+            url = urlNodes.join('/');
+            menu += "<a class=\"menu_link\" href="+url+ ">"
+            menu += "<li class=\"menu_option padding-y-sm padding-x-md " + classActive + "\">";
+            menu +=  entry.label;
+            menu += "</li>";
+            menu += "</a>";
+          })
+        menu += "</ul>"
+        $('#language_menu').html(menu)
+      }
+
+      function renderPageMenu() {
+        var menu = "";
+        menu += "<div class=\"aside_menu padding-x-lg\">";
+        menu += renderPageMenuRecursive(0, routeMap);
+        menu += "</div>"
+        $("#pageMenu_container").html(menu);
+      }
+      function renderPageMenuRecursive(layer, map) {
+        var route = "";
+        if (map && map.length > 0) {
+          route += "<ul class=\"menu_layer layer-" + layer + "\">";
+          map.forEach(function (entry) {
+            var paddingLeft = layer * 16;
+            route += "<li class=\"layer_container\">";
+            if (entry.children) {
+              route += "<div id=\"" + entry.id + "\" class=\"container_route route-submenu padding-y-sm\" onclick=\"toggleMenuCollapsed('" + entry.id + "')\">";
+              route += "<div class=\"route_title\" style=\"padding-left:" + paddingLeft + "px\" btb-lang=" + lang.route[entry.langIndex] + ">" +lang.route[entry.langIndex] + "</div>";
+              route += "<div class=\"route_collapsed transition-transform\"><i class=\"fas fa-caret-down fa-fw\"></i></div>";
+              route += "</div>";
+              route += renderPageMenuRecursive(layer + 1, entry.children);
+            } else {
+              route += "<div id=\"" + entry.id + "\" class=\"container_route route-endNode padding-y-sm\">";
+              route += "<a href=" + '/javascript/en/' + entry.path + " class=\"route_title\" style=\"padding-left:" + paddingLeft + "px\" btb-lang=" + lang.route[entry.langIndex] + ">" + lang.route[entry.langIndex] + "</a>";
+              route += "</div>";
+            }
+            route += "</li>";
+          });
+          route += "</ul>";
+        };
+        return route;
+      };
+
+      function toggleLangMenu(state) {
+        switch (state) {
+          case 'hide':
+            $("#language_menu").addClass("menu-hidden");
+            break;
+          case 'show':
+            $("#language_menu").removeClass("menu-hidden");
+            break;
+          default:
+            if ($("#language_menu").hasClass("menu-hidden")) {
+              toggleLangMenu('show');
+            } else {
+              toggleLangMenu('hide');
+            }
+            break;
+        }
+      }
+
+      function togglePageMenu(state) {
+        switch (state) {
+          case 'hide':
+            $("#pageMenu_container").addClass("menu-hidden");
+            break;
+          case 'show':
+            $("#pageMenu_container").removeClass("menu-hidden");
+            break;
+          default:
+            if ($("#pageMenu_container").hasClass("menu-hidden")) {
+              togglePageMenu('show');
+            } else {
+              togglePageMenu('hide');
+            }
+            break;
+        }
+      }
+      function loadEvent() {};
+
+      $(document).ready(function () {
+        renderLangMenu();
+        renderPageMenu();
+        loadEvent();
+      });
+    </script>
+
+    
+    
+<script type="text/javascript" src="../libs/apexcharts/apexcharts.min.js"></script>
+<script type="text/javascript" src="../libs/axios/axios.min.js"></script>
+<script type="text/javascript" src="../utils/reviseISOString.js"></script>
+<script type="text/javascript" src="../utils/createDownloadChartOptions.js"></script>
+
+  <script>
+  var WEEK = 7;
+
+  function _extractToWeekly(data) {
+    data.reverse();
+    let weekData = Array(Math.ceil(data.length / WEEK))
+      .fill(0)
+      .map((entry, index) => {
+        let count = 0;
+        for (let i = index * WEEK; i < Math.min((index + 1) * WEEK, data.length); i++) {
+          count += data[i].downloads;
+        }
+        return count;
+      });
+    return weekData.reverse();
+  }
+
+  function getPackages(type) {
+    let paramText = '@blacktoolbox';
+    switch (type) {
+      case 'js':
+        paramText += '/prototype-';
+        break;
+      case 'react':
+        paramText += '/react-';
+        break;
+      case 'vue':
+        paramText += '/vue-';
+        break;
+    }
+    const instance = axios.create({
+      baseURL: 'https://registry.npmjs.org/',
+      timeout: 1000,
+    });
+    instance.get('-/v1/search', {
+      params: {
+        text: paramText,
+      },
+    }).then(function (response) {
+      renderPackages(type, response.data.objects);
+    })
+  }
+  function getDownload(type, packageName) {
+    const instance = axios.create({
+      baseURL: 'https://api.npmjs.org/',
+      timeout: 1000,
+    });
+    instance.get('/downloads/range/last-year/' + packageName).then(function (response) {
+      if (response.data.downloads.length) {
+        renderDownload(type, packageName, _extractToWeekly(response.data.downloads));
+      }
+    })
+  }
+  function renderPackages(type, data) {
+    var render = '';
+    data.forEach(function (item) {
+      var package = item.package;
+      render += ('<div class="grid-col col-lg-6">');
+      render += ('<div class="overview-package-widget">');
+
+      render += ('<p class="widget_title">');
+      render += (package.name + '<a class="inline-link" href="https://www.npmjs.com/package/' + package.name + '" target="_blank" rel="noreferrer" >');
+      render += ('<i class="fas fa-external-link-alt fa-fw fa-xs"></i>');
+      render += ('</a>')
+
+      render += ('<p class="widget_description">' + package.description + '</p>');
+
+      render += ('<p>');
+      render += ('<span class="widget_entry">Version: </span>');
+      render += ('<span class="widget_value">' + package.version + '</span>');
+      render += ('</p>');
+
+      render += ('<p>');
+      render += ('<span class="widget_entry">Release Date: </span>');
+      render += ('<span class="widget_value">' + reviseISOString(package.date).date + '</span>');
+      render += ('</p>');
+
+      render += ('<div id="downloads_' + package.name.replace('@blacktoolbox/', '') + '"></div>');
+
+      render += ('</p>');
+      render += ('</div>');
+      render += ('</div>');
+    });
+
+    $('#' + type + 'List').html(render);
+
+    data.forEach(function (item) {
+      getDownload(type, item.package.name);
+    })
+  }
+
+  function renderDownload(type, packageName, data) {
+    var render = '';
+    render += ('<p>');
+    render += ('<span class="widget_entry">Latest Downloads: </span>');
+    render += ('<span class="widget_value">' + data[data.length - 1] + '</span>');
+    render += ('</p>');
+
+    render += ('<div class="widget_chart">');
+    render += ('<p class="widget_row">');
+    render += ('<span class="widget_entry">Weekly Downloads: </span>');
+    render += ('</p>');
+    render += ('<div id="chart_' + packageName.replace('@blacktoolbox/', '') + '"></div>');
+    render += ('</div>');
+
+    $('#downloads_' + packageName.replace('@blacktoolbox/', '')).html(render);
+
+    renderChart(type, packageName, data);
+  }
+
+  function renderChart(type, packageName, data) {
+    var options = createDownloadChartOptions(type);
+    options.series = [{
+      name: top.envLang.translate('chart.times'),
+      data
+    }];
+    options.chart.type = "area";
+    options.chart.height = "100%";
+
+    var chart = new ApexCharts(document.querySelector('#chart_' + packageName.replace('@blacktoolbox/', '')), options);
+    chart.render();
+  }
+
+  function redirectHash(path) {
+    top.location.hash = "#/" + path;
+  }
+
+  $(document).ready(function () {
+    getPackages('js');
+    getPackages('react');
+    getPackages('vue');
+  });
+</script>
+
+  </body>
+</html>

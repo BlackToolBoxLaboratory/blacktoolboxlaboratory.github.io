@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <meta charset="utf-8"/>
+  <meta http-equiv="Cache-Control" content="no-cache"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+  <link rel="stylesheet" type="text/css" href="/javascript/libs/fontawesome/css/all.min.css"/>
+  <link rel="stylesheet" type="text/css" href="/javascript/style/index.css"/>
+  <link rel="stylesheet" type="text/css" href="/javascript/style/overview.css"/>
+
+  <link rel="icon" href="/javascript/favicon.ico" type="image/x-icon"/>
+  <title>BTB Lab. | JavaScript | </title>
+  <meta name="google-site-verification" content="XjkUm8M885lvmNSs9BKe9khMCQY99rSfGsN3Tf6yfBY"/>
+
+  <meta property="og:title" content=""/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://blacktoolbox.cogman.org/javascript"/>
+  <meta property="og:image" content="https://blacktoolbox.cogman.org/javascript/images/logo_JavaScript.png"/>
+  <meta name="description" property="og:description" content=""/>
+
+  <meta property="fb:app_id" content="271733690121245"/>
+
+  <meta name="twitter:card" content="summary"/>
+  <meta name="twitter:site" content="@vannoel0628"/>
+  <meta name="twitter:creator" content="@vannoel0628"/>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QB4KF9ECZ6"></script>
+  <script>
+    window.dataLayer = window.dataLayer || []
+    function gtag() {
+      dataLayer.push(arguments)
+    }
+    gtag("js", new Date())
+
+    gtag("config", "G-QB4KF9ECZ6")
+  </script>
+
+  <body id="overview" class="layout">
+    
+    <header class="layout_header padding-sm">
+  <div class="header_logo margin-sm radius-md">
+    <div class="logo_content font-3xl font-bold">
+      BJ
+    </div>
+  </div>
+  <div class="header_title margin-sm">
+    <div class="title_main main-md font-bold font-lg">
+      Black Tool Box Laboratory
+    </div>
+    <div class="title_main main-sm font-bold font-lg">
+      BTB
+    </div>
+    <div class="title_sub sub-md">
+      For JavaScript
+    </div>
+    <div class="title_sub sub-sm">
+      For JS
+    </div>
+  </div>
+  <a id="homepage_opener" class="header_item margin-md" href="https://blacktoolboxlaboratory.github.io/"
+        target="_blank" rel="noreferrer">
+    <i class="fas fa-building fa-fw header_button font-lg"></i>
+  </a>
+  <a id="homepage_opener" class="header_item margin-md" href="/javascript/zh-Hant/index.html">
+    <i class="fas fa-home fa-fw header_button font-lg"></i>
+  </a>
+  <div id="language_opener" class="header_item item-lang margin-md">
+    <i class="fas fa-globe fa-fw header_button font-lg" onclick="toggleLangMenu()"></i>
+    <div id="language_menu" class="lang_container menu-hidden"></div>
+  </div>
+
+  <div id="menu_trigger" class="header_item margin-md">
+    <i class="fas fa-bars fa-fw header_button font-lg" onclick="togglePageMenu()"></i>
+  </div>
+</header>
+
+    
+    <main class="layout_body page">
+      
+<div class="page_container">
+  <div class="page_head">
+    <h1 class="page_title">套件總覽</h1>
+    <a class="head_linkBtn linkBtn-github" href="https://github.com/BlackToolBoxLaboratory?q=prototype"
+      target="_blank">
+      <i class="fab fa-github fa-fw"></i>
+    </a>
+    <a class="head_linkBtn linkBtn-npm" href="https://www.npmjs.com/search?q=%40blacktoolbox%2Fprototype"
+      target="_blank">
+      <i class="fab fa-npm fa-fw"></i>
+    </a>
+  </div>
+  <section class="page_section">
+    <div class="section_title">
+      JAVASCRIPT
+    </div>
+    <div id="jsList" class="grid-row"></div>
+  </section>
+  <section class="page_section">
+    <div class="section_title">
+      REACT
+    </div>
+    <div id="reactList" class="grid-row"></div>
+  </section>
+  <section class="page_section">
+    <div class="section_title">
+      VUE
+    </div>
+    <div id="vueList" class="grid-row"></div>
+  </section>
+</div>
+
+
+    </main>
+
+    
+    <div class="layout_footNav">
+  <a class="footNav_linkBtn linkBtn-github" href="https://github.com/BlackToolBoxLaboratory" target="_blank">
+    <i class="fab fa-github fa-fw"></i>
+  </a>
+  <a class="footNav_linkBtn linkBtn-npm" href="https://www.npmjs.com/org/blacktoolbox" target="_blank">
+    <i class="fab fa-npm fa-fw"></i>
+  </a>
+  <a class="footNav_linkBtn linkBtn-linkedin" href="https://www.linkedin.com/company/black-tool-box-laboratory/"
+    target="_blank">
+    <i class="fab fa-linkedin fa-fw"></i>
+  </a>
+  <a class="footNav_linkBtn linkBtn-email" href="mailto:vannoel@cogman.org" target="_blank">
+    <i class="far fa-envelope fa-fw"></i>
+  </a>
+</div>
+<footer class="layout_footer font-xs padding-md">
+  Copyright © Black Tool Box Laboratory. All rights reserved.
+</footer>
+
+    
+    <aside id="pageMenu_container" class="layout_aside"></aside>
+
+    
+
+    
+    <script type="text/javascript" src="/javascript/libs/prototype-languages/index.min.js"></script>
+    <script type="text/javascript" src="/javascript/libs/prototype-validator/index.min.js"></script>
+    <script type="text/javascript" src="/javascript/libs/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="/javascript/plugins/prototype-languages.js"></script>
+    <script type="text/javascript" src="/javascript/plugins/prototype-validator.js"></script>
+
+    <script>
+      const lang = JSON.parse("{&quot;route&quot;:{&quot;home&quot;:&quot;首頁&quot;,&quot;about&quot;:&quot;關於本站&quot;,&quot;overview&quot;:&quot;套件總覽&quot;,&quot;packages&quot;:&quot;套件&quot;,&quot;languages&quot;:&quot;多語言切換器&quot;,&quot;validator&quot;:&quot;驗證器&quot;},&quot;overview&quot;:{&quot;version_colon&quot;:&quot;發布版本：&quot;,&quot;release_colon&quot;:&quot;發布日期：&quot;,&quot;download_colon&quot;:&quot;本周下載量：&quot;,&quot;downloads_colon&quot;:&quot;每周下載量：&quot;},&quot;home&quot;:{&quot;description&quot;:&quot;BTB Lab.主要在嘗試開發一些對於前對開發有幫助的套件。這些套件是純 JavaScript 開發，之所以在名稱上賦予 &#39;prototype-&#39; 的前綴，是因為在設計上我期待這些套件，能應用於其他 JavaScript 衍伸的開發框架，例如：React、Vue、...等。如果這些套件在使用上有什麼困難，或者對於套件的開發有其他的想法或期待，還請多多與我分享您的想法。&quot;},&quot;package&quot;:{&quot;version_colon&quot;:&quot;發布版本：&quot;,&quot;release_colon&quot;:&quot;發布日期：&quot;,&quot;section&quot;:{&quot;title&quot;:{&quot;installation&quot;:&quot;安裝&quot;,&quot;application&quot;:&quot;應用&quot;}},&quot;languages&quot;:{&quot;description&quot;:&quot;對於跨國性服務來說，多國語言的支援往往是基本需求，雖然我們已有一些很出色的語言相關套件，如i18n，但我想開發的多語言切換器，主要是想降低套件的依賴性，以及降低一些非必要的功能支援，以最單純的核心功能，並且提供良好的擴充彈性，如果您需要很完整、方便的功能，可以考慮使用 i18n 之類的傑出套件，倘若需要的功能並不複雜，那麼也許你會想要試試看BTB Lab. 的多語言切換器。它也可以很輕易地應用在其他 JavaScript 衍生的開發框架。如 React、Vue、...。&quot;,&quot;block&quot;:{&quot;initializer&quot;:{&quot;title&quot;:&quot;初始化&quot;,&quot;description&quot;:{&quot;initial&quot;:&quot;在使用套件前，我們需要先初始化套件。初始的動作就是先定義出一個語言清單，並將每一個語言都先定義成一個物件，如：{ index: &#39;&#39;, label: &#39;&#39;, dictionary: {...} }。&quot;,&quot;nest&quot;:&quot;在版本 1.1.0 之後，多語言切換器支援巢狀的字典定義，以方便開發的時候整理字典集，當然這並不強迫，也可以依使用需求與習慣。將之定義成較扁平的字典集。&quot;,&quot;result&quot;:&quot;當時執行 languages.translate(&#39;a.aa.aaa&#39;) 結果為 &#39;AAA&#39; ，而當執行 languages.translate(&#39;b.ba&#39;) 結果則是 &#39;BA&#39;。而當輸入的內容無法查找對應的翻譯時，輸出的文字則為輸入值，如同 languages.translate(&#39;notFound&#39;) 結果為 &#39;notFound&#39; 一般。&quot;}},&quot;methods&quot;:{&quot;title&quot;:&quot;應用方法&quot;,&quot;description&quot;:{&quot;configuration&quot;:&quot;再建完一個多語言切換器的實體之後，我們就可以利用裡面的函數來完善網站的多語言切換的支援，而實體的預設語言是初始化時，所設定清單裡的第一個語言。&quot;,&quot;introduction&quot;:&quot;接下來我們可以利用下列內建於多語言切換器的函數。&quot;},&quot;menu&quot;:&quot;// 返回多語言切換器裡的語言清單，主要可用於實踐語言切換的選單。&quot;,&quot;get&quot;:&quot;// 返回目前選用的語言。&quot;,&quot;set&quot;:&quot;// 設定新選用的語言後，並返回該語言的物件。請記得設定完後要更新網頁的渲染(render)，以利translate()能使用新選用語言的字典。&quot;,&quot;translate&quot;:&quot;// 返回文字的對應翻譯，而其中還提供一個取代的功能，以利有些翻譯內文字可能包含變數。&quot;}}},&quot;validator&quot;:{&quot;description&quot;:&quot;大多數的排版框架皆含有驗證表單的功能，但各自排版框架的驗證器使用方式不盡相同，對於有些需要對於不同的案子，使用不同的排版框架的團隊而言，已經存在的驗證邏輯在移植上，可能就不是這麼方便，因此，我試著開發一般化的表單驗證器，或者可以更深一層地說它是變數驗證器，因為即使不與排版框架合用，單純寫在函數裡的變數格式驗證也是可以的，如此期望，應用此套件的人，可以一致地整合表單的驗證與函數的驗證。&quot;,&quot;block&quot;:{&quot;event&quot;:{&quot;title&quot;:&quot;事件驗證邏輯&quot;,&quot;description&quot;:{&quot;example&quot;:&quot;為了一般性的設計，驗證器的設計對象為「事件」，而非如一般設計對象為「表單欄位」，換句話說，是因為什麼事件而執行這個驗證的概念設計此驗證器，因此這個驗證器中，所定義之驗證邏輯是由「事件」對應「驗證邏輯」與「驗證結果」。&quot;,&quot;structure&quot;:&quot;結構裡的鍵都被定義成事件代號，而鍵所對應的值定義為驗證邏輯的清單，換言之，我們可以透過一系列的邏輯驗證來確保對象值為我們想要得值，或者格式。由於驗證器是以事件為出發點，所以可以對想要的表單綁定對應驗證事件，或者在函數邏輯裡直接對想要的值做邏輯驗證，我們也可以對不同得值使用同一個邏輯事件做檢查，不管是共用同一個驗證事件，或者不同驗證事件共用同一個驗證邏輯。&quot;},&quot;rule&quot;:&quot;邏輯驗證的設定包含邏輯種類與參數。&quot;,&quot;message&quot;:&quot;驗證失敗時的訊息。&quot;},&quot;ruleType&quot;:{&quot;title&quot;:&quot;邏輯種類&quot;,&quot;description&quot;:{&quot;type&quot;:&quot;驗證器本身亦有內建支援一些簡單的驗證邏輯。&quot;},&quot;rule&quot;:{&quot;type&quot;:&quot;驗證值的類別。&quot;,&quot;stringLength&quot;:&quot;驗證文字的長度區間介於給定的 min 與 max 。我們也可以單獨只給 min 或 max 如同 &#39;length|min:4&#39;.&quot;,&quot;absoluteLength&quot;:&quot;驗證文字的指定長度。&quot;,&quot;numericRange&quot;:&quot;驗證數值介於 min 與 max 。我們也可以單獨只給 min 或 max 如同 &#39;range|min:4&#39;.&quot;,&quot;absoluteValue&quot;:&quot;驗證數值的指定值。&quot;,&quot;format&quot;:&quot;支援檢查格式：電子信箱、文字化數值、純文字、IP地址、Mac地址。&quot;}},&quot;methods&quot;:{&quot;title&quot;:&quot;應用方法&quot;,&quot;description&quot;:{&quot;implement&quot;:&quot;首先實踐驗證器的在想要的地方。&quot;,&quot;introduction&quot;:&quot;在定義完驗證事件與驗證邏輯的對照表之後，驗證器提供一些方法做應用。&quot;},&quot;init&quot;:&quot;// 初始化驗證器的驗證事件與驗證邏輯的對照表，如此驗證器才能初始化驗證事件對應的狀態值。&quot;,&quot;status&quot;:&quot;// 當執行 Status() 時，返回的是所有驗證事件的狀態，而執行 status(event) 則是返回特定驗證事件的狀態值。&quot;,&quot;reset&quot;:&quot;// 清空驗證事件的驗證狀態。&quot;,&quot;validate&quot;:&quot;// 觸發驗證。&quot;},&quot;status&quot;:{&quot;title&quot;:&quot;驗證狀態&quot;,&quot;description&quot;:{&quot;structure&quot;:&quot;每一個驗證事件的驗證狀態的物件結構。&quot;,&quot;state&quot;:&quot;每一個驗證事件的狀態包含 null、false、true 。而 null 表示尚未觸發驗證的狀態。&quot;}}}}},&quot;chart&quot;:{&quot;times&quot;:&quot;次數&quot;}}".replace(/&quot;/g,'"'));
+
+      const routeMap = [
+        {
+          id: "INDEX",
+          path: "index.html",
+          title: "About",
+          langIndex: "about",
+        }, {
+          id: "OVERVIEW",
+          path: "overview.html",
+          title: "Overview",
+          langIndex: "overview",
+        }, {
+          id: "PACKAGES",
+          title: "Packages",
+          langIndex: "packages",
+          children: [
+            {
+              id: "PACKAGES_LANGUAGES",
+              path: "packages/languages.html",
+              title: "Languages",
+              langIndex: "languages",
+            }, {
+              id: "PACKAGES_VALIDATOR",
+              path: "packages/validator.html",
+              title: "Validator",
+              langIndex: "validator",
+            }
+          ]
+        }
+      ];
+      const SIZE_MD = 768;
+
+      var envLang = new window
+        .BTBLang
+        .class ();
+
+      function renderLangMenu() {
+        var menu = "";
+        menu += "<ul class=\"lang_menu padding-y-sm padding-x-md radius-sm font-sm\">";
+        envLang
+          .menu()
+          .forEach(function (entry) {
+            var classActive = (entry.index === "zh-Hant")
+              ? 'option-active'
+              : '';
+            var urlNodes = location.pathname.split('/');
+            var url = location.pathname;
+            if(['en', 'zh-Hant'].includes(urlNodes[2])) {
+              urlNodes[2] = entry.index;
+            } else {
+              urlNodes.splice(2, 0, entry.index);
+            }
+            url = urlNodes.join('/');
+            menu += "<a class=\"menu_link\" href="+url+ ">"
+            menu += "<li class=\"menu_option padding-y-sm padding-x-md " + classActive + "\">";
+            menu +=  entry.label;
+            menu += "</li>";
+            menu += "</a>";
+          })
+        menu += "</ul>"
+        $('#language_menu').html(menu)
+      }
+
+      function renderPageMenu() {
+        var menu = "";
+        menu += "<div class=\"aside_menu padding-x-lg\">";
+        menu += renderPageMenuRecursive(0, routeMap);
+        menu += "</div>"
+        $("#pageMenu_container").html(menu);
+      }
+      function renderPageMenuRecursive(layer, map) {
+        var route = "";
+        if (map && map.length > 0) {
+          route += "<ul class=\"menu_layer layer-" + layer + "\">";
+          map.forEach(function (entry) {
+            var paddingLeft = layer * 16;
+            route += "<li class=\"layer_container\">";
+            if (entry.children) {
+              route += "<div id=\"" + entry.id + "\" class=\"container_route route-submenu padding-y-sm\" onclick=\"toggleMenuCollapsed('" + entry.id + "')\">";
+              route += "<div class=\"route_title\" style=\"padding-left:" + paddingLeft + "px\" btb-lang=" + lang.route[entry.langIndex] + ">" +lang.route[entry.langIndex] + "</div>";
+              route += "<div class=\"route_collapsed transition-transform\"><i class=\"fas fa-caret-down fa-fw\"></i></div>";
+              route += "</div>";
+              route += renderPageMenuRecursive(layer + 1, entry.children);
+            } else {
+              route += "<div id=\"" + entry.id + "\" class=\"container_route route-endNode padding-y-sm\">";
+              route += "<a href=" + '/javascript/zh-Hant/' + entry.path + " class=\"route_title\" style=\"padding-left:" + paddingLeft + "px\" btb-lang=" + lang.route[entry.langIndex] + ">" + lang.route[entry.langIndex] + "</a>";
+              route += "</div>";
+            }
+            route += "</li>";
+          });
+          route += "</ul>";
+        };
+        return route;
+      };
+
+      function toggleLangMenu(state) {
+        switch (state) {
+          case 'hide':
+            $("#language_menu").addClass("menu-hidden");
+            break;
+          case 'show':
+            $("#language_menu").removeClass("menu-hidden");
+            break;
+          default:
+            if ($("#language_menu").hasClass("menu-hidden")) {
+              toggleLangMenu('show');
+            } else {
+              toggleLangMenu('hide');
+            }
+            break;
+        }
+      }
+
+      function togglePageMenu(state) {
+        switch (state) {
+          case 'hide':
+            $("#pageMenu_container").addClass("menu-hidden");
+            break;
+          case 'show':
+            $("#pageMenu_container").removeClass("menu-hidden");
+            break;
+          default:
+            if ($("#pageMenu_container").hasClass("menu-hidden")) {
+              togglePageMenu('show');
+            } else {
+              togglePageMenu('hide');
+            }
+            break;
+        }
+      }
+      function loadEvent() {};
+
+      $(document).ready(function () {
+        renderLangMenu();
+        renderPageMenu();
+        loadEvent();
+      });
+    </script>
+
+    
+    
+<script type="text/javascript" src="../libs/apexcharts/apexcharts.min.js"></script>
+<script type="text/javascript" src="../libs/axios/axios.min.js"></script>
+<script type="text/javascript" src="../utils/reviseISOString.js"></script>
+<script type="text/javascript" src="../utils/createDownloadChartOptions.js"></script>
+
+  <script>
+  var WEEK = 7;
+
+  function _extractToWeekly(data) {
+    data.reverse();
+    let weekData = Array(Math.ceil(data.length / WEEK))
+      .fill(0)
+      .map((entry, index) => {
+        let count = 0;
+        for (let i = index * WEEK; i < Math.min((index + 1) * WEEK, data.length); i++) {
+          count += data[i].downloads;
+        }
+        return count;
+      });
+    return weekData.reverse();
+  }
+
+  function getPackages(type) {
+    let paramText = '@blacktoolbox';
+    switch (type) {
+      case 'js':
+        paramText += '/prototype-';
+        break;
+      case 'react':
+        paramText += '/react-';
+        break;
+      case 'vue':
+        paramText += '/vue-';
+        break;
+    }
+    const instance = axios.create({
+      baseURL: 'https://registry.npmjs.org/',
+      timeout: 1000,
+    });
+    instance.get('-/v1/search', {
+      params: {
+        text: paramText,
+      },
+    }).then(function (response) {
+      renderPackages(type, response.data.objects);
+    })
+  }
+  function getDownload(type, packageName) {
+    const instance = axios.create({
+      baseURL: 'https://api.npmjs.org/',
+      timeout: 1000,
+    });
+    instance.get('/downloads/range/last-year/' + packageName).then(function (response) {
+      if (response.data.downloads.length) {
+        renderDownload(type, packageName, _extractToWeekly(response.data.downloads));
+      }
+    })
+  }
+  function renderPackages(type, data) {
+    var render = '';
+    data.forEach(function (item) {
+      var package = item.package;
+      render += ('<div class="grid-col col-lg-6">');
+      render += ('<div class="overview-package-widget">');
+
+      render += ('<p class="widget_title">');
+      render += (package.name + '<a class="inline-link" href="https://www.npmjs.com/package/' + package.name + '" target="_blank" rel="noreferrer" >');
+      render += ('<i class="fas fa-external-link-alt fa-fw fa-xs"></i>');
+      render += ('</a>')
+
+      render += ('<p class="widget_description">' + package.description + '</p>');
+
+      render += ('<p>');
+      render += ('<span class="widget_entry">發布版本：</span>');
+      render += ('<span class="widget_value">' + package.version + '</span>');
+      render += ('</p>');
+
+      render += ('<p>');
+      render += ('<span class="widget_entry">發布日期：</span>');
+      render += ('<span class="widget_value">' + reviseISOString(package.date).date + '</span>');
+      render += ('</p>');
+
+      render += ('<div id="downloads_' + package.name.replace('@blacktoolbox/', '') + '"></div>');
+
+      render += ('</p>');
+      render += ('</div>');
+      render += ('</div>');
+    });
+
+    $('#' + type + 'List').html(render);
+
+    data.forEach(function (item) {
+      getDownload(type, item.package.name);
+    })
+  }
+
+  function renderDownload(type, packageName, data) {
+    var render = '';
+    render += ('<p>');
+    render += ('<span class="widget_entry">本周下載量：</span>');
+    render += ('<span class="widget_value">' + data[data.length - 1] + '</span>');
+    render += ('</p>');
+
+    render += ('<div class="widget_chart">');
+    render += ('<p class="widget_row">');
+    render += ('<span class="widget_entry">每周下載量：</span>');
+    render += ('</p>');
+    render += ('<div id="chart_' + packageName.replace('@blacktoolbox/', '') + '"></div>');
+    render += ('</div>');
+
+    $('#downloads_' + packageName.replace('@blacktoolbox/', '')).html(render);
+
+    renderChart(type, packageName, data);
+  }
+
+  function renderChart(type, packageName, data) {
+    var options = createDownloadChartOptions(type);
+    options.series = [{
+      name: top.envLang.translate('chart.times'),
+      data
+    }];
+    options.chart.type = "area";
+    options.chart.height = "100%";
+
+    var chart = new ApexCharts(document.querySelector('#chart_' + packageName.replace('@blacktoolbox/', '')), options);
+    chart.render();
+  }
+
+  function redirectHash(path) {
+    top.location.hash = "#/" + path;
+  }
+
+  $(document).ready(function () {
+    getPackages('js');
+    getPackages('react');
+    getPackages('vue');
+  });
+</script>
+
+  </body>
+</html>
